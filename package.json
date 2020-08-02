@@ -11,8 +11,7 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf ./dist",
-    "build-dev": "npm run clean && cross-env NODE_ENV=development webpack-dev-server && http-server ./dist -o",
-    "build-prod": "npm run clean && cross-env NODE_ENV=production webpack -p",
+    "build:dist": "npm run clean && cross-env NODE_ENV=production webpack -p",
     "start:dist": "npm run clean && cross-env NODE_ENV=production webpack-dev-server && http-server ./dist -o",
     "start": "webpack-dev-server --hot --mode development"
   },
