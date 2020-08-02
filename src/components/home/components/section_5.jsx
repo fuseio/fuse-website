@@ -9,7 +9,6 @@ import wepyBg from '@/assets/images/wepy-background.png';
 import seedbedBg from '@/assets/images/seedbed-splesh.png';
 import wikibankBg from '@/assets/images/wikibank-background.png';
 import localChamionsBg from '@/assets/images/splesh-local.png';
-import 'swiper/swiper-bundle.css';
 
 SwiperCore.use([Navigation, Pagination]);
 

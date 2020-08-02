@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
-import 'swiper/swiper-bundle.css';
 
 import '../components/section_4/style.scss';
 

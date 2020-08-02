@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import 'swiper/swiper.scss'
 import './styles/styles.scss'
 
 // imports all images so webpack can compile them

@@ -47,8 +47,8 @@ const config = {
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
-              modules: true
+              importLoaders: 3,
+              sourceMap: true
             }
           },
           'postcss-loader'
@@ -104,7 +104,6 @@ const config = {
     ],
     alias: {
       'react-dom': '@hot-loader/react-dom',
-      '~': path.resolve(path.resolve(path.resolve(__dirname, './'), 'dist'), 'node_modules'),
       '@': path.resolve(path.resolve(__dirname, './'), 'src'),
     }
   },
