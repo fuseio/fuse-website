@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons8-play-button</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pay-wize" transform="translate(-874.000000, -2054.000000)">
+            <g id="icons8-play-button" transform="translate(874.000000, 2054.000000)">
+                <path d="M12.6441397,9.921 C12.5304239,10.53 12.0471322,10.994 11.4501247,11.081 C10.5119701,11.226 8.94837905,11.4 7.18578554,11.4 C5.45162095,11.4 3.88802993,11.226 2.92144638,11.081 C2.3244389,10.994 1.84114713,10.53 1.72743142,9.921 C1.61371571,9.254 1.5,8.268 1.5,7.05 C1.5,5.832 1.61371571,4.846 1.72743142,4.179 C1.84114713,3.57 2.3244389,3.106 2.92144638,3.019 C3.859601,2.874 5.42319202,2.7 7.18578554,2.7 C8.94837905,2.7 10.4835411,2.874 11.4501247,3.019 C12.0471322,3.106 12.5304239,3.57 12.6441397,4.179 C12.7578554,4.846 12.9,5.832 12.9,7.05 C12.8715711,8.268 12.7578554,9.254 12.6441397,9.921 Z" id="Path" fill="#FF3D00" fill-rule="nonzero"></path>
+                <circle id="Oval" fill="#FF3D00" cx="7.2" cy="7.2" r="7.2"></circle>
+                <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="5.4 10.2 5.4 3.9 10.5 7.05"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="47px" viewBox="0 0 47 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Frictionless onboarding</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Frictionless-onboarding" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-19-Copy" transform="translate(4.000000, 13.000000)">
+            <rect id="Rectangle" stroke="#9EAFB9" stroke-width="3.5" fill="#FFFFFF" stroke-linejoin="round" x="-1.75" y="-1.75" width="41.5" height="25.5"></rect>
+            <g id="Group-4" transform="translate(2.000000, 8.000000)">
+                <circle id="Oval" fill="#9EAFB9" cx="3.341835" cy="3.341835" r="3.341835"></circle>
+                <circle id="Oval-Copy-5" fill="#FFFFFF" cx="16.709175" cy="3.341835" r="2.22789"></circle>
+                <rect id="Rectangle" fill="#9EAFB9" x="5.569725" y="3.341835" width="23.392845" height="1.113945"></rect>
+                <circle id="Oval-Copy-3" stroke="#9EAFB9" stroke-width="2" fill="#FFFFFF" cx="16.709175" cy="3.341835" r="2.341835"></circle>
+                <circle id="Oval-Copy-4" stroke="#9EAFB9" stroke-width="2" fill="#FFFFFF" cx="30.341835" cy="3.341835" r="2.341835"></circle>
+                <polyline id="Path-17" stroke="#FFFFFF" stroke-width="0.7797615" points="1.71579077 3.42828469 2.86167306 4.45578 5.05762577 2.22789"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+@import "resets/resets";
+
+@import "config/config";
+
+/*-------Helpers----------*/
+@import "foundation/foundation";
+@import "foundation/utils";
+@import "placeholders/placeholders";
+
+@import "components/components";
+
+#root {
+  position: relative;
+  display: block;
+  min-height: 100vh;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}

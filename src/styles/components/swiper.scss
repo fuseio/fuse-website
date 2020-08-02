@@ -1,0 +1,38 @@
+#communities > div > div > div.communities__pagination.swiper-pagination-bullets {
+  left: unset;
+  right: 12em;
+  width: auto;
+  top: 2.5em;
+  height: fit-content;
+
+  @include breakpoint(1900) {
+    right: 12.9em;
+  }
+
+  @include breakpoint(large down) {
+    display: none;
+  }
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -40px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: -40px;
+}
+
+.swiper-pagination-bullet {
+  &:hover {
+    opacity: 1;
+    background: rgba(10, 47, 64, 0.5);
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: #0a2f40;
+}

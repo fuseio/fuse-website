@@ -1,0 +1,309 @@
+@include block(network_main) {
+  width: 100%;
+  position: relative;
+  background-color: #001929;
+  height: 1100px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  @include breakpoint(1920px) {
+    height: 1164px;
+  }
+
+  @include element(wrapper) {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    > div {
+      position: relative;
+      left: -50%;
+      height: 100%;
+    }
+  }
+
+  @include element(top) {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    z-index: 1;
+  }
+
+  @include element(bottom) {
+    position: absolute;
+    bottom: 90px;
+    right: 0;
+    z-index: 1;
+  }
+
+  @include block(title) {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.57);
+    font-size: 3.125em;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.03px;
+    color: #ffffff;
+  }
+  @include block(text) {
+    font-size: 1.5em;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.01px;
+    color: #ffffff;
+  }
+}
+
+@include block(why_fuse_better) {
+  height: 764px;
+  background-color: #001929;
+
+  @include block(title) {
+    @include breakpoint(large up) {
+      font-size: 3.125em;
+    }
+    font-size: 2.125em;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.54;
+    letter-spacing: 0.03px;
+    text-transform: uppercase;
+    margin: 0;
+    color: white;
+  }
+
+  @include element(wrapper) {
+    height: 100%;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include element(content) {
+    @include breakpoint(large up) {
+      height: 65%;
+    }
+    @include xy-grid(horizontal);
+    > div {
+      @include xy-cell(10);
+
+      &:first-child {
+        @include breakpoint(medium down) {
+          margin-bottom: 1em;
+        }
+      }
+    }
+    @include breakpoint(medium down) {
+      @include xy-grid(vertical);
+      @include flex-align(center, middle);
+      > div {
+        @include xy-cell();
+      }
+    }
+
+    > div {
+      height: 100%;
+    }
+  }
+
+  @include block(items) {
+    @include xy-grid();
+    @include flex-align(justify);
+    height: 100%;
+    @include block(item) {
+      @include xy-grid(horizontal, false);
+      max-height: 87px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.01px;
+
+      @include breakpoint(large down) {
+        margin-bottom: 1em;
+      }
+      @include block(line) {
+        border: solid 1px #dfdfdf;
+        width: 1px;
+        height: 100%;
+        margin: 0 1em;
+
+        // @include breakpoint(large down) {
+        //   margin: 0 0.5em;
+        // }
+      }
+
+      @include block(image) {
+        @include xy-cell(3);
+        @include breakpoint(large up) {
+          width: 100px;
+          height: 100px;
+        }
+
+        @include breakpoint(large down) {
+          width: 50px;
+          height: 50px;
+        }
+
+        > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      @include block(text) {
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        @include breakpoint(large up) {
+          width: 352px;
+          font-size: 1.125em;
+          height: 84px;
+        }
+
+        @include breakpoint(large down) {
+          font-size: 1em;
+          height: 84px;
+        }
+        color: white;
+      }
+    }
+  }
+}
+
+@include block(network_in_numbers) {
+  @include element(content) {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    @include block(items) {
+      padding: 8em 0;
+      flex-flow: row nowrap;
+
+      @include block(line) {
+        border: 1px solid #dfdfdf;
+        width: 1px;
+        height: 154px;
+        // margin: 0 1em;
+      }
+      @include block(item) {
+        max-height: 155px;
+
+        // &:not(:last-child) {
+        //   border-right: 2px solid #dfdfdf;
+        // }
+        @include block(title) {
+          font-size: 1.5em;
+          font-weight: bold;
+          line-height: 1.21;
+          text-align: center;
+          color: #4587a3;
+        }
+
+        @include block(number) {
+          font-size: 2.5em;
+          font-weight: bold;
+          text-align: center;
+          color: #5d9cb5;
+        }
+      }
+    }
+  }
+}
+
+@include block(participates) {
+  background-color: #133246;
+  padding: 4em 0;
+
+  @include element(wrapper) {
+    width: 80%;
+    margin: auto;
+    // padding: 2em;
+    // margin: auto 0;
+  }
+
+  @include block(title) {
+    font-size: 3.125em;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.03px;
+    text-align: center;
+    color: #ffffff;
+    margin: 0 0 1.6em;
+  }
+
+  @include element(item) {
+    height: 262px;
+    border-radius: 10px;
+    background-color: #f5fdff;
+    padding: 1em;
+
+    &:not(:last-child) {
+      margin-bottom: 2em;
+    }
+
+    @include block(image) {
+    }
+
+    @include block(small) {
+      text-align: center;
+      font-size: 0.875em;
+      letter-spacing: 0.01px;
+      color: #9b9b9b;
+    }
+
+    @include element(title) {
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: 0.01px;
+      text-align: center;
+      color: #4a687b;
+      margin-bottom: 0.5em;
+    }
+
+    @include block(text) {
+      font-size: 1.125em;
+      letter-spacing: 0.01px;
+      // text-align: center;
+      color: #868686;
+    }
+
+    @include block(links) {
+      margin-top: 1.5em;
+    }
+    @include block(link) {
+      font-size: 1.125em;
+      font-weight: 500;
+      letter-spacing: 0.01px;
+      text-align: center;
+      color: #25435a;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      > img {
+        margin-left: 0.3em;
+      }
+
+      &:not(:first-child) {
+        margin-left: 1em;
+      }
+    }
+  }
+}

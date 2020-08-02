@@ -1,0 +1,133 @@
+@include block(section_E) {
+  position: relative;
+
+  @include breakpoint(large) {
+    margin-top: 5em;
+  }
+
+  @include element(title) {
+    @extend %main-title;
+    margin: 1em 0;
+  }
+
+  @include breakpoint(xlarge) {
+    margin-top: 12em;
+  }
+
+  @include breakpoint(medium) {
+  }
+  @include element(wrapper) {
+    position: relative;
+    padding-bottom: 100px;
+  }
+
+  @include element(content) {
+    width: 80%;
+    max-width: 500px;
+
+    @include breakpoint(medium down) {
+      margin: 5em 0 2em;
+    }
+
+    @include block(title) {
+      font-size: 1.9em;
+      font-weight: 500;
+      line-height: 1.2;
+      color: #25435a;
+      margin-top: 1em;
+
+      @include breakpoint(medium down) {
+        font-size: 1.5em;
+      }
+    }
+
+    @include block(sub-title) {
+      @extend %main-text;
+      font-weight: 500;
+      // font-size: 1.125em;
+      color: $color-gray;
+    }
+
+    @include block(get-on-markets) {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 4em;
+      > a {
+        max-width: 157px;
+        max-height: 55px;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 1em;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      @include breakpoint(medium down) {
+        margin-bottom: 2em;
+      }
+
+      @include breakpoint(small only) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @include block(features) {
+      margin: 3.5em 0;
+      @include element(item) {
+        min-height: 70px;
+        @include element(text) {
+          margin-left: 1em;
+          @extend %main-text;
+          color: $color-gray;
+          font-size: 0.9em;
+        }
+
+        @include element(pic) {
+          display: inline-flex;
+          align-self: center;
+          width: 40px;
+          height: 40px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @include element(image) {
+    display: inline-block;
+    text-align: center;
+    @include breakpoint(medium up) {
+    }
+
+    > img {
+      max-width: 60%;
+      @include breakpoint(small only) {
+        max-width: 80%;
+      }
+      @include breakpoint(large only) {
+        max-width: 80%;
+      }
+      @include breakpoint(1800px) {
+        max-width: 50%;
+      }
+
+      @include breakpoint(2200px) {
+        // max-width: 40%;
+      }
+    }
+  }
+}
+
+@include block(blue) {
+  position: relative;
+  background-color: #f6fbff;
+}

@@ -1,0 +1,337 @@
+@include block(header) {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  min-height: 80px;
+  z-index: 1;
+  width: 100%;
+
+  @include element(wrapper) {
+    display: block;
+    padding: 0 20px;
+    position: relative;
+    @include modifier(absolute) {
+      // position: absolute;
+      // top: 0;
+      // z-index: 1;
+      // padding: 0 20px;
+      // width: 100%;
+    }
+  }
+  @include element(logo) {
+    width: 100px;
+  }
+
+  @include element(icons) {
+    display: flex;
+    flex-direction: row;
+
+    @include breakpoint(medium down) {
+      margin-bottom: 2em;
+    }
+  }
+
+  @include block(icon) {
+    width: auto;
+    margin: 0 10px;
+    height: 31px;
+    width: 31px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include element(svg) {
+      fill: #05283e;
+
+      * path {
+        fill: initial;
+      }
+    }
+  }
+
+  @include block(twitter) {
+    background-image: url(/images/twitter.svg);
+    @include modifier(white) {
+      background-image: url(/images/network_twitter.svg);
+
+      &:hover {
+        background-image: url(/images/network_twitter_hover.svg);
+      }
+    }
+    &:hover {
+      background-image: url(/images/twitter_hover.svg);
+    }
+  }
+
+  @include block(github) {
+    background-image: url(/images/github.svg);
+    &:hover {
+      background-image: url(/images/git_hover.svg);
+    }
+
+    @include modifier(white) {
+      background-image: url(/images/network_git.svg);
+
+      &:hover {
+        background-image: url(/images/network_git_hover.svg);
+      }
+    }
+  }
+
+  @include block(medium) {
+    background-image: url(/images/medium.svg);
+
+    &:hover {
+      background-image: url(/images/medium_hover.svg);
+    }
+
+    @include modifier(white) {
+      background-image: url(/images/network_med.svg);
+
+      &:hover {
+        background-image: url(/images/network_medium_hover.svg);
+      }
+    }
+  }
+
+  @include block(discord) {
+    background-image: url(/images/discord_black.svg);
+    &:hover {
+      background-image: url(/images/discord_header_hover.svg);
+    }
+
+    @include modifier(white) {
+      background-image: url(/images/network_discord.svg);
+
+      &:hover {
+        background-image: url(/images/network_discord_header_hover.svg);
+      }
+    }
+  }
+
+  @include block(telegram) {
+    background-image: url(/images/telegram_header.svg);
+    &:hover {
+      background-image: url(/images/telegram_hover.svg);
+    }
+
+    @include modifier(white) {
+      background-image: url(/images/network_tele.svg);
+
+      &:hover {
+        background-image: url(/images/network_tele_hover.svg);
+      }
+    }
+  }
+
+  @include element(wallet) {
+    cursor: pointer;
+    width: 200px;
+    height: 40.4px;
+    border-radius: 20.2px;
+    border: solid 1.3px rgba(5, 34, 53, 0.18);
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &:hover {
+      background-color: #05283e;
+
+      .header__wallet__icon {
+        background-image: url(/images/wallet_header_hover.svg);
+      }
+
+      span {
+        color: white !important;
+      }
+    }
+
+    @include modifier(yellow) {
+      &:hover {
+        background-color: #f4e61b;
+        span {
+          color: black !important;
+        }
+      }
+    }
+
+    a {
+      display: flex;
+      justify-content: space-around;
+      width: 83%;
+      text-decoration: none;
+    }
+
+    span {
+      color: #05283e;
+      font-size: 0.938em;
+      padding-top: 1px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      letter-spacing: normal;
+    }
+
+    @include element(icon) {
+      width: 23px;
+      height: 23px;
+      background-image: url(/images/wallet.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  @include element(nav) {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #0a2f40;
+    font-size: 1em;
+
+    @include breakpoint(medium down) {
+      display: none;
+    }
+
+    @include element(open) {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 99;
+      visibility: visible;
+      background: #fff;
+      flex-direction: column;
+      justify-content: normal;
+      padding: 0 0 60px;
+      border-radius: 0 0 60px 60px;
+      box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  @include element(link) {
+    text-decoration: none;
+    width: 82px;
+    font-size: 0.938em;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #083549;
+
+    &:hover {
+      font-weight: bold;
+      color: #063d53;
+      text-decoration: underline;
+    }
+
+    @include breakpoint(medium down) {
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+
+    @include modifier(white) {
+      color: white;
+      &:hover {
+        font-weight: bold;
+        color: white;
+        text-decoration: underline;
+      }
+    }
+
+    @include element(wrapper) {
+      @include xy-grid(horizontal);
+      @include breakpoint(medium down) {
+        margin: 4em 0 2em;
+        @include xy-grid(vertical);
+      }
+    }
+
+    @include breakpoint(medium down) {
+      font-size: 1.375em;
+    }
+
+    @include modifier(white) {
+      color: white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@include block(active) {
+  .hamburger-button__top {
+    -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
+    transform: translateY(11px) translateX(0) rotate(45deg);
+    background: #000;
+  }
+
+  .hamburger-button__middle {
+    opacity: 0;
+    background: #000;
+  }
+
+  .hamburger-button__bottom {
+    -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
+    transform: translateY(-11px) translateX(0) rotate(-45deg);
+    background: #000;
+  }
+}
+
+@include block(hamburger-button) {
+  @include element(container) {
+    @include breakpoint(large up) {
+      display: none;
+    }
+    background-color: transparent;
+    position: relative;
+    flex: 0 0 auto;
+    display: block;
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    z-index: 100;
+
+    span {
+      background: #052741;
+      border: none;
+      height: 2px;
+      width: 25px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.35s ease;
+      cursor: pointer;
+      &:nth-of-type(2) {
+        top: 11px;
+      }
+
+      &:nth-of-type(3) {
+        top: 22px;
+      }
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus,
+    :active {
+      outline: none;
+    }
+  }
+
+  @include element(top) {
+  }
+
+  @include element(middle) {
+  }
+
+  @include element(bottom) {
+  }
+}

@@ -1,0 +1,245 @@
+@include block(footer) {
+  height: 100%;
+  width: 100%;
+
+  @include xy-grid-container();
+
+  @include element(wrapper) {
+    @include breakpoint(medium up) {
+      height: 240px;
+    }
+    background-color: #213f55;
+    padding: 2em 20px;
+    min-height: 100px;
+
+    @include modifier(dark) {
+      background-color: #001929;
+      padding: 1em 20px;
+      height: 218px;
+    }
+  }
+
+  @include breakpoint(medium down) {
+    > div {
+      &:nth-child(2) {
+        order: 3;
+      }
+    }
+  }
+
+  @include element(container) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  @include element(link) {
+    text-decoration: none;
+    width: 62px;
+    font-size: 0.938em;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #0a2f40;
+    
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
+
+    @include modifier(white) {
+      color: white;
+      &:hover {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include element(icons) {
+    @include breakpoint(medium down) {
+      margin-top: 1em;
+    }
+  }
+
+  @include element(icon) {
+    cursor: pointer;
+  }
+
+  @include block(image) {
+    height: 31px;
+    width: 31px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include block(twitter) {
+    background-image: url(/images/twitter_white.svg);
+    &:hover {
+      background-image: url(/images/twitter_footer_hover.svg);
+    }
+  }
+
+  @include block(github) {
+    background-image: url(/images/github_white.svg);
+    &:hover {
+      background-image: url(/images/git_footer_hover.svg);
+    }
+  }
+
+  @include block(medium) {
+    background-image: url(/images/medium_white.svg);
+    &:hover {
+      background-image: url(/images/med_footer_hover.svg);
+    }
+  }
+
+  @include block(discord) {
+    background-image: url(/images/discord.svg);
+    &:hover {
+      background-image: url(/images/discord_footer_hover.svg);
+    }
+  }
+
+  @include block(telegram) {
+    background-image: url(/images/tele.svg);
+    &:hover {
+      background-image: url(/images/telegram_footer_hover.svg);
+    }
+  }
+
+  @include element(wallet) {
+    width: 200px;
+    height: 40.4px;
+    border-radius: 20.2px;
+    border: solid 1.3px rgba(5, 34, 53, 0.18);
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    > span {
+      color: #05283e;
+      font-size: 0.938em;
+    }
+
+    @include element(icon) {
+      width: auto;
+      height: 23px;
+    }
+  }
+
+  @include element(defi) {
+    height: 29px;
+    border-radius: 14.5px;
+    border: solid 1px #7b7b7b;
+    width: 185px;
+    max-width: 205px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-top: 1em;
+
+    @include element(link) {
+      text-decoration: none;
+      width: 100%;
+      font-size: 0.938em;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: white;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  @include element(nav) {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #0a2f40;
+    font-size: 0.938em;
+
+    @include xy-grid();
+    @include flex-align(right, middle);
+
+    @include breakpoint(small only) {
+      @include flex-align(left, middle);
+    }
+  }
+
+  @include element(logo) {
+    width: 100px;
+
+    @include element(wrapper) {
+      display: flex;
+      align-items: center;
+
+      > span {
+        margin-left: 10px;
+        color: white;
+        font-size: 0.813em;
+        font-weight: 500;
+      }
+    }
+  }
+
+  @include element(item) {
+    @include breakpoint(small only) {
+      margin: 1em 0;
+    }
+  }
+
+  @include element(sign) {
+    @include block(title) {
+      font-size: 1.1em;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: white;
+      margin-bottom: 0.4em;
+    }
+
+    @include block(input) {
+      max-width: 299px;
+      height: 54px;
+      border-radius: 10px;
+      border: solid 1px rgba(151, 151, 151, 0.35);
+      background-color: #ffffff;
+      color: #052235;
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+    }
+
+    @include block(button) {
+      padding: 18px;
+      max-width: 105px;
+      margin-left: 1em;
+      border-radius: 10px;
+      background: linear-gradient(112deg, #97fba2 9%, #fae83e 90%);
+
+      &:hover {
+        background: #fae83e;
+        cursor: pointer;
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

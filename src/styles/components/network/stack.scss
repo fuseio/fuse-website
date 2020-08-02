@@ -1,0 +1,125 @@
+@include block(network_stack) {
+  background-color: #001929;
+  padding-bottom: 8em;
+
+  background-image: url(/images/stack.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  @include block(title) {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    font-size: 2.813em;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.02px;
+    text-align: center;
+    color: #ffffff;
+    margin: 4em 0;
+  }
+
+  @include block(floors) {
+    width: 100%;
+
+    @include element(item) {
+      height: 250px;
+      align-items: center;
+
+      @include block(content) {
+        @include element(text) {
+          font-size: 1.125em;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.39;
+          letter-spacing: normal;
+          color: #9eb3c0;
+
+          > span:first-child {
+            font-weight: bold;
+            color: #ffffff;
+          }
+
+          > span:not(:first-child) {
+            font-weight: 300;
+            color: #ffffff;
+          }
+        }
+      }
+
+      @include block(dots) {
+        > img {
+          width: 50%;
+        }
+      }
+
+      @include block(dots) {
+        // height: 250px;
+      }
+    }
+  }
+}
+
+@include block(sign_for_updates) {
+  margin: 3em 0 5em;
+  @include block(title) {
+    font-size: 3.125em;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a687b;
+  }
+
+  @include block(text) {
+    font-size: 1.125em;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: #868686;
+    margin-bottom: 3em;
+  }
+
+  @include block(form) {
+    @include xy-grid(horizontal, false);
+    @include element(input) {
+      @include xy-cell(16);
+      min-width: 367px;
+      height: 54px;
+      border-radius: 10px;
+      border: solid 1px rgba(151, 151, 151, 0.35);
+      background-color: #e5eff5;
+      color: #9a9a9a;
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+    }
+
+    @include element(button) {
+      @include xy-cell(6);
+      padding: 18px;
+      max-width: 105px;
+      margin-left: 1em;
+      border-radius: 10px;
+      background: linear-gradient(112deg, #97fba2 9%, #fae83e 90%);
+
+      &:hover {
+        background: #fae83e;
+        cursor: pointer;
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

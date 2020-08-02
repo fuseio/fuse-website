@@ -1,0 +1,20 @@
+@import 'header';
+@import 'section_1';
+@import 'section_3';
+@import 'section_4';
+@import 'section_5';
+@import 'swiper';
+@import 'communities';
+@import 'footer';
+@import 'steps';
+@import 'network/network';
+@import 'network/stack';
+
+.site-wrapper {
+  position: relative;
+  display: block;
+  min-height: 100vh;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
