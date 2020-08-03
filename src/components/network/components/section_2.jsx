@@ -78,7 +78,7 @@ const SectionTwo = () => {
                 <img src={dotFuseWallet} />
               </div>
               <div className='animation cell large-10'>
-                <div id='floorTwo' ref={floorTwo} />
+                <div ref={floorTwo} />
               </div>
             </div>
             <div className='floors__item grid-x align-spaced'>
