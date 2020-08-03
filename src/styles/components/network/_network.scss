@@ -23,6 +23,8 @@
 
   @include block(lottie) {
     position: absolute;
+    width: 100%;
+    height: 100%;
   }
 
   @include element(top) {
