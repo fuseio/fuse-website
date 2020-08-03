@@ -1,9 +1,7 @@
 @include block(network_stack) {
   background-color: #031928;
   padding-bottom: 8em;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
+  border-top: 1px solid #031928;
 
   @include block(title) {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
@@ -15,7 +13,8 @@
     letter-spacing: 0.02px;
     text-align: center;
     color: #ffffff;
-    margin: 4em 0;
+    margin: 4em 0 2em;
+    z-index: 1;
   }
 
   @include block(floors) {

@@ -1,9 +1,7 @@
 @include block(network_main) {
-  width: 100%;
   position: relative;
+  border-bottom: 2px solid #031928;
   background-color: #031928;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 
   @include breakpoint(large) {
     height: 91vh;
@@ -14,11 +12,7 @@
     left: 50%;
     width: 100%;
     height: 100%;
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
-    max-width: 945px;
-    margin-left: auto;
-    margin-right: auto;
+    @include xy-grid-container();
 
     > div {
       position: relative;
@@ -33,7 +27,7 @@
 
   @include element(top) {
     position: absolute;
-    top: 10.000em;
+    top: 10em;
     left: 0;
     z-index: 1;
   }
@@ -41,7 +35,7 @@
   @include element(bottom) {
     position: absolute;
     bottom: 90px;
-    right: -8.125em;
+    right: 0;
     z-index: 1;
   }
 

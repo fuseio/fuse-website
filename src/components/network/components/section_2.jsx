@@ -48,7 +48,7 @@ const SectionTwo = () => {
         <div className='grid-y'>
           <h1 className='title'>Network for open source payments</h1>
           <div className='floors grid-y'>
-            <div className='floors__item grid-x'>
+            <div className='floors__item grid-x align-spaced'>
               <div className='content grid-x cell large-8'>
                 <div className='grid-y cell large-22 align-top'>
                   <img src={walletApp} />
@@ -65,7 +65,7 @@ const SectionTwo = () => {
                 <div ref={floorOne} />
               </div>
             </div>
-            <div className='floors__item grid-x'>
+            <div className='floors__item grid-x align-spaced'>
               <div className='content grid-x cell large-8'>
                 <div className='grid-y cell large-22 align-top'>
                   <img src={fuseWallet} />
@@ -81,7 +81,7 @@ const SectionTwo = () => {
                 <div id='floorTwo' ref={floorTwo} />
               </div>
             </div>
-            <div className='floors__item grid-x'>
+            <div className='floors__item grid-x align-spaced'>
               <div className='content grid-x cell large-8'>
                 <div className='grid-y cell large-22 align-top'>
                   <img src={fuseStudio} />
