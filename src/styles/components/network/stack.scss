@@ -1,6 +1,6 @@
 @include block(network_stack) {
   background-color: #031928;
-  padding-bottom: 8em;
+  padding: 8em 0;
   border-top: 1px solid #031928;
 
   @include block(title) {
@@ -21,7 +21,6 @@
     width: 100%;
 
     @include element(item) {
-      height: 250px;
       align-items: center;
 
       @include block(content) {

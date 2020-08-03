@@ -275,10 +275,10 @@
   }
 
   @include element(item) {
-    height: 262px;
+    // height: 262px;
     border-radius: 10px;
     background-color: #f5fdff;
-    padding: 1em;
+    padding: 2em 2em;
 
     &:not(:last-child) {
       margin-bottom: 2em;

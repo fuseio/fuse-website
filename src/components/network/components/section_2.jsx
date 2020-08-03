@@ -61,7 +61,7 @@ const SectionTwo = () => {
               <div className='dots grid-y cell large-6 align-middle align-center'>
                 <img src={dotFuseWallet} />
               </div>
-              <div className='animation cell large-8'>
+              <div className='animation cell large-10'>
                 <div ref={floorOne} />
               </div>
             </div>
@@ -77,7 +77,7 @@ const SectionTwo = () => {
               <div className='dots grid-y cell large-6 align-middle align-center'>
                 <img src={dotFuseWallet} />
               </div>
-              <div className='animation cell large-8'>
+              <div className='animation cell large-10'>
                 <div id='floorTwo' ref={floorTwo} />
               </div>
             </div>
@@ -94,7 +94,7 @@ DPoS blockchain operated by validators and optimized for payments.
               <div className='dots grid-y cell large-6 align-middle align-center'>
                 <img src={dotFuseWallet} />
               </div>
-              <div className='animation cell large-8'>
+              <div className='animation cell large-10'>
                 <div ref={floorThree} />
               </div>
             </div>
