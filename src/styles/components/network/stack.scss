@@ -1,15 +1,13 @@
 @include block(network_stack) {
-  background-color: #001929;
+  background-color: #031928;
   padding-bottom: 8em;
-
-  background-image: url(/images/stack.jpg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
 
   @include block(title) {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    font-size: 2.813em;
+    font-size: 1.875em;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -56,7 +54,6 @@
       }
 
       @include block(dots) {
-        // height: 250px;
       }
     }
   }
@@ -65,7 +62,7 @@
 @include block(sign_for_updates) {
   margin: 3em 0 5em;
   @include block(title) {
-    font-size: 3.125em;
+    font-size: 1.875em;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;

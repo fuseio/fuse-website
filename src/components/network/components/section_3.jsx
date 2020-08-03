@@ -9,6 +9,9 @@ const SectionThree = () => {
       <div className="network_in_numbers__content">
         <div className="grid-x items">
           <div className="item grid-y cell medium-6 align-spaced">
+            <div className='up_to'>
+              <div>Up to:</div>
+            </div>
             <div className="number">0.01$</div>
             <div className="title">Transaction cost</div>
           </div>

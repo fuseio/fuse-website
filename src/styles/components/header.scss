@@ -148,7 +148,11 @@
 
     @include modifier(yellow) {
       &:hover {
-        background-color: #f4e61b;
+        background-color: #eef58c;
+
+        .header__wallet__icon {
+          background-image: url(/images/wallet.svg);
+        }
         span {
           color: black !important;
         }
@@ -240,6 +244,12 @@
         color: white;
         text-decoration: underline;
       }
+    }
+
+    @include modifier(selected) {
+      font-weight: bold;
+      color: #063d53;
+      text-decoration: underline;
     }
 
     @include element(wrapper) {

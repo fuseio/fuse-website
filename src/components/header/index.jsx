@@ -33,7 +33,7 @@ const Header = ({ history, isNetworkHeader = false }) => {
             <a rel="noreferrer noopener" className={classNames('header__link', { 'header__link--white': isNetworkHeader })} target='_blank'
               href='https://explorer.fuse.io/'>Explorer</a>
             <a rel="noreferrer noopener" className={classNames('header__link', { 'header__link--white': isNetworkHeader })} target='_blank' href='https://docs.fuse.io/'>Docs</a>
-            <a rel="noreferrer noopener" className={classNames('header__link', { 'header__link--white': isNetworkHeader })} target='_blank' role='button' onClick={networkPage}>Network</a>
+            <a rel="noreferrer noopener" className={classNames('header__link', { 'header__link--white': isNetworkHeader, 'header__link--selected': isNetworkHeader })} target='_blank' role='button' onClick={networkPage}>Network</a>
           </div>
           <div className="header__icons">
             <a rel="noreferrer noopener" className={classNames('icon', { 'medium': !isNetworkHeader, 'medium--white': isNetworkHeader })} target='_blank' href='https://medium.com/fusenet' />

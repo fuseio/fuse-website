@@ -4,21 +4,44 @@ import fuseStudio from '@/assets/images/fuse-studio.svg'
 import dotFuseWallet from '@/assets/images/dot_fuse_wallet.png'
 import walletApp from '@/assets/images/wallet-app.svg'
 import lottie from 'lottie-web'
-// import floorOneAnimationData from '@/assets/lottie/floor_one/data.json'
-import floorOneAnimationData from '@/assets/lottie/network_page/data.json'
+import walletAnimationData from '@/assets/lottie/wallet/wallet.json'
+import studioAnimationData from '@/assets/lottie/studio/studio.json'
+import chainAnimationData from '@/assets/lottie/chain/chain.json'
 
 const SectionTwo = () => {
   const floorOne = useRef(null)
+  const floorTwo = useRef(null)
+  const floorThree = useRef(null)
 
   useEffect(() => {
     if (floorOne.current)
       lottie.loadAnimation({
-        floorOneAnimationData,
+        animationData: walletAnimationData,
         container: floorOne.current,
         renderer: 'svg',
         loop: true,
       })
   }, [floorOne])
+
+  useEffect(() => {
+    if (floorTwo.current)
+      lottie.loadAnimation({
+        animationData: studioAnimationData,
+        container: floorTwo.current,
+        renderer: 'svg',
+        loop: true,
+      })
+  }, [floorTwo])
+
+  useEffect(() => {
+    if (floorThree.current)
+      lottie.loadAnimation({
+        animationData: chainAnimationData,
+        container: floorThree.current,
+        renderer: 'svg',
+        loop: true,
+      })
+  }, [floorThree])
   return (
     <section className='network_stack'>
       <div className='grid-container'>
@@ -35,7 +58,7 @@ const SectionTwo = () => {
                 </div>
                 </div>
               </div>
-              <div className='dots grid-y cell large-8 align-middle align-center'>
+              <div className='dots grid-y cell large-6 align-middle align-center'>
                 <img src={dotFuseWallet} />
               </div>
               <div className='animation cell large-8'>
@@ -51,11 +74,11 @@ const SectionTwo = () => {
                 </div>
                 </div>
               </div>
-              <div className='dots grid-y cell large-8 align-middle align-center'>
+              <div className='dots grid-y cell large-6 align-middle align-center'>
                 <img src={dotFuseWallet} />
               </div>
               <div className='animation cell large-8'>
-                <div ref={floorOne} />
+                <div id='floorTwo' ref={floorTwo} />
               </div>
             </div>
             <div className='floors__item grid-x'>
@@ -63,16 +86,16 @@ const SectionTwo = () => {
                 <div className='grid-y cell large-22 align-top'>
                   <img src={fuseStudio} />
                   <div className='content__text'>
-                    <span>Fuse Studio </span><span>|</span> For network participants
+                    <span>Fuse Chain </span><span>|</span> For network participants
 DPoS blockchain operated by validators and optimized for payments.
                 </div>
                 </div>
               </div>
-              <div className='dots grid-y cell large-8 align-middle align-center'>
+              <div className='dots grid-y cell large-6 align-middle align-center'>
                 <img src={dotFuseWallet} />
               </div>
               <div className='animation cell large-8'>
-                <div ref={floorOne} />
+                <div ref={floorThree} />
               </div>
             </div>
           </div>

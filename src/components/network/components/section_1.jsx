@@ -18,16 +18,17 @@ const SectionOne = () => {
       })
   }, [lottieRef])
   return (
-    <section ref={lottieRef} className="network_main">
+    <section className="network_main">
+      <div className='lottie' ref={lottieRef} />
       <Header isNetworkHeader />
-      <div className='network_main__wrapper grid-container'>
+      <div className='network_main__wrapper'>
         <div>
           <div className='network_main__top'>
             <div className='title'>Fuse network</div>
             <div className='text'>A fast, decentralised and low cost <br /> alternative to existing digital payments.</div>
           </div>
           <div className='network_main__bottom'>
-            <div className='text'>Helping power day-to-day mobile payments <br /> Free of intermediaries and powered by a <br /> global network of local operators </div>
+            <div className='text text--dark'>Helping power day-to-day mobile payments <br /> Free of intermediaries and powered by a <br /> global network of local operators </div>
           </div>
         </div>
       </div>
