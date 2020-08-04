@@ -8,9 +8,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const WebappWebpackPlugin = require('webapp-webpack-plugin');
 const { PATH_NPM, PATH_SRC } = require('./config/paths');
 
-const isDev = process.env.NODE_ENV == 'development'
+const isDev = process.env.NODE_ENV === 'development'
+const sourceMap = isDev;
 
-const config = {
+module.exports = {
   entry: [
     'react-hot-loader/patch',
     './src/index.js'
@@ -27,41 +28,41 @@ const config = {
         exclude: /node_modules/
       },
       {
-        test: /\.css$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          !isDev ? {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: './',
+            },
+          } : {
+              loader: 'style-loader'
+            },
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1
+              sourceMap
             }
           },
-          'postcss-loader'
-        ],
-        exclude: /\.module\.css$/
-      },
-      {
-        test: /\.css$/,
-        use: [
-          MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader',
+            loader: 'postcss-loader',
             options: {
-              importLoaders: 3,
-              sourceMap: true
-            }
+              sourceMap,
+            },
           },
-          'postcss-loader'
+          {
+            loader: 'resolve-url-loader',
+            options: {
+              sourceMap,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap,
+            },
+          }
         ],
-        include: /\.module\.css$/
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader'
-        ]
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
@@ -113,6 +114,7 @@ const config = {
     hot: true
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new ProgressBarPlugin(),
     new WebappWebpackPlugin({
       logo: path.join(path.resolve(__dirname, './'), '/src/assets/images/favicon.png'),
@@ -154,17 +156,14 @@ const config = {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
           chunks: 'all'
-        }
+        },
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true,
+        },
       }
     }
-  }
-};
-
-module.exports = (env, argv) => {
-  if (argv.hot) {
-    // Cannot use 'contenthash' when hot reloading is enabled.
-    config.output.filename = '[name].[hash].js';
-  }
-
-  return config;
+  },
 };

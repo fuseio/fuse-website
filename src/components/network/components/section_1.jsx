@@ -16,7 +16,7 @@ const SectionOne = () => {
         renderer: 'svg',
         loop: true,
       })
-  }, [lottieRef])
+  }, [])
   return (
     <section className="network_main">
       <div className='lottie' ref={lottieRef} />

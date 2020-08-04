@@ -30,9 +30,19 @@
     }
   }
   @include element(swiper) {
-    position: unset;
-    margin: 0;
-    overflow: visible;
+    > div {
+      &:first-child {
+        position: unset;
+        margin: 0;
+        overflow: visible;
+      }
+
+      .swiper-slide {
+        border-radius: 10px;
+        box-shadow: 1px 0 8px 0 rgba(0, 0, 0, 0.3);
+        background-color: #ffffff;
+      }
+    }
     @include breakpoint(large) {
       display: none;
     }
@@ -67,9 +77,11 @@
     margin-bottom: 2em;
   }
   @include element(text) {
-    width: 251px;
     @extend %main-text;
     margin-bottom: 1em;
+    @include breakpoint(xlarge up) {
+      width: 251px;
+    }
   }
   @include element(read-more) {
     font-size: 1.25em;

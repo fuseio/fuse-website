@@ -1,6 +1,6 @@
 
 import React from "react";
-import { hot } from 'react-hot-loader/root';
+import { hot } from 'react-hot-loader';
 import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'connected-react-router'
 import { Switch, Route } from 'react-router'
@@ -31,4 +31,4 @@ const App = () => {
   )
 }
 
-export default hot(App)
+export default hot(module)(App)

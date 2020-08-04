@@ -3,7 +3,7 @@ import { withRouter } from 'react-router'
 import classNames from 'classnames'
 import useOutsideClick from '@/hooks/useOutsideClick.jsx'
 import fuseLogo from '@/assets/images/site-logo.svg'
-import fuseLogoWhite from '@/assets/images/site-logo-white.svg'
+import fuseLogoWhite from '@/assets/images/group_21.svg'
 
 const Header = ({ history, isNetworkHeader = false }) => {
   const [isOpen, setMenuOpen] = useState(false)
@@ -16,14 +16,15 @@ const Header = ({ history, isNetworkHeader = false }) => {
   })
 
   const networkPage = () => history.push('/network')
+  const homePage = () => history.push('/')
 
   return (
     <header className={classNames('header__wrapper', { 'header__wrapper--absolute': isNetworkHeader })}>
       <div className='header'>
-        <a className='header__logo'>
+        <div onClick={homePage} className='header__logo'>
           <img alt="logo" src={isNetworkHeader ? fuseLogoWhite : fuseLogo} />
-        </a>
-        <button ref={hamburgerRef} type="button" className="hamburger-button__container" onClick={() => setMenuOpen(!isOpen)} >
+        </div>
+        <button ref={hamburgerRef} type="button" className={classNames('hamburger-button__container', { 'hamburger-button__container--white': isNetworkHeader })} onClick={() => setMenuOpen(!isOpen)} >
           <span className="hamburger-button__top"></span>
           <span className="hamburger-button__middle"></span>
           <span className="hamburger-button__bottom"></span>

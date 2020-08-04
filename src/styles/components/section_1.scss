@@ -3,7 +3,7 @@
   position: relative;
   background-image: linear-gradient(116deg, #8efdaf, #f4e61b);
 
-  @include breakpoint(large) {
+  @include breakpoint(xlarge) {
     min-height: 750px;
   }
 
@@ -14,15 +14,12 @@
 
     @include breakpoint(medium only) {
       margin-top: 3em;
+      min-height: 60vh;
     }
 
     @include breakpoint(medium down) {
       margin-top: 1em;
       @include flex-align(center, null);
-    }
-
-    @include breakpoint(medium only) {
-      min-height: 60vh;
     }
 
     @include breakpoint(small only) {
@@ -48,6 +45,7 @@
 
     @include breakpoint(small only) {
       margin-bottom: 8em;
+      max-width: 90%;
     }
 
     @include breakpoint(1700px) {

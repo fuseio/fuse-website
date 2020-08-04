@@ -10,6 +10,7 @@
     display: block;
     padding: 0 20px;
     position: relative;
+    width: 100%;
     @include modifier(absolute) {
       // position: absolute;
       // top: 0;
@@ -238,11 +239,13 @@
     }
 
     @include modifier(white) {
-      color: white;
-      &:hover {
-        font-weight: bold;
+      @include breakpoint(medium up) {
         color: white;
-        text-decoration: underline;
+        &:hover {
+          font-weight: bold;
+          color: white;
+          text-decoration: underline;
+        }
       }
     }
 
@@ -323,6 +326,12 @@
 
       &:nth-of-type(3) {
         top: 22px;
+      }
+    }
+
+    @include modifier(white) {
+      span {
+        background: white;
       }
     }
 

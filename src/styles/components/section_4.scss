@@ -90,6 +90,7 @@
         left: 50%;
         @include breakpoint(medium down) {
           width: 100%;
+          max-width: 350px;
         }
       }
 

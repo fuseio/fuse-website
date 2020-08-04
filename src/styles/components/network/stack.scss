@@ -1,10 +1,16 @@
 @include block(network_stack) {
   background-color: #031928;
-  padding: 8em 0;
   border-top: 1px solid #031928;
 
+  @include breakpoint(large up) {
+    padding: 8em 0;
+  }
+
+  @include breakpoint(large down) {
+    padding: 4em 0;
+  }
+
   @include block(title) {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     font-size: 1.875em;
     font-weight: bold;
     font-stretch: normal;
@@ -13,8 +19,17 @@
     letter-spacing: 0.02px;
     text-align: center;
     color: #ffffff;
-    margin: 4em 0 2em;
     z-index: 1;
+
+    @include breakpoint(large up) {
+      margin: 4em 0 2em;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    @include breakpoint(large down) {
+      font-size: 1.8em;
+      margin-bottom: 0.5em;
+    }
   }
 
   @include block(floors) {
@@ -24,6 +39,10 @@
       align-items: center;
 
       @include block(content) {
+        @include breakpoint(medium down) {
+          order: 2;
+          margin-top: 2em;
+        }
         @include element(text) {
           font-size: 1.125em;
           font-weight: normal;
@@ -49,16 +68,27 @@
         > img {
           width: 50%;
         }
+
+        @include breakpoint(medium down) {
+          display: none;
+        }
       }
 
       @include block(animation) {
+        @include breakpoint(large up) {
+        }
+
+        @include breakpoint(medium down) {
+          order: 1;
+          margin-top: 2em;
+        }
       }
     }
   }
 }
 
 @include block(sign_for_updates) {
-  margin: 3em 0 5em;
+  margin: 3em 20px 5em;
   @include block(title) {
     font-size: 1.875em;
     font-weight: bold;
@@ -67,6 +97,7 @@
     line-height: normal;
     letter-spacing: normal;
     color: #4a687b;
+    margin-bottom: 1em;
   }
 
   @include block(text) {
@@ -83,14 +114,24 @@
 
   @include block(form) {
     @include xy-grid(horizontal, false);
+
+    @include breakpoint(medium down) {
+      @include xy-grid();
+    }
     @include element(input) {
       @include xy-cell(16);
-      min-width: 367px;
+      @include breakpoint(large) {
+        min-width: 367px;
+      }
       height: 54px;
       border-radius: 10px;
-      border: solid 1px rgba(151, 151, 151, 0.35);
+      border: solid 1px #e5eff5;
       background-color: #e5eff5;
       color: #9a9a9a;
+
+      @include breakpoint(medium down) {
+        @include xy-cell(24);
+      }
 
       &:disabled {
         opacity: 0.7;
@@ -100,8 +141,14 @@
 
     @include element(button) {
       @include xy-cell(6);
+      @include breakpoint(medium up) {
+        max-width: 105px;
+      }
+      @include breakpoint(medium down) {
+        @include xy-cell(24);
+        margin-top: 2em;
+      }
       padding: 18px;
-      max-width: 105px;
       margin-left: 1em;
       border-radius: 10px;
       background: linear-gradient(112deg, #97fba2 9%, #fae83e 90%);

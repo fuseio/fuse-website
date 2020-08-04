@@ -7,8 +7,8 @@ const SectionThree = () => {
   return (
     <section className="network_in_numbers">
       <div className="network_in_numbers__content">
-        <div className="grid-x items">
-          <div className="item grid-y cell medium-6 align-spaced">
+        <div className="items">
+          <div className="item">
             <div className='up_to'>
               <div>Up to:</div>
             </div>
@@ -17,19 +17,27 @@ const SectionThree = () => {
           </div>
           <div className="line cell shrink"></div>
 
-          <div className="item grid-y cell medium-6 align-spaced">
+          <div className="item">
             <div className="number">489K</div>
             <div className="title">Transactions</div>
+            <div className='bottom_link'>
+              <div><a rel="noreferrer noopener" target='_blank'
+                href="http://explorer.fuse.io/">Click here for the explorer</a></div>
+            </div>
           </div>
           <div className="line cell shrink"></div>
 
-          <div className="item grid-y cell medium-6 align-spaced">
+          <div className="item">
             <div className="number">250</div>
             <div className="title">communities launched</div>
+            <div className='bottom_link'>
+              <div><a rel="noreferrer noopener" target='_blank'
+                href="http://studio.fuse.io/">Using the Fuse Studio</a></div>
+            </div>
           </div>
           <div className="line cell shrink"></div>
 
-          <div className="item grid-y cell medium-6 align-spaced">
+          <div className="item">
             <div className="number">7,000</div>
             <div className="title">Contract Wallets</div>
           </div>
