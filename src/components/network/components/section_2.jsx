@@ -48,12 +48,13 @@ const SectionTwo = () => {
         <div className='grid-y'>
           <h1 className='title'>Network for open source payments</h1>
           <div className='floors grid-y'>
-            <div className='floors__item grid-x align-spaced'>
+            <div className='floors__item grid-x align-spaced align-middle'>
               <div className='content grid-x cell large-8'>
                 <div className='grid-y cell large-22 align-top'>
                   <img src={walletApp} />
                   <div className='content__text'>
-                    <span>Fuse Wallet </span><span>|</span> for users
+                    <span>Fuse Wallet </span><span>|</span> <span>for users</span>
+                    <br />
                   An easy to use cross-platform mobile wallet
                 </div>
                 </div>
@@ -65,12 +66,14 @@ const SectionTwo = () => {
                 <div ref={floorOne} />
               </div>
             </div>
-            <div className='floors__item grid-x align-spaced'>
+            <div className='floors__item grid-x align-spaced align-middle'>
               <div className='content grid-x cell large-8'>
                 <div className='grid-y cell large-22 align-top'>
                   <img src={fuseWallet} />
                   <div className='content__text'>
-                    <span>Fuse Studio </span><span>|</span> An easy to use self-service smart contract platform for businesses.
+                    <span>Fuse Studio </span><span>|</span> <span>for operators</span>
+                    <br />
+                    An easy to use self-service smart contract platform for businesses.
                 </div>
                 </div>
               </div>
@@ -81,12 +84,13 @@ const SectionTwo = () => {
                 <div ref={floorTwo} />
               </div>
             </div>
-            <div className='floors__item grid-x align-spaced'>
+            <div className='floors__item grid-x align-spaced align-middle'>
               <div className='content grid-x cell large-8'>
                 <div className='grid-y cell large-22 align-top'>
                   <img src={fuseStudio} />
                   <div className='content__text'>
-                    <span>Fuse Chain </span><span>|</span> For network participants
+                    <span>Fuse Chain </span><span>|</span> <span>For network participants</span>
+                    <br />
 DPoS blockchain operated by validators and optimized for payments.
                 </div>
                 </div>

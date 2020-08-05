@@ -36,12 +36,9 @@
     width: 100%;
 
     @include element(item) {
-      align-items: center;
-
       @include block(content) {
         @include breakpoint(medium down) {
           order: 2;
-          margin-top: 2em;
         }
         @include element(text) {
           font-size: 1.125em;
@@ -67,6 +64,7 @@
       @include block(dots) {
         > img {
           width: 50%;
+          margin-bottom: 0.5em;
         }
 
         @include breakpoint(medium down) {
@@ -121,13 +119,14 @@
     @include element(input) {
       @include xy-cell(16);
       @include breakpoint(large) {
-        min-width: 367px;
+        min-width: 300px;
       }
       height: 54px;
       border-radius: 10px;
       border: solid 1px #e5eff5;
       background-color: #e5eff5;
       color: #9a9a9a;
+      font-size: 18px;
 
       @include breakpoint(medium down) {
         @include xy-cell(24);

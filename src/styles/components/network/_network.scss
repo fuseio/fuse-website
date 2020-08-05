@@ -49,6 +49,7 @@
 
     @include breakpoint(large down) {
       order: 3;
+      min-height: 390px;
     }
   }
 
@@ -247,7 +248,7 @@
 }
 
 @include block(network_in_numbers) {
-  padding: 4em 0;
+  padding: 8em 0;
   @include breakpoint(medium down) {
     padding: 6em 0;
   }

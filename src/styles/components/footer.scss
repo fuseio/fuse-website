@@ -35,7 +35,6 @@
 
   @include element(link) {
     text-decoration: none;
-    width: 62px;
     font-size: 0.938em;
     font-weight: 500;
     font-style: normal;
@@ -60,7 +59,7 @@
 
   @include element(icons) {
     @include breakpoint(medium down) {
-      margin-top: 1em;
+      margin-top: 3em;
     }
   }
 

@@ -1,22 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="71px" height="64px" viewBox="0 0 71 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>icons8-wallet-app</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="64" viewBox="0 0 71 64">
     <defs>
-        <filter x="-48.8%" y="-58.8%" width="197.6%" height="217.6%" filterUnits="objectBoundingBox" id="filter-1">
-            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+        <filter id="p6ftxup5na" width="197.6%" height="217.6%" x="-48.8%" y="-58.8%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0"/>
             <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
             </feMerge>
         </filter>
     </defs>
-    <g id="Nwtwork-page-new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Network-page-new" transform="translate(-376.000000, -1599.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <g id="icons8-wallet-app" filter="url(#filter-1)" transform="translate(391.000000, 1614.000000)">
-                <path d="M4.45652174,0 C2.00586608,0 0,2.01359086 0,4.47368421 L0,9.84210526 L0,15.2105263 L0,17 L0,21.4055303 L0,29.5263158 C0,31.9966842 1.99563043,34 4.45652174,34 L36.5434783,34 C39.0043696,34 41,31.9966842 41,29.5263158 L41,21.4055303 L41,17 L41,15.2105263 L41,9.84210526 L41,4.47368421 C41,2.01359086 38.9941338,0 36.5434783,0 L4.45652174,0 Z M4.45652174,1.78947368 L36.5434783,1.78947368 C38.0306053,1.78947368 39.2173913,2.98083019 39.2173913,4.47368421 L39.2173913,6.289371 C38.4695362,5.71982716 37.5488125,5.36842105 36.5434783,5.36842105 L4.45652174,5.36842105 C3.45118721,5.36842105 2.53046376,5.71982716 1.7826087,6.289371 L1.7826087,4.47368421 C1.7826087,2.98083019 2.96939478,1.78947368 4.45652174,1.78947368 Z M4.45652174,7.15789474 L36.5434783,7.15789474 C38.0306053,7.15789474 39.2173913,8.34925116 39.2173913,9.84210526 L39.2173913,11.6577921 C38.4695362,11.0882482 37.5488125,10.7368421 36.5434783,10.7368421 L4.45652174,10.7368421 C3.45118721,10.7368421 2.53046376,11.0882482 1.7826087,11.6577921 L1.7826087,9.84210526 C1.7826087,8.34925116 2.96939478,7.15789474 4.45652174,7.15789474 Z M4.45652174,12.5263158 L36.5434783,12.5263158 C38.0306053,12.5263158 39.2173913,13.7176722 39.2173913,15.2105263 L39.2173913,17 L29.9614042,17 C28.0290564,17 26.2623664,18.0961081 25.3986925,19.8310028 L25.0644533,20.5003081 C24.1989968,22.2352028 22.4332391,23.3313118 20.5,23.3313118 C18.5667609,23.3313118 16.8009613,22.2352028 15.9372874,20.5003081 L15.604789,19.8310028 C14.7402246,18.0952134 12.9718349,17 11.0385958,17 L1.7826087,17 L1.7826087,15.2105263 C1.7826087,13.7176722 2.96939478,12.5263158 4.45652174,12.5263158 Z" id="Shape"></path>
-            </g>
-        </g>
+    <g fill="#FFF" filter="url(#p6ftxup5na)" transform="translate(15 15)">
+        <path d="M4.457 0C2.006 0 0 2.014 0 4.474v25.052C0 31.996 1.996 34 4.457 34h32.086C39.004 34 41 31.997 41 29.526V4.474C41 2.014 38.994 0 36.543 0H4.457zm0 1.79h32.086c1.488 0 2.674 1.19 2.674 2.684v1.815c-.747-.57-1.668-.92-2.674-.92H4.457c-1.006 0-1.927.35-2.674.92V4.474c0-1.493 1.186-2.685 2.674-2.685zm0 5.368h32.086c1.488 0 2.674 1.191 2.674 2.684v1.816c-.747-.57-1.668-.921-2.674-.921H4.457c-1.006 0-1.927.351-2.674.92V9.843c0-1.493 1.186-2.684 2.674-2.684zm0 5.368h32.086c1.488 0 2.674 1.192 2.674 2.685V17h-9.256c-1.932 0-3.699 1.096-4.562 2.831l-.335.67c-.865 1.734-2.63 2.83-4.564 2.83-1.933 0-3.699-1.096-4.563-2.83l-.332-.67C14.74 18.095 12.972 17 11.039 17H1.783v-1.79c0-1.492 1.186-2.684 2.674-2.684z"/>
     </g>
 </svg>
