@@ -3,13 +3,9 @@
   position: relative;
   background-image: linear-gradient(116deg, #8efdaf, #f4e61b);
 
-  @include breakpoint(xlarge) {
-    min-height: 750px;
-  }
-
   @include element(overlay) {
     position: relative;
-    margin-top: 5em;
+    min-height: 60vh;
     @include flex-align(center, null);
 
     @include breakpoint(medium only) {
@@ -27,7 +23,7 @@
     }
 
     @include breakpoint(xxlarge up) {
-      min-height: 60vh;
+      min-height: 75vh;
     }
 
     @include breakpoint(3000px) {
@@ -135,14 +131,14 @@
   }
 
   @include element(main) {
-    padding: 2em 0 5em;
+    padding-bottom: 5em;
 
     @include breakpoint(medium only) {
       padding: 3em;
     }
 
     @include breakpoint(small only) {
-      padding: 2em 0 8em;
+      padding-bottom: 8em;
     }
 
     @include element(title) {

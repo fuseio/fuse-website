@@ -40,6 +40,14 @@
         @include breakpoint(medium down) {
           order: 2;
         }
+
+        @include block(image) {
+          > img {
+            margin-left: -0.9em;
+            width: 86px;
+          }
+        }
+
         @include element(text) {
           font-size: 1.125em;
           font-weight: normal;
@@ -88,7 +96,7 @@
 @include block(sign_for_updates) {
   margin: 3em 20px 5em;
   @include block(title) {
-    font-size: 1.875em;
+    font-size: 2.5em;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -111,13 +119,23 @@
   }
 
   @include block(form) {
+    position: relative;
+    @include block(title) {
+      font-size: 1.1em;
+      font-weight: 500;
+      color: #4a687b;
+      margin-bottom: 0.4em;
+      position: absolute;
+      top: -2em;
+    }
     @include xy-grid(horizontal, false);
 
     @include breakpoint(medium down) {
       @include xy-grid();
     }
     @include element(input) {
-      @include xy-cell(16);
+      @include xy-cell(16, null, 0);
+      padding: 10px;
       @include breakpoint(large) {
         min-width: 300px;
       }
@@ -129,7 +147,7 @@
       font-size: 18px;
 
       @include breakpoint(medium down) {
-        @include xy-cell(24);
+        @include xy-cell(24, null, 0);
       }
 
       &:disabled {
@@ -138,13 +156,19 @@
       }
     }
 
+    @include block(error) {
+      position: absolute;
+      bottom: -1.5em;
+      color: red;
+    }
+
     @include element(button) {
-      @include xy-cell(6);
+      @include xy-cell(6, null, 0);
       @include breakpoint(medium up) {
         max-width: 105px;
       }
       @include breakpoint(medium down) {
-        @include xy-cell(24);
+        @include xy-cell(24, null, 0);
         margin-top: 2em;
       }
       padding: 18px;

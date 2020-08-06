@@ -19,7 +19,7 @@ const Header = ({ history, isNetworkHeader = false }) => {
   const homePage = () => history.push('/')
 
   return (
-    <header className={classNames('header__wrapper', { 'header__wrapper--absolute': isNetworkHeader })}>
+    <header className='header__wrapper'>
       <div className='header'>
         <div onClick={homePage} className='header__logo'>
           <img alt="logo" src={isNetworkHeader ? fuseLogoWhite : fuseLogo} />
@@ -37,11 +37,11 @@ const Header = ({ history, isNetworkHeader = false }) => {
             <a rel="noreferrer noopener" className={classNames('header__link', { 'header__link--white': isNetworkHeader, 'header__link--selected': isNetworkHeader, 'header__link--dark': isNetworkHeader && isOpen })} target='_blank' role='button' onClick={networkPage}>Network</a>
           </div>
           <div className="header__icons">
-            <a rel="noreferrer noopener" className={classNames('icon', { 'medium': isOpen, 'medium--white': isNetworkHeader && !isOpen })} target='_blank' href='https://medium.com/fusenet' />
-            <a rel="noreferrer noopener" className={classNames('icon', { 'github': isOpen, 'github--white': isNetworkHeader && !isOpen })} target='_blank' href='https://github.com/fuseio' />
-            <a rel="noreferrer noopener" className={classNames('icon', { 'twitter': isOpen, 'twitter--white': isNetworkHeader && !isOpen })} target='_blank' href='https://twitter.com/fuse_network' />
-            <a rel="noreferrer noopener" className={classNames('icon', { 'telegram': isOpen, 'telegram--white': isNetworkHeader && !isOpen })} target='_blank' href='https://t.me/fuseio' />
-            <a rel="noreferrer noopener" className={classNames('icon', { 'discord': isOpen, 'discord--white': isNetworkHeader && !isOpen })} target='_blank'
+            <a rel="noreferrer noopener" className={classNames('icon', { 'medium': (!isNetworkHeader || isOpen), 'medium--white': isNetworkHeader && !isOpen })} target='_blank' href='https://medium.com/fusenet' />
+            <a rel="noreferrer noopener" className={classNames('icon', { 'github': (!isNetworkHeader || isOpen), 'github--white': isNetworkHeader && !isOpen })} target='_blank' href='https://github.com/fuseio' />
+            <a rel="noreferrer noopener" className={classNames('icon', { 'twitter': (!isNetworkHeader || isOpen), 'twitter--white': isNetworkHeader && !isOpen })} target='_blank' href='https://twitter.com/fuse_network' />
+            <a rel="noreferrer noopener" className={classNames('icon', { 'telegram': (!isNetworkHeader || isOpen), 'telegram--white': isNetworkHeader && !isOpen })} target='_blank' href='https://t.me/fuseio' />
+            <a rel="noreferrer noopener" className={classNames('icon', { 'discord': (!isNetworkHeader || isOpen), 'discord--white': isNetworkHeader && !isOpen })} target='_blank'
               href='https://discordapp.com/invite/jpPMeSZ' />
           </div>
           <div className={classNames('header__wallet', { 'header__wallet--yellow': isNetworkHeader })}>

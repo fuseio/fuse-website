@@ -1,11 +1,16 @@
 import React, { useState } from 'react'
-import { Formik, Form, Field } from 'formik'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { withRouter } from 'react-router'
 import classNames from 'classnames'
 import footer_logo from '@/assets/images/site-logo-grad.svg'
+import { object, string } from "yup";
+
+const SignupSchema = object().shape({
+  email: string().email('Invalid email').required('Required'),
+});
 
 const Footer = ({ history, isNetworkFooter = false }) => {
-  const [title, setTitle] = useState('Sign up for update')
+  const [title, setTitle] = useState('Sign up for updates')
   const networkPage = () => history.push('/network')
   return (
     <footer className={classNames('footer__wrapper grid-x align-middle align-center', { 'footer__wrapper--dark': isNetworkFooter })}>
@@ -54,18 +59,8 @@ const Footer = ({ history, isNetworkFooter = false }) => {
               <div className="footer__sign grid-y align-left">
                 <div className="title" dangerouslySetInnerHTML={{ __html: title }} />
                 <Formik
+                  validationSchema={SignupSchema}
                   initialValues={{ email: '' }}
-                  validate={values => {
-                    const errors = {};
-                    if (!values.email) {
-                      errors.email = 'Required';
-                    } else if (
-                      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                    ) {
-                      errors.email = 'Invalid email address';
-                    }
-                    return errors;
-                  }}
                   onSubmit={async (values, { setSubmitting, resetForm }) => {
                     const { email } = values
                     const user = {
@@ -99,16 +94,12 @@ const Footer = ({ history, isNetworkFooter = false }) => {
                 >
                   {({ isSubmitting }) => (
                     <Form className="grid-x align-middle align-start">
-                      <Field type="email" className="input cell small-16" placeholder="    Enter email" name="email" />
+                      <Field type="email" className="input cell small-16" placeholder="Enter email" name="email" />
                       <button disabled={isSubmitting} id="btn_submit" type="submit" className="button cell small-6">Send</button>
+                      <ErrorMessage name="email">{(msg) => <div className='error'>{msg}</div>}</ErrorMessage>
                     </Form>
                   )}
                 </Formik>
-                {/* <form id="myForm" className="grid-x align-middle align-start">
-                  <input id="email" autoComplete="off" placeholder="    Enter email" type="email"
-                    className="input cell small-16" />
-                  <button id="btn_submit" type="submit" className="button cell small-6">Send</button>
-                </form> */}
               </div>
             </div>
           )

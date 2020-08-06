@@ -51,11 +51,11 @@ const SectionTwo = () => {
             <div className='floors__item grid-x align-spaced align-middle'>
               <div className='content grid-x cell large-8'>
                 <div className='grid-y cell large-22 align-top'>
-                  <img src={walletApp} />
+                  <div className='image'><img src={walletApp} /></div>
                   <div className='content__text'>
                     <span>Fuse Wallet </span><span>|</span> <span>for users</span>
                     <br />
-                  An easy to use cross-platform mobile wallet
+                  An easy to use cross-platform <br /> mobile wallet
                 </div>
                 </div>
               </div>
@@ -69,7 +69,7 @@ const SectionTwo = () => {
             <div className='floors__item grid-x align-spaced align-middle'>
               <div className='content grid-x cell large-8'>
                 <div className='grid-y cell large-22 align-top'>
-                  <img src={fuseWallet} />
+                  <div className='image'><img src={fuseWallet} /></div>
                   <div className='content__text'>
                     <span>Fuse Studio </span><span>|</span> <span>for operators</span>
                     <br />
@@ -87,7 +87,7 @@ const SectionTwo = () => {
             <div className='floors__item grid-x align-spaced align-middle'>
               <div className='content grid-x cell large-8'>
                 <div className='grid-y cell large-22 align-top'>
-                  <img src={fuseStudio} />
+                  <div className='image'><img src={fuseStudio} /></div>
                   <div className='content__text'>
                     <span>Fuse Chain </span><span>|</span> <span>For network participants</span>
                     <br />

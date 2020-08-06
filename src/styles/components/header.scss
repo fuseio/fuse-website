@@ -1,6 +1,7 @@
 @include block(header) {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: row;
   min-height: 80px;
   z-index: 1;
@@ -11,13 +12,7 @@
     padding: 0 20px;
     position: relative;
     width: 100%;
-    @include modifier(absolute) {
-      // position: absolute;
-      // top: 0;
-      // z-index: 1;
-      // padding: 0 20px;
-      // width: 100%;
-    }
+    height: min-content;
   }
   @include element(logo) {
     width: 100px;
@@ -196,7 +191,7 @@
   }
 
   @include element(nav) {
-    margin-left: auto;
+    // margin-left: auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -263,7 +258,6 @@
     }
 
     @include modifier(selected) {
-      color: #063d53;
       text-decoration: underline;
     }
 

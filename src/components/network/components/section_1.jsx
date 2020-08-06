@@ -24,11 +24,11 @@ const SectionOne = () => {
       <div className='network_main__wrapper'>
         <div>
           <div className='network_main__top'>
-            <div className='title'>Fuse network</div>
+            <div className='title'>Fuse Network</div>
             <div className='text'>A fast, decentralised and low cost <br /> alternative to existing digital payments.</div>
           </div>
           <div className='network_main__bottom'>
-            <div className='text text--dark'>Helping power day-to-day mobile payments <br /> Free of intermediaries and powered by a <br /> global network of local operators </div>
+            <div className='text text--dark'>Helping power day-to-day mobile payments. <br /> Free of intermediaries and powered by a <br /> global network of local operators.</div>
           </div>
         </div>
       </div>
