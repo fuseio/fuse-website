@@ -14,7 +14,6 @@ export default function configureStore(initialState) {
     createRootReducer(history),
     initialState,
     applyMiddleware(
-      reduxCatch(errorHandler),
       routerMiddleware(history),
       sagaMiddleware
     )
