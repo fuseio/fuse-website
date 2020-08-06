@@ -3,6 +3,10 @@
   position: relative;
   background-image: linear-gradient(116deg, #8efdaf, #f4e61b);
 
+  @include breakpoint(xlarge) {
+    min-height: 650px;
+  }
+
   @include element(overlay) {
     position: relative;
     min-height: 60vh;

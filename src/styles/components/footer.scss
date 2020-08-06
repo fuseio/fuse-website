@@ -224,6 +224,11 @@
       background-color: #ffffff;
       color: #052235;
       padding: 10px;
+      border: 1.5px solid transparent;
+
+      &:focus {
+        border: 1.5px solid #ccd9e0;
+      }
 
       &:disabled {
         opacity: 0.7;

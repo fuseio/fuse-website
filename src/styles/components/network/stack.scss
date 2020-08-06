@@ -71,8 +71,7 @@
 
       @include block(dots) {
         > img {
-          width: 50%;
-          margin-bottom: 0.5em;
+          margin-top: 1em;
         }
 
         @include breakpoint(medium down) {
@@ -81,7 +80,12 @@
       }
 
       @include block(animation) {
-        @include breakpoint(large up) {
+        @include breakpoint(medium up) {
+          > div {
+            > svg {
+              transform: translate3d(37px, 0px, 0px) !important;
+            }
+          }
         }
 
         @include breakpoint(medium down) {
@@ -143,11 +147,16 @@
       border-radius: 10px;
       border: solid 1px #e5eff5;
       background-color: #e5eff5;
-      color: #9a9a9a;
       font-size: 18px;
+      color: #052235;
+      border: 1.5px solid transparent;
 
       @include breakpoint(medium down) {
         @include xy-cell(24, null, 0);
+      }
+
+      &:focus {
+        border: 1.5px solid #ccd9e0;
       }
 
       &:disabled {

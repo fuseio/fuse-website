@@ -64,14 +64,13 @@ const SectionFour = () => {
               </div>
               <div className='content grid-y align-top small-15'>
                 <div className="participates__item__title">Delegate Fuse tokens</div>
-                <span className="small">(coming soon)</span>
                 <div className="text">Any network participant can delegate their FUSE to a validator of their choice in order to contribute to the security of the chain and in return earn passive income for doing so.</div>
                 <div className='grid-x links align-center'>
                   <div className="link">
                     {/* <a rel="noreferrer noopener" target='_blank'> */}
-                    <span>Learn more about Staking</span>
+                    <span>Learn more about Staking</span><span className="small"> (coming soon) </span>
                     {/* </a> */}
-                    <img src="./images/network_arrow.svg" alt="network_arrow" />
+                    {/* <img src="./images/network_arrow.svg" alt="network_arrow" /> */}
                   </div>
                 </div>
               </div>

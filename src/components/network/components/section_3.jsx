@@ -17,7 +17,7 @@ const SectionThree = () => {
           <div className="line cell shrink"></div>
 
           <div className="item">
-            <CountUp start={400000} end={510040} redraw={true}>
+            <CountUp start={0} end={510202} redraw={true}>
               {({ countUpRef, start }) => (
                 <VisibilitySensor onChange={start} delayedCall>
                   <div ref={countUpRef} className="number" />
@@ -28,13 +28,13 @@ const SectionThree = () => {
             <div className='bottom_link'>
               <div><a rel="noreferrer noopener" target='_blank'
                 href="http://explorer.fuse.io/">Click here for the explorer</a>
-                <img src="./images/network_arrow.svg" alt="network_arrow" />
+                <img src="./images/arow.svg" alt="network_arrow" />
               </div>
             </div>
           </div>
           <div className="line cell shrink"></div>
           <div className="item">
-            <CountUp start={0} end={250} redraw={true}>
+            <CountUp start={0} end={705} redraw={true}>
               {({ countUpRef, start }) => (
                 <VisibilitySensor onChange={start} delayedCall>
                   <div ref={countUpRef} className="number" />
@@ -45,14 +45,14 @@ const SectionThree = () => {
             <div className='bottom_link'>
               <div><a rel="noreferrer noopener" target='_blank'
                 href="http://studio.fuse.io/">Using the Fuse Studio</a>
-                <img src="./images/network_arrow.svg" alt="network_arrow" />
+                <img src="./images/arow.svg" alt="network_arrow" />
 
               </div>
             </div>
           </div>
           <div className="line cell shrink"></div>
           <div className="item">
-            <CountUp start={0} end={8646} redraw={true}>
+            <CountUp start={0} end={8669} redraw={true}>
               {({ countUpRef, start }) => (
                 <VisibilitySensor onChange={start} delayedCall>
                   <div ref={countUpRef} className="number" />
