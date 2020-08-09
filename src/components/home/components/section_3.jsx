@@ -11,7 +11,7 @@ const SectionThree = () => {
           <h1 className="steps__title">How does it work?</h1>
           <div className="steps__video grid-x align-middle">
             <img src="./images/you-tube.svg" alt="tube" />&nbsp;
-            <a rel="noreferrer noopener" target="_blank" href="https://www.youtube.com/watch?v=G5yoDCkb01g"
+            <a rel="noreferrer noopener" target="_blank" href="https://www.youtube.com/channel/UC7NaJ0UhmyHi5MvZSk61akA/featured?view_as=subscriber"
               className='steps__watch'>
               <span>Watch our walkthroughs</span>
             </a>

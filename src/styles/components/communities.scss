@@ -42,9 +42,16 @@
   }
 
   @include element(pagination) {
-    text-align: center;
-    top: 30px;
+    text-align: right;
+    top: 38px;
     position: absolute;
+    height: min-content;
+    bottom: 0 !important;
+    @include xy-grid-container();
+
+    // text-align: center;
+    // top: 30px;
+    // position: absolute;
     @include breakpoint(medium down) {
       display: none;
     }
@@ -82,12 +89,15 @@
   @include element(items) {
     overflow: hidden;
 
-    @include breakpoint(xlarge) {
-      padding-bottom: 1em;
+    .swiper-container {
+      position: unset !important;
     }
-    @include breakpoint(1980px) {
-      padding-bottom: 2em;
-    }
+    // @include breakpoint(xlarge) {
+    //   padding-bottom: 1em;
+    // }
+    // @include breakpoint(1980px) {
+    //   padding-bottom: 2em;
+    // }
 
     @include block(community) {
       width: 100%;
@@ -95,10 +105,6 @@
       @include block(image) {
         > img {
           width: 356px;
-          height: 659px;
-          // @include breakpoint(xlarge) {
-          //   min-height: 659px;
-          // }
         }
       }
 
@@ -206,7 +212,7 @@
         }
 
         @include element(text) {
-          max-width: 480px;
+          // max-width: 480px;
           @extend %main-text;
           @include breakpoint(large) {
           }

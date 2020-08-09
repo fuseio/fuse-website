@@ -1,43 +1,45 @@
 @include block(section-A) {
   width: 100%;
   position: relative;
-  background-image: linear-gradient(116deg, #8efdaf, #f4e61b);
+  background-image: linear-gradient(116deg, #b1fdc0, #e6fd99, #fefd86);
 
   @include breakpoint(xlarge) {
-    min-height: 650px;
+    // min-height: 650px;
+    // height: calc(100vh - 300px);
   }
 
   @include element(overlay) {
     position: relative;
-    min-height: 60vh;
-    @include flex-align(center, null);
+    min-height: 600px;
 
-    @include breakpoint(medium only) {
-      margin-top: 3em;
-      min-height: 60vh;
+    @include breakpoint(1800px) {
+      // height: calc(100vh - 200px);
     }
 
+    @include flex-align(center, null);
+
+    // @include breakpoint(medium only) {
+    //   margin-top: 3em;
+    // }
+
     @include breakpoint(medium down) {
-      margin-top: 1em;
       @include flex-align(center, null);
     }
 
     @include breakpoint(small only) {
-      min-height: 50vh;
+      // min-height: 50vh;
     }
 
     @include breakpoint(xxlarge up) {
-      min-height: 75vh;
+      // min-height: 75vh;
     }
 
     @include breakpoint(3000px) {
-      min-height: 70vh;
+      // min-height: 70vh;
     }
   }
 
   @include element(wrapper) {
-    max-width: 80%;
-    width: 100%;
     @include breakpoint(medium only) {
       margin: 0;
       @include flex-align(left, top);
@@ -125,7 +127,7 @@
     letter-spacing: -0.16px;
     color: #25435a;
 
-    @include breakpoint(large down) {
+    @include breakpoint(xlarge down) {
       font-size: 1.5em;
     }
 
@@ -135,14 +137,16 @@
   }
 
   @include element(main) {
-    padding-bottom: 5em;
+    @include breakpoint(xxlarge up) {
+      // padding-bottom: 5em;
+    }
 
     @include breakpoint(medium only) {
-      padding: 3em;
+      // padding: 3em;
     }
 
     @include breakpoint(small only) {
-      padding-bottom: 8em;
+      // padding-bottom: 8em;
     }
 
     @include element(title) {
@@ -185,21 +189,32 @@
   }
 
   @include element(image) {
+    position: relative;
     display: block;
     width: 50%;
     height: auto;
 
-    position: absolute;
-    right: 0;
-    z-index: 5;
-    bottom: -79px;
+    > div {
+      position: absolute;
+      right: -30px;
+      z-index: 5;
+      bottom: -63px;
 
-    @include breakpoint(medium down) {
-      width: 100%;
-    }
+      @include breakpoint(medium down) {
+        width: 100%;
+      }
 
-    @include breakpoint(1700px) {
-      bottom: -150px;
+      @include breakpoint(small only) {
+        right: 0;
+      }
+
+      @include breakpoint(1333px) {
+        bottom: -80px;
+      }
+      @include breakpoint(1700px) {
+        bottom: -85px;
+        right: -10px;
+      }
     }
   }
 }

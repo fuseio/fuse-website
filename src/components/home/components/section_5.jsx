@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import classNames from 'classnames'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import paywiseBg from '@/assets/images/paywise-background.png';
@@ -12,7 +13,7 @@ import localChamionsBg from '@/assets/images/splesh-local.png';
 
 SwiperCore.use([Navigation, Pagination]);
 
-const bgs = [
+const backgroundImages = [
   paywiseBg,
   digitalrandeBg,
   loclaPayBg,
@@ -30,15 +31,8 @@ const SectionFive = () => {
   const prevRef = useRef(null)
   return (
     <section className="communities" id='communities'>
-      <img className='opaque' src={bgs[currentIndex]} />
+      {backgroundImages.map((image, index) => <img className={classNames({ 'opaque': index == currentIndex })} src={image} />)}
       <div className="communities__content grid-container">
-        <div className="title grid-x align-justify">
-          <div className="content cell large-10 small-24 grid-y align-center">
-            <div className="content__text">
-              <h1 className="communities__title">Local economies on fuse</h1>
-            </div>
-          </div>
-        </div>
         <div className="grid-x communities__items communities-swiper-container">
           <Swiper
             slidesPerView={1}
@@ -54,12 +48,17 @@ const SectionFive = () => {
             }}
             pagination={{
               clickable: true,
-              el: 'communities__pagination',
+              el: paginationRef.current,
             }}
             onTransitionStart={(swiper) => {
               setIndex(swiper.realIndex)
             }}
           >
+            <div slot="container-start">
+              <div className="title">
+                <h1 className="communities__title">Local economies on fuse</h1>
+              </div>
+            </div>
             <SwiperSlide>
               <div className="community grid-x align-justify">
                 <div className="content cell large-10 small-24 grid-y align-center">
@@ -400,6 +399,7 @@ const SectionFive = () => {
             <div ref={paginationRef} className="communities__pagination" />
             <div ref={nextRef} className="communities__button communities__button--next" />
             <div ref={prevRef} className="communities__button communities__button--prev" />
+
           </Swiper>
         </div>
       </div>

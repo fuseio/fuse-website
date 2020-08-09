@@ -23,8 +23,8 @@ const SectionOne = ({ push }) => {
   return (
     <section className="section-A">
       <Header />
-      <div className='section-A__overlay grid-x'>
-        <div className='section-A__wrapper cell grid-x align-middle'>
+      <div className='section-A__overlay grid-x grid-margin-x'>
+        <div className='section-A__wrapper grid-x align-middle align-center medium-12 small-24'>
           <div className='section-A__main'>
             <h1 className='main_title'>
               Turning communities into thriving economies
@@ -54,8 +54,10 @@ const SectionOne = ({ push }) => {
             </div>
           </div>
         </div>
+        <div className='section-A__image medium-12 small-24'>
+          <div id="lottie" ref={lottieRef} />
+        </div>
       </div>
-      <div id="lottie" ref={lottieRef} className="wow slideInRight section-A__image large-12 small-24" />
     </section>
   )
 }
