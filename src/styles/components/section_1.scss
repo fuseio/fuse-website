@@ -12,8 +12,8 @@
     position: relative;
     min-height: 600px;
 
-    @include breakpoint(1800px) {
-      // height: calc(100vh - 200px);
+    @include breakpoint(1600px up) {
+      height: calc(100vh - 200px);
     }
 
     @include flex-align(center, null);
