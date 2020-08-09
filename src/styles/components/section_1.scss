@@ -17,6 +17,11 @@
       height: calc(100vh - 200px);
     }
 
+
+    @include breakpoint(small only) {
+      height: calc(100vh - 400px);
+    }
+
     @include flex-align(center, null);
 
     // @include breakpoint(medium only) {

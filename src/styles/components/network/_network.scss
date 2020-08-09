@@ -162,6 +162,10 @@
     @include breakpoint(xlarge down) {
       transform: scale(0.9);
     }
+
+    @include breakpoint(medium down) {
+      transform: unset;
+    }
   }
 
   @include element(content) {

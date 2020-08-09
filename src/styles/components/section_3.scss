@@ -11,6 +11,10 @@
     transform: scale(0.9);
   }
 
+  @include breakpoint(medium down) {
+    transform: unset;
+  }
+
   @include breakpoint(2000px) {
     min-height: 40vh;
   }
