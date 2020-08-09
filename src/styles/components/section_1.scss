@@ -11,6 +11,7 @@
   @include element(overlay) {
     position: relative;
     min-height: 600px;
+    height: calc(100vh - 200px);
 
     @include breakpoint(1600px up) {
       height: calc(100vh - 200px);

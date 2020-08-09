@@ -31,7 +31,7 @@ const SectionFive = () => {
   const prevRef = useRef(null)
   return (
     <section className="communities" id='communities'>
-      {backgroundImages.map((image, index) => <img className={classNames({ 'opaque': index == currentIndex })} src={image} />)}
+      {backgroundImages.map((image, index) => <img key={index} className={classNames({ 'opaque': index == currentIndex })} src={image} />)}
       <div className="communities__content grid-container">
         <div className="grid-x communities__items communities-swiper-container">
           <Swiper

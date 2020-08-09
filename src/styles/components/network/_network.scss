@@ -158,6 +158,10 @@
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
+
+    @include breakpoint(xlarge down) {
+      transform: scale(0.9);
+    }
   }
 
   @include element(content) {

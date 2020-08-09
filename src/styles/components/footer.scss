@@ -2,6 +2,10 @@
   height: 100%;
   width: 100%;
 
+  @include breakpoint(xlarge down) {
+    transform: scale(0.9);
+  }
+
   @include xy-grid-container();
 
   @include element(wrapper) {

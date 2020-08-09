@@ -7,6 +7,10 @@
   //   margin: 0;
   // }
 
+  @include breakpoint(xlarge down) {
+    transform: scale(0.9);
+  }
+
   @include breakpoint(2000px) {
     min-height: 40vh;
   }

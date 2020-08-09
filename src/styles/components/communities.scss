@@ -69,6 +69,10 @@
     // max-width: 80%;
     position: relative;
 
+    @include breakpoint(xlarge down) {
+      transform: scale(0.9);
+    }
+
     @include breakpoint(large up) {
     }
 
