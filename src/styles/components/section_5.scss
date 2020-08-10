@@ -44,7 +44,6 @@
     @include block(sub-title) {
       @extend %main-text;
       font-weight: 500;
-      // font-size: 1.125em;
       color: $color-gray;
     }
 
@@ -52,7 +51,6 @@
       display: flex;
       width: 100%;
       justify-content: space-between;
-      margin-bottom: 4em;
       > a {
         max-width: 157px;
         max-height: 55px;
@@ -109,7 +107,7 @@
     }
 
     > img {
-      max-width: 60%;
+      max-width: 65%;
       @include breakpoint(small only) {
         max-width: 80%;
       }
@@ -117,7 +115,6 @@
         max-width: 80%;
       }
       @include breakpoint(1800px) {
-        max-width: 50%;
       }
 
       @include breakpoint(2200px) {

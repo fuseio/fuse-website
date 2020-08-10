@@ -90,10 +90,6 @@
       right: 0;
       z-index: 1;
     }
-
-    @include breakpoint(large down) {
-      // order: 2;
-    }
   }
 
   @include block(title) {
@@ -135,12 +131,11 @@
 }
 
 @include block(why_fuse_better) {
-  // height: 764px;
-  padding: 4em 0;
+  padding: 6em 0;
   background-color: #001929;
 
   @include block(title) {
-    font-size: 2.125em;
+    font-size: 2.5em;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -211,25 +206,21 @@
       letter-spacing: 0.01px;
 
       @include breakpoint(large up) {
-        margin-bottom: 2em;
+        margin-bottom: 3em;
       }
 
       @include breakpoint(medium down) {
-        margin-bottom: 1em;
+        margin-bottom: 2em;
       }
       @include block(line) {
         border: solid 1px #dfdfdf;
         width: 1px;
         height: 100%;
-        margin: 0 1em;
-
-        // @include breakpoint(large down) {
-        //   margin: 0 0.5em;
-        // }
+        margin: 0 3em;
       }
 
       @include block(image) {
-        @include xy-cell(3);
+        @include xy-cell(3, null, 0);
         @include breakpoint(large up) {
           width: 100px;
           height: 100px;
@@ -309,7 +300,6 @@
         position: relative;
         max-height: 155px;
 
-        // @include xy-grid(horizontal);
         @include xy-grid(vertical);
         @include breakpoint(large up) {
           @include xy-cell(6);
@@ -351,9 +341,6 @@
           > div {
             > img {
               margin-left: 0.5em;
-              // > path {
-              fill: #4587a3;
-              // }
             }
 
             position: relative;
@@ -369,9 +356,6 @@
           }
         }
 
-        // &:not(:last-child) {
-        //   border-right: 2px solid #dfdfdf;
-        // }
         @include block(title) {
           font-size: 1.5em;
           font-weight: bold;
@@ -402,8 +386,6 @@
   @include element(wrapper) {
     width: 80%;
     margin: auto;
-    // padding: 2em;
-    // margin: auto 0;
     @include breakpoint(medium down) {
       width: 100%;
     }
@@ -422,7 +404,6 @@
   }
 
   @include element(item) {
-    // height: 262px;
     border-radius: 10px;
     background-color: #f5fdff;
     padding: 2em 2em;
@@ -446,10 +427,6 @@
     @include block(image) {
       @include xy-cell(6);
 
-      @include breakpoint(medium) {
-        // @include xy-cell(24);
-      }
-
       @include breakpoint(small only) {
         @include xy-cell(24);
       }
@@ -459,10 +436,6 @@
       @include xy-grid(vertical);
       @include xy-cell(16);
       @include flex-align(null, null);
-
-      @include breakpoint(medium) {
-        // @include xy-cell(24);
-      }
 
       @include breakpoint(small only) {
         @include xy-cell(24);
@@ -488,7 +461,6 @@
     @include block(text) {
       font-size: 1.125em;
       letter-spacing: 0.01px;
-      // text-align: center;
       color: #868686;
     }
 

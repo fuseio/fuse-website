@@ -134,12 +134,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 10px;
+            padding: 0.7em;
             top: -4em;
             width: max-content;
 
             span {
-              font-size: 19.2px;
+              font-size: 1.125em;
               font-weight: 500;
               font-stretch: normal;
               font-style: normal;
@@ -149,8 +149,8 @@
             }
 
             img {
-              height: 32px;
-              margin-right: 0.2em;
+              height: 16px;
+              margin-right: 0.4em;
             }
 
             &:after {
@@ -186,6 +186,7 @@
 
           @include block(currency) {
             margin-right: 1em;
+            font-size: 1.125em;
           }
           @include block(token) {
             width: 30px;

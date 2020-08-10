@@ -29,8 +29,8 @@ const SectionSix = () => {
               </div>
             </div>
             <div className="item">
-              <div className="image">
-                <img src="./images/network_coin.png" alt="network_coin.png" />
+              <div className="image grid-x align-center align-middle">
+                <img style={{ width: '75px', height: '75px' }} src="./images/network_coin.png" alt="network_coin.png" />
               </div>
               <div className="line"></div>
               <div className="text">

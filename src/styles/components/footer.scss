@@ -246,7 +246,7 @@
       max-width: 105px;
       margin-left: 1em;
       border-radius: 10px;
-      background: linear-gradient(112deg, #97fba2 9%, #fae83e 90%);
+      background: $color-fuse_gradient;
 
       &:hover {
         background: #fae83e;
