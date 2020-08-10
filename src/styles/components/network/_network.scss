@@ -131,7 +131,7 @@
 }
 
 @include block(why_fuse_better) {
-  padding: 6em 0;
+  padding: 8em 0;
   background-color: #001929;
 
   @include block(title) {
@@ -165,12 +165,10 @@
 
   @include element(content) {
     @include xy-grid(horizontal);
-    @include flex-align(null, middle);
-    @include breakpoint(large up) {
-      height: 65%;
-    }
+    @include flex-align(null, stretch);
+
     > div {
-      @include xy-cell(10);
+      @include xy-cell(10, null, 0);
 
       &:first-child {
         @include breakpoint(medium down) {
@@ -181,7 +179,7 @@
     @include breakpoint(medium down) {
       @include flex-align(center, middle);
       > div {
-        @include xy-cell(12);
+        @include xy-cell(12, null, 0);
       }
     }
 
@@ -193,10 +191,10 @@
   }
 
   @include block(items) {
-    @include xy-grid();
+    @include xy-grid(vertical);
     @include flex-align(justify);
-    height: 100%;
     @include block(item) {
+      @include xy-cell(24, null, 0);
       @include xy-grid(horizontal, false);
       max-height: 87px;
       font-weight: normal;
@@ -205,17 +203,9 @@
       line-height: normal;
       letter-spacing: 0.01px;
 
-      @include breakpoint(large up) {
-        margin-bottom: 3em;
-      }
-
-      @include breakpoint(medium down) {
-        margin-bottom: 2em;
-      }
       @include block(line) {
         border: solid 1px #dfdfdf;
         width: 1px;
-        height: 100%;
         margin: 0 3em;
       }
 
@@ -247,9 +237,9 @@
           padding-right: 20px;
         }
         @include breakpoint(xlarge up) {
-          width: 352px;
+          // width: 352px;
           font-size: 1.125em;
-          height: 84px;
+          // height: 84px;
         }
 
         @include breakpoint(large down) {

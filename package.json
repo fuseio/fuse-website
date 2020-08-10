@@ -39,6 +39,7 @@
     "reset-css": "^5.0.1",
     "sanitize.css": "^11.0.1",
     "swiper": "^6.0.4",
+    "use-http": "^1.0.13",
     "yup": "^0.29.3"
   },
   "devDependencies": {

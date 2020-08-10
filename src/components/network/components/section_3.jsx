@@ -1,24 +1,37 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useCountUp } from 'react-countup'
 import VisibilitySensor from 'react-visibility-sensor'
+import useFetch from 'use-http'
 
 const formatNumber = (num) => String(num).replace(/(.)(?=(\d{3})+$)/g, '$1,')
 
 const SectionThree = () => {
+  const { loading, data = { data: 0 } } = useFetch('https://studio.fuse.io/api/v1/communities/count', {}, [])
+
   const { countUp: transactionCounter, start: transactionCounterStart } = useCountUp({
     start: 0,
-    end: 510202
+    formattingFn: formatNumber,
+    end: 511930
   })
 
-  const { countUp: communitiesCounter, start: communitiesCounterStart } = useCountUp({
+  const { countUp: communitiesCounter, start: communitiesCounterStart, update: updateCommunities } = useCountUp({
     start: 0,
-    end: 705
+    redraw: true,
+    formattingFn: formatNumber,
+    end: data.data,
   })
 
   const { countUp: walletsCounter, start: walletsCounterStart } = useCountUp({
     start: 0,
-    end: 8669
+    formattingFn: formatNumber,
+    end: 8790
   })
+
+  useEffect(() => {
+    if (!loading) {
+      updateCommunities(data.data)
+    }
+  }, [loading])
   return (
     <section className="network_in_numbers">
       <div className="network_in_numbers__content">
@@ -33,12 +46,8 @@ const SectionThree = () => {
           <div className="line cell shrink"></div>
           <div className="item">
             <VisibilitySensor onChange={transactionCounterStart} delayedCall>
-              <div className="number">{formatNumber(transactionCounter)}</div>
+              <div className="number">{transactionCounter}</div>
             </VisibilitySensor>
-            {/* <CountUp start={0} end={510202} redraw={true}>
-              {({ countUpRef, start }) => (
-              )}
-            </CountUp> */}
             <div className="title">Transactions</div>
             <div className='bottom_link'>
               <div><a rel="noreferrer noopener" target='_blank'
@@ -50,7 +59,7 @@ const SectionThree = () => {
           <div className="line cell shrink"></div>
           <div className="item">
             <VisibilitySensor onChange={communitiesCounterStart} delayedCall>
-              <div className="number">{formatNumber(communitiesCounter)}</div>
+              <div className="number">{communitiesCounter}</div>
             </VisibilitySensor>
             <div className="title">Communities Launched</div>
             <div className='bottom_link'>
@@ -63,7 +72,7 @@ const SectionThree = () => {
           <div className="line cell shrink"></div>
           <div className="item">
             <VisibilitySensor onChange={walletsCounterStart} delayedCall>
-              <div className="number">{formatNumber(walletsCounter)}</div>
+              <div className="number">{walletsCounter}</div>
             </VisibilitySensor>
             <div className="title">Contract Wallets</div>
           </div>
