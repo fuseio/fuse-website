@@ -6,7 +6,7 @@ import useFetch from 'use-http'
 const formatNumber = (num) => String(num).replace(/(.)(?=(\d{3})+$)/g, '$1,')
 
 const SectionThree = () => {
-  const { loading, data = { data: 0 } } = useFetch('https://studio.fuse.io/api/v1/communities/count', {}, [])
+  const { data = { data: 0 } } = useFetch('https://studio.fuse.io/api/v1/communities/count', {}, [])
 
   const { countUp: transactionCounter, start: transactionCounterStart } = useCountUp({
     start: 0,
@@ -27,11 +27,6 @@ const SectionThree = () => {
     end: 8790
   })
 
-  useEffect(() => {
-    if (!loading) {
-      updateCommunities(data.data)
-    }
-  }, [loading])
   return (
     <section className="network_in_numbers">
       <div className="network_in_numbers__content">
@@ -58,7 +53,10 @@ const SectionThree = () => {
           </div>
           <div className="line cell shrink"></div>
           <div className="item">
-            <VisibilitySensor onChange={communitiesCounterStart} delayedCall>
+            <VisibilitySensor onChange={() => {
+              communitiesCounterStart()
+              updateCommunities(data.data)
+            }} delayedCall>
               <div className="number">{communitiesCounter}</div>
             </VisibilitySensor>
             <div className="title">Communities Launched</div>
