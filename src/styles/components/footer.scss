@@ -1,6 +1,7 @@
 @include block(footer) {
   height: 100%;
   width: 100%;
+  justify-content: space-between;
 
   @include breakpoint(xlarge down) {
     transform: scale(0.9);
@@ -12,7 +13,7 @@
     @include breakpoint(medium up) {
       height: 240px;
     }
-    background-color: #213f55;
+    background: linear-gradient(180deg, #002740 0%, #001929 100%);
     padding: 2em 20px;
     min-height: 100px;
 
@@ -25,11 +26,6 @@
 
   @include breakpoint(medium down) {
     transform: unset;
-    > div {
-      &:nth-child(2) {
-        order: 3;
-      }
-    }
   }
 
   @include element(container) {
@@ -63,18 +59,19 @@
   }
 
   @include element(icons) {
-    @include breakpoint(medium down) {
-      margin-top: 3em;
-    }
   }
 
   @include element(icon) {
     cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 2em;
+    }
   }
 
   @include block(image) {
-    height: 31px;
-    width: 31px;
+    height: 35px;
+    width: 35px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -167,17 +164,9 @@
   @include element(nav) {
     margin-left: auto;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     color: #0a2f40;
     font-size: 0.938em;
-
-    @include xy-grid();
-    @include flex-align(right, middle);
-
-    @include breakpoint(small only) {
-      @include flex-align(left, middle);
-    }
   }
 
   @include element(logo) {
@@ -197,6 +186,8 @@
   }
 
   @include element(item) {
+    justify-content: center;
+
     @include breakpoint(small only) {
       margin: 1em 0;
     }
@@ -258,5 +249,9 @@
         cursor: not-allowed;
       }
     }
+  }
+
+  @include element(copyright) {
+    color: white;
   }
 }
