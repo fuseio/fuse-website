@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="59px" viewBox="0 0 59 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 17</title>
+    <g id="new-design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="web" transform="translate(-1139.000000, -5921.000000)">
+            <g id="Group-17" transform="translate(1140.000000, 5921.000000)">
+                <g id="icons8-wednesday" fill-rule="nonzero">
+                    <path d="M0,52.5 L0,16.5 L57,16.5 L57,52.5 C57,55.8135 54.3135,58.5 51,58.5 L6,58.5 C2.6865,58.5 0,55.8135 0,52.5" id="Path" stroke="#E5E5E5" fill="#E7EFF4"></path>
+                    <path d="M57,10.5 L57,19.5 L0,19.5 L0,10.5 C0,7.1865 2.6865,4.5 6,4.5 L51,4.5 C54.3135,4.5 57,7.1865 57,10.5" id="Path" fill="#4A687B"></path>
+                    <path d="M46.5,10.5 C46.5,12.9855 44.4855,15 42,15 C39.5145,15 37.5,12.9855 37.5,10.5 C37.5,8.0145 39.5145,6 42,6 C44.4855,6 46.5,8.0145 46.5,10.5 M19.5,10.5 C19.5,12.9855 17.4855,15 15,15 C12.5145,15 10.5,12.9855 10.5,10.5 C10.5,8.0145 12.5145,6 15,6 C17.4855,6 19.5,8.0145 19.5,10.5" id="Shape" fill="#25435A"></path>
+                    <path d="M42,0 C40.344,0 39,1.344 39,3 L39,10.5 C39,12.156 40.344,13.5 42,13.5 C43.656,13.5 45,12.156 45,10.5 L45,3 C45,1.344 43.656,0 42,0 M15,0 C13.344,0 12,1.344 12,3 L12,10.5 C12,12.156 13.344,13.5 15,13.5 C16.656,13.5 18,12.156 18,10.5 L18,3 C18,1.344 16.656,0 15,0" id="Shape" fill="#B0BEC5"></path>
+                </g>
+                <polyline id="Path-6" stroke="#4A687B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="18 37.4661001 26.8342594 45 42 29"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

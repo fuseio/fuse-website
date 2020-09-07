@@ -1,0 +1,71 @@
+@include block(newsletter) {
+  @include element(form) {
+    position: relative;
+
+    @include element(input) {
+      max-width: 299px;
+      height: 54px;
+      border-radius: 10px;
+      border: solid 1px rgba(151, 151, 151, 0.35);
+      background-color: #ffffff;
+      color: #052235;
+      padding: 10px;
+
+      @include breakpoint(small only) {
+        width: 100%;
+      }
+
+      &:focus {
+        border: 1.5px solid #ccd9e0;
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+    }
+
+    @include element(button) {
+      padding: 18px;
+      max-width: 105px;
+      margin-left: 1em;
+      border-radius: 10px;
+      background: $color-fuse_gradient;
+
+      @include breakpoint(small only) {
+        margin-top: 1em;
+        margin-left: 0;
+      }
+
+      &:hover {
+        background: #fae83e;
+        cursor: pointer;
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
+    }
+
+    @include element(mobile-error) {
+      margin-top: 1em;
+      color: red;
+      display: none;
+
+      @include breakpoint(small only) {
+        display: block
+      }
+    }
+
+    @include element(error) {
+      position: absolute;
+      bottom: -1.5em;
+      color: red;
+
+      @include breakpoint(small only) {
+        display: none;
+      }
+    }
+  }
+}

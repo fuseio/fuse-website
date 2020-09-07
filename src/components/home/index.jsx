@@ -6,6 +6,7 @@ import SectionFour from './components/section_4';
 import SectionFive from './components/section_5';
 import SectionSix from './components/section_6';
 import Footer from '@/components/footer'
+import SectionSeven from './components/section_7';
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
       <SectionFour />
       <SectionFive />
       <SectionSix />
+      <SectionSeven />
       <Footer />
     </React.Fragment>
   );
