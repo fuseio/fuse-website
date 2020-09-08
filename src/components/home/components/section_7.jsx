@@ -11,7 +11,7 @@ const SectionSeven = () => {
     <section className="contact-us">
       <div className="contact-us__wrapper grid-container">
         <div>
-          <h1 className="contact-us__title">Contact Us</h1>
+          <h1 className="contact-us__title">Contact us</h1>
         </div>
         <div className="grid-x grid-margin-x">
           <div className="contact-us__newsletter cell large-12 small-24">
@@ -25,12 +25,12 @@ const SectionSeven = () => {
             </div>
             <NewsletterForm />
           </div>
-          <div className="contact-us__booking cell large-10 small-24 large-offset-2">
+          <div className="contact-us__booking cell large-9 small-24 large-offset-3">
             <img src={bookIcon} alt="" className="contact-us-icon" />
             <div>
               <h2 className="contact-us__subtitle">Book a meeting</h2>
             </div>
-            <div className="contact-us__text ">
+            <div className="contact-us__text">
               A member of the Fuse team will be happy to take you through the
               process of launching an economy
             </div>

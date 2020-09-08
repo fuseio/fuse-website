@@ -50,7 +50,7 @@ const NewsletterForm = () => {
         }
       }}
     >
-      {({ isSubmitting }) => (
+      {({ isSubmitting, dirty }) => (
         <Form className="newsletter__form ">
           <div className="title" dangerouslySetInnerHTML={{ __html: title }} />
           <Field
@@ -65,7 +65,7 @@ const NewsletterForm = () => {
             )}
           </ErrorMessage>
           <button
-            disabled={isSubmitting}
+            disabled={!dirty || isSubmitting}
             id="btn_submit"
             type="submit"
             className="newsletter__form__button"

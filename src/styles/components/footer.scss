@@ -10,17 +10,12 @@
   @include xy-grid-container();
 
   @include element(wrapper) {
-    @include breakpoint(medium up) {
-      height: 240px;
-    }
     background: linear-gradient(180deg, #002740 0%, #001929 100%);
-    padding: 2em 20px;
-    min-height: 100px;
+    padding: 2em 20px 6em;
 
     @include modifier(dark) {
       background-color: #001929;
-      padding: 1em 20px;
-      height: 218px;
+      padding: 2em 20px 6em;
     }
   }
 
@@ -46,7 +41,7 @@
     color: #0a2f40;
 
     &:not(:last-child) {
-      margin-right: 1em;
+      margin-right: 3em;
     }
 
     @include modifier(white) {
@@ -70,11 +65,16 @@
   }
 
   @include block(image) {
-    height: 35px;
-    width: 35px;
+    height: 42px;
+    width: 42px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include breakpoint(small only) {
+      height: 35px;
+      width: 35px;
+    }
   }
 
   @include block(twitter) {
@@ -170,7 +170,7 @@
   }
 
   @include element(logo) {
-    width: 100px;
+    width: 115px;
 
     @include element(wrapper) {
       display: flex;
@@ -187,6 +187,10 @@
 
   @include element(item) {
     justify-content: center;
+
+    &:not(:last-child) {
+      margin-bottom: 2em;
+    }
 
     @include breakpoint(small only) {
       margin: 1em 0;
