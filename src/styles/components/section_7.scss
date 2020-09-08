@@ -1,5 +1,5 @@
 @include block(contact-us) {
-  padding: 2em 20px;
+  padding: 2em 20px 6em;
   background: linear-gradient(180deg, #fcfcfc 0%, #f6fbff 100%);
 
   @include element(wrapper) {
@@ -44,16 +44,17 @@
 
   @include element(text) {
     @extend %main-text;
-    width: 500px;
+    width: 460px;
     max-width: 100%;
     margin-bottom: 2.5em;
   }
 
   @include element(button) {
-    padding: 18px;
+    padding: 18px 28px;
     color: #25435a;
     background: $color-fuse-gradient;
     border-radius: 10px;
+    font-weight: 500;
 
     &:hover {
       background: #fae83e;
