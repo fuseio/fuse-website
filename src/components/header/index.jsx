@@ -47,7 +47,7 @@ const Header = ({ history, isNetworkHeader = false }) => {
           <div className={classNames('header__wallet', { 'header__wallet--yellow': isNetworkHeader })}>
             <a rel="noopener noreferrer" href='https://studio.fuse.io' target="_blank" role="button" >
               <div className="header__wallet__icon"></div>
-              <span>Connect wallet</span>
+              <span>Fuse studio</span>
             </a>
           </div>
         </div>
