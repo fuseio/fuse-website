@@ -11,7 +11,7 @@
 
   @include element(wrapper) {
     background: linear-gradient(180deg, #002740 0%, #001929 100%);
-    padding: 2em 20px 6em;
+    padding: 2em 20px 0em;
 
     @include modifier(dark) {
       background-color: #001929;
@@ -65,8 +65,8 @@
   }
 
   @include block(image) {
-    height: 42px;
-    width: 42px;
+    height: 47px;
+    width: 47px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -170,7 +170,8 @@
   }
 
   @include element(logo) {
-    width: 115px;
+    width: 125px;
+    margin-bottom: 1em;
 
     @include element(wrapper) {
       display: flex;
@@ -257,5 +258,6 @@
 
   @include element(copyright) {
     color: white;
+    margin: 2em 0 1em;
   }
 }
