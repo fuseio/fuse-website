@@ -25,7 +25,7 @@ const NewsletterForm = () => {
         };
 
         try {
-          const response = await fetch("http://studio.fuse.io/api/v2/users", {
+          const response = await fetch("https://studio.fuse.io/api/v2/users", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
