@@ -43,7 +43,6 @@
 
     @include block(sub-title) {
       @extend %main-text;
-      font-weight: 500;
       color: $color-gray;
     }
 

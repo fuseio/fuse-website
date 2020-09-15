@@ -2,6 +2,16 @@
   @include element(form) {
     position: relative;
 
+    @include block(title) {
+      position: absolute;
+      top: -1.5em;
+      font-weight: 500;
+
+      @include breakpoint(small only) {
+        display: none;
+      }
+    }
+
     @include element(input) {
       max-width: 299px;
       height: 54px;

@@ -36,9 +36,15 @@ const NewsletterForm = () => {
 
           if (response.status === 200) {
             setTitle("<span>Thanks joining our mailing list! &#128077</span>");
+            setTimeout(() => {
+              setTitle("");
+            }, 3000)
             setSubmitting(true);
           } else if (response.status === 500) {
             setTitle("<span>Something went wrong &#128078</span>");
+            setTimeout(() => {
+              setTitle("");
+            }, 3000)
             setSubmitting(true);
           }
 
@@ -46,6 +52,9 @@ const NewsletterForm = () => {
         } catch (error) {
           resetForm({ email: "" });
           setTitle("<span>Something went wrong &#128078</span>");
+          setTimeout(() => {
+            setTitle("");
+          }, 3000)
           setSubmitting(true);
         }
       }}
