@@ -1,6 +1,7 @@
 @include block(newsletter) {
   @include element(form) {
     position: relative;
+    @include xy-grid(horizontal, false);
 
     @include block(title) {
       position: absolute;
