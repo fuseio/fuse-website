@@ -11,7 +11,7 @@ const SectionThree = () => {
   const { countUp: transactionCounter, start: transactionCounterStart } = useCountUp({
     start: 0,
     formattingFn: formatNumber,
-    end: 836768
+    end: 964835
   })
 
   const { countUp: communitiesCounter, start: communitiesCounterStart, update: updateCommunities } = useCountUp({
@@ -24,7 +24,7 @@ const SectionThree = () => {
   const { countUp: walletsCounter, start: walletsCounterStart } = useCountUp({
     start: 0,
     formattingFn: formatNumber,
-    end: 48429
+    end: 52275
   })
 
   return (
