@@ -30,7 +30,6 @@
     }
 
     @include breakpoint(small only) {
-      margin-bottom: 8em;
       max-width: 90%;
     }
 
@@ -123,7 +122,13 @@
   @include element(news) {
     color: #052741;
     position: absolute;
-    top: -7em;
+    
+    @include breakpoint(medium up) {
+      top: -7em;
+    }
+    @include breakpoint(small down) {
+      top: -5em;
+    }
 
     @include block(arrow) {
       margin-left: 0.3em;
