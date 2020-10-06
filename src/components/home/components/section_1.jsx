@@ -1,14 +1,14 @@
 import React, { useRef, useEffect } from 'react'
 import lottie from 'lottie-web'
 import { PopupText } from 'react-calendly'
-import { connect } from 'react-redux'
-import { push } from 'connected-react-router'
 import Header from '@/components/header'
 import whiteArrow from '@/assets/images/white_arrow.svg'
+import newIcon from '@/assets/images/new_notification.png'
+import arrowIcon from '@/assets/images/arrow_new.png'
 import blueArrow from '@/assets/images/blue_arrow.svg'
 import animationData from '@/assets/lottie/home_page/data.json'
 
-const SectionOne = ({ push }) => {
+const SectionOne = () => {
   const lottieRef = useRef(null)
 
   useEffect(() => {
@@ -26,6 +26,15 @@ const SectionOne = ({ push }) => {
       <div className='section-A__overlay grid-x grid-margin-x'>
         <div className='section-A__wrapper grid-x align-middle align-center medium-12 small-24'>
           <div className='section-A__main'>
+            <div class='section-A__news'>
+              <img alt="new_notification" src={newIcon} />
+              <a rel="noreferrer noopener" class='link'
+                href='https://medium.com/fusenet/fuse-public-release-on-mesa-decentralised-exchange-ce75c4534a60' target="_blank">
+                Fuse Liquidity Release on Mesa
+                Thursday, October 22nd
+                </a>
+              <span class="arrow"><img alt="arrow" src={arrowIcon} /></span>
+            </div>
             <h1 className='main_title'>
               Turning communities into thriving economies
             </h1>
@@ -62,8 +71,4 @@ const SectionOne = ({ push }) => {
   )
 }
 
-export default connect(null, {
-  push
-})(SectionOne)
-
-// export default SectionOne
+export default SectionOne
