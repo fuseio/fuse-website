@@ -4,7 +4,7 @@ import { PopupText } from 'react-calendly'
 import Header from '@/components/header'
 import whiteArrow from '@/assets/images/white_arrow.svg'
 import newIcon from '@/assets/images/new_notification.png'
-import arrowIcon from '@/assets/images/arrow_new.png'
+import arrowIcon from '@/assets/images/arrow_new.svg'
 import blueArrow from '@/assets/images/blue_arrow.svg'
 import animationData from '@/assets/lottie/home_page/data.json'
 
