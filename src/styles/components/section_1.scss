@@ -8,22 +8,46 @@
     min-height: 600px;
     height: calc(100vh - 200px);
 
-    @include breakpoint(1600px up) {
-      height: calc(100vh - 200px);
+    @include breakpoint(medium up) {
+      @include xy-grid(horizontal, false);
+      > div {
+        @include xy-cell(12, null, 0);
+      }
+    }
+
+    @include breakpoint(medium down) {
+      @include xy-grid(vertical, false);
+      height: calc(100vh - 400px);
+      > div {
+        @include xy-cell(24, null, 0);
+      }
     }
 
     @include breakpoint(small only) {
       height: calc(100vh - 400px);
     }
 
-    @include flex-align(center, null);
+    @include breakpoint(1600px up) {
+      height: calc(100vh - 200px);
+    }
 
-    @include breakpoint(medium down) {
-      @include flex-align(center, null);
+    @include breakpoint(768px) {
+      height: calc(100vh - 300px);
     }
   }
 
   @include element(wrapper) {
+    @include breakpoint(medium up) {
+      @include xy-grid(vertical);
+      @include flex-align(center, start);
+      padding-left: 2em;
+    }
+
+    @include breakpoint(medium down) {
+      @include xy-grid(vertical);
+      @include flex-align(center, middle);
+      padding: 0 1em 4em;
+    }
     @include breakpoint(medium only) {
       margin: 0;
       @include flex-align(left, top);
@@ -121,14 +145,14 @@
 
   @include element(news) {
     color: #052741;
-    position: absolute;
-    
-    @include breakpoint(medium up) {
-      top: -7em;
+    margin-bottom: 4em;
+    @include breakpoint(700px down) {
+      margin: 2em 0;
     }
-    @include breakpoint(small down) {
-      top: -5em;
+    > img {
+      width: 60px;
     }
+
 
     @include block(arrow) {
       margin-left: 0.3em;
@@ -183,7 +207,9 @@
   }
 
   @include element(image) {
-    position: relative;
+    @include breakpoint(800px up) {
+      position: relative;
+    }
     display: block;
     width: 50%;
     height: auto;
