@@ -34,16 +34,16 @@ const SectionOne = () => {
           </div>
           <div className='section-A__main'>
             <h1 className='main_title'>
-              Turning communities into thriving economies
+             社区经济的兴盛
             </h1>
             <p className='section-A__text'>
-              Allowing companies and communities to enable secure and <br />friction-less mobile payments with ease.
+              允许公司和社区实现安全无摩擦轻松的手机支付方式
             </p>
             <div className="grid-x buttons">
               <a rel="noopener noreferrer" href='https://studio.fuse.io' target="_blank" role="button" className='cell medium-10 small-18'>
                 <button data-event="Launch an economy"
                   className='section-A__launch__button section-A__launch__button--blue'>
-                  <span>Launch an economy</span>
+                  <span>Fuse工作室</span>
                   <span className='section-A__arrow'>
                     <img alt='image' src={whiteArrow} />
                   </span>

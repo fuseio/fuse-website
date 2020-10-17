@@ -6,8 +6,7 @@ const SectionSix = () => {
       <div className="why_fuse_better__wrapper grid-x align-middle">
         <div className="why_fuse_better__content">
           <div>
-            <h1 className="title">Why open <br /> source<br /> payments on<br /> <span>Fuse</span> are A <br /> better
-              cash<br /> Alternative?</h1>
+            <h1 className="title">为什么在FUSE上的开源支付方式是更好的现金选择?</h1>
           </div>
           <div className="items">
             <div className="item">
@@ -16,7 +15,7 @@ const SectionSix = () => {
               </div>
               <div className="line"></div>
               <div className="text">
-                It has a very low entry barrier so this technology can reach anywhere across the world
+               首先它的准入门槛很低，因此这个技术可以izai世界上任何地方推广
               </div>
             </div>
             <div className="item">
@@ -25,7 +24,7 @@ const SectionSix = () => {
               </div>
               <div className="line"></div>
               <div className="text">
-                Connect to decentralized finance so you have more things to do with your money
+               和去中心化金融对接，这样你就可以用你的钱做更多的事情
               </div>
             </div>
             <div className="item">
@@ -34,8 +33,7 @@ const SectionSix = () => {
               </div>
               <div className="line"></div>
               <div className="text">
-                Pay a fixed fee of up to 1 cent per transaction to move money instantly without any hidden fees and
-                inefficiencies
+               每笔交易支付最多1美分的固定费用，在没有任何隐藏费用情况下非常高效的进行资金的兑换
               </div>
             </div>
           </div>

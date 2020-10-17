@@ -11,28 +11,26 @@ const SectionSeven = () => {
     <section className="contact-us">
       <div className="contact-us__wrapper grid-container">
         <div>
-          <h1 className="contact-us__title">Contact us</h1>
+          <h1 className="contact-us__title">联系我们</h1>
         </div>
         <div className="grid-x grid-margin-x">
           <div className="contact-us__newsletter cell large-12 small-24">
             <img src={signUpIcon} alt="signup" className="contact-us-icon" />
             <div>
-              <h2 className="contact-us__subtitle ">Sign up for update</h2>
+              <h2 className="contact-us__subtitle ">立即注册，获得更多最新信息</h2>
             </div>
             <div className="contact-us__text">
-              Stay caught up with all the latest updates and exciting news from
-              the Fuse Network.
+              随时保持对来自Fuse网络的最新消息和新闻的关注
             </div>
             <NewsletterForm />
           </div>
           <div className="contact-us__booking cell large-9 small-24 large-offset-3">
             <img src={bookIcon} alt="" className="contact-us-icon" />
             <div>
-              <h2 className="contact-us__subtitle">Book a meeting</h2>
+              <h2 className="contact-us__subtitle">预约会议</h2>
             </div>
             <div className="contact-us__text">
-              A member of the Fuse team will be happy to take you through the
-              process of launching an economy
+             Fuse团队的成员将很高兴带你体会启动经济模型的旅程
             </div>
             <button className="button contact-us__button">
               <PopupText

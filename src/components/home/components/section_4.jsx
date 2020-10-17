@@ -13,14 +13,13 @@ const SectionFour = () => {
       <div className='section-C__content grid-container'>
         <div className="grid-x align-justify">
           <div className='item cell large-5'>
-            <h2 className='section-C__title'>Latest updates:</h2>
+            <h2 className='section-C__title'>最近更新:</h2>
             <p className='section-C__text'>
-              Get to know what we've been up to lately
-              Follow us on Medium
+             想了解我们最近的动态，请关注我们的medium
             </p>
             <a rel="noreferrer noopener" target="_blank" href="https://medium.com/fusenet"
               className='section-C__read-more section-link'>
-              <span>Go to Blog</span>
+              <span>博客</span>
               <img style={{ marginLeft: '.3em' }} src="./images/section-C-arrow-right.svg" alt="" />
             </a>
           </div>

@@ -56,7 +56,7 @@ const SectionFive = () => {
           >
             <div slot="container-start">
               <div className="title">
-                <h1 className="communities__title">Local economies on fuse</h1>
+                <h1 className="communities__title">Fuse在当地的经济应用场景</h1>
               </div>
             </div>
             <SwiperSlide>
@@ -68,8 +68,7 @@ const SectionFive = () => {
                     </div>
                     <div>
                       <div className="content__text">
-                        Loyalty wallet in Trinidad that lets you buy using PPP (Pay Wise Points Programme) Users can get
-                        PPP, send it to friends or discover places to shop around the island. The PPP is operated by Pay Wise a local payments provider in Trinidad.
+                       特立尼达的Loyalty wallet钱包可以让你使用PPP(支付智慧积分计划)购物。用户可以获得PPP，将其发送给朋友，或者用来发现岛上可以购物的地方。PPP是由特立尼达岛的当地支付提供商Pay Wise运营的。
                     </div>
                     </div>
                     <div className="content__metadata grid-x align-middle">
@@ -87,7 +86,7 @@ const SectionFive = () => {
                   <div className="content__geo grid-x align-center">
                     <div className="tooltip">
                       <div><img alt="paywise" src="./images/trinidad-flag.png" /></div>
-                      <span>Trinidad & Tobago</span>
+                      <span>特立尼达和多巴哥</span>
                     </div>
                     <img className="planet" alt="image" src="./images/paywise-world.png" />
                   </div>
@@ -105,9 +104,7 @@ const SectionFive = () => {
                       <img alt="DigitalRand" src="./images/digitalrand-logo.jpg" />
                     </div>
                     <div className="content__text">
-                      Use the South African rand stablecoin DZAR to easily on board mainstream users that don’t have an
-                      easy access to decentralized finance. Using the DZAR wallet they can fund, store and trade with ease
-                      and without technical knowledge.
+                      使用南非的稳定币stablecoin--DZAR，可以很方便的接触到当地那些不容易接触去中心化金融的主流用户群体。使用DZAR钱包的话，他们不需要任何技术知识也可以可以轻松地进行融资、存储和交易。
                     </div>
                     <div className="content__metadata grid-x align-middle">
                       <div className="grid-x cell shrink align-middle">
@@ -136,7 +133,7 @@ const SectionFive = () => {
                     <div className="tooltip">
                       <div><img alt="DigitalRand" src="./images/digitalrand-fleg.png" />
                       </div>
-                      <span>Johannesburg</span>
+                      <span>约翰内斯堡</span>
                     </div>
                     <img className="planet" alt="image" src="./images/digitalrand-world.png" />
                   </div>
@@ -154,10 +151,7 @@ const SectionFive = () => {
                       <img alt="LocalPay" src="./images/Local-pay-logo.png" />
                     </div>
                     <div className="content__text">
-                      Cash handouts is an outdated and expensive way to provide charity in some communities which is
-                      what
-                      LocalPay is trying to fix. Operated in Sardinia by Sardex, the LocalPay initiative provides a cash
-                      substitute for mainstream audiences in a fraction of the cost
+                     在一些地方社区中，现金救济是一种过时而且昂贵的慈善方式，这正是LocalPay试图解决的问题。由Sardex在撒丁岛运营的LocalPay项目，尝试以很小的成本为主流用户群体提供一个现金替代品
                     </div>
                     <div className="content__metadata grid-x align-middle">
                       <div className="grid-x align-middle">
@@ -169,7 +163,7 @@ const SectionFive = () => {
                   <div className="content__geo grid-x align-center">
                     <div className="tooltip">
                       <div><img alt="tooltip" src="./images/Italy-flag.png" /></div>
-                      <span>Sardinia</span>
+                      <span>撒丁岛</span>
                     </div>
                     <img className="planet" alt="image" src="./images/Local-pay-world.png" />
                   </div>
@@ -187,8 +181,7 @@ const SectionFive = () => {
                       <img alt="Roost" src="./images/roots-logo.png" />
                     </div>
                     <div className="content__text">
-                      In the age of digital payments, Roost is reinventing rental payments and using economic incentives
-                      to drive good outcomes. Launching a pilot soon in Liverpool, UK.
+                     在这个数字支付的时代，Roost正在重新发明租金支付方式，并利用经济激励来产生一个更好的结果。不久将在英国利物浦进行试点。
                     </div>
 
                     <div className="content__metadata grid-x">
@@ -216,7 +209,7 @@ const SectionFive = () => {
                   <div className="content__geo grid-x align-center">
                     <div className="tooltip">
                       <div><img alt="uk" src="./images/uk-flag.png" /></div>
-                      <span>Liverpool</span>
+                      <span>利物浦</span>
                     </div>
                     <img className="planet" alt="image" src="./images/roots-world.png" />
                   </div>
@@ -234,9 +227,7 @@ const SectionFive = () => {
                       <img alt="Wepy" src="./images/wepy-logo.png" />
                     </div>
                     <div className="content__text">
-                      Why is building a group payment app for the Brazilian market, the Wepy app allows users to top up
-                      using a stablecoin pegged to brazilian Real. And to send it to friends or family members for free.
-                      We will soon be Introducing group insurance for it's consumers.
+                     Wepy是一款针对巴西市场的支付应用app，它允许用户使用与巴西雷亚尔法币挂钩的stablecoin进行充值，并可以免费发送给朋友或家人。我们将很快为其消费者推出团体保险。
                     </div>
                     <div className="content__metadata grid-x align-middle">
                       <img className="app_icon" alt="play-store" src="./images/google_play_mini.png" />
@@ -253,7 +244,7 @@ const SectionFive = () => {
                   <div className="content__geo grid-x align-center">
                     <div className="tooltip">
                       <div><img alt="Brazil" src="./images/brazil-flag.png" /></div>
-                      <span>São Paulo</span>
+                      <span>圣保罗</span>
                     </div>
                     <img className="planet" alt="image" src="./images/wepy-world.png" />
                   </div>
@@ -271,9 +262,7 @@ const SectionFive = () => {
                       <img alt="wikibank" src="./images/wikibank-logo.png" />
                     </div>
                     <div className="content__text">
-                      Wikibank is distributing local cash handouts in Seville, Spain. Consumers can use the app to pay
-                      at
-                      local stores and enjoy a local savings account intended to incentivize the local economy.
+                     维基银行正在西班牙塞维利亚地区发放本地现金。消费者可以使用该应用程序在当地商店付款，并享受当地储蓄账户，以刺激当地经济。
                     </div>
                     <div className="content__metadata grid-x align-middle">
                       <div className="grid-x cell shrink align-middle">
@@ -300,7 +289,7 @@ const SectionFive = () => {
                   <div className="content__geo grid-x align-center">
                     <div className="tooltip">
                       <div><img alt="wikibank" src="./images/wikibank-fleg.png" /></div>
-                      <span>Seville</span>
+                      <span>塞维利亚</span>
                     </div>
                     <img className="planet" alt="image" src="./images/wikibank-world.png" />
                   </div>
@@ -318,9 +307,7 @@ const SectionFive = () => {
                       <img alt="SeedBed" src="./images/seedbed-logo.jpg" />
                     </div>
                     <div className="content__text">
-                      Seedbed is reimagining how savings groups work using a non-custodial app. Using the Seedbed app,
-                      community managers can manage local savings groups that improve access to credit and powered by
-                      smart-contracts behind the scenes.
+                     Seedbed正在重新设计一种app, 让储蓄群体的人使用非托管应用程序的运作方式。通过使用Seedbed应用程序，社区管理者可以管理当地的储蓄群体，这些储蓄群体可以提高信贷的资格，并且这些都是智能合约在幕后运作的基础下实现的。
                     </div>
                     <div className="content__metadata grid-x align-middle">
                       <div className="grid-x cell shrink align-middle">
@@ -347,7 +334,7 @@ const SectionFive = () => {
                   <div className="content__geo grid-x align-center">
                     <div className="tooltip">
                       <div><img alt="seedbed" src="./images/israel-fleg.png" /></div>
-                      <span>Tel aviv</span>
+                      <span>特拉维夫</span>
                     </div>
                     <img className="planet" alt="image" src="./images/world-sedbed.png" />
                   </div>
@@ -365,9 +352,7 @@ const SectionFive = () => {
                       <img alt="Wepy" src="./images/Local champtions-logo.jpg" />
                     </div>
                     <div className="content__text">
-                      LocalChampions allows users to buy fresh produce from local urban manufacturers in Berlin. It’s
-                      purpose is increase awareness for local supply chains and incentivize consumers to support those
-                      supply chains using the “Local Voucher”.
+                     LocalChampions允许用户从柏林本地市区制造商购买新鲜农产品。其目的是提高对本地供应链的认知和了解，鼓励消费者使用“本地代金券”支持当地的供应链。
                     </div>
                     <div className="content__metadata grid-x align-middle">
                       <img className="app_icon" alt="play-store" src="./images/google_play_mini.png" />
@@ -386,7 +371,7 @@ const SectionFive = () => {
                     <div className="tooltip">
                       <div><img alt="LocalChamions" src="./images/germany-fleg.png" />
                       </div>
-                      <span>Berlin</span>
+                      <span>柏林</span>
                     </div>
                     <img className="planet" alt="image" src="./images/world.png" />
                   </div>
