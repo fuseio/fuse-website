@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import useOutsideClick from '@/hooks/useOutsideClick.jsx'
 import fuseLogo from '@/assets/images/site-logo.svg'
 import fuseLogoWhite from '@/assets/images/group_21.svg'
+import SelectLanguage from '../shared/select_language';
 
 const Header = ({ history, isNetworkHeader = false }) => {
   const [isOpen, setMenuOpen] = useState(false)
@@ -56,6 +57,7 @@ const Header = ({ history, isNetworkHeader = false }) => {
             <a rel="noreferrer noopener" className={classNames('icon', { 'telegram': (!isNetworkHeader || isOpen), 'telegram--white': isNetworkHeader && !isOpen })} target='_blank' href='https://t.me/fuseio' />
             <a rel="noreferrer noopener" className={classNames('icon', { 'discord': (!isNetworkHeader || isOpen), 'discord--white': isNetworkHeader && !isOpen })} target='_blank'
               href='https://discordapp.com/invite/jpPMeSZ' />
+            <SelectLanguage isNetworkHeader={isNetworkHeader} isOpen={isOpen}/>
           </div>
           <div className={classNames('header__wallet', { 'header__wallet--yellow': isNetworkHeader })}>
             <a rel="noopener noreferrer" href='https://studio.fuse.io' target="_blank" role="button" >

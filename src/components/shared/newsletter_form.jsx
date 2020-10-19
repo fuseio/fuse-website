@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { FormattedMessage, IntlContext } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import { object, string } from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
@@ -9,7 +9,6 @@ const SignupSchema = object().shape({
 
 const NewsletterForm = () => {
   const [title, setTitle] = useState("");
-  const intl = useContext(IntlContext);
 
   return (
     <Formik
