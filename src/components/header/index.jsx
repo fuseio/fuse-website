@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import { FormattedMessage } from 'react-intl';
 import { withRouter } from 'react-router'
 import classNames from 'classnames'
 import useOutsideClick from '@/hooks/useOutsideClick.jsx'
@@ -32,9 +33,21 @@ const Header = ({ history, isNetworkHeader = false }) => {
         <div className={classNames('header__nav', { 'header__nav__open': isOpen })}>
           <div className="header__link__wrapper">
             <a rel="noreferrer noopener" className={classNames('header__link', { 'header__link--white': isNetworkHeader, 'header__link--dark': isNetworkHeader && isOpen })} target='_blank'
-              href='https://explorer.fuse.io/'>浏览器</a>
-            <a rel="noreferrer noopener" className={classNames('header__link', { 'header__link--white': isNetworkHeader, 'header__link--dark': isNetworkHeader && isOpen })} target='_blank' href='https://docs.fuse.io/'>文档</a>
-            <a rel="noreferrer noopener" className={classNames('header__link', { 'header__link--white': isNetworkHeader, 'header__link--selected': isNetworkHeader, 'header__link--dark': isNetworkHeader && isOpen })} target='_blank' role='button' onClick={networkPage}>网络</a>
+              href='https://explorer.fuse.io/'>
+              <FormattedMessage
+                defaultMessage="Explorer"
+              />
+            </a>
+            <a rel="noreferrer noopener" className={classNames('header__link', { 'header__link--white': isNetworkHeader, 'header__link--dark': isNetworkHeader && isOpen })} target='_blank' href='https://docs.fuse.io/'>
+              <FormattedMessage
+                defaultMessage="Docs"
+              />
+            </a>
+            <a rel="noreferrer noopener" className={classNames('header__link', { 'header__link--white': isNetworkHeader, 'header__link--selected': isNetworkHeader, 'header__link--dark': isNetworkHeader && isOpen })} target='_blank' role='button' onClick={networkPage}>
+              <FormattedMessage
+                defaultMessage="Network"
+              />
+            </a>
           </div>
           <div className="header__icons">
             <a rel="noreferrer noopener" className={classNames('icon', { 'medium': (!isNetworkHeader || isOpen), 'medium--white': isNetworkHeader && !isOpen })} target='_blank' href='https://medium.com/fusenet' />
@@ -47,7 +60,11 @@ const Header = ({ history, isNetworkHeader = false }) => {
           <div className={classNames('header__wallet', { 'header__wallet--yellow': isNetworkHeader })}>
             <a rel="noopener noreferrer" href='https://studio.fuse.io' target="_blank" role="button" >
               <div className="header__wallet__icon"></div>
-              <span>Fuse工作室</span>
+              <span>
+                <FormattedMessage
+                  defaultMessage="Fuse studio"
+                />
+              </span>
             </a>
           </div>
         </div>

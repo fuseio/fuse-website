@@ -1,12 +1,21 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
-const SectionSix = () => {
+const SectionSix = (props) => {
   return (
     <section className="why_fuse_better">
       <div className="why_fuse_better__wrapper grid-x align-middle">
         <div className="why_fuse_better__content">
           <div>
-            <h1 className="title">为什么在FUSE上的开源支付方式是更好的现金选择?</h1>
+            <h1 className="title">
+              <FormattedMessage
+                defaultMessage="Why open {newLine} source{newLine} payments on{newLine} <span>Fuse</span> are A {newLine} better cash{newLine} Alternative?"
+                values={{
+                  newLine: <br />,
+                  span: chunks => <span>{chunks}</span>
+                }}
+              />
+            </h1>
           </div>
           <div className="items">
             <div className="item">
@@ -15,7 +24,8 @@ const SectionSix = () => {
               </div>
               <div className="line"></div>
               <div className="text">
-               首先它的准入门槛很低，因此这个技术可以izai世界上任何地方推广
+                <FormattedMessage defaultMessage="It has a very low entry barrier so this technology can reach anywhere across the world" />
+
               </div>
             </div>
             <div className="item">
@@ -24,7 +34,7 @@ const SectionSix = () => {
               </div>
               <div className="line"></div>
               <div className="text">
-               和去中心化金融对接，这样你就可以用你的钱做更多的事情
+                <FormattedMessage defaultMessage="Connect to decentralized finance so you have more things to do with your money" />
               </div>
             </div>
             <div className="item">
@@ -33,7 +43,9 @@ const SectionSix = () => {
               </div>
               <div className="line"></div>
               <div className="text">
-               每笔交易支付最多1美分的固定费用，在没有任何隐藏费用情况下非常高效的进行资金的兑换
+                <FormattedMessage
+                  defaultMessage="Pay a fixed fee of up to 1 cent per transaction to move money instantly without any hidden fees and inefficiencies"
+                />
               </div>
             </div>
           </div>

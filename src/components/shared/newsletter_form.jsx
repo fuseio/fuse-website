@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { FormattedMessage, IntlContext } from 'react-intl';
 import { object, string } from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
@@ -8,6 +9,7 @@ const SignupSchema = object().shape({
 
 const NewsletterForm = () => {
   const [title, setTitle] = useState("");
+  const intl = useContext(IntlContext);
 
   return (
     <Formik
@@ -62,12 +64,14 @@ const NewsletterForm = () => {
       {({ isSubmitting, dirty }) => (
         <Form className="newsletter__form ">
           <div className="title" dangerouslySetInnerHTML={{ __html: title }} />
-          <Field
-            type="email"
-            className="newsletter__form__input"
-            placeholder="Enter email"
-            name="email"
-          />
+          <FormattedMessage defaultMessage="Enter Email">
+            {txt => <Field
+              type="email"
+              className="newsletter__form__input"
+              placeholder={txt}
+              name="email"
+            />}
+          </FormattedMessage>
           <ErrorMessage name="email">
             {(msg) => (
               <div className="newsletter__form__mobile-error">{msg}</div>
@@ -79,7 +83,7 @@ const NewsletterForm = () => {
             type="submit"
             className="newsletter__form__button"
           >
-            Send
+            <FormattedMessage defaultMessage="Send" />
           </button>
           <ErrorMessage name="email">
             {(msg) => <div className="newsletter__form__error ">{msg}</div>}

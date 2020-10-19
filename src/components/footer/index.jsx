@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router";
 import classNames from "classnames";
 import footer_logo from "@/assets/images/site-logo-grad.svg";
+import { FormattedMessage } from 'react-intl';
 
 const Footer = ({ history, isNetworkFooter = false }) => {
   const networkPage = () => history.push("/network");
@@ -27,7 +28,7 @@ const Footer = ({ history, isNetworkFooter = false }) => {
               target="_blank"
               href="https://explorer.fuse.io/"
             >
-              Explorer
+              <FormattedMessage defaultMessage="Explorer" />
             </a>
             <a
               rel="noreferrer noopener"
@@ -35,7 +36,7 @@ const Footer = ({ history, isNetworkFooter = false }) => {
               target="_blank"
               href="https://docs.fuse.io/"
             >
-              Docs
+              <FormattedMessage defaultMessage="Docs" />
             </a>
             <a
               rel="noreferrer noopener"
@@ -44,7 +45,7 @@ const Footer = ({ history, isNetworkFooter = false }) => {
               role="button"
               onClick={networkPage}
             >
-              Network
+              <FormattedMessage defaultMessage="Network" />
             </a>
           </div>
         </div>
@@ -92,7 +93,7 @@ const Footer = ({ history, isNetworkFooter = false }) => {
             </a>
           </div>
         </div>
-        <div className="footer__item  ">
+        <div className="footer__item ">
           <div className="grid-x align-center">
             <span className="footer__copyright">© 2020 Fuse</span>
           </div>

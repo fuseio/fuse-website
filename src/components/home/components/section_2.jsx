@@ -1,16 +1,22 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 const SectionTwo = () => {
   return (
     <section className='studio__wrapper grid-x align-center'>
       <div className="studio">
-        <h1 className="studio__title">定制属于你自己的钱包和货币</h1>
-        <div className="studio__text">Fuse Studio允许您创建属于你自己的钱包，为你的公司/社区设置和定义属于自己的品牌货币。我们处理所有繁重的技术任务，而你通过轻松的集成支付解决方案来奖励自己的用户和实现用户增长。
+        <h1 className="studio__title">
+          <FormattedMessage defaultMessage="Customize your own wallet and currency" />
+        </h1>
+        <div className="studio__text">
+          <FormattedMessage defaultMessage="The Fuse Studio allows you to build your own wallet and mint your own custom branded
+        currency for your company/community. We handle all the heavy lifting, allowing you to reward and grow your
+        user base by easily integrating a sophisticated payment solution." />
         </div>
         <div className="dapp_image">
           <a rel="noopener noreferrer" href='https://studio.fuse.io' target="_blank" role="button" className="button__wrapper">
             <button data-event="Start now with the studio" className="button">
-              和我们一起从现在开始吧
+              <FormattedMessage defaultMessage="Start now with the studio" />
               <img alt='image' src="./images/blue_arrow.svg" />
             </button>
           </a>

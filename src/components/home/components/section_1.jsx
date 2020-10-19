@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react'
+import { FormattedMessage } from 'react-intl';
 import lottie from 'lottie-web'
 import Header from '@/components/header'
 import whiteArrow from '@/assets/images/white_arrow.svg'
@@ -34,16 +35,21 @@ const SectionOne = () => {
           </div>
           <div className='section-A__main'>
             <h1 className='main_title'>
-             社区经济的兴盛
+              <FormattedMessage defaultMessage="Turning communities into thriving economies" />
             </h1>
             <p className='section-A__text'>
-              允许公司和社区实现安全无摩擦轻松的手机支付方式
+              <FormattedMessage
+                defaultMessage="Allowing companies and communities to enable secure and {newLine}friction-less mobile payments with ease."
+                values={{
+                  newLine: <br />
+                }} />
             </p>
             <div className="grid-x buttons">
               <a rel="noopener noreferrer" href='https://studio.fuse.io' target="_blank" role="button" className='cell medium-10 small-18'>
                 <button data-event="Launch an economy"
                   className='section-A__launch__button section-A__launch__button--blue'>
-                  <span>Fuse工作室</span>
+                  <span>
+                    <FormattedMessage defaultMessage="Launch an economy" /></span>
                   <span className='section-A__arrow'>
                     <img alt='image' src={whiteArrow} />
                   </span>
