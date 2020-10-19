@@ -92,7 +92,7 @@ const Footer = ({ history, isNetworkFooter = false }) => {
             </a>
           </div>
         </div>
-        <div className="footer__item ">
+        <div className="footer__item  ">
           <div className="grid-x align-center">
             <span className="footer__copyright">© 2020 Fuse</span>
           </div>
