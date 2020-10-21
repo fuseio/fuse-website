@@ -19,7 +19,6 @@ import portis from "../../../assets/images/portis.png"
 import gooddollar from "../../../assets/images/gooddollar.png"
 import "../about.css"
 import ImageCell from './subComponents/ImageCell'
-const imgs = [aleph, collider, spark, blackedge, defi, wings, trg, faculty, techmeetstrader, wolfedge];
 
 const SectionFour = () => {
     return (
@@ -61,10 +60,11 @@ const SectionFour = () => {
                                 <ImageCell image={portis}/>
                                 <ImageCell image={gooddollar}/>
                             </div>
-                          
-                        </div>
+                      
                     </div>
+                   
                 </div>
+            </div>
             </div>
         </section>
     )
