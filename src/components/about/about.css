@@ -1,0 +1,90 @@
+.section-one {
+  background: linear-gradient(90deg, #051928 0%, #0a283e 100%);
+  color: white;
+}
+.section-one .header__link {
+  color: white;
+}
+.section-one__overlay {
+  padding-top: 94px;
+  padding-left: 80px;
+  padding-right: 123px;
+}
+.section-one__overlay > div {
+  display: flex;
+}
+.section-one__main {
+  padding-top: 63px;
+}
+.section-one__image {
+  justify-content: flex-end;
+  position: relative;
+  top: 6px;
+}
+.section-one__main .main_title {
+  padding-bottom: 1rem;
+  text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.4);
+  font-size: 40px;
+  font-weight: 500;
+}
+.section-one__main .section-one__text {
+  max-width: 466px;
+  font-size: 18px;
+  line-height: 26.8px;
+}
+
+/* Section Two */
+.section-two {
+  background: #eff8ff;
+  padding: 80px 0px;
+}
+.section-two__text {
+  font-size: 24px;
+  line-height: 33.6px;
+  font-weight: 500;
+}
+.section-two__wrapper {
+  width: 45%;
+  color: #052235;
+}
+/* End Of Section Two */
+
+/* Section Three */
+.section-three .main-title {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  color: #4a687b;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+.section-three__card {
+  padding: 0 5rem;
+}
+.section-three__card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-three__card__content .content-name {
+  padding-bottom: 0.5rem;
+  color: #4a687b;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+.section-three__card__content .content-role {
+  font-size: 14px;
+  line-height: 16px;
+  color: #7a7a7a;
+}
+.section-three__card__content .content-icons {
+  padding-top: 0.5rem;
+  padding-bottom: 40px;
+  display: flex;
+}
+.section-three__card__content .content-icons .linkedin {
+  padding-right: 17px;
+}
+/* End of Third Section */

@@ -21,7 +21,7 @@ const SectionOne = () => {
   }, [lottieRef])
   return (
     <section className="section-A">
-      <Header />
+      <Header/>
       <div className='section-A__overlay'>
         <div className='section-A__wrapper medium-12 small-24'>
           <div class='section-A__news'>

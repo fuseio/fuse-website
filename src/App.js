@@ -15,6 +15,7 @@ const { store, history } = configureStore(window.__INITIAL_STATE__);
 
 import en from '../lang/en.json';
 import zh from '../lang/zh.json';
+import About from './components/about';
 
 const MESSAGES = {
   en,
@@ -25,12 +26,19 @@ const App = () => {
   return (
     <LangProvider>
       <LangContext.Consumer>
-        {(lang) =>
-          <IntlProvider messages={MESSAGES[lang]} locale={lang} defaultLocale='en'>
+        {(lang) => (
+          <IntlProvider
+            messages={MESSAGES[lang]}
+            locale={lang}
+            defaultLocale='en'
+          >
             <Provider store={store}>
               <ConnectedRouter history={history}>
                 <ScrollToTopController>
                   <Switch>
+                    <Route exact path='/about'>
+                      <About />
+                    </Route>
                     <Route exact path='/network'>
                       <Network />
                     </Route>
@@ -41,7 +49,8 @@ const App = () => {
                 </ScrollToTopController>
               </ConnectedRouter>
             </Provider>
-          </IntlProvider>}
+          </IntlProvider>
+        )}
       </LangContext.Consumer>
     </LangProvider>
   );
