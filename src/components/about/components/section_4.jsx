@@ -13,7 +13,13 @@ import faculty from "../../../assets/images/faculty.png"
 import techmeetstrader from "../../../assets/images/techmeetstrader.png"
 import wolfedge from "../../../assets/images/wolfedge.png"
 
-const imgs = [aleph, collider, spark, blackedge, defi, wings, trg, faculty, techmeetstrader, wolfedge];
+import sordex from "../../../assets/images/sordex.png"
+import roost from "../../../assets/images/roost.png"
+import portis from "../../../assets/images/portis.png"
+import gooddollar from "../../../assets/images/gooddollar.png"
+
+const backers = [aleph, collider, spark, blackedge, defi, wings, trg, faculty, techmeetstrader, wolfedge];
+const partners = [sordex, roost, portis, gooddollar];
 
 const SectionFour = () => {
     return (
@@ -24,7 +30,17 @@ const SectionFour = () => {
                         <h2 className="main-title cell small-4">Our Backers</h2>
                         <div className="cell small-20 grid-x grid-padding-y">
                             {
-                                imgs.map((img, index) => <div key={index} className="cell small-6">
+                                backers.map((img, index) => <div key={index} className="cell small-6">
+                                    <img src={img} />
+                                </div>)
+                            }
+                        </div>
+                    </div>
+                    <div className="grid-x">
+                        <h2 className="main-title cell small-4">Our Partners</h2>
+                        <div className="cell small-20 grid-x grid-padding-y">
+                            {
+                                partners.map((img, index) => <div key={index} className="cell small-6">
                                     <img src={img} />
                                 </div>)
                             }
