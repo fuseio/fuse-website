@@ -15,11 +15,15 @@ const { store, history } = configureStore(window.__INITIAL_STATE__);
 
 import en from '../lang/en.json';
 import zh from '../lang/zh.json';
+import vi from '../lang/vi.json';
+import ko from '../lang/ko.json';
 import About from './components/about';
 
 const MESSAGES = {
   en,
   zh,
+  vi,
+  ko
 };
 
 const App = () => {

@@ -5,6 +5,8 @@ import { useLang } from './lang_provider';
 const options = [
   { label: "English", value: "en" },
   { label: "中国酶", value: "zh" },
+  { label: "Vietnamese", value: "vi" },
+  { label: "Korean", value: "ko" },
 ];
 
 const SelectLanguage = ({ isNetworkHeader, isOpen }) => {
