@@ -24,7 +24,7 @@ const Header = ({ history, isNetworkHeader = false, isAboutHeader = false }) => 
     <header className='header__wrapper'>
       <div className='header'>
         <div onClick={homePage} className='header__logo'>
-          <img alt="logo" src={isNetworkHeader ? fuseLogoWhite : fuseLogo} />
+          <img alt="logo" src={isNetworkHeader || isAboutHeader ? fuseLogoWhite : fuseLogo} />
         </div>
         <button ref={hamburgerRef} type="button" className={classNames('hamburger-button__container', { 'hamburger-button__container--white': isNetworkHeader })} onClick={() => setMenuOpen(!isOpen)} >
           <span className="hamburger-button__top"></span>
@@ -44,14 +44,15 @@ const Header = ({ history, isNetworkHeader = false, isAboutHeader = false }) => 
                 defaultMessage="Docs"
               />
             </a>
-             <a rel="noreferrer noopener" className={classNames('header__link', { 'header__link--white': isNetworkHeader || isAboutHeader, 'header__link--selected': isAboutHeader, 'header__link--dark': isNetworkHeader && isOpen })} target='_blank' role='button' onClick={aboutPage}>
-              <FormattedMessage
-                defaultMessage="About Us"
-              />
-            </a>
+            
             <a rel="noreferrer noopener" className={classNames('header__link', { 'header__link--white': isNetworkHeader || isAboutHeader, 'header__link--selected': isNetworkHeader, 'header__link--dark': isNetworkHeader && isOpen })} target='_blank' role='button' onClick={networkPage}>
               <FormattedMessage
                 defaultMessage="Network"
+              />
+            </a>
+             <a rel="noreferrer noopener" className={classNames('header__link', { 'header__link--white': isNetworkHeader || isAboutHeader, 'header__link--selected': isAboutHeader, 'header__link--dark': isNetworkHeader && isOpen })} target='_blank' role='button' onClick={aboutPage}>
+              <FormattedMessage
+                defaultMessage="About Us"
               />
             </a>
           </div>
