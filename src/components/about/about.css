@@ -108,37 +108,28 @@
   text-align: center;
 }
 .section-four__overlay {
-  background-color: #F6FBFF;
+  background-color: #f6fbff;
   padding: 80px;
 }
 
 .section-four__wrapper > .grid-x {
   align-items: flex-start;
 }
-/* .section-four__card__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.section-four__images-container {
+  margin-top: 1rem;
 }
-.section-four__card__content .content-name {
-  padding-bottom: 0.5rem;
-  color: #4a687b;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 20px;
-}
-.section-four__card__content .content-role {
-  font-size: 14px;
-  line-height: 16px;
-  color: #7a7a7a;
-}
-.section-four__card__content .content-icons {
-  padding-top: 0.5rem;
-  padding-bottom: 40px;
+.section-four__images-container > div {
+  padding-bottom: 50px;
   display: flex;
 }
-.section-four__card__content .content-icons .linkedin {
-  padding-right: 17px;
-} */
+.section-four__images-container .special_images {
+  margin-left: 0rem;
+}
+.section-four hr {
+  width: 100%;
+  border-top: 1px solid #dde8f0;
+}
+.bottom__wrapper {
+  margin-top: 70px;
+}
 /* End of Fourth Section */
