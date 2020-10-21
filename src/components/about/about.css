@@ -88,3 +88,57 @@
   padding-right: 17px;
 }
 /* End of Third Section */
+
+/* Section Four */
+.section-four {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  color: #4a687b;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.section-four__wrapper > .main-title {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  color: #4a687b;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+.section-four__overlay {
+  background-color: #F6FBFF;
+  padding: 80px;
+}
+
+.section-four__wrapper > .grid-x {
+  align-items: flex-start;
+}
+/* .section-four__card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-four__card__content .content-name {
+  padding-bottom: 0.5rem;
+  color: #4a687b;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+.section-four__card__content .content-role {
+  font-size: 14px;
+  line-height: 16px;
+  color: #7a7a7a;
+}
+.section-four__card__content .content-icons {
+  padding-top: 0.5rem;
+  padding-bottom: 40px;
+  display: flex;
+}
+.section-four__card__content .content-icons .linkedin {
+  padding-right: 17px;
+} */
+/* End of Fourth Section */
