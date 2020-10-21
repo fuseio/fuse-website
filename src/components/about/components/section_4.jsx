@@ -3,7 +3,7 @@ import "../about.css"
 const SectionFour = () => {
     return (
         <div>
-            ok
+            
         </div>
     )
 }
