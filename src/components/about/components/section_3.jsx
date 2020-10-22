@@ -18,57 +18,71 @@ const members = [
     name: "Mark Smargon",
     role: "Founder & CEO",
     picture: mark,
+    linked:"https://www.linkedin.com/in/marksmargon/"
   },
   {
     name: "Leon Prouger",
     role: "Tech Lead",
     picture: leon,
+    linked:"https://www.linkedin.com/in/leon-prouger-60646540/"
   },
   {
     name: "Lior Agnin",
     role: "Fullstack & Moble Developer",
     picture: lior,
-  },
-  {
-    name: "Gilat Reiss",
-    role: "UI/UX Designer",
-    picture: gilat,
+    linked:"https://www.linkedin.com/in/lioragnin/"
   },
   {
     name: "Isaac Rodgin",
     role: "Head of BD",
     picture: isaac,
+    linked:"https://www.linkedin.com/in/isaac-rodgin-58a8897a/"
   },
+  {
+    name: "Gilat Reiss",
+    role: "UI/UX Designer",
+    picture: gilat,
+    linked:"https://www.linkedin.com/in/gilat-reiss-b6086b162/"
+  },
+    {
+    name: "Andy Pohl",
+    role: "Backend Dev",
+    picture: andy,
+    linked:"https://www.linkedin.com/in/andrew-pohl-4b52959b/"
+  },
+  
+  
   {
     name: "Adar Weinreib",
     role: "Head of Product",
     picture: adar,
+    linked:"https://www.linkedin.com/in/adar-weinreb-aa630660/"
   },
   {
     name: "Mikhail Dubodel",
     role: "Social Media",
     picture: mikhail,
+    linked:"https://www.linkedin.com/in/mikhaildubodel/"
   },
   {
-    name: "Ashish",
+    name: "Ashish Ram",
     role: "Community Manager",
     picture: ashish,
+    linked:"https://www.linkedin.com/in/ashish-ram/"
   },
   {
     name: "Robert Miller",
     role: "PR & Communications",
     picture: robert,
+    linked:"https://www.linkedin.com/in/rm16/"
   },
   {
     name: "Mulenga Bowa",
-    role: "Position",
+    role: "Client Dev",
     picture: mulenga,
+    linked:"https://www.linkedin.com/in/isaac-rodgin-58a8897a/"
   },
-  {
-    name: "Andy Pohl",
-    role: "Position",
-    picture: andy,
-  },
+
 ]
 
 const SectionThree = () => {
@@ -77,7 +91,7 @@ const SectionThree = () => {
       <div className='section-three__overlay grid-x'>
         <div className='section-three__wrapper small-24'>
           <h1 className='main-title'>
-            Meet the Team
+            Core Team
             </h1>
           <div className="grid-x">
             {members.map((member, index) => <TeamMember key={index} {...member} />)}
