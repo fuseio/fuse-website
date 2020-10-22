@@ -59,13 +59,13 @@ const Header = ({ history, isNetworkHeader = false, isAboutHeader = false }) => 
           <div className="header__icons">
             <a rel="noreferrer noopener" className={classNames('icon', { 'medium': (!isNetworkHeader || isOpen), 'medium--white': (isNetworkHeader || isAboutHeader) && !isOpen })} target='_blank' href='https://medium.com/fusenet' />
             <a rel="noreferrer noopener" className={classNames('icon', { 'github': (!isNetworkHeader || isOpen), 'github--white': (isNetworkHeader || isAboutHeader) && !isOpen })} target='_blank' href='https://github.com/fuseio' />
-            <a rel="noreferrer noopener" className={classNames('icon', { 'twitter': (!isNetworkHeader || isOpen), 'twitter--white': (isNetworkHeader || isAboutHeader) && !isOpen })} target='_blank' href='https://twitter.com/fuse_network' />
+            <a rel="noreferrer noopener" className={classNames('icon', { 'twitter': (!isNetworkHeader  || isOpen), 'twitter--white': (isNetworkHeader || isAboutHeader) && !isOpen })} target='_blank' href='https://twitter.com/fuse_network' />
             <a rel="noreferrer noopener" className={classNames('icon', { 'telegram': (!isNetworkHeader || isOpen), 'telegram--white': (isNetworkHeader || isAboutHeader) && !isOpen })} target='_blank' href='https://t.me/fuseio' />
             <a rel="noreferrer noopener" className={classNames('icon', { 'discord': (!isNetworkHeader || isOpen), 'discord--white': (isNetworkHeader || isAboutHeader) && !isOpen })} target='_blank'
               href='https://discordapp.com/invite/jpPMeSZ' />
             <SelectLanguage isNetworkHeader={isNetworkHeader} isOpen={isOpen}/>
           </div>
-          <div className={classNames('header__wallet', { 'header__wallet--yellow': isNetworkHeader })}>
+          <div className={classNames('header__wallet', { 'header__wallet--yellow': isNetworkHeader  || isAboutHeader })}>
             <a rel="noopener noreferrer" href='https://studio.fuse.io' target="_blank" role="button" >
               <div className="header__wallet__icon"></div>
               <span>
