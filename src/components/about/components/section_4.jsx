@@ -30,13 +30,13 @@ const SectionFour = () => {
             <div className="cell small-20 grid-x section-four__images-container">
               <div className="grid-x small-24 special_images">
                 <ImageCell image={collider} />
-                <ImageCell image={blackedge} />
+                <ImageCell image={wolfedge} />
                 <ImageCell image={aleph} />
                 <ImageCell image={spark} />
               </div>
               <div className="grid-x small-24">
                 <ImageCell image={block} resized="resized-image" />
-                <ImageCell image={wolfedge} />
+                <ImageCell image={blackedge} />
                 <ImageCell image={trg} />
                 <ImageCell image={faculty} />
               </div>
