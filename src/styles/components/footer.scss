@@ -1,263 +1,276 @@
 @include block(footer) {
-  height: 100%;
-  width: 100%;
-  justify-content: space-between;
+	height: 100%;
+	width: 100%;
+	justify-content: space-between;
 
-  @include breakpoint(xlarge down) {
-    transform: scale(0.9);
-  }
+	@include breakpoint(xlarge down) {
+		transform: scale(0.9);
+	}
 
-  @include xy-grid-container();
+	@include xy-grid-container();
 
-  @include element(wrapper) {
-    background: linear-gradient(180deg, #002740 0%, #001929 100%);
-    padding: 2em 20px 0em;
+	@include element(wrapper) {
+		background: linear-gradient(180deg, #002740 0%, #001929 100%);
+		padding: 2em 20px 0em;
 
-    @include modifier(dark) {
-      background-color: #001929;
-      padding: 2em 20px 6em;
-    }
-  }
+		@include modifier(dark) {
+			background-color: #001929;
+			padding: 2em 20px 6em;
+		}
+	}
 
-  @include breakpoint(medium down) {
-    transform: unset;
-  }
+	@include breakpoint(medium down) {
+		transform: unset;
+	}
 
-  @include element(container) {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
+	@include element(container) {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
 
-  @include element(link) {
-    text-decoration: none;
-    font-size: 0.938em;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #0a2f40;
+	@include element(link) {
+		text-decoration: none;
+		font-size: 0.938em;
+		font-weight: 500;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: center;
+		color: #0a2f40;
 
-    &:not(:last-child) {
-      margin-right: 3em;
-    }
+		&:not(:last-child) {
+			margin-right: 3em;
+		}
 
-    @include modifier(white) {
-      color: white;
-      &:hover {
-        font-weight: bold;
-        text-decoration: underline;
-      }
-    }
-  }
+		@include modifier(white) {
+			color: white;
+			&:hover {
+				font-weight: bold;
+				text-decoration: underline;
+			}
+		}
+	}
 
-  @include element(icons) {
-  }
+	@include element(icons) {
+	}
 
-  @include element(icon) {
-    cursor: pointer;
+	@include element(icon) {
+		cursor: pointer;
 
-    &:not(:last-child) {
-      margin-right: 2em;
-    }
-  }
+		&:not(:last-child) {
+			margin-right: 2em;
+		}
+	}
 
-  @include block(image) {
-    height: 47px;
-    width: 47px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+	@include block(image) {
+		height: 47px;
+		width: 47px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
 
-    @include breakpoint(small only) {
-      height: 35px;
-      width: 35px;
-    }
-  }
+		@include breakpoint(small only) {
+			height: 35px;
+			width: 35px;
+		}
+	}
 
-  @include block(twitter) {
-    background-image: url(/images/twitter_white.svg);
-    &:hover {
-      background-image: url(/images/twitter_footer_hover.svg);
-    }
-  }
+	@include block(twitter) {
+		background-image: url(/images/twitter_white.svg);
+		&:hover {
+			background-image: url(/images/twitter_footer_hover.svg);
+		}
+	}
 
-  @include block(github) {
-    background-image: url(/images/github_white.svg);
-    &:hover {
-      background-image: url(/images/git_footer_hover.svg);
-    }
-  }
+	@include block(github) {
+		background-image: url(/images/github_white.svg);
+		&:hover {
+			background-image: url(/images/git_footer_hover.svg);
+		}
+	}
 
-  @include block(medium) {
-    background-image: url(/images/medium_white.svg);
-    &:hover {
-      background-image: url(/images/med_footer_hover.svg);
-    }
-  }
+	@include block(medium) {
+		background-image: url(/images/medium_white.svg);
+		&:hover {
+			background-image: url(/images/med_footer_hover.svg);
+		}
+	}
 
-  @include block(discord) {
-    background-image: url(/images/discord.svg);
-    &:hover {
-      background-image: url(/images/discord_footer_hover.svg);
-    }
-  }
+	@include block(discord) {
+		background-image: url(/images/discord.svg);
+		&:hover {
+			background-image: url(/images/discord_footer_hover.svg);
+		}
+	}
 
-  @include block(telegram) {
-    background-image: url(/images/tele.svg);
-    &:hover {
-      background-image: url(/images/telegram_footer_hover.svg);
-    }
-  }
+	@include block(telegram) {
+		background-image: url(/images/tele.svg);
+		&:hover {
+			background-image: url(/images/telegram_footer_hover.svg);
+		}
+	}
 
-  @include element(wallet) {
-    width: 200px;
-    height: 40.4px;
-    border-radius: 20.2px;
-    border: solid 1.3px rgba(5, 34, 53, 0.18);
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+	@include element(wallet) {
+		width: 200px;
+		height: 40.4px;
+		border-radius: 20.2px;
+		border: solid 1.3px rgba(5, 34, 53, 0.18);
+		background-color: #ffffff;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
 
-    > span {
-      color: #05283e;
-      font-size: 0.938em;
-    }
+		> span {
+			color: #05283e;
+			font-size: 0.938em;
+		}
 
-    @include element(icon) {
-      width: auto;
-      height: 23px;
-    }
-  }
+		@include element(icon) {
+			width: auto;
+			height: 23px;
+		}
+	}
 
-  @include element(defi) {
-    height: 29px;
-    border-radius: 14.5px;
-    border: solid 1px #7b7b7b;
-    width: 185px;
-    max-width: 205px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-left: auto;
-    margin-top: 1em;
+	@include element(defi) {
+		height: 29px;
+		border-radius: 14.5px;
+		border: solid 1px #7b7b7b;
+		width: 185px;
+		max-width: 205px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-left: auto;
+		margin-top: 1em;
 
-    @include element(link) {
-      text-decoration: none;
-      width: 100%;
-      font-size: 0.938em;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      text-align: center;
-      color: white;
-      &:hover {
-        color: white;
-      }
-    }
-  }
+		@include element(link) {
+			text-decoration: none;
+			width: 100%;
+			font-size: 0.938em;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: normal;
+			letter-spacing: normal;
+			text-align: center;
+			color: white;
+			&:hover {
+				color: white;
+			}
+		}
+	}
 
-  @include element(nav) {
-    margin-left: auto;
-    display: flex;
-    justify-content: center;
-    color: #0a2f40;
-    font-size: 0.938em;
-  }
+	@include element(nav) {
+		margin-left: auto;
+		display: flex;
+		justify-content: center;
+		color: #0a2f40;
+		font-size: 0.938em;
+	}
 
-  @include element(logo) {
-    width: 125px;
-    margin-bottom: 1em;
+	@include element(logo) {
+		width: 125px;
+		margin-bottom: 1em;
 
-    @include element(wrapper) {
-      display: flex;
-      align-items: center;
+		@include element(wrapper) {
+			display: flex;
+			align-items: center;
 
-      > span {
-        margin-left: 10px;
-        color: white;
-        font-size: 0.813em;
-        font-weight: 500;
-      }
-    }
-  }
+			> span {
+				margin-left: 10px;
+				color: white;
+				font-size: 0.813em;
+				font-weight: 500;
+			}
+		}
+	}
 
-  @include element(item) {
-    justify-content: center;
+	@include element(item) {
+		justify-content: center;
 
-    &:not(:last-child) {
-      margin-bottom: 2em;
-    }
+		&:not(:last-child) {
+			margin-bottom: 2em;
+		}
 
-    @include breakpoint(small only) {
-      margin: 1em 0;
-    }
-  }
+		@include breakpoint(small only) {
+			margin: 1em 0;
+		}
+	}
 
-  @include element(sign) {
-    position: relative;
-    @include block(title) {
-      font-size: 1.1em;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      color: white;
-      margin-bottom: 0.4em;
-    }
+	@include element(sign) {
+		position: relative;
+		@include block(title) {
+			font-size: 1.1em;
+			font-weight: 500;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: normal;
+			letter-spacing: normal;
+			color: white;
+			margin-bottom: 0.4em;
+		}
 
-    @include block(error) {
-      position: absolute;
-      bottom: -1.5em;
-      color: red;
-    }
+		@include block(error) {
+			position: absolute;
+			bottom: -1.5em;
+			color: red;
+		}
 
-    @include block(input) {
-      max-width: 299px;
-      height: 54px;
-      border-radius: 10px;
-      border: solid 1px rgba(151, 151, 151, 0.35);
-      background-color: #ffffff;
-      color: #052235;
-      padding: 10px;
-      border: 1.5px solid transparent;
+		@include block(input) {
+			max-width: 299px;
+			height: 54px;
+			border-radius: 10px;
+			border: solid 1px rgba(151, 151, 151, 0.35);
+			background-color: #ffffff;
+			color: #052235;
+			padding: 10px;
+			border: 1.5px solid transparent;
 
-      &:focus {
-        border: 1.5px solid #ccd9e0;
-      }
+			&:focus {
+				border: 1.5px solid #ccd9e0;
+			}
 
-      &:disabled {
-        opacity: 0.7;
-        cursor: not-allowed;
-      }
-    }
+			&:disabled {
+				opacity: 0.7;
+				cursor: not-allowed;
+			}
+		}
 
-    @include block(button) {
-      padding: 18px;
-      max-width: 105px;
-      margin-left: 1em;
-      border-radius: 10px;
-      background: $color-fuse_gradient;
+		@include block(button) {
+			padding: 18px;
+			max-width: 105px;
+			margin-left: 1em;
+			border-radius: 10px;
+			background: $color-fuse_gradient;
 
-      &:hover {
-        background: #fae83e;
-        cursor: pointer;
-      }
+			&:hover {
+				background: #fae83e;
+				cursor: pointer;
+			}
 
-      &:disabled {
-        opacity: 0.7;
-        cursor: not-allowed;
-      }
-    }
-  }
+			&:disabled {
+				opacity: 0.7;
+				cursor: not-allowed;
+			}
+		}
+	}
 
-  @include element(copyright) {
-    color: white;
-    margin: 2em 0 1em;
-  }
+	@include element(copyright) {
+		color: white;
+		margin: 2em 0 1em;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	.footer__nav {
+		font-size: 0.7em;
+	}
+	.footer__link:not(:last-child) {
+		margin-right: 1em;
+	}
+
+	.footer__icon:not(:last-child) {
+		margin-right: 0.5em;
+	}
 }
