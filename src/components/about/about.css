@@ -124,8 +124,9 @@
   padding-bottom: 50px;
   display: flex;
 }
-.section-four__images-container .special_images {
-  margin-left: 0rem;
+.resized-image {
+  height: 54px !important;
+  width: 128px !important;
 }
 .section-four hr {
   width: 100%;

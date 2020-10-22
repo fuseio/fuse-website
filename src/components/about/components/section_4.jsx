@@ -12,7 +12,7 @@ import faculty from "../../../assets/images/faculty.png"
 
 import techmeetstrader from "../../../assets/images/techmeetstrader.png"
 import wolfedge from "../../../assets/images/wolfedge.png"
-import block from "../../../assets/images/block.png"
+import block from "../../../assets/images/block1.png"
 import sordex from "../../../assets/images/sordex.png"
 import roost from "../../../assets/images/roost.png"
 import portis from "../../../assets/images/portis.png"
@@ -44,7 +44,7 @@ const SectionFour = () => {
                             </div>
                              <div className="grid-x small-24">
                                 <ImageCell image={techmeetstrader}/>
-                                <ImageCell image={block}/>
+                                <ImageCell image={block} resized="resized-image"/>
                                 <ImageCell image={wolfedge}/>
                                 
                             </div>
