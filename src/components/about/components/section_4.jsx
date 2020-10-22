@@ -21,47 +21,44 @@ import "../about.css"
 import ImageCell from './subComponents/ImageCell'
 
 const SectionFour = () => {
-    return (
-        <section className="section-four">
-            <div className='section-four__overlay grid-x'>
-                <div className='section-four__wrapper small-24'>
-                    <div className="grid-x">
-                        <h2 className="main-title cell small-4">Partners and Backers</h2>
-                        <div className="cell small-20 grid-x section-four__images-container">
-                         
-                            <div className="grid-x small-24 special_images">
-                                 <ImageCell image={collider}/>
-                                <ImageCell image={aleph}/>
-                                <ImageCell image={blackedge}/>
-                                <ImageCell image={spark}/>
-                               
-                            </div>
-                             <div className="grid-x small-24">
-                                <ImageCell image={defi}/>
-                                <ImageCell image={wings}/>
-                                <ImageCell image={trg}/>
-                                <ImageCell image={faculty}/>
-                            </div>
-                             <div className="grid-x small-24">
-                                <ImageCell image={techmeetstrader}/>
-                                <ImageCell image={block} resized="resized-image"/>
-                                <ImageCell image={wolfedge}/>
-                                
-                            </div>
-                            <div className="grid-x small-24">
-                                <ImageCell image={sordex}/>
-                                <ImageCell image={roost}/>
-                                <ImageCell image={portis}/>
-                                <ImageCell image={gooddollar}/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                          
-             
+  return (
+    <section className="section-four">
+      <div className='section-four__overlay grid-x'>
+        <div className='section-four__wrapper small-24'>
+          <div className="grid-x">
+            <h2 className="main-title cell small-4">Partners and Backers</h2>
+            <div className="cell small-20 grid-x section-four__images-container">
+              <div className="grid-x small-24 special_images">
+                <ImageCell image={collider} />
+                <ImageCell image={blackedge} />
+                <ImageCell image={aleph} />
+                <ImageCell image={spark} />
+              </div>
+              <div className="grid-x small-24">
+                <ImageCell image={block} resized="resized-image" />
+                <ImageCell image={wolfedge} />
+                <ImageCell image={trg} />
+                <ImageCell image={faculty} />
+              </div>
+              <div className="grid-x small-24">
+                <ImageCell image={techmeetstrader} />
+                <ImageCell image={defi} />
+                <ImageCell image={wings} />
+              </div>
+              <div className="grid-x small-24">
+                <ImageCell image={sordex} />
+                <ImageCell image={roost} />
+                <ImageCell image={portis} />
+                <ImageCell image={gooddollar} />
+              </div>
             </div>
-        </section>
-    )
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  )
 }
 
 export default SectionFour

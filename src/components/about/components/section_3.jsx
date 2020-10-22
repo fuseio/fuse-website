@@ -18,81 +18,78 @@ const members = [
     name: "Mark Smargon",
     role: "Founder & CEO",
     picture: mark,
-    linked:"https://www.linkedin.com/in/marksmargon/",
-    isLinkedIn:true
+    linked: "https://www.linkedin.com/in/marksmargon/",
+    isLinkedIn: true
   },
   {
     name: "Leon Prouger",
     role: "Tech Lead",
     picture: leon,
-    linked:"https://www.linkedin.com/in/leon-prouger-60646540/",
-    isLinkedIn:true
+    linked: "https://www.linkedin.com/in/leon-prouger-60646540/",
+    isLinkedIn: true
   },
   {
     name: "Lior Agnin",
     role: "Fullstack & Moble Developer",
     picture: lior,
-    linked:"https://www.linkedin.com/in/lioragnin/",
-    isLinkedIn:true
+    linked: "https://www.linkedin.com/in/lioragnin/",
+    isLinkedIn: true
+  },
+  {
+    name: "Mulenga Bowa",
+    role: "Front-End Developer",
+    picture: mulenga,
+    isLinkedIn: false
   },
   {
     name: "Isaac Rodgin",
     role: "Head of BD",
     picture: isaac,
-    linked:"https://www.linkedin.com/in/isaac-rodgin-58a8897a/",
-    isLinkedIn:true
+    linked: "https://www.linkedin.com/in/isaac-rodgin-58a8897a/",
+    isLinkedIn: true
   },
   {
     name: "Gilat Reiss",
     role: "UI/UX Designer",
     picture: gilat,
-    linked:"https://www.linkedin.com/in/gilat-reiss-b6086b162/",
-    isLinkedIn:true
+    linked: "https://www.linkedin.com/in/gilat-reiss-b6086b162/",
+    isLinkedIn: true
   },
-    {
+  {
     name: "Andy Pohl",
     role: "Backend Dev",
     picture: andy,
-    linked:"https://www.linkedin.com/in/andrew-pohl-4b52959b/",
-    isLinkedIn:true
+    linked: "https://www.linkedin.com/in/andrew-pohl-4b52959b/",
+    isLinkedIn: true
   },
-  
-  
   {
-    name: "Adar Weinreib",
+    name: "Adar Weinreb",
     role: "Head of Product",
     picture: adar,
-    linked:"https://www.linkedin.com/in/adar-weinreb-aa630660/",
-    isLinkedIn:true
+    linked: "https://www.linkedin.com/in/adar-weinreb-aa630660/",
+    isLinkedIn: true
   },
   {
     name: "Mikhail Dubodel",
     role: "Social Media",
     picture: mikhail,
-    linked:"https://www.linkedin.com/in/mikhaildubodel/",
-    isLinkedIn:true
+    linked: "https://www.linkedin.com/in/mikhaildubodel/",
+    isLinkedIn: true
   },
   {
     name: "Ashish Ram",
     role: "Community Manager",
     picture: ashish,
-    linked:"https://www.linkedin.com/in/ashish-ram/",
-    isLinkedIn:true
+    linked: "https://www.linkedin.com/in/ashish-ram/",
+    isLinkedIn: true
   },
   {
     name: "Robert Miller",
     role: "PR & Communications",
     picture: robert,
-    linked:"https://www.linkedin.com/in/rm16/",
-    isLinkedIn:true
-  },
-  {
-    name: "Mulenga Bowa",
-    role: "Client Dev",
-    picture: mulenga,
-    isLinkedIn:false
-  },
-
+    linked: "https://www.linkedin.com/in/rm16/",
+    isLinkedIn: true
+  }
 ]
 
 const SectionThree = () => {
