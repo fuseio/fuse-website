@@ -2,9 +2,7 @@
   background: linear-gradient(90deg, #051928 0%, #0a283e 100%);
   color: white;
 }
-.section-one .header__link {
-  color: white;
-}
+
 .section-one__overlay {
   padding-top: 94px;
   padding-left: 80px;

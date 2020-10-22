@@ -9,7 +9,7 @@ const options = [
   { label: "Korean", value: "ko" },
 ];
 
-const SelectLanguage = ({ isNetworkHeader, isOpen }) => {
+const SelectLanguage = ({ isNetworkHeader, isAboutHeader, isOpen }) => {
   const [isListOpen, setIsOpen] = useState(false);
   const [lang, setLang] = useLang();
   const containerRef = useRef(null);
@@ -34,7 +34,7 @@ const SelectLanguage = ({ isNetworkHeader, isOpen }) => {
 
   return (
     <>
-      <a ref={iconRef} onClick={toggling} rel="noreferrer noopener" className={classNames('icon', { 'language': (!isNetworkHeader || isOpen), 'language--white': isNetworkHeader && !isOpen })} target='_blank' />
+      <a ref={iconRef} onClick={toggling} rel="noreferrer noopener" className={classNames('icon', { 'language': (!(isNetworkHeader || isAboutHeader) || isOpen), 'language--white': (isNetworkHeader || isAboutHeader) && !isOpen })} target='_blank' />
       <div className='dropdown-container'>
         {isListOpen && (
           <div ref={containerRef} className='dropdown-list-container'>

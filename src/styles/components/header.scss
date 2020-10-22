@@ -138,6 +138,14 @@
 		&:hover {
 			background-image: url(/images/language_hover.svg);
 		}
+		
+		@include modifier(white) {
+			background-image: url(/images/language_white.svg);
+
+			&:hover {
+				background-image: url(/images/language_white_hover.svg);
+			}
+		}
 	}
 
 	@include element(wallet) {
@@ -411,7 +419,7 @@
 		padding-top: 0.8em;
 	}
 	overflow: auto;
-	max-height: 185px;
+	max-height: 190px;
 }
 
 .list-item {

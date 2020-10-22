@@ -5,7 +5,7 @@ import "../about.css"
 const SectionOne = () => {
     return (
        <section className="section-one">
-      <Header isAboutHeader/>
+      <Header isAboutHeader />
       <div className='section-one__overlay grid-x '>
         <div className='section-one__wrapper medium-12 small-24'>
           <div className='section-one__main'>
