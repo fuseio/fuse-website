@@ -1,13 +1,21 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
-const SectionSix = () => {
+const SectionSix = (props) => {
   return (
     <section className="why_fuse_better">
       <div className="why_fuse_better__wrapper grid-x align-middle">
         <div className="why_fuse_better__content">
           <div>
-            <h1 className="title">Why open <br /> source<br /> payments on<br /> <span>Fuse</span> are A <br /> better
-              cash<br /> Alternative?</h1>
+            <h1 className="title">
+              <FormattedMessage
+                defaultMessage="Why open {newLine} source{newLine} payments on{newLine} <span>Fuse</span> are A {newLine} better cash{newLine} Alternative?"
+                values={{
+                  newLine: <br />,
+                  span: chunks => <span>{chunks}</span>
+                }}
+              />
+            </h1>
           </div>
           <div className="items">
             <div className="item">
@@ -16,7 +24,8 @@ const SectionSix = () => {
               </div>
               <div className="line"></div>
               <div className="text">
-                It has a very low entry barrier so this technology can reach anywhere across the world
+                <FormattedMessage defaultMessage="It has a very low entry barrier so this technology can reach anywhere across the world" />
+
               </div>
             </div>
             <div className="item">
@@ -25,7 +34,7 @@ const SectionSix = () => {
               </div>
               <div className="line"></div>
               <div className="text">
-                Connect to decentralized finance so you have more things to do with your money
+                <FormattedMessage defaultMessage="Connect to decentralized finance so you have more things to do with your money" />
               </div>
             </div>
             <div className="item">
@@ -34,8 +43,9 @@ const SectionSix = () => {
               </div>
               <div className="line"></div>
               <div className="text">
-                Pay a fixed fee of up to 1 cent per transaction to move money instantly without any hidden fees and
-                inefficiencies
+                <FormattedMessage
+                  defaultMessage="Pay a fixed fee of up to 1 cent per transaction to move money instantly without any hidden fees and inefficiencies"
+                />
               </div>
             </div>
           </div>

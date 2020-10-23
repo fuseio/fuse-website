@@ -1,127 +1,128 @@
 @include block(section-D) {
-  @include element(content) {
-    width: 65%;
-    margin: 0 auto;
-    padding: 6em 0;
-  }
+	@include element(content) {
+		width: 65%;
+		margin: 0 auto;
+		padding: 6em 0;
+	}
 }
 
 @include block(studio) {
-  position: relative;
-  @include breakpoint(large) {
-    width: 80%;
-    @include xy-grid(vertical);
-    @include flex-align(null, middle);
-  }
+	position: relative;
+	@include breakpoint(large) {
+		width: 80%;
+		@include xy-grid(vertical);
+		@include flex-align(null, middle);
+	}
 
-  @include breakpoint(medium down) {
-    @include xy-grid(vertical);
-    @include flex-align(center, middle);
-  }
+	@include breakpoint(medium down) {
+		@include xy-grid(vertical);
+		@include flex-align(center, middle);
+	}
 
-  @include breakpoint(1600px up) {
-    max-width: 60%;
-  }
+	@include breakpoint(1600px up) {
+		max-width: 60%;
+	}
 
-  @include breakpoint(small only) {
-    width: 80%;
-  }
+	@include breakpoint(small only) {
+		width: 80%;
+	}
 
-  @include element(wrapper) {
-    z-index: 1;
+	@include element(wrapper) {
+		z-index: 1;
 
-    @include breakpoint(1980px) {
-      height: 959px;
-    }
-    position: relative;
-    background-color: #eff8ff;
-    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.15);
-  }
+		@include breakpoint(1980px) {
+			height: 959px;
+		}
+		position: relative;
+		background-color: #eff8ff;
+		box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.15);
+	}
 
-  @include element(title) {
-    @extend %main-title;
-    margin: 6em 0 1em;
+	@include element(title) {
+		@extend %main-title;
+		margin: 6em 0 1em;
+		text-align: center;
 
-    @include breakpoint(large down) {
-      font-size: 1.5em;
-    }
-  }
+		@include breakpoint(large down) {
+			font-size: 1.5em;
+		}
+	}
 
-  @include element(text) {
-    @extend %main-text;
-    max-width: 733px;
-    margin-bottom: 1em;
-    text-align: center;
-    color: $color-gray;
+	@include element(text) {
+		@extend %main-text;
+		max-width: 733px;
+		margin-bottom: 1em;
+		text-align: center;
+		color: $color-gray;
 
-    @include breakpoint(small only) {
-      font-size: 0.875em;
-    }
-  }
+		@include breakpoint(small only) {
+			font-size: 0.875em;
+		}
+	}
 
-  @include block(dapp_image) {
-    @include breakpoint(medium) {
-      height: 400px;
-    }
+	@include block(dapp_image) {
+		@include breakpoint(medium) {
+			height: 400px;
+		}
 
-    @include breakpoint(xlarge up) {
-      min-width: 1024px;
-      height: 533px;
-    }
+		@include breakpoint(xlarge up) {
+			min-width: 1024px;
+			height: 533px;
+		}
 
-    @include breakpoint(1980px) {
-      width: 100%;
-      height: 633px;
-    }
+		@include breakpoint(1980px) {
+			width: 100%;
+			height: 633px;
+		}
 
-    background-position: center;
-    height: 200px;
-    width: 100%;
-    margin-top: auto;
-    position: relative;
-    background-image: url(/images/DApp.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+		background-position: center;
+		height: 200px;
+		width: 100%;
+		margin-top: auto;
+		position: relative;
+		background-image: url(/images/DApp.png);
+		background-repeat: no-repeat;
+		background-size: contain;
 
-    @include block(button) {
-      @include element(wrapper) {
-        position: absolute;
-        bottom: -25px;
-        left: 50%;
-        @include breakpoint(medium down) {
-          width: 100%;
-          max-width: 350px;
-        }
-      }
+		@include block(button) {
+			@include element(wrapper) {
+				position: absolute;
+				bottom: -25px;
+				left: 50%;
+				@include breakpoint(medium down) {
+					width: 100%;
+					max-width: 350px;
+				}
+			}
 
-      @include breakpoint(medium up) {
-        width: 100%;
-        font-size: 1.225em;
-        // max-width: 362px;
-      }
+			@include breakpoint(medium up) {
+				width: 100%;
+				font-size: 1.225em;
+				// max-width: 362px;
+			}
 
-      @include breakpoint(medium down) {
-        width: 100%;
-      }
-      position: relative;
-      padding: 1em;
-      left: -50%;
-      height: 60px;
-      border-radius: 30.1px;
-      box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.21);
-      background: $color-fuse_gradient;
-      font-weight: 500;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: 0.01px;
-      text-align: center;
-      cursor: pointer;
-      color: #25435a;
+			@include breakpoint(medium down) {
+				width: 100%;
+			}
+			position: relative;
+			padding: 1em;
+			left: -50%;
+			height: 60px;
+			border-radius: 30.1px;
+			box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.21);
+			background: $color-fuse_gradient;
+			font-weight: 500;
+			font-style: normal;
+			line-height: normal;
+			letter-spacing: 0.01px;
+			text-align: center;
+			cursor: pointer;
+			color: #25435a;
 
-      &:hover {
-        box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.21);
-        background: #fff01c;
-      }
-    }
-  }
+			&:hover {
+				box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.21);
+				background: #fff01c;
+			}
+		}
+	}
 }

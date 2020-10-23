@@ -1,8 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import lottie from 'lottie-web'
 import Header from '@/components/header'
-import whiteArrow from '@/assets/images/white_arrow.svg'
-import blueArrow from '@/assets/images/blue_arrow.svg'
 import animationData from '@/assets/lottie/network_page/data.json'
 
 const SectionOne = () => {

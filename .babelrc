@@ -11,6 +11,14 @@
     '@babel/preset-react'
   ],
   plugins: [
-    'react-hot-loader/babel'
+    'react-hot-loader/babel',
+    [
+      "react-intl",
+      {
+        "extractFromFormatMessageCall": true,
+        "idInterpolationPattern": "[sha512:contenthash:base64:6]",
+        "ast": false
+      }
+    ]
   ]
 }

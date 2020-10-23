@@ -2,13 +2,15 @@ import React from "react";
 import { withRouter } from "react-router";
 import classNames from "classnames";
 import footer_logo from "@/assets/images/site-logo-grad.svg";
+import { FormattedMessage } from 'react-intl';
 
-const Footer = ({ history, isNetworkFooter = false }) => {
+const Footer = ({ history, isNetworkFooter = false }, isAboutFooter) => {
   const networkPage = () => history.push("/network");
+  const aboutPage = () => history.push("./about")
   return (
     <footer
       className={classNames("footer__wrapper grid-x", {
-        "footer__wrapper--dark": isNetworkFooter,
+        "footer__wrapper--dark": isNetworkFooter  || isAboutFooter,
       })}
     >
       <div className="footer grid-y">
@@ -27,7 +29,7 @@ const Footer = ({ history, isNetworkFooter = false }) => {
               target="_blank"
               href="https://explorer.fuse.io/"
             >
-              Explorer
+              <FormattedMessage defaultMessage="Explorer" />
             </a>
             <a
               rel="noreferrer noopener"
@@ -35,7 +37,7 @@ const Footer = ({ history, isNetworkFooter = false }) => {
               target="_blank"
               href="https://docs.fuse.io/"
             >
-              Docs
+              <FormattedMessage defaultMessage="Docs" />
             </a>
             <a
               rel="noreferrer noopener"
@@ -44,7 +46,16 @@ const Footer = ({ history, isNetworkFooter = false }) => {
               role="button"
               onClick={networkPage}
             >
-              Network
+              <FormattedMessage defaultMessage="Network" />
+            </a>
+             <a
+              rel="noreferrer noopener"
+              className="footer__link footer__link--white"
+              target="_blank"
+              role="button"
+              onClick={aboutPage}
+            >
+              <FormattedMessage defaultMessage="About Us" />
             </a>
           </div>
         </div>

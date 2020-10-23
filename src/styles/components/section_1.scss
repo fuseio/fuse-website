@@ -39,7 +39,7 @@
   @include element(wrapper) {
     @include breakpoint(medium up) {
       @include xy-grid(vertical);
-      @include flex-align(center, start);
+      @include flex-align(center, top);
       padding-left: 2em;
     }
 

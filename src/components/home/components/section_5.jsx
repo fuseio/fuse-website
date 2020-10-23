@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 import classNames from 'classnames'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
@@ -56,7 +57,8 @@ const SectionFive = () => {
           >
             <div slot="container-start">
               <div className="title">
-                <h1 className="communities__title">Local economies on fuse</h1>
+                <h1 className="communities__title"><FormattedMessage defaultMessage="Local economies on fuse" />
+                </h1>
               </div>
             </div>
             <SwiperSlide>
@@ -68,9 +70,9 @@ const SectionFive = () => {
                     </div>
                     <div>
                       <div className="content__text">
-                        Loyalty wallet in Trinidad that lets you buy using PPP (Pay Wise Points Programme) Users can get
-                        PPP, send it to friends or discover places to shop around the island. The PPP is operated by Pay Wise a local payments provider in Trinidad.
-                    </div>
+                        <FormattedMessage defaultMessage="Loyalty wallet in Trinidad that lets you buy using PPP (Pay Wise Points Programme) Users can get
+                        PPP, send it to friends or discover places to shop around the island. The PPP is operated by Pay Wise a local payments provider in Trinidad." />
+                      </div>
                     </div>
                     <div className="content__metadata grid-x align-middle">
                       <img className="app_icon" alt="play-store" src="./images/google_play_mini.png" />
@@ -87,7 +89,8 @@ const SectionFive = () => {
                   <div className="content__geo grid-x align-center">
                     <div className="tooltip">
                       <div><img alt="paywise" src="./images/trinidad-flag.png" /></div>
-                      <span>Trinidad & Tobago</span>
+                      <span><FormattedMessage defaultMessage="Trinidad & Tobago" />
+                      </span>
                     </div>
                     <img className="planet" alt="image" src="./images/paywise-world.png" />
                   </div>
@@ -105,9 +108,10 @@ const SectionFive = () => {
                       <img alt="DigitalRand" src="./images/digitalrand-logo.jpg" />
                     </div>
                     <div className="content__text">
-                      Use the South African rand stablecoin DZAR to easily on board mainstream users that don’t have an
+                      <FormattedMessage defaultMessage="Use the South African rand stablecoin DZAR to easily on board mainstream users that don’t have an
                       easy access to decentralized finance. Using the DZAR wallet they can fund, store and trade with ease
-                      and without technical knowledge.
+                      and without technical knowledge." />
+
                     </div>
                     <div className="content__metadata grid-x align-middle">
                       <div className="grid-x cell shrink align-middle">
@@ -136,7 +140,8 @@ const SectionFive = () => {
                     <div className="tooltip">
                       <div><img alt="DigitalRand" src="./images/digitalrand-fleg.png" />
                       </div>
-                      <span>Johannesburg</span>
+                      <span><FormattedMessage defaultMessage="Johannesburg" />
+                      </span>
                     </div>
                     <img className="planet" alt="image" src="./images/digitalrand-world.png" />
                   </div>
@@ -154,10 +159,11 @@ const SectionFive = () => {
                       <img alt="LocalPay" src="./images/Local-pay-logo.png" />
                     </div>
                     <div className="content__text">
-                      Cash handouts is an outdated and expensive way to provide charity in some communities which is
+                      <FormattedMessage defaultMessage="Cash handouts is an outdated and expensive way to provide charity in some communities which is
                       what
                       LocalPay is trying to fix. Operated in Sardinia by Sardex, the LocalPay initiative provides a cash
-                      substitute for mainstream audiences in a fraction of the cost
+                      substitute for mainstream audiences in a fraction of the cost" />
+
                     </div>
                     <div className="content__metadata grid-x align-middle">
                       <div className="grid-x align-middle">
@@ -169,7 +175,8 @@ const SectionFive = () => {
                   <div className="content__geo grid-x align-center">
                     <div className="tooltip">
                       <div><img alt="tooltip" src="./images/Italy-flag.png" /></div>
-                      <span>Sardinia</span>
+                      <span><FormattedMessage defaultMessage="Sardinia" />
+                      </span>
                     </div>
                     <img className="planet" alt="image" src="./images/Local-pay-world.png" />
                   </div>
@@ -187,8 +194,9 @@ const SectionFive = () => {
                       <img alt="Roost" src="./images/roots-logo.png" />
                     </div>
                     <div className="content__text">
-                      In the age of digital payments, Roost is reinventing rental payments and using economic incentives
-                      to drive good outcomes. Launching a pilot soon in Liverpool, UK.
+                      <FormattedMessage defaultMessage="In the age of digital payments, Roost is reinventing rental payments and using economic incentives
+                      to drive good outcomes. Launching a pilot soon in Liverpool, UK." />
+
                     </div>
 
                     <div className="content__metadata grid-x">
@@ -216,7 +224,8 @@ const SectionFive = () => {
                   <div className="content__geo grid-x align-center">
                     <div className="tooltip">
                       <div><img alt="uk" src="./images/uk-flag.png" /></div>
-                      <span>Liverpool</span>
+                      <span><FormattedMessage defaultMessage="Liverpool" />
+                      </span>
                     </div>
                     <img className="planet" alt="image" src="./images/roots-world.png" />
                   </div>
@@ -234,9 +243,10 @@ const SectionFive = () => {
                       <img alt="Wepy" src="./images/wepy-logo.png" />
                     </div>
                     <div className="content__text">
-                      Why is building a group payment app for the Brazilian market, the Wepy app allows users to top up
+                      <FormattedMessage defaultMessage="Why is building a group payment app for the Brazilian market, the Wepy app allows users to top up
                       using a stablecoin pegged to brazilian Real. And to send it to friends or family members for free.
-                      We will soon be Introducing group insurance for it's consumers.
+                      We will soon be Introducing group insurance for it's consumers." />
+
                     </div>
                     <div className="content__metadata grid-x align-middle">
                       <img className="app_icon" alt="play-store" src="./images/google_play_mini.png" />
@@ -253,7 +263,8 @@ const SectionFive = () => {
                   <div className="content__geo grid-x align-center">
                     <div className="tooltip">
                       <div><img alt="Brazil" src="./images/brazil-flag.png" /></div>
-                      <span>São Paulo</span>
+                      <span><FormattedMessage defaultMessage="São Paulo" />
+                      </span>
                     </div>
                     <img className="planet" alt="image" src="./images/wepy-world.png" />
                   </div>
@@ -271,9 +282,10 @@ const SectionFive = () => {
                       <img alt="wikibank" src="./images/wikibank-logo.png" />
                     </div>
                     <div className="content__text">
-                      Wikibank is distributing local cash handouts in Seville, Spain. Consumers can use the app to pay
-                      at
-                      local stores and enjoy a local savings account intended to incentivize the local economy.
+                      <FormattedMessage
+                        defaultMessage="Wikibank is distributing local cash handouts in Seville, Spain. Consumers can use the app to pay at local stores and enjoy a local savings account intended to incentivize the local economy."
+                      />
+
                     </div>
                     <div className="content__metadata grid-x align-middle">
                       <div className="grid-x cell shrink align-middle">
@@ -300,7 +312,8 @@ const SectionFive = () => {
                   <div className="content__geo grid-x align-center">
                     <div className="tooltip">
                       <div><img alt="wikibank" src="./images/wikibank-fleg.png" /></div>
-                      <span>Seville</span>
+                      <span><FormattedMessage defaultMessage="Seville" />
+                      </span>
                     </div>
                     <img className="planet" alt="image" src="./images/wikibank-world.png" />
                   </div>
@@ -318,9 +331,12 @@ const SectionFive = () => {
                       <img alt="SeedBed" src="./images/seedbed-logo.jpg" />
                     </div>
                     <div className="content__text">
-                      Seedbed is reimagining how savings groups work using a non-custodial app. Using the Seedbed app,
+                      <FormattedMessage
+                        defaultMessage="Seedbed is reimagining how savings groups work using a non-custodial app. Using the Seedbed app,
                       community managers can manage local savings groups that improve access to credit and powered by
-                      smart-contracts behind the scenes.
+                      smart-contracts behind the scenes."
+                      />
+
                     </div>
                     <div className="content__metadata grid-x align-middle">
                       <div className="grid-x cell shrink align-middle">
@@ -347,7 +363,8 @@ const SectionFive = () => {
                   <div className="content__geo grid-x align-center">
                     <div className="tooltip">
                       <div><img alt="seedbed" src="./images/israel-fleg.png" /></div>
-                      <span>Tel aviv</span>
+                      <span><FormattedMessage defaultMessage="Tel aviv" />
+                      </span>
                     </div>
                     <img className="planet" alt="image" src="./images/world-sedbed.png" />
                   </div>
@@ -365,9 +382,10 @@ const SectionFive = () => {
                       <img alt="Wepy" src="./images/Local champtions-logo.jpg" />
                     </div>
                     <div className="content__text">
-                      LocalChampions allows users to buy fresh produce from local urban manufacturers in Berlin. It’s
+                      <FormattedMessage defaultMessage="LocalChampions allows users to buy fresh produce from local urban manufacturers in Berlin. It’s
                       purpose is increase awareness for local supply chains and incentivize consumers to support those
-                      supply chains using the “Local Voucher”.
+                      supply chains using the “Local Voucher”." />
+
                     </div>
                     <div className="content__metadata grid-x align-middle">
                       <img className="app_icon" alt="play-store" src="./images/google_play_mini.png" />
@@ -386,7 +404,8 @@ const SectionFive = () => {
                     <div className="tooltip">
                       <div><img alt="LocalChamions" src="./images/germany-fleg.png" />
                       </div>
-                      <span>Berlin</span>
+                      <span><FormattedMessage defaultMessage="Berlin" />
+                      </span>
                     </div>
                     <img className="planet" alt="image" src="./images/world.png" />
                   </div>

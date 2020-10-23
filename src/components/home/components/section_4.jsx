@@ -1,8 +1,7 @@
 import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
-
-import '../components/section_4/style.scss';
+import { FormattedMessage } from 'react-intl';
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -13,14 +12,16 @@ const SectionFour = () => {
       <div className='section-C__content grid-container'>
         <div className="grid-x align-justify">
           <div className='item cell large-5'>
-            <h2 className='section-C__title'>Latest updates:</h2>
+            <h2 className='section-C__title'><FormattedMessage defaultMessage="Latest updates:" />
+            </h2>
             <p className='section-C__text'>
-              Get to know what we've been up to lately
-              Follow us on Medium
+              <FormattedMessage defaultMessage="Get to know what we've been up to lately
+              Follow us on Medium" />
+
             </p>
             <a rel="noreferrer noopener" target="_blank" href="https://medium.com/fusenet"
               className='section-C__read-more section-link'>
-              <span>Go to Blog</span>
+              <span><FormattedMessage defaultMessage="Go to Blog" /></span>
               <img style={{ marginLeft: '.3em' }} src="./images/section-C-arrow-right.svg" alt="" />
             </a>
           </div>

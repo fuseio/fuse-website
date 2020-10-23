@@ -1,480 +1,497 @@
 @include block(network_main) {
-  position: relative;
-  border-bottom: 2px solid #031928;
-  background-color: #031928;
+	position: relative;
+	border-bottom: 2px solid #031928;
+	background-color: #031928;
 
-  @include breakpoint(large) {
-    border-bottom: 2px solid #031928;
-    background-color: #031928;
-    height: 91vh;
-  }
+	@include breakpoint(large) {
+		border-bottom: 2px solid #031928;
+		background-color: #031928;
+		height: 91vh;
+	}
 
-  @include breakpoint(small only) {
-    min-height: 50vh;
-    background-color: #001828;
-  }
+	@include breakpoint(small only) {
+		min-height: 50vh;
+		background-color: #001828;
+	}
 
-  @include breakpoint(large down) {
-    @include xy-grid();
-    // padding: 0 2em;
-  }
+	@include breakpoint(large down) {
+		@include xy-grid();
+		// padding: 0 2em;
+	}
 
-  @include element(wrapper) {
-    @include breakpoint(large up) {
-      position: absolute;
-      left: 50%;
-      width: 90%;
-      height: 95%;
-      @include xy-grid-container();
+	@include element(wrapper) {
+		@include breakpoint(large up) {
+			position: absolute;
+			left: 50%;
+			width: 90%;
+			height: 95%;
+			@include xy-grid-container();
 
-      > div {
-        position: relative;
-        left: -50%;
-        height: 100%;
-      }
-    }
+			> div {
+				position: relative;
+				left: -50%;
+				height: 100%;
+			}
+		}
 
-    @include breakpoint(large down) {
-      order: 2;
-      padding: 1em 20px;
-    }
-  }
+		@include breakpoint(large down) {
+			order: 2;
+			padding: 1em 20px;
+		}
+	}
 
-  @include block(lottie) {
-    @include breakpoint(large up) {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
+	@include block(lottie) {
+		@include breakpoint(large up) {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
 
-    @include breakpoint(1263px) {
-      > svg {
-        width: 120% !important;
-        height: 120% !important;
-        transform: translate3d(-180px, -50px, 0) !important;
-      }
-    }
+		@include breakpoint(1263px) {
+			> svg {
+				width: 120% !important;
+				height: 120% !important;
+				transform: translate3d(-180px, -50px, 0) !important;
+			}
+		}
 
-    @include breakpoint(xxlarge up) {
-      > svg {
-        width: 100% !important;
-        height: 100% !important;
-        transform: translate3d(0px, 0px, 0px) !important;
-      }
-    }
+		@include breakpoint(xxlarge up) {
+			> svg {
+				width: 100% !important;
+				height: 100% !important;
+				transform: translate3d(0px, 0px, 0px) !important;
+			}
+		}
 
-    @include breakpoint(large down) {
-      order: 3;
-      min-height: 390px;
-    }
-  }
+		@include breakpoint(large down) {
+			order: 3;
+			min-height: 390px;
+		}
+	}
 
-  @include element(top) {
-    @include breakpoint(large up) {
-      position: absolute;
-      top: 5em;
-      left: 0;
-      z-index: 1;
-    }
+	@include element(top) {
+		@include breakpoint(large up) {
+			position: absolute;
+			top: 5em;
+			left: 0;
+			z-index: 1;
+		}
 
-    @include breakpoint(large down) {
-      // order: 2;
-      margin-bottom: 1.5em;
-    }
-  }
+		@include breakpoint(large down) {
+			// order: 2;
+			margin-bottom: 1.5em;
+		}
+	}
 
-  @include element(bottom) {
-    @include breakpoint(large up) {
-      position: absolute;
-      bottom: 90px;
-      right: 0;
-      z-index: 1;
-    }
-  }
+	@include element(bottom) {
+		@include breakpoint(large up) {
+			position: absolute;
+			bottom: 90px;
+			right: 0;
+			z-index: 1;
+		}
+	}
 
-  @include block(title) {
-    font-size: 2.5em;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: 0.03px;
-    color: #ffffff;
+	@include block(title) {
+		font-size: 2.5em;
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: normal;
+		letter-spacing: 0.03px;
+		color: #ffffff;
 
-    @include breakpoint(large up) {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.57);
-    }
-    @include breakpoint(large down) {
-      font-size: 1.8em;
-      margin-bottom: 0.5em;
-    }
-  }
-  @include block(text) {
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: 0.01px;
-    @include breakpoint(large up) {
-      font-size: 1.125em;
-      color: #ffffff;
-      @include modifier(dark) {
-        color: #8ea6b8;
-      }
-    }
+		@include breakpoint(large up) {
+			text-shadow: 0 0 10px rgba(255, 255, 255, 0.57);
+		}
+		@include breakpoint(large down) {
+			font-size: 1.8em;
+			margin-bottom: 0.5em;
+		}
+	}
+	@include block(text) {
+		font-weight: normal;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: normal;
+		letter-spacing: 0.01px;
+		@include breakpoint(large up) {
+			font-size: 1.125em;
+			color: #ffffff;
+			@include modifier(dark) {
+				color: #8ea6b8;
+			}
+		}
 
-    @include breakpoint(large down) {
-      font-size: 0.988em;
-      color: #eaeaea;
-    }
-  }
+		@include breakpoint(large down) {
+			font-size: 0.988em;
+			color: #eaeaea;
+		}
+	}
 }
 
 @include block(why_fuse_better) {
-  padding: 8em 0;
-  background-color: #001929;
+	padding: 8em 0;
+	background-color: #001929;
 
-  @include block(title) {
-    font-size: 2.5em;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.54;
-    letter-spacing: 0.03px;
-    text-transform: uppercase;
-    margin: 0;
-    color: white;
-  }
+	@include block(title) {
+		font-size: 2.5em;
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.54;
+		letter-spacing: 0.03px;
+		text-transform: uppercase;
+		margin: 0;
+		color: white;
+	}
 
-  @include element(wrapper) {
-    height: 100%;
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
+	@include element(wrapper) {
+		height: 100%;
+		padding-right: 0.9375rem;
+		padding-left: 0.9375rem;
+		max-width: 1280px;
+		margin-left: auto;
+		margin-right: auto;
 
-    @include breakpoint(xlarge down) {
-      transform: scale(0.9);
-    }
+		@include breakpoint(xlarge down) {
+			transform: scale(0.9);
+		}
 
-    @include breakpoint(medium down) {
-      transform: unset;
-    }
-  }
+		@include breakpoint(medium down) {
+			transform: unset;
+		}
+	}
 
-  @include element(content) {
-    @include xy-grid(horizontal);
-    @include flex-align(null, stretch);
+	@include element(content) {
+		@include xy-grid(horizontal);
+		@include flex-align(null, stretch);
 
-    > div {
-      @include xy-cell(10, null, 0);
+		> div {
+			@include xy-cell(10, null, 0);
 
-      &:first-child {
-        @include breakpoint(medium down) {
-          margin-bottom: 1em;
-        }
-      }
-    }
-    @include breakpoint(medium down) {
-      @include flex-align(center, middle);
-      > div {
-        @include xy-cell(12, null, 0);
-      }
-    }
+			&:first-child {
+				@include breakpoint(medium down) {
+					margin-bottom: 1em;
+				}
+			}
+		}
+		@include breakpoint(medium down) {
+			@include flex-align(center, middle);
+			> div {
+				@include xy-cell(12, null, 0);
+			}
+		}
 
-    @include breakpoint(small only) {
-      > div {
-        @include xy-cell(24);
-      }
-    }
-  }
+		@include breakpoint(small only) {
+			> div {
+				@include xy-cell(24);
+			}
+		}
+	}
 
-  @include block(items) {
-    @include xy-grid(vertical);
-    @include flex-align(justify);
-    @include block(item) {
-      @include xy-cell(24, null, 0);
-      @include xy-grid(horizontal, false);
-      max-height: 87px;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: 0.01px;
+	@include block(items) {
+		@include xy-grid(vertical);
+		@include flex-align(justify);
+		@include block(item) {
+			@include xy-cell(24, null, 0);
+			@include xy-grid(horizontal, false);
+			max-height: 87px;
+			font-weight: normal;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: normal;
+			letter-spacing: 0.01px;
 
-      @include block(line) {
-        border: solid 1px #dfdfdf;
-        width: 1px;
-        margin: 0 3em;
-      }
+			@include block(line) {
+				border: solid 1px #dfdfdf;
+				width: 1px;
+				margin: 0 3em;
+			}
 
-      @include block(image) {
-        @include xy-cell(3, null, 0);
-        @include breakpoint(large up) {
-          width: 100px;
-          height: 100px;
-        }
+			@include block(image) {
+				@include xy-cell(3, null, 0);
+				@include breakpoint(large up) {
+					width: 100px;
+					height: 100px;
+				}
 
-        @include breakpoint(large down) {
-          width: 50px;
-          height: 50px;
-        }
+				@include breakpoint(large down) {
+					width: 50px;
+					height: 50px;
+				}
 
-        > img {
-          width: 100%;
-          height: 100%;
-        }
-      }
+				> img {
+					width: 100%;
+					height: 100%;
+				}
+			}
 
-      @include block(text) {
-        position: relative;
+			@include block(text) {
+				position: relative;
 
-        &:before {
-          content: "";
-          position: absolute;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-        @include breakpoint(xlarge up) {
-          // width: 352px;
-          font-size: 1.125em;
-          // height: 84px;
-        }
+				&:before {
+					content: "";
+					position: absolute;
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+				@include breakpoint(xlarge up) {
+					// width: 352px;
+					font-size: 1.125em;
+					// height: 84px;
+				}
 
-        @include breakpoint(large down) {
-          font-size: 1em;
-          height: 84px;
-        }
-        color: white;
-      }
-    }
-  }
+				@include breakpoint(large down) {
+					font-size: 1em;
+					height: 84px;
+				}
+
+				@include breakpoint(small down) {
+					height: unset;
+				}
+				color: white;
+			}
+		}
+	}
 }
 
 @include block(network_in_numbers) {
-  padding: 8em 0;
-  @include breakpoint(medium down) {
-    padding: 6em 0;
-  }
-  @include element(content) {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
+	padding: 8em 0;
+	@include breakpoint(medium down) {
+		padding: 6em 0;
+	}
+	@include element(content) {
+		padding-right: 0.9375rem;
+		padding-left: 0.9375rem;
+		max-width: 1280px;
+		margin-left: auto;
+		margin-right: auto;
 
-    @include block(items) {
-      flex-flow: row nowrap;
-      @include breakpoint(large up) {
-        @include xy-grid(horizontal, false);
-      }
+		@include block(items) {
+			flex-flow: row nowrap;
+			@include breakpoint(large up) {
+				@include xy-grid(horizontal, false);
+			}
 
-      @include breakpoint(medium down) {
-        @include xy-grid(vertical);
-        @include flex-align(null, middle);
-      }
-      @include block(line) {
-        border: 1px solid #dfdfdf;
-        width: 1px;
-        height: 154px;
-        // margin: 0 1em;
-        @include breakpoint(medium down) {
-          border: 1px solid #dfdfdf;
-          width: 217px;
-          height: 2px;
-          margin: 3em 0;
-        }
-      }
-      @include block(item) {
-        position: relative;
-        max-height: 155px;
+			@include breakpoint(medium down) {
+				@include xy-grid(vertical);
+				@include flex-align(null, middle);
+			}
+			@include block(line) {
+				border: 1px solid #dfdfdf;
+				width: 1px;
+				height: 154px;
+				// margin: 0 1em;
+				@include breakpoint(medium down) {
+					border: 1px solid #dfdfdf;
+					width: 217px;
+					height: 2px;
+					margin: 3em 0;
+				}
+			}
+			@include block(item) {
+				position: relative;
+				max-height: 155px;
 
-        @include xy-grid(vertical);
-        @include breakpoint(large up) {
-          @include xy-cell(6);
-          @include flex-align(spaced, null);
-        }
+				@include xy-grid(vertical);
+				@include breakpoint(large up) {
+					@include xy-cell(6);
+					@include flex-align(spaced, null);
+				}
 
-        @include breakpoint(medium down) {
-          @include flex-align(null, middle);
-        }
+				@include breakpoint(medium down) {
+					@include flex-align(null, middle);
+				}
 
-        @include block(up_to) {
-          font-size: 0.875em;
-          line-height: 2.07;
-          letter-spacing: 0.01px;
-          text-align: center;
-          color: #4587a3;
+				@include block(up_to) {
+					font-size: 0.875em;
+					line-height: 2.07;
+					letter-spacing: 0.01px;
+					text-align: center;
+					color: #4587a3;
 
-          position: absolute;
-          left: 50%;
-          top: -2em;
+					position: absolute;
+					left: 50%;
+					top: -2em;
 
-          > div {
-            position: relative;
-            left: -50%;
-          }
-        }
+					> div {
+						position: relative;
+						left: -50%;
+					}
+				}
 
-        @include block(bottom_link) {
-          font-size: 0.875em;
-          line-height: 2.07;
-          letter-spacing: 0.01px;
-          text-align: center;
-          color: #4587a3;
+				@include block(bottom_link) {
+					font-size: 0.875em;
+					line-height: 2.07;
+					letter-spacing: 0.01px;
+					text-align: center;
+					color: #4587a3;
 
-          position: absolute;
-          left: 50%;
-          bottom: -2em;
+					position: absolute;
+					left: 50%;
+					bottom: -2em;
 
-          > div {
-            > img {
-              margin-left: 0.5em;
-            }
+					> div {
+						> img {
+							margin-left: 0.5em;
+						}
 
-            position: relative;
-            left: -50%;
-            white-space: nowrap;
+						position: relative;
+						left: -50%;
+						white-space: nowrap;
 
-            > a {
-              &:hover {
-                text-decoration: underline;
-                cursor: pointer;
-              }
-            }
-          }
-        }
+						> a {
+							&:hover {
+								text-decoration: underline;
+								cursor: pointer;
+							}
+						}
+					}
+				}
 
-        @include block(title) {
-          font-size: 1.5em;
-          font-weight: bold;
-          line-height: 1.21;
-          text-align: center;
-          color: #4587a3;
-        }
+				@include block(title) {
+					font-size: 1.5em;
+					font-weight: bold;
+					line-height: 1.21;
+					text-align: center;
+					color: #4587a3;
+				}
 
-        @include block(number) {
-          font-size: 2.5em;
-          font-weight: bold;
-          text-align: center;
-          color: #5d9cb5;
+				@include block(number) {
+					font-size: 2.5em;
+					font-weight: bold;
+					text-align: center;
+					color: #5d9cb5;
 
-          @include breakpoint(medium down) {
-            margin-bottom: 1em;
-          }
-        }
-      }
-    }
-  }
+					@include breakpoint(medium down) {
+						margin-bottom: 1em;
+					}
+				}
+			}
+		}
+	}
 }
 
 @include block(participates) {
-  background-color: #133246;
-  padding: 4em 0;
+	background-color: #133246;
+	padding: 4em 0;
 
-  @include element(wrapper) {
-    width: 80%;
-    margin: auto;
-    @include breakpoint(medium down) {
-      width: 100%;
-    }
-  }
+	@include element(wrapper) {
+		width: 80%;
+		margin: auto;
+		@include breakpoint(medium down) {
+			width: 100%;
+		}
+	}
 
-  @include block(title) {
-    font-size: 1.875em;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: 0.03px;
-    text-align: center;
-    color: #ffffff;
-    margin: 0 0 1.6em;
-  }
+	@include block(title) {
+		font-size: 1.875em;
+		font-weight: bold;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: normal;
+		letter-spacing: 0.03px;
+		text-align: center;
+		color: #ffffff;
+		margin: 0 0 1.6em;
+	}
 
-  @include element(item) {
-    border-radius: 10px;
-    background-color: #f5fdff;
-    padding: 2em 2em;
+	@include element(item) {
+		border-radius: 10px;
+		background-color: #f5fdff;
+		padding: 2em 2em;
 
-    @include breakpoint(medium up) {
-      @include xy-grid(horizontal);
-    }
+		@include breakpoint(medium up) {
+			@include xy-grid(horizontal);
+		}
 
-    @include xy-cell();
-    @include flex-align(justify, middle);
-    @include breakpoint(large) {
-    }
-    @include breakpoint(medium down) {
-      @include xy-grid(vertical);
-    }
+		@include xy-cell();
+		@include flex-align(justify, middle);
+		@include breakpoint(large) {
+		}
+		@include breakpoint(medium down) {
+			@include xy-grid(vertical);
+		}
 
-    &:not(:last-child) {
-      margin-bottom: 2em;
-    }
+		&:not(:last-child) {
+			margin-bottom: 2em;
+		}
 
-    @include block(image) {
-      @include xy-cell(6);
+		@include block(image) {
+			@include xy-cell(6);
 
-      @include breakpoint(small only) {
-        @include xy-cell(24);
-      }
-    }
+			@include breakpoint(small only) {
+				@include xy-cell(24);
+			}
+		}
 
-    @include block(content) {
-      @include xy-grid(vertical);
-      @include xy-cell(16);
-      @include flex-align(null, null);
+		@include block(content) {
+			@include xy-grid(vertical);
+			@include xy-cell(16);
+			@include flex-align(null, null);
 
-      @include breakpoint(small only) {
-        @include xy-cell(24);
-      }
-    }
+			@include breakpoint(small only) {
+				@include xy-cell(24);
+			}
+		}
 
-    @include block(small) {
-      text-align: center;
-      font-size: 0.875em;
-      letter-spacing: 0.01px;
-      color: #9b9b9b;
-    }
+		@include block(small) {
+			text-align: center;
+			font-size: 0.875em;
+			letter-spacing: 0.01px;
+			color: #9b9b9b;
+		}
 
-    @include element(title) {
-      font-size: 1.5em;
-      font-weight: bold;
-      letter-spacing: 0.01px;
-      text-align: center;
-      color: #4a687b;
-      margin-bottom: 0.5em;
-    }
+		@include element(title) {
+			font-size: 1.5em;
+			font-weight: bold;
+			letter-spacing: 0.01px;
+			text-align: center;
+			color: #4a687b;
+			margin-bottom: 0.5em;
+		}
 
-    @include block(text) {
-      font-size: 1.125em;
-      letter-spacing: 0.01px;
-      color: #868686;
-    }
+		@include block(text) {
+			font-size: 1.125em;
+			letter-spacing: 0.01px;
+			color: #868686;
+		}
 
-    @include block(links) {
-      margin-top: 1.5em;
-    }
-    @include block(link) {
-      font-size: 1.125em;
-      font-weight: 500;
-      letter-spacing: 0.01px;
-      text-align: center;
-      color: #25435a;
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
-      }
+		@include block(links) {
+			margin-top: 1.5em;
+		}
+		@include block(link) {
+			font-size: 1.125em;
+			font-weight: 500;
+			letter-spacing: 0.01px;
+			text-align: center;
+			color: #25435a;
+			&:hover {
+				cursor: pointer;
+				text-decoration: underline;
+			}
 
-      > img {
-        margin-left: 0.3em;
-      }
+			> img {
+				margin-left: 0.3em;
+			}
 
-      &:not(:first-child) {
-        margin-left: 1em;
-      }
-    }
-  }
+			&:not(:first-child) {
+				margin-left: 1em;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 404px) {
+	.why_fuse_better .items .item {
+		max-height: unset;
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.why_fuse_better__content {
+		font-size: 9px;
+	}
 }
