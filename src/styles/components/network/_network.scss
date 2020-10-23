@@ -246,6 +246,10 @@
 					font-size: 1em;
 					height: 84px;
 				}
+
+				@include breakpoint(small down) {
+					height: unset;
+				}
 				color: white;
 			}
 		}

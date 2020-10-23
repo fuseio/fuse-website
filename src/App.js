@@ -9,6 +9,7 @@ import { IntlProvider } from 'react-intl';
 
 import HomePage from '@/components/home';
 import Network from '@/components/network';
+import About from '@/components/about';
 import ScrollToTopController from '@/hooks/useScrollToTopController';
 
 const { store, history } = configureStore(window.__INITIAL_STATE__);
@@ -17,7 +18,6 @@ import en from '../lang/en.json';
 import zh from '../lang/zh.json';
 import vi from '../lang/vi.json';
 import ko from '../lang/ko.json';
-import About from './components/about';
 
 const MESSAGES = {
   en,

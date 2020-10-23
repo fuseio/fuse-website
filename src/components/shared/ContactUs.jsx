@@ -1,20 +1,20 @@
-import React from "react";
-import { FormattedMessage } from 'react-intl';
-import { PopupText } from "react-calendly";
+import React from "react"
+import { FormattedMessage } from 'react-intl'
+import { PopupText } from "react-calendly"
 
-import bookIcon from "@/assets/images/book-meeting.svg";
-import signUpIcon from "@/assets/images/signup.svg";
-import blueArrow from "@/assets/images/blue_arrow.svg";
-import NewsletterForm from "../../shared/newsletter_form";
+import bookIcon from "@/assets/images/book-meeting.svg"
+import signUpIcon from "@/assets/images/signup.svg"
+import blueArrow from "@/assets/images/blue_arrow.svg"
+import NewsletterForm from "@/components/shared/newsletter_form"
 
-const SectionFive = () => {
+const ContactUs = () => {
   return (
     <section className="contact-us">
       <div className="contact-us__wrapper grid-container">
         <div>
           <h1 className="contact-us__title">
             <FormattedMessage
-              defaultMessage="Contact us"
+              defaultMessage="Pay a fixed fee of up to 1 cent per transaction to move money instantly without any hidden fees and inefficiencies"
             />
           </h1>
         </div>
@@ -60,7 +60,7 @@ const SectionFive = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SectionFive;
+export default ContactUs

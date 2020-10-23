@@ -3,8 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { FormattedMessage } from 'react-intl';
 
-import '../components/section_4/style.scss';
-
 SwiperCore.use([Navigation, Pagination]);
 
 const SectionFour = () => {
