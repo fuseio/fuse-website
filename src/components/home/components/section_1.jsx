@@ -24,15 +24,15 @@ const SectionOne = () => {
       <Header/>
       <div className='section-A__overlay'>
         <div className='section-A__wrapper medium-12 small-24'>
-          <div class='section-A__news'>
+          {/* <div className='section-A__news'>
             <img alt="new_notification" src={newIcon} />
-            <a rel="noreferrer noopener" class='link'
+            <a rel="noreferrer noopener" className='link'
               href='https://medium.com/fusenet/fuse-public-release-on-mesa-decentralised-exchange-ce75c4534a60' target="_blank">
               Fuse Liquidity Release on Mesa
               Thursday, October 22nd
               </a>
-            <span class="arrow"><img alt="arrow" src={arrowIcon} /></span>
-          </div>
+            <span className="arrow"><img alt="arrow" src={arrowIcon} /></span>
+          </div> */}
           <div className='section-A__main'>
             <h1 className='main_title'>
               <FormattedMessage defaultMessage="Turning communities into thriving economies" />
