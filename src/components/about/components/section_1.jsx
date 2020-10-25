@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '@/components/header'
 import about from "../../../assets/images/about-first.png"
-import "../about.css"
+
 const SectionOne = () => {
     return (
        <section className="section-one">

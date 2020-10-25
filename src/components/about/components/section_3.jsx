@@ -1,5 +1,5 @@
 import React from 'react'
-import "../about.css"
+
 import mark from "../../../assets/images/mark.png"
 import adar from "../../../assets/images/adar.png"
 import andy from "../../../assets/images/andy.png"

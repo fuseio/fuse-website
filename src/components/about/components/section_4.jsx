@@ -1,5 +1,5 @@
 import React from 'react'
-import "../about.css"
+
 import aleph from "../../../assets/images/aleph.png"
 import collider from "../../../assets/images/collider.png"
 import spark from "../../../assets/images/spark.png"
@@ -17,7 +17,7 @@ import sordex from "../../../assets/images/sordex.png"
 import roost from "../../../assets/images/roost.png"
 import portis from "../../../assets/images/portis.png"
 import gooddollar from "../../../assets/images/gooddollar.png"
-import "../about.css"
+
 import ImageCell from './subComponents/ImageCell'
 
 const SectionFour = () => {

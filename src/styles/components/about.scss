@@ -1,0 +1,161 @@
+@include block(section-one) {
+  background: linear-gradient(90deg, #051928 0%, #0a283e 100%);
+  color: white;
+
+  @include element(overlay) {
+    padding-top: 94px;
+    padding-left: 80px;
+    padding-right: 123px;
+
+    > div {
+      display: block;
+    }
+  }
+
+  @include element(main) {
+    padding-top: 63px;
+
+    @include block(main_title) {
+      padding-bottom: 1rem;
+      text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.4);
+      font-size: 40px;
+      font-weight: 500;
+    }
+
+    @include block(header) {
+      @include element(link) {
+        color: white;
+      }
+    }
+
+    @include block(section-one) {
+      @include element(text) {
+        max-width: 466px;
+        font-size: 18px;
+        line-height: 26.8px;
+      }
+    }
+  }
+
+  @include element(image) {
+    justify-content: flex-end;
+    position: relative;
+    top: 6px;
+    display: flex !important;
+  }
+}
+
+@include block(section-two) {
+  background: #eff8ff;
+  padding: 80px 0px;
+
+  @include element(text) {
+    font-size: 24px;
+    line-height: 33.6px;
+    font-weight: 500;
+  }
+
+  @include element(wrapper) {
+    width: 45%;
+    color: #052235;
+  }
+}
+
+@include block(section-three) {
+  @include element(card) {
+    @include element(content) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @include block(content-name) {
+        padding-bottom: 0.5rem;
+        color: #4a687b;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      @include block(content-role) {
+        font-size: 14px;
+        line-height: 16px;
+        color: #7a7a7a;
+      }
+
+      @include block(content-icons) {
+        padding-top: 0.5rem;
+        padding-bottom: 40px;
+        display: flex;
+        align-items: center;
+
+        @include block(linkedin) {
+          padding-left: 9px;
+          padding-bottom: 3px;
+        }
+      }
+    }
+  }
+
+  @include block(main-title) {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    color: #4a687b;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+@include block(section-four) {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  color: #4a687b;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+
+  @include element(wrapper) {
+    > .main-title {
+      padding-top: 5rem;
+      padding-bottom: 4rem;
+      color: #4a687b;
+      font-size: 30px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    > .grid-x {
+      align-items: flex-start;
+    }
+  }
+
+  @include element(overlay) {
+    background-color: #f6fbff;
+    padding: 80px;
+  }
+
+  @include element(images-container) {
+    margin-top: 1rem;
+
+    > div {
+      padding-bottom: 50px;
+      display: flex;
+    }
+
+    @include block(special_images) {
+      margin-left: 0rem;
+    }
+  }
+
+  hr {
+    width: 100%;
+    border-top: 1px solid #dde8f0;
+  }
+}
+
+@include block(bottom) {
+  @include element(wrapper) {
+    margin-top: 70px;
+  }
+}
