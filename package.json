@@ -9,10 +9,7 @@
     "url": "https://github.com/LiorAgnin"
   },
   "standard": {
-    "parser": "babel-eslint",
-    "globals": [
-      "CONFIG"
-    ]
+    "parser": "babel-eslint"
   },
   "license": "MIT",
   "scripts": {
