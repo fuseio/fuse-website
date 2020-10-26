@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useCountUp } from 'react-countup'
 import VisibilitySensor from 'react-visibility-sensor'
 import useFetch from 'use-http'
@@ -18,7 +18,7 @@ const SectionThree = () => {
     start: 0,
     redraw: true,
     formattingFn: formatNumber,
-    end: data.data,
+    end: data.data
   })
 
   const { countUp: walletsCounter, start: walletsCounterStart } = useCountUp({
@@ -28,51 +28,63 @@ const SectionThree = () => {
   })
 
   return (
-    <section className="network_in_numbers">
-      <div className="network_in_numbers__content">
-        <div className="items">
-          <div className="item">
+    <section className='network_in_numbers'>
+      <div className='network_in_numbers__content'>
+        <div className='items'>
+          <div className='item'>
             <div className='up_to'>
               <div>Up to:</div>
             </div>
-            <div className="number">0.01$</div>
-            <div className="title">Transaction Cost</div>
+            <div className='number'>0.01$</div>
+            <div className='title'>Transaction Cost</div>
           </div>
-          <div className="line cell shrink"></div>
-          <div className="item">
+          <div className='line cell shrink' />
+          <div className='item'>
             <VisibilitySensor onChange={transactionCounterStart} delayedCall>
-              <div className="number">{transactionCounter}</div>
+              <div className='number'>{transactionCounter}</div>
             </VisibilitySensor>
-            <div className="title">Transactions</div>
+            <div className='title'>Transactions</div>
             <div className='bottom_link'>
-              <div><a rel="noreferrer noopener" target='_blank'
-                href="http://explorer.fuse.io/">Click here for the explorer</a>
-                <img src="./images/arow.svg" alt="network_arrow" />
+              <div>
+                <a
+                  rel='noreferrer noopener' target='_blank'
+                  href='http://explorer.fuse.io/'
+                >
+                  Click here for the explorer
+                </a>
+                <img src='./images/arow.svg' alt='network_arrow' />
               </div>
             </div>
           </div>
-          <div className="line cell shrink"></div>
-          <div className="item">
-            <VisibilitySensor onChange={() => {
-              communitiesCounterStart()
-              updateCommunities(data.data)
-            }} delayedCall>
-              <div className="number">{communitiesCounter}</div>
+          <div className='line cell shrink' />
+          <div className='item'>
+            <VisibilitySensor
+              onChange={() => {
+                communitiesCounterStart()
+                updateCommunities(data.data)
+              }} delayedCall
+            >
+              <div className='number'>{communitiesCounter}</div>
             </VisibilitySensor>
-            <div className="title">Communities Launched</div>
+            <div className='title'>Communities Launched</div>
             <div className='bottom_link'>
-              <div><a rel="noreferrer noopener" target='_blank'
-                href="http://studio.fuse.io/">Using the Fuse Studio</a>
-                <img src="./images/arow.svg" alt="network_arrow" />
+              <div>
+                <a
+                  rel='noreferrer noopener' target='_blank'
+                  href='http://studio.fuse.io/'
+                >
+                  Using the Fuse Studio
+                </a>
+                <img src='./images/arow.svg' alt='network_arrow' />
               </div>
             </div>
           </div>
-          <div className="line cell shrink"></div>
-          <div className="item">
+          <div className='line cell shrink' />
+          <div className='item'>
             <VisibilitySensor onChange={walletsCounterStart} delayedCall>
-              <div className="number">{walletsCounter}</div>
+              <div className='number'>{walletsCounter}</div>
             </VisibilitySensor>
-            <div className="title">Contract Wallets</div>
+            <div className='title'>Contract Wallets</div>
           </div>
         </div>
       </div>

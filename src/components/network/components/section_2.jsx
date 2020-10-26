@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react'
 import fuseWallet from '@/assets/images/fuse_wallet.svg'
 import fuseStudio from '@/assets/images/fuse-studio.svg'
 import dotFuseWallet from '@/assets/images/dot_fuse_wallet.png'
@@ -14,33 +14,36 @@ const SectionTwo = () => {
   const floorThree = useRef(null)
 
   useEffect(() => {
-    if (floorOne.current)
+    if (floorOne.current) {
       lottie.loadAnimation({
         animationData: walletAnimationData,
         container: floorOne.current,
         renderer: 'svg',
-        loop: true,
+        loop: true
       })
+    }
   }, [floorOne])
 
   useEffect(() => {
-    if (floorTwo.current)
+    if (floorTwo.current) {
       lottie.loadAnimation({
         animationData: studioAnimationData,
         container: floorTwo.current,
         renderer: 'svg',
-        loop: true,
+        loop: true
       })
+    }
   }, [floorTwo])
 
   useEffect(() => {
-    if (floorThree.current)
+    if (floorThree.current) {
       lottie.loadAnimation({
         animationData: chainAnimationData,
         container: floorThree.current,
         renderer: 'svg',
-        loop: true,
+        loop: true
       })
+    }
   }, [floorThree])
   return (
     <section className='network_stack'>
@@ -55,8 +58,8 @@ const SectionTwo = () => {
                   <div className='content__text'>
                     <span>Fuse Wallet </span><span>|</span> <span>for users</span>
                     <br />
-                  An easy to use cross-platform <br /> mobile wallet
-                </div>
+                    An easy to use cross-platform <br /> mobile wallet
+                  </div>
                 </div>
               </div>
               <div className='dots grid-y cell large-6 align-middle align-center'>
@@ -74,7 +77,7 @@ const SectionTwo = () => {
                     <span>Fuse Studio </span><span>|</span> <span>for operators</span>
                     <br />
                     An easy to use self-service smart contract platform for businesses.
-                </div>
+                  </div>
                 </div>
               </div>
               <div className='dots grid-y cell large-6 align-middle align-center'>
@@ -91,8 +94,8 @@ const SectionTwo = () => {
                   <div className='content__text'>
                     <span>Fuse Chain </span><span>|</span> <span>For network participants</span>
                     <br />
-DPoS blockchain operated by validators and optimized for payments.
-                </div>
+                    DPoS blockchain operated by validators and optimized for payments.
+                  </div>
                 </div>
               </div>
               <div className='dots grid-y cell large-6 align-middle align-center'>
@@ -106,7 +109,7 @@ DPoS blockchain operated by validators and optimized for payments.
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default SectionTwo;
+export default SectionTwo

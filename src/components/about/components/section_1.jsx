@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from '@/components/header'
-import about from "@/assets/images/about-first.png"
+import about from '@/assets/images/about-first.png'
 
 const SectionOne = () => {
   return (
-    <section className="about_main">
+    <section className='about_main'>
       <Header isAboutHeader />
       <div className='about_main__overlay grid-container'>
         <div className='grid-x'>
@@ -17,7 +17,7 @@ const SectionOne = () => {
             </p>
           </div>
           <div className='about_main__image medium-12 small-24 grid-x align-right'>
-            <img src={about} alt="about-image" />
+            <img src={about} alt='about-image' />
           </div>
         </div>
       </div>

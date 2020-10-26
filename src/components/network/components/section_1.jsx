@@ -7,16 +7,17 @@ const SectionOne = () => {
   const lottieRef = useRef(null)
 
   useEffect(() => {
-    if (lottieRef.current)
+    if (lottieRef.current) {
       lottie.loadAnimation({
         animationData,
         container: lottieRef.current,
         renderer: 'svg',
-        loop: true,
+        loop: true
       })
+    }
   }, [])
   return (
-    <section className="network_main">
+    <section className='network_main'>
       <div className='lottie' ref={lottieRef} />
       <Header isNetworkHeader />
       <div className='network_main__wrapper'>

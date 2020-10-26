@@ -6,7 +6,7 @@ import errors from './errors'
 const createRootReducer = (history) => combineReducers({
   router: connectRouter(history),
   ui,
-  errors,
+  errors
 })
 
 export default createRootReducer

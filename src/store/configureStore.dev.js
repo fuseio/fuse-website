@@ -3,16 +3,11 @@ import { createLogger } from 'redux-logger'
 import createSagaMiddleware, { END } from 'redux-saga'
 import { createBrowserHistory } from 'history'
 import { routerMiddleware } from 'connected-react-router'
-// import reduxCatch from 'redux-catch'
 import createRootReducer from '../reducers'
 
-export default function configureStore(initialState) {
+export default function configureStore (initialState) {
   const history = createBrowserHistory()
-  const sagaMiddleware = createSagaMiddleware({
-    // onError: (error, sec) => {
-    //   Sentry.captureException(error)
-    // }
-  })
+  const sagaMiddleware = createSagaMiddleware()
   const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
   const store = createStore(
     createRootReducer(history),
