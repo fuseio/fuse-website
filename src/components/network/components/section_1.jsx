@@ -1,24 +1,23 @@
 import React, { useRef, useEffect } from 'react'
 import lottie from 'lottie-web'
 import Header from '@/components/header'
-import whiteArrow from '@/assets/images/white_arrow.svg'
-import blueArrow from '@/assets/images/blue_arrow.svg'
 import animationData from '@/assets/lottie/network_page/data.json'
 
 const SectionOne = () => {
   const lottieRef = useRef(null)
 
   useEffect(() => {
-    if (lottieRef.current)
+    if (lottieRef.current) {
       lottie.loadAnimation({
         animationData,
         container: lottieRef.current,
         renderer: 'svg',
-        loop: true,
+        loop: true
       })
+    }
   }, [])
   return (
-    <section className="network_main">
+    <section className='network_main'>
       <div className='lottie' ref={lottieRef} />
       <Header isNetworkHeader />
       <div className='network_main__wrapper'>

@@ -1,15 +1,14 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const webpack = require('webpack')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const WebappWebpackPlugin = require('webapp-webpack-plugin');
-const { PATH_NPM, PATH_SRC } = require('./config/paths');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const WebappWebpackPlugin = require('webapp-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
-const sourceMap = isDev;
+const sourceMap = isDev
 
 module.exports = {
   entry: [
@@ -30,14 +29,16 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-          !isDev ? {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: './',
-            },
-          } : {
-              loader: 'style-loader'
-            },
+          !isDev
+            ? {
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                  publicPath: './'
+                }
+              }
+            : {
+                loader: 'style-loader'
+              },
           {
             loader: 'css-loader',
             options: {
@@ -47,22 +48,22 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap,
-            },
+              sourceMap
+            }
           },
           {
             loader: 'resolve-url-loader',
             options: {
-              sourceMap,
-            },
+              sourceMap
+            }
           },
           {
             loader: 'sass-loader',
             options: {
-              sourceMap,
-            },
+              sourceMap
+            }
           }
-        ],
+        ]
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
@@ -73,28 +74,30 @@ module.exports = {
             options: {
               outputPath: 'images',
               name: '[name].[ext]',
-              publicPath: './images',
+              publicPath: './images'
             }
           },
-          isDev ? {
-            loader: 'image-webpack-loader',
-            options: {
-              bypassOnDebug: true,
-              gifsicle: {
-                interlaced: false,
-              },
-              optipng: {
-                optimizationLevel: 7,
-              },
-              pngquant: {
-                speed: 4,
-              },
-              mozjpeg: {
-                progressive: true,
-              },
-            },
-          } : null,
-        ].filter(Boolean),
+          isDev
+            ? {
+                loader: 'image-webpack-loader',
+                options: {
+                  bypassOnDebug: true,
+                  gifsicle: {
+                    interlaced: false
+                  },
+                  optipng: {
+                    optimizationLevel: 7
+                  },
+                  pngquant: {
+                    speed: 4
+                  },
+                  mozjpeg: {
+                    progressive: true
+                  }
+                }
+              }
+            : null
+        ].filter(Boolean)
       }
     ]
   },
@@ -105,7 +108,7 @@ module.exports = {
     ],
     alias: {
       'react-dom': '@hot-loader/react-dom',
-      '@': path.resolve(path.resolve(__dirname, './'), 'src'),
+      '@': path.resolve(path.resolve(__dirname, './'), 'src')
     }
   },
   devServer: {
@@ -132,18 +135,18 @@ module.exports = {
           favicons: true,
           firefox: false,
           windows: false,
-          yandex: false,
-        },
-      },
+          yandex: false
+        }
+      }
     }),
     new HtmlWebpackPlugin({
       appMountId: 'app',
       filename: 'index.html',
-      template: path.join(__dirname, 'src', 'index.html'),
+      template: path.join(__dirname, 'src', 'index.html')
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
-      openAnalyzer: false,
+      openAnalyzer: false
     }),
     new MiniCssExtractPlugin(),
     new CleanWebpackPlugin()
@@ -161,9 +164,9 @@ module.exports = {
           name: 'styles',
           test: /\.css$/,
           chunks: 'all',
-          enforce: true,
-        },
+          enforce: true
+        }
       }
     }
-  },
-};
+  }
+}
