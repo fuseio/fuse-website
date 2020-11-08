@@ -1,4 +1,5 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react';
+import { FormattedMessage } from 'react-intl';
 import fuseWallet from '@/assets/images/fuse_wallet.svg'
 import fuseStudio from '@/assets/images/fuse-studio.svg'
 import dotFuseWallet from '@/assets/images/dot_fuse_wallet.png'
@@ -49,17 +50,23 @@ const SectionTwo = () => {
     <section className='network_stack'>
       <div className='grid-container'>
         <div className='grid-y'>
-          <h1 className='title'>Network for open source payments</h1>
+          <h1 className='title'><FormattedMessage defaultMessage="Network for open source payments" /></h1>
           <div className='floors grid-y'>
             <div className='floors__item grid-x align-spaced align-middle'>
               <div className='content grid-x cell large-8'>
                 <div className='grid-y cell large-22 align-top'>
                   <div className='image'><img src={walletApp} /></div>
                   <div className='content__text'>
-                    <span>Fuse Wallet </span><span>|</span> <span>for users</span>
-                    <br />
-                    An easy to use cross-platform <br /> mobile wallet
-                  </div>
+                    <FormattedMessage 
+                      defaultMessage="<span>Fuse Wallet </span><span>|</span> <span>for users</span>
+                      {newLine}
+                      An easy to use cross-platform {newLine} mobile wallet" 
+                      values={{
+                        newLine: <br />,
+                        span: chunks => <span>{chunks}</span>
+                      }}
+                    />
+                </div>
                 </div>
               </div>
               <div className='dots grid-y cell large-6 align-middle align-center'>
@@ -74,10 +81,16 @@ const SectionTwo = () => {
                 <div className='grid-y cell large-22 align-top'>
                   <div className='image'><img src={fuseWallet} /></div>
                   <div className='content__text'>
-                    <span>Fuse Studio </span><span>|</span> <span>for operators</span>
-                    <br />
-                    An easy to use self-service smart contract platform for businesses.
-                  </div>
+                  <FormattedMessage 
+                      defaultMessage="<span>Fuse Studio </span><span>|</span> <span>for operators</span>
+                      {newLine}
+                      An easy to use self-service smart contract platform for businesses." 
+                      values={{
+                        newLine: <br />,
+                        span: chunks => <span>{chunks}</span>
+                      }}
+                  />
+                </div>
                 </div>
               </div>
               <div className='dots grid-y cell large-6 align-middle align-center'>
@@ -92,10 +105,16 @@ const SectionTwo = () => {
                 <div className='grid-y cell large-22 align-top'>
                   <div className='image'><img src={fuseStudio} /></div>
                   <div className='content__text'>
-                    <span>Fuse Chain </span><span>|</span> <span>For network participants</span>
-                    <br />
-                    DPoS blockchain operated by validators and optimized for payments.
-                  </div>
+                    <FormattedMessage 
+                      defaultMessage="<span>Fuse Chain </span><span>|</span> <span>For network participants</span>
+                      {newLine}
+                      DPoS blockchain operated by validators and optimized for payments." 
+                      values={{
+                        newLine: <br />,
+                        span: chunks => <span>{chunks}</span>
+                      }}
+                    />
+                </div>
                 </div>
               </div>
               <div className='dots grid-y cell large-6 align-middle align-center'>

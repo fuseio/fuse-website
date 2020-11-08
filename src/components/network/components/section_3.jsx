@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { FormattedMessage } from 'react-intl';
 import { useCountUp } from 'react-countup'
 import VisibilitySensor from 'react-visibility-sensor'
 import useFetch from 'use-http'
@@ -35,24 +36,19 @@ const SectionThree = () => {
             <div className='up_to'>
               <div>Up to:</div>
             </div>
-            <div className='number'>0.01$</div>
-            <div className='title'>Transaction Cost</div>
+            <div className="number">0.01$</div>
+            <div className="title"><FormattedMessage defaultMessage="Transaction Cost" /></div>
           </div>
           <div className='line cell shrink' />
           <div className='item'>
             <VisibilitySensor onChange={transactionCounterStart} delayedCall>
               <div className='number'>{transactionCounter}</div>
             </VisibilitySensor>
-            <div className='title'>Transactions</div>
+            <div className="title"><FormattedMessage defaultMessage="Transactions" /></div>
             <div className='bottom_link'>
-              <div>
-                <a
-                  rel='noreferrer noopener' target='_blank'
-                  href='http://explorer.fuse.io/'
-                >
-                  Click here for the explorer
-                </a>
-                <img src='./images/arow.svg' alt='network_arrow' />
+              <div><a rel="noreferrer noopener" target='_blank'
+                href="http://explorer.fuse.io/"><FormattedMessage defaultMessage="Click here for the explorer" /></a>
+                <img src="./images/arow.svg" alt="network_arrow" />
               </div>
             </div>
           </div>
@@ -66,16 +62,11 @@ const SectionThree = () => {
             >
               <div className='number'>{communitiesCounter}</div>
             </VisibilitySensor>
-            <div className='title'>Communities Launched</div>
+            <div className="title"><FormattedMessage defaultMessage="Communities Launched" /></div>
             <div className='bottom_link'>
-              <div>
-                <a
-                  rel='noreferrer noopener' target='_blank'
-                  href='http://studio.fuse.io/'
-                >
-                  Using the Fuse Studio
-                </a>
-                <img src='./images/arow.svg' alt='network_arrow' />
+              <div><a rel="noreferrer noopener" target='_blank'
+                href="http://studio.fuse.io/"><FormattedMessage defaultMessage="Using the Fuse Studio" /></a>
+                <img src="./images/arow.svg" alt="network_arrow" />
               </div>
             </div>
           </div>
@@ -84,7 +75,7 @@ const SectionThree = () => {
             <VisibilitySensor onChange={walletsCounterStart} delayedCall>
               <div className='number'>{walletsCounter}</div>
             </VisibilitySensor>
-            <div className='title'>Contract Wallets</div>
+            <div className="title"><FormattedMessage defaultMessage="Contract Wallets" /></div>
           </div>
         </div>
       </div>
