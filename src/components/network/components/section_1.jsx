@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react'
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from 'react-intl'
 import lottie from 'lottie-web'
 import Header from '@/components/header'
 import animationData from '@/assets/lottie/network_page/data.json'
@@ -24,22 +24,22 @@ const SectionOne = () => {
       <div className='network_main__wrapper'>
         <div>
           <div className='network_main__top'>
-            <div className='title'><FormattedMessage defaultMessage="Fuse Network" /></div>
+            <div className='title'><FormattedMessage defaultMessage='Fuse Network' /></div>
             <div className='text'>
-              <FormattedMessage 
-                defaultMessage="A fast, decentralised and low cost {newLine} alternative to existing digital payments." 
+              <FormattedMessage
+                defaultMessage='A fast, decentralised and low cost {newLine} alternative to existing digital payments.'
                 values={{
-                  newLine: <br />,
+                  newLine: <br />
                 }}
               />
             </div>
           </div>
           <div className='network_main__bottom'>
             <div className='text text--dark'>
-              <FormattedMessage 
-                defaultMessage="Helping power day-to-day mobile payments. {newLine} Free of intermediaries and powered by a {newLine} global network of local operators." 
+              <FormattedMessage
+                defaultMessage='Helping power day-to-day mobile payments. {newLine} Free of intermediaries and powered by a {newLine} global network of local operators.'
                 values={{
-                  newLine: <br />,
+                  newLine: <br />
                 }}
               />
             </div>
