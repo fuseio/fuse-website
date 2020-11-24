@@ -1,6 +1,5 @@
 import React from 'react'
 import mark from '@/assets/images/mark.png'
-import adar from '@/assets/images/adar.png'
 import andy from '@/assets/images/andy.png'
 import ashish from '@/assets/images/ashish.png'
 import gilat from '@/assets/images/gilat.png'
@@ -59,13 +58,6 @@ const members = [
     role: 'Backend Dev',
     picture: andy,
     linked: 'https://www.linkedin.com/in/andrew-pohl-4b52959b/',
-    isLinkedIn: true
-  },
-  {
-    name: 'Adar Weinreb',
-    role: 'Head of Product',
-    picture: adar,
-    linked: 'https://www.linkedin.com/in/adar-weinreb-aa630660/',
     isLinkedIn: true
   },
   {
