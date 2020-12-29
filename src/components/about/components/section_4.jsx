@@ -1,28 +1,27 @@
 import React from 'react';
-import aleph from '@/assets/images/aleph.png';
 import collider from '@/assets/images/collider.svg';
 import spark from '@/assets/images/spark.svg';
 import blackedge from '@/assets/images/blackedge.svg';
-import defi from '@/assets/images/defi.png';
-import wings from '@/assets/images/wings.png';
+import defi from '@/assets/images/defi.svg';
+import wings from '@/assets/images/wings.svg';
 import trg from '@/assets/images/trg.svg';
 import faculty from '@/assets/images/faculty.svg';
-import techmeetstrader from '@/assets/images/techmeetstrader.png';
+import techmeetstrader from '@/assets/images/techmeetstrader.svg';
 import wolfedge from '@/assets/images/wolf.svg';
 import block from '@/assets/images/block.svg';
-import sordex from '@/assets/images/sordex.png';
-import roost from '@/assets/images/roost.png';
-import portis from '@/assets/images/portis.png';
+import sordex from '@/assets/images/sordex.svg';
+import roost from '@/assets/images/roost.svg';
+import portis from '@/assets/images/portis.svg';
 import gooddollar from '@/assets/images/gooddollar.svg';
-import fuseprime from '@/assets/images/fuseprime.png';
-import torus from '@/assets/images/torus.png';
-import ramp from '@/assets/images/ramp.png';
-import transac from '@/assets/images/transac.png';
-import monereum from '@/assets/images/monereum.png';
-import altcoin from '@/assets/images/altcoin.png';
-import crypto from '@/assets/images/crypto.png';
-import bitazza from '@/assets/images/bitazza.png';
-import primedao from '@/assets/images/primedao.png';
+import fuseprime from '@/assets/images/fuseprime.svg';
+import torus from '@/assets/images/torus.svg';
+import ramp from '@/assets/images/ramp.svg';
+import transac from '@/assets/images/transac.svg';
+import monereum from '@/assets/images/monereum.svg';
+import altcoin from '@/assets/images/altcoin.svg';
+import crypto from '@/assets/images/crypto.svg';
+import bitazza from '@/assets/images/bitazza.svg';
+import primedao from '@/assets/images/primedao.svg';
 const ImageCell = ({ image, styles }) => {
   return (
     <div className="section_four__image cell small-12 medium-6 grid-x align-middle align-center">
@@ -38,6 +37,7 @@ const SectionFour = () => {
         <div className="section_four__wrapper">
           <h2 className="title">Partners</h2>
           <div className="logos cell large-auto grid-x ">
+            <div className="logos__overlay"></div>
             <ImageCell image={gooddollar} />
             <ImageCell image={roost} />
             <ImageCell image={defi} />
@@ -60,6 +60,7 @@ const SectionFour = () => {
         <div className="section_four__wrapper">
           <h2 className="title">Early Backers</h2>
           <div className="logos cell large-auto grid-x ">
+          <div className="logos__overlay"></div>
             <ImageCell image={collider} />
             <ImageCell image={wolfedge} />
             <ImageCell image={trg} />

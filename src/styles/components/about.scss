@@ -68,7 +68,6 @@
         padding-bottom: 40px;
         display: flex;
         align-items: center;
-
         @include block(linkedin) {
           padding-left: 9px;
           padding-bottom: 3px;
@@ -95,7 +94,9 @@
 @include block(section_four) {
   padding-top: 5rem;
   padding-bottom: 4rem;
-  background: #f6fbff;
+  padding-left: 5em;
+  padding-right: 5em;
+  background: #eef9ff;
   @include block(title) {
     color: #4a687b;
     font-size: 1.875em;
@@ -119,6 +120,16 @@
   }
 
   @include block(logos) {
+    position: relative;
+    @include element(overlay) {
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #eef9ff;
+      mix-blend-mode: color;
+    }
     @include xy-cell();
     @include breakpoint(medium up) {
       @include xy-grid(horizontal);
