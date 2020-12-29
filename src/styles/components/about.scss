@@ -109,6 +109,9 @@
     min-height: 144px;
     max-height: 150px;
     width: 18.8% !important;
+    > img {
+      object-fit: contain;
+    }
   }
   @include element(container) {
     hr {
