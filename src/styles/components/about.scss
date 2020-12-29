@@ -103,8 +103,11 @@
     font-weight: 500;
     padding-top: 40px;
     // text-align: center;
+    padding-right: 30px;
   }
   @include element(image) {
+    min-height: 144px;
+    max-height: 150px;
     width: 18.8% !important;
   }
   @include element(container) {
@@ -140,13 +143,4 @@
   // @include block(fixed) {
   //   width: 128px !important;
   // }
-
-  @include element(image) {
-    min-height: 144px;
-    max-height: 150px;
-
-    > img {
-      object-fit: contain;
-    }
-  }
 }
