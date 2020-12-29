@@ -19,7 +19,7 @@ import ramp from '@/assets/images/ramp.svg';
 import transac from '@/assets/images/transac.svg';
 import monereum from '@/assets/images/monereum.svg';
 import altcoin from '@/assets/images/altcoin.png';
-import crypto from '@/assets/images/crypto.svg';
+import crypto from '@/assets/images/crypto.png';
 import bitazza from '@/assets/images/bitazza.svg';
 import primedao from '@/assets/images/primedao.svg';
 const ImageCell = ({ image, styles }) => {
