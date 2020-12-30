@@ -261,16 +261,3 @@
 		margin: 2em 0 1em;
 	}
 }
-
-@media only screen and (max-width: 420px) {
-	.footer__nav {
-		font-size: 0.7em;
-	}
-	.footer__link:not(:last-child) {
-		margin-right: 1em;
-	}
-
-	.footer__icon:not(:last-child) {
-		margin-right: 0.5em;
-	}
-}

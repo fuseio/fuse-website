@@ -64,6 +64,7 @@
 		@include element(content) {
 			@include xy-grid(vertical);
 			@include breakpoint(medium down) {
+				@include flex-align(center, middle);
 			}
 		}
 
@@ -84,12 +85,5 @@
 				height: 110px;
 			}
 		}
-	}
-}
-
-@media only screen and (max-width: 1024px) {
-	.steps .item__content {
-		align-items: center;
-		justify-content: center;
 	}
 }

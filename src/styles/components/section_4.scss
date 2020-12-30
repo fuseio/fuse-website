@@ -6,11 +6,16 @@
   }
 }
 @include block(publications) {
+  @include xy-grid();
+  @include flex-align(justify, middle);
+
+  @include breakpoint(small down) {
+    @include xy-grid(vertical);
+  }
   margin-top: 12rem;
   img {
-    padding-right: 35px;
+    @include xy-cell(shrink, null, 0);
     height: 104px;
-    width: 304px;
   }
 }
 @include block(studio) {
