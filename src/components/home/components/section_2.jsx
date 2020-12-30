@@ -1,8 +1,8 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
-import yahoofin from '@/assets/assets/images/yahoofin.png'
-import hackernoon from '@/assets/assets/images/hackernoon.png'
-import cointelegraph from '@/assets/assets/images/cointelegraph.png'
+import yahoofin from '@/assets/images/yahoofin.png'
+import hackernoon from '@/assets/images/hackernoon.png'
+import cointelegraph from '@/assets/images/cointelegraph.png'
 import insider from '@/assets/images/insider.png'
 
 const SectionTwo = () => {
