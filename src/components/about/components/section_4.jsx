@@ -24,7 +24,7 @@ import bitazza from '@/assets/images/bitazza.svg';
 import primedao from '@/assets/images/primedao.svg';
 const ImageCell = ({ image, styles }) => {
   return (
-    <div className="section_four__image cell small-12 medium-6 grid-x align-middle align-center">
+    <div className="section_four__image cell small-24 medium-12 large-5 grid-x align-middle align-center">
       <img src={image} style={{ ...styles }} />
     </div>
   );

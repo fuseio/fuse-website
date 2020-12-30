@@ -108,7 +108,7 @@
   @include element(image) {
     min-height: 144px;
     max-height: 150px;
-    width: 18.8% !important;
+    // width: 18.8% !important;
     > img {
       object-fit: contain;
     }
@@ -142,8 +142,35 @@
       @include flex-align();
     }
   }
+  @include breakpoint(medium up) {
+    @include element(image) {
+      min-height: 144px;
+      max-height: 150px;
+      width: 18.8% !important;
+      > img {
+        object-fit: contain;
+      }
+    }
+  }
 
-  // @include block(fixed) {
-  //   width: 128px !important;
-  // }
+  @include breakpoint(medium down) {
+    @include block(title) {
+      text-align: center;
+      padding-right: 0px;
+    }
+    @include element(image) {
+      width: 50% !important;
+      > img {
+        object-fit: contain;
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    @include element(image) {
+      width: 100% !important;
+      > img {
+        object-fit: contain;
+      }
+    }
+  }
 }
