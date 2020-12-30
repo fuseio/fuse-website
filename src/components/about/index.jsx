@@ -11,7 +11,7 @@ const About = () => {
     <>
       <SectionOne />
       <SectionTwo />
-      <SectionThree />
+
       <SectionFour />
       <ContactUs />
       <Footer isNetworkFooter />
