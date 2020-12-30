@@ -43,7 +43,10 @@ const SectionFour = () => {
             <ImageCell image={defi} />
             <ImageCell image={portis} />
             <ImageCell image={fuseprime} />
-            <ImageCell image={techmeetstrader} />
+            <ImageCell
+              image={techmeetstrader}
+              styles={{ maxWidth: '260px', minHeight: '44px' }}
+            />
             <ImageCell image={wings} />
             <ImageCell image={sordex} />
             <ImageCell image={torus} />
@@ -60,7 +63,7 @@ const SectionFour = () => {
         <div className="section_four__wrapper">
           <h2 className="title">Early Backers</h2>
           <div className="logos cell large-auto grid-x ">
-          <div className="logos__overlay"></div>
+            <div className="logos__overlay"></div>
             <ImageCell image={collider} />
             <ImageCell image={wolfedge} />
             <ImageCell image={trg} />
