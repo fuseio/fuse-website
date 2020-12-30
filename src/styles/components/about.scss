@@ -133,36 +133,36 @@
         object-fit: contain;
       }
     }
+  }
 
-    @include element(container) {
-      hr {
-        border: 1px solid #dde8f0;
-        margin-bottom: 50px;
-      }
+  @include element(container) {
+    hr {
+      border: 1px solid #dde8f0;
+      margin-bottom: 50px;
     }
+  }
 
-    @include element(wrapper) {
-      @include breakpoint(medium up) {
-        display: flex;
-      }
+  @include element(wrapper) {
+    @include breakpoint(medium up) {
+      display: flex;
     }
+  }
 
-    @include block(logos) {
-      position: relative;
-      @include element(overlay) {
-        left: 0;
-        top: 0;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #eef9ff;
-        mix-blend-mode: color;
-      }
-      @include xy-cell();
-      @include breakpoint(medium up) {
-        @include xy-grid(horizontal);
-        @include flex-align();
-      }
+  @include block(logos) {
+    position: relative;
+    @include element(overlay) {
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #eef9ff;
+      mix-blend-mode: color;
+    }
+    @include xy-cell();
+    @include breakpoint(medium up) {
+      @include xy-grid(horizontal);
+      @include flex-align();
     }
   }
 }
