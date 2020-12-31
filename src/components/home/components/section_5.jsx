@@ -693,7 +693,7 @@ const SectionFive = () => {
                         <a
                           rel='noreferrer noopener'
                           target='_blank'
-                          href='https://app.fuse.io/ParPbwisi6'
+                          href='https://play.google.com/store/apps/details?id=com.bitazza.wallet'
                         >
                           Mystic Valley app
                         </a>
@@ -708,7 +708,7 @@ const SectionFive = () => {
                           <a
                             rel='noreferrer noopener'
                             target='_blank'
-                            href='https://apps.apple.com/us/app/wikibank-eu/id1509481908?ls=1'
+                            href='https://apps.apple.com/us/app/mystic-valley/id1539136057'
                           >
                             Mystic Valley app
                           </a>
@@ -726,9 +726,9 @@ const SectionFive = () => {
                         <a
                           rel='noreferrer noopener'
                           target='_blank'
-                          href='https://localchampions.de/'
+                          href='https://www.facebook.com/mysticthailand/'
                         >
-                          https://partners.bitazza.com/en/partner/mystic-valley/
+                          Mystic Valley
                         </a>
                       </div>
                     </div>
