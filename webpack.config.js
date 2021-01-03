@@ -5,7 +5,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const WebappWebpackPlugin = require('webapp-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
 const sourceMap = isDev
@@ -119,7 +119,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new ProgressBarPlugin(),
-    new WebappWebpackPlugin({
+    new FaviconsWebpackPlugin({
       logo: path.join(path.resolve(__dirname, './'), '/src/assets/images/favicon.png'),
       prefix: 'images/favicons/',
       favicons: {

@@ -18,7 +18,7 @@
     "clean": "rm -rf ./dist",
     "build:dist": "npm run clean && cross-env NODE_ENV=production webpack -p",
     "start:dist": "npm run clean && cross-env NODE_ENV=production webpack-dev-server --hot && http-server ./dist -o",
-    "start": "npm run clean && webpack-dev-server --hot --mode development",
+    "start": "npm run clean && webpack-dev-server --hot --mode development --open",
     "extract": "formatjs extract \"src/**/*.jsx*\" --out-file lang/en.json --id-interpolation-pattern [sha512:contenthash:base64:6] --format ./src/scripts/formatter.js"
   },
   "dependencies": {
@@ -61,6 +61,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.0.2",
     "css-loader": "^3.6.0",
+    "favicons-webpack-plugin": "^4.2.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "http-server": "^0.12.3",
@@ -74,7 +75,6 @@
     "standard": "^15.0.0",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0",
-    "webapp-webpack-plugin": "^2.7.1",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.8.0",
     "webpack-cli": "^3.3.12",

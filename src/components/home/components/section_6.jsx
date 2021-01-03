@@ -12,7 +12,7 @@ const SectionSix = (props) => {
                 defaultMessage='Why open {newLine} source{newLine} payments on{newLine} <span>Fuse</span> are A {newLine} better cash{newLine} Alternative?'
                 values={{
                   newLine: <br />,
-                  span: chunks => <span>{chunks}</span>
+                  span: (chunks) => <span>{chunks}</span>
                 }}
               />
             </h1>
@@ -25,7 +25,6 @@ const SectionSix = (props) => {
               <div className='line' />
               <div className='text'>
                 <FormattedMessage defaultMessage='It has a very low entry barrier so this technology can reach anywhere across the world' />
-
               </div>
             </div>
             <div className='item'>
@@ -39,13 +38,15 @@ const SectionSix = (props) => {
             </div>
             <div className='item'>
               <div className='image grid-x align-center align-middle'>
-                <img style={{ width: '75px', height: '75px' }} src='./images/network_coin.png' alt='network_coin.png' />
+                <img
+                  style={{ width: '75px', height: '75px' }}
+                  src='./images/network_coin.png'
+                  alt='network_coin.png'
+                />
               </div>
               <div className='line' />
               <div className='text'>
-                <FormattedMessage
-                  defaultMessage='Pay a fixed fee of up to 1 cent per transaction to move money instantly without any hidden fees and inefficiencies'
-                />
+                <FormattedMessage defaultMessage='Pay a fixed fee of up to 1 cent per transaction to move money instantly without any hidden fees and inefficiencies' />
               </div>
             </div>
           </div>

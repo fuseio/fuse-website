@@ -25,7 +25,6 @@
 }
 
 @include block(section_two) {
-  background: #eff8ff;
   padding: 5em 0px;
 
   @include element(wrapper) {
@@ -68,7 +67,6 @@
         padding-bottom: 40px;
         display: flex;
         align-items: center;
-
         @include block(linkedin) {
           padding-left: 9px;
           padding-bottom: 3px;
@@ -95,39 +93,76 @@
 @include block(section_four) {
   padding-top: 5rem;
   padding-bottom: 4rem;
-  background: #f6fbff;
+  padding-left: 5em;
+  padding-right: 5em;
+  background: #eef9ff;
   @include block(title) {
     color: #4a687b;
     font-size: 1.875em;
     font-weight: 500;
-    text-align: center;
-  }
+    padding-top: 40px;
+    padding-right: 30px;
 
-  @include element(wrapper) {
-    @include breakpoint(medium up) {
-      @include xy-grid(vertical, false);
-      @include flex-align(center, middle);
+    @include breakpoint(medium down) {
+      text-align: center;
+      padding-right: 0px;
+      font-size: 2.2em;
+      font-weight: bold;
     }
   }
-
-  @include block(logos) {
-    @include xy-cell();
-    @include breakpoint(medium up) {
-      @include xy-grid(horizontal);
-      @include flex-align();
-    }
-  }
-
-  // @include block(fixed) {
-  //   width: 128px !important;
-  // }
 
   @include element(image) {
     min-height: 144px;
     max-height: 150px;
-
     > img {
       object-fit: contain;
+    }
+
+    @include breakpoint(medium up) {
+      min-height: 144px;
+      max-height: 150px;
+      width: 18.8% !important;
+      > img {
+        object-fit: contain;
+      }
+    }
+
+    @include breakpoint(small down) {
+      width: 100% !important;
+      > img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  @include element(container) {
+    hr {
+      border: 1px solid #dde8f0;
+      margin-bottom: 50px;
+    }
+  }
+
+  @include element(wrapper) {
+    @include breakpoint(medium up) {
+      display: flex;
+    }
+  }
+
+  @include block(logos) {
+    position: relative;
+    @include element(overlay) {
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #eef9ff;
+      mix-blend-mode: color;
+    }
+    @include xy-cell();
+    @include breakpoint(medium up) {
+      @include xy-grid(horizontal);
+      @include flex-align();
     }
   }
 }

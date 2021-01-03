@@ -12,11 +12,11 @@ const ContactUs = () => {
     <section className='contact-us'>
       <div className='contact-us__wrapper grid-container'>
         <div>
-          <h1 className='contact-us__title'>
+          {/* <h1 className='contact-us__title'>
             <FormattedMessage
               defaultMessage='Pay a fixed fee of up to 1 cent per transaction to move money instantly without any hidden fees and inefficiencies'
             />
-          </h1>
+          </h1> */}
         </div>
         <div className='grid-x grid-margin-x'>
           <div className='contact-us__newsletter cell large-12 small-24'>
@@ -27,10 +27,7 @@ const ContactUs = () => {
               </h2>
             </div>
             <div className='contact-us__text'>
-              <FormattedMessage
-                defaultMessage='Stay caught up with all the latest updates and exciting news from the Fuse Network.'
-              />
-
+              <FormattedMessage defaultMessage='Stay caught up with all the latest updates and exciting news from the Fuse Network.' />
             </div>
             <NewsletterForm />
           </div>
@@ -42,10 +39,7 @@ const ContactUs = () => {
               </h2>
             </div>
             <div className='contact-us__text'>
-              <FormattedMessage
-                defaultMessage='A member of the Fuse team will be happy to take you through the process of launching an economy'
-              />
-
+              <FormattedMessage defaultMessage='A member of the Fuse team will be happy to take you through the process of launching an economy' />
             </div>
             <button className='button contact-us__button'>
               <PopupText

@@ -203,6 +203,11 @@
 			line-height: normal;
 			letter-spacing: 0.01px;
 
+			@include breakpoint(small down) {
+				max-height: unset;
+				margin-bottom: 20px;
+			}
+
 			@include block(line) {
 				border: solid 1px #dfdfdf;
 				width: 1px;
@@ -480,18 +485,5 @@
 				margin-left: 1em;
 			}
 		}
-	}
-}
-
-@media only screen and (max-width: 404px) {
-	.why_fuse_better .items .item {
-		max-height: unset;
-		margin-bottom: 20px;
-	}
-}
-
-@media only screen and (max-width: 350px) {
-	.why_fuse_better__content {
-		font-size: 9px;
 	}
 }
