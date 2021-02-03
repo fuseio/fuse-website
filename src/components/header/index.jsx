@@ -53,7 +53,7 @@ const Header = ({
 						className="header__link__wrapper dropdown menu"
 						data-dropdown-menu
 					>
-						<li>
+						<li className="">
 							<a
 								rel="noreferrer noopener"
 								className={classNames('header__link', {
