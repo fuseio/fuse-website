@@ -1,7 +1,22 @@
 @include block(footer) {
 	height: 100%;
 	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
 	justify-content: space-between;
+	max-width: initial !important;
+	margin: 0 !important;
+
+	@include breakpoint(small only) {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	@include breakpoint(large only) {
+		flex-direction: column;
+		align-items: center;
+	}
 
 	@include breakpoint(xlarge down) {
 		transform: scale(0.9);
@@ -11,11 +26,18 @@
 
 	@include element(wrapper) {
 		background: linear-gradient(180deg, #002740 0%, #001929 100%);
-		padding: 2em 20px 0em;
+		padding: 80px 32px 160px 32px;
+
+		@include breakpoint(small only) {
+			padding: 30px 0;
+		}
+
+		@include breakpoint(large only) {
+			padding: 35px 0;
+		}
 
 		@include modifier(dark) {
 			background-color: #001929;
-			padding: 2em 20px 6em;
 		}
 	}
 
@@ -41,7 +63,7 @@
 		color: #0a2f40;
 
 		&:not(:last-child) {
-			margin-right: 3em;
+			margin-right: 33px;
 		}
 
 		@include modifier(white) {
@@ -171,7 +193,6 @@
 
 	@include element(logo) {
 		width: 125px;
-		margin-bottom: 1em;
 
 		@include element(wrapper) {
 			display: flex;
@@ -258,6 +279,78 @@
 
 	@include element(copyright) {
 		color: white;
+		font-size: 15px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 14px;
+		letter-spacing: 0px;
+		text-align: left;
+		color: #ffffff;
+	}
+
+	@include element(list) {
+		@include element(title) {
+			font-size: 18px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 25px;
+			letter-spacing: 0px;
+			text-align: left;
+			color: #8da9bb;
+			margin-bottom: 24px !important;
+		}
+	}
+
+	@include element(list) {
+		color: white;
 		margin: 2em 0 1em;
+
+		@include element(item) {
+			font-size: 15px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 18px;
+			letter-spacing: 0px;
+			text-align: left;
+			margin-bottom: 16px;
+		}
+	}
+
+	@include element(items) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
+
+		@include breakpoint(small only) {
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
+
+		@include breakpoint(large only) {
+			padding-top: 65px;
+			padding-bottom: 65px;
+		}
+
+		@include element(columns) {
+			&:nth-of-type(2) {
+				padding-left: 143px;
+				padding-right: 85px;
+			}
+
+			@include breakpoint(small only) {
+				&:nth-of-type(2) {
+					padding-left: 30px;
+					padding-right: 30px;
+				}
+			}
+
+			@include breakpoint(large only) {
+				&:nth-of-type(2) {
+					padding-left: 80px;
+					padding-right: 80px;
+				}
+			}
+		}
 	}
 }
