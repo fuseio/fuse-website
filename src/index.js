@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import './styles/styles.scss'
+import { Foundation } from 'foundation-sites/dist/js/foundation.min.js';
 
-// imports all images so webpack can compile them
 ((ctx) => {
   const keys = ctx.keys()
   const values = keys.map(ctx)

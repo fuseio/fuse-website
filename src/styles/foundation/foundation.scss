@@ -4,14 +4,20 @@
 @include foundation-global-styles;
 @include foundation-visibility-classes;
 @include foundation-flex-classes;
+@include foundation-dropdown;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-accordion-menu;
+@include foundation-drilldown-menu;
+@include foundation-dropdown-menu;
 
 @include foundation-xy-grid-classes(
-    $base-grid:        true,
-    $margin-grid:      true,
-    $padding-grid:     true,
-    $block-grid:       true,
-    $collapse:         true,
-    $offset:           true,
-    $vertical-grid:    true,
-    $frame-grid:       true
+  $base-grid: true,
+  $margin-grid: true,
+  $padding-grid: true,
+  $block-grid: true,
+  $collapse: true,
+  $offset: true,
+  $vertical-grid: true,
+  $frame-grid: true
 );
