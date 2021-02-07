@@ -108,7 +108,7 @@ const Header = ({
 			title: 'Discord',
 			link: 'https://discordapp.com/invite/jpPMeSZ',
 		},
-		{ icon: chat, title: 'Fuse Forum', link: 'https://medium.com/fusenet' },
+		{ icon: chat, title: 'Fuse Forum', link: 'https://forum.fuse.io/' },
 	];
 
 	const ressources = [
@@ -128,13 +128,13 @@ const Header = ({
 			icon: checkCircle,
 			title: 'Network Health',
 			content: 'Lorem ipsum dolor sit, amet consectetur adipisicing.',
-			link: '',
+			link: 'https://health.fuse.io/',
 		},
 		{
 			icon: fuseToken,
 			title: 'Fuse Token',
 			content: 'Lorem ipsum dolor sit, amet consectetur adipisicing.',
-			link: '',
+			link: 'https://docs.fuse.io/the-fuse-chain/fuse-token',
 		},
 	];
 
