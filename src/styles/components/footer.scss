@@ -286,6 +286,7 @@
 			font-weight: 500;
 			&:hover {
 				text-decoration: underline;
+				cursor: pointer;
 			}
 
 			&:not(:last-child) {

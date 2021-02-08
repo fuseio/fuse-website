@@ -61,9 +61,9 @@ const Item = withRouter(({ history, url, title, route }) => {
       {
         route
           ? (
-            <div onClick={() => history.push(route)}>
+            <span onClick={() => history.push(route)}>
               {title}
-            </div>
+            </span>
             )
           : null
       }
