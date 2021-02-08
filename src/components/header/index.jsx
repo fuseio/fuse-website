@@ -8,9 +8,12 @@ import fuseLogoWhite from '@/assets/images/group_21.svg'
 import AnimatedNavbar from '@/components/navbar/AnimatedNavbar'
 import SelectLanguage from '../shared/select_language'
 
-const Header = ({ history, isNetworkHeader = false, isAboutHeader = false }) => {
+const Header = ({ history }) => {
   const [isOpen, setMenuOpen] = useState(false)
   const hamburgerRef = useRef(null)
+
+  const isNetworkHeader = history.location.pathname.includes('network')
+  const isAboutHeader = history.location.pathname.includes('about')
 
   useOutsideClick(hamburgerRef, () => {
     if (isOpen) {

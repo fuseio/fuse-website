@@ -17,7 +17,7 @@ const items = [
   {
     title: 'Documentation',
     icon: Docs,
-    url: 'https://twitter.com/fuse_network'
+    url: 'https://docs.fuse.io'
   },
   {
     title: 'Network Health',

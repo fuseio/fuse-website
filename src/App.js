@@ -40,7 +40,7 @@ const App = () => {
             <Provider store={store}>
               <ConnectedRouter history={history}>
                 <ScrollToTopController>
-                  {/* <Header /> */}
+                  <Header />
                   <Switch>
                     <Route exact path='/about'>
                       <About />

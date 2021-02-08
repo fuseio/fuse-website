@@ -1,39 +1,20 @@
 @include block(section-A) {
-  width: 100%;
-  position: relative;
   background-image: $color-fuse_gradient;
 
-  @include element(overlay) {
-    // position: relative;
-    min-height: 600px;
-    margin-top: 10em;
-    height: calc(100vh - 200px);
+  height: fit-content;
+  padding-top: 6em;
 
-    @include breakpoint(medium up) {
-      @include xy-grid(horizontal, false);
-      > div {
-        @include xy-cell(12, null, 0);
-      }
+  @include breakpoint(medium up) {
+    @include xy-grid(horizontal, false);
+    > div {
+      @include xy-cell(12, null, 0);
     }
+  }
 
-    @include breakpoint(medium down) {
-      @include xy-grid(vertical, false);
-      height: calc(100vh - 400px);
-      > div {
-        @include xy-cell(24, null, 0);
-      }
-    }
-
-    @include breakpoint(small only) {
-      height: calc(100vh - 400px);
-    }
-
-    @include breakpoint(1600px up) {
-      height: calc(100vh - 200px);
-    }
-
-    @include breakpoint(768px) {
-      height: calc(100vh - 300px);
+  @include breakpoint(medium down) {
+    @include xy-grid(vertical, false);
+    > div {
+      @include xy-cell(24, null, 0);
     }
   }
 

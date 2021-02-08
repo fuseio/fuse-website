@@ -8,9 +8,10 @@
 	width: 100%;
 
 	@include element(wrapper) {
-		display: block;
+		@include xy-grid();
 		padding: 0 20px;
-		position: relative;
+		z-index: 100000;
+		position: absolute;
 		width: 100%;
 		height: min-content;
 	}
