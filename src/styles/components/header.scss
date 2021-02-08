@@ -30,14 +30,14 @@
 
 	@include block(icon) {
 		position: relative;
-		@include breakpoint(medium up) {
-			margin-right: 1.3em;
-		}
+		// @include breakpoint(medium up) {
+		// 	margin-right: 1.3em;
+		// }
 
 		@include breakpoint(medium down) {
-			&:not(:last-child) {
-				margin-right: 1.3em;
-			}
+			// &:not(:last-child) {
+			// 	margin-right: 1.3em;
+			// }
 		}
 		height: 31px;
 		width: 31px;
@@ -61,7 +61,7 @@
 			display: none;
 			position: absolute;
 			right: 0;
-			top: 25px;
+			top: 40px;
 			z-index: 1;
 			position: absolute;
 			display: none;

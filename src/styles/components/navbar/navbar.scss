@@ -1,0 +1,76 @@
+@include block(nav) {
+  margin: auto;
+
+  @include element(list) {
+    list-style: none;
+  }
+
+  @include element(item) {
+    position: relative;
+    padding: 0 0.7em;
+
+    @include block(text) {
+      background: transparent;
+      border: 0;
+      font-family: inherit;
+      font-size: 15px;
+      padding: 1em;
+      color: #083549;
+      display: flex;
+      justify-content: center;
+      transition: opacity 250ms;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+      font-weight: 500;
+      &:hover,
+      &:focus {
+        outline: none;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      @include modifier(white) {
+        color: white;
+      }
+    }
+    @include block(dropdown_slot) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      perspective: 1500px;
+    }
+  }
+}
+
+@include block(community_dropdown) {
+  width: 18.5rem;
+
+  @include element(wrapper) {
+    position: relative;
+    z-index: 1;
+  }
+
+  @include block(list) {
+    @include block(item) {
+      padding: 1em;
+      min-height: 56px;
+      color: #083549;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+
+      &:hover {
+        background: #f8f9fa;
+        cursor: pointer;
+      }
+      > img {
+        width: 48px;
+        height: 48px;
+      }
+      > a {
+        margin-left: 1em;
+      }
+    }
+  }
+}

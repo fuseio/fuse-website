@@ -18,20 +18,12 @@ const SectionOne = () => {
       })
     }
   }, [lottieRef])
+
   return (
     <section className='section-A'>
       <Header />
       <div className='section-A__overlay'>
-        <div className='section-A__wrapper medium-12 small-24'>
-          {/* <div className='section-A__news'>
-            <img alt="new_notification" src={newIcon} />
-            <a rel="noreferrer noopener" className='link'
-              href='https://medium.com/fusenet/fuse-public-release-on-mesa-decentralised-exchange-ce75c4534a60' target="_blank">
-              Fuse Liquidity Release on Mesa
-              Thursday, October 22nd
-              </a>
-            <span className="arrow"><img alt="arrow" src={arrowIcon} /></span>
-          </div> */}
+        <div className='section-A__wrapper'>
           <div className='section-A__main'>
             <h1 className='main_title'>
               <FormattedMessage defaultMessage='Turning communities into thriving economies' />
@@ -61,7 +53,7 @@ const SectionOne = () => {
             </div>
           </div>
         </div>
-        <div className='section-A__image medium-12 small-24'>
+        <div className='section-A__image'>
           <div id='lottie' ref={lottieRef} />
         </div>
       </div>
