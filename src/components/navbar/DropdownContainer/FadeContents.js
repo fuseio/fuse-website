@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react'
-// import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import { promoteLayer } from './utils'
 
@@ -35,7 +34,5 @@ const FadeContents = forwardRef(
     </FadeContainer>
   )
 )
-
-// FadeContents.propTypes = propTypes
 
 export default FadeContents

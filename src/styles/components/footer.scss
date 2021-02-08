@@ -1,21 +1,13 @@
 @include block(footer) {
 	height: 100%;
 	width: 100%;
-	// @include xy-grid();
-	// @include flex-align(justify, middle);
-
-	// @include breakpoint(xlarge down) {
-	// 	transform: scale(0.9);
-	// }
 
 	@include element(wrapper) {
 		padding: 4em 2em 10em;
 		background: linear-gradient(180deg, #002740 0%, #001929 100%);
-		// padding: 2em 20px 0em;
 
 		@include modifier(dark) {
 			background-color: #001929;
-			// padding: 2em 20px 6em;
 		}
 	}
 
@@ -186,11 +178,6 @@
 	}
 
 	@include element(item) {
-		// justify-content: center;
-
-		// @include breakpoint(small only) {
-		// 	margin: 1em 0;
-		// }
 	}
 
 	@include element(sign) {

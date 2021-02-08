@@ -31,14 +31,8 @@
 
 	@include block(icon) {
 		position: relative;
-		// @include breakpoint(medium up) {
-		// 	margin-right: 1.3em;
-		// }
 
 		@include breakpoint(medium down) {
-			// &:not(:last-child) {
-			// 	margin-right: 1.3em;
-			// }
 		}
 		height: 31px;
 		width: 31px;
@@ -271,7 +265,6 @@
 	}
 
 	@include element(nav) {
-		// margin-left: auto;
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
@@ -301,7 +294,6 @@
 
 	@include element(link) {
 		text-decoration: none;
-		// width: 85px;
 		font-size: 0.938em;
 		font-weight: 500;
 		font-style: normal;
@@ -310,7 +302,6 @@
 		letter-spacing: normal;
 		text-align: center;
 		color: #083549;
-		// margin-right: 1.3em;
 		@include breakpoint(medium up) {
 			margin-right: 1.3em;
 		}

@@ -192,38 +192,5 @@
       position: relative;
       z-index: 100;
     }
-    // @include breakpoint(800px up) {
-    //   position: relative;
-    // }
-    // display: block;
-    // width: 50%;
-    // height: auto;
-
-    // > div {
-    //   position: absolute;
-    //   right: -30px;
-    //   z-index: 5;
-    //   bottom: -63px;
-
-    //   @include breakpoint(medium down) {
-    //     width: 100%;
-    //   }
-
-    //   @include breakpoint(small only) {
-    //     right: 0;
-    //   }
-
-    //   @include breakpoint(1333px) {
-    //     bottom: -80px;
-    //   }
-    //   @include breakpoint(1700px) {
-    //     bottom: -85px;
-    //     right: -10px;
-    //   }
-
-    //   @include breakpoint(1900px) {
-    //     bottom: -116px;
-    //   }
-    // }
   }
 }
