@@ -7,7 +7,7 @@ import configureStore from './store/configureStore'
 import { LangContext, LangProvider } from './components/shared/lang_provider'
 import { IntlProvider } from 'react-intl'
 
-import Header from '@/components/header'
+import Header from '@/components/navbar'
 import HomePage from '@/components/home'
 import Network from '@/components/network'
 import About from '@/components/about'

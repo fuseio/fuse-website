@@ -1,10 +1,7 @@
 @include block(header) {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	flex-direction: row;
+	@include xy-grid(horizontal, false);
+	@include flex-align(justify, middle);
 	min-height: 80px;
-	z-index: 1;
 	width: 100%;
 
 	@include element(wrapper) {
@@ -183,6 +180,7 @@
 	}
 
 	@include block(language) {
+		margin: 1em 0.5em;
 		background-size: 32px;
 		background-image: url(/images/language.svg);
 		appearance: none;

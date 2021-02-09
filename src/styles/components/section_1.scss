@@ -1,6 +1,5 @@
 @include block(section-A) {
   background-image: $color-fuse_gradient;
-
   height: fit-content;
   padding-top: 6em;
 
@@ -154,6 +153,34 @@
       line-height: 1.39;
       letter-spacing: -0.16px;
       color: #052741;
+    }
+
+    @include breakpoint(medium up) {
+      @include xy-grid(vertical);
+      @include flex-align(center, top);
+      padding-left: 2em;
+    }
+
+    @include breakpoint(medium down) {
+      @include xy-grid(vertical);
+      @include flex-align(center, middle);
+      padding: 0 1em 4em;
+    }
+    @include breakpoint(medium only) {
+      margin: 0;
+      @include flex-align(left, top);
+    }
+
+    @include breakpoint(small only) {
+      max-width: 90%;
+    }
+
+    @include breakpoint(1700px) {
+      max-width: 60%;
+    }
+
+    @include breakpoint(2100px) {
+      margin-top: 10em;
     }
   }
 

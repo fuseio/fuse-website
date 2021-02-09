@@ -7,14 +7,13 @@
 
   @include element(item) {
     position: relative;
-    padding: 0 0.7em;
 
     @include block(text) {
       background: transparent;
       border: 0;
       font-family: inherit;
       font-size: 15px;
-      padding: 1em;
+      padding: 1em .5em;
       color: #083549;
       display: flex;
       justify-content: center;
@@ -47,14 +46,21 @@
   width: 18.5rem;
 
   @include element(wrapper) {
-    position: relative;
-    z-index: 1;
+    // position: relative;
+    // z-index: 1;
   }
 
   @include block(list) {
     @include block(item) {
-      padding: 1em;
-      min-height: 56px;
+      padding: .5em 1em;
+      &:not(:first-child) {
+				// padding-bottom: 1em;
+			}
+
+      &:not(:last-child) {
+        margin-bottom: 2em;
+      }
+      // min-height: 56px;
       color: #083549;
       font-weight: 500;
       font-size: 15px;
