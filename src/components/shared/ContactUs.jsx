@@ -39,12 +39,12 @@ const ContactUs = () => {
               </h2>
             </div>
             <div className='contact-us__text'>
-              <FormattedMessage defaultMessage='A member of the Fuse team will be happy to take you through the process of launching an economy' />
+              <FormattedMessage defaultMessage='Get in Contact to Discuss Projects and Partnerships' />
             </div>
             <button className='button contact-us__button'>
               <PopupText
                 text={<FormattedMessage defaultMessage='Book demo' />}
-                url='https://calendly.com/mark-fuse'
+                url='https://form.typeform.com/to/LMdyK0st?typeform-medium=embed-snippet'
               />
               <span className='contact-us__arrow'>
                 <img alt='image' src={blueArrow} />
