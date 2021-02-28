@@ -40,11 +40,11 @@ const Header = ({ history }) => {
             isNetworkHeader={isNetworkHeader}
             isAboutHeader={isAboutHeader}
           />
-          <div className='nav__item' onClick={aboutPage}>
+          {/* <div className='nav__item' onClick={aboutPage}>
             <button className={classNames('text', { 'text--white': (isNetworkHeader || isAboutHeader) })}>
               About us
             </button>
-          </div>
+          </div> */}
           <div className='nav__item' onClick={aboutPage}>
             <a
               rel='noreferrer noopener'
@@ -55,20 +55,23 @@ const Header = ({ history }) => {
               Blog
             </a>
           </div>
+        </div>
+        <div className='grid-x align-middle'>
+
           <SelectLanguage
             isNetworkHeader={isNetworkHeader}
             isAboutHeader={isAboutHeader}
           />
-        </div>
-        <div className={classNames('header__wallet', { 'header__wallet--yellow': isNetworkHeader || isAboutHeader })}>
-          <a rel='noopener noreferrer' href='https://studio.fuse.io' target='_blank' role='button'>
-            <div className='header__wallet__icon' />
-            <span>
-              <FormattedMessage
-                defaultMessage='Fuse studio'
-              />
-            </span>
-          </a>
+          <div className={classNames('header__wallet', { 'header__wallet--yellow': isNetworkHeader || isAboutHeader })}>
+            <a rel='noopener noreferrer' href='https://studio.fuse.io' target='_blank' role='button'>
+              <div className='header__wallet__icon' />
+              <span>
+                <FormattedMessage
+                  defaultMessage='Fuse studio'
+                />
+              </span>
+            </a>
+          </div>
         </div>
       </div>
     </header>

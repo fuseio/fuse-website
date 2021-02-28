@@ -181,22 +181,25 @@
 
 	@include block(language) {
 		margin: 1em 0.5em;
-		background-size: 32px;
-		background-image: url(/images/language.svg);
-		appearance: none;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		border: 0;
-		&:hover {
-			background-image: url(/images/language_hover.svg);
+		width: 29px;
+		height: 29px;
+		border-radius: 7px;
+		color: $color-white;
+		background-image: linear-gradient(to bottom, #143653, #0c131c 99%);
+		@include xy-grid();
+		@include flex-align(center, middle);
+		> span {
+			text-transform: uppercase;
+			font-weight: 500;
 		}
 
 		@include modifier(white) {
-			background-image: url(/images/language_white.svg);
+			color: $color-primary-dark;
+			background-image: $color-white;
 
-			&:hover {
-				background-image: url(/images/language_white_hover.svg);
-			}
+			// &:hover {
+			// 	background-image: url(/images/language_white_hover.svg);
+			// }
 		}
 	}
 

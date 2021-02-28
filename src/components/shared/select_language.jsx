@@ -12,7 +12,7 @@ const options = [
 
 const SelectLanguage = ({ isNetworkHeader, isAboutHeader, isOpen }) => {
   const [isListOpen, setIsOpen] = useState(false)
-  const [, setLang] = useLang()
+  const [lang, setLang] = useLang()
   const iconRef = useRef(null)
 
   useOutsideClick(iconRef, () => {
@@ -30,6 +30,7 @@ const SelectLanguage = ({ isNetworkHeader, isAboutHeader, isOpen }) => {
     e.stopPropagation()
     setIsOpen(!isListOpen)
   }
+  console.log({ lang })
 
   return (
     <a
@@ -39,6 +40,7 @@ const SelectLanguage = ({ isNetworkHeader, isAboutHeader, isOpen }) => {
       className={classNames('icon', { language: (!(isNetworkHeader || isAboutHeader) || isOpen), 'language--white': (isNetworkHeader || isAboutHeader) && !isOpen })}
       target='_blank'
     >
+      <span>{lang}</span>
       <div style={{ minWidth: '130px' }} className={classNames('drop', { 'drop--show': isListOpen })}>
         <ul className='drop__options'>
           {options.map((option, index) => (

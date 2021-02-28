@@ -49,12 +49,11 @@ export const DropdownBackground = styled.div`
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1);
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.14);
   ${promoteLayer}
 `
 
 export const AltBackground = styled.div`
-  background-color: #f1f4f8b0;
   width: 300%;
   height: 100%;
   position: absolute;

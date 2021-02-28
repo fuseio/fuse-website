@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import ArrowDown from '@/assets/images/arrow_down.svg'
 
-function NavbarItem({
+function NavbarItem ({
   onMouseEnter,
   index,
   title,

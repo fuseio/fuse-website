@@ -3,14 +3,14 @@ import Navbar from './Navbar'
 import NavbarItem from './Navbar/NavbarItem'
 import { Flipper } from 'react-flip-toolkit'
 import DropdownContainer from './DropdownContainer'
+import UnderTheHoodDropdown from './DropdownContents/UnderTheHoodDropdown'
 import CommunityDropdown from './DropdownContents/CommunityDropdown'
-import ResourcesDropdown from './DropdownContents/ResourcesDropdown'
-import ProductsDropdown from './DropdownContents/ProductsDropdown'
+import GettingStartedDropdown from '@/components/navbar/DropdownContents/GettingStartedDropdown'
 
 const navbarConfig = [
-  { title: 'Products', dropdown: ProductsDropdown },
-  { title: 'Community', dropdown: CommunityDropdown },
-  { title: 'Resources', dropdown: ResourcesDropdown }
+  { title: 'Getting started', dropdown: GettingStartedDropdown },
+  { title: 'Under the hood', dropdown: UnderTheHoodDropdown },
+  { title: 'Community', dropdown: CommunityDropdown }
 ]
 
 class AnimatedNavbar extends Component {
@@ -53,12 +53,13 @@ class AnimatedNavbar extends Component {
     )
   }
 
-  render() {
+  render () {
     const { duration, isAboutHeader, isNetworkHeader } = this.props
     let CurrentDropdown
     let PrevDropdown
     let direction
 
+    // const currentIndex = 1
     const currentIndex = this.state.activeIndices[
       this.state.activeIndices.length - 1
     ]
@@ -81,31 +82,33 @@ class AnimatedNavbar extends Component {
           spring={duration === 300 ? 'noWobble' : { stiffness: 10, damping: 10 }}
         >
           <Navbar onMouseLeave={this.handleMouseLeave}>
-            {navbarConfig.map((n, index) => {
-              return (
-                <NavbarItem
-                  isNetworkHeader={isNetworkHeader}
-                  isAboutHeader={isAboutHeader}
-                  key={n.title}
-                  title={n.title}
-                  index={index}
-                  onMouseEnter={this.handleMouseEnter}
-                >
-                  {
-                    currentIndex === index && (
-                      <DropdownContainer
-                        direction={direction}
-                        animatingOut={this.state.animatingOut}
-                        duration={duration}
-                      >
-                        <CurrentDropdown />
-                        {PrevDropdown && <PrevDropdown />}
-                      </DropdownContainer>
-                    )
-                  }
-                </NavbarItem>
-              )
-            })}
+            {
+              navbarConfig.map(({ title }, index) => {
+                return (
+                  <NavbarItem
+                    isNetworkHeader={isNetworkHeader}
+                    isAboutHeader={isAboutHeader}
+                    key={title}
+                    title={title}
+                    index={index}
+                    onMouseEnter={this.handleMouseEnter}
+                  >
+                    {
+                      currentIndex === index && (
+                        <DropdownContainer
+                          direction={direction}
+                          animatingOut={this.state.animatingOut}
+                          duration={duration}
+                        >
+                          <CurrentDropdown />
+                          {PrevDropdown && <PrevDropdown />}
+                        </DropdownContainer>
+                      )
+                    }
+                  </NavbarItem>
+                )
+              })
+            }
           </Navbar>
         </Flipper>
       </div>

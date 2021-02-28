@@ -13,7 +13,7 @@
       border: 0;
       font-family: inherit;
       font-size: 15px;
-      padding: 1em .5em;
+      padding: 1em;
       color: #083549;
       display: flex;
       justify-content: center;
@@ -43,39 +43,44 @@
 }
 
 @include block(community_dropdown) {
-  width: 18.5rem;
+  width: 38.9375rem;
+  padding: 1em;
+  max-width: 623px;
 
-  @include element(wrapper) {
-    // position: relative;
-    // z-index: 1;
+  > div:first-child {
+    position: relative;
+    z-index: 1;
   }
 
   @include block(list) {
     @include block(item) {
-      padding: .5em 1em;
-      &:not(:first-child) {
-				// padding-bottom: 1em;
-			}
-
-      &:not(:last-child) {
-        margin-bottom: 2em;
-      }
-      // min-height: 56px;
+      padding: 1.5em;
       color: #083549;
       font-weight: 500;
       font-size: 15px;
       line-height: 18px;
 
-      &:hover {
-        background: #f8f9fa;
-        cursor: pointer;
-      }
-      > img {
-        width: 48px;
-        height: 48px;
-      }
-      > a {
+      @include block(content) {
         margin-left: 1em;
+        @include xy-grid(vertical);
+        @include flex-align(spaced);
+      }
+
+      @include block(sub_title) {
+        font-size: 11px;
+        color: #7a7a7a;
+      }
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        .sub_title {
+          color: #083549;
+        }
+      }
+      img {
+        width: 37px;
+        height: 37px;
       }
     }
   }
