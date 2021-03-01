@@ -40,20 +40,20 @@ function GettingStartedDropdown () {
           {
             items.map(({ title, icon, subTitle, disabled, url }, index) => {
               return (
-                <li className='item grid-x align-middle cell small-24 medium-12' key={index}>
+                <li className='item grid-x align-middle cell small-24 medium-10' key={index}>
                   {
                     disabled
                       ? (
-                        <>
+                        <div className='item__wrapper'>
                           <img src={icon} />
                           <div className='content'>
                             <span>{title}</span>
                             <span className='sub_title'>{subTitle}</span>
                           </div>
-                        </>
+                        </div>
                         )
                       : (
-                        <a rel='noreferrer noopener' className='grid-x align-middle' target='_blank' href={url}>
+                        <a rel='noreferrer noopener' className='item__wrapper' target='_blank' href={url}>
                           <img src={icon} />
                           <div className='content'>
                             <span>

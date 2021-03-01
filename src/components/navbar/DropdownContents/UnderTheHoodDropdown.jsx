@@ -32,7 +32,7 @@ const items = [
   }
 ]
 
-function UnderTheHoodDropdown ({ history }) {
+function UnderTheHoodDropdown({ history }) {
   return (
     <div className='community_dropdown'>
       <div data-first-dropdown-section>
@@ -40,15 +40,13 @@ function UnderTheHoodDropdown ({ history }) {
           {
             items.map(({ title, icon, subTitle, url, route }, index) => {
               return (
-                <li className='item grid-x align-middle cell small-24 medium-12' key={index}>
+                <li className='item grid-x align-middle cell small-24 medium-11' key={index}>
                   {
                     route && (
-                      <div className='grid-x align-middle' onClick={() => history.push(route)}>
+                      <div className='item__wrapper' onClick={() => history.push(route)}>
                         <img src={icon} className='cell shrink' />
                         <div className='content'>
-                          <span>
-                            {title}
-                          </span>
+                          <span>{title}</span>
                           <span className='sub_title'>{subTitle}</span>
                         </div>
                       </div>
@@ -56,7 +54,7 @@ function UnderTheHoodDropdown ({ history }) {
                   }
                   {
                     url && (
-                      <a rel='noreferrer noopener' className='grid-x align-middle' target='_blank' href={url}>
+                      <a rel='noreferrer noopener' className='item__wrapper' target='_blank' href={url}>
                         <img src={icon} />
                         <div className='content'>
                           <span>

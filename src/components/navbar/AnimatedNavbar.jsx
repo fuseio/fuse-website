@@ -91,6 +91,7 @@ class AnimatedNavbar extends Component {
                     key={title}
                     title={title}
                     index={index}
+                    currentIndex={currentIndex}
                     onMouseEnter={this.handleMouseEnter}
                   >
                     {

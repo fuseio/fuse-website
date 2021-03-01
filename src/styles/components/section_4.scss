@@ -41,10 +41,6 @@
 
   @include element(wrapper) {
     z-index: 1;
-
-    @include breakpoint(1980px) {
-      height: 959px;
-    }
     position: relative;
     background-color: #eff8ff;
     box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.15);
@@ -128,7 +124,7 @@
       letter-spacing: 0.01px;
       text-align: center;
       cursor: pointer;
-      color: #25435a;
+      color: $color-dark;
 
       &:hover {
         box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.21);

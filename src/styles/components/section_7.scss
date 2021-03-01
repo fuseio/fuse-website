@@ -51,7 +51,7 @@
 
   @include element(button) {
     padding: 18px 28px;
-    color: #25435a;
+    color: $color-dark;
     background: $color-fuse-gradient;
     border-radius: 10px;
     font-weight: 500;
