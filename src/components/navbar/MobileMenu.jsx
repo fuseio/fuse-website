@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { FormattedMessage } from 'react-intl'
+// import { FormattedMessage } from 'react-intl'
 import classNames from 'classnames'
 import { withRouter } from 'react-router'
 import useOutsideClick from '@/hooks/useOutsideClick'
@@ -164,7 +164,7 @@ function MobileMenu ({ history }) {
             <div className='line' />
             <div className='grid-x align-middle  cell shrink'>
               <SelectLanguage />
-              <div className='header__wallet'>
+              {/* <div className='header__wallet'>
                 <a rel='noopener noreferrer' href='https://studio.fuse.io' target='_blank' role='button'>
                   <div className='header__wallet__icon' />
                   <span>
@@ -173,7 +173,7 @@ function MobileMenu ({ history }) {
                     />
                   </span>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         )

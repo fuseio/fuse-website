@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import { FormattedMessage } from 'react-intl'
+// import { FormattedMessage } from 'react-intl'
 import { withRouter } from 'react-router'
 import classNames from 'classnames'
 import useOutsideClick from '@/hooks/useOutsideClick.jsx'
@@ -53,7 +53,7 @@ function Header ({ history }) {
               isNetworkHeader={isNetworkHeader}
               isAboutHeader={isAboutHeader}
             />
-            <div className={classNames('header__wallet', { 'header__wallet--yellow': isNetworkHeader || isAboutHeader })}>
+            {/* <div className={classNames('header__wallet', { 'header__wallet--yellow': isNetworkHeader || isAboutHeader })}>
               <a rel='noopener noreferrer' href='https://studio.fuse.io' target='_blank' role='button'>
                 <div className='header__wallet__icon' />
                 <span>
@@ -62,7 +62,7 @@ function Header ({ history }) {
                   />
                 </span>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
