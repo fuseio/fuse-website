@@ -197,14 +197,9 @@
 		}
 
 		@include modifier(white) {
-			@include breakpoint(medium up) {
-				color: $color-primary-dark;
-				background-image: $color-white;
-
-				&:hover {
-					background-image: url(/images/language_white_hover.svg);
-				}
-			}
+			color: $color-primary-dark;
+			background-image: unset;
+			background: $color-white;
 		}
 	}
 

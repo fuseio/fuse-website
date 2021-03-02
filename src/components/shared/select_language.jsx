@@ -40,7 +40,7 @@ function SelectLanguage({ history }) {
       ref={iconRef}
       onClick={openLanguageOptions}
       rel='noreferrer noopener'
-      className={classNames('icon', { language: (!(isNetworkHeader || isAboutHeader)), 'language--white': (isNetworkHeader || isAboutHeader) && !isOpen })}
+      className={classNames('icon language', { 'language--white': isNetworkHeader || isAboutHeader })}
       target='_blank'
     >
       <span>{lang}</span>
