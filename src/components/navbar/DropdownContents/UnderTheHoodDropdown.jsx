@@ -4,6 +4,7 @@ import Network from '@/assets/images/dropdown/network.svg'
 import Docs from '@/assets/images/dropdown/docs.svg'
 import Status from '@/assets/images/dropdown/status.svg'
 import Explorer from '@/assets/images/dropdown/explorer.svg'
+import Arrow from '@/assets/images/dropdown/drop_arrow.svg'
 
 const items = [
   {
@@ -32,7 +33,7 @@ const items = [
   }
 ]
 
-function UnderTheHoodDropdown({ history }) {
+function UnderTheHoodDropdown ({ history }) {
   return (
     <div className='community_dropdown'>
       <div data-first-dropdown-section>
@@ -46,7 +47,10 @@ function UnderTheHoodDropdown({ history }) {
                       <div className='item__wrapper' onClick={() => history.push(route)}>
                         <img src={icon} className='cell shrink' />
                         <div className='content'>
-                          <span>{title}</span>
+                          <button className='title'>
+                            <span>{title}</span>
+                            <img className='arrow' src={Arrow} />
+                          </button>
                           <span className='sub_title'>{subTitle}</span>
                         </div>
                       </div>
@@ -57,9 +61,10 @@ function UnderTheHoodDropdown({ history }) {
                       <a rel='noreferrer noopener' className='item__wrapper' target='_blank' href={url}>
                         <img src={icon} />
                         <div className='content'>
-                          <span>
-                            {title}
-                          </span>
+                          <button className='title'>
+                            <span>{title}</span>
+                            <img className='arrow' src={Arrow} />
+                          </button>
                           <span className='sub_title'>{subTitle}</span>
                         </div>
                       </a>

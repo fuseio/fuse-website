@@ -18,10 +18,10 @@
     position: relative;
 
     @include block(arrow) {
-      transition: all 0.5s ease;
+      transition: transform 300ms ease;
 
       @include modifier(open) {
-        transform: rotate(180deg)
+        transform: rotate(180deg);
       }
     }
 
@@ -34,7 +34,6 @@
       color: #083549;
       display: flex;
       justify-content: center;
-      transition: opacity 250ms;
       cursor: pointer;
       position: relative;
       z-index: 2;
@@ -74,41 +73,41 @@
       @include element(wrapper) {
         @include xy-grid(horizontal, false);
         @include flex-align(center, middle);
+        > img {
+          width: 37px;
+          height: 37px;
+        }
       }
 
       @include block(content) {
-        color: #083549;
-        font-weight: 500;
-        font-size: 15px;
         margin-left: 1em;
         @include xy-grid(vertical, false);
         @include flex-align(spaced);
+      }
 
+      @include block(title) {
+        font-weight: 500;
+        text-align: start;
         position: relative;
-        cursor: pointer;
-        transition: 0.5s;
-        transition: all 0.5s;
+        transition: 300ms;
+        color: #083549;
+        font-size: 15px;
+        position: relative;
+        width: fit-content;
 
-        &:after {
-          content: url(/images/drop_arrow.svg);
-          position: absolute;
+        @include block(arrow) {
+          display: none;
+          transition: display 1s ease;
           width: 8px;
           height: 9px;
-          opacity: 0;
-          top: 0px;
-          right: 0px;
-          transition: 0.5s;
-        }
-
-        &:hover:after {
-          opacity: 1;
-          right: -20px;
+          margin-left: 0.3em;
         }
       }
 
       @include block(sub_title) {
         font-size: 11px;
         color: #7a7a7a;
+        font-weight: normal;
         white-space: nowrap;
       }
 
@@ -118,10 +117,9 @@
         .sub_title {
           color: #083549;
         }
-      }
-      img {
-        width: 37px;
-        height: 37px;
+        .title .arrow {
+          display: inline-block;
+        }
       }
     }
   }

@@ -4,6 +4,7 @@ import Studio from '@/assets/images/dropdown/studio.svg'
 import Staking from '@/assets/images/dropdown/staking.svg'
 import Fusecash from '@/assets/images/dropdown/fusecash.svg'
 import FuseSwap from '@/assets/images/dropdown/fuseswap.svg'
+import Arrow from '@/assets/images/dropdown/drop_arrow.svg'
 
 const items = [
   {
@@ -27,12 +28,12 @@ const items = [
   {
     title: 'Fuse Cash',
     icon: Fusecash,
-    subTitle: 'Coming soon',
+    subTitle: 'Coming soon!',
     disabled: true
   }
 ]
 
-function GettingStartedDropdown () {
+function GettingStartedDropdown() {
   return (
     <div className='community_dropdown'>
       <div data-first-dropdown-section>
@@ -47,7 +48,10 @@ function GettingStartedDropdown () {
                         <div className='item__wrapper'>
                           <img src={icon} />
                           <div className='content'>
-                            <span>{title}</span>
+                            <button className='title'>
+                              <span>{title}</span>
+                              <img className='arrow' src={Arrow} />
+                            </button>
                             <span className='sub_title'>{subTitle}</span>
                           </div>
                         </div>
@@ -56,9 +60,10 @@ function GettingStartedDropdown () {
                         <a rel='noreferrer noopener' className='item__wrapper' target='_blank' href={url}>
                           <img src={icon} />
                           <div className='content'>
-                            <span>
-                              {title}
-                            </span>
+                            <button className='title'>
+                              <span>{title}</span>
+                              <img className='arrow' src={Arrow} />
+                            </button>
                             <span className='sub_title'>{subTitle}</span>
                           </div>
                         </a>

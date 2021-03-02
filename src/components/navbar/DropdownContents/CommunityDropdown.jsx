@@ -6,6 +6,7 @@ import Twitter from '@/assets/images/dropdown/twitter_nav.svg'
 import Telegram from '@/assets/images/dropdown/telegram.svg'
 import Medium from '@/assets/images/dropdown/medium_nav.svg'
 import Github from '@/assets/images/dropdown/github_nav.svg'
+import Arrow from '@/assets/images/dropdown/drop_arrow.svg'
 
 const items = [
   {
@@ -51,9 +52,10 @@ function CommunityDropdown () {
                 <a rel='noreferrer noopener' className='grid-x align-middle' target='_blank' href={url}>
                   <img src={icon} />
                   <div className='content'>
-                    <span>
-                      {title}
-                    </span>
+                    <button className='title'>
+                      <span>{title}</span>
+                      <img className='arrow' src={Arrow} />
+                    </button>
                   </div>
                 </a>
               </li>
