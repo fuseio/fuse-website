@@ -20,7 +20,7 @@ const items = [
     url: 'https://staking.fuse.io'
   },
   {
-    title: 'Fuse swap',
+    title: 'Fuse Swap',
     icon: FuseSwap,
     subTitle: 'Trade without gas',
     url: 'https://fuseswap.com/'
