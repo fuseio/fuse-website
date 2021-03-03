@@ -92,6 +92,7 @@
     background-size: contain;
 
     @include block(button) {
+      z-index: 1;
       @include element(wrapper) {
         position: absolute;
         bottom: -25px;

@@ -49,7 +49,7 @@ function CommunityDropdown () {
           {
             items.map(({ title, icon, url }, index) => (
               <li className='item grid-x align-middle cell small-24 medium-8' key={index}>
-                <a rel='noreferrer noopener' className='grid-x align-middle' target='_blank' href={url}>
+                <a rel='noreferrer noopener' className='item__wrapper' target='_blank' href={url}>
                   <img src={icon} />
                   <div className='content'>
                     <button className='title'>
