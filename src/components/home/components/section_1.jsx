@@ -34,7 +34,7 @@ const SectionOne = () => {
             />
           </p>
           <div className='grid-x buttons'>
-            <a rel='noopener noreferrer' href='https://studio.fuse.io' target='_blank' role='button' className='cell medium-14 large-10 small-18'>
+            <a rel='noopener noreferrer' href='https://studio.fuse.io' target='_blank' role='button' className='cell shrink'>
               <button
                 data-event='Launch an economy'
                 className='section-A__launch__button section-A__launch__button--blue'

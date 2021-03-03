@@ -41,10 +41,8 @@
   }
 
   @include element(wrapper) {
-    z-index: 1;
     position: relative;
     background-color: #eff8ff;
-    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.15);
   }
 
   @include element(title) {
