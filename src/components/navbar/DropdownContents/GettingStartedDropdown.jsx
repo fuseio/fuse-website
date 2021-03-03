@@ -22,7 +22,7 @@ const items = [
   {
     title: 'Fuse swap',
     icon: FuseSwap,
-    subTitle: 'Trade without fees',
+    subTitle: 'Trade without gas',
     url: 'https://fuseswap.com/'
   },
   {
@@ -33,7 +33,7 @@ const items = [
   }
 ]
 
-function GettingStartedDropdown() {
+function GettingStartedDropdown () {
   return (
     <div className='community_dropdown'>
       <div data-first-dropdown-section>

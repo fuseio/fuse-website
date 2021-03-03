@@ -35,7 +35,7 @@ const items = [
     url: 'https://t.me/fuseio'
   },
   {
-    title: 'Fuse forum',
+    title: 'Fuse Forum',
     icon: Forum,
     url: 'https://forum.fuse.io'
   }
