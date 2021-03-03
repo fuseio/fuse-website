@@ -6,6 +6,7 @@
   }
 }
 @include block(publications) {
+  width: 80%;
   @include xy-grid();
   @include flex-align(justify, middle);
 
@@ -15,7 +16,7 @@
   margin-top: 12rem;
   img {
     @include xy-cell(shrink, null, 0);
-    height: 104px;
+    height: 80px;
   }
 }
 @include block(studio) {

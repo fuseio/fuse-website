@@ -74,10 +74,9 @@ const SectionFour = () => {
                 <div className='text'><FormattedMessage defaultMessage='Any network participant can delegate their FUSE to a validator of their choice in order to contribute to the security of the chain and in return earn passive income for doing so.' /></div>
                 <div className='grid-x links align-center'>
                   <div className='link'>
-                    {/* <a rel="noreferrer noopener" target='_blank'> */}
-                    <span><FormattedMessage defaultMessage='Learn more about Staking' /></span><span className='small'><FormattedMessage defaultMessage='(coming soon)' /></span>
-                    {/* </a> */}
-                    {/* <img src="./images/network_arrow.svg" alt="network_arrow" /> */}
+                    <a rel='noreferrer noopener' href='https://staking.fuse.io' target='_blank'>
+                      <span><FormattedMessage defaultMessage='Learn more about Staking' /></span>
+                    </a>
                   </div>
                 </div>
               </div>

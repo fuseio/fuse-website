@@ -16,7 +16,7 @@ function NavbarItem ({
   }
   return (
     <li className='nav__item' onMouseEnter={handler} onFocus={handler}>
-      <button className={classNames('text', { 'text--white': (isNetworkHeader || isAboutHeader) })}>
+      <button className={classNames('text', { 'text--white': isNetworkHeader || isAboutHeader })}>
         {title}
         <img className={classNames('arrow', { 'arrow--open': currentIndex === index })} src={ArrowDown} alt='arrow' />
       </button>

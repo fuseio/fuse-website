@@ -11,6 +11,10 @@
 		position: absolute;
 		width: 100%;
 		height: min-content;
+
+		@include breakpoint(large up) {
+			padding-left: 2em;
+		}
 	}
 	@include element(logo) {
 		cursor: pointer;

@@ -53,16 +53,6 @@ function Header ({ history }) {
               isNetworkHeader={isNetworkHeader}
               isAboutHeader={isAboutHeader}
             />
-            {/* <div className={classNames('header__wallet', { 'header__wallet--yellow': isNetworkHeader || isAboutHeader })}>
-              <a rel='noopener noreferrer' href='https://studio.fuse.io' target='_blank' role='button'>
-                <div className='header__wallet__icon' />
-                <span>
-                  <FormattedMessage
-                    defaultMessage='Fuse studio'
-                  />
-                </span>
-              </a>
-            </div> */}
           </div>
         </div>
       </div>
