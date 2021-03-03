@@ -1,22 +1,27 @@
 @include block(header) {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	flex-direction: row;
+	@include xy-grid(horizontal, false);
+	@include flex-align(justify, middle);
 	min-height: 80px;
-	z-index: 1;
 	width: 100%;
 
 	@include element(wrapper) {
-		display: block;
+		@include xy-grid();
 		padding: 0 20px;
-		position: relative;
+		z-index: 100000;
+		position: absolute;
 		width: 100%;
 		height: min-content;
+
+		@include breakpoint(large up) {
+			padding-left: 2em;
+		}
 	}
 	@include element(logo) {
-		width: 100px;
 		cursor: pointer;
+		@include xy-cell(shrink, null, 0);
+		> img {
+			width: 100px;
+		}
 	}
 
 	@include element(icons) {
@@ -30,14 +35,8 @@
 
 	@include block(icon) {
 		position: relative;
-		@include breakpoint(medium up) {
-			margin-right: 1.3em;
-		}
 
 		@include breakpoint(medium down) {
-			&:not(:last-child) {
-				margin-right: 1.3em;
-			}
 		}
 		height: 31px;
 		width: 31px;
@@ -55,13 +54,12 @@
 		@include block(drop) {
 			@include modifier(show) {
 				@include xy-grid();
-				z-index: 100;
 			}
 
 			display: none;
 			position: absolute;
 			right: 0;
-			top: 25px;
+			top: 40px;
 			z-index: 1;
 			position: absolute;
 			display: none;
@@ -188,22 +186,24 @@
 	}
 
 	@include block(language) {
-		background-size: 32px;
-		background-image: url(/images/language.svg);
-		appearance: none;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		border: 0;
-		&:hover {
-			background-image: url(/images/language_hover.svg);
+		margin: 1em 0.5em;
+		width: 29px;
+		height: 29px;
+		border-radius: 7px;
+		font-size: 11px;
+		color: $color-white;
+		background-image: linear-gradient(to bottom, #143653, #0c131c 99%);
+		@include xy-grid();
+		@include flex-align(center, middle);
+		> span {
+			text-transform: uppercase;
+			font-weight: 500;
 		}
 
 		@include modifier(white) {
-			background-image: url(/images/language_white.svg);
-
-			&:hover {
-				background-image: url(/images/language_white_hover.svg);
-			}
+			color: $color-primary-dark;
+			background-image: unset;
+			background: $color-white;
 		}
 	}
 
@@ -270,12 +270,13 @@
 	}
 
 	@include element(nav) {
-		// margin-left: auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-evenly;
+		// display: flex;
+		// align-items: center;
+		// justify-content: space-evenly;
 		color: #0a2f40;
 		font-size: 1em;
+
+		@include xy-cell(auto, null, 0);
 
 		@include breakpoint(medium down) {
 			display: none;
@@ -300,7 +301,6 @@
 
 	@include element(link) {
 		text-decoration: none;
-		// width: 85px;
 		font-size: 0.938em;
 		font-weight: 500;
 		font-style: normal;
@@ -309,7 +309,6 @@
 		letter-spacing: normal;
 		text-align: center;
 		color: #083549;
-		// margin-right: 1.3em;
 		@include breakpoint(medium up) {
 			margin-right: 1.3em;
 		}
@@ -342,8 +341,9 @@
 
 		@include element(wrapper) {
 			@include xy-grid(horizontal);
+			@include flex-align(center, middle);
 			@include breakpoint(medium down) {
-				margin: 4em 0 2em;
+				// margin: 4em 0 2em;
 				@include xy-grid(vertical);
 			}
 		}
@@ -394,24 +394,23 @@
 		width: 25px;
 		height: 25px;
 		margin-left: auto;
-		z-index: 100;
 
 		span {
-			background: #052741;
+			background: $color-dark;
 			border: none;
-			height: 2px;
-			width: 25px;
+			height: 3px;
+			width: 23px;
 			position: absolute;
 			top: 0;
 			left: 0;
 			transition: all 0.35s ease;
 			cursor: pointer;
 			&:nth-of-type(2) {
-				top: 11px;
+				top: 8px;
 			}
 
 			&:nth-of-type(3) {
-				top: 22px;
+				top: 16px;
 			}
 		}
 
@@ -438,5 +437,55 @@
 	}
 
 	@include element(bottom) {
+	}
+}
+
+@include block(mobile_menu) {
+	width: 90%;
+	border-radius: 11px;
+	box-shadow: 0 6px 12px 4px rgba(0, 0, 0, 0.1);
+	background-color: #ffffff;
+	padding: 2em;
+	height: 95vh;
+	overflow-y: auto;
+	top: 20px;
+	position: absolute;
+
+	@include block(line) {
+		width: 100%;
+		height: 1px;
+		background: #e0e0e0;
+		margin: 1.5em 0;
+	}
+
+	@include block(list) {
+		@include xy-grid(vertical);
+		&:not(:last-child) {
+			margin-bottom: 1.5em;
+		}
+
+		@include element(title) {
+			font-size: 0.938em;
+			font-weight: bold;
+			color: #083549;
+			padding-bottom: 1em;
+		}
+		@include element(item) {
+			@include xy-grid();
+			@include flex-align(null, middle);
+			@include block(icon) {
+				width: 26px;
+				height: 26px;
+				margin-right: 1em;
+			}
+			padding-bottom: 1em;
+			font-size: 0.813em;
+			font-weight: 500;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: normal;
+			letter-spacing: normal;
+			color: #083549;
+		}
 	}
 }

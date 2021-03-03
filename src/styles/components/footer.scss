@@ -1,21 +1,13 @@
 @include block(footer) {
 	height: 100%;
 	width: 100%;
-	justify-content: space-between;
-
-	@include breakpoint(xlarge down) {
-		transform: scale(0.9);
-	}
-
-	@include xy-grid-container();
 
 	@include element(wrapper) {
+		padding: 4em 2em 10em;
 		background: linear-gradient(180deg, #002740 0%, #001929 100%);
-		padding: 2em 20px 0em;
 
 		@include modifier(dark) {
 			background-color: #001929;
-			padding: 2em 20px 6em;
 		}
 	}
 
@@ -54,14 +46,13 @@
 	}
 
 	@include element(icons) {
+		@include breakpoint(medium down) {
+			margin: 2em 0;
+		}
 	}
 
 	@include element(icon) {
 		cursor: pointer;
-
-		&:not(:last-child) {
-			margin-right: 2em;
-		}
 	}
 
 	@include block(image) {
@@ -187,15 +178,6 @@
 	}
 
 	@include element(item) {
-		justify-content: center;
-
-		&:not(:last-child) {
-			margin-bottom: 2em;
-		}
-
-		@include breakpoint(small only) {
-			margin: 1em 0;
-		}
 	}
 
 	@include element(sign) {
@@ -259,5 +241,44 @@
 	@include element(copyright) {
 		color: white;
 		margin: 2em 0 1em;
+	}
+}
+
+@include block(links) {
+	@include breakpoint(medium up) {
+		@include xy-grid();
+		@include flex-align(spaced, middle);
+	}
+	@include breakpoint(medium down) {
+		order: 3;
+		@include xy-grid();
+		@include flex-align(null, middle);
+	}
+	@include block(list) {
+		@include element(container) {
+		}
+
+		@include element(title) {
+			font-size: 1.125em;
+			line-height: 25px;
+			font-weight: 500;
+			color: #8da9bb;
+			margin-bottom: 1.5em;
+		}
+
+		@include element(item) {
+			font-size: 15px;
+			line-height: 18px;
+			color: #ffffff;
+			font-weight: 500;
+			&:hover {
+				text-decoration: underline;
+				cursor: pointer;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 1em;
+			}
+		}
 	}
 }

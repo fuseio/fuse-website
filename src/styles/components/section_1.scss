@@ -1,45 +1,45 @@
 @include block(section-A) {
-  width: 100%;
-  position: relative;
   background-image: $color-fuse_gradient;
-
-  @include element(overlay) {
-    position: relative;
-    min-height: 600px;
-    height: calc(100vh - 200px);
-
+  padding-top: 6em;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: #eff8ff;
+    bottom: 0;
+    @include breakpoint(xxlarge up) {
+      height: 19%;
+    }
     @include breakpoint(medium up) {
-      @include xy-grid(horizontal, false);
-      > div {
-        @include xy-cell(12, null, 0);
-      }
+      height: 20%;
     }
-
     @include breakpoint(medium down) {
-      @include xy-grid(vertical, false);
-      height: calc(100vh - 400px);
-      > div {
-        @include xy-cell(24, null, 0);
-      }
+      height: 13%;
     }
 
-    @include breakpoint(small only) {
-      height: calc(100vh - 400px);
+    @include breakpoint(small down) {
+      height: 8%;
     }
+  }
 
-    @include breakpoint(1600px up) {
-      height: calc(100vh - 200px);
+  @include breakpoint(medium up) {
+    @include xy-grid(horizontal, false);
+    > div {
+      @include xy-cell(12, null, 0);
     }
+  }
 
-    @include breakpoint(768px) {
-      height: calc(100vh - 300px);
+  @include breakpoint(medium down) {
+    @include xy-grid(vertical, false);
+    > div {
+      @include xy-cell(24, null, 0);
     }
   }
 
   @include element(wrapper) {
     @include breakpoint(medium up) {
       @include xy-grid(vertical);
-      @include flex-align(center, top);
       padding-left: 2em;
     }
 
@@ -53,30 +53,24 @@
       @include flex-align(left, top);
     }
 
-    @include breakpoint(small only) {
-      max-width: 90%;
-    }
-
-    @include breakpoint(1700px) {
-      max-width: 60%;
-    }
-
-    @include breakpoint(2100px) {
-      margin-top: 10em;
+    @include breakpoint(xlarge up) {
+      // @include flex-align(center, top);
     }
   }
 
   @include element(launch__button) {
-    @include breakpoint(xlarge up) {
-      min-width: 230px;
-    }
     width: 100%;
     height: 52px;
     cursor: pointer;
     border: none;
-    border-radius: inherit;
     border-radius: 10px;
-
+    background-color: $color-dark;
+    min-width: 270px;
+    &:hover {
+      background-color: #192d3d;
+    }
+    @include breakpoint(xlarge up) {
+    }
     @include breakpoint(small only) {
       height: 42px;
     }
@@ -89,84 +83,40 @@
       font-style: normal;
       line-height: normal;
       letter-spacing: normal;
+      color: #ffffff;
 
       @include breakpoint(medium down) {
         font-size: 14.4px;
       }
     }
-
-    @include modifier(blue) {
-      background-color: #25435a;
-
-      > span {
-        color: #ffffff;
-      }
-
-      &:hover {
-        background-color: #192d3d;
-      }
-    }
-
-    @include modifier(transparent) {
-      @include breakpoint(large up) {
-        margin-left: 1em;
-      }
-      background-color: transparent;
-
-      &:hover {
-        background-color: rgba(37, 67, 90, 0.15);
-      }
-
-      > span {
-        color: #25435a;
-      }
-    }
   }
 
   @include block(buttons) {
+    width: 100%;
     margin-top: 1em;
   }
 
   @include block(main_title) {
     font-size: 1.875em;
     font-weight: bold;
-    line-height: 1.39;
-    letter-spacing: -0.16px;
-    color: #25435a;
+    color: $color-dark;
 
     @include breakpoint(xlarge down) {
       font-size: 1.5em;
     }
 
     @include breakpoint(small down) {
-      font-size: 1em;
-    }
-  }
-
-  @include element(news) {
-    color: #052741;
-    margin-bottom: 4em;
-    @include breakpoint(700px down) {
-      margin: 2em 0;
-    }
-    > img {
-      width: 60px;
-    }
-
-
-    @include block(arrow) {
-      margin-left: 0.3em;
-    }
-
-    a {
-      &:hover {
-        text-decoration: underline;
-      }
+      font-size: 3em;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.02px;
     }
   }
 
   @include element(main) {
-    position: relative;
+    height: 70%;
     @include element(title) {
       font-size: 2.25em;
       font-weight: bold;
@@ -174,9 +124,29 @@
       letter-spacing: -0.16px;
       color: #052741;
     }
+
+    @include breakpoint(medium up) {
+      @include xy-grid(vertical);
+      @include flex-align(center, top);
+    }
+
+    @include breakpoint(medium down) {
+      @include xy-grid(vertical);
+      margin: 2em 1em 0;
+    }
+    @include breakpoint(medium only) {
+      margin: 0;
+      @include flex-align(left, top);
+    }
+
+    @include breakpoint(1700px) {
+      max-width: 60%;
+    }
   }
 
   @include element(text) {
+    line-height: 1.56;
+    color: $color-gray;
     @include breakpoint(large down) {
       font-size: 1em;
     }
@@ -184,15 +154,8 @@
       font-size: 1.125em;
     }
     @include breakpoint(small only) {
-      font-size: 0.875em;
+      font-size: 1.125em;
     }
-    margin-bottom: 2em;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.56;
-    letter-spacing: normal;
-    color: $color-gray;
   }
 
   @include element(notification-text) {
@@ -207,38 +170,9 @@
   }
 
   @include element(image) {
-    @include breakpoint(800px up) {
-      position: relative;
-    }
-    display: block;
-    width: 50%;
-    height: auto;
-
     > div {
-      position: absolute;
-      right: -30px;
+      position: relative;
       z-index: 5;
-      bottom: -63px;
-
-      @include breakpoint(medium down) {
-        width: 100%;
-      }
-
-      @include breakpoint(small only) {
-        right: 0;
-      }
-
-      @include breakpoint(1333px) {
-        bottom: -80px;
-      }
-      @include breakpoint(1700px) {
-        bottom: -85px;
-        right: -10px;
-      }
-
-      @include breakpoint(1900px) {
-        bottom: -116px;
-      }
     }
   }
 }

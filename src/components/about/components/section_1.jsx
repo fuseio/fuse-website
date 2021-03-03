@@ -1,11 +1,9 @@
 import React from 'react'
-import Header from '@/components/header'
 import about from '@/assets/images/about-first.png'
 
 const SectionOne = () => {
   return (
     <section className='about_main'>
-      <Header isAboutHeader />
       <div className='about_main__overlay grid-container'>
         <div className='grid-x'>
           <div className='about_main__content medium-12 small-24 grid-y align-center'>

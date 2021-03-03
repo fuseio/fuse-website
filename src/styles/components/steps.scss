@@ -18,12 +18,10 @@
 	}
 
 	@include breakpoint(large) {
-		// width: 80%;
 		@include xy-grid(vertical);
 		@include flex-align(null, middle);
 	}
 	@include breakpoint(medium down) {
-		// width: 80%;
 		max-width: 520px;
 		margin: auto;
 	}
@@ -33,7 +31,6 @@
 	}
 
 	@include breakpoint(1600px up) {
-		// max-width: 60%;
 	}
 
 	@include breakpoint(small only) {

@@ -6,6 +6,7 @@
   }
 }
 @include block(publications) {
+  width: 80%;
   @include xy-grid();
   @include flex-align(justify, middle);
 
@@ -15,7 +16,7 @@
   margin-top: 12rem;
   img {
     @include xy-cell(shrink, null, 0);
-    height: 104px;
+    height: 80px;
   }
 }
 @include block(studio) {
@@ -40,14 +41,8 @@
   }
 
   @include element(wrapper) {
-    z-index: 1;
-
-    @include breakpoint(1980px) {
-      height: 959px;
-    }
     position: relative;
     background-color: #eff8ff;
-    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.15);
   }
 
   @include element(title) {
@@ -97,6 +92,7 @@
     background-size: contain;
 
     @include block(button) {
+      z-index: 1;
       @include element(wrapper) {
         position: absolute;
         bottom: -25px;
@@ -110,7 +106,6 @@
       @include breakpoint(medium up) {
         width: 100%;
         font-size: 1.225em;
-        // max-width: 362px;
       }
 
       @include breakpoint(medium down) {
@@ -129,7 +124,7 @@
       letter-spacing: 0.01px;
       text-align: center;
       cursor: pointer;
-      color: #25435a;
+      color: $color-dark;
 
       &:hover {
         box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.21);

@@ -2,6 +2,7 @@
 	position: relative;
 	border-bottom: 2px solid #031928;
 	background-color: #031928;
+  padding-top: 6em;
 
 	@include breakpoint(large) {
 		border-bottom: 2px solid #031928;
@@ -16,7 +17,6 @@
 
 	@include breakpoint(large down) {
 		@include xy-grid();
-		// padding: 0 2em;
 	}
 
 	@include element(wrapper) {
@@ -78,7 +78,6 @@
 		}
 
 		@include breakpoint(large down) {
-			// order: 2;
 			margin-bottom: 1.5em;
 		}
 	}
@@ -242,9 +241,7 @@
 					padding-right: 20px;
 				}
 				@include breakpoint(xlarge up) {
-					// width: 352px;
 					font-size: 1.125em;
-					// height: 84px;
 				}
 
 				@include breakpoint(large down) {
@@ -287,7 +284,6 @@
 				border: 1px solid #dfdfdf;
 				width: 1px;
 				height: 154px;
-				// margin: 0 1em;
 				@include breakpoint(medium down) {
 					border: 1px solid #dfdfdf;
 					width: 217px;
@@ -471,7 +467,7 @@
 			font-weight: 500;
 			letter-spacing: 0.01px;
 			text-align: center;
-			color: #25435a;
+			color: $color-dark;
 			&:hover {
 				cursor: pointer;
 				text-decoration: underline;
