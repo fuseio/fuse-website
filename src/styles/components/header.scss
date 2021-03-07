@@ -187,16 +187,15 @@
 
 	@include block(language) {
 		margin: 1em 0.5em;
-		width: 29px;
-		height: 29px;
+		width: 32px;
+		height: 32px;
 		border-radius: 7px;
-		font-size: 11px;
 		color: $color-white;
 		background-image: linear-gradient(to bottom, #143653, #0c131c 99%);
 		@include xy-grid();
 		@include flex-align(center, middle);
 		> span {
-			text-transform: uppercase;
+			text-transform: capitalize;
 			font-weight: 500;
 		}
 

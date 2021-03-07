@@ -11,7 +11,7 @@ const options = [
   { label: 'Korean', value: 'ko' }
 ]
 
-function SelectLanguage({ history }) {
+function SelectLanguage ({ history }) {
   const [isOpen, setIsOpen] = useState(false)
   const [lang, setLang] = useLang()
   const iconRef = useRef(null)

@@ -8,11 +8,13 @@ import insider from '@/assets/images/insider.png'
 const SectionTwo = () => {
   return (
     <section className='studio__wrapper grid-x align-center'>
-      <div className='publications'>
-        <img src={cointelegraph} alt='cointelegraph' />
-        <img src={yahoofin} alt='yahoo-finance' />
-        <img src={hackernoon} alt='hackernoon' />
-        <img src={insider} alt='buisnessinsider' />
+      <div className='grid-container'>
+        <div className='publications'>
+          <img src={cointelegraph} alt='cointelegraph' />
+          <img src={yahoofin} alt='yahoo-finance' />
+          <img src={hackernoon} alt='hackernoon' />
+          <img src={insider} alt='buisnessinsider' />
+        </div>
       </div>
       <div className='studio'>
         <h1 className='studio__title'>

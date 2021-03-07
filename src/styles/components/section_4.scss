@@ -6,14 +6,13 @@
   }
 }
 @include block(publications) {
-  width: 80%;
+  margin-top: 8em;
   @include xy-grid();
   @include flex-align(justify, middle);
 
   @include breakpoint(small down) {
     @include xy-grid(vertical);
   }
-  margin-top: 12rem;
   img {
     @include xy-cell(shrink, null, 0);
     height: 80px;
