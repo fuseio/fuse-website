@@ -7,8 +7,8 @@ import insider from '@/assets/images/insider.png'
 
 const SectionTwo = () => {
   return (
-    <section className='studio__wrapper grid-x align-center'>
-      <div className='grid-container'>
+    <section className='studio__wrapper'>
+      <div className='publications__container grid-container'>
         <div className='publications'>
           <img src={cointelegraph} alt='cointelegraph' />
           <img src={yahoofin} alt='yahoo-finance' />

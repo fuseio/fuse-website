@@ -6,9 +6,13 @@
   }
 }
 @include block(publications) {
-  margin-top: 8em;
   @include xy-grid();
   @include flex-align(justify, middle);
+
+  @include element(container) {
+    margin-top: 8em;
+    width: 100%;
+  }
 
   @include breakpoint(small down) {
     @include xy-grid(vertical);
@@ -42,6 +46,9 @@
   @include element(wrapper) {
     position: relative;
     background-color: #eff8ff;
+
+    @include xy-grid(vertical);
+    @include flex-align(center, middle);
   }
 
   @include element(title) {
