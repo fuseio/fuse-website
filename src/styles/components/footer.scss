@@ -6,9 +6,9 @@
 		padding: 4em 2em 10em;
 		background: linear-gradient(180deg, #002740 0%, #001929 100%);
 
-		@include modifier(dark) {
-			background-color: #001929;
-		}
+		// @include modifier(dark) {
+		// 	background-color: #001929;
+		// }
 	}
 
 	@include breakpoint(medium down) {

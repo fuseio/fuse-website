@@ -1,17 +1,11 @@
 import React from 'react'
-import classNames from 'classnames'
-import FooterLogo from '@/assets/images/site-logo-grad.svg'
+import FooterLogo from '@/assets/images/group_21.svg'
 import Icons from './icons'
 import Links from './links'
-// import { FormattedMessage } from 'react-intl'
 
-const Footer = ({ isNetworkFooter = false }, isAboutFooter) => {
-  const wrapperClasses = classNames('footer__wrapper grid-x', {
-    'footer__wrapper--dark': isNetworkFooter || isAboutFooter
-  })
-
+function Footer () {
   return (
-    <footer className={wrapperClasses}>
+    <footer className='footer__wrapper grid-x'>
       <div className='footer grid-x align-justify'>
         <div className='footer__item'>
           <div className='footer__logo__wrapper align-center'>
