@@ -37,12 +37,13 @@ const menuItems = [
       {
         title: 'swap',
         icon: FuseSwap,
-        url: 'https://fuseswap.com/'
+        url: 'https://fuseswap.com'
       },
       {
         title: 'Fuse Cash',
         icon: Fusecash,
-        disabled: true
+        url: 'https://fuse.cash'
+        // disabled: true
       }
     ]
   },

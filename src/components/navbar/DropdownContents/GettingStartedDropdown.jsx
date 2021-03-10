@@ -23,13 +23,13 @@ const items = [
     title: 'Fuse Swap',
     icon: FuseSwap,
     subTitle: 'Trade without gas',
-    url: 'https://fuseswap.com/'
+    url: 'https://fuseswap.com'
   },
   {
     title: 'Fuse Cash',
     icon: Fusecash,
-    subTitle: 'Coming soon!',
-    disabled: true
+    subTitle: '',
+    url: 'https://fuse.cash'
   }
 ]
 
