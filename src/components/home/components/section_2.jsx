@@ -5,15 +5,41 @@ import hackernoon from '@/assets/images/hackernoon.png'
 import cointelegraph from '@/assets/images/cointelegraph.png'
 import insider from '@/assets/images/insider.png'
 
+const publicationsData = [
+  {
+    image: cointelegraph,
+    link: 'https://cointelegraph.com/news/thai-music-festival-to-use-its-own-token-for-a-cashless-event'
+  },
+  {
+    image: yahoofin,
+    link: 'https://finance.yahoo.com/news/mystic-valley-partners-payments-startup-150000227.html'
+  },
+  {
+    image: hackernoon,
+    link: 'https://hackernoon.com/sustainable-communities-through-digital-economies-with-mark-smargon-h7183teg'
+  },
+  {
+    image: insider,
+    link: 'https://markets.businessinsider.com/news/stocks/mystic-valley-partners-with-payments-startup-fuse-io-to-mint-crypto-token-for-first-cashless-event-1029821554'
+  }
+]
+
+const Publication = ({ image, link }) => {
+  return (
+    <a rel='noreferrer noopener' target='_blank' href={link}>
+      <img src={image} alt='cointelegraph' />
+    </a>
+  )
+}
+
 const SectionTwo = () => {
   return (
     <section className='studio__wrapper'>
       <div className='publications__container grid-container'>
         <div className='publications'>
-          <img src={cointelegraph} alt='cointelegraph' />
-          <img src={yahoofin} alt='yahoo-finance' />
-          <img src={hackernoon} alt='hackernoon' />
-          <img src={insider} alt='buisnessinsider' />
+          {
+            publicationsData.map((item, index) => <Publication key={index} {...item} />)
+          }
         </div>
       </div>
       <div className='studio'>

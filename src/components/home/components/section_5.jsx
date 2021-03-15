@@ -142,96 +142,6 @@ const SectionFive = () => {
                 <div className='content cell large-10 small-24 grid-y align-center'>
                   <div>
                     <div className='content__logo'>
-                      <img
-                        alt='DigitalRand'
-                        src='./images/digitalrand-logo.jpg'
-                      />
-                    </div>
-                    <div className='content__text'>
-                      <FormattedMessage
-                        defaultMessage='Use the South African rand stablecoin DZAR to easily on board mainstream users that don’t have an
-                      easy access to decentralized finance. Using the DZAR wallet they can fund, store and trade with ease
-                      and without technical knowledge.'
-                      />
-                    </div>
-                    <div className='content__metadata grid-x align-middle'>
-                      <div className='grid-x cell shrink align-middle'>
-                        <img
-                          className='app_icon'
-                          alt='play-store'
-                          src='./images/google_play_mini.png'
-                        />
-                        <div className='grid-x currency'>
-                          <a
-                            rel='noreferrer noopener'
-                            target='_blank'
-                            href='https://app.fuse.io/TTfvd34X37'
-                          >
-                            DigitalRand app
-                          </a>
-                        </div>
-                      </div>
-                      <div className='grid-x cell shrink align-middle'>
-                        <img
-                          className='app_icon'
-                          alt='apple-store'
-                          src='./images/apple-mini.svg'
-                        />
-                        <div className='grid-x currency'>
-                          <a
-                            rel='noreferrer noopener'
-                            target='_blank'
-                            href='https://apps.apple.com/us/app/id1518540902'
-                          >
-                            DigitalRand app
-                          </a>
-                        </div>
-                      </div>
-                      <div className='grid-x align-middle cell large-auto'>
-                        <img
-                          alt='link-icon'
-                          className='link_icon'
-                          src='./images/link-icon.svg'
-                        />
-                        <a
-                          rel='noreferrer noopener'
-                          target='_blank'
-                          href='https://digitalrand.co.za/'
-                        >
-                          Digitalrand.co.za
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='content__geo grid-x align-center'>
-                    <div className='tooltip'>
-                      <div>
-                        <img
-                          alt='DigitalRand'
-                          src='./images/digitalrand-fleg.png'
-                        />
-                      </div>
-                      <span>
-                        <FormattedMessage defaultMessage='Johannesburg' />
-                      </span>
-                    </div>
-                    <img
-                      className='planet'
-                      alt='image'
-                      src='./images/digitalrand-world.png'
-                    />
-                  </div>
-                </div>
-                <div className='image cell large-12 small-24 grid-y align-middle'>
-                  <img alt='paywise' src='./images/digitalrand-phone.png' />
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className='community grid-x align-justify'>
-                <div className='content cell large-10 small-24 grid-y align-center'>
-                  <div>
-                    <div className='content__logo'>
                       <img alt='LocalPay' src='./images/Local-pay-logo.png' />
                     </div>
                     <div className='content__text'>
@@ -361,72 +271,6 @@ const SectionFive = () => {
                 </div>
                 <div className='image cell large-12 small-24 grid-y align-middle'>
                   <img alt='Roost' src='./images/roots-iphone.png' />
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className='community grid-x align-justify'>
-                <div className='content cell large-10 small-24 grid-y align-center'>
-                  <div>
-                    <div className='content__logo'>
-                      <img alt='Wepy' src='./images/wepy-logo.png' />
-                    </div>
-                    <div className='content__text'>
-                      <FormattedMessage
-                        defaultMessage="Why is building a group payment app for the Brazilian market, the Wepy app allows users to top up
-                      using a stablecoin pegged to brazilian Real. And to send it to friends or family members for free.
-                      We will soon be Introducing group insurance for it's consumers."
-                      />
-                    </div>
-                    <div className='content__metadata grid-x align-middle'>
-                      <img
-                        className='app_icon'
-                        alt='play-store'
-                        src='./images/google_play_mini.png'
-                      />
-                      <div className='grid-x currency'>
-                        <a
-                          rel='noreferrer noopener'
-                          target='_blank'
-                          href='https://app.fuse.io/Lbaqzl3ri6'
-                        >
-                          Wepy app
-                        </a>
-                      </div>
-                      <div className='grid-x align-middle'>
-                        <img
-                          alt='link-icon'
-                          className='link_icon'
-                          src='./images/link-icon.svg'
-                        />
-                        <a
-                          rel='noreferrer noopener'
-                          target='_blank'
-                          href='https://wepy.io'
-                        >
-                          Wepy.io
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='content__geo grid-x align-center'>
-                    <div className='tooltip'>
-                      <div>
-                        <img alt='Brazil' src='./images/brazil-flag.png' />
-                      </div>
-                      <span>
-                        <FormattedMessage defaultMessage='São Paulo' />
-                      </span>
-                    </div>
-                    <img
-                      className='planet'
-                      alt='image'
-                      src='./images/wepy-world.png'
-                    />
-                  </div>
-                </div>
-                <div className='image cell large-12 small-24 grid-y align-middle'>
-                  <img alt='paywise' src='./images/wepy-iphone.png' />
                 </div>
               </div>
             </SwiperSlide>
@@ -726,7 +570,7 @@ const SectionFive = () => {
                         <a
                           rel='noreferrer noopener'
                           target='_blank'
-                          href='https://www.facebook.com/mysticthailand/'
+                          href='https://drive.google.com/file/d/18DSK_lXCsZqHnT7J7pwIyF3ii0w6H1mG/view'
                         >
                           Mystic Valley
                         </a>

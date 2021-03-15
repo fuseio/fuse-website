@@ -17,9 +17,11 @@
   @include breakpoint(small down) {
     @include xy-grid(vertical);
   }
-  img {
+  > a {
     @include xy-cell(shrink, null, 0);
-    height: 80px;
+    img {
+      height: 80px;
+    }
   }
 }
 @include block(studio) {
