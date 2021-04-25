@@ -28,7 +28,7 @@ const items = [
   {
     title: 'Fuse Cash',
     icon: Fusecash,
-    subTitle: '',
+    subTitle: 'Friendly crypto money',
     url: 'https://fuse.cash'
   }
 ]
