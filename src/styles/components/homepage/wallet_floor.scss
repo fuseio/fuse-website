@@ -1,0 +1,68 @@
+@include block(wallet_floor) {
+  @include xy-grid-container();
+  padding: 5em 0 0;
+
+  @include element(container) {
+  }
+
+  @include element(sub-title) {
+    > img {
+      width: 29px;
+      height: 28px;
+    }
+
+    > span {
+      @extend %subtitle;
+    }
+    padding: 2em 0;
+  }
+
+  @include element(title) {
+    @extend %title;
+  }
+
+  @include element(text) {
+    @extend %text;
+    padding: 1.5em 0;
+  }
+
+  @include element(links) {
+    @include block(title) {
+      @extend %text;
+      font-weight: bold;
+      padding: 2em 0 1em;
+    }
+    @include block(items) {
+      @include breakpoint(medium up) {
+        @include xy-grid();
+        // @include flex-align(justify, middle);
+
+        > a {
+          @include xy-cell(6, null, 0);
+          &:not(:last-child) {
+						margin-right: 1em;
+					}
+        }
+      }
+    }
+  }
+
+  @include block(props) {
+    li {
+      margin: 0;
+      padding: 8px 0px 8px 25px;
+      list-style: none;
+      background-image: url(images/bullet.png);
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 15px;
+      @extend %text;
+    }
+  }
+
+  @include element(image) {
+    > img {
+      height: 713px;
+    }
+  }
+}

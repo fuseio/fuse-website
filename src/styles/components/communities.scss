@@ -1,22 +1,21 @@
 @include block(communities) {
   position: relative;
+  padding: 3em 0;
 
   @include element(title) {
     @extend %main-title;
     margin: 1em 0;
   }
   @include breakpoint(1800px) {
-    min-height: 750px;
+    // min-height: 750px;
   }
 
   > img {
     position: absolute;
-    left: 0;
+    max-height: 564px;
+    right: 0;
     bottom: 0;
-    height: 100%;
     object-fit: cover;
-    width: 100%;
-    min-height: inherit;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
@@ -24,17 +23,10 @@
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
-
-    @include breakpoint(1900px) {
-      height: auto;
-      min-height: inherit;
-    }
   }
 
   @include block(opaque) {
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: alpha(opacity=1);
   }
 
   @include breakpoint(1980px) {
@@ -94,72 +86,51 @@
 
     @include block(community) {
       width: 100%;
+      @include xy-grid();
+      @include flex-align(justify, middle);
 
       @include block(image) {
+        @include xy-grid();
+        position: relative;
+        @include flex-align(null, null);
+        min-height: 630px;
         > img {
-          width: 356px;
+          object-fit: contain;
+          position: absolute;
+          min-width: 350px;
+          min-height: 630px;
+          max-width: 350px;
+          max-height: 630px;
+          // width: 350px;
+        }
+
+        @include xy-cell(12, null, 0);
+        @include breakpoint(medium down) {
+          @include xy-cell(24, null, 0);
         }
       }
 
       @include block(content) {
-        @include element(geo) {
-          position: relative;
-          margin-top: 8em;
-          @include block(planet) {
-            width: 204px;
-            height: 204px;
-            max-width: 204px;
-            max-height: 204px;
-          }
+        @include xy-grid(vertical);
+        @include flex-align(center, top);
 
-          @include block(tooltip) {
-            position: absolute;
-            color: #4a4a4a;
-            background: #ffffff;
-            text-align: center;
-            border-radius: 6px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.31);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.7em;
-            top: -4em;
-            width: max-content;
-
-            span {
-              font-size: 1.125em;
-              font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: 0.01px;
-              color: #4a4a4a;
-            }
-
-            img {
-              height: 16px;
-              margin-right: 0.4em;
-            }
-
-            &:after {
-              content: "";
-              position: absolute;
-              top: 100%;
-              left: 50%;
-              margin-left: -8px;
-              width: 0;
-              height: 0;
-              border-top: 8px solid #ffffff;
-              border-right: 8px solid transparent;
-              border-left: 8px solid transparent;
-            }
-          }
+        @include xy-cell(10, null, 0);
+        @include breakpoint(medium down) {
+          @include xy-cell(24, null, 0);
         }
 
         @include element(metadata) {
-          margin-top: 2em;
-          font-size: 0.8em;
+          @include xy-grid(vertical);
+          @include flex-align(left, top);
+          @extend %text;
           color: #037aff;
+          margin-top: 2em;
+
+          > div {
+            &:not(:last-child) {
+              margin-bottom: 1em;
+            }
+          }
 
           @include breakpoint(medium down) {
             font-size: 1em;
@@ -172,31 +143,17 @@
             }
           }
 
-          @include block(currency) {
-            margin-right: 1em;
-            font-size: 1.125em;
-          }
-          @include block(token) {
-            width: 30px;
-            height: 30px;
-            margin-right: 0.5em;
-          }
-
-          @include block(app_icon) {
-            width: 15px;
-            height: 15px;
-            margin-right: 0.5em;
-          }
-
           @include block(link_icon) {
-            margin-right: 0.25em;
-            width: 15px;
-            height: 15px;
+            img {
+              margin-right: 0.25em;
+              width: 15px;
+              height: 15px;
+            }
           }
         }
 
         @include element(logo) {
-          margin-bottom: 1em;
+          margin-bottom: 2em;
           max-width: 200px;
 
           img {
@@ -206,7 +163,8 @@
         }
 
         @include element(text) {
-          @extend %main-text;
+          @extend %text;
+          max-width: 391px;
           @include breakpoint(large) {
           }
         }
@@ -216,42 +174,54 @@
 
   @include element(button) {
     position: absolute;
-    bottom: 0;
-    width: 60px;
-    height: 70px;
+    bottom: -30px;
     z-index: 1;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
 
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.06;
+    letter-spacing: normal;
+    color: #000000;
+
     @include breakpoint(medium down) {
       display: none;
     }
 
     @include modifier(prev) {
-      background-image: url(/images/back.png);
-      left: 0em;
+      // background-image: url(/images/back.png);
+      left: 0px;
 
       &:hover {
-        background-image: url(/images/back-hover.png);
+        // background-image: url(/images/back-hover.png);
       }
     }
 
     @include modifier(next) {
-      background-image: url(/images/next.png);
-      right: 0;
+      // background-image: url(/images/next.png);
+      left: 480px;
 
       &:hover {
-        background-image: url(/images/next-hover.png);
+        // background-image: url(/images/next-hover.png);
       }
     }
   }
 
   @include block(title) {
-    @include breakpoint(1900px) {
-      margin-bottom: 5em;
+    padding-bottom: 4em;
+    @include block(powered) {
+      @extend %subtitle;
+      margin-bottom: 1em;
     }
+  }
+
+  @include block(main-title) {
+    @extend %title;
   }
 
   @include block(bg_images) {

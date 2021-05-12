@@ -52,61 +52,62 @@ function Item({
 const SectionFour = () => {
   const paginationRef = useRef(null)
   return (
-    <section className='section-C wow fadeIn animated'>
-      <div className='section-C__content grid-container'>
-        <div className='grid-x align-justify'>
-          <div className='item cell large-5'>
-            <h2 className='section-C__title'><FormattedMessage defaultMessage='Latest updates:' />
-            </h2>
-            <p className='section-C__text'>
-              <FormattedMessage defaultMessage="Get to know what we've been up to lately
-              Follow us on Medium"
-              />
+    <section className='section-C'>
+      <div className='section-C__wrapper'>
+        <h2 className='section-C__title'><FormattedMessage defaultMessage='Latest updates:' /></h2>
+        <div className='section-C__content'>
+          <div className='grid-x align-justify'>
+            <div className='item cell large-5'>
+              <p className='section-C__text'>
+                <FormattedMessage defaultMessage="Get to know what we've been up to lately
+                Follow us on Medium"
+                />
 
-            </p>
-            <a
-              rel='noreferrer noopener' target='_blank' href='https://medium.com/fusenet'
-              className='section-C__read-more section-link'
+              </p>
+              <a
+                rel='noreferrer noopener' target='_blank' href='https://medium.com/fusenet'
+                className='section-C__read-more section-link'
+              >
+                <span><FormattedMessage defaultMessage='Go to Blog' /></span>
+                <img style={{ marginLeft: '.3em' }} src='./images/section-C-arrow-right.svg' alt='' />
+              </a>
+            </div>
+            <div className='blogs__wrapper cell large-auto grid-x align-spaced'>
+              {
+                blogs.map((item, index) => {
+                  return <Item key={index} {...item} />
+                })
+              }
+            </div>
+          </div>
+          <div className='section-C__swiper'>
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={20}
+              loop
+              setWrapperSize
+              autoplay={{
+                reverseDirection: true,
+                delay: 5000
+              }}
+              pagination={{
+                clickable: true,
+                el: paginationRef.current
+              }}
             >
-              <span><FormattedMessage defaultMessage='Go to Blog' /></span>
-              <img style={{ marginLeft: '.3em' }} src='./images/section-C-arrow-right.svg' alt='' />
-            </a>
-          </div>
-          <div className='blogs__wrapper cell large-auto grid-x align-spaced'>
-            {
-              blogs.map((item, index) => {
-                return <Item key={index} {...item} />
-              })
-            }
-          </div>
-        </div>
-        <div className='section-C__swiper'>
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={20}
-            loop
-            setWrapperSize
-            autoplay={{
-              reverseDirection: true,
-              delay: 5000
-            }}
-            pagination={{
-              clickable: true,
-              el: paginationRef.current
-            }}
-          >
-            {
-              blogs.map((item, index) => {
-                return (
-                  <SwiperSlide key={index}>
-                    <Item {...item} />
-                  </SwiperSlide>
-                )
-              })
-            }
-            <div className='swiper-pagination' />
+              {
+                blogs.map((item, index) => {
+                  return (
+                    <SwiperSlide key={index}>
+                      <Item {...item} />
+                    </SwiperSlide>
+                  )
+                })
+              }
+              <div className='swiper-pagination' />
 
-          </Swiper>
+            </Swiper>
+          </div>
         </div>
       </div>
     </section>

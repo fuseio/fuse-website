@@ -1,27 +1,26 @@
 @include block(section-A) {
   background-image: $color-fuse_gradient;
   padding-top: 6em;
-  position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    background: #eff8ff;
-    bottom: 0;
-    @include breakpoint(xxlarge up) {
-      height: 19%;
-    }
-    @include breakpoint(medium up) {
-      height: 20%;
-    }
-    @include breakpoint(medium down) {
-      height: 13%;
-    }
+  // &:after {
+  //   content: "";
+  //   position: absolute;
+  //   width: 100%;
+  //   background: #eff8ff;
+  //   bottom: 0;
+  //   @include breakpoint(xxlarge up) {
+  //     height: 19%;
+  //   }
+  //   @include breakpoint(medium up) {
+  //     height: 20%;
+  //   }
+  //   @include breakpoint(medium down) {
+  //     height: 13%;
+  //   }
 
-    @include breakpoint(small down) {
-      height: 8%;
-    }
-  }
+  //   @include breakpoint(small down) {
+  //     height: 8%;
+  //   }
+  // }
 
   @include breakpoint(medium up) {
     @include xy-grid(horizontal, false);
@@ -173,6 +172,11 @@
     > div {
       position: relative;
       z-index: 5;
+    }
+
+    > canvas {
+      height: 700px;
+      width: 100%;
     }
   }
 }

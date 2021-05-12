@@ -55,9 +55,28 @@ const items = [
   }
 ]
 
+const links = [
+  {
+    title: 'Docs',
+    url: 'http://docs.fuse.io/'
+  },
+  {
+    title: 'Explorer',
+    url: 'http://explorer.fuse.io/'
+  },
+  {
+    title: 'Network',
+    route: './network'
+  },
+  {
+    title: 'Privacy policy',
+    route: './privacy'
+  }
+]
+
 const Item = withRouter(({ history, url, title, route }) => {
   return (
-    <li className='list__item'>
+    <div className='links__item'>
       {
         route
           ? (
@@ -76,33 +95,23 @@ const Item = withRouter(({ history, url, title, route }) => {
             )
           : null
       }
-    </li>
-  )
-})
-
-function List ({ title, items }) {
-  return (
-    <div className='list__container'>
-      <div className='list__title'>{title}</div>
-      <ul className='list'>
-        {
-          items.map((item, index) => (
-            <Item key={index} {...item} />
-          ))
-        }
-      </ul>
     </div>
   )
-}
+})
 
 function Links () {
   return (
     <div className='grid-x links align-middle align-justify cell small-24 medium-8'>
       {
+        links.map((item, index) => (
+          <Item key={index} {...item} />
+        ))
+      }
+      {/* {
         items.map((item, index) => {
           return <List {...item} key={index} />
         })
-      }
+      } */}
     </div>
   )
 }

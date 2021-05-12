@@ -39,20 +39,20 @@ const App = () => {
           >
             <Provider store={store}>
               <ConnectedRouter history={history}>
-                <ScrollToTopController>
-                  <Header />
-                  <Switch>
-                    <Route exact path='/about'>
-                      <About />
-                    </Route>
-                    <Route exact path='/network'>
-                      <Network />
-                    </Route>
-                    <Route path='/'>
-                      <HomePage />
-                    </Route>
-                  </Switch>
-                </ScrollToTopController>
+                {/* <ScrollToTopController> */}
+                <Header />
+                <Switch>
+                  <Route exact path='/about'>
+                    <About />
+                  </Route>
+                  <Route exact path='/network'>
+                    <Network />
+                  </Route>
+                  <Route path='/'>
+                    <HomePage />
+                  </Route>
+                </Switch>
+                {/* </ScrollToTopController> */}
               </ConnectedRouter>
             </Provider>
           </IntlProvider>

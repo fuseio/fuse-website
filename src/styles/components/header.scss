@@ -110,80 +110,80 @@
 		}
 	}
 
-	@include block(twitter) {
-		background-image: url(/images/twitter.svg);
-		@include modifier(white) {
-			background-image: url(/images/network_twitter.svg);
+	// @include block(twitter) {
+	// 	background-image: url(/images/twitter.svg);
+	// 	@include modifier(white) {
+	// 		background-image: url(/images/network_twitter.svg);
 
-			&:hover {
-				background-image: url(/images/network_twitter_hover.svg);
-			}
-		}
-		&:hover {
-			background-image: url(/images/twitter_hover.svg);
-		}
-	}
+	// 		&:hover {
+	// 			background-image: url(/images/network_twitter_hover.svg);
+	// 		}
+	// 	}
+	// 	&:hover {
+	// 		background-image: url(/images/twitter_hover.svg);
+	// 	}
+	// }
 
-	@include block(github) {
-		background-image: url(/images/github.svg);
-		&:hover {
-			background-image: url(/images/git_hover.svg);
-		}
+	// @include block(github) {
+	// 	background-image: url(/images/github.svg);
+	// 	&:hover {
+	// 		background-image: url(/images/git_hover.svg);
+	// 	}
 
-		@include modifier(white) {
-			background-image: url(/images/network_git.svg);
+	// 	@include modifier(white) {
+	// 		background-image: url(/images/network_git.svg);
 
-			&:hover {
-				background-image: url(/images/network_git_hover.svg);
-			}
-		}
-	}
+	// 		&:hover {
+	// 			background-image: url(/images/network_git_hover.svg);
+	// 		}
+	// 	}
+	// }
 
-	@include block(medium) {
-		background-image: url(/images/medium.svg);
+	// @include block(medium) {
+	// 	background-image: url(/images/medium.svg);
 
-		&:hover {
-			background-image: url(/images/medium_hover.svg);
-		}
+	// 	&:hover {
+	// 		background-image: url(/images/medium_hover.svg);
+	// 	}
 
-		@include modifier(white) {
-			background-image: url(/images/network_med.svg);
+	// 	@include modifier(white) {
+	// 		background-image: url(/images/network_med.svg);
 
-			&:hover {
-				background-image: url(/images/network_medium_hover.svg);
-			}
-		}
-	}
+	// 		&:hover {
+	// 			background-image: url(/images/network_medium_hover.svg);
+	// 		}
+	// 	}
+	// }
 
-	@include block(discord) {
-		background-image: url(/images/discord_black.svg);
-		&:hover {
-			background-image: url(/images/discord_header_hover.svg);
-		}
+	// @include block(discord) {
+	// 	background-image: url(/images/discord_black.svg);
+	// 	&:hover {
+	// 		background-image: url(/images/discord_header_hover.svg);
+	// 	}
 
-		@include modifier(white) {
-			background-image: url(/images/network_discord.svg);
+	// 	@include modifier(white) {
+	// 		background-image: url(/images/network_discord.svg);
 
-			&:hover {
-				background-image: url(/images/network_discord_header_hover.svg);
-			}
-		}
-	}
+	// 		&:hover {
+	// 			background-image: url(/images/network_discord_header_hover.svg);
+	// 		}
+	// 	}
+	// }
 
-	@include block(telegram) {
-		background-image: url(/images/telegram_header.svg);
-		&:hover {
-			background-image: url(/images/telegram_hover.svg);
-		}
+	// @include block(telegram) {
+	// 	background-image: url(/images/telegram_header.svg);
+	// 	&:hover {
+	// 		background-image: url(/images/telegram_hover.svg);
+	// 	}
 
-		@include modifier(white) {
-			background-image: url(/images/network_tele.svg);
+	// 	@include modifier(white) {
+	// 		background-image: url(/images/network_tele.svg);
 
-			&:hover {
-				background-image: url(/images/network_tele_hover.svg);
-			}
-		}
-	}
+	// 		&:hover {
+	// 			background-image: url(/images/network_tele_hover.svg);
+	// 		}
+	// 	}
+	// }
 
 	@include block(language) {
 		margin: 1em 0.5em;
@@ -221,7 +221,7 @@
 			background-color: #05283e;
 
 			.header__wallet__icon {
-				background-image: url(/images/wallet_header_hover.svg);
+				// background-image: url(/images/wallet_header_hover.svg);
 			}
 
 			span {
@@ -234,7 +234,7 @@
 				background-color: #eef58c;
 
 				.header__wallet__icon {
-					background-image: url(/images/wallet.svg);
+					// background-image: url(/images/wallet.svg);
 				}
 				span {
 					color: black !important;
@@ -263,7 +263,7 @@
 		@include element(icon) {
 			width: 23px;
 			height: 23px;
-			background-image: url(/images/wallet.svg);
+			// background-image: url(/images/wallet.svg);
 			background-repeat: no-repeat;
 		}
 	}

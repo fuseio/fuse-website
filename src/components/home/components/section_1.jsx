@@ -1,23 +1,9 @@
-import React, { useRef, useEffect } from 'react'
+import React from 'react'
 import { FormattedMessage } from 'react-intl'
-import lottie from 'lottie-web'
 import whiteArrow from '@/assets/images/white_arrow.svg'
-import animationData from '@/assets/lottie/home_page/data.json'
+import Globe from './globe'
 
 const SectionOne = () => {
-  const lottieRef = useRef(null)
-
-  useEffect(() => {
-    if (lottieRef.current) {
-      lottie.loadAnimation({
-        animationData,
-        container: lottieRef.current,
-        renderer: 'svg',
-        loop: true
-      })
-    }
-  }, [lottieRef])
-
   return (
     <section className='section-A'>
       <div className='section-A__wrapper'>
@@ -51,7 +37,7 @@ const SectionOne = () => {
         </div>
       </div>
       <div className='section-A__image'>
-        <div id='lottie' ref={lottieRef} />
+        <Globe />
       </div>
     </section>
   )

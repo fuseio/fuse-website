@@ -12,19 +12,39 @@ import seedbedBg from '@/assets/images/seedbed-splesh.png'
 import wikibankBg from '@/assets/images/wikibank-background.png'
 import localChamionsBg from '@/assets/images/splesh-local.png'
 import valleyBg from '@/assets/images/vally-background.png'
+import FuseLogo from '@/assets/img/use_cases/fuse-logo.svg'
+import Link from '@/assets/img/use_cases/link.svg'
+import PeeplLogo from '@/assets/img/use_cases/peepleat/peepl.eat.svg'
+import PeeplIphone from '@/assets/img/use_cases/peepleat/peepl-iphone.png'
+import PeeplBg from '@/assets/img/use_cases/peepleat/image-peepl.png'
+import FusecashLogo from '@/assets/img/use_cases/fusecash/fuse.cash-logo.png'
+import FusecashBg from '@/assets/img/use_cases/fusecash/image-fuse.cash.png'
+
+import GoodDollarLogo from '@/assets/img/use_cases/gooddollar/gooddollar-logo.png'
+import GoodDollarhBg from '@/assets/img/use_cases/gooddollar/image-gooddollar.png'
+import GoodDollarIphone from '@/assets/img/use_cases/gooddollar/iphone-gooddollar.png'
+
+import ComunitariaLogo from '@/assets/img/use_cases/comunitaria/comunitaria-logo.png'
+import ComunitariahBg from '@/assets/img/use_cases/comunitaria/comunitaria-image.png'
+import ComunitariaIphone from '@/assets/img/use_cases/comunitaria/comunitaria-iphon.png'
+
+import KolektivoLogo from '@/assets/img/use_cases/kolectivolabs/kolektivo-labs.png'
+import KolektivohBg from '@/assets/img/use_cases/kolectivolabs/kolektivo-image.png'
+import KolektivoIphone from '@/assets/img/use_cases/kolectivolabs/kolectivo-wallet.png'
+
+import MysticLogo from '@/assets/img/use_cases/mysticvalley/mystic-valley-logo.png'
+import MystichBg from '@/assets/img/use_cases/mysticvalley/mystic-valley-image.png'
+import MysticIphone from '@/assets/img/use_cases/mysticvalley/mystic-valley-wallet.png'
 
 SwiperCore.use([Navigation, Pagination])
 
 const backgroundImages = [
-  paywiseBg,
-  digitalrandeBg,
-  loclaPayBg,
-  roostBg,
-  wepyBg,
-  wikibankBg,
-  seedbedBg,
-  localChamionsBg,
-  valleyBg
+  PeeplBg,
+  FusecashBg,
+  GoodDollarhBg,
+  ComunitariahBg,
+  KolektivohBg,
+  MystichBg
 ]
 
 const SectionFive = () => {
@@ -46,6 +66,7 @@ const SectionFive = () => {
           <Swiper
             slidesPerView={1}
             loop
+            speed={1000}
             setWrapperSize
             navigation={{
               nextEl: '.communities__button--next',
@@ -65,551 +86,244 @@ const SectionFive = () => {
           >
             <div slot='container-start'>
               <div className='title'>
-                <h1 className='communities__title'>
-                  <FormattedMessage defaultMessage='Local economies on fuse' />
-                </h1>
+                <div className='powered grid-x align-middle'>
+                  <img src={FuseLogo} />&nbsp;
+                  <span>Powered by Fuse</span>
+                </div>
+                <h1 className='main-title'>Real world implementations used by everyday people.</h1>
               </div>
             </div>
             <SwiperSlide>
-              <div className='community grid-x align-justify'>
-                <div className='content cell large-10 small-24 grid-y align-center'>
-                  <div>
-                    <div className='content__logo'>
-                      <img alt='paywise' src='./images/paywise-logo.png' />
-                    </div>
-                    <div>
-                      <div className='content__text'>
-                        <FormattedMessage
-                          defaultMessage='Loyalty wallet in Trinidad that lets you buy using PPP (Pay Wise Points Programme) Users can get
-                        PPP, send it to friends or discover places to shop around the island. The PPP is operated by Pay Wise a local payments provider in Trinidad.'
-                        />
-                      </div>
-                    </div>
-                    <div className='content__metadata grid-x align-middle'>
-                      <img
-                        className='app_icon'
-                        alt='play-store'
-                        src='./images/google_play_mini.png'
-                      />
-                      <div className='grid-x currency'>
-                        <a
-                          rel='noreferrer noopener'
-                          target='_blank'
-                          href='https://app.fuse.io/bc6s1HYyi3'
-                        >
-                          Paywise app
-                        </a>
-                      </div>
-                      <div className='grid-x align-middle'>
-                        <img
-                          alt='link-icon'
-                          className='link_icon'
-                          src='./images/link-icon.svg'
-                        />
-                        <a
-                          rel='noreferrer noopener'
-                          target='_blank'
-                          href='https://www.paywise.co/'
-                        >
-                          Paywise.co
-                        </a>
-                      </div>
-                    </div>
+              <div className='community'>
+                <div className='content'>
+                  <div className='content__logo'>
+                    <img alt='peepl' src={PeeplLogo} />
                   </div>
-                  <div className='content__geo grid-x align-center'>
-                    <div className='tooltip'>
-                      <div>
-                        <img alt='paywise' src='./images/trinidad-flag.png' />
-                      </div>
-                      <span>
-                        <FormattedMessage defaultMessage='Trinidad & Tobago' />
-                      </span>
-                    </div>
-                    <img
-                      className='planet'
-                      alt='image'
-                      src='./images/paywise-world.png'
-                    />
+                  <div className='content__text'>
+                    Sustainable local economy project in the United Kingdom to decentralize take away food ordering.
                   </div>
-                </div>
-                <div className='image cell large-12 small-24 grid-y align-middle'>
-                  <img alt='paywise' src='./images/paywise-iphone.png' />
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className='community grid-x align-justify'>
-                <div className='content cell large-10 small-24 grid-y align-center'>
-                  <div>
-                    <div className='content__logo'>
-                      <img alt='LocalPay' src='./images/Local-pay-logo.png' />
-                    </div>
-                    <div className='content__text'>
-                      <FormattedMessage
-                        defaultMessage='Cash handouts is an outdated and expensive way to provide charity in some communities which is
-                      what
-                      LocalPay is trying to fix. Operated in Sardinia by Sardex, the LocalPay initiative provides a cash
-                      substitute for mainstream audiences in a fraction of the cost'
-                      />
-                    </div>
-                    <div className='content__metadata grid-x align-middle'>
-                      <div className='grid-x align-middle'>
-                        <img
-                          alt='link-icon'
-                          className='link_icon'
-                          src='./images/link-icon.svg'
-                        />
-                        <a
-                          rel='noreferrer noopener'
-                          target='_blank'
-                          href='https://localpay.it/'
-                        >
-                          Localpay.it
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='content__geo grid-x align-center'>
-                    <div className='tooltip'>
-                      <div>
-                        <img alt='tooltip' src='./images/Italy-flag.png' />
-                      </div>
-                      <span>
-                        <FormattedMessage defaultMessage='Sardinia' />
-                      </span>
-                    </div>
-                    <img
-                      className='planet'
-                      alt='image'
-                      src='./images/Local-pay-world.png'
-                    />
-                  </div>
-                </div>
-                <div className='image cell large-12 small-24 grid-y align-middle'>
-                  <img alt='Sardinia' src='./images/Local-pay-lphone.png' />
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className='community grid-x align-justify'>
-                <div className='content cell large-10 small-24 grid-y align-center'>
-                  <div>
-                    <div className='content__logo'>
-                      <img alt='Roost' src='./images/roots-logo.png' />
-                    </div>
-                    <div className='content__text'>
-                      <FormattedMessage
-                        defaultMessage='In the age of digital payments, Roost is reinventing rental payments and using economic incentives
-                      to drive good outcomes. Launching a pilot soon in Liverpool, UK.'
-                      />
-                    </div>
-
-                    <div className='content__metadata grid-x'>
-                      <div className='grid-x cell shrink align-middle'>
-                        <img
-                          className='app_icon'
-                          alt='play-store'
-                          src='./images/google_play_mini.png'
-                        />
-                        <div className='grid-x currency'>
-                          <a
-                            rel='noreferrer noopener'
-                            target='_blank'
-                            href='https://app.fuse.io/GgbjSaVri6'
-                          >
-                            Roost app
-                          </a>
-                        </div>
-                      </div>
-                      <div className='grid-x cell shrink align-middle'>
-                        <img
-                          className='app_icon'
-                          alt='apple-store'
-                          src='./images/apple-mini.svg'
-                        />
-                        <div className='grid-x currency'>
-                          <a
-                            rel='noreferrer noopener'
-                            target='_blank'
-                            href='https://apps.apple.com/us/app/id1502904211'
-                          >
-                            Roost app
-                          </a>
-                        </div>
-                      </div>
-                      <div className='grid-x align-middle'>
-                        <img
-                          alt='link-icon'
-                          className='link_icon'
-                          src='./images/link-icon.svg'
-                        />
-                        <a
-                          rel='noreferrer noopener'
-                          target='_blank'
-                          href='https://RoostNow.co.uk'
-                        >
-                          RoostNow.co.uk
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='content__geo grid-x align-center'>
-                    <div className='tooltip'>
-                      <div>
-                        <img alt='uk' src='./images/uk-flag.png' />
-                      </div>
-                      <span>
-                        <FormattedMessage defaultMessage='Liverpool' />
-                      </span>
-                    </div>
-                    <img
-                      className='planet'
-                      alt='image'
-                      src='./images/roots-world.png'
-                    />
-                  </div>
-                </div>
-                <div className='image cell large-12 small-24 grid-y align-middle'>
-                  <img alt='Roost' src='./images/roots-iphone.png' />
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className='community grid-x align-justify'>
-                <div className='content cell large-10 small-24 grid-y align-center'>
-                  <div>
-                    <div className='content__logo'>
-                      <img alt='wikibank' src='./images/wikibank-logo.png' />
-                    </div>
-                    <div className='content__text'>
-                      <FormattedMessage defaultMessage='Wikibank is distributing local cash handouts in Seville, Spain. Consumers can use the app to pay at local stores and enjoy a local savings account intended to incentivize the local economy.' />
-                    </div>
-                    <div className='content__metadata grid-x align-middle'>
-                      <div className='grid-x cell shrink align-middle'>
-                        <img
-                          className='app_icon'
-                          alt='play-store'
-                          src='./images/google_play_mini.png'
-                        />
-                        <div className='grid-x currency'>
-                          <a
-                            rel='noreferrer noopener'
-                            target='_blank'
-                            href='https://app.fuse.io/z0iCvOom65'
-                          >
-                            Wikibank app
-                          </a>
-                        </div>
-                      </div>
-                      <div className='grid-x cell shrink align-middle'>
-                        <img
-                          className='app_icon'
-                          alt='apple-store'
-                          src='./images/apple-mini.svg'
-                        />
-                        <div className='grid-x currency'>
-                          <a
-                            rel='noreferrer noopener'
-                            target='_blank'
-                            href='https://apps.apple.com/us/app/wikibank-eu/id1509481908?ls=1'
-                          >
-                            Wikibank app
-                          </a>
-                        </div>
-                      </div>
-                      <div className='grid-x align-middle cell large-auto'>
-                        <img
-                          alt='link-icon'
-                          className='link_icon'
-                          src='./images/link-icon.svg'
-                        />
-                        <a
-                          rel='noreferrer noopener'
-                          target='_blank'
-                          href='https://wikibank.eu'
-                        >
-                          WikiBank.eu
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='content__geo grid-x align-center'>
-                    <div className='tooltip'>
-                      <div>
-                        <img alt='wikibank' src='./images/wikibank-fleg.png' />
-                      </div>
-                      <span>
-                        <FormattedMessage defaultMessage='Seville' />
-                      </span>
-                    </div>
-                    <img
-                      className='planet'
-                      alt='image'
-                      src='./images/wikibank-world.png'
-                    />
-                  </div>
-                </div>
-                <div className='image cell large-12 small-24 grid-y align-middle'>
-                  <img alt='paywise' src='./images/wikibank-iphone.png' />
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className='community grid-x align-justify'>
-                <div className='content cell large-10 small-24 grid-y align-center'>
-                  <div>
-                    <div className='content__logo'>
-                      <img alt='SeedBed' src='./images/seedbed-logo.jpg' />
-                    </div>
-                    <div className='content__text'>
-                      <FormattedMessage
-                        defaultMessage='Seedbed is reimagining how savings groups work using a non-custodial app. Using the Seedbed app,
-                      community managers can manage local savings groups that improve access to credit and powered by
-                      smart-contracts behind the scenes.'
-                      />
-                    </div>
-                    <div className='content__metadata grid-x align-middle'>
-                      <div className='grid-x cell shrink align-middle'>
-                        <img
-                          className='app_icon'
-                          alt='play-store'
-                          src='./images/google_play_mini.png'
-                        />
-                        <div className='grid-x currency'>
-                          <a
-                            rel='noreferrer noopener'
-                            target='_blank'
-                            href='https://app.fuse.io/1uBjztEBo6'
-                          >
-                            SeedBed app
-                          </a>
-                        </div>
-                      </div>
-                      <div className='grid-x cell shrink align-middle'>
-                        <img
-                          className='app_icon'
-                          alt='apple-store'
-                          src='./images/apple-mini.svg'
-                        />
-                        <div className='grid-x currency'>
-                          <a
-                            rel='noreferrer noopener'
-                            target='_blank'
-                            href='https://apps.apple.com/us/app/id1491139261'
-                          >
-                            SeedBed app
-                          </a>
-                        </div>
-                      </div>
-                      <div className='grid-x align-middle'>
-                        <img
-                          alt='link-icon'
-                          className='link_icon'
-                          src='./images/link-icon.svg'
-                        />
-                        <a
-                          rel='noreferrer noopener'
-                          target='_blank'
-                          href='https://www.seedbed.io/'
-                        >
-                          SeedBed.io
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='content__geo grid-x align-center'>
-                    <div className='tooltip'>
-                      <div>
-                        <img alt='seedbed' src='./images/israel-fleg.png' />
-                      </div>
-                      <span>
-                        <FormattedMessage defaultMessage='Tel aviv' />
-                      </span>
-                    </div>
-                    <img
-                      className='planet'
-                      alt='image'
-                      src='./images/world-sedbed.png'
-                    />
-                  </div>
-                </div>
-                <div className='image cell large-12 small-24 grid-y align-middle'>
-                  <img alt='paywise' src='./images/Iphone-sedbed.png' />
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className='community grid-x align-justify'>
-                <div className='content cell large-10 small-24 grid-y align-center'>
-                  <div>
-                    <div className='content__logo'>
-                      <img
-                        alt='Wepy'
-                        src='./images/Local champtions-logo.jpg'
-                      />
-                    </div>
-                    <div className='content__text'>
-                      <FormattedMessage
-                        defaultMessage='LocalChampions allows users to buy fresh produce from local urban manufacturers in Berlin. It’s
-                      purpose is increase awareness for local supply chains and incentivize consumers to support those
-                      supply chains using the “Local Voucher”.'
-                      />
-                    </div>
-                    <div className='content__metadata grid-x align-middle'>
-                      <img
-                        className='app_icon'
-                        alt='play-store'
-                        src='./images/google_play_mini.png'
-                      />
-                      <div className='grid-x currency'>
-                        <a
-                          rel='noreferrer noopener'
-                          target='_blank'
-                          href='https://app.fuse.io/ParPbwisi6'
-                        >
-                          LocalChampions app
-                        </a>
-                      </div>
-                      <div className='grid-x align-middle'>
-                        <img
-                          alt='link-icon'
-                          className='link_icon'
-                          src='./images/link-icon.svg'
-                        />
-                        <a
-                          rel='noreferrer noopener'
-                          target='_blank'
-                          href='https://localchampions.de/'
-                        >
-                          LocalChampions.de
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='content__geo grid-x align-center'>
-                    <div className='tooltip'>
-                      <div>
-                        <img
-                          alt='LocalChamions'
-                          src='./images/germany-fleg.png'
-                        />
-                      </div>
-                      <span>
-                        <FormattedMessage defaultMessage='Berlin' />
-                      </span>
-                    </div>
-                    <img
-                      className='planet'
-                      alt='image'
-                      src='./images/world.png'
-                    />
-                  </div>
-                </div>
-                <div className='image cell large-12 small-24 grid-y align-middle'>
-                  <img alt='paywise' src='./images/Iphone-local-iphone.png' />
-                </div>
-              </div>
-            </SwiperSlide>
-
-            {/* LAAST */}
-
-            <SwiperSlide>
-              <div className='community grid-x align-justify'>
-                <div className='content cell large-10 small-24 grid-y align-center'>
-                  <div>
-                    <div className='content__logo'>
-                      <img
-                        alt='mystic'
-                        src='./images/mystic.png'
-                        style={{ height: '72px', width: '103px' }}
-                      />
-                    </div>
-                    <div className='content__text'>
-                      <FormattedMessage defaultMessage='Payments for music events in Thailand. Festival goers exchange Thai Bhat for MYST token on arrival and use it to purchase food, drink, activities and merchandise. Operated by Bitazza, a local digital asset exchange, the solution allows for rapid, cost-effective deployment of a fully mobile POS. ' />
-                    </div>
-                    <div className='content__metadata grid-x align-middle'>
-                      <img
-                        className='app_icon'
-                        alt='play-store'
-                        src='./images/google_play_mini.png'
-                      />
-                      <div className='grid-x currency'>
-                        <a
-                          rel='noreferrer noopener'
-                          target='_blank'
-                          href='https://play.google.com/store/apps/details?id=com.bitazza.wallet'
-                        >
-                          Mystic Valley app
-                        </a>
-                      </div>
-                      <div className='grid-x cell shrink align-middle'>
-                        <img
-                          className='app_icon'
-                          alt='apple-store'
-                          src='./images/apple-mini.svg'
-                        />
-                        <div className='grid-x currency'>
-                          <a
-                            rel='noreferrer noopener'
-                            target='_blank'
-                            href='https://apps.apple.com/us/app/mystic-valley/id1539136057'
-                          >
-                            Mystic Valley app
-                          </a>
-                        </div>
-                      </div>
-                      <div
-                        className='grid-x align-middle'
-                        style={{ marginTop: '30px' }}
+                  <div className='content__metadata'>
+                    <div className='grid-x align-middle link_icon'>
+                      <img src={Link} />
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://itsaboutpeepl.com/'
                       >
-                        <img
-                          alt='link-icon'
-                          className='link_icon'
-                          src='./images/link-icon.svg'
-                        />
-                        <a
-                          rel='noreferrer noopener'
-                          target='_blank'
-                          href='https://drive.google.com/file/d/18DSK_lXCsZqHnT7J7pwIyF3ii0w6H1mG/view'
-                        >
-                          Mystic Valley
-                        </a>
-                      </div>
+                        Learn more about Peepl Eat
+                      </a>
                     </div>
-                  </div>
-                  <div className='content__geo grid-x align-center'>
-                    <div className='tooltip'>
-                      <div>
-                        <img
-                          alt='mysticvalley'
-                          src='./images/valley-fleg.png'
-                        />
-                      </div>
-                      <span>
-                        <FormattedMessage defaultMessage='Thailand' />
-                      </span>
+                    <div className='grid-x align-middle link_icon'>
+                      <img src={Link} />
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://itsaboutpeepl.com/'
+                      >
+                        Learn more about GBPX token
+                      </a>
                     </div>
-                    <img
-                      className='planet'
-                      alt='image'
-                      src='./images/valley-world.png'
-                    />
                   </div>
                 </div>
-                <div className='image cell large-12 small-24 grid-y align-middle'>
-                  <img alt='valley' src='./images/valley-iphone.png' />
+                <div className='image'>
+                  <img alt='peepl' src={PeeplIphone} />
                 </div>
               </div>
             </SwiperSlide>
-            <div ref={paginationRef} className='communities__pagination' />
-            <div
-              ref={nextRef}
-              className='communities__button communities__button--next'
-            />
-            <div
-              ref={prevRef}
-              className='communities__button communities__button--prev'
-            />
+
+            <SwiperSlide>
+              <div className='community'>
+                <div className='content'>
+                  <div className='content__logo'>
+                    <img alt='peepl' src={FusecashLogo} />
+                  </div>
+                  <div className='content__text'>
+                    It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout
+                  </div>
+                  <div className='content__metadata'>
+                    <div className='grid-x align-middle link_icon'>
+                      <img src={Link} />
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://itsaboutpeepl.com/'
+                      >
+                        Learn more about Fuse Dollar
+                      </a>
+                    </div>
+                    <div className='grid-x align-middle link_icon'>
+                      <img src={Link} />
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://itsaboutpeepl.com/'
+                      >
+                        Learn more about Fuse Dollar token
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className='image'>
+                  <img alt='peepl' src={PeeplIphone} />
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className='community'>
+                <div className='content'>
+                  <div className='content__logo'>
+                    <img alt='peepl' src={GoodDollarLogo} />
+                  </div>
+                  <div className='content__text'>
+                    It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout
+                  </div>
+                  <div className='content__metadata'>
+                    <div className='grid-x align-middle link_icon'>
+                      <img src={Link} />
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://www.gooddollar.org/'
+                      >
+                        Learn more about Good Dollar
+                      </a>
+                    </div>
+                    <div className='grid-x align-middle link_icon'>
+                      <img src={Link} />
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://whitepaper.gooddollar.org/'
+                      >
+                        Learn more about GoodDollar token
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className='image'>
+                  <img alt='GoodDollarIphone' src={GoodDollarIphone} />
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className='community'>
+                <div className='content'>
+                  <div className='content__logo'>
+                    <img alt='peepl' src={ComunitariaLogo} />
+                  </div>
+                  <div className='content__text'>
+                    It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout
+                  </div>
+                  <div className='content__metadata'>
+                    <div className='grid-x align-middle link_icon'>
+                      <img src={Link} />
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://comunitaria.com/'
+                      >
+                        Learn more about Comunitaria
+                      </a>
+                    </div>
+                    <div className='grid-x align-middle link_icon'>
+                      <img src={Link} />
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://comunitaria.com/en/about-wikibank/'
+                      >
+                        Learn more about ILLA token
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className='image'>
+                  <img alt='ComunitariaIphone' src={ComunitariaIphone} />
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className='community'>
+                <div className='content'>
+                  <div className='content__logo'>
+                    <img alt='peepl' src={KolektivoLogo} />
+                  </div>
+                  <div className='content__text'>
+                    It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout
+                  </div>
+                  <div className='content__metadata'>
+                    <div className='grid-x align-middle link_icon'>
+                      <img src={Link} />
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://kolektivo.co/'
+                      >
+                        Learn more about Kolektivo labs
+                      </a>
+                    </div>
+                    <div className='grid-x align-middle link_icon'>
+                      <img src={Link} />
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://kolektivo.co/'
+                      >
+                        Learn more about KOK token
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className='image'>
+                  <img alt='ComunitariaIphone' src={KolektivoIphone} />
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className='community'>
+                <div className='content'>
+                  <div className='content__logo'>
+                    <img alt='peepl' src={MysticLogo} />
+                  </div>
+                  <div className='content__text'>
+                    It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout
+                  </div>
+                  <div className='content__metadata'>
+                    <div className='grid-x align-middle link_icon'>
+                      <img src={Link} />
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://kolektivo.co/'
+                      >
+                        Learn more about Kolektivo labs
+                      </a>
+                    </div>
+                    <div className='grid-x align-middle link_icon'>
+                      <img src={Link} />
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://kolektivo.co/'
+                      >
+                        Learn more about KOK token
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className='image'>
+                  <img alt='ComunitariaIphone' src={MysticIphone} />
+                </div>
+              </div>
+            </SwiperSlide>
+
+            {/* <div ref={paginationRef} className='communities__pagination' /> */}
+            <div ref={nextRef} className='communities__button communities__button--next'>Next</div>
+            <div ref={prevRef} className='communities__button communities__button--prev'>Previous</div>
           </Swiper>
         </div>
       </div>

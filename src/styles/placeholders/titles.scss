@@ -13,3 +13,42 @@
   line-height: 1.38;
   letter-spacing: normal;
 }
+
+%title {
+  font-size: 2.063em;
+  color: $color-dark;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+}
+
+%subtitle {
+  font-size: 1.688em;
+  color: $color-dark;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.01px;
+}
+
+%secondary-title {
+  font-size: 1.25em;
+  color: $color-dark;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.01px;
+}
+
+%text {
+  font-size: 1.125em;
+  color: $color-secondary;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+}
