@@ -8,11 +8,6 @@ const SectionSix = () => {
         <div className='token_inflation'>
           <div className='content'>
             <div className='title'>|  Inflation</div>
-          </div>
-          <div className='content'>
-            <div className='title'>|  Fees</div>
-          </div>
-          <div className='content'>
             <div className='text'>
               5% inflation in the network is distributed between the validators. Each cycle (A cycle is all transactions conducted in 48 hours) the validators with the highest amount of Fuse tokens staked will split the rewards based on their stake.
               <br />
@@ -21,6 +16,7 @@ const SectionSix = () => {
             </div>
           </div>
           <div className='content'>
+            <div className='title'>|  Fees</div>
             <div className='text'>
               Large users on Fuse can participate more closely in the governance and the operation of the network and plan ahead so instead of having high operation costs, they can become a stakeholder and benefit from the network’s growth.
               The network charges fees on every transaction that goes to the validators and is capped at 1 cent $ per transaction.
