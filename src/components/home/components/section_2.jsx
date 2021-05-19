@@ -90,9 +90,11 @@ const BannerItem = ({
 
 const Banner = () => {
   return (
-    <section className='info_banner'>
-      <div className='info_banner__items'>
-        {bannerItems.map((item, index) => <BannerItem key={index} {...item} />)}
+    <section className='info_banner__wrapper'>
+      <div className='info_banner__container'>
+        <div className='info_banner'>
+          {bannerItems.map((item, index) => <BannerItem key={index} {...item} />)}
+        </div>
       </div>
     </section>
   )

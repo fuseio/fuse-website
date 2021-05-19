@@ -16,8 +16,6 @@ function SelectLanguage ({ history }) {
   const [lang, setLang] = useLang()
   const iconRef = useRef(null)
 
-  // const isNetworkHeader = true // history.location.pathname.includes('network')
-  // const isAboutHeader = !history.location.pathname.includes('about')
   const isWhite = !history.location.pathname.includes('about')
 
   useOutsideClick(iconRef, () => {

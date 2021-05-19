@@ -163,7 +163,8 @@
   }
 
   @include element(title) {
-    @extend %subtitle;
+    @extend %title;
+    // padding-bottom: 2em;
     padding: 2em 0;
   }
 
@@ -421,7 +422,6 @@
   @include block(title) {
     @extend %title;
     font-size: 3.125em;
-    line-height: 1.16;
     color: #041926;
 
     @include breakpoint(medium down) {
@@ -451,8 +451,8 @@
       }
 
       img {
-        width: 41px;
-        height: 41px;
+        width: 71px;
+        height: 71px;
       }
 
       h3 {
@@ -485,7 +485,7 @@
 
     @include block(title) {
       @extend %title;
-      font-size: 2.813em;
+      // font-size: 2.813em;
       font-weight: bold;
 
       @include breakpoint(medium down) {

@@ -26,7 +26,7 @@ const blogs = [
   }
 ]
 
-function Item({
+function Item ({
   title,
   href,
   date,
@@ -66,10 +66,9 @@ const SectionFour = () => {
               </p>
               <a
                 rel='noreferrer noopener' target='_blank' href='https://medium.com/fusenet'
-                className='section-C__read-more section-link'
+                className='main_button section-C__read-more section-link'
               >
                 <span><FormattedMessage defaultMessage='Go to Blog' /></span>
-                <img style={{ marginLeft: '.3em' }} src='./images/section-C-arrow-right.svg' alt='' />
               </a>
             </div>
             <div className='blogs__wrapper cell large-auto grid-x align-spaced'>

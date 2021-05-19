@@ -71,72 +71,96 @@
 }
 
 @include block(info_banner) {
-  width: 100%;
-  background-color: #0a2540;
   @include breakpoint(medium up) {
-    padding: 23px 550px 10px 507px;
-    height: 66px;
+    @include xy-grid();
+    @include flex-align(null, middle);
   }
   @include breakpoint(medium down) {
-    padding: 20px;
+    @include xy-grid(vertical);
+    @include flex-align(justify, middle);
   }
-  @include element(items) {
+
+  @include element(container) {
+    @include xy-grid-container();
+    width: 100%;
+  }
+  @include element(wrapper) {
+    background-color: #0a2540;
+    @include xy-grid();
+    @include flex-align(justify, middle);
+
     @include breakpoint(medium up) {
-      @include xy-grid();
-      @include flex-align(center, middle);
-      // @include xy-cell(8, null, 0);
+      height: 45px;
     }
 
     @include breakpoint(medium down) {
-      @include xy-cell(24, null, 0);
-      @include xy-grid(vertical);
-      @include flex-align(center, middle);
+      padding: 3em 0;
     }
-    @include block(item) {
-      @include breakpoint(medium up) {
-        @include xy-grid();
-        @include flex-align(center, middle);
-        @include xy-cell(8, null, 0);
-        &:not(:first-child):not(:last-child) {
-          border-left: 1px solid white;
-          border-right: 1px solid white;
-        }
+  }
+
+  @include breakpoint(medium up) {
+    @include xy-grid();
+    @include flex-align(center, middle);
+    // @include xy-cell(8, null, 0);
+  }
+
+  @include breakpoint(medium down) {
+    @include xy-cell(24, null, 0);
+    @include xy-grid(vertical);
+    @include flex-align(center, middle);
+  }
+  @include block(item) {
+    @include breakpoint(medium up) {
+      @include xy-grid();
+      @include flex-align(center, middle);
+      @include xy-cell(8, null, 0);
+      &:not(:first-child) {
+        border-left: 1px solid white;
+        // border-right: 1px solid white;
       }
+    }
 
-      @include breakpoint(medium down) {
-        &:not(:first-child):not(:last-child) {
-          padding: 1em 0;
-          // &::before {
-          //   position: absolute;
-          //   content: "";
-          //   text-align: center;
-          //   padding: .5em;
-          //   border-top: 1px solid white;
-          //   border-bottom: 1px solid white;
-          // }
+    @include breakpoint(medium down) {
+      &:not(:first-child):not(:last-child) {
+        padding: 1em 0;
+        // &::before {
+        //   position: absolute;
+        //   content: "";
+        //   text-align: center;
+        //   padding: .5em;
+        //   border-top: 1px solid white;
+        //   border-bottom: 1px solid white;
+        // }
 
-          // border-top: 1px solid white;
-          // border-bottom: 1px solid white;
-        }
+        // border-top: 1px solid white;
+        // border-bottom: 1px solid white;
       }
+    }
 
-      > img {
-        width: 15px;
-        height: 15px;
+    @include breakpoint(large up) {
+      @include xy-grid();
+      @include flex-align(center, middle);
+      @include xy-cell(6, null, 0);
+      &:not(:first-child) {
+        border-left: 1px solid white;
       }
+    }
+    > img {
+      width: 15px;
+      height: 15px;
+    }
 
-      @include block(title) {
-        font-size: 1.231em;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: 0.01px;
-        color: $color-white;
+    @include block(title) {
+      font-size: 1.231em;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.01px;
+      color: $color-white;
 
-        > span {
-          font-weight: bold;
-        }
+      > span {
+        font-weight: bold;
       }
     }
   }

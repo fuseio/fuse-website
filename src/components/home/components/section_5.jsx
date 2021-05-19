@@ -1,17 +1,17 @@
 import React, { useRef, useState } from 'react'
-import { FormattedMessage } from 'react-intl'
+// import { FormattedMessage } from 'react-intl'
 import classNames from 'classnames'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
-import paywiseBg from '@/assets/images/paywise-background.png'
-import digitalrandeBg from '@/assets/images/digitalrand-image.png'
-import loclaPayBg from '@/assets/images/Local-pay-background.png'
-import roostBg from '@/assets/images/roots-background.png'
-import wepyBg from '@/assets/images/wepy-background.png'
-import seedbedBg from '@/assets/images/seedbed-splesh.png'
-import wikibankBg from '@/assets/images/wikibank-background.png'
-import localChamionsBg from '@/assets/images/splesh-local.png'
-import valleyBg from '@/assets/images/vally-background.png'
+// import paywiseBg from '@/assets/images/paywise-background.png'
+// import digitalrandeBg from '@/assets/images/digitalrand-image.png'
+// import loclaPayBg from '@/assets/images/Local-pay-background.png'
+// import roostBg from '@/assets/images/roots-background.png'
+// import wepyBg from '@/assets/images/wepy-background.png'
+// import seedbedBg from '@/assets/images/seedbed-splesh.png'
+// import wikibankBg from '@/assets/images/wikibank-background.png'
+// import localChamionsBg from '@/assets/images/splesh-local.png'
+// import valleyBg from '@/assets/images/vally-background.png'
 import FuseLogo from '@/assets/img/use_cases/fuse-logo.svg'
 import Link from '@/assets/img/use_cases/link.svg'
 import Apple from '@/assets/img/apple_fork.svg'
@@ -48,62 +48,6 @@ const backgroundImages = [
   ComunitariahBg,
   KolektivohBg,
   MystichBg
-]
-const items = [
-  {
-    logo: PeeplLogo,
-    text: 'Sustainable local economy project in the United Kingdom to decentralize take away food ordering.',
-    learnText: 'Peepl Eat',
-    learnLink: 'https://itsaboutpeepl.com/',
-    iosLink: 'https://apps.apple.com/gb/app/peepl-wallet/id1524643325',
-    androidLink: 'https://play.google.com/store/apps/details?id=com.itsaboutpeepl.peepl',
-    iphoneImage: PeeplIphone,
-  },
-  {
-    logo: FusecashLogo,
-    text: 'It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout.',
-    learnText: 'Fuse Dollar',
-    learnLink: 'https://fuse.cash/',
-    iosLink: 'https://apps.apple.com/us/app/fuse-cash/id1559937899',
-    androidLink: 'https://play.google.com/store/apps/details?id=io.fuse.cash',
-    iphoneImage: FusecashIphone,
-  },
-  {
-    logo: GoodDollarLogo,
-    text: 'It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout.',
-    learnText: 'Good Dollar',
-    learnLink: 'https://www.gooddollar.org/',
-    iosLink: 'https://apps.apple.com/us/app/fuse-cash/id1559937899',
-    androidLink: 'https://play.google.com/store/apps/details?id=io.fuse.cash',
-    iphoneImage: GoodDollarIphone,
-  },
-  {
-    logo: ComunitariaLogo,
-    text: 'It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout.',
-    learnText: 'Comunitaria',
-    learnLink: 'https://comunitaria.com/',
-    iosLink: 'https://apps.apple.com/us/app/wikibank-eu/id1509481908',
-    androidLink: 'https://play.google.com/store/apps/details?id=io.fuse.cash',
-    iphoneImage: ComunitariaIphone,
-  },
-  {
-    logo: KolektivoLogo,
-    text: 'It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout.',
-    learnText: 'Kolektivo labs',
-    learnLink: 'https://kolektivo.co/',
-    iosLink: 'https://apps.apple.com/us/app/curadai/id1553242607',
-    androidLink: 'https://play.google.com/store/apps/details?id=io.fuse.curadai',
-    iphoneImage: KolektivoIphone,
-  },
-  {
-    logo: MysticLogo,
-    text: 'It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout.',
-    learnText: 'Mystic valley',
-    learnLink: 'https://bitazza.com/',
-    iosLink: 'https://apps.apple.com/us/app/mystic-valley/id1539136057',
-    androidLink: 'https://play.google.com/store/apps/details?id=io.fuse.curadai',
-    iphoneImage: MysticIphone,
-  }
 ]
 
 const SectionFive = () => {
@@ -168,7 +112,7 @@ const SectionFive = () => {
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      Download:&nbsp;
+                      <div className='download'>Download to your phone:</div>&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
@@ -213,7 +157,7 @@ const SectionFive = () => {
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      Download:&nbsp;
+                      <div className='download'>Download to your phone:</div>&nbsp;&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
@@ -286,7 +230,7 @@ const SectionFive = () => {
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      Download:&nbsp;
+                      <div className='download'>Download to your phone:</div>&nbsp;&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
@@ -331,7 +275,7 @@ const SectionFive = () => {
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      Download:&nbsp;
+                      <div className='download'>Download to your phone:</div>&nbsp;&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
@@ -376,7 +320,7 @@ const SectionFive = () => {
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      Download:&nbsp;
+                      <div className='download'>Download to your phone:</div>&nbsp;&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'

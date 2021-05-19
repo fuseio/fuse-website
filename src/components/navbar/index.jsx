@@ -9,12 +9,10 @@ import AnimatedNavbar from '@/components/navbar/AnimatedNavbar'
 import SelectLanguage from '../shared/select_language'
 import MobileMenu from './MobileMenu'
 
-function Header({ history }) {
+function Header ({ history }) {
   const [isOpen, setMenuOpen] = useState(false)
   const hamburgerRef = useRef(null)
 
-  // const isNetworkHeader = true // history.location.pathname.includes('network')
-  // const isAboutHeader = !history.location.pathname.includes('about')
   const isWhite = !history.location.pathname.includes('about')
 
   useOutsideClick(hamburgerRef, () => {

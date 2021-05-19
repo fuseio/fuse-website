@@ -105,11 +105,10 @@
           @include xy-cell(12, null, 0);
           height: 630px;
           > img {
-            position: absolute;
             min-width: 350px;
-            min-height: 630px;
-            max-width: 350px;
-            max-height: 630px;
+            min-height: 500px;
+            // max-width: 350px;
+            max-height: 500px;
           }
         }
 
@@ -157,6 +156,9 @@
           }
 
           @include block(link_icon) {
+            @include block(download) {
+
+            }
             img {
               margin-right: 0.25em;
               width: 15px;

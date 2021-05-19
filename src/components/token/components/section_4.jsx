@@ -1,5 +1,5 @@
 import React from 'react'
-import FuseTokenImage from '@/assets/img/fuse-token-image.png'
+import Kyber from '@/assets/img/purchase_kyber.png'
 import OneInch from '@/assets/img/purchase_1inch.png'
 import Loopring from '@/assets/img/purchase_loopring.png'
 import Uniswap from '@/assets/img/purchase_uniswap.png'
@@ -13,7 +13,7 @@ const items = [
     name: 'Uniswap'
   },
   {
-    icon: Uniswap,
+    icon: Kyber,
     name: 'Kyber network'
   },
   {
