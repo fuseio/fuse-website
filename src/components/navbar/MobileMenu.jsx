@@ -9,7 +9,7 @@ import Studio from '@/assets/images/dropdown/studio.svg'
 import Staking from '@/assets/images/dropdown/staking.svg'
 import Fusecash from '@/assets/images/dropdown/fusecash.svg'
 import FuseSwap from '@/assets/images/dropdown/fuseswap.svg'
-import Network from '@/assets/images/dropdown/network.svg'
+import FuseToken from '@/assets/images/dropdown/network.svg'
 import Docs from '@/assets/images/dropdown/docs.svg'
 import Status from '@/assets/images/dropdown/status.svg'
 import Explorer from '@/assets/images/dropdown/explorer.svg'
@@ -19,6 +19,7 @@ import Twitter from '@/assets/images/dropdown/twitter_nav.svg'
 import Telegram from '@/assets/images/dropdown/telegram.svg'
 import Medium from '@/assets/images/dropdown/medium_nav.svg'
 import Github from '@/assets/images/dropdown/github_nav.svg'
+import Network from '@/assets/images/dropdown/network1.svg'
 
 const menuItems = [
   {
@@ -64,6 +65,12 @@ const menuItems = [
         title: 'Documentation',
         icon: Docs,
         url: 'https://docs.fuse.io'
+      },
+      {
+        title: 'Fuse token',
+        icon: FuseToken,
+        subTitle: 'Learn how it works',
+        route: './token'
       },
       {
         title: 'Service status',
@@ -140,7 +147,6 @@ function MobileMenu ({ history }) {
   const [isOpen, setMenuOpen] = useState(false)
   const hamburgerRef = useRef(null)
 
-  // const isNetworkHeader = true // history.location.pathname.includes('network')
   const isWhite = !history.location.pathname.includes('about')
 
   useOutsideClick(hamburgerRef, () => {
