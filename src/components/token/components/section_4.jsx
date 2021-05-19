@@ -10,28 +10,37 @@ import Bubble from '@/assets/img/bubble.png'
 const items = [
   {
     icon: Uniswap,
-    name: 'Uniswap'
+    name: 'Uniswap',
+    link: 'https://app.uniswap.org/#/swap?outputCurrency=0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d'
   },
   {
     icon: Kyber,
-    name: 'Kyber network'
+    name: 'Kyber network',
+    link: 'https://kyberswap.com/swap/eth-fuse'
   },
   {
     icon: OneInch,
-    name: '1Inch exchange'
+    name: '1Inch exchange',
+    link: 'https://app.1inch.io/#/1/swap/ETH/FUSE'
   },
   {
     icon: Loopring,
-    name: 'Loopring'
+    name: 'Loopring',
+    link: 'https://exchange.loopring.io/swap/FUSE-ETH'
   }
 ]
 
-const Item = ({ icon, name }) => {
+const Item = ({ icon, name, link }) => {
   return (
-    <div className='item'>
+    <a
+      href={link}
+      rel='noreferrer noopener'
+      target='_blank'
+      className='item'
+    >
       <img src={icon} />
       <h3>{name}</h3>
-    </div>
+    </a>
   )
 }
 

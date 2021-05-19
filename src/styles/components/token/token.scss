@@ -450,6 +450,36 @@
         }
       }
 
+      &::after {
+        background-image: url(images/arrow.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        margin-left: 0.2em;
+        width: 18px;
+        height: 11px;
+        display: inline-block;
+        padding-left: 8px;
+        content: ""; // arrow right unicode
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: transform 0.3s ease-out;
+        -ms-transition: transform 0.3s ease-out;
+        -o-transition: transform 0.3s ease-out;
+        transition: transform 0.3s ease-out;
+      }
+    
+      &:hover {
+        // background-image: unset;
+        // background-color: #f8ff00;
+    
+        &::after {
+          -webkit-transform: translateX(4px);
+          -moz-transform: translateX(4px);
+          -ms-transform: translateX(4px);
+          -o-transform: translateX(4px);
+          transform: translateX(4px);
+        }
+      }
+
       img {
         width: 71px;
         height: 71px;
