@@ -71,6 +71,7 @@
 
     > img {
       position: absolute;
+      height: 542px;
 
       @include breakpoint(medium down) {
         position: unset;
