@@ -86,7 +86,7 @@ const members = [
 
 const TeamMember = ({ picture, name, role, linked, isLinkedIn }) => {
   return (
-    <div className='card cell medium-6 small-12'>
+    <div className='card cell medium-6 small-24'>
       <div className='card__content'>
         <img src={picture} alt={name.toLowerCase()} />
         <h2 className='name'>{name}</h2>
@@ -116,7 +116,7 @@ const SectionThree = () => {
       <div className='section_three__container'>
         <div className='section_three'>
           <h1 className='title'>Meet the Team</h1>
-          <div className='grid-x align-middle align-justify'>
+          <div className='grid-x align-middle align-justify items'>
             {members.map((member, index) => <TeamMember key={index} {...member} />)}
           </div>
         </div>

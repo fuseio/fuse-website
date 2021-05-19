@@ -1,7 +1,7 @@
 import React from 'react'
 
 const TableHeader = ({ name, icon }) => (
-  <div>
+  <div className='heade'>
     <img src={icon} />
     <span>{name}</span>
   </div>

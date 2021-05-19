@@ -17,7 +17,7 @@ export default ({
     <tr
       {...row.getRowProps({
         style,
-        className: 'table__body__row grid-x align-middle align-spaced'
+        className: 'table__body__row'
       })}
     >
       {row.cells.map(cell => {
@@ -26,7 +26,7 @@ export default ({
           ? 'table__body__cell cell grid-x align-start align-middle small-6'
           : `table__body__cell cell grid-x align-center align-middle small-${Math.ceil(24 / row.cells.length)}`
         return (
-          <td key={index} {...cell.getCellProps({ className })}>
+          <td key={index} {...cell.getCellProps({ className: cell.column.collapse ? 'collapse' : '' })}>
             {cell.render('Cell')}
           </td>
         )

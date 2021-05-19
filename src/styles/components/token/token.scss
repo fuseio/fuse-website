@@ -159,8 +159,6 @@
     padding: 2em 0 4em;
     @include xy-grid();
     @include flex-align(justify, middle);
-    // height: 798px;
-    // background-image: radial-gradient(circle at 67% 50%, #455765, #001929 25%);
     background-color: #f6f9fc;
   }
 
@@ -217,25 +215,92 @@
 @include block(table) {
   width: 100%;
   padding: 20px;
+  border-spacing: 0;
+
+  @include block(heade) {
+    @include xy-grid(vertical, false);
+    @include flex-align(left, null);
+
+    span {
+      text-align: left;
+      margin-top: 0.2em;
+    }
+    @include breakpoint(medium up) {
+      img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    @include breakpoint(medium down) {
+      img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+  tr {
+    :last-child {
+      td {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  th,
+  td {
+    margin: 0;
+    padding: 0.5rem;
+    // border-bottom: 1px solid black;
+    // border-right: 1px solid black;
+    /* The secret sauce */
+    /* Each cell should grow equally */
+    width: 1%;
+    /* But "collapsed" cells should be as small as possible */
+    &.collapse {
+      width: 0.0000000001%;
+    }
+    :last-child {
+      border-right: 0;
+    }
+  }
 
   @include element(wrapper) {
     display: block;
+    max-width: 100%;
     margin-top: 3em;
     background: $color-white;
     border: solid 1px #e4e4e4;
     width: 100%;
+
+    @include breakpoint(medium up) {
+    }
+
+    @include breakpoint(medium down) {
+      overflow-y: hidden;
+      overflow-x: scroll;
+    }
   }
 
   @include element(header) {
     padding: 1em;
+    @extend %secondary-title;
+
+    @include breakpoint(medium up) {
+    }
+
+    @include breakpoint(medium down) {
+      // font-size: 8.5px;
+      // font-size: 7.7px;
+    }
     @include element(cell) {
-      @include xy-grid();
-      @include flex-align(center, middle);
-      @extend %secondary-title;
+      // @include xy-grid();
+      // @include flex-align(center, middle);
 
       > div {
-        @include xy-grid(vertical);
-        @include flex-align(center, middle);
+        // @include xy-grid(vertical);
+        // @include flex-align(center, middle);
 
         img {
           margin-bottom: 1em;
@@ -262,8 +327,13 @@
     }
 
     @include block(number) {
+      @include xy-grid(horizontal, false);
+      @include flex-align(left, null);
       @extend %text;
       color: $color-black;
+      @include breakpoint(medium down) {
+        // font-size: 7.7px;
+      }
 
       > img {
         margin-right: 0.4em;
@@ -275,6 +345,10 @@
       // @include flex-align(center, middle);
       @extend %text;
       color: $color-black;
+
+      @include breakpoint(medium down) {
+        font-size: 7.7px;
+      }
     }
   }
 }
