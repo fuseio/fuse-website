@@ -4,25 +4,27 @@
 	margin: auto;
 
 	> div {
-		margin-bottom: 3em;
-		// &:not(:last-child) {
-		// }
+		&:not(:last-child) {
+			margin-bottom: 3em;
+		}
+		@include breakpoint(medium down) {
+			align-self: baseline;
+		}
 	}
 
 	@include xy-grid(vertical);
 	@include flex-align(justify, middle);
 	@include element(wrapper) {
 		padding: 4em;
+		@include breakpoint(medium down) {
+			padding: 4em 20px;
+		}
 		background: linear-gradient(180deg, #002740 0%, #001929 100%);
 		position: relative;
 
 		// @include modifier(dark) {
 		// 	background-color: #001929;
 		// }
-	}
-
-	@include breakpoint(medium down) {
-		transform: unset;
 	}
 
 	@include element(container) {
@@ -57,7 +59,7 @@
 
 	@include element(icons) {
 		@include breakpoint(medium down) {
-			margin: 2em 0;
+			// margin: 2em 0;
 		}
 	}
 
@@ -235,12 +237,16 @@
 		@include flex-align(spaced, middle);
 	}
 	@include breakpoint(medium down) {
-		order: 3;
 		@include xy-grid();
 		@include flex-align(null, middle);
 	}
 
 	@include element(item) {
+		@include flex-align(null, middle);
+		@include breakpoint(medium down) {
+			@include xy-cell(12, null, 0);
+			min-height: 50px;
+		}
 		font-size: 15px;
 		line-height: 18px;
 		color: #ffffff;

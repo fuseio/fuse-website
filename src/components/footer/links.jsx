@@ -101,7 +101,7 @@ const Item = withRouter(({ history, url, title, route }) => {
 
 function Links () {
   return (
-    <div className='grid-x links align-middle align-justify cell small-24 medium-8'>
+    <div className='links cell small-24 medium-8'>
       {
         links.map((item, index) => (
           <Item key={index} {...item} />

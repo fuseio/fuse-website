@@ -10,7 +10,9 @@ import { IntlProvider } from 'react-intl'
 import Header from '@/components/navbar'
 import HomePage from '@/components/home'
 import Network from '@/components/network'
+import Token from '@/components/token'
 import About from '@/components/about'
+import Footer from '@/components/footer'
 import ScrollToTopController from '@/hooks/useScrollToTopController'
 
 import en from '../lang/en.json'
@@ -45,6 +47,9 @@ const App = () => {
                   <Route exact path='/about'>
                     <About />
                   </Route>
+                  <Route exact path='/token'>
+                    <Token />
+                  </Route>
                   <Route exact path='/network'>
                     <Network />
                   </Route>
@@ -52,6 +57,7 @@ const App = () => {
                     <HomePage />
                   </Route>
                 </Switch>
+                <Footer />
                 {/* </ScrollToTopController> */}
               </ConnectedRouter>
             </Provider>

@@ -54,7 +54,7 @@ class AnimatedNavbar extends Component {
   }
 
   render () {
-    const { duration, isAboutHeader, isNetworkHeader } = this.props
+    const { duration } = this.props
     let CurrentDropdown
     let PrevDropdown
     let direction
@@ -85,8 +85,6 @@ class AnimatedNavbar extends Component {
               navbarConfig.map(({ title }, index) => {
                 return (
                   <NavbarItem
-                    isNetworkHeader={isNetworkHeader}
-                    isAboutHeader={isAboutHeader}
                     key={title}
                     title={title}
                     index={index}

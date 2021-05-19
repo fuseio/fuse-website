@@ -68,7 +68,7 @@ const Item = ({ title, images }) => {
         {
           images.map((img, index) => {
             return (
-              <div key={index} className='cell small-11'>
+              <div key={index} className='cell small-10 medium-11'>
                 <img src={img} />
               </div>
             )

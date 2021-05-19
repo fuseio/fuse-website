@@ -17,6 +17,7 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     filename: '[name].[hash].js'
   },
   module: {
@@ -68,7 +69,7 @@ module.exports = {
       },
       {
         test: /\.(gif|png|jpe?g)$/i,
-        exclude: /fonts/,
+        exclude: [/fonts/],
         use: [
           {
             loader: 'file-loader',
@@ -167,18 +168,18 @@ module.exports = {
         }
       }
     }),
-    new HtmlWebpackPlugin({
-      appMountId: 'app',
-      filename: 'index.html',
-      template: path.join(__dirname, 'src', 'index.html'),
-      publicPath: '/'
-    }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false
     }),
     new MiniCssExtractPlugin(),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      appMountId: 'app',
+      filename: 'index.html',
+      template: path.join(__dirname, 'src', 'index.html'),
+      publicPath: '/'
+    })
   ],
   optimization: {
     runtimeChunk: 'single',

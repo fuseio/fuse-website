@@ -78,7 +78,7 @@ const BannerItem = ({
   text
 }) => {
   return (
-    <div className='item grid-x align-middle cell small-8 align-center'>
+    <div className='item grid-x align-middle'>
       <img src={icon} />&nbsp;&nbsp;
       <div className='title'>
         <span>{value}</span>
@@ -90,11 +90,11 @@ const BannerItem = ({
 
 const Banner = () => {
   return (
-    <div className='info_banner'>
-      <div className='info_banner__items grid-x align-middle align-center'>
+    <section className='info_banner'>
+      <div className='info_banner__items'>
         {bannerItems.map((item, index) => <BannerItem key={index} {...item} />)}
       </div>
-    </div>
+    </section>
   )
 }
 

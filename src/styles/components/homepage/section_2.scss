@@ -6,6 +6,10 @@
     padding: 2em 0;
   }
 
+  @include breakpoint(medium down) {
+    padding: 20px;
+  }
+
   @include element(items) {
     @include breakpoint(medium up) {
       @include xy-grid();
@@ -13,7 +17,8 @@
     }
 
     @include breakpoint(medium down) {
-      @include xy-grid();
+      @include xy-grid(vertical, false);
+      @include flex-align(justify, middle);
     }
 
     @include block(item) {
@@ -23,11 +28,22 @@
 
       @include breakpoint(medium down) {
         @include xy-cell(24, null, 0);
+        @include xy-grid(vertical, false);
+        // @include flex-align(justify, middle);
+
+        &:not(:last-child) {
+          margin-bottom: 5em;
+        }
       }
       @include element(image) {
         width: 216px;
         height: 216px;
         margin-bottom: 2em;
+
+        @include breakpoint(medium down) {
+          margin-left: auto;
+          margin-right: auto;
+        }
       }
 
       @include element(text) {
@@ -56,16 +72,54 @@
 
 @include block(info_banner) {
   width: 100%;
-  height: 66px;
-  padding: 23px 550px 10px 507px;
   background-color: #0a2540;
-
+  @include breakpoint(medium up) {
+    padding: 23px 550px 10px 507px;
+    height: 66px;
+  }
+  @include breakpoint(medium down) {
+    padding: 20px;
+  }
   @include element(items) {
+    @include breakpoint(medium up) {
+      @include xy-grid();
+      @include flex-align(center, middle);
+      // @include xy-cell(8, null, 0);
+    }
+
+    @include breakpoint(medium down) {
+      @include xy-cell(24, null, 0);
+      @include xy-grid(vertical);
+      @include flex-align(center, middle);
+    }
     @include block(item) {
-      &:not(:first-child):not(:last-child) {
-        border-left: 1px solid white;
-        border-right: 1px solid white;
+      @include breakpoint(medium up) {
+        @include xy-grid();
+        @include flex-align(center, middle);
+        @include xy-cell(8, null, 0);
+        &:not(:first-child):not(:last-child) {
+          border-left: 1px solid white;
+          border-right: 1px solid white;
+        }
       }
+
+      @include breakpoint(medium down) {
+        &:not(:first-child):not(:last-child) {
+          padding: 1em 0;
+          // &::before {
+          //   position: absolute;
+          //   content: "";
+          //   text-align: center;
+          //   padding: .5em;
+          //   border-top: 1px solid white;
+          //   border-bottom: 1px solid white;
+          // }
+
+          // border-top: 1px solid white;
+          // border-bottom: 1px solid white;
+        }
+      }
+
       > img {
         width: 15px;
         height: 15px;

@@ -21,6 +21,10 @@
   font-stretch: normal;
   font-style: normal;
   letter-spacing: normal;
+
+  @include breakpoint(medium down) {
+    font-size: 1.875em;
+  }
 }
 
 %subtitle {

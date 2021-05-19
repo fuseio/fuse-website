@@ -1,15 +1,29 @@
 @include block(about_main) {
-  background: linear-gradient(90deg, #051928 0%, #0a283e 100%);
-  color: white;
-  @include element(overlay) {
-    padding-top: 6em;
+  @include breakpoint(medium up) {
+    @include xy-grid();
+    @include flex-align(null, middle);
+  }
+  @include breakpoint(medium down) {
+    @include xy-grid(vertical);
+    @include flex-align(justify, middle);
+  }
+
+  @include element(container) {
+    @include xy-grid-container();
+    width: 100%;
+    padding: 10em 0px;
+  }
+
+  @include element(wrapper) {
+    background-color: #f6fafe;
   }
 
   @include element(content) {
     @include block(title) {
-      text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.4);
+      // text-shadow: 0px 0px 12px rgba(255, 255, 255, 0.4);
       font-size: 2.5em;
-      font-weight: 500;
+      padding-bottom: .4em;
+      font-weight: bold;
     }
 
     @include block(text) {
@@ -19,21 +33,48 @@
   }
 
   @include element(image) {
-    justify-content: flex-end;
+    // justify-content: flex-end;
     position: relative;
+    > img {
+      max-height: 450px;
+    }
   }
 }
 
 @include block(section_two) {
   padding: 5em 0px;
 
+  @include breakpoint(medium up) {
+    @include xy-grid(horizontal, false);
+    @include flex-align(null, middle);
+  }
+  @include breakpoint(medium down) {
+    @include xy-grid(vertical, false);
+    @include flex-align(justify, middle);
+  }
+
+  @include element(container) {
+    @include xy-grid-container();
+    width: 100%;
+  }
+
   @include element(wrapper) {
   }
 
-  @include element(text) {
-    font-size: 1.5em;
-    line-height: 33.6px;
-    font-weight: 500;
+  @include block(title) {
+    @extend %title;
+    font-size: 2.25em;
+  }
+
+  @include block(item) {
+    @include xy-grid(horizontal, false);
+    @include flex-align(center, middle);
+    @include xy-cell(4, null, 0);
+
+    > img {
+      max-width: 120px;
+      max-height: 64px;
+    }
   }
 }
 
@@ -41,8 +82,13 @@
   padding: 5em 0px;
 
   @include element(wrapper) {
+    background-color: #f6f9fc;
   }
 
+  @include element(container) {
+    @include xy-grid-container();
+    width: 100%;
+  }
   @include element(text) {
     font-size: 24px;
     line-height: 33.6px;
@@ -52,117 +98,144 @@
   @include block(card) {
     @include element(content) {
       @include xy-grid(vertical, false);
-      @include flex-align(center, middle);
+      @include flex-align(center, top);
+
+      > img {
+        width: 193px;
+        height: 193px;
+      }
 
       @include block(name) {
-        padding-bottom: 0.5rem;
+        padding: 20px 0 0;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.67;
+        letter-spacing: normal;
         color: #4a687b;
+        font-size: 16px;
         font-weight: 500;
-        font-size: 18px;
-        line-height: 20px;
+      }
+
+      @include block(linkedin) {
+        padding-top: 5px;
+        padding-bottom: 20px;
       }
 
       @include block(icons) {
-        padding-top: 0.5rem;
-        padding-bottom: 40px;
         display: flex;
         align-items: center;
-        @include block(linkedin) {
-          padding-left: 9px;
-          padding-bottom: 3px;
-        }
 
         @include block(role) {
-          font-size: 14px;
-          line-height: 16px;
-          color: #7a7a7a;
+          font-size: 12px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.67;
+          letter-spacing: normal;
+          color: #4a687b;
         }
       }
     }
   }
 
   @include block(title) {
-    padding: 2em 0 3em;
-    color: #4a687b;
-    font-size: 1.875em;
-    font-weight: 500;
-    text-align: center;
+    @extend %title;
+    margin-bottom: 1em;
   }
 }
 
 @include block(section_four) {
-  padding-top: 5rem;
-  padding-bottom: 4rem;
-  padding-left: 5em;
-  padding-right: 5em;
-  background: #eef9ff;
-  @include block(title) {
-    color: #4a687b;
-    font-size: 1.875em;
-    font-weight: 500;
-    padding-top: 40px;
-    padding-right: 30px;
+  padding: 3em 0px;
 
-    @include breakpoint(medium down) {
-      text-align: center;
-      padding-right: 0px;
-      font-size: 2.2em;
-      font-weight: bold;
+  @include breakpoint(medium up) {
+    @include xy-grid(horizontal, false);
+    @include flex-align(justify, middle);
+
+    > div {
+      max-width: 500px;
+      @include xy-cell(12, null, 0);
     }
   }
-
-  @include element(image) {
-    min-height: 144px;
-    max-height: 150px;
-    > img {
-      object-fit: contain;
-    }
-
-    @include breakpoint(medium up) {
-      min-height: 144px;
-      max-height: 150px;
-      width: 18.8% !important;
-      > img {
-        object-fit: contain;
-      }
-    }
-
-    @include breakpoint(small down) {
-      width: 100% !important;
-      > img {
-        object-fit: contain;
-      }
-    }
+  @include breakpoint(medium down) {
+    @include xy-grid(vertical, false);
+    @include flex-align(justify, middle);
   }
 
   @include element(container) {
-    hr {
-      border: 1px solid #dde8f0;
-      margin-bottom: 50px;
-    }
+    @include xy-grid-container();
+    width: 100%;
+  }
+
+  @include element(mission) {
+    background-image: linear-gradient(102deg, #b1ffbf 7%, #fff16d 100%);
+    opacity: 0.85;
+    width: 100%;
   }
 
   @include element(wrapper) {
-    @include breakpoint(medium up) {
-      display: flex;
-    }
+    @include xy-grid(vertical, false);
+    @include flex-align(right, middle);
+    height: 845px;
+    background-image: url(/images/office_image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
-  @include block(logos) {
-    position: relative;
-    @include element(overlay) {
-      left: 0;
-      top: 0;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: #eef9ff;
-      mix-blend-mode: color;
+  @include block(title) {
+    @extend %title;
+    font-size: 2.25em;
+  }
+
+  @include block(text) {
+    @extend %title;
+    font-weight: normal;
+    font-size: 2.25em;
+  }
+
+  @include block(item) {
+    @include xy-grid(horizontal, false);
+    @include flex-align(center, middle);
+    @include xy-cell(4, null, 0);
+
+    > img {
+      max-width: 120px;
+      max-height: 64px;
     }
-    @include xy-cell();
-    @include breakpoint(medium up) {
-      @include xy-grid(horizontal);
-      @include flex-align();
-    }
+  }
+}
+
+@include block(hiring) {
+  @include xy-grid(vertical, false);
+  @include flex-align(center, middle);
+
+  @include element(container) {
+    @include xy-grid-container();
+    width: 100%;
+  }
+
+  @include element(wrapper) {
+    padding: 3em 0px;
+  }
+
+  @include block(title) {
+    font-size: 33px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #37556a;
+    padding-bottom: 1em;
+  }
+
+  @include block(text) {
+    font-size: 1.313em;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: 0.01px;
+    color: #0065ff;
   }
 }

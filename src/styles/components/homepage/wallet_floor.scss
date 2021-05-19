@@ -5,6 +5,10 @@
   @include element(container) {
   }
 
+  @include breakpoint(medium down) {
+    padding: 20px;
+  }
+
   @include element(sub-title) {
     > img {
       width: 29px;
@@ -27,6 +31,9 @@
   }
 
   @include element(links) {
+    @include breakpoint(medium down) {
+      display: none;
+    }
     @include block(title) {
       @extend %text;
       font-weight: bold;
@@ -40,8 +47,8 @@
         > a {
           @include xy-cell(6, null, 0);
           &:not(:last-child) {
-						margin-right: 1em;
-					}
+            margin-right: 1em;
+          }
         }
       }
     }

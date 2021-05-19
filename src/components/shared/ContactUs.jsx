@@ -1,10 +1,10 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
-// import { openPopupWidget } from 'react-calendly'
+import { PopupButton } from 'react-calendly'
 
 import bookIcon from '@/assets/images/book-meeting.svg'
 import signUpIcon from '@/assets/images/signup.svg'
-import blueArrow from '@/assets/images/blue_arrow.svg'
+// import blueArrow from '@/assets/images/blue_arrow.svg'
 import NewsletterForm from '@/components/shared/newsletter_form'
 
 const ContactUs = () => {
@@ -41,15 +41,11 @@ const ContactUs = () => {
             <div className='contact-us__text'>
               <FormattedMessage defaultMessage='Interested in launching a community-centric payments system? Or have a partnership in mind?' />
             </div>
-            <button className='button main_button contact-us__button'>
-              {/* <PopupText
-                text={<FormattedMessage defaultMessage='Book demo' />}
-                url='https://form.typeform.com/to/LMdyK0st?typeform-medium=embed-snippet'
-              /> */}
-              {/* <span className='contact-us__arrow'>
-                <img alt='image' src={blueArrow} />
-              </span> */}
-            </button>
+            <PopupButton
+              className='button main_button contact-us__button'
+              url='https://form.typeform.com/to/LMdyK0st?typeform-medium=embed-snippet'
+              text={<FormattedMessage defaultMessage='Book demo' />}
+            />
           </div>
         </div>
       </div>

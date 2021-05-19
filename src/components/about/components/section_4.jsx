@@ -1,80 +1,123 @@
 import React from 'react'
-import collider from '@/assets/images/collider.svg'
-import spark from '@/assets/images/spark.svg'
-import blackedge from '@/assets/images/blackedge.png'
-import defi from '@/assets/images/defi.svg'
-import wings from '@/assets/images/wings.svg'
-import trg from '@/assets/images/trg.png'
-import faculty from '@/assets/images/faculty.svg'
-import techmeetstrader from '@/assets/images/techmeetstrader.png'
-import wolfedge from '@/assets/images/wolfedge.svg'
-import block from '@/assets/images/block.png'
-import sordex from '@/assets/images/sordex.png'
-import roost from '@/assets/images/roost.png'
-import portis from '@/assets/images/portis.svg'
-import gooddollar from '@/assets/images/gooddollar.png'
-import fuseprime from '@/assets/images/fuseprime.png'
-import torus from '@/assets/images/torus.svg'
-import ramp from '@/assets/images/ramp.svg'
-import transac from '@/assets/images/transac.svg'
-import monereum from '@/assets/images/monereum.svg'
-import altcoin from '@/assets/images/altcoin.png'
-import crypto from '@/assets/images/crypto.png'
-import bitazza from '@/assets/images/bitazza.svg'
-import primedao from '@/assets/images/primedao.svg'
+import mark from '@/assets/images/mark.png'
+import andy from '@/assets/images/andy.png'
+import ashish from '@/assets/images/ashish.png'
+import gilat from '@/assets/images/gilat.png'
+import isaac from '@/assets/images/isaac.png'
+import leon from '@/assets/images/leon.png'
+import lior from '@/assets/images/lior.png'
+import mikhail from '@/assets/images/mikhail.png'
+import mulenga from '@/assets/images/mulenga.png'
+import robert from '@/assets/images/robert.png'
+// import linkedin from '@/assets/images/linkedin.png'
+import linkedin from '@/assets/img/linkedin.svg'
 
-const ImageCell = ({ image, styles }) => {
+const members = [
+  {
+    name: 'Mark Smargon',
+    role: 'Founder & CEO',
+    picture: lior,
+    linked: 'https://www.linkedin.com/in/marksmargon/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Leon Prouger',
+    role: 'Tech Lead',
+    picture: lior,
+    linked: 'https://www.linkedin.com/in/leon-prouger-60646540/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Lior Agnin',
+    role: 'Fullstack & Moble Developer',
+    picture: lior,
+    linked: 'https://www.linkedin.com/in/lioragnin/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Mulenga Bowa',
+    role: 'Front-End Developer',
+    picture: lior,
+    isLinkedIn: false
+  },
+  {
+    name: 'Isaac Rodgin',
+    role: 'Head of BD',
+    picture: lior,
+    linked: 'https://www.linkedin.com/in/isaac-rodgin-58a8897a/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Gilat Reiss',
+    role: 'UI/UX Designer',
+    picture: lior,
+    linked: 'https://www.linkedin.com/in/gilat-reiss-b6086b162/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Andy Pohl',
+    role: 'Backend Dev',
+    picture: lior,
+    linked: 'https://www.linkedin.com/in/andrew-pohl-4b52959b/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Mikhail Dubodel',
+    role: 'Social Media',
+    picture: lior,
+    linked: 'https://www.linkedin.com/in/mikhaildubodel/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Ashish Ram',
+    role: 'Community Manager',
+    picture: lior,
+    linked: 'https://www.linkedin.com/in/ashish-ram/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Robert Miller',
+    role: 'PR & Communications',
+    picture: lior,
+    linked: 'https://www.linkedin.com/in/rm16/',
+    isLinkedIn: true
+  }
+]
+
+const TeamMember = ({ picture, name, role, linked, isLinkedIn }) => {
   return (
-    <div className='section_four__image cell small-24 medium-12 large-5 grid-x align-middle align-center'>
-      <img src={image} style={{ ...styles }} />
+    <div className='card cell medium-6 small-12'>
+      <div className='card__content'>
+        <img src={picture} alt={name.toLowerCase()} />
+        <h2 className='name'>{name}</h2>
+        <div className='icons'>
+          <h3 className='role'>{role}</h3>
+        </div>
+        {
+          isLinkedIn && (
+            <a
+              href={linked}
+              rel='noreferrer noopener'
+              target='_blank'
+            >
+              <img src={linkedin} alt='linked in' className='linkedin' />
+            </a>
+          )
+        }
+
+      </div>
     </div>
   )
 }
 
-const SectionFour = () => {
+const SectionThree = () => {
   return (
-    <section className='section_four'>
-      <div className='section_four__container grid-container'>
-        <div className='section_four__wrapper'>
-          <h2 className='title'>Partners</h2>
-          <div className='logos cell large-auto grid-x '>
-            <div className='logos__overlay' />
-            <ImageCell image={gooddollar} />
-            <ImageCell image={roost} />
-            <ImageCell image={defi} />
-            <ImageCell image={portis} />
-            <ImageCell image={fuseprime} />
-            <ImageCell
-              image={techmeetstrader}
-              styles={{ maxWidth: '260px', minHeight: '44px' }}
-            />
-            <ImageCell image={wings} />
-            <ImageCell image={sordex} />
-            <ImageCell image={torus} />
-            <ImageCell image={ramp} />
-            <ImageCell image={transac} />
-            <ImageCell image={monereum} />
-            <ImageCell image={altcoin} />
-            <ImageCell image={crypto} />
-            <ImageCell image={bitazza} />
-            <ImageCell image={primedao} />
-          </div>
-        </div>
-        <hr />
-        <div className='section_four__wrapper'>
-          <h2 className='title'>Early Backers</h2>
-          <div className='logos cell large-auto grid-x '>
-            <div className='logos__overlay' />
-            <ImageCell image={collider} />
-            <ImageCell image={wolfedge} />
-            <ImageCell image={trg} />
-            <ImageCell image={spark} />
-            <ImageCell
-              image={block}
-              styles={{ maxWidth: '130px', minHeight: '90px' }}
-            />
-            <ImageCell image={blackedge} />
-            <ImageCell image={faculty} />
+    <section className='section_three__wrapper'>
+      <div className='section_three__container'>
+        <div className='section_three'>
+          <h1 className='title'>Meet the Team</h1>
+          <div className='grid-x align-middle align-justify'>
+            {members.map((member, index) => <TeamMember key={index} {...member} />)}
           </div>
         </div>
       </div>
@@ -82,4 +125,4 @@ const SectionFour = () => {
   )
 }
 
-export default SectionFour
+export default SectionThree

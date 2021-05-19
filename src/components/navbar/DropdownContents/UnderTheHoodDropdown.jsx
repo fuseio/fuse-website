@@ -1,6 +1,7 @@
 import React from 'react'
 import { withRouter } from 'react-router'
-import Network from '@/assets/images/dropdown/network.svg'
+import FuseToken from '@/assets/images/dropdown/network.svg'
+import Network from '@/assets/images/dropdown/network1.svg'
 import Docs from '@/assets/images/dropdown/docs.svg'
 import Status from '@/assets/images/dropdown/status.svg'
 import Explorer from '@/assets/images/dropdown/explorer.svg'
@@ -14,22 +15,28 @@ const items = [
     route: './network'
   },
   {
-    title: 'Explorer',
-    icon: Explorer,
-    subTitle: 'Network transactions & analytics',
-    url: 'https://explorer.fuse.io'
-  },
-  {
     title: 'Documentation',
     icon: Docs,
     subTitle: 'Articles, tutorials and deep-dive',
     url: 'https://docs.fuse.io'
   },
   {
+    title: 'Fuse token',
+    icon: FuseToken,
+    subTitle: 'Learn how it works',
+    route: './token'
+  },
+  {
     title: 'Service status',
     icon: Status,
     subTitle: 'Network uptime',
     url: 'https://status.fuse.io'
+  },
+  {
+    title: 'Explorer',
+    icon: Explorer,
+    subTitle: 'Network transactions & analytics',
+    url: 'https://explorer.fuse.io'
   }
 ]
 

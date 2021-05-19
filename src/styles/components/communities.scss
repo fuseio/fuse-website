@@ -89,24 +89,37 @@
       @include xy-grid();
       @include flex-align(justify, middle);
 
+      @include breakpoint(medium down) {
+        @include xy-grid(vertical);
+        @include flex-align(justify, middle);
+      }
+
       @include block(image) {
         @include xy-grid();
         position: relative;
         @include flex-align(null, null);
-        min-height: 630px;
         > img {
           object-fit: contain;
-          position: absolute;
-          min-width: 350px;
-          min-height: 630px;
-          max-width: 350px;
-          max-height: 630px;
-          // width: 350px;
+        }
+        @include breakpoint(medium up) {
+          @include xy-cell(12, null, 0);
+          height: 630px;
+          > img {
+            position: absolute;
+            min-width: 350px;
+            min-height: 630px;
+            max-width: 350px;
+            max-height: 630px;
+          }
         }
 
-        @include xy-cell(12, null, 0);
         @include breakpoint(medium down) {
           @include xy-cell(24, null, 0);
+          max-height: 660px;
+          > img {
+            max-height: 660px;
+            // width: 356px;
+          }
         }
       }
 
@@ -149,12 +162,17 @@
               width: 15px;
               height: 15px;
             }
+
+            @include block(store) {
+              width: auto;
+              height: 22px;
+            }
           }
         }
 
         @include element(logo) {
           margin-bottom: 2em;
-          max-width: 200px;
+          // max-width: 200px;
 
           img {
             width: 100%;
@@ -189,13 +207,17 @@
     letter-spacing: normal;
     color: #000000;
 
-    @include breakpoint(medium down) {
-      display: none;
-    }
+    // @include breakpoint(medium down) {
+    //   // display: none;
+    // }
 
     @include modifier(prev) {
       // background-image: url(/images/back.png);
       left: 0px;
+
+      @include breakpoint(medium down) {
+        // display: none;
+      }
 
       &:hover {
         // background-image: url(/images/back-hover.png);
@@ -205,6 +227,11 @@
     @include modifier(next) {
       // background-image: url(/images/next.png);
       left: 480px;
+      @include breakpoint(medium down) {
+        right: 0;
+        left: unset;
+        // display: none;
+      }
 
       &:hover {
         // background-image: url(/images/next-hover.png);

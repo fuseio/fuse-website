@@ -3,6 +3,10 @@
     position: relative;
     @include xy-grid(horizontal, false);
 
+    @include breakpoint(medium down) {
+      @include flex-align(justify, middle);
+    }
+
     @include block(title) {
       position: absolute;
       top: -1.5em;
@@ -23,8 +27,8 @@
       padding: 10px;
       width: 100%;
 
-      @include breakpoint(small only) {
-        width: 100%;
+      @include breakpoint(medium down) {
+        width: 80%;
       }
 
       &:focus {

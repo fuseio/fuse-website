@@ -6,7 +6,6 @@ import SectionFour from './components/section_4'
 import SectionFive from './components/section_5'
 import SectionSix from './components/section_6'
 import ContactUs from '@/components/shared/ContactUs'
-import Footer from '@/components/footer'
 
 const HomePage = () => {
   return (
@@ -18,7 +17,6 @@ const HomePage = () => {
       <SectionFour />
       <SectionSix />
       <ContactUs />
-      <Footer />
     </>
   )
 }

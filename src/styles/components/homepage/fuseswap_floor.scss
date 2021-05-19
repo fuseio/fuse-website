@@ -6,6 +6,16 @@
   @include element(container) {
     @include xy-grid-container();
     padding: 12em 0 6em;
+
+    @include breakpoint(medium down) {
+      padding: 5em 0;
+    }
+  }
+
+  @include breakpoint(medium down) {
+    padding: 20px;
+    -webkit-clip-path: polygon(48% 1%, 50% 6%, 100% 0, 100% 70%, 100% 100%, 50% 100%, 0 100%, 0 5%);
+    clip-path: polygon(48% 1%, 50% 6%, 100% 0, 100% 70%, 100% 100%, 50% 100%, 0 100%, 0 5%);
   }
 
   @include element(sub-title) {
@@ -58,8 +68,15 @@
   @include element(image) {
     position: relative;
     width: 100%;
+
     > img {
       position: absolute;
+
+      @include breakpoint(medium down) {
+        position: unset;
+        margin-top: 3em;
+      }
+
       left: -120px;
       border-radius: 10px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

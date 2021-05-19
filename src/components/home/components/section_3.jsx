@@ -72,7 +72,7 @@ const FuseWalletFloor = () => {
             <li>User-owned data.</li>
             <li>Send and receive transaction instantly.</li>
           </ul>
-          <div className='wallet_floor__links'>
+          <div className='wallet_floor__links hide-for-small'>
             <div className='title'>
               Download now:
             </div>
@@ -130,7 +130,6 @@ const FuseSwapFloor = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>

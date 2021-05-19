@@ -9,12 +9,13 @@ import AnimatedNavbar from '@/components/navbar/AnimatedNavbar'
 import SelectLanguage from '../shared/select_language'
 import MobileMenu from './MobileMenu'
 
-function Header ({ history }) {
+function Header({ history }) {
   const [isOpen, setMenuOpen] = useState(false)
   const hamburgerRef = useRef(null)
 
-  const isNetworkHeader = history.location.pathname.includes('network')
-  const isAboutHeader = history.location.pathname.includes('about')
+  // const isNetworkHeader = true // history.location.pathname.includes('network')
+  // const isAboutHeader = !history.location.pathname.includes('about')
+  const isWhite = !history.location.pathname.includes('about')
 
   useOutsideClick(hamburgerRef, () => {
     if (isOpen) {
@@ -28,20 +29,16 @@ function Header ({ history }) {
     <header className='header__wrapper'>
       <div className='header'>
         <div onClick={homePage} className='header__logo'>
-          <img alt='logo' src={isNetworkHeader || isAboutHeader ? fuseLogoWhite : fuseLogo} />
+          <img alt='logo' src={isWhite ? fuseLogoWhite : fuseLogo} />
         </div>
         <MobileMenu />
         <div className={classNames('header__nav grid-x align-middle align-justify', { header__nav__open: isOpen })}>
           <div className='header__link__wrapper cell large-auto'>
-            <AnimatedNavbar
-              duration={300}
-              isNetworkHeader={isNetworkHeader}
-              isAboutHeader={isAboutHeader}
-            />
+            <AnimatedNavbar duration={300} />
             <div className='nav__item' onClick={aboutPage}>
               <a
                 rel='noreferrer noopener'
-                className={classNames('text', { 'text--white': (isNetworkHeader || isAboutHeader) })}
+                className={classNames('text', { 'text--white': isWhite })}
                 target='_blank'
               >
                 About
@@ -49,10 +46,7 @@ function Header ({ history }) {
             </div>
           </div>
           <div className='grid-x align-middle  cell shrink'>
-            <SelectLanguage
-              isNetworkHeader={isNetworkHeader}
-              isAboutHeader={isAboutHeader}
-            />
+            <SelectLanguage />
           </div>
         </div>
       </div>

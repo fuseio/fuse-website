@@ -6,6 +6,13 @@
   @include element(title) {
     @extend %title;
     padding: 2em 0 3em;
+    @include breakpoint(medium down) {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium down) {
+    padding: 20px;
   }
 
   @include element(items) {
@@ -14,10 +21,18 @@
         @extend %secondary-title;
         text-align: center;
         margin-bottom: 2em;
+
+        @include breakpoint(medium down) {
+          padding: 5em 0;
+          margin: 0;
+        }
       }
 
       img {
         max-height: 100px;
+        @include breakpoint(medium down) {
+          // padding: 5em 0;
+        }
       }
     }
   }

@@ -41,32 +41,32 @@
 	}
 
 	@include block(lottie) {
-		@include breakpoint(large up) {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-		}
+		// @include breakpoint(large up) {
+		// 	position: absolute;
+		// 	width: 100%;
+		// 	height: 100%;
+		// }
 
-		@include breakpoint(1263px) {
-			> svg {
-				width: 120% !important;
-				height: 120% !important;
-				transform: translate3d(-180px, -50px, 0) !important;
-			}
-		}
+		// @include breakpoint(1263px) {
+		// 	> svg {
+		// 		width: 120% !important;
+		// 		height: 120% !important;
+		// 		transform: translate3d(-180px, -50px, 0) !important;
+		// 	}
+		// }
 
-		@include breakpoint(xxlarge up) {
-			> svg {
-				width: 100% !important;
-				height: 100% !important;
-				transform: translate3d(0px, 0px, 0px) !important;
-			}
-		}
+		// @include breakpoint(xxlarge up) {
+		// 	> svg {
+		// 		width: 100% !important;
+		// 		height: 100% !important;
+		// 		transform: translate3d(0px, 0px, 0px) !important;
+		// 	}
+		// }
 
-		@include breakpoint(large down) {
-			order: 3;
-			min-height: 390px;
-		}
+		// @include breakpoint(large down) {
+		// 	order: 3;
+		// 	min-height: 390px;
+		// }
 	}
 
 	@include element(top) {

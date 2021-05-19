@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ether</title>
+    <g id="Token-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="token-page" transform="translate(-750.000000, -1910.000000)">
+            <g id="ether" transform="translate(751.000000, 1911.000000)">
+                <g id="Rectangle_2019">
+                    <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="0.607058824" y="0.607058824" width="40.0658824" height="40.0658824" rx="20.0329412"></rect>
+                    <rect id="Rectangle" fill="#262F4E" x="0" y="0" width="43" height="43" rx="21.5"></rect>
+                </g>
+                <g id="Group_4379" transform="translate(12.040000, 5.160000)" fill-rule="nonzero">
+                    <polygon id="Path_4381" fill="#A5FCF6" points="9.45704836 -3.37191954e-14 9.2504337 0.705901288 9.2504337 21.1770386 9.45704836 21.3846567 18.9140967 15.7671061"></polygon>
+                    <polygon id="Path_4382" fill="#CAC4FA" points="9.45704836 -3.37191954e-14 0 15.7671061 9.45704836 21.3846567"></polygon>
+                    <polygon id="Path_4383" fill="#CCAFF9" points="9.45704836 23.1832219 9.33898284 23.3255886 9.33898284 30.61832 9.45704836 30.96 18.92 17.5692305"></polygon>
+                    <polygon id="Path_4384" fill="#81A8F8" points="9.45704836 30.9588136 9.45704836 23.1820356 0 17.5680441"></polygon>
+                    <polygon id="Path_4385" fill="#CCAFF9" points="9.45704836 21.3834703 18.9140967 15.7671061 9.45704836 11.4474647"></polygon>
+                    <polygon id="Path_4386" fill="#81A9F7" points="0 15.7671061 9.45704836 21.3834703 9.45704836 11.4474647"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

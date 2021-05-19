@@ -14,11 +14,14 @@ import localChamionsBg from '@/assets/images/splesh-local.png'
 import valleyBg from '@/assets/images/vally-background.png'
 import FuseLogo from '@/assets/img/use_cases/fuse-logo.svg'
 import Link from '@/assets/img/use_cases/link.svg'
-import PeeplLogo from '@/assets/img/use_cases/peepleat/peepl.eat.svg'
+import Apple from '@/assets/img/apple_fork.svg'
+import Google from '@/assets/img/google_fork.svg'
+import PeeplLogo from '@/assets/img/use_cases/peepleat/peepl-logo.png'
 import PeeplIphone from '@/assets/img/use_cases/peepleat/peepl-iphone.png'
 import PeeplBg from '@/assets/img/use_cases/peepleat/image-peepl.png'
 import FusecashLogo from '@/assets/img/use_cases/fusecash/fuse.cash-logo.png'
 import FusecashBg from '@/assets/img/use_cases/fusecash/image-fuse.cash.png'
+import FusecashIphone from '@/assets/img/use_cases/fusecash/fuse.cash_iphone.png'
 
 import GoodDollarLogo from '@/assets/img/use_cases/gooddollar/gooddollar-logo.png'
 import GoodDollarhBg from '@/assets/img/use_cases/gooddollar/image-gooddollar.png'
@@ -46,10 +49,65 @@ const backgroundImages = [
   KolektivohBg,
   MystichBg
 ]
+const items = [
+  {
+    logo: PeeplLogo,
+    text: 'Sustainable local economy project in the United Kingdom to decentralize take away food ordering.',
+    learnText: 'Peepl Eat',
+    learnLink: 'https://itsaboutpeepl.com/',
+    iosLink: 'https://apps.apple.com/gb/app/peepl-wallet/id1524643325',
+    androidLink: 'https://play.google.com/store/apps/details?id=com.itsaboutpeepl.peepl',
+    iphoneImage: PeeplIphone,
+  },
+  {
+    logo: FusecashLogo,
+    text: 'It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout.',
+    learnText: 'Fuse Dollar',
+    learnLink: 'https://fuse.cash/',
+    iosLink: 'https://apps.apple.com/us/app/fuse-cash/id1559937899',
+    androidLink: 'https://play.google.com/store/apps/details?id=io.fuse.cash',
+    iphoneImage: FusecashIphone,
+  },
+  {
+    logo: GoodDollarLogo,
+    text: 'It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout.',
+    learnText: 'Good Dollar',
+    learnLink: 'https://www.gooddollar.org/',
+    iosLink: 'https://apps.apple.com/us/app/fuse-cash/id1559937899',
+    androidLink: 'https://play.google.com/store/apps/details?id=io.fuse.cash',
+    iphoneImage: GoodDollarIphone,
+  },
+  {
+    logo: ComunitariaLogo,
+    text: 'It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout.',
+    learnText: 'Comunitaria',
+    learnLink: 'https://comunitaria.com/',
+    iosLink: 'https://apps.apple.com/us/app/wikibank-eu/id1509481908',
+    androidLink: 'https://play.google.com/store/apps/details?id=io.fuse.cash',
+    iphoneImage: ComunitariaIphone,
+  },
+  {
+    logo: KolektivoLogo,
+    text: 'It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout.',
+    learnText: 'Kolektivo labs',
+    learnLink: 'https://kolektivo.co/',
+    iosLink: 'https://apps.apple.com/us/app/curadai/id1553242607',
+    androidLink: 'https://play.google.com/store/apps/details?id=io.fuse.curadai',
+    iphoneImage: KolektivoIphone,
+  },
+  {
+    logo: MysticLogo,
+    text: 'It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout.',
+    learnText: 'Mystic valley',
+    learnLink: 'https://bitazza.com/',
+    iosLink: 'https://apps.apple.com/us/app/mystic-valley/id1539136057',
+    androidLink: 'https://play.google.com/store/apps/details?id=io.fuse.curadai',
+    iphoneImage: MysticIphone,
+  }
+]
 
 const SectionFive = () => {
   const [currentIndex, setIndex] = useState(0)
-  const paginationRef = useRef(null)
   const nextRef = useRef(null)
   const prevRef = useRef(null)
   return (
@@ -75,10 +133,6 @@ const SectionFive = () => {
             autoplay={{
               reverseDirection: true,
               delay: 5000
-            }}
-            pagination={{
-              clickable: true,
-              el: paginationRef.current
             }}
             onTransitionStart={(swiper) => {
               setIndex(swiper.realIndex)
@@ -113,14 +167,21 @@ const SectionFive = () => {
                         Learn more about Peepl Eat
                       </a>
                     </div>
-                    <div className='grid-x align-middle link_icon'>
-                      <img src={Link} />
+                    <div className='grid-x align-middle align-center link_icon'>
+                      Download:&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
                         href='https://itsaboutpeepl.com/'
                       >
-                        Learn more about GBPX token
+                        <img className='store' src={Apple} />&nbsp;
+                      </a>
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://itsaboutpeepl.com/'
+                      >
+                        <img className='store' src={Google} />
                       </a>
                     </div>
                   </div>
@@ -146,25 +207,32 @@ const SectionFive = () => {
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
-                        href='https://itsaboutpeepl.com/'
+                        href='https://fuse.cash/'
                       >
                         Learn more about Fuse Dollar
                       </a>
                     </div>
-                    <div className='grid-x align-middle link_icon'>
-                      <img src={Link} />
+                    <div className='grid-x align-middle align-center link_icon'>
+                      Download:&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
-                        href='https://itsaboutpeepl.com/'
+                        href='https://apps.apple.com/us/app/fuse-cash/id1559937899/'
                       >
-                        Learn more about Fuse Dollar token
+                        <img className='store' src={Apple} />&nbsp;
+                      </a>
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://play.google.com/store/apps/details?id=io.fuse.cash'
+                      >
+                        <img className='store' src={Google} />
                       </a>
                     </div>
                   </div>
                 </div>
                 <div className='image'>
-                  <img alt='peepl' src={PeeplIphone} />
+                  <img alt='peepl' src={FusecashIphone} />
                 </div>
               </div>
             </SwiperSlide>
@@ -187,16 +255,6 @@ const SectionFive = () => {
                         href='https://www.gooddollar.org/'
                       >
                         Learn more about Good Dollar
-                      </a>
-                    </div>
-                    <div className='grid-x align-middle link_icon'>
-                      <img src={Link} />
-                      <a
-                        rel='noreferrer noopener'
-                        target='_blank'
-                        href='https://whitepaper.gooddollar.org/'
-                      >
-                        Learn more about GoodDollar token
                       </a>
                     </div>
                   </div>
@@ -227,14 +285,21 @@ const SectionFive = () => {
                         Learn more about Comunitaria
                       </a>
                     </div>
-                    <div className='grid-x align-middle link_icon'>
-                      <img src={Link} />
+                    <div className='grid-x align-middle align-center link_icon'>
+                      Download:&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
-                        href='https://comunitaria.com/en/about-wikibank/'
+                        href='https://apps.apple.com/us/app/wikibank-eu/id1509481908/'
                       >
-                        Learn more about ILLA token
+                        <img className='store' src={Apple} />&nbsp;
+                      </a>
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://play.google.com/store/apps/details?id=io.fuse.cash'
+                      >
+                        <img className='store' src={Google} />
                       </a>
                     </div>
                   </div>
@@ -265,14 +330,21 @@ const SectionFive = () => {
                         Learn more about Kolektivo labs
                       </a>
                     </div>
-                    <div className='grid-x align-middle link_icon'>
-                      <img src={Link} />
+                    <div className='grid-x align-middle align-center link_icon'>
+                      Download:&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
-                        href='https://kolektivo.co/'
+                        href='https://apps.apple.com/us/app/curadai/id1553242607'
                       >
-                        Learn more about KOK token
+                        <img className='store' src={Apple} />&nbsp;
+                      </a>
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://play.google.com/store/apps/details?id=io.fuse.curadai'
+                      >
+                        <img className='store' src={Google} />
                       </a>
                     </div>
                   </div>
@@ -298,19 +370,26 @@ const SectionFive = () => {
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
-                        href='https://kolektivo.co/'
+                        href='https://bitazza.com/'
                       >
-                        Learn more about Kolektivo labs
+                        Learn more about Mystic valley
                       </a>
                     </div>
-                    <div className='grid-x align-middle link_icon'>
-                      <img src={Link} />
+                    <div className='grid-x align-middle align-center link_icon'>
+                      Download:&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
-                        href='https://kolektivo.co/'
+                        href='https://apps.apple.com/us/app/mystic-valley/id1539136057'
                       >
-                        Learn more about KOK token
+                        <img className='store' src={Apple} />&nbsp;
+                      </a>
+                      <a
+                        rel='noreferrer noopener'
+                        target='_blank'
+                        href='https://play.google.com/store/apps/details?id=com.bitazza.wallet'
+                      >
+                        <img className='store' src={Google} />
                       </a>
                     </div>
                   </div>
@@ -321,7 +400,6 @@ const SectionFive = () => {
               </div>
             </SwiperSlide>
 
-            {/* <div ref={paginationRef} className='communities__pagination' /> */}
             <div ref={nextRef} className='communities__button communities__button--next'>Next</div>
             <div ref={prevRef} className='communities__button communities__button--prev'>Previous</div>
           </Swiper>
