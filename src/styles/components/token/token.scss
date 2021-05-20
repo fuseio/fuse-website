@@ -164,7 +164,7 @@
     padding: 2em 0 4em;
     @include xy-grid();
     @include flex-align(justify, middle);
-    background-color: #f6f9fc;
+    background-color: #f5f6fb;
   }
 
   @include element(title) {

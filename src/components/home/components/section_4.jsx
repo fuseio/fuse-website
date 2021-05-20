@@ -1,41 +1,22 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
 import { FormattedMessage } from 'react-intl'
 
 SwiperCore.use([Navigation, Pagination])
 
-const blogs = [
-  {
-    title: 'Fuse Will Use Chainlink Proof of Reserve to Mint and Verify the Collateralization of FuseDollar (fUSD)',
-    href: 'https://medium.com/fusenet/fuse-will-use-chainlink-proof-of-reserve-to-mint-and-verify-the-collateralization-of-fusedollar-6ff6db948029',
-    date: 'Mar 2, 2021',
-    imagePath: './images/chainlink.png'
-  },
-  {
-    title: 'Introducing FuseDollar: An Asset-Backed Stable Coin Designed for First Time Users',
-    href: 'https://medium.com/fusenet/introducing-fusedollar-an-asset-backed-stable-coin-designed-for-first-time-users-dbf143d35e58',
-    date: 'Feb 19, 2021',
-    imagePath: './images/fusedollar.png'
-  },
-  {
-    title: 'Kolektivo Labs Launches on Fuse to Scale Blockchain-Based, Sustainable Development in Curaçao.',
-    href: 'https://medium.com/fusenet/kolektivo-labs-launches-on-fuse-to-scale-blockchain-based-sustainable-development-in-cura%C3%A7ao-ac83d30294b',
-    date: 'Feb 18, 2021',
-    imagePath: './images/xl.png'
-  }
-]
-
 function Item({
   title,
-  href,
+  link,
   date,
-  imagePath
+  imagePath,
+  thumbnail,
+  pubDate
 }) {
   return (
-    <a className='item__post' rel='noreferrer noopener' target='_blank' href={href}>
+    <a className='item__post' rel='noreferrer noopener' target='_blank' href={link}>
       <div className='item__post__image'>
-        <img alt='owners' src={imagePath} />
+        <img alt='owners' src={thumbnail} />
       </div>
 
       <div className='item__post__content'>
@@ -43,13 +24,23 @@ function Item({
           <span>Blog post</span>
         </p>
         <h4 className='title'>{title}</h4>
-        <span>{date}</span>
+        <span>{pubDate}</span>
       </div>
     </a>
   )
 }
 
 const SectionFour = () => {
+  const [articles, setArticles] = useState([])
+  useEffect(() => {
+    async function fetchFuseBlogPosts () {
+      const { items } = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/fusenet').then(res => res.json())
+      const slicedArray = items.slice(0, 3)
+      setArticles(slicedArray)
+    }
+
+    fetchFuseBlogPosts()
+  }, [])
   const paginationRef = useRef(null)
   return (
     <section className='section-C__wrapper'>
@@ -75,7 +66,7 @@ const SectionFour = () => {
               </div>
               <div className='blogs__wrapper cell large-auto grid-x align-spaced'>
                 {
-                  blogs.map((item, index) => {
+                  articles.map((item, index) => {
                     return <Item key={index} {...item} />
                   })
                 }
@@ -97,7 +88,7 @@ const SectionFour = () => {
                 }}
               >
                 {
-                  blogs.map((item, index) => {
+                  articles.map((item, index) => {
                     return (
                       <SwiperSlide key={index}>
                         <Item {...item} />

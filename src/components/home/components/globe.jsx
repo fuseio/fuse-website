@@ -33,7 +33,7 @@ function Globe() {
         color: '#fae83e'
       }
       const pointglobe = new PointGlobe({ noise: 'images/clouds.png' }, data, pointglobeParams)
-      console.log({ ...pointglobe })
+      // console.log({ ...pointglobe })
       pointglobe.setInteractive(true, true, false)
       gkview.addDrawable(pointglobe, () => {
         gkview.startDrawing()
