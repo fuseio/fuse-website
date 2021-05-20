@@ -68,8 +68,16 @@
   }
 
   @include element(image) {
+    @include breakpoint(medium down) {
+      @include xy-grid();
+      @include flex-align(center, middle);
+      margin-top: 1em;
+    }
     > img {
       height: 713px;
+      @include breakpoint(medium down) {
+        height: 600px;
+      }
     }
   }
 }

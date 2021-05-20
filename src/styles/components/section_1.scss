@@ -1,7 +1,7 @@
 @include block(section-A) {
   background-color: #031928;
   // background-image: $color-fuse_gradient;
-  padding-top: 6em;
+  padding-top: 4em;
   // &:after {
   //   content: "";
   //   position: absolute;
@@ -129,8 +129,8 @@
     }
     @include xy-cell(auto, null, 0);
     > canvas {
-      min-width: 650px;
-      min-height: 650px;
+      min-width: 70px;
+      min-height: 700px;
       max-width: 700px;
       max-height: 700px;
     }

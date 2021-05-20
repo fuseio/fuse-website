@@ -19,6 +19,7 @@ import Google from '@/assets/img/google_fork.svg'
 import PeeplLogo from '@/assets/img/use_cases/peepleat/peepl-logo.png'
 import PeeplIphone from '@/assets/img/use_cases/peepleat/peepl-iphone.png'
 import PeeplBg from '@/assets/img/use_cases/peepleat/image-peepl.png'
+import MobilePeepl from '@/assets/img/use_cases/peepleat/mobile_peepl.png'
 import FusecashLogo from '@/assets/img/use_cases/fusecash/fuse.cash-logo.png'
 import FusecashBg from '@/assets/img/use_cases/fusecash/image-fuse.cash.png'
 import FusecashIphone from '@/assets/img/use_cases/fusecash/fuse.cash_iphone.png'
@@ -39,10 +40,14 @@ import MysticLogo from '@/assets/img/use_cases/mysticvalley/mystic-valley-logo.p
 import MystichBg from '@/assets/img/use_cases/mysticvalley/mystic-valley-image.png'
 import MysticIphone from '@/assets/img/use_cases/mysticvalley/mystic-valley-wallet.png'
 
+import {
+  isMobileOnly
+} from 'react-device-detect'
+
 SwiperCore.use([Navigation, Pagination])
 
 const backgroundImages = [
-  PeeplBg,
+  isMobileOnly ? MobilePeepl : PeeplBg,
   FusecashBg,
   GoodDollarhBg,
   ComunitariahBg,

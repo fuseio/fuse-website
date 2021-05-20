@@ -2,7 +2,7 @@ import React from 'react'
 import Fees from '@/assets/img/utilities/fees.png'
 import Secure from '@/assets/img/utilities/secure.png'
 import Governance from '@/assets/img/utilities/governance.png'
-import Defi from '@/assets/img/utilities/defi.png'
+import Defi from '@/assets/img/utilities/defi_utils.png'
 
 const items = [
   {

@@ -8,6 +8,7 @@
 
 	@include breakpoint(medium down) {
 		transform: unset;
+		padding: 5em 0;
 	}
 
 	@include breakpoint(2000px) {
@@ -51,7 +52,7 @@
 
 		@include breakpoint(medium down) {
 			flex-direction: column;
-			width: 85%;
+			// width: 85%;
 		}
 
 		@include element(item) {
@@ -62,11 +63,10 @@
 	}
 	@include element(title) {
 		@extend %title;
-		margin-bottom: 2em;
+		margin-bottom: 1em;
 	}
 	@include element(text) {
 		@extend %text;
-		margin-bottom: 1em;
 		@include breakpoint(xlarge up) {
 			width: 251px;
 		}

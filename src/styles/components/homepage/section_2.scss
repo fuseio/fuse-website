@@ -71,6 +71,9 @@
 }
 
 @include block(info_banner) {
+  > div {
+    position: relative;
+  }
   @include breakpoint(medium up) {
     @include xy-grid();
     @include flex-align(null, middle);
@@ -85,7 +88,8 @@
     width: 100%;
   }
   @include element(wrapper) {
-    background-color: #0a2540;
+    // background-color: #0a2540;
+    background-image: $color-fuse_gradient;
     @include xy-grid();
     @include flex-align(justify, middle);
 
@@ -94,7 +98,7 @@
     }
 
     @include breakpoint(medium down) {
-      padding: 3em 0;
+      padding: 2em 0;
     }
   }
 
@@ -121,18 +125,18 @@
     }
 
     @include breakpoint(medium down) {
-      &:not(:first-child):not(:last-child) {
-        padding: 1em 0;
-        // &::before {
-        //   position: absolute;
-        //   content: "";
-        //   text-align: center;
-        //   padding: .5em;
-        //   border-top: 1px solid white;
-        //   border-bottom: 1px solid white;
-        // }
-
-        // border-top: 1px solid white;
+      &:not(:last-child) {
+        margin-bottom: 2em;
+        &:after {
+          content: "";
+          width: 26px;
+          height: 1px;
+          background: white;
+          position: absolute;
+          bottom: -1em;
+          left: 50%;
+          transform: translateX(-50%);
+        }
         // border-bottom: 1px solid white;
       }
     }
@@ -142,7 +146,7 @@
       @include flex-align(center, middle);
       @include xy-cell(6, null, 0);
       &:not(:first-child) {
-        border-left: 1px solid white;
+        border-left: 1px solid $color-dark;
       }
     }
     > img {
@@ -152,12 +156,43 @@
 
     @include block(title) {
       font-size: 1.231em;
-      font-weight: normal;
+      font-weight: 500;
       font-stretch: normal;
       font-style: normal;
       line-height: normal;
       letter-spacing: 0.01px;
-      color: $color-white;
+
+      @include modifier(arrow) {
+        &::after {
+          background-image: url(images/arrow.png);
+          background-repeat: no-repeat;
+          background-position: left center;
+          margin-left: 0.2em;
+          width: 18px;
+          height: 11px;
+          display: inline-block;
+          padding-left: 8px;
+          content: ""; // arrow right unicode
+          -webkit-transition: all 0.3s ease-out;
+          -moz-transition: transform 0.3s ease-out;
+          -ms-transition: transform 0.3s ease-out;
+          -o-transition: transform 0.3s ease-out;
+          transition: transform 0.3s ease-out;
+        }
+
+        &:hover {
+          // background-image: unset;
+          // background-color: #f8ff00;
+
+          &::after {
+            -webkit-transform: translateX(4px);
+            -moz-transform: translateX(4px);
+            -ms-transform: translateX(4px);
+            -o-transform: translateX(4px);
+            transform: translateX(4px);
+          }
+        }
+      }
 
       > span {
         font-weight: bold;

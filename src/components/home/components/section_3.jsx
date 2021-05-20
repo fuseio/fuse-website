@@ -1,7 +1,7 @@
 import React from 'react'
-import step1 from '@/assets/images/step_1.png'
-import step2 from '@/assets/images/step_2.png'
-import { FormattedMessage } from 'react-intl'
+// import step1 from '@/assets/images/step_1.png'
+// import step2 from '@/assets/images/step_2.png'
+// import { FormattedMessage } from 'react-intl'
 import StudioIcon from '@/assets/img/studio-icon.svg'
 import StudioImage from '@/assets/img/studio_img.png'
 import FuseSwapImage from '@/assets/img/fuseswap_image.png'
@@ -109,7 +109,7 @@ const FuseSwapFloor = () => {
   return (
     <section className='fuseswap_floor'>
       <div className='fuseswap_floor__container'>
-        <div className='fuseswap_floor__container grid-x align-justify align-self-middle'>
+        <div className='fuseswap_floor grid-x align-justify align-self-middle'>
           <div className='fuseswap_floor__image'>
             <img src={FuseSwapImage} />
           </div>

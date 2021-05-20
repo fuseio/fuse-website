@@ -68,14 +68,21 @@
   @include element(image) {
     position: relative;
     width: 100%;
+    margin-top: 3em;
+
+    @include breakpoint(medium down) {
+      order: 2;
+    }
 
     > img {
       position: absolute;
-      height: 542px;
+
+      @include breakpoint(medium up) {
+        height: 542px;
+      }
 
       @include breakpoint(medium down) {
         position: unset;
-        margin-top: 3em;
       }
 
       left: -120px;

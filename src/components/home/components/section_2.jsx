@@ -94,6 +94,11 @@ const Banner = () => {
       <div className='info_banner__container'>
         <div className='info_banner'>
           {bannerItems.map((item, index) => <BannerItem key={index} {...item} />)}
+          <div className='item grid-x align-middle'>
+            <div className='title title--arrow'>
+              <a rel='noreferrer noopener' target='_blank' href='https://explorer.fuse.io/'>View stats</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
