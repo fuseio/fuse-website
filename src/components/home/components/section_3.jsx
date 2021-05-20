@@ -109,7 +109,7 @@ const FuseSwapFloor = () => {
   return (
     <section className='fuseswap_floor'>
       <div className='fuseswap_floor__container'>
-        <div className='fuseswap_floor grid-x align-justify align-self-middle'>
+        <div className='fuseswap_floor__container grid-x align-justify align-self-middle'>
           <div className='fuseswap_floor__image'>
             <img src={FuseSwapImage} />
           </div>

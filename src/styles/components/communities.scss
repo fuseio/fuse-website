@@ -14,6 +14,7 @@
     position: absolute;
     right: 0;
     bottom: 0;
+    max-height: 564px;
     object-fit: cover;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
@@ -28,6 +29,7 @@
 
     @include breakpoint(medium down) {
       max-height: unset;
+      bottom: 80px;
     }
   }
 
@@ -122,22 +124,24 @@
           @include xy-cell(24, null, 0);
           @include xy-grid();
           @include flex-align(center, middle);
-          max-height: 660px;
           margin-top: 3em;
+          margin-bottom: 2em;
           > img {
+            min-height: 500px;
             max-height: 540px;
-            // width: 356px;
           }
         }
       }
 
       @include block(content) {
-        @include xy-grid(vertical);
-        @include flex-align(center, top);
-
-        @include xy-cell(10, null, 0);
+        @include breakpoint(medium up) {
+          @include xy-grid(vertical);
+          @include flex-align(center, top);
+          @include xy-cell(10, null, 0);
+        }
         @include breakpoint(medium down) {
           @include xy-cell(24, null, 0);
+          margin-bottom: 6em;
         }
 
         @include element(metadata) {
@@ -183,6 +187,11 @@
         @include element(logo) {
           // margin-bottom: 2em;
           // max-width: 200px;
+          min-height: 125px;
+          max-height: 125px;
+
+          @include xy-grid();
+          @include flex-align(null, middle);
 
           img {
             width: 100%;
@@ -219,7 +228,7 @@
     color: #000000;
 
     @include breakpoint(medium down) {
-      bottom: -100px;
+      // bottom: -100px;
     }
 
     @include modifier(prev) {
@@ -297,7 +306,7 @@
 
       left: 480px;
       @include breakpoint(medium down) {
-        right: 0;
+        right: 20px;
         left: unset;
         // display: none;
       }

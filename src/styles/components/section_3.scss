@@ -1,22 +1,22 @@
 @include block(section-C) {
 	position: relative;
-	padding: 10em 0;
-	background-image: linear-gradient(247deg, #f6f9fc, #fafafa);
-	@include breakpoint(xlarge down) {
-		transform: scale(0.9);
-	}
-
-	@include breakpoint(medium down) {
-		transform: unset;
-		padding: 5em 0;
-	}
 
 	@include breakpoint(2000px) {
 		min-height: 40vh;
 	}
+	@include element(container) {
+		@include xy-grid-container();
+	}
 
 	@include element(wrapper) {
-		@include xy-grid-container();
+		padding: 10em 0;
+		background-image: linear-gradient(247deg, #f6f9fc, #fafafa);
+		@include breakpoint(xlarge down) {
+		}
+	
+		@include breakpoint(medium down) {
+			padding: 5em 0;
+		}
 	}
 	@include element(swiper) {
 		> div {

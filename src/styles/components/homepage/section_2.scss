@@ -119,7 +119,7 @@
       @include flex-align(center, middle);
       @include xy-cell(8, null, 0);
       &:not(:first-child) {
-        border-left: 1px solid white;
+        border-left: 1px solid $color-dark;
         // border-right: 1px solid white;
       }
     }
@@ -130,8 +130,8 @@
         &:after {
           content: "";
           width: 26px;
-          height: 1px;
-          background: white;
+          height: 1.5px;
+          background: $color-dark;
           position: absolute;
           bottom: -1em;
           left: 50%;

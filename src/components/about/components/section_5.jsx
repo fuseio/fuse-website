@@ -8,9 +8,9 @@ const SectionThree = () => {
           <div className='title'>
             We are hiring!🎉
           </div>
-          <div className='text'>
+          <a className='text' rel='noopener noreferrer' href='https://www.linkedin.com/company/fuseio/jobs/' target='_blank'>
             Check out open positions to join our global or Tel Aviv team
-          </div>
+          </a>
         </div>
       </div>
     </section>

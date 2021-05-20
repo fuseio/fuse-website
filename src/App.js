@@ -41,7 +41,7 @@ const App = () => {
           >
             <Provider store={store}>
               <ConnectedRouter history={history}>
-                {/* <ScrollToTopController> */}
+                <ScrollToTopController>
                   <Navbar />
                   <Switch>
                     <Route exact path='/about'>
@@ -58,7 +58,7 @@ const App = () => {
                     </Route>
                   </Switch>
                   <Footer />
-                {/* </ScrollToTopController> */}
+                </ScrollToTopController>
               </ConnectedRouter>
             </Provider>
           </IntlProvider>

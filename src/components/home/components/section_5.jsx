@@ -22,21 +22,26 @@ import PeeplBg from '@/assets/img/use_cases/peepleat/image-peepl.png'
 import MobilePeepl from '@/assets/img/use_cases/peepleat/mobile_peepl.png'
 import FusecashLogo from '@/assets/img/use_cases/fusecash/fuse.cash-logo.png'
 import FusecashBg from '@/assets/img/use_cases/fusecash/image-fuse.cash.png'
+import FusecashBgSmall from '@/assets/img/use_cases/fusecash/fusecash_mobile.png'
 import FusecashIphone from '@/assets/img/use_cases/fusecash/fuse.cash_iphone.png'
 
 import GoodDollarLogo from '@/assets/img/use_cases/gooddollar/gooddollar-logo.png'
+import GoodDollarhBgSmall from '@/assets/img/use_cases/gooddollar/gooddollar_mobile.png'
 import GoodDollarhBg from '@/assets/img/use_cases/gooddollar/image-gooddollar.png'
 import GoodDollarIphone from '@/assets/img/use_cases/gooddollar/iphone-gooddollar.png'
 
 import ComunitariaLogo from '@/assets/img/use_cases/comunitaria/comunitaria-logo.png'
+import ComunitariaSmall from '@/assets/img/use_cases/comunitaria/communitaria_mobile.png'
 import ComunitariahBg from '@/assets/img/use_cases/comunitaria/comunitaria-image.png'
 import ComunitariaIphone from '@/assets/img/use_cases/comunitaria/comunitaria-iphon.png'
 
 import KolektivoLogo from '@/assets/img/use_cases/kolectivolabs/kolektivo-labs.png'
 import KolektivohBg from '@/assets/img/use_cases/kolectivolabs/kolektivo-image.png'
+import KolektivohBgSmall from '@/assets/img/use_cases/kolectivolabs/kolectivolabs_mobile.png'
 import KolektivoIphone from '@/assets/img/use_cases/kolectivolabs/kolectivo-wallet.png'
 
 import MysticLogo from '@/assets/img/use_cases/mysticvalley/mystic-valley-logo.png'
+import MysticBgSmall from '@/assets/img/use_cases/mysticvalley/mysticvallay_mobile.png'
 import MystichBg from '@/assets/img/use_cases/mysticvalley/mystic-valley-image.png'
 import MysticIphone from '@/assets/img/use_cases/mysticvalley/mystic-valley-wallet.png'
 
@@ -48,11 +53,11 @@ SwiperCore.use([Navigation, Pagination])
 
 const backgroundImages = [
   isMobileOnly ? MobilePeepl : PeeplBg,
-  FusecashBg,
-  GoodDollarhBg,
-  ComunitariahBg,
-  KolektivohBg,
-  MystichBg
+  isMobileOnly ? FusecashBgSmall : FusecashBg,
+  isMobileOnly ? GoodDollarhBgSmall : GoodDollarhBg,
+  isMobileOnly ? ComunitariaSmall : ComunitariahBg,
+  isMobileOnly ? KolektivohBgSmall : KolektivohBg,
+  isMobileOnly ? MysticBgSmall : MystichBg
 ]
 
 const SectionFive = () => {

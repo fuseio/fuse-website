@@ -26,7 +26,7 @@ const blogs = [
   }
 ]
 
-function Item ({
+function Item({
   title,
   href,
   date,
@@ -52,60 +52,63 @@ function Item ({
 const SectionFour = () => {
   const paginationRef = useRef(null)
   return (
-    <section className='section-C'>
-      <div className='section-C__wrapper'>
-        <h2 className='section-C__title'><FormattedMessage defaultMessage='Latest updates:' /></h2>
-        <div className='section-C__content'>
-          <div className='grid-x align-justify'>
-            <div className='item cell large-5'>
-              <p className='section-C__text'>
-                <FormattedMessage defaultMessage="Get to know what we've been up to lately
+    <section className='section-C__wrapper'>
+      <div className='section-C__container'>
+        <div className='section-C'>
+
+          <h2 className='section-C__title'><FormattedMessage defaultMessage='Latest updates:' /></h2>
+          <div className='section-C__content'>
+            <div className='grid-x align-justify'>
+              <div className='item cell large-5'>
+                <p className='section-C__text'>
+                  <FormattedMessage defaultMessage="Get to know what we've been up to lately
                 Follow us on Medium"
-                />
+                  />
 
-              </p>
-              <a
-                rel='noreferrer noopener' target='_blank' href='https://medium.com/fusenet'
-                className='main_button section-C__read-more section-link'
+                </p>
+                <a
+                  rel='noreferrer noopener' target='_blank' href='https://medium.com/fusenet'
+                  className='main_button section-C__read-more section-link'
+                >
+                  <span><FormattedMessage defaultMessage='Go to Blog' /></span>
+                </a>
+              </div>
+              <div className='blogs__wrapper cell large-auto grid-x align-spaced'>
+                {
+                  blogs.map((item, index) => {
+                    return <Item key={index} {...item} />
+                  })
+                }
+              </div>
+            </div>
+            <div className='section-C__swiper'>
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={20}
+                loop
+                setWrapperSize
+                autoplay={{
+                  reverseDirection: true,
+                  delay: 5000
+                }}
+                pagination={{
+                  clickable: true,
+                  el: paginationRef.current
+                }}
               >
-                <span><FormattedMessage defaultMessage='Go to Blog' /></span>
-              </a>
-            </div>
-            <div className='blogs__wrapper cell large-auto grid-x align-spaced'>
-              {
-                blogs.map((item, index) => {
-                  return <Item key={index} {...item} />
-                })
-              }
-            </div>
-          </div>
-          <div className='section-C__swiper'>
-            <Swiper
-              slidesPerView={1}
-              spaceBetween={20}
-              loop
-              setWrapperSize
-              autoplay={{
-                reverseDirection: true,
-                delay: 5000
-              }}
-              pagination={{
-                clickable: true,
-                el: paginationRef.current
-              }}
-            >
-              {
-                blogs.map((item, index) => {
-                  return (
-                    <SwiperSlide key={index}>
-                      <Item {...item} />
-                    </SwiperSlide>
-                  )
-                })
-              }
-              <div className='swiper-pagination' />
+                {
+                  blogs.map((item, index) => {
+                    return (
+                      <SwiperSlide key={index}>
+                        <Item {...item} />
+                      </SwiperSlide>
+                    )
+                  })
+                }
+                <div className='swiper-pagination' />
 
-            </Swiper>
+              </Swiper>
+            </div>
           </div>
         </div>
       </div>

@@ -110,83 +110,8 @@
 		}
 	}
 
-	// @include block(twitter) {
-	// 	background-image: url(/images/twitter.svg);
-	// 	@include modifier(white) {
-	// 		background-image: url(/images/network_twitter.svg);
-
-	// 		&:hover {
-	// 			background-image: url(/images/network_twitter_hover.svg);
-	// 		}
-	// 	}
-	// 	&:hover {
-	// 		background-image: url(/images/twitter_hover.svg);
-	// 	}
-	// }
-
-	// @include block(github) {
-	// 	background-image: url(/images/github.svg);
-	// 	&:hover {
-	// 		background-image: url(/images/git_hover.svg);
-	// 	}
-
-	// 	@include modifier(white) {
-	// 		background-image: url(/images/network_git.svg);
-
-	// 		&:hover {
-	// 			background-image: url(/images/network_git_hover.svg);
-	// 		}
-	// 	}
-	// }
-
-	// @include block(medium) {
-	// 	background-image: url(/images/medium.svg);
-
-	// 	&:hover {
-	// 		background-image: url(/images/medium_hover.svg);
-	// 	}
-
-	// 	@include modifier(white) {
-	// 		background-image: url(/images/network_med.svg);
-
-	// 		&:hover {
-	// 			background-image: url(/images/network_medium_hover.svg);
-	// 		}
-	// 	}
-	// }
-
-	// @include block(discord) {
-	// 	background-image: url(/images/discord_black.svg);
-	// 	&:hover {
-	// 		background-image: url(/images/discord_header_hover.svg);
-	// 	}
-
-	// 	@include modifier(white) {
-	// 		background-image: url(/images/network_discord.svg);
-
-	// 		&:hover {
-	// 			background-image: url(/images/network_discord_header_hover.svg);
-	// 		}
-	// 	}
-	// }
-
-	// @include block(telegram) {
-	// 	background-image: url(/images/telegram_header.svg);
-	// 	&:hover {
-	// 		background-image: url(/images/telegram_hover.svg);
-	// 	}
-
-	// 	@include modifier(white) {
-	// 		background-image: url(/images/network_tele.svg);
-
-	// 		&:hover {
-	// 			background-image: url(/images/network_tele_hover.svg);
-	// 		}
-	// 	}
-	// }
-
 	@include block(language) {
-		margin: 1em 0.5em;
+		// margin: 1em 0.5em;
 		width: 32px;
 		height: 32px;
 		border-radius: 7px;
@@ -195,12 +120,13 @@
 		@include xy-grid();
 		@include flex-align(center, middle);
 		> span {
+			font-size: 0.938em;
 			text-transform: capitalize;
 			font-weight: 500;
 		}
 
 		@include modifier(white) {
-			color: $color-primary-dark;
+			color: $color-dark;
 			background-image: unset;
 			background: $color-white;
 		}
@@ -220,10 +146,6 @@
 		&:hover {
 			background-color: #05283e;
 
-			.header__wallet__icon {
-				// background-image: url(/images/wallet_header_hover.svg);
-			}
-
 			span {
 				color: white !important;
 			}
@@ -233,9 +155,6 @@
 			&:hover {
 				background-color: #eef58c;
 
-				.header__wallet__icon {
-					// background-image: url(/images/wallet.svg);
-				}
 				span {
 					color: black !important;
 				}
@@ -263,15 +182,11 @@
 		@include element(icon) {
 			width: 23px;
 			height: 23px;
-			// background-image: url(/images/wallet.svg);
 			background-repeat: no-repeat;
 		}
 	}
 
 	@include element(nav) {
-		// display: flex;
-		// align-items: center;
-		// justify-content: space-evenly;
 		color: #0a2f40;
 		font-size: 1em;
 
