@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 // import { FormattedMessage } from 'react-intl'
 import classNames from 'classnames'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Navigation, Pagination, EffectFade } from 'swiper'
+import SwiperCore, { Navigation, Pagination } from 'swiper'
 // import paywiseBg from '@/assets/images/paywise-background.png'
 // import digitalrandeBg from '@/assets/images/digitalrand-image.png'
 // import loclaPayBg from '@/assets/images/Local-pay-background.png'
@@ -49,7 +49,7 @@ import {
   isMobileOnly
 } from 'react-device-detect'
 
-SwiperCore.use([EffectFade, Navigation, Pagination])
+SwiperCore.use([Navigation, Pagination])
 
 const backgroundImages = [
   isMobileOnly ? MobilePeepl : PeeplBg,
@@ -76,7 +76,7 @@ const SectionFive = () => {
       <div className='communities__content grid-container'>
         <div className='grid-x communities__items communities-swiper-container'>
           <Swiper
-            // effect='fade'
+            effect='cube'
             slidesPerView={1}
             loop
             speed={1000}

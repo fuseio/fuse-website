@@ -134,6 +134,11 @@
       }
 
       @include block(content) {
+        > div {
+          &:not(:last-child) {
+            margin-bottom: 2em;
+          }
+        }
         @include breakpoint(medium up) {
           @include xy-grid(vertical);
           @include flex-align(center, top);

@@ -79,27 +79,26 @@ module.exports = {
               publicPath: '/images'
             }
           },
-          isDev
-            ? {
-                loader: 'image-webpack-loader',
-                options: {
-                  bypassOnDebug: true,
-                  gifsicle: {
-                    interlaced: false
-                  },
-                  optipng: {
-                    optimizationLevel: 7
-                  },
-                  pngquant: {
-                    speed: 4
-                  },
-                  mozjpeg: {
-                    progressive: true
-                  }
-                }
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              disable: true,
+              bypassOnDebug: true,
+              gifsicle: {
+                interlaced: false
+              },
+              optipng: {
+                optimizationLevel: 7
+              },
+              pngquant: {
+                speed: 4
+              },
+              mozjpeg: {
+                progressive: true
               }
-            : null
-        ].filter(Boolean)
+            }
+          }
+        ]
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
