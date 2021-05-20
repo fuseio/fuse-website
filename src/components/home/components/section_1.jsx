@@ -2,6 +2,9 @@ import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import whiteArrow from '@/assets/images/white_arrow.svg'
 import Globe from './globe'
+import {
+  isMobileOnly
+} from 'react-device-detect'
 
 const SectionOne = () => {
   return (
@@ -10,7 +13,7 @@ const SectionOne = () => {
         <div className='section-A__container'>
           <div className='section-A__main'>
             <h1 className='main_title'>
-              The Infrastructure for <br /> Open-Source Money
+              The Infrastructure for {!isMobileOnly ? <br /> : null} Open-Source Money
             {/* <FormattedMessage defaultMessage='Turning communities into thriving economies' /> */}
             </h1>
             <p className='section-A__text'>

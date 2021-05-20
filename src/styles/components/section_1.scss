@@ -106,10 +106,10 @@
   @include block(main_title) {
     font-size: 2.813em;
     font-weight: bold;
-    // color: $color-dark;
     color: white;
-
+    
     @include breakpoint(medium down) {
+      margin-bottom: 1em;
       font-size: 2.313em;
     }
 
@@ -129,10 +129,10 @@
     }
     @include xy-cell(auto, null, 0);
     > canvas {
-      min-width: 70px;
-      min-height: 700px;
-      max-width: 700px;
-      max-height: 700px;
+      min-width: 800px;
+      min-height: 800px;
+      max-width: 800px;
+      max-height: 800px;
     }
   }
 

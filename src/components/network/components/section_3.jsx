@@ -53,7 +53,7 @@ const SectionThree = () => {
                 >
                   <FormattedMessage defaultMessage='Click here for the explorer' />
                 </a>
-                <img src='./images/arow.svg' alt='network_arrow' />
+                <img src='/images/arow.svg' alt='network_arrow' />
               </div>
             </div>
           </div>

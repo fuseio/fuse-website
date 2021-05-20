@@ -8,7 +8,7 @@
     padding: 12em 0 6em;
 
     @include breakpoint(medium down) {
-      padding: 5em 0;
+      padding: 5em 0 2em;
     }
   }
 
@@ -66,28 +66,14 @@
   }
 
   @include element(image) {
-    position: relative;
-    width: 100%;
-    margin-top: 3em;
-
     @include breakpoint(medium down) {
+      padding-top: 4em;
       order: 2;
     }
 
     > img {
-      position: absolute;
-
-      @include breakpoint(medium up) {
-        height: 542px;
-      }
-
-      @include breakpoint(medium down) {
-        position: unset;
-      }
-
-      left: -120px;
       border-radius: 10px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
     }
   }
 }

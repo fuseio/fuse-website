@@ -110,10 +110,10 @@ const FuseSwapFloor = () => {
     <section className='fuseswap_floor'>
       <div className='fuseswap_floor__container'>
         <div className='fuseswap_floor__container grid-x align-justify align-self-middle'>
-          <div className='fuseswap_floor__image'>
+          <div className='fuseswap_floor__image cell small-24 medium-12'>
             <img src={FuseSwapImage} />
           </div>
-          <div className='cell'>
+          <div className='cell small-24 medium-12'>
             <div className='grid-y texts'>
               <div className='fuseswap_floor__sub-title grid-x align-middle'>
                 <img src={FuseswpaIcon} />&nbsp;<span>Fuse Swap</span>

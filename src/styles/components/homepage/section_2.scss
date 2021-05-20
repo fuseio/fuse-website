@@ -7,7 +7,7 @@
   }
 
   @include breakpoint(medium down) {
-    padding: 20px;
+    padding: 20px 20px 3em;
   }
 
   @include element(items) {

@@ -50,7 +50,7 @@ const members = [
   },
   {
     name: 'Andy Pohl',
-    role: 'Backend Dev',
+    role: 'Backend Developer',
     picture: andy,
     linked: 'https://www.linkedin.com/in/andrew-pohl-4b52959b/',
     isLinkedIn: true

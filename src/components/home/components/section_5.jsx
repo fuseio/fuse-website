@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 // import { FormattedMessage } from 'react-intl'
 import classNames from 'classnames'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Navigation, Pagination } from 'swiper'
+import SwiperCore, { Navigation, Pagination, EffectFade } from 'swiper'
 // import paywiseBg from '@/assets/images/paywise-background.png'
 // import digitalrandeBg from '@/assets/images/digitalrand-image.png'
 // import loclaPayBg from '@/assets/images/Local-pay-background.png'
@@ -49,7 +49,7 @@ import {
   isMobileOnly
 } from 'react-device-detect'
 
-SwiperCore.use([Navigation, Pagination])
+SwiperCore.use([EffectFade, Navigation, Pagination])
 
 const backgroundImages = [
   isMobileOnly ? MobilePeepl : PeeplBg,
@@ -76,6 +76,7 @@ const SectionFive = () => {
       <div className='communities__content grid-container'>
         <div className='grid-x communities__items communities-swiper-container'>
           <Swiper
+            // effect='fade'
             slidesPerView={1}
             loop
             speed={1000}
@@ -111,7 +112,7 @@ const SectionFive = () => {
                     Sustainable local economy project in the United Kingdom to decentralize take away food ordering.
                   </div>
                   <div className='content__metadata'>
-                    <div className='grid-x align-middle link_icon'>
+                    <div className='link_icon'>
                       <img src={Link} />
                       <a
                         rel='noreferrer noopener'
@@ -156,7 +157,7 @@ const SectionFive = () => {
                     A mobile wallet designed for the remaining 99%. Deposit from a bank account to receive FuseDollars and ﻿earn 5% APR . Send money with zero fees, anytime to anywhere in the world. Trade cryptocurrencies in-app.
                   </div>
                   <div className='content__metadata'>
-                    <div className='grid-x align-middle link_icon'>
+                    <div className='link_icon'>
                       <img src={Link} />
                       <a
                         rel='noreferrer noopener'
@@ -201,7 +202,7 @@ const SectionFive = () => {
                     Uses yield-generating decentralized finance products and a digital coin to deliver Basic Digital Income on a global scale."
                   </div>
                   <div className='content__metadata'>
-                    <div className='grid-x align-middle link_icon'>
+                    <div className='link_icon'>
                       <img src={Link} />
                       <a
                         rel='noreferrer noopener'
@@ -229,7 +230,7 @@ const SectionFive = () => {
                     A for-profit technology and services company that helps charities efficiently target food donations to those in need whilst promoting economic recoveries in local neighbourhoods.
                   </div>
                   <div className='content__metadata'>
-                    <div className='grid-x align-middle link_icon'>
+                    <div className='link_icon'>
                       <img src={Link} />
                       <a
                         rel='noreferrer noopener'
@@ -274,7 +275,7 @@ const SectionFive = () => {
                     Regenerative economy project in Curaçao led by top DAO (Decentralized Autonomous Organization) experts. Leverages Fuse wallet technology for high-speed, low-fee sending and receiving of the islands digital currency, CuraDAI.
                   </div>
                   <div className='content__metadata'>
-                    <div className='grid-x align-middle link_icon'>
+                    <div className='link_icon'>
                       <img src={Link} />
                       <a
                         rel='noreferrer noopener'
@@ -319,7 +320,7 @@ const SectionFive = () => {
                     Musical events organization in Thailand that exclusively leverages the Fuse technology stack and wallet for payment of tickets, food, beverages and activities at festivals across the region.
                   </div>
                   <div className='content__metadata'>
-                    <div className='grid-x align-middle link_icon'>
+                    <div className='link_icon'>
                       <img src={Link} />
                       <a
                         rel='noreferrer noopener'
