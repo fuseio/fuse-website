@@ -55,12 +55,12 @@ const SectionThree = () => {
             </div>
 
             <div className='item'>
-              <h1 className='title'>21M FUSE</h1>
+              <h1 className='title'>40M FUSE</h1>
               <p className='text'>current total staked</p>
             </div>
 
             <div className='item'>
-              <h1 className='title'>$0.0015$</h1>
+              <h1 className='title'>$0.000010 USD</h1>
               <p className='text'>Current transaction fee</p>
             </div>
 

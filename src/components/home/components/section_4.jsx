@@ -1,7 +1,8 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
 import { FormattedMessage } from 'react-intl'
+import useFetch from 'use-http'
 import moment from 'moment'
 
 SwiperCore.use([Navigation, Pagination])
@@ -9,8 +10,6 @@ SwiperCore.use([Navigation, Pagination])
 function Item ({
   title,
   link,
-  date,
-  imagePath,
   thumbnail,
   pubDate
 }) {
@@ -33,17 +32,7 @@ function Item ({
 }
 
 const SectionFour = () => {
-  const [articles, setArticles] = useState([])
-  useEffect(() => {
-    async function fetchFuseBlogPosts () {
-      const { items } = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/fusenet').then(res => res.json())
-      const slicedArray = items.slice(0, 3)
-      setArticles(slicedArray)
-    }
-
-    fetchFuseBlogPosts()
-  }, [])
-  const paginationRef = useRef(null)
+  const { data = { items: [] } } = useFetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/fusenet', {}, [])
   return (
     <section className='section-C__wrapper'>
       <div className='section-C__container'>
@@ -68,7 +57,7 @@ const SectionFour = () => {
               </div>
               <div className='blogs__wrapper cell large-auto grid-x align-spaced'>
                 {
-                  articles.map((item, index) => {
+                  data.items.slice(0, 3).map((item, index) => {
                     return <Item key={index} {...item} />
                   })
                 }
@@ -85,12 +74,11 @@ const SectionFour = () => {
                   delay: 5000
                 }}
                 pagination={{
-                  clickable: true,
-                  el: paginationRef.current
+                  clickable: true
                 }}
               >
                 {
-                  articles.map((item, index) => {
+                  data.items.slice(0, 3).map((item, index) => {
                     return (
                       <SwiperSlide key={index}>
                         <Item {...item} />
@@ -98,8 +86,6 @@ const SectionFour = () => {
                     )
                   })
                 }
-                <div className='swiper-pagination' />
-
               </Swiper>
             </div>
           </div>

@@ -44,7 +44,7 @@ const items = [
 const bannerItems = [
   {
     icon: Transactions,
-    value: '1,00',
+    value: '10,392,350',
     text: 'Transactions'
   },
   {
@@ -54,7 +54,7 @@ const bannerItems = [
   },
   {
     icon: Wallet,
-    value: '100,00',
+    value: '358,909',
     text: 'Wallets'
   }
 ]
