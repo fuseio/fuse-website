@@ -21,7 +21,7 @@ const items = [
     url: 'https://docs.fuse.io'
   },
   {
-    title: 'Fuse token',
+    title: 'Fuse Token',
     icon: FuseToken,
     subTitle: 'Learn how it works',
     route: './token'

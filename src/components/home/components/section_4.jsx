@@ -2,10 +2,11 @@ import React, { useRef, useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
 import { FormattedMessage } from 'react-intl'
+import moment from 'moment'
 
 SwiperCore.use([Navigation, Pagination])
 
-function Item({
+function Item ({
   title,
   link,
   date,
@@ -20,11 +21,12 @@ function Item({
       </div>
 
       <div className='item__post__content'>
-        <p className='chips'>
+        {/* <p className='chips'>
           <span>Blog post</span>
-        </p>
+        </p> */}
         <h4 className='title'>{title}</h4>
-        <span>{pubDate}</span>
+        <small>By Fuse</small>
+        <span>{moment(pubDate).format('MMMM Do YYYY')}</span>
       </div>
     </a>
   )
