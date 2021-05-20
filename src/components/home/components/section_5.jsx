@@ -122,7 +122,7 @@ const SectionFive = () => {
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      <div className='download'>Download to your phone:</div>&nbsp;
+                      <div className='download'>Download the app:</div>&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
@@ -153,7 +153,7 @@ const SectionFive = () => {
                     <img alt='peepl' src={FusecashLogo} />
                   </div>
                   <div className='content__text'>
-                    It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout
+                    A mobile wallet designed for the remaining 99%. Deposit from a bank account to receive FuseDollars and ﻿earn 5% APR . Send money with zero fees, anytime to anywhere in the world. Trade cryptocurrencies in-app.
                   </div>
                   <div className='content__metadata'>
                     <div className='grid-x align-middle link_icon'>
@@ -163,11 +163,11 @@ const SectionFive = () => {
                         target='_blank'
                         href='https://fuse.cash/'
                       >
-                        Learn more about Fuse Dollar
+                        Learn more about FuseDollar
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      <div className='download'>Download to your phone:</div>&nbsp;&nbsp;
+                      <div className='download'>Download the app:</div>&nbsp;&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
@@ -198,7 +198,7 @@ const SectionFive = () => {
                     <img alt='peepl' src={GoodDollarLogo} />
                   </div>
                   <div className='content__text'>
-                    It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout
+                    Uses yield-generating decentralized finance products and a digital coin to deliver Basic Digital Income on a global scale."
                   </div>
                   <div className='content__metadata'>
                     <div className='grid-x align-middle link_icon'>
@@ -208,7 +208,7 @@ const SectionFive = () => {
                         target='_blank'
                         href='https://www.gooddollar.org/'
                       >
-                        Learn more about Good Dollar
+                        Learn more about GoodDollar
                       </a>
                     </div>
                   </div>
@@ -226,7 +226,7 @@ const SectionFive = () => {
                     <img alt='peepl' src={ComunitariaLogo} />
                   </div>
                   <div className='content__text'>
-                    It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout
+                    A for-profit technology and services company that helps charities efficiently target food donations to those in need whilst promoting economic recoveries in local neighbourhoods.
                   </div>
                   <div className='content__metadata'>
                     <div className='grid-x align-middle link_icon'>
@@ -240,7 +240,7 @@ const SectionFive = () => {
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      <div className='download'>Download to your phone:</div>&nbsp;&nbsp;
+                      <div className='download'>Download the app:</div>&nbsp;&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
@@ -271,7 +271,7 @@ const SectionFive = () => {
                     <img alt='peepl' src={KolektivoLogo} />
                   </div>
                   <div className='content__text'>
-                    It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout
+                    Regenerative economy project in Curaçao led by top DAO (Decentralized Autonomous Organization) experts. Leverages Fuse wallet technology for high-speed, low-fee sending and receiving of the islands digital currency, CuraDAI.
                   </div>
                   <div className='content__metadata'>
                     <div className='grid-x align-middle link_icon'>
@@ -285,7 +285,7 @@ const SectionFive = () => {
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      <div className='download'>Download to your phone:</div>&nbsp;&nbsp;
+                      <div className='download'>Download the app:</div>&nbsp;&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
@@ -316,7 +316,7 @@ const SectionFive = () => {
                     <img alt='peepl' src={MysticLogo} />
                   </div>
                   <div className='content__text'>
-                    It is a long established fact that a reader will be distracted bu the readable content of a page when looking ay its layout
+                    Musical events organization in Thailand that exclusively leverages the Fuse technology stack and wallet for payment of tickets, food, beverages and activities at festivals across the region.
                   </div>
                   <div className='content__metadata'>
                     <div className='grid-x align-middle link_icon'>
@@ -324,13 +324,13 @@ const SectionFive = () => {
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
-                        href='https://bitazza.com/'
+                        href='https://cointelegraph.com/news/thai-music-festival-to-use-its-own-token-for-a-cashless-event'
                       >
                         Learn more about Mystic valley
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      <div className='download'>Download to your phone:</div>&nbsp;&nbsp;
+                      <div className='download'>Download the app:</div>&nbsp;&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'

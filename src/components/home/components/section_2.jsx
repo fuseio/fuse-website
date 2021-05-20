@@ -16,26 +16,26 @@ const items = [
     image: Mobile,
     title: 'Mobile money',
     Text: () => (
-      <div className='item__text'>An open-source, <span>mobile alternative</span> to legacy payments that allows anyone anywhere in the world to access digital payments and decentralized finance</div>
+      <div className='item__text'>An open-source, <span>mobile alternative</span> to legacy banking that allows anyone anywhere in the world to access digital payments and decentralized finance.</div>
     )
   },
   {
     icon: BusinessSmall,
     image: Business,
-    title: 'Business tools',
+    title: "Plug 'n' Play",
     Text: () => (
       <div className='item__text'>
-        A <span>no-code</span> platform for communities and business to build new economic models, leveraging powerful tools and APIs in a low entry sandbox
+        A <span>no-code</span> platform for communities and business*es* to build new economic models, leveraging powerful tools and APIs in a low entry sandbox.
       </div>
     )
   },
   {
     icon: PaymentsNetworkSmall,
     image: PaymentsNetwork,
-    title: 'Payments network',
+    title: 'Built for Scale',
     Text: () => (
       <div className='item__text'>
-        A <span>fast, decentralized</span> payment network that offers Ethereum smart contract capabilities and enables anyone to have ownership in the infrastructure
+        A <span>fast, decentralized</span> payment network that offers Ethereum smart contract capabilities and enables anyone to have ownership in the infrastructure.
       </div>
     )
   }
@@ -59,13 +59,13 @@ const bannerItems = [
   }
 ]
 
-const Item = ({ image, Text, icon }) => {
+const Item = ({ title, image, Text, icon }) => {
   return (
     <div className='item'>
       <img className='item__image' src={image} />
       <div className='item__title grid-x align-middle'>
         <img src={icon} />
-        <h4>Mobile money</h4>
+        <h4>{title}</h4>
       </div>
       <Text />
     </div>

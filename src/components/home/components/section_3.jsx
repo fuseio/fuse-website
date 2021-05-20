@@ -65,12 +65,12 @@ const FuseWalletFloor = () => {
             Engage early users <br /> for rapid growth
           </h1>
           <p className='wallet_floor__text'>
-            Onboard your community members with a  <br /> personalised wallet experience.
+            Onboard your community members with a  <br /> personalized wallet experience.
           </p>
           <ul className='props'>
             <li>Highly customizable.</li>
             <li>User-owned data.</li>
-            <li>Send and receive transaction instantly.</li>
+            <li>Send and receive money instantly.</li>
           </ul>
           <div className='wallet_floor__links hide-for-small'>
             <div className='title'>

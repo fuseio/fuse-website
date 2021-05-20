@@ -121,13 +121,15 @@
 
   @include block(card) {
     @include element(content) {
+      min-height: 300px;
+      max-height: 300px;
       @include breakpoint(medium up) {
         @include xy-grid(vertical, false);
-        @include flex-align(center, top);
+        @include flex-align(left, top);
       }
       @include breakpoint(medium down) {
         @include xy-grid(vertical, false);
-        @include flex-align(center, middle);
+        @include flex-align(left, middle);
       }
       > img {
         width: 193px;
