@@ -9,6 +9,7 @@ import lior from '@/assets/img/team/lior.jpg'
 import mikhail from '@/assets/img/team/mikhail.png'
 import rudy from '@/assets/img/team/rudy.png'
 import mulenga from '@/assets/img/team/mulenga.png'
+import daniil from '@/assets/img/team/daniil.png'
 import robert from '@/assets/img/team/robert.png'
 import linkedin from '@/assets/img/linkedin.svg'
 
@@ -87,6 +88,13 @@ const members = [
     role: 'Communications and design',
     picture: sahara,
     linked: 'https://www.linkedin.com/in/saharasittie/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Daniil Gorbatenko',
+    role: 'Partnerships and Content',
+    picture: daniil,
+    linked: 'https://www.linkedin.com/in/daniil-gorbatenko-4a33133/',
     isLinkedIn: true
   }
 ]
