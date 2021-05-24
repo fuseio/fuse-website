@@ -1,119 +1,106 @@
-import React from 'react'
-import { withRouter } from 'react-router'
+import React from "react";
+import { withRouter } from "react-router";
+import { FormattedMessage } from "react-intl";
 
 const items = [
   {
-    title: 'Products',
+    title: "Products",
     items: [
       {
-        title: 'Fuse Swap',
-        url: 'https://fuseswap.com/'
+        title: <FormattedMessage defaultMessage="Fuse Swap" />,
+        url: "https://fuseswap.com/",
       },
       {
-        title: 'Fuse Staking',
-        url: 'http://staking.fuse.io/'
+        title: <FormattedMessage defaultMessage="Fuse Staking" />,
+        url: "http://staking.fuse.io/",
       },
       {
-        title: 'Fuse Studio',
-        url: 'http://studio.fuse.io/'
-      }
-    ]
+        title: <FormattedMessage defaultMessage="Fuse Studio" />,
+        url: "http://studio.fuse.io/",
+      },
+    ],
   },
   {
-    title: 'For Developers',
+    title: <FormattedMessage defaultMessage="For Developers" />,
     items: [
       {
-        title: 'Documentation',
-        url: 'http://docs.fuse.io/'
+        title: <FormattedMessage defaultMessage="Documentation" />,
+        url: "http://docs.fuse.io/",
       },
       {
-        title: 'Explorer',
-        url: 'http://explorer.fuse.io/'
+        title: <FormattedMessage defaultMessage="Explorer" />,
+        url: "http://explorer.fuse.io/",
       },
       {
-        title: 'Become Validator',
-        url: 'https://docs.fuse.io/become-a-validator/getting-started'
-      }
-    ]
+        title: <FormattedMessage defaultMessage="Become Validator" />,
+        url: "https://docs.fuse.io/become-a-validator/getting-started",
+      },
+    ],
   },
   {
-    title: 'Company',
+    title: <FormattedMessage defaultMessage="Company" />,
     items: [
       {
-        title: 'About Us',
-        route: './about'
+        title: <FormattedMessage defaultMessage="About Us" />,
+        route: "./about",
       },
       {
-        title: 'Network',
-        route: './network'
+        title: <FormattedMessage defaultMessage="Network" />,
+        route: "./network",
       },
       {
-        title: 'Careers',
-        route: './network'
-      }
-    ]
-  }
-]
+        title: <FormattedMessage defaultMessage="Careers" />,
+        route: "./network",
+      },
+    ],
+  },
+];
 
 const links = [
   {
-    title: 'Docs',
-    url: 'http://docs.fuse.io/'
+    title: <FormattedMessage defaultMessage="Docs" />,
+    url: "http://docs.fuse.io/",
   },
   {
-    title: 'Explorer',
-    url: 'http://explorer.fuse.io/'
+    title: <FormattedMessage defaultMessage="Explorer" />,
+    url: "http://explorer.fuse.io/",
   },
   {
-    title: 'Network',
-    route: './network'
+    title: <FormattedMessage defaultMessage="Network" />,
+    route: "./network",
   },
   {
-    title: 'Privacy policy',
-    route: './privacy'
-  }
-]
+    title: <FormattedMessage defaultMessage="Privacy policy" />,
+    route: "./privacy",
+  },
+];
 
 const Item = withRouter(({ history, url, title, route }) => {
   return (
-    <div className='links__item'>
-      {
-        route
-          ? (
-            <span onClick={() => history.push(route)}>
-              {title}
-            </span>
-            )
-          : null
-      }
-      {
-        url
-          ? (
-            <a rel='noreferrer noopener' target='_blank' href={url}>
-              {title}
-            </a>
-            )
-          : null
-      }
+    <div className="links__item">
+      {route ? <span onClick={() => history.push(route)}>{title}</span> : null}
+      {url ? (
+        <a rel="noreferrer noopener" target="_blank" href={url}>
+          {title}
+        </a>
+      ) : null}
     </div>
-  )
-})
+  );
+});
 
-function Links () {
+function Links() {
   return (
-    <div className='links cell small-24 medium-8'>
-      {
-        links.map((item, index) => (
-          <Item key={index} {...item} />
-        ))
-      }
+    <div className="links cell small-24 medium-8">
+      {links.map((item, index) => (
+        <Item key={index} {...item} />
+      ))}
       {/* {
         items.map((item, index) => {
           return <List {...item} key={index} />
         })
       } */}
     </div>
-  )
+  );
 }
 
-export default Links
+export default Links;
