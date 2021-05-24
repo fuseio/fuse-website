@@ -1,98 +1,114 @@
-import React, { useState } from 'react'
-import { FormattedMessage } from 'react-intl'
-import { object, string } from 'yup'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
-
-const SignupSchema = object().shape({
-  email: string().email('Invalid email').required('Required')
-})
+import React, { useState } from 'react';
+import { FormattedMessage, useIntl } from 'react-intl';
+import { object, string } from 'yup';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { LangProvider, useLang } from '../shared/lang_provider';
 
 const NewsletterForm = () => {
-  const [title, setTitle] = useState('')
+  const [title, setTitle] = useState('');
+  const intl = useIntl();
+
+  const emailInvalidMessage = intl.formatMessage({
+    defaultMessage: 'Invalid email',
+  });
+  const requiredMessage = intl.formatMessage({
+    defaultMessage: 'Required',
+  });
+  const SignupSchema = object().shape({
+    email: string().email(emailInvalidMessage).required(requiredMessage),
+  });
+
+  console.log(intl);
 
   return (
     <Formik
       initialValues={{ email: '' }}
       validationSchema={SignupSchema}
       onSubmit={async (values, { setSubmitting, resetForm }) => {
-        const { email } = values
+        const { email } = values;
         const user = {
           accountAddress: email,
           email: email,
           provider: 'HDWallet',
           subscribe: true,
           source: 'Fuse.io',
-          displayName: 'Fuse.io'
-        }
+          displayName: 'Fuse.io',
+        };
 
         try {
           const response = await fetch('https://studio.fuse.io/api/v2/users', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
             },
             referrerPolicy: 'no-referrer',
-            body: JSON.stringify(user)
-          })
+            body: JSON.stringify(user),
+          });
 
           if (response.status === 200) {
-            setTitle('<span>Thanks joining our mailing list! &#128077</span>')
+            const okMessage = intl.formatMessage({
+              defaultMessage: 'Thanks joining our mailing list! &#128077',
+            });
+            setTitle(`<span>${okMessage}</span>`);
             setTimeout(() => {
-              setTitle('')
-            }, 3000)
-            setSubmitting(true)
+              setTitle('');
+            }, 3000);
+            setSubmitting(true);
           } else if (response.status === 500) {
-            setTitle('<span>Something went wrong &#128078</span>')
+            const errorMessage = intl.formatMessage({
+              defaultMessage: 'Something went wrong &#128078',
+            });
+            setTitle(`<span>${errorMessage}</span>`);
             setTimeout(() => {
-              setTitle('')
-            }, 3000)
-            setSubmitting(true)
+              setTitle('');
+            }, 3000);
+            setSubmitting(true);
           }
 
-          resetForm({ email: '' })
+          resetForm({ email: '' });
         } catch (error) {
-          resetForm({ email: '' })
-          setTitle('<span>Something went wrong &#128078</span>')
+          const errorMessage = intl.formatMessage({
+            defaultMessage: 'Something went wrong &#128078',
+          });
+          resetForm({ email: '' });
+          setTitle(`<span>${errorMessage}</span>`);
           setTimeout(() => {
-            setTitle('')
-          }, 3000)
-          setSubmitting(true)
+            setTitle('');
+          }, 3000);
+          setSubmitting(true);
         }
-      }}
-    >
+      }}>
       {({ isSubmitting, dirty }) => (
-        <Form className='newsletter__form '>
-          <div className='title' dangerouslySetInnerHTML={{ __html: title }} />
-          <FormattedMessage defaultMessage='Enter Email'>
-            {
-              txt => (
-                <Field
-                  type='email'
-                  className='newsletter__form__input'
-                  placeholder={txt}
-                  name='email'
-                />
-              )
-            }
+        <Form className="newsletter__form ">
+          <div className="title" dangerouslySetInnerHTML={{ __html: title }} />
+          <FormattedMessage defaultMessage="Enter Email">
+            {(txt) => (
+              <Field
+                type="email"
+                className="newsletter__form__input"
+                placeholder={txt}
+                name="email"
+              />
+            )}
           </FormattedMessage>
-          <ErrorMessage name='email'>
+          <ErrorMessage name="email">
             {(msg) => (
-              <div className='newsletter__form__mobile-error'>{msg}</div>
+              <div className="newsletter__form__mobile-error">{msg}</div>
             )}
           </ErrorMessage>
           <button
             disabled={!dirty || isSubmitting}
-            id='btn_submit'
-            type='submit'
-            className='newsletter__form__button'
+            id="btn_submit"
+            type="submit"
+            className="newsletter__form__button"
           />
-          <ErrorMessage name='email'>
-            {(msg) => <div className='newsletter__form__error '>{msg}</div>}
+          <ErrorMessage name="email">
+            {(msg) => <div className="newsletter__form__error ">{msg}</div>}
           </ErrorMessage>
         </Form>
       )}
     </Formik>
-  )
-}
+  );
+};
 
-export default NewsletterForm
+export default NewsletterForm;
