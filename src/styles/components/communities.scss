@@ -1,22 +1,21 @@
 @include block(communities) {
   position: relative;
+  padding: 3em 0;
 
   @include element(title) {
     @extend %main-title;
     margin: 1em 0;
   }
   @include breakpoint(1800px) {
-    min-height: 750px;
+    // min-height: 750px;
   }
 
   > img {
     position: absolute;
-    left: 0;
+    right: 0;
     bottom: 0;
-    height: 100%;
+    max-height: 564px;
     object-fit: cover;
-    width: 100%;
-    min-height: inherit;
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -o-transition: opacity 1s ease-in-out;
@@ -24,17 +23,18 @@
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
+    @include breakpoint(medium up) {
+      width: 50%;
+    }
 
-    @include breakpoint(1900px) {
-      height: auto;
-      min-height: inherit;
+    @include breakpoint(medium down) {
+      max-height: unset;
+      bottom: 80px;
     }
   }
 
   @include block(opaque) {
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: alpha(opacity=1);
   }
 
   @include breakpoint(1980px) {
@@ -48,10 +48,6 @@
     height: min-content;
     bottom: 0 !important;
     @include xy-grid-container();
-
-    // text-align: center;
-    // top: 30px;
-    // position: absolute;
     @include breakpoint(medium down) {
       display: none;
     }
@@ -66,7 +62,6 @@
   }
 
   @include element(content) {
-    // max-width: 80%;
     position: relative;
 
     @include breakpoint(xlarge down) {
@@ -77,14 +72,13 @@
     }
 
     @include breakpoint(1980px) {
-      // width: 60%;
     }
 
     @include breakpoint(small only) {
     }
 
     @include breakpoint(medium down) {
-      width: 85%;
+      // width: 85%;
       max-width: 90%;
       margin: auto;
       transform: unset;
@@ -97,84 +91,78 @@
     .swiper-container {
       position: unset !important;
     }
-    // @include breakpoint(xlarge) {
-    //   padding-bottom: 1em;
-    // }
-    // @include breakpoint(1980px) {
-    //   padding-bottom: 2em;
-    // }
 
     @include block(community) {
       width: 100%;
+      @include xy-grid();
+      @include flex-align(justify, middle);
+
+      @include breakpoint(medium down) {
+        @include xy-grid(vertical);
+        @include flex-align(justify, middle);
+      }
 
       @include block(image) {
+        @include xy-grid();
+        position: relative;
+        @include flex-align(null, null);
         > img {
-          width: 356px;
+          object-fit: contain;
+        }
+        @include breakpoint(medium up) {
+          @include xy-cell(12, null, 0);
+          // height: 630px;
+          > img {
+            min-width: 350px;
+            min-height: 500px;
+            // max-width: 350px;
+            max-height: 500px;
+          }
+        }
+
+        @include breakpoint(medium down) {
+          @include xy-cell(24, null, 0);
+          @include xy-grid();
+          @include flex-align(center, middle);
+          // margin-top: 3em;
+          // margin-bottom: 2em;
+          > img {
+            min-height: 576px;
+            max-height: 576px;
+          }
         }
       }
 
       @include block(content) {
-        @include element(geo) {
-          position: relative;
-          margin-top: 8em;
-          @include block(planet) {
-            width: 204px;
-            height: 204px;
-            max-width: 204px;
-            max-height: 204px;
+        > div {
+          &:not(:last-child) {
+            margin-bottom: 2em;
           }
-
-          @include block(tooltip) {
-            position: absolute;
-            color: #4a4a4a;
-            background: #ffffff;
-            text-align: center;
-            border-radius: 6px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.31);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.7em;
-            top: -4em;
-            width: max-content;
-
-            span {
-              font-size: 1.125em;
-              font-weight: 500;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: normal;
-              letter-spacing: 0.01px;
-              color: #4a4a4a;
-            }
-
-            img {
-              height: 16px;
-              margin-right: 0.4em;
-            }
-
-            &:after {
-              content: "";
-              position: absolute;
-              top: 100%;
-              left: 50%;
-              margin-left: -8px;
-              width: 0;
-              height: 0;
-              border-top: 8px solid #ffffff;
-              border-right: 8px solid transparent;
-              border-left: 8px solid transparent;
-            }
-          }
+        }
+        @include breakpoint(medium up) {
+          @include xy-grid(vertical);
+          @include flex-align(center, top);
+          @include xy-cell(10, null, 0);
+        }
+        @include breakpoint(medium down) {
+          @include xy-cell(24, null, 0);
+          margin-bottom: 3em;
         }
 
         @include element(metadata) {
-          margin-top: 2em;
-          font-size: 0.8em;
+          @include xy-grid(vertical);
+          @include flex-align(left, top);
+          @extend %text;
           color: #037aff;
 
+          > div {
+            &:not(:last-child) {
+              margin-bottom: 1em;
+            }
+          }
+
           @include breakpoint(medium down) {
-            font-size: 1em;
+            height: 100px;
           }
 
           a {
@@ -184,32 +172,32 @@
             }
           }
 
-          @include block(currency) {
-            margin-right: 1em;
-            font-size: 1.125em;
-          }
-          @include block(token) {
-            width: 30px;
-            height: 30px;
-            margin-right: 0.5em;
-          }
-
-          @include block(app_icon) {
-            width: 15px;
-            height: 15px;
-            margin-right: 0.5em;
-          }
-
           @include block(link_icon) {
-            margin-right: 0.25em;
-            width: 15px;
-            height: 15px;
+            @include xy-grid(horizontal, false);
+            @include flex-align(null, middle);
+            @include block(download) {
+            }
+            img {
+              margin-right: 0.25em;
+              width: 15px;
+              height: 15px;
+            }
+
+            @include block(store) {
+              width: auto;
+              height: 22px;
+            }
           }
         }
 
         @include element(logo) {
-          margin-bottom: 1em;
-          max-width: 200px;
+          // margin-bottom: 2em;
+          // max-width: 200px;
+          min-height: 125px;
+          max-height: 125px;
+
+          @include xy-grid();
+          @include flex-align(null, middle);
 
           img {
             width: 100%;
@@ -218,8 +206,14 @@
         }
 
         @include element(text) {
-          // max-width: 480px;
-          @extend %main-text;
+          @extend %text;
+          max-width: 391px;
+          // margin: 2em 0;
+
+          @include breakpoint(medium down) {
+            min-height: 200px;
+            max-height: 200px;
+          }
           @include breakpoint(large) {
           }
         }
@@ -229,42 +223,125 @@
 
   @include element(button) {
     position: absolute;
-    bottom: 0;
-    width: 60px;
-    height: 70px;
+    bottom: -30px;
     z-index: 1;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
 
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.06;
+    letter-spacing: normal;
+    color: #000000;
+
     @include breakpoint(medium down) {
-      display: none;
+      // bottom: -100px;
     }
 
     @include modifier(prev) {
-      background-image: url(/images/back.png);
-      left: 0em;
+      &::before {
+        background-image: url(/images/arrow_back.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        margin-left: 0.2em;
+        width: 18px;
+        height: 11px;
+        display: inline-block;
+        padding-left: 8px;
+        content: ""; // arrow right unicode
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: transform 0.3s ease-out;
+        -ms-transition: transform 0.3s ease-out;
+        -o-transition: transform 0.3s ease-out;
+        transition: transform 0.3s ease-out;
+      }
 
       &:hover {
-        background-image: url(/images/back-hover.png);
+        // background-image: unset;
+        // background-color: #f8ff00;
+
+        &::before {
+          -webkit-transform: translateX(-4px);
+          -moz-transform: translateX(-4px);
+          -ms-transform: translateX(-4px);
+          -o-transform: translateX(-4px);
+          transform: translateX(-4px);
+        }
+      }
+
+      left: 20px;
+
+      @include breakpoint(medium down) {
+        // display: none;
+      }
+
+      &:hover {
+        // background-image: url(/images/back-hover.png);
       }
     }
 
     @include modifier(next) {
-      background-image: url(/images/next.png);
-      right: 0;
+      &::after {
+        background-image: url(images/arrow.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        margin-left: 0.2em;
+        width: 18px;
+        height: 11px;
+        display: inline-block;
+        padding-left: 8px;
+        content: ""; // arrow right unicode
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: transform 0.3s ease-out;
+        -ms-transition: transform 0.3s ease-out;
+        -o-transition: transform 0.3s ease-out;
+        transition: transform 0.3s ease-out;
+      }
 
       &:hover {
-        background-image: url(/images/next-hover.png);
+        // background-image: unset;
+        // background-color: #f8ff00;
+
+        &::after {
+          -webkit-transform: translateX(4px);
+          -moz-transform: translateX(4px);
+          -ms-transform: translateX(4px);
+          -o-transform: translateX(4px);
+          transform: translateX(4px);
+        }
+      }
+
+      left: 480px;
+      @include breakpoint(medium down) {
+        right: 20px;
+        left: unset;
+        // display: none;
+      }
+
+      &:hover {
+        // background-image: url(/images/next-hover.png);
       }
     }
   }
 
   @include block(title) {
-    @include breakpoint(1900px) {
-      margin-bottom: 5em;
+    padding-bottom: 4em;
+    @include block(powered) {
+      @extend %subtitle;
+      margin-bottom: 1em;
     }
+
+    @include breakpoint(medium down) {
+      padding-bottom: 1em;
+    }
+  }
+
+  @include block(main-title) {
+    @extend %title;
   }
 
   @include block(bg_images) {

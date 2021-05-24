@@ -1,18 +1,22 @@
-@import 'header';
-@import 'section_1';
-@import 'section_3';
-@import 'section_4';
-@import 'section_5';
-@import 'section_7';
-@import 'swiper';
-@import 'communities';
-@import 'footer';
-@import 'steps';
-@import 'network/network';
-@import 'network/stack';
-@import 'about';
-@import 'shared/newsletter_form';
-@import 'about';
+@import "header";
+@import "section_1";
+@import "section_3";
+@import "section_4";
+@import "section_7";
+@import "swiper";
+@import "communities";
+@import "footer";
+@import "network/network";
+@import "network/stack";
+@import "token/token";
+@import "homepage/section_2";
+@import "homepage/studio_floor";
+@import "homepage/wallet_floor";
+@import "homepage/fuseswap_floor";
+@import "homepage/fuse_ecosysyem";
+@import "shared/newsletter_form";
+@import "about";
+@import "navbar/navbar";
 
 .site-wrapper {
   position: relative;
@@ -21,4 +25,49 @@
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
+}
+
+@include block(main_button) {
+  padding: 0.5em 1em;
+  font-size: 1.125em;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.01px;
+  text-align: center;
+  color: #292b2c;
+  margin: 1em 0;
+  border-radius: 24.8px;
+  background-image: linear-gradient(102deg, #b1ffbf, #fff16d 84%);
+
+  &::after {
+    background-image: url(images/arrow.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    margin-left: 0.2em;
+    width: 18px;
+    height: 11px;
+    display: inline-block;
+    padding-left: 8px;
+    content: ""; // arrow right unicode
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: transform 0.3s ease-out;
+    -ms-transition: transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+  }
+
+  &:hover {
+    background-image: unset;
+    background-color: #f8ff00;
+
+    &::after {
+      -webkit-transform: translateX(4px);
+      -moz-transform: translateX(4px);
+      -ms-transform: translateX(4px);
+      -o-transform: translateX(4px);
+      transform: translateX(4px);
+    }
+  }
 }

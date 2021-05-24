@@ -3,6 +3,10 @@
     position: relative;
     @include xy-grid(horizontal, false);
 
+    @include breakpoint(medium down) {
+      @include flex-align(justify, middle);
+    }
+
     @include block(title) {
       position: absolute;
       top: -1.5em;
@@ -23,8 +27,8 @@
       padding: 10px;
       width: 100%;
 
-      @include breakpoint(small only) {
-        width: 100%;
+      @include breakpoint(medium down) {
+        width: 80%;
       }
 
       &:focus {
@@ -38,21 +42,49 @@
     }
 
     @include element(button) {
-      padding: 18px 26px;
-      max-width: 105px;
+      // padding: 18px 26px;
+      // max-width: 105px;
       margin-left: 1em;
       border-radius: 10px;
       font-weight: 500;
       background: $color-fuse_gradient;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
 
       @include breakpoint(small only) {
         margin-top: 1em;
         margin-left: 0;
       }
 
+      &::after {
+        background-image: url(images/arrow.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        margin-left: 0.2em;
+        width: 18px;
+        height: 11px;
+        display: inline-block;
+        padding-left: 8px;
+        content: ""; // arrow right unicode
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: transform 0.3s ease-out;
+        -ms-transition: transform 0.3s ease-out;
+        -o-transition: transform 0.3s ease-out;
+        transition: transform 0.3s ease-out;
+      }
+
       &:hover {
-        background: #fae83e;
-        cursor: pointer;
+        background-image: unset;
+        background-color: #f8ff00;
+
+        &::after {
+          -webkit-transform: translateX(4px);
+          -moz-transform: translateX(4px);
+          -ms-transform: translateX(4px);
+          -o-transform: translateX(4px);
+          transform: translateX(4px);
+        }
       }
 
       &:disabled {

@@ -1,0 +1,79 @@
+@include block(fuseswap_floor) {
+  background: #0a2540;
+  -webkit-clip-path: polygon(49% 15%, 50% 25%, 100% 1%, 100% 100%, 80% 100%, 0 100%, 0 100%, 0 35%);
+  clip-path: polygon(49% 15%, 50% 25%, 100% 1%, 100% 100%, 80% 100%, 0 100%, 0 100%, 0 35%);
+
+  @include element(container) {
+    @include xy-grid-container();
+    padding: 12em 0 6em;
+
+    @include breakpoint(medium down) {
+      padding: 5em 0 2em;
+    }
+  }
+
+  @include breakpoint(medium down) {
+    padding: 20px;
+    -webkit-clip-path: polygon(48% 1%, 50% 6%, 100% 0, 100% 70%, 100% 100%, 50% 100%, 0 100%, 0 5%);
+    clip-path: polygon(48% 1%, 50% 6%, 100% 0, 100% 70%, 100% 100%, 50% 100%, 0 100%, 0 5%);
+  }
+
+  @include element(sub-title) {
+    > img {
+      width: 29px;
+      height: 28px;
+    }
+
+    > span {
+      @extend %subtitle;
+      color: $color-white;
+    }
+    padding: 2em 0;
+  }
+
+  @include element(title) {
+    @extend %title;
+    color: $color-white;
+  }
+
+  @include element(text) {
+    @extend %text;
+    color: $color-white;
+    padding: 1.5em 0;
+  }
+
+  @include block(launch) {
+    padding-top: 2em;
+  }
+
+  @include block(props) {
+    li {
+      margin: 0;
+      padding: 8px 0px 8px 25px;
+      list-style: none;
+      background-image: url(images/bullet.png);
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 15px;
+      @extend %text;
+      color: $color-white;
+    }
+  }
+
+  @include block(texts) {
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  @include element(image) {
+    @include breakpoint(medium down) {
+      padding-top: 4em;
+      order: 2;
+    }
+
+    > img {
+      border-radius: 10px;
+      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+    }
+  }
+}

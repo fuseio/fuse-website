@@ -1,135 +1,115 @@
-import React, { useRef } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Navigation, Pagination } from 'swiper'
-import { FormattedMessage } from 'react-intl'
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Pagination } from "swiper";
+import { FormattedMessage } from "react-intl";
+import useFetch from "use-http";
+import moment from "moment";
 
-SwiperCore.use([Navigation, Pagination])
+SwiperCore.use([Navigation, Pagination]);
+
+function Item({ title, link, thumbnail, pubDate }) {
+  return (
+    <a
+      className="item__post"
+      rel="noreferrer noopener"
+      target="_blank"
+      href={link}
+    >
+      <div className="item__post__image">
+        <img alt="owners" src={thumbnail} />
+      </div>
+
+      <div className="item__post__content">
+        {/* <p className='chips'>
+          <span>Blog post</span>
+        </p> */}
+        <h4 className="title">
+          <FormattedMessage
+            defaultMessage="{title}"
+            values={{
+              title: title,
+            }}
+          />
+        </h4>
+        <small>
+          <FormattedMessage defaultMessage="By Fuse" />
+        </small>
+        <span>{moment(pubDate).format("MMMM Do YYYY")}</span>
+      </div>
+    </a>
+  );
+}
 
 const SectionFour = () => {
-  const paginationRef = useRef(null)
+  const { data = { items: [] } } = useFetch(
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/fusenet",
+    {},
+    []
+  );
+
+  console.log(data);
+
   return (
-    <section className='section-C wow fadeIn animated'>
-      <div className='section-C__content grid-container'>
-        <div className='grid-x align-justify'>
-          <div className='item cell large-5'>
-            <h2 className='section-C__title'><FormattedMessage defaultMessage='Latest updates:' />
-            </h2>
-            <p className='section-C__text'>
-              <FormattedMessage defaultMessage="Get to know what we've been up to lately
-              Follow us on Medium"
-              />
-
-            </p>
-            <a
-              rel='noreferrer noopener' target='_blank' href='https://medium.com/fusenet'
-              className='section-C__read-more section-link'
-            >
-              <span><FormattedMessage defaultMessage='Go to Blog' /></span>
-              <img style={{ marginLeft: '.3em' }} src='./images/section-C-arrow-right.svg' alt='' />
-            </a>
+    <section className="section-C__wrapper">
+      <div className="section-C__container">
+        <div className="section-C">
+          <h2 className="section-C__title">
+            <FormattedMessage defaultMessage="Latest updates:" />
+          </h2>
+          <div className="section-C__content">
+            <div className="grid-x align-justify">
+              <div className="item cell large-5">
+                <p className="section-C__text">
+                  <FormattedMessage
+                    defaultMessage="Get to know what we've been up to lately
+                Follow us on Medium"
+                  />
+                </p>
+                <a
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  href="https://medium.com/fusenet"
+                  className="main_button section-C__read-more section-link"
+                >
+                  <span>
+                    <FormattedMessage defaultMessage="Go to Blog" />
+                  </span>
+                </a>
+              </div>
+              <div className="blogs__wrapper cell large-auto grid-x align-spaced">
+                {data.items.slice(0, 3).map((item, index) => {
+                  return <Item key={index} {...item} />;
+                })}
+              </div>
+            </div>
+            <div className="section-C__swiper">
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={20}
+                loop
+                setWrapperSize
+                autoplay={{
+                  reverseDirection: true,
+                  delay: 5000,
+                }}
+                pagination={{
+                  clickable: true,
+                }}
+              >
+                {data.items.slice(0, 3).map((item, index) => {
+                  return (
+                    <SwiperSlide key={index}>
+                      <Item {...item} />
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
           </div>
-          <div className='blogs__wrapper cell large-auto grid-x align-spaced'>
-            <a className='item__post' rel='noreferrer noopener' target='_blank' href='https://medium.com/fusenet/the-future-of-universal-basic-income-within-hands-reach-48d5e4527eac'>
-              <div className='item__post__image'>
-                <img alt='owners' src='./images/gooddollaroblogpost.png' />
-              </div>
-
-              <div className='item__post__content'>
-                <p className='chips'>
-                  <span>Blog post</span>
-                </p>
-                <h4 className='title'>Fuse & GoodDollar partner on the future of UBI</h4>
-                <span>Jul 10, 2020</span>
-              </div>
-            </a>
-
-            <a className='item__post' rel='noreferrer noopener' target='_blank' href='https://medium.com/fusenet/how-wikibank-is-using-fuse-to-deliver-cash-in-times-of-corona-492f8b163107'>
-              <div className='item__post__image'><img alt='fuse' src='./images/wikibank_blog.png' />
-              </div>
-              <div className='item__post__content'>
-                <p className='chips'>
-                  <span>Blog post</span>
-                </p>
-                <h4 className='title'>How Wikibank is using Fuse to deliver cash in times of Corona</h4>
-                <span>Jul 6, 2020</span>
-              </div>
-            </a>
-
-            <a className='item__post' rel='noreferrer noopener' target='_blank' href='https://medium.com/fusenet/fuse-studio-updates-07-07-2020-c27983182e36'>
-              <div className='item__post__image'><img src='./images/Studio_updates.png' alt='fuse' />
-              </div>
-              <div className='item__post__content'>
-                <p className='chips'>
-                  <span>Blog post</span>
-                </p>
-                <h4 className='title'>Fuse Studio Updates — 07/07/2020</h4>
-                <span>Jul 6, 2020</span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div className='section-C__swiper'>
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={20}
-            loop
-            setWrapperSize
-            autoplay={{
-              reverseDirection: true,
-              delay: 5000
-            }}
-            pagination={{
-              clickable: true,
-              el: paginationRef.current
-            }}
-          >
-            <SwiperSlide>
-              <a className='item__post' rel='noreferrer noopener' target='_blank' href='https://medium.com/fusenet/the-future-of-universal-basic-income-within-hands-reach-48d5e4527eac'>
-                <div className='item__post__image'>
-                  <img alt='owners' src='./images/gooddollaroblogpost.png' />
-                </div>
-                <div className='item__post__content'>
-                  <p className='chips'>
-                    <span>Blog post</span>
-                  </p>
-                  <h4 className='title'>Fuse & GoodDollar partner on the future of UBI</h4>
-                  <span>Jul 10, 2020</span>
-                </div>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a className='item__post' rel='noreferrer noopener' target='_blank' href='https://medium.com/fusenet/how-wikibank-is-using-fuse-to-deliver-cash-in-times-of-corona-492f8b163107'>
-                <div className='item__post__image'><img alt='api' src='./images/wikibank_blog.png' />
-                </div>
-                <div className='item__post__content'>
-                  <p className='chips'>
-                    <span>Blog post</span>
-                  </p>
-                  <h4 className='title'>How Wikibank is using Fuse to deliver cash in times of Corona</h4>
-                  <span>Jul 6, 2020</span>
-                </div>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a className='item__post' rel='noreferrer noopener' target='_blank' href='https://medium.com/fusenet/fuse-studio-updates-07-07-2020-c27983182e36'>
-                <div className='item__post__image'><img src='./images/Studio_updates.png' alt='fuse' />
-                </div>
-                <div className='item__post__content'>
-                  <p className='chips'>
-                    <span>Blog post</span>
-                  </p>
-                  <h4 className='title'>Fuse Studio Updates — 07/07/2020</h4>
-                  <span>Jul 6, 2020</span>
-                </div>
-              </a>
-            </SwiperSlide>
-            <div className='swiper-pagination' />
-
-          </Swiper>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SectionFour
+export default SectionFour;

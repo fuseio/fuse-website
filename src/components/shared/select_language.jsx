@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import { withRouter } from 'react-router'
 import classNames from 'classnames'
 import { useLang } from './lang_provider'
 import useOutsideClick from '@/hooks/useOutsideClick.jsx'
@@ -10,13 +11,15 @@ const options = [
   { label: 'Korean', value: 'ko' }
 ]
 
-const SelectLanguage = ({ isNetworkHeader, isAboutHeader, isOpen }) => {
-  const [isListOpen, setIsOpen] = useState(false)
-  const [, setLang] = useLang()
+function SelectLanguage ({ history }) {
+  const [isOpen, setIsOpen] = useState(false)
+  const [lang, setLang] = useLang()
   const iconRef = useRef(null)
 
+  const isWhite = !history.location.pathname.includes('about')
+
   useOutsideClick(iconRef, () => {
-    if (isListOpen) {
+    if (isOpen) {
       setIsOpen(false)
     }
   })
@@ -28,7 +31,7 @@ const SelectLanguage = ({ isNetworkHeader, isAboutHeader, isOpen }) => {
 
   const openLanguageOptions = (e) => {
     e.stopPropagation()
-    setIsOpen(!isListOpen)
+    setIsOpen(!isOpen)
   }
 
   return (
@@ -36,20 +39,23 @@ const SelectLanguage = ({ isNetworkHeader, isAboutHeader, isOpen }) => {
       ref={iconRef}
       onClick={openLanguageOptions}
       rel='noreferrer noopener'
-      className={classNames('icon', { language: (!(isNetworkHeader || isAboutHeader) || isOpen), 'language--white': (isNetworkHeader || isAboutHeader) && !isOpen })}
+      className={classNames('icon language', { 'language--white': isWhite })}
       target='_blank'
     >
-      <div style={{ minWidth: '130px' }} className={classNames('drop', { 'drop--show': isListOpen })}>
+      <span>{lang}</span>
+      <div style={{ minWidth: '130px' }} className={classNames('drop', { 'drop--show': isOpen })}>
         <ul className='drop__options'>
-          {options.map((option, index) => (
-            <li onClick={onOptionClicked(option)} key={index} className='drop__options__item'>
-              {option.label}
-            </li>
-          ))}
+          {
+            options.map((option, index) => (
+              <li onClick={onOptionClicked(option)} key={index} className='drop__options__item'>
+                {option.label}
+              </li>
+            ))
+          }
         </ul>
       </div>
     </a>
   )
 }
 
-export default SelectLanguage
+export default withRouter(SelectLanguage)

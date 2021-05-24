@@ -1,0 +1,637 @@
+@include block(fuse_token_floor) {
+  @include breakpoint(medium up) {
+    @include xy-grid();
+    @include flex-align(null, middle);
+  }
+  @include breakpoint(medium down) {
+    @include xy-grid(vertical);
+    @include flex-align(justify, middle);
+  }
+
+  @include element(container) {
+    @include xy-grid-container();
+    width: 100%;
+  }
+  @include element(wrapper) {
+    @include xy-grid();
+    @include flex-align(justify, middle);
+    @include breakpoint(medium up) {
+      height: 798px;
+      background-image: radial-gradient(circle at 60% 50%, #455765, #001929 25%);
+    }
+    @include breakpoint(medium down) {
+      height: 821px;
+      background-image: radial-gradient(circle at 50% 63%, #455765, #001929 40%);
+    }
+    // background-color: #001929;
+  }
+
+  @include block(content) {
+    @include breakpoint(medium up) {
+      @include xy-cell(12, null, 0);
+    }
+    @include breakpoint(medium down) {
+      @include xy-cell(24, null, 0);
+    }
+
+    @include block(title) {
+      font-size: 2.813em;
+      font-weight: bold;
+      color: white;
+      @include breakpoint(medium down) {
+        font-size: 2.313em;
+        margin-bottom: 0.4em;
+      }
+    }
+
+    @include block(text) {
+      line-height: 1.56;
+      color: white;
+      // color: $color-gray;
+      @include breakpoint(large down) {
+        font-size: 1em;
+      }
+      @include breakpoint(large) {
+        font-size: 1.125em;
+      }
+      @include breakpoint(small only) {
+        font-size: 1.125em;
+      }
+    }
+  }
+
+  @include block(image) {
+    max-width: 333.8px;
+    @include breakpoint(medium up) {
+      @include xy-cell(12, null, 0);
+    }
+    @include breakpoint(medium down) {
+      @include xy-cell(20, null, 0);
+      margin-top: 6em;
+    }
+  }
+}
+
+@include block(utilities) {
+  @include element(container) {
+    @include xy-grid-container();
+    @include breakpoint(medium down) {
+      // padding-bottom: 2em;
+    }
+  }
+  @include element(wrapper) {
+    @include xy-grid();
+    @include flex-align(justify, middle);
+    @include breakpoint(medium up) {
+      padding: 2em 0;
+      // height: 798px;
+    }
+
+    @include breakpoint(medium down) {
+      padding: 2em 0;
+      // height: 798px;
+    }
+  }
+
+  @include element(title) {
+    @extend %title;
+    padding-bottom: 2em;
+    // padding: 2em 0;
+  }
+
+  @include element(items) {
+    @include breakpoint(medium up) {
+      @include xy-grid();
+      @include flex-align(justify, middle);
+    }
+
+    @include breakpoint(medium down) {
+      @include xy-grid(vertical, false);
+      @include flex-align(justify, middle);
+    }
+
+    @include block(item) {
+      @include breakpoint(medium up) {
+        @include xy-cell(5, null, 0);
+      }
+
+      @include breakpoint(medium down) {
+        @include xy-cell(16, null, 0);
+        @include xy-grid(vertical, false);
+        // @include flex-align(center, middle);
+        // @include flex-align(justify, middle);
+
+        &:not(:last-child) {
+          margin-bottom: 5em;
+        }
+      }
+      @include element(image) {
+        width: 152px;
+        height: 152px;
+        margin-bottom: 2em;
+
+        @include breakpoint(medium down) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      @include element(text) {
+        @extend %text;
+        min-height: 75px;
+        // max-width: 253.6px;
+
+        > span {
+          font-weight: 500;
+          color: $color-black;
+        }
+      }
+
+      @include element(title) {
+        @extend %secondary-title;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}
+
+@include block(figures) {
+  @include element(container) {
+    width: 100%;
+    @include xy-grid-container();
+  }
+  @include element(wrapper) {
+    padding: 2em 0 4em;
+    @include xy-grid();
+    @include flex-align(justify, middle);
+    background-color: #f5f6fb;
+  }
+
+  @include element(title) {
+    @extend %title;
+    // padding-bottom: 2em;
+    padding: 2em 0;
+  }
+
+  @include element(items) {
+    @include breakpoint(medium up) {
+      @include xy-grid();
+      @include flex-align(spaced, middle);
+    }
+
+    @include breakpoint(medium down) {
+      @include xy-grid(vertical, false);
+      @include flex-align(justify, middle);
+    }
+
+    @include block(item) {
+      min-width: 321.2px;
+      max-width: 321.2px;
+      min-height: 170px;
+      max-height: 170px;
+      border: solid 1px #e4e4e4;
+      background-color: #ffffff;
+      @include xy-grid(vertical, false);
+      @include flex-align(center, middle);
+      // @include breakpoint(medium up) {
+      //   @include xy-cell(5, null, 0);
+      // }
+
+      @include breakpoint(medium down) {
+        &:not(:last-child) {
+          margin-bottom: 2em;
+        }
+      }
+
+      @include block(title) {
+        @extend %secondary-title;
+        margin-bottom: 0.5em;
+        font-size: 2.063em;
+      }
+
+      @include block(text) {
+        @extend %text;
+        font-weight: 500;
+        color: #041926;
+      }
+    }
+  }
+}
+
+@include block(table) {
+  width: 100%;
+  padding: 20px;
+  border-spacing: 0;
+
+  @include block(heade) {
+    @include xy-grid(vertical, false);
+    @include flex-align(left, null);
+
+    span {
+      text-align: left;
+      margin-top: 0.2em;
+    }
+    @include breakpoint(medium up) {
+      img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    @include breakpoint(medium down) {
+      img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+  tr {
+    :last-child {
+      td {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  th,
+  td {
+    margin: 0;
+    padding: 0.5rem;
+    // border-bottom: 1px solid black;
+    // border-right: 1px solid black;
+    /* The secret sauce */
+    /* Each cell should grow equally */
+    width: 1%;
+    /* But "collapsed" cells should be as small as possible */
+    &.collapse {
+      width: 0.0000000001%;
+    }
+    :last-child {
+      border-right: 0;
+    }
+  }
+
+  @include element(wrapper) {
+    display: block;
+    max-width: 100%;
+    margin-top: 3em;
+    background: $color-white;
+    border: solid 1px #e4e4e4;
+    width: 100%;
+
+    @include breakpoint(medium up) {
+    }
+
+    @include breakpoint(medium down) {
+      overflow-y: hidden;
+      overflow-x: scroll;
+    }
+  }
+
+  @include element(header) {
+    padding: 1em;
+    @extend %secondary-title;
+
+    @include breakpoint(medium up) {
+    }
+
+    @include breakpoint(medium down) {
+      // font-size: 8.5px;
+      // font-size: 7.7px;
+    }
+    @include element(cell) {
+      // @include xy-grid();
+      // @include flex-align(center, middle);
+
+      > div {
+        // @include xy-grid(vertical);
+        // @include flex-align(center, middle);
+
+        img {
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+
+  @include element(body) {
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    @include element(row) {
+      position: relative;
+      height: 80px;
+
+      @include block(contract) {
+        color: #006aff;
+
+        > img {
+          margin-left: 0.4em;
+        }
+      }
+    }
+
+    @include block(number) {
+      @include xy-grid(horizontal, false);
+      @include flex-align(left, null);
+      @extend %text;
+      color: $color-black;
+      @include breakpoint(medium down) {
+        // font-size: 7.7px;
+      }
+
+      > img {
+        margin-right: 0.4em;
+      }
+    }
+
+    @include element(cell) {
+      // @include xy-grid();
+      // @include flex-align(center, middle);
+      @extend %text;
+      color: $color-black;
+
+      @include breakpoint(medium down) {
+        font-size: 7.7px;
+      }
+    }
+  }
+}
+
+@include block(purchase_fuse_token) {
+  @include xy-grid(vertical);
+  @include flex-align(center, middle);
+
+  @include breakpoint(medium up) {
+    padding: 7em 0;
+  }
+
+  @include breakpoint(medium down) {
+    padding: 4em 0;
+  }
+
+  @include element(container) {
+    position: relative;
+    @include xy-grid-container();
+    width: 100%;
+    // height: 100%;
+  }
+
+  @include element(wrapper) {
+    position: relative;
+    @include xy-grid();
+    @include flex-align(justify, middle);
+    @include breakpoint(medium down) {
+      // height: 443px;
+    }
+    background-image: linear-gradient(109deg, #b3f9ba 17%, #f6fb8c 87%);
+
+    @include block(bubble) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 211px;
+      bottom: 0;
+    }
+
+    @include block(token1) {
+      position: absolute;
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 191px;
+      top: 22px;
+
+      @include breakpoint(medium down) {
+        display: none;
+      }
+    }
+
+    @include block(token2) {
+      position: absolute;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 357px;
+      top: 0;
+
+      @include breakpoint(medium down) {
+        display: none;
+      }
+    }
+  }
+
+  @include block(title) {
+    @extend %title;
+    font-size: 3.125em;
+    color: #041926;
+
+    @include breakpoint(medium down) {
+      font-size: 1.875em;
+    }
+  }
+
+  @include block(items) {
+    width: 100%;
+    @include breakpoint(medium up) {
+      @include xy-grid();
+      @include flex-align(justify, middle);
+    }
+
+    @include breakpoint(medium down) {
+      @include xy-grid(vertical, false);
+      @include flex-align(justify, top);
+    }
+    margin-top: 4em;
+    @include block(item) {
+      @include xy-grid();
+      @include flex-align(justify, middle);
+      @include breakpoint(medium down) {
+        &:not(:last-child) {
+          margin-bottom: 2em;
+        }
+      }
+
+      &::after {
+        background-image: url(images/arrow.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        margin-left: 0.2em;
+        width: 18px;
+        height: 11px;
+        display: inline-block;
+        padding-left: 8px;
+        content: ""; // arrow right unicode
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: transform 0.3s ease-out;
+        -ms-transition: transform 0.3s ease-out;
+        -o-transition: transform 0.3s ease-out;
+        transition: transform 0.3s ease-out;
+      }
+
+      &:hover {
+        // background-image: unset;
+        // background-color: #f8ff00;
+
+        &::after {
+          -webkit-transform: translateX(4px);
+          -moz-transform: translateX(4px);
+          -ms-transform: translateX(4px);
+          -o-transform: translateX(4px);
+          transform: translateX(4px);
+        }
+      }
+
+      img {
+        width: 71px;
+        height: 71px;
+      }
+
+      h3 {
+        @extend %secondary-title;
+        font-weight: 500;
+        color: #041926;
+      }
+    }
+  }
+}
+
+@include block(token_distribution) {
+  @include breakpoint(medium up) {
+    @include xy-grid();
+    @include flex-align(justify, middle);
+  }
+  @include breakpoint(medium down) {
+    @include xy-grid(vertical);
+    @include flex-align(justify, middle);
+  }
+
+  @include element(container) {
+    @include xy-grid-container();
+    width: 100%;
+    padding-top: 4em;
+    padding-bottom: 4em;
+
+    // @include breakpoint(medium down) {
+    // }
+
+    @include block(title) {
+      @extend %title;
+      // font-size: 2.813em;
+      font-weight: bold;
+
+      @include breakpoint(medium down) {
+        font-size: 1.875em;
+      }
+    }
+  }
+  @include element(wrapper) {
+    @include xy-grid();
+    @include flex-align(justify, middle);
+    @include breakpoint(medium up) {
+      // height: 798px;
+    }
+    background-color: #fafafa;
+    // background-color: #001929;
+  }
+
+  @include element(content) {
+    margin-top: 3em;
+    @include breakpoint(medium up) {
+      @include xy-cell(12, null, 0);
+    }
+    @include breakpoint(medium down) {
+      @include xy-cell(24, null, 0);
+    }
+
+    @include block(items) {
+      list-style: none;
+      padding: 0;
+      li {
+        @include xy-grid(horizontal, false);
+        @include flex-align(null, middle);
+        @extend %secondary-title;
+        padding: 1em 0;
+
+        @include block(bullet) {
+          width: 46px;
+          height: 46px;
+          border-radius: 50%;
+          // background-color: red;
+          margin-right: 0.7em;
+        }
+
+        @include block(content) {
+          @include xy-grid(vertical, false);
+          h2 {
+            font-weight: 500;
+            color: #767676;
+            padding-bottom: 0.2em;
+          }
+
+          h4 {
+            color: #041926;
+          }
+        }
+      }
+    }
+  }
+
+  @include block(image) {
+    max-width: 500px;
+    @include breakpoint(medium up) {
+      @include xy-cell(12, null, 0);
+    }
+    @include breakpoint(medium down) {
+      @include xy-cell(22, null, 0);
+      margin-top: 3em;
+    }
+  }
+}
+
+@include block(token_inflation) {
+  @include breakpoint(medium up) {
+    @include xy-grid();
+    @include flex-align(justify, middle);
+    > div {
+      @include xy-cell(10, null, 0);
+    }
+  }
+  @include breakpoint(medium down) {
+    @include xy-grid(vertical);
+    @include flex-align(justify, middle);
+    > div {
+      @include xy-cell(24, null, 0);
+    }
+  }
+
+  @include element(container) {
+    @include xy-grid-container();
+  }
+  @include element(wrapper) {
+    padding: 4em 0;
+    @include xy-grid();
+    @include flex-align(justify, middle);
+  }
+
+  @include block(content) {
+    @include breakpoint(medium down) {
+      &:first-child {
+        margin-bottom: 3em;
+      }
+    }
+    @include block(title) {
+      @extend %secondary-title;
+      color: #041926;
+      margin-bottom: 0.6em;
+    }
+
+    @include block(text) {
+      @extend %text;
+      color: #575757;
+    }
+  }
+}

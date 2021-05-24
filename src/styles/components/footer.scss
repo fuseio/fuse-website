@@ -1,48 +1,30 @@
 @include block(footer) {
 	height: 100%;
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	justify-content: space-between;
-	max-width: initial !important;
-	margin: 0 !important;
+	max-width: 600px;
+	margin: auto;
 
-	@include breakpoint(small only) {
-		flex-direction: column;
-		align-items: center;
+	> div {
+		&:not(:last-child) {
+			margin-bottom: 3em;
+		}
+		@include breakpoint(medium down) {
+			align-self: baseline;
+		}
 	}
 
-	@include breakpoint(large only) {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	@include breakpoint(xlarge down) {
-		transform: scale(0.9);
-	}
-
-	@include xy-grid-container();
-
+	@include xy-grid(vertical);
+	@include flex-align(justify, middle);
 	@include element(wrapper) {
+		padding: 4em;
+		@include breakpoint(medium down) {
+			padding: 4em 20px;
+		}
 		background: linear-gradient(180deg, #002740 0%, #001929 100%);
-		padding: 80px 32px 160px 32px;
+		position: relative;
 
-		@include breakpoint(small only) {
-			padding: 30px 0;
-		}
-
-		@include breakpoint(large only) {
-			padding: 35px 0;
-		}
-
-		@include modifier(dark) {
-			background-color: #001929;
-		}
-	}
-
-	@include breakpoint(medium down) {
-		transform: unset;
+		// @include modifier(dark) {
+		// 	background-color: #001929;
+		// }
 	}
 
 	@include element(container) {
@@ -63,7 +45,7 @@
 		color: #0a2f40;
 
 		&:not(:last-child) {
-			margin-right: 33px;
+			margin-right: 3em;
 		}
 
 		@include modifier(white) {
@@ -76,13 +58,16 @@
 	}
 
 	@include element(icons) {
+		@include breakpoint(medium down) {
+			// margin: 2em 0;
+		}
 	}
 
 	@include element(icon) {
 		cursor: pointer;
-
-		&:not(:last-child) {
-			margin-right: 2em;
+		> img {
+			height: 47px;
+			width: 47px;
 		}
 	}
 
@@ -100,37 +85,37 @@
 	}
 
 	@include block(twitter) {
-		background-image: url(/images/twitter_white.svg);
+		// background-image: url(/images/twitter_white.svg);
 		&:hover {
-			background-image: url(/images/twitter_footer_hover.svg);
+			// background-image: url(/images/twitter_footer_hover.svg);
 		}
 	}
 
 	@include block(github) {
-		background-image: url(/images/github_white.svg);
+		// background-image: url(/images/github_white.svg);
 		&:hover {
-			background-image: url(/images/git_footer_hover.svg);
+			// background-image: url(/images/git_footer_hover.svg);
 		}
 	}
 
 	@include block(medium) {
-		background-image: url(/images/medium_white.svg);
+		// background-image: url(/images/medium_white.svg);
 		&:hover {
-			background-image: url(/images/med_footer_hover.svg);
+			// background-image: url(/images/med_footer_hover.svg);
 		}
 	}
 
 	@include block(discord) {
-		background-image: url(/images/discord.svg);
+		// background-image: url(/images/discord.svg);
 		&:hover {
-			background-image: url(/images/discord_footer_hover.svg);
+			// background-image: url(/images/discord_footer_hover.svg);
 		}
 	}
 
 	@include block(telegram) {
-		background-image: url(/images/tele.svg);
+		// background-image: url(/images/tele.svg);
 		&:hover {
-			background-image: url(/images/telegram_footer_hover.svg);
+			// background-image: url(/images/telegram_footer_hover.svg);
 		}
 	}
 
@@ -152,34 +137,6 @@
 		@include element(icon) {
 			width: auto;
 			height: 23px;
-		}
-	}
-
-	@include element(defi) {
-		height: 29px;
-		border-radius: 14.5px;
-		border: solid 1px #7b7b7b;
-		width: 185px;
-		max-width: 205px;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		margin-left: auto;
-		margin-top: 1em;
-
-		@include element(link) {
-			text-decoration: none;
-			width: 100%;
-			font-size: 0.938em;
-			font-style: normal;
-			font-stretch: normal;
-			line-height: normal;
-			letter-spacing: normal;
-			text-align: center;
-			color: white;
-			&:hover {
-				color: white;
-			}
 		}
 	}
 
@@ -208,15 +165,6 @@
 	}
 
 	@include element(item) {
-		justify-content: center;
-
-		&:not(:last-child) {
-			margin-bottom: 2em;
-		}
-
-		@include breakpoint(small only) {
-			margin: 1em 0;
-		}
 	}
 
 	@include element(sign) {
@@ -279,78 +227,33 @@
 
 	@include element(copyright) {
 		color: white;
-		font-size: 15px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 14px;
-		letter-spacing: 0px;
-		text-align: left;
-		color: #ffffff;
-	}
-
-	@include element(list) {
-		@include element(title) {
-			font-size: 18px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: 25px;
-			letter-spacing: 0px;
-			text-align: left;
-			color: #8da9bb;
-			margin-bottom: 24px !important;
-		}
-	}
-
-	@include element(list) {
-		color: white;
 		margin: 2em 0 1em;
+	}
+}
 
-		@include element(item) {
-			font-size: 15px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: 18px;
-			letter-spacing: 0px;
-			text-align: left;
-			margin-bottom: 16px;
-		}
+@include block(links) {
+	@include breakpoint(medium up) {
+		@include xy-grid();
+		@include flex-align(spaced, middle);
+	}
+	@include breakpoint(medium down) {
+		@include xy-grid();
+		@include flex-align(null, middle);
 	}
 
-	@include element(items) {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: row;
-
-		@include breakpoint(small only) {
-			padding-top: 25px;
-			padding-bottom: 25px;
+	@include element(item) {
+		@include flex-align(null, middle);
+		@include breakpoint(medium down) {
+			@include xy-cell(12, null, 0);
+			min-height: 50px;
 		}
-
-		@include breakpoint(large only) {
-			padding-top: 65px;
-			padding-bottom: 65px;
-		}
-
-		@include element(columns) {
-			&:nth-of-type(2) {
-				padding-left: 143px;
-				padding-right: 85px;
-			}
-
-			@include breakpoint(small only) {
-				&:nth-of-type(2) {
-					padding-left: 30px;
-					padding-right: 30px;
-				}
-			}
-
-			@include breakpoint(large only) {
-				&:nth-of-type(2) {
-					padding-left: 80px;
-					padding-right: 80px;
-				}
-			}
+		font-size: 15px;
+		line-height: 18px;
+		color: #ffffff;
+		font-weight: 500;
+		&:hover {
+			text-decoration: underline;
+			cursor: pointer;
 		}
 	}
 }

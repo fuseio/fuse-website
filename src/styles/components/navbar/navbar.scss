@@ -1,0 +1,123 @@
+@include block(nav) {
+  margin: auto;
+
+  @include element(list) {
+    list-style: none;
+
+    @include breakpoint(medium up) {
+      @include xy-grid();
+      @include flex-align(justify, middle);
+    }
+    @include breakpoint(medium down) {
+      @include xy-grid(vertical);
+      @include flex-align(center, middle);
+    }
+  }
+
+  @include element(item) {
+    position: relative;
+
+    @include block(arrow) {
+      transition: transform 300ms ease;
+
+      @include modifier(open) {
+        transform: rotate(180deg);
+      }
+    }
+
+    @include block(text) {
+      background: transparent;
+      border: 0;
+      font-family: inherit;
+      font-size: 15px;
+      padding: 1em;
+      color: #083549;
+      position: relative;
+      z-index: 2;
+      font-weight: 500;
+      &:hover,
+      &:focus {
+        outline: none;
+      }
+
+      @include modifier(white) {
+        color: white;
+      }
+    }
+    @include block(dropdown_slot) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      perspective: 1500px;
+    }
+  }
+}
+
+@include block(community_dropdown) {
+  width: 38.9375rem;
+  padding: 1em;
+  max-width: 623px;
+
+  > div:first-child {
+    position: relative;
+    z-index: 1;
+  }
+
+  @include block(list) {
+    @include block(item) {
+      padding: 1.1em;
+
+      @include element(wrapper) {
+        @include xy-grid(horizontal, false);
+        @include flex-align(center, middle);
+        > img {
+          width: 37px;
+          height: 37px;
+        }
+      }
+
+      @include block(content) {
+        margin-left: 1em;
+        @include xy-grid(vertical, false);
+        @include flex-align(spaced);
+      }
+
+      @include block(title) {
+        font-weight: 500;
+        text-align: start;
+        position: relative;
+        transition: 300ms;
+        color: #083549;
+        font-size: 15px;
+        position: relative;
+        width: fit-content;
+
+        @include block(arrow) {
+          display: none;
+          transition: display 1s ease;
+          width: 8px;
+          height: 9px;
+          margin-left: 0.3em;
+        }
+      }
+
+      @include block(sub_title) {
+        font-size: 11px;
+        color: #7a7a7a;
+        font-weight: normal;
+        white-space: nowrap;
+      }
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        .sub_title {
+          color: #083549;
+        }
+        .title .arrow {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

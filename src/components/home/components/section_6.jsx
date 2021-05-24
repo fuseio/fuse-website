@@ -1,59 +1,79 @@
-import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import React from "react";
+import { FormattedMessage } from "react-intl";
+import Bitmap from "@/assets/img/Infrastructure/bitmap.png";
+import Chainlink from "@/assets/img/Infrastructure/chainlink_infra.png";
+import Openzeppelin from "@/assets/img/Infrastructure/openzeppelin.png";
+import Pocket from "@/assets/img/Infrastructure/pocket.png";
+import TheGraph from "@/assets/img/Infrastructure/thegraph.png";
+import Unmarshal from "@/assets/img/Infrastructure/unmarshal.png";
+import Ramp from "@/assets/img/payments_and_liquidity/ramp_pay.png";
+import Monerium from "@/assets/img/payments_and_liquidity/monerium.png";
+import Kyber from "@/assets/img/payments_and_liquidity/kyber.png";
+import Inch from "@/assets/img/payments_and_liquidity/1inch.png";
+import Loopring from "@/assets/img/payments_and_liquidity/loopring.png";
+import Orion from "@/assets/img/payments_and_liquidity/orion.png";
+import Emoney from "@/assets/img/payments_and_liquidity/emoney.png";
+import CoinGecko from "@/assets/img/partners/coin-gecko.png";
+import Coinmarketcap from "@/assets/img/partners/coinmarketcap.png";
+import Defiprime from "@/assets/img/partners/defiprime.png";
+import MantraDao from "@/assets/img/partners/mantra-dao.png";
+import DefiPulse from "@/assets/img/partners/defi-pulse.png";
+import Oooo from "@/assets/img/partners/oooo.png";
+import Uniswap from "@/assets/img/partners/uniswap.png";
 
-const SectionSix = (props) => {
+const items = [
+  {
+    title: <FormattedMessage defaultMessage="Infrastructure" />,
+    images: [Bitmap, Chainlink, Openzeppelin, Pocket, TheGraph, Unmarshal],
+  },
+  {
+    title: <FormattedMessage defaultMessage="Payments and Liquidity" />,
+    images: [Ramp, Monerium, Kyber, Uniswap, Inch, Loopring, Orion, Emoney],
+  },
+  {
+    title: <FormattedMessage defaultMessage="Partners" />,
+    images: [
+      CoinGecko,
+      Coinmarketcap,
+      Defiprime,
+      MantraDao,
+      DefiPulse,
+      Oooo,
+      Uniswap,
+    ],
+  },
+];
+
+const Item = ({ title, images }) => {
   return (
-    <section className='why_fuse_better'>
-      <div className='why_fuse_better__wrapper grid-x align-middle'>
-        <div className='why_fuse_better__content'>
-          <div>
-            <h1 className='title'>
-              <FormattedMessage
-                defaultMessage='Why open {newLine} source{newLine} payments on{newLine} <span>Fuse</span> are A {newLine} better cash{newLine} Alternative?'
-                values={{
-                  newLine: <br />,
-                  span: (chunks) => <span>{chunks}</span>
-                }}
-              />
-            </h1>
-          </div>
-          <div className='items'>
-            <div className='item'>
-              <div className='image'>
-                <img src='./images/network_world.png' alt='network_world' />
-              </div>
-              <div className='line' />
-              <div className='text'>
-                <FormattedMessage defaultMessage='It has a very low entry barrier so this technology can reach anywhere across the world' />
-              </div>
+    <div className="item cell small-24 medium-6">
+      <h5 className="item__title">{title}</h5>
+      <div className="grid-x align-middle align-justify grid-margin-x grid-margin-y">
+        {images.map((img, index) => {
+          return (
+            <div key={index} className="cell small-10 medium-11">
+              <img src={img} />
             </div>
-            <div className='item'>
-              <div className='image'>
-                <img src='./images/network_wallet.png' alt='network_wallet' />
-              </div>
-              <div className='line' />
-              <div className='text'>
-                <FormattedMessage defaultMessage='Connect to decentralized finance so you have more things to do with your money' />
-              </div>
-            </div>
-            <div className='item'>
-              <div className='image grid-x align-center align-middle'>
-                <img
-                  style={{ width: '75px', height: '75px' }}
-                  src='./images/network_coin.png'
-                  alt='network_coin.png'
-                />
-              </div>
-              <div className='line' />
-              <div className='text'>
-                <FormattedMessage defaultMessage='Pay a fixed fee of up to 1 cent per transaction to move money instantly without any hidden fees and inefficiencies' />
-              </div>
-            </div>
-          </div>
-        </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+const FuseEcosystem = (props) => {
+  return (
+    <section className="fuse_ecosysyem">
+      <h3 className="fuse_ecosysyem__title">
+        <FormattedMessage defaultMessage="Fuse Ecosystem" />
+      </h3>
+      <div className="fuse_ecosysyem__items grid-x align-justify">
+        {items.map((item, index) => {
+          return <Item key={index} {...item} />;
+        })}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SectionSix
+export default FuseEcosystem;
