@@ -1,17 +1,7 @@
 import React, { useRef, useState } from 'react'
-// import { FormattedMessage } from 'react-intl'
 import classNames from 'classnames'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
-// import paywiseBg from '@/assets/images/paywise-background.png'
-// import digitalrandeBg from '@/assets/images/digitalrand-image.png'
-// import loclaPayBg from '@/assets/images/Local-pay-background.png'
-// import roostBg from '@/assets/images/roots-background.png'
-// import wepyBg from '@/assets/images/wepy-background.png'
-// import seedbedBg from '@/assets/images/seedbed-splesh.png'
-// import wikibankBg from '@/assets/images/wikibank-background.png'
-// import localChamionsBg from '@/assets/images/splesh-local.png'
-// import valleyBg from '@/assets/images/vally-background.png'
 import FuseLogo from '@/assets/img/use_cases/fuse-logo.svg'
 import Link from '@/assets/img/use_cases/link.svg'
 import Apple from '@/assets/img/apple_fork.svg'
@@ -65,13 +55,15 @@ const SectionFive = () => {
   const prevRef = useRef(null)
   return (
     <section className='communities' id='communities'>
-      {backgroundImages.map((image, index) => (
-        <img
-          key={index}
-          className={classNames({ opaque: index === currentIndex })}
-          src={image}
-        />
-      ))}
+      {
+        backgroundImages.map((image, index) => (
+          <img
+            key={index}
+            className={classNames({ opaque: index === currentIndex })}
+            src={image}
+          />
+        ))
+      }
       <div className='communities__content grid-container'>
         <div className='grid-x communities__items communities-swiper-container'>
           <Swiper

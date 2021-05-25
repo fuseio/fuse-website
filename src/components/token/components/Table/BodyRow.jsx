@@ -20,18 +20,20 @@ export default ({ row, index, style = {} }) => {
         className: 'table__body__row'
       })}
     >
-      {row.cells.map((cell) => {
-        return (
-          <td
-            key={index}
-            {...cell.getCellProps({
-              className: cell.column.collapse ? 'collapse' : ''
-            })}
-          >
-            {cell.render('Cell')}
-          </td>
-        )
-      })}
+      {
+        row.cells.map((cell) => {
+          return (
+            <td
+              key={index}
+              {...cell.getCellProps({
+                className: cell.column.collapse ? 'collapse' : ''
+              })}
+            >
+              {cell.render('Cell')}
+            </td>
+          )
+        })
+      }
     </tr>
   )
 }

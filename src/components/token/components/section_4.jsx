@@ -59,9 +59,9 @@ const SectionFour = () => {
           </h1>
 
           <div className='items'>
-            {items.map((item, index) => (
-              <Item key={index} {...item} />
-            ))}
+            {
+              items.map((item, index) => <Item key={index} {...item} />)
+            }
           </div>
         </div>
       </div>

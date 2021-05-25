@@ -1,5 +1,4 @@
 import React from 'react'
-// import { FormattedMessage } from 'react-intl'
 import FuseTokenImage from '@/assets/img/fuse-token-image.png'
 import { FormattedMessage } from 'react-intl'
 

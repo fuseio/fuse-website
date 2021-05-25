@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react'
-// import { FormattedMessage } from 'react-intl'
 import classNames from 'classnames'
 import { withRouter } from 'react-router'
 import useOutsideClick from '@/hooks/useOutsideClick'
@@ -137,9 +136,9 @@ function List ({ title, items }) {
   return (
     <div className='list'>
       <div className='list__title'>{title}</div>
-      {items.map((item, index) => (
-        <Item {...item} key={index} />
-      ))}
+      {
+        items.map((item, index) => <Item {...item} key={index} />)
+      }
     </div>
   )
 }
@@ -170,19 +169,22 @@ function MobileMenu ({ history }) {
         <span className='hamburger-button__middle' />
         <span className='hamburger-button__bottom' />
       </button>
-      {isOpen && (
-        <div className='mobile_menu'>
-          {menuItems.map((item, index) => (
-            <List key={index} {...item} />
-          ))}
-          <div className='line' />
-          <div className='grid-y align-top align-left  cell shrink'>
-            <div className='list__item' onClick={() => history.push('/about')}>
-              {/* <img src={icon} className='icon' /> */}
-              <FormattedMessage defaultMessage='About us' />
-            </div>
-            <SelectLanguage />
-            {/* <div className='header__wallet'>
+      {
+        isOpen && (
+          <div className='mobile_menu'>
+            {
+              menuItems.map((item, index) => (
+                <List key={index} {...item} />
+              ))
+            }
+            <div className='line' />
+            <div className='grid-y align-top align-left  cell shrink'>
+              <div className='list__item' onClick={() => history.push('/about')}>
+                {/* <img src={icon} className='icon' /> */}
+                <FormattedMessage defaultMessage='About us' />
+              </div>
+              <SelectLanguage />
+              {/* <div className='header__wallet'>
                 <a rel='noopener noreferrer' href='https://studio.fuse.io' target='_blank' role='button'>
                   <div className='header__wallet__icon' />
                   <span>
@@ -192,9 +194,10 @@ function MobileMenu ({ history }) {
                   </span>
                 </a>
               </div> */}
+            </div>
           </div>
-        </div>
-      )}
+        )
+      }
     </>
   )
 }

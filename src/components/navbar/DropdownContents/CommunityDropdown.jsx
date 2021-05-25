@@ -47,27 +47,29 @@ function CommunityDropdown () {
     <div className='community_dropdown'>
       <div data-first-dropdown-section>
         <ul className='list grid-x align-middle align-justify'>
-          {items.map(({ title, icon, url }, index) => (
-            <li
-              className='item grid-x align-middle cell small-24 medium-8'
-              key={index}
-            >
-              <a
-                rel='noreferrer noopener'
-                className='item__wrapper'
-                target='_blank'
-                href={url}
+          {
+            items.map(({ title, icon, url }, index) => (
+              <li
+                className='item grid-x align-middle cell small-24 medium-8'
+                key={index}
               >
-                <img src={icon} />
-                <div className='content'>
-                  <button className='title'>
-                    <span>{title}</span>
-                    <img className='arrow' src={Arrow} />
-                  </button>
-                </div>
-              </a>
-            </li>
-          ))}
+                <a
+                  rel='noreferrer noopener'
+                  className='item__wrapper'
+                  target='_blank'
+                  href={url}
+                >
+                  <img src={icon} />
+                  <div className='content'>
+                    <button className='title'>
+                      <span>{title}</span>
+                      <img className='arrow' src={Arrow} />
+                    </button>
+                  </div>
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </div>
     </div>

@@ -55,9 +55,11 @@ const SectionTwo = () => {
             <FormattedMessage defaultMessage='Utilities' />
           </h2>
           <div className='utilities__items'>
-            {items.map((item, index) => (
-              <Item key={index} {...item} />
-            ))}
+            {
+              items.map((item, index) => (
+                <Item key={index} {...item} />
+              ))
+            }
           </div>
         </div>
       </div>

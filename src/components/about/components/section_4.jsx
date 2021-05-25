@@ -109,11 +109,13 @@ const TeamMember = ({ picture, name, role, linked, isLinkedIn }) => {
         <div className='icons'>
           <h3 className='role'>{role}</h3>
         </div>
-        {isLinkedIn && (
-          <a href={linked} rel='noreferrer noopener' target='_blank'>
-            <img src={linkedin} alt='linked in' className='linkedin' />
-          </a>
-        )}
+        {
+          isLinkedIn && (
+            <a href={linked} rel='noreferrer noopener' target='_blank'>
+              <img src={linkedin} alt='linked in' className='linkedin' />
+            </a>
+          )
+        }
       </div>
     </div>
   )
@@ -128,9 +130,9 @@ const SectionThree = () => {
             <FormattedMessage defaultMessage='Meet the Team' />
           </h1>
           <div className='grid-x align-middle items'>
-            {members.map((member, index) => (
-              <TeamMember key={index} {...member} />
-            ))}
+            {
+              members.map((member, index) => <TeamMember key={index} {...member} />)
+            }
           </div>
         </div>
       </div>

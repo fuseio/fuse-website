@@ -42,20 +42,22 @@ const SectionFive = () => {
         <div className='token_distribution'>
           <div className='token_distribution__content'>
             <ul className='items'>
-              {items.map(({ title, text, color }, index) => {
-                return (
-                  <li key={index}>
-                    <div
-                      className='bullet'
-                      style={{ backgroundColor: color }}
-                    />
-                    <div className='content'>
-                      <h2>{title}</h2>
-                      <h4>{text}</h4>
-                    </div>
-                  </li>
-                )
-              })}
+              {
+                items.map(({ title, text, color }, index) => {
+                  return (
+                    <li key={index}>
+                      <div
+                        className='bullet'
+                        style={{ backgroundColor: color }}
+                      />
+                      <div className='content'>
+                        <h2>{title}</h2>
+                        <h4>{text}</h4>
+                      </div>
+                    </li>
+                  )
+                })
+              }
             </ul>
           </div>
 

@@ -5,14 +5,13 @@ export default ({
 }) => {
   return (
     <tr {...headerGroup.getHeaderGroupProps({ className: 'table__header' })}>
-      {headerGroup.headers.map((column, index) => {
-        // const className = `table__header__cell cell small-${Math.ceil(24 / headerGroup.headers.length)}`
-        return (
+      {
+        headerGroup.headers.map((column, index) => (
           <th key={index} {...column.getHeaderProps({ className: column.collapse ? 'collapse' : '' })}>
             {column.render('Header')}
           </th>
-        )
-      })}
+        ))
+      }
     </tr>
   )
 }

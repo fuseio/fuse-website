@@ -49,13 +49,13 @@ const Item = ({ title, images }) => {
     <div className='item cell small-24 medium-6'>
       <h5 className='item__title'>{title}</h5>
       <div className='grid-x align-middle align-justify grid-margin-x grid-margin-y'>
-        {images.map((img, index) => {
-          return (
+        {
+          images.map((img, index) => (
             <div key={index} className='cell small-10 medium-11'>
               <img src={img} />
             </div>
-          )
-        })}
+          ))
+        }
       </div>
     </div>
   )
@@ -68,9 +68,9 @@ const FuseEcosystem = (props) => {
         <FormattedMessage defaultMessage='Fuse Ecosystem' />
       </h3>
       <div className='fuse_ecosysyem__items grid-x align-justify'>
-        {items.map((item, index) => {
-          return <Item key={index} {...item} />
-        })}
+        {
+          items.map((item, index) => <Item key={index} {...item} />)
+        }
       </div>
     </section>
   )

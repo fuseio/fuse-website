@@ -27,7 +27,7 @@ const rightColumnData = [
   }
 ]
 
-function MyTable ({ columns, data, count }) {
+function MyTable({ columns, data, count }) {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     useTable(
       {
@@ -55,15 +55,19 @@ function MyTable ({ columns, data, count }) {
     <div className='table__wrapper'>
       <table {...getTableProps({ className: 'table' })}>
         <thead>
-          {headerGroups.map((headerGroup, index) => (
-            <HeaderRow key={index} headerGroup={headerGroup} />
-          ))}
+          {
+            headerGroups.map((headerGroup, index) => (
+              <HeaderRow key={index} headerGroup={headerGroup} />
+            ))
+          }
         </thead>
         <tbody {...getTableBodyProps({ className: 'table__body' })}>
-          {rows.map(
-            (row, i) =>
-              prepareRow(row) || <BodyRow key={i} row={row} index={i} />
-          )}
+          {
+            rows.map(
+              (row, i) =>
+                prepareRow(row) || <BodyRow key={i} row={row} index={i} />
+            )
+          }
         </tbody>
       </table>
     </div>

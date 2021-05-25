@@ -92,28 +92,30 @@ class AnimatedNavbar extends Component {
           }
         >
           <Navbar onMouseLeave={this.handleMouseLeave}>
-            {navbarConfig.map(({ title }, index) => {
-              return (
-                <NavbarItem
-                  key={title}
-                  title={title}
-                  index={index}
-                  currentIndex={currentIndex}
-                  onMouseEnter={this.handleMouseEnter}
-                >
-                  {currentIndex === index && (
-                    <DropdownContainer
-                      direction={direction}
-                      animatingOut={this.state.animatingOut}
-                      duration={duration}
-                    >
-                      <CurrentDropdown />
-                      {PrevDropdown && <PrevDropdown />}
-                    </DropdownContainer>
-                  )}
-                </NavbarItem>
-              )
-            })}
+            {
+              navbarConfig.map(({ title }, index) => {
+                return (
+                  <NavbarItem
+                    key={title}
+                    title={title}
+                    index={index}
+                    currentIndex={currentIndex}
+                    onMouseEnter={this.handleMouseEnter}
+                  >
+                    {currentIndex === index && (
+                      <DropdownContainer
+                        direction={direction}
+                        animatingOut={this.state.animatingOut}
+                        duration={duration}
+                      >
+                        <CurrentDropdown />
+                        {PrevDropdown && <PrevDropdown />}
+                      </DropdownContainer>
+                    )}
+                  </NavbarItem>
+                )
+              })
+            }
           </Navbar>
         </Flipper>
       </div>

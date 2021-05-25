@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react'
-// import { FormattedMessage } from 'react-intl'
 import { withRouter } from 'react-router'
 import classNames from 'classnames'
 import useOutsideClick from '@/hooks/useOutsideClick.jsx'

@@ -1,5 +1,4 @@
 import React from 'react'
-// import { FormattedMessage } from 'react-intl'
 import Mobile from '@/assets/img/mobile_money.png'
 import MobileSmall from '@/assets/img/mobile_money_small.svg'
 import Business from '@/assets/img/business_tools.png'
@@ -115,9 +114,11 @@ const Banner = () => {
     <section className='info_banner__wrapper'>
       <div className='info_banner__container'>
         <div className='info_banner'>
-          {bannerItems.map((item, index) => (
-            <BannerItem key={index} {...item} />
-          ))}
+          {
+            bannerItems.map((item, index) => (
+              <BannerItem key={index} {...item} />
+            ))
+          }
           <div className='item grid-x align-middle'>
             <div className='title title--arrow'>
               <a
@@ -125,7 +126,7 @@ const Banner = () => {
                 target='_blank'
                 href='https://explorer.fuse.io/'
               >
-                View stats
+                <FormattedMessage defaultMessage='View stats' />
               </a>
             </div>
           </div>
@@ -144,9 +145,11 @@ const SectionTwo = () => {
           <FormattedMessage defaultMessage='Turning communities into economies' />
         </h2>
         <div className='section_2__items'>
-          {items.map((item, index) => (
-            <Item key={index} {...item} />
-          ))}
+          {
+            items.map((item, index) => (
+              <Item key={index} {...item} />
+            ))
+          }
         </div>
       </section>
     </>
