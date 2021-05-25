@@ -128,7 +128,7 @@
       display: none;
     }
     @include xy-cell(auto, null, 0);
-    > canvas {
+    canvas {
       min-width: 800px;
       min-height: 800px;
       max-width: 800px;

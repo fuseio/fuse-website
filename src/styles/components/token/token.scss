@@ -171,6 +171,9 @@
     @extend %title;
     // padding-bottom: 2em;
     padding: 2em 0;
+    @include breakpoint(medium down) {
+      text-align: center;
+    }
   }
 
   @include element(items) {

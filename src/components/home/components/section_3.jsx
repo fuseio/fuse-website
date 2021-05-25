@@ -9,9 +9,13 @@ import WalletIcon from '@/assets/img/fuse_wallet_icon.png'
 import FuseswpaIcon from '@/assets/img/fuseswap_icon.png'
 import Gif from '@/assets/images/send_money.gif'
 
-const Button = ({ text = 'Launch Now' }) => {
+const Button = ({ text = 'Launch Now', link }) => {
   return (
-    <a className='main_button'>
+    <a
+      rel='noreferrer noopener' target='_blank'
+      href={link}
+      className='main_button'
+    >
       {text}
     </a>
   )
@@ -40,7 +44,7 @@ const StudioFloor = () => {
               <li>Grow your user base with powerful tools and plugins.</li>
             </ul>
             <div className='launch'>
-              <Button />
+              <Button link='http://studio.fuse.io/' />
             </div>
           </div>
         </div>
@@ -126,7 +130,7 @@ const FuseSwapFloor = () => {
                 <li>Access in depth trading and token analytics.</li>
               </ul>
               <div className='launch'>
-                <Button text='Swap & pool now' />
+                <Button text='Swap & pool now' link='https://fuseswap.com/' />
               </div>
             </div>
           </div>

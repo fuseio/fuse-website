@@ -25,7 +25,7 @@ const items = [
     title: "Plug 'n' Play",
     Text: () => (
       <div className='item__text'>
-        A <span>no-code</span> platform for communities and business*es* to build new economic models, leveraging powerful tools and APIs in a low entry sandbox.
+        A <span>no-code</span> platform for communities and businesses to build new economic models, leveraging powerful tools and APIs in a low entry sandbox.
       </div>
     )
   },
