@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const config = require('config')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
@@ -147,6 +148,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new ProgressBarPlugin(),
+    new webpack.DefinePlugin({ CONFIG: JSON.stringify(config) }),
     new FaviconsWebpackPlugin({
       logo: path.join(path.resolve(__dirname, './'), '/src/assets/images/favicon.png'),
       prefix: 'images/favicons/',
