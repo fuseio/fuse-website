@@ -200,7 +200,7 @@ const FuseSwapFloor = () => {
               <div className='launch'>
                 <Button
                   link='https://fuseswap.com/'
-                  text={<FormattedMessage defaultMessage="Swap & pool now" />}
+                  text={<FormattedMessage defaultMessage='Swap & pool now' />}
                 />
               </div>
             </div>
