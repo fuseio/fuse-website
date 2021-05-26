@@ -46,22 +46,32 @@ const SectionThree = () => {
       },
       {
         ether: (
-          <div className='contract'>
+          <a
+            rel='noreferrer noopener'
+            target='_blank'
+            href='https://etherscan.io/token/0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d'
+            className='contract'
+          >
             {addressShortener('0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d')}
             <img src={LINK} />
-          </div>
+          </a>
         ),
         bsc: (
-          <div className='contract'>
+          <a
+            className='contract'
+            rel='noreferrer noopener'
+            target='_blank'
+            href='https://bscscan.com/token/0x5857c96dae9cf8511b08cb07f85753c472d36ea3'
+          >
             {addressShortener('0x5857c96dae9cf8511b08cb07f85753c472d36ea3')}
             <img src={LINK} />
-          </div>
+          </a>
         ),
         fuse: (
-          <div className='contract'>
+          <a className='contract'>
             <FormattedMessage defaultMessage='Native token' />
             <img src={LINK} />
-          </div>
+          </a>
         )
       }
     ],

@@ -35,7 +35,7 @@ const items = [
     Text: () => (
       <div className='item__text'>
         <FormattedMessage
-          defaultMessage='A <span>no-code</span> platform for communities and business*es* to
+          defaultMessage='A <span>no-code</span> platform for communities and businesses to
           build new economic models, leveraging powerful tools and APIs in a low
           entry sandbox.'
           values={{

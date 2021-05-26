@@ -20,7 +20,7 @@ const items = [
   },
   {
     title: (
-      <FormattedMessage defaultMessage='Early investors & adisors & team' />
+      <FormattedMessage defaultMessage='Early investors & advisors & team' />
     ),
     text: <FormattedMessage defaultMessage='40 million FUSE' />,
     color: '#fff16d'

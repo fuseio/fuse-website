@@ -129,7 +129,7 @@ const SectionFive = () => {
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
-                        href='https://itsaboutpeepl.com/'
+                        href='https://apps.apple.com/gb/app/peepl-wallet/id1524643325'
                       >
                         <img className='store' src={Apple} />
                         &nbsp;
@@ -137,7 +137,7 @@ const SectionFive = () => {
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
-                        href='https://itsaboutpeepl.com/'
+                        href='https://play.google.com/store/apps/details?id=com.itsaboutpeepl.peepl/'
                       >
                         <img className='store' src={Google} />
                       </a>
@@ -159,7 +159,7 @@ const SectionFive = () => {
                   <div className='content__text'>
                     <FormattedMessage
                       defaultMessage='A mobile wallet designed for the remaining 99%. Deposit from
-                    a bank account to receive FuseDollars and ﻿earn 5% APR .
+                    a bank account to receive FuseDollars and ﻿earn 5% APR.
                     Send money with zero fees, anytime to anywhere in the world.
                     Trade cryptocurrencies in-app.'
                     />
@@ -217,7 +217,7 @@ const SectionFive = () => {
                   </div>
                   <div className='content__text'>
                     <FormattedMessage
-                      defaultMessage='Uses yield-generating decentralized finance products and a
+                      defaultMessage='Use yield-generating decentralized finance products and a
                     digital coin to deliver Basic Digital Income on a global
                     scale.'
                     />

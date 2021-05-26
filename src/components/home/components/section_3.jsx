@@ -180,7 +180,7 @@ const FuseSwapFloor = () => {
               </h1>
               <p className='fuseswap_floor__text'>
                 <FormattedMessage
-                  defaultMessage='The Defi Hub for {newLine} the Fuse ecosystem'
+                  defaultMessage='The DeFi Hub for {newLine} the Fuse ecosystem'
                   values={{
                     newLine: <br />
                   }}

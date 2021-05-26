@@ -11,6 +11,7 @@ import rudy from '@/assets/img/team/rudy.png'
 import mulenga from '@/assets/img/team/mulenga.png'
 import daniil from '@/assets/img/team/daniil.png'
 import robert from '@/assets/img/team/robert.png'
+import mike from '@/assets/img/team/mike.png'
 import linkedin from '@/assets/img/linkedin.svg'
 import { FormattedMessage } from 'react-intl'
 
@@ -48,6 +49,13 @@ const members = [
     role: 'Fullstack & Moble Developer',
     picture: lior,
     linked: 'https://www.linkedin.com/in/lioragnin/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Mikhail Nekrasov',
+    role: 'Head of Product',
+    picture: mike,
+    linked: 'https://www.linkedin.com/in/nekrasovmikhail/',
     isLinkedIn: true
   },
   {
