@@ -36,7 +36,7 @@ const menuItems = [
         url: 'https://staking.fuse.io'
       },
       {
-        title: <FormattedMessage defaultMessage='swap' />,
+        title: <FormattedMessage defaultMessage='Swap' />,
         icon: FuseSwap,
         url: 'https://fuseswap.com'
       },
