@@ -7,6 +7,7 @@ import Telegram from '@/assets/images/dropdown/telegram.svg'
 import Medium from '@/assets/images/dropdown/medium_nav.svg'
 import Github from '@/assets/images/dropdown/github_nav.svg'
 import Arrow from '@/assets/images/dropdown/drop_arrow.svg'
+import { FormattedMessage } from 'react-intl'
 
 const items = [
   {
@@ -35,7 +36,7 @@ const items = [
     url: 'https://t.me/fuseio'
   },
   {
-    title: 'Fuse Forum',
+    title: <FormattedMessage defaultMessage='Fuse Forum' />,
     icon: Forum,
     url: 'https://forum.fuse.io'
   }
@@ -48,8 +49,16 @@ function CommunityDropdown () {
         <ul className='list grid-x align-middle align-justify'>
           {
             items.map(({ title, icon, url }, index) => (
-              <li className='item grid-x align-middle cell small-24 medium-8' key={index}>
-                <a rel='noreferrer noopener' className='item__wrapper' target='_blank' href={url}>
+              <li
+                className='item grid-x align-middle cell small-24 medium-8'
+                key={index}
+              >
+                <a
+                  rel='noreferrer noopener'
+                  className='item__wrapper'
+                  target='_blank'
+                  href={url}
+                >
                   <img src={icon} />
                   <div className='content'>
                     <button className='title'>

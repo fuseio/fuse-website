@@ -1,14 +1,23 @@
 import React, { useState } from 'react'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, useIntl } from 'react-intl'
 import { object, string } from 'yup'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 
-const SignupSchema = object().shape({
-  email: string().email('Invalid email').required('Required')
-})
-
 const NewsletterForm = () => {
   const [title, setTitle] = useState('')
+  const intl = useIntl()
+
+  const emailInvalidMessage = intl.formatMessage({
+    defaultMessage: 'Invalid email'
+  })
+  const requiredMessage = intl.formatMessage({
+    defaultMessage: 'Required'
+  })
+  const SignupSchema = object().shape({
+    email: string().email(emailInvalidMessage).required(requiredMessage)
+  })
+
+  console.log(intl)
 
   return (
     <Formik
@@ -36,13 +45,19 @@ const NewsletterForm = () => {
           })
 
           if (response.status === 200) {
-            setTitle('<span>Thanks joining our mailing list! &#128077</span>')
+            const okMessage = intl.formatMessage({
+              defaultMessage: 'Thanks joining our mailing list! &#128077'
+            })
+            setTitle(`<span>${okMessage}</span>`)
             setTimeout(() => {
               setTitle('')
             }, 3000)
             setSubmitting(true)
           } else if (response.status === 500) {
-            setTitle('<span>Something went wrong &#128078</span>')
+            const errorMessage = intl.formatMessage({
+              defaultMessage: 'Something went wrong &#128078'
+            })
+            setTitle(`<span>${errorMessage}</span>`)
             setTimeout(() => {
               setTitle('')
             }, 3000)
@@ -51,8 +66,11 @@ const NewsletterForm = () => {
 
           resetForm({ email: '' })
         } catch (error) {
+          const errorMessage = intl.formatMessage({
+            defaultMessage: 'Something went wrong &#128078'
+          })
           resetForm({ email: '' })
-          setTitle('<span>Something went wrong &#128078</span>')
+          setTitle(`<span>${errorMessage}</span>`)
           setTimeout(() => {
             setTitle('')
           }, 3000)
@@ -64,16 +82,14 @@ const NewsletterForm = () => {
         <Form className='newsletter__form '>
           <div className='title' dangerouslySetInnerHTML={{ __html: title }} />
           <FormattedMessage defaultMessage='Enter Email'>
-            {
-              txt => (
-                <Field
-                  type='email'
-                  className='newsletter__form__input'
-                  placeholder={txt}
-                  name='email'
-                />
-              )
-            }
+            {(txt) => (
+              <Field
+                type='email'
+                className='newsletter__form__input'
+                placeholder={txt}
+                name='email'
+              />
+            )}
           </FormattedMessage>
           <ErrorMessage name='email'>
             {(msg) => (

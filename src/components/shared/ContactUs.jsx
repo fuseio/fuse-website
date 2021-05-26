@@ -4,7 +4,6 @@ import { PopupButton } from 'react-calendly'
 
 import bookIcon from '@/assets/images/book-meeting.svg'
 import signUpIcon from '@/assets/images/signup.svg'
-// import blueArrow from '@/assets/images/blue_arrow.svg'
 import NewsletterForm from '@/components/shared/newsletter_form'
 
 const ContactUs = () => {

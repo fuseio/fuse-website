@@ -1,75 +1,22 @@
 import React from 'react'
 import { withRouter } from 'react-router'
-
-const items = [
-  {
-    title: 'Products',
-    items: [
-      {
-        title: 'Fuse Swap',
-        url: 'https://fuseswap.com/'
-      },
-      {
-        title: 'Fuse Staking',
-        url: 'http://staking.fuse.io/'
-      },
-      {
-        title: 'Fuse Studio',
-        url: 'http://studio.fuse.io/'
-      }
-    ]
-  },
-  {
-    title: 'For Developers',
-    items: [
-      {
-        title: 'Documentation',
-        url: 'http://docs.fuse.io/'
-      },
-      {
-        title: 'Explorer',
-        url: 'http://explorer.fuse.io/'
-      },
-      {
-        title: 'Become Validator',
-        url: 'https://docs.fuse.io/become-a-validator/getting-started'
-      }
-    ]
-  },
-  {
-    title: 'Company',
-    items: [
-      {
-        title: 'About Us',
-        route: './about'
-      },
-      {
-        title: 'Network',
-        route: './network'
-      },
-      {
-        title: 'Careers',
-        route: './network'
-      }
-    ]
-  }
-]
+import { FormattedMessage } from 'react-intl'
 
 const links = [
   {
-    title: 'Docs',
+    title: <FormattedMessage defaultMessage='Docs' />,
     url: 'http://docs.fuse.io/'
   },
   {
-    title: 'Explorer',
+    title: <FormattedMessage defaultMessage='Explorer' />,
     url: 'http://explorer.fuse.io/'
   },
   {
-    title: 'Network',
+    title: <FormattedMessage defaultMessage='Network' />,
     route: './network'
   },
   {
-    title: 'Privacy policy',
+    title: <FormattedMessage defaultMessage='Privacy policy' />,
     route: './privacy'
   }
 ]
@@ -107,11 +54,6 @@ function Links () {
           <Item key={index} {...item} />
         ))
       }
-      {/* {
-        items.map((item, index) => {
-          return <List {...item} key={index} />
-        })
-      } */}
     </div>
   )
 }

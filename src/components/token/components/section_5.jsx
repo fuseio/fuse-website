@@ -1,30 +1,33 @@
 import React from 'react'
 import Pie from '@/assets/img/pie.png'
+import { FormattedMessage } from 'react-intl'
 
 const items = [
   {
-    title: 'Future dev pool',
-    text: '65 million FUSE',
+    title: <FormattedMessage defaultMessage='Future dev pool' />,
+    text: <FormattedMessage defaultMessage='65 million FUSE' />,
     color: '#37556a'
   },
   {
-    title: 'Bootstrap poll',
-    text: '130 million FUSE',
+    title: <FormattedMessage defaultMessage='Bootstrap poll' />,
+    text: <FormattedMessage defaultMessage='130 million FUSE' />,
     color: '#0d263c'
   },
   {
-    title: 'ETOP',
-    text: '25 million FUSE',
+    title: <FormattedMessage defaultMessage='ETOP' />,
+    text: <FormattedMessage defaultMessage='25 million FUSE' />,
     color: '#b8f9b6'
   },
   {
-    title: 'Early investors & adisors & team',
-    text: '40 million FUSE',
+    title: (
+      <FormattedMessage defaultMessage='Early investors & advisors & team' />
+    ),
+    text: <FormattedMessage defaultMessage='40 million FUSE' />,
     color: '#fff16d'
   },
   {
-    title: 'Mesa + private sale',
-    text: '40 million FUSE',
+    title: <FormattedMessage defaultMessage='Mesa + private sale' />,
+    text: <FormattedMessage defaultMessage='40 million FUSE' />,
     color: '#d8dde6'
   }
 ]
@@ -33,7 +36,9 @@ const SectionFive = () => {
   return (
     <section className='token_distribution__wrapper'>
       <div className='token_distribution__container'>
-        <h1 className='title'>Token distribution</h1>
+        <h1 className='title'>
+          <FormattedMessage defaultMessage='Token distribution' />
+        </h1>
         <div className='token_distribution'>
           <div className='token_distribution__content'>
             <ul className='items'>
@@ -41,7 +46,10 @@ const SectionFive = () => {
                 items.map(({ title, text, color }, index) => {
                   return (
                     <li key={index}>
-                      <div className='bullet' style={{ backgroundColor: color }} />
+                      <div
+                        className='bullet'
+                        style={{ backgroundColor: color }}
+                      />
                       <div className='content'>
                         <h2>{title}</h2>
                         <h4>{text}</h4>

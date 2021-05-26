@@ -11,7 +11,9 @@ import rudy from '@/assets/img/team/rudy.png'
 import mulenga from '@/assets/img/team/mulenga.png'
 import daniil from '@/assets/img/team/daniil.png'
 import robert from '@/assets/img/team/robert.png'
+import mike from '@/assets/img/team/mike.png'
 import linkedin from '@/assets/img/linkedin.svg'
+import { FormattedMessage } from 'react-intl'
 
 const members = [
   {
@@ -47,6 +49,13 @@ const members = [
     role: 'Fullstack & Moble Developer',
     picture: lior,
     linked: 'https://www.linkedin.com/in/lioragnin/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Mikhail Nekrasov',
+    role: 'Head of Product',
+    picture: mike,
+    linked: 'https://www.linkedin.com/in/nekrasovmikhail/',
     isLinkedIn: true
   },
   {
@@ -110,16 +119,11 @@ const TeamMember = ({ picture, name, role, linked, isLinkedIn }) => {
         </div>
         {
           isLinkedIn && (
-            <a
-              href={linked}
-              rel='noreferrer noopener'
-              target='_blank'
-            >
+            <a href={linked} rel='noreferrer noopener' target='_blank'>
               <img src={linkedin} alt='linked in' className='linkedin' />
             </a>
           )
         }
-
       </div>
     </div>
   )
@@ -130,9 +134,13 @@ const SectionThree = () => {
     <section className='section_three__wrapper'>
       <div className='section_three__container'>
         <div className='section_three'>
-          <h1 className='title'>Meet the Team</h1>
+          <h1 className='title'>
+            <FormattedMessage defaultMessage='Meet the Team' />
+          </h1>
           <div className='grid-x align-middle items'>
-            {members.map((member, index) => <TeamMember key={index} {...member} />)}
+            {
+              members.map((member, index) => <TeamMember key={index} {...member} />)
+            }
           </div>
         </div>
       </div>

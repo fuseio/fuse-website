@@ -1,17 +1,7 @@
 import React, { useRef, useState } from 'react'
-// import { FormattedMessage } from 'react-intl'
 import classNames from 'classnames'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
-// import paywiseBg from '@/assets/images/paywise-background.png'
-// import digitalrandeBg from '@/assets/images/digitalrand-image.png'
-// import loclaPayBg from '@/assets/images/Local-pay-background.png'
-// import roostBg from '@/assets/images/roots-background.png'
-// import wepyBg from '@/assets/images/wepy-background.png'
-// import seedbedBg from '@/assets/images/seedbed-splesh.png'
-// import wikibankBg from '@/assets/images/wikibank-background.png'
-// import localChamionsBg from '@/assets/images/splesh-local.png'
-// import valleyBg from '@/assets/images/vally-background.png'
 import FuseLogo from '@/assets/img/use_cases/fuse-logo.svg'
 import Link from '@/assets/img/use_cases/link.svg'
 import Apple from '@/assets/img/apple_fork.svg'
@@ -45,9 +35,8 @@ import MysticBgSmall from '@/assets/img/use_cases/mysticvalley/mysticvallay_mobi
 import MystichBg from '@/assets/img/use_cases/mysticvalley/mystic-valley-image.png'
 import MysticIphone from '@/assets/img/use_cases/mysticvalley/mystic-valley-wallet.png'
 
-import {
-  isMobileOnly
-} from 'react-device-detect'
+import { isMobileOnly } from 'react-device-detect'
+import { FormattedMessage } from 'react-intl'
 
 SwiperCore.use([Navigation, Pagination])
 
@@ -66,13 +55,15 @@ const SectionFive = () => {
   const prevRef = useRef(null)
   return (
     <section className='communities' id='communities'>
-      {backgroundImages.map((image, index) => (
-        <img
-          key={index}
-          className={classNames({ opaque: index === currentIndex })}
-          src={image}
-        />
-      ))}
+      {
+        backgroundImages.map((image, index) => (
+          <img
+            key={index}
+            className={classNames({ opaque: index === currentIndex })}
+            src={image}
+          />
+        ))
+      }
       <div className='communities__content grid-container'>
         <div className='grid-x communities__items communities-swiper-container'>
           <Swiper
@@ -96,10 +87,13 @@ const SectionFive = () => {
             <div slot='container-start'>
               <div className='title'>
                 <div className='powered grid-x align-middle'>
-                  <img src={FuseLogo} />&nbsp;
+                  <img src={FuseLogo} />
+                  &nbsp;
                   <span>Powered by Fuse</span>
                 </div>
-                <h1 className='main-title'>Real world implementations used by everyday people.</h1>
+                <h1 className='main-title'>
+                  Real world implementations used by everyday people.
+                </h1>
               </div>
             </div>
             <SwiperSlide>
@@ -109,7 +103,7 @@ const SectionFive = () => {
                     <img alt='peepl' src={PeeplLogo} />
                   </div>
                   <div className='content__text'>
-                    Sustainable local economy project in the United Kingdom to decentralize take away food ordering.
+                    <FormattedMessage defaultMessage='Sustainable local economy project in the United Kingdom to decentralize take away food ordering.' />
                   </div>
                   <div className='content__metadata'>
                     <div className='link_icon'>
@@ -119,22 +113,31 @@ const SectionFive = () => {
                         target='_blank'
                         href='https://itsaboutpeepl.com/'
                       >
-                        Learn more about Peepl Eat
+                        <FormattedMessage
+                          defaultMessage='Learn more about {appName}'
+                          values={{
+                            appName: 'Peepl Eat'
+                          }}
+                        />
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      <div className='download'>Download the app:</div>&nbsp;
+                      <div className='download'>
+                        <FormattedMessage defaultMessage='Download the app:' />
+                      </div>
+                      &nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
-                        href='https://itsaboutpeepl.com/'
+                        href='https://apps.apple.com/gb/app/peepl-wallet/id1524643325'
                       >
-                        <img className='store' src={Apple} />&nbsp;
+                        <img className='store' src={Apple} />
+                        &nbsp;
                       </a>
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
-                        href='https://itsaboutpeepl.com/'
+                        href='https://play.google.com/store/apps/details?id=com.itsaboutpeepl.peepl/'
                       >
                         <img className='store' src={Google} />
                       </a>
@@ -154,7 +157,12 @@ const SectionFive = () => {
                     <img alt='peepl' src={FusecashLogo} />
                   </div>
                   <div className='content__text'>
-                    A mobile wallet designed for the remaining 99%. Deposit from a bank account to receive FuseDollars and ﻿earn 5% APR . Send money with zero fees, anytime to anywhere in the world. Trade cryptocurrencies in-app.
+                    <FormattedMessage
+                      defaultMessage='A mobile wallet designed for the remaining 99%. Deposit from
+                    a bank account to receive FuseDollars and ﻿earn 5% APR.
+                    Send money with zero fees, anytime to anywhere in the world.
+                    Trade cryptocurrencies in-app.'
+                    />
                   </div>
                   <div className='content__metadata'>
                     <div className='link_icon'>
@@ -164,17 +172,26 @@ const SectionFive = () => {
                         target='_blank'
                         href='https://fuse.cash/'
                       >
-                        Learn more about FuseDollar
+                        <FormattedMessage
+                          defaultMessage='Learn more about {appName}'
+                          values={{
+                            appName: 'FuseDollar'
+                          }}
+                        />
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      <div className='download'>Download the app:</div>&nbsp;&nbsp;
+                      <div className='download'>
+                        <FormattedMessage defaultMessage='Download the app:' />
+                      </div>
+                      &nbsp;&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
                         href='https://apps.apple.com/us/app/fuse-cash/id1559937899/'
                       >
-                        <img className='store' src={Apple} />&nbsp;
+                        <img className='store' src={Apple} />
+                        &nbsp;
                       </a>
                       <a
                         rel='noreferrer noopener'
@@ -199,7 +216,11 @@ const SectionFive = () => {
                     <img alt='peepl' src={GoodDollarLogo} />
                   </div>
                   <div className='content__text'>
-                    Uses yield-generating decentralized finance products and a digital coin to deliver Basic Digital Income on a global scale."
+                    <FormattedMessage
+                      defaultMessage='Use yield-generating decentralized finance products and a
+                    digital coin to deliver Basic Digital Income on a global
+                    scale.'
+                    />
                   </div>
                   <div className='content__metadata'>
                     <div className='link_icon'>
@@ -209,7 +230,12 @@ const SectionFive = () => {
                         target='_blank'
                         href='https://www.gooddollar.org/'
                       >
-                        Learn more about GoodDollar
+                        <FormattedMessage
+                          defaultMessage='Learn more about {appName}'
+                          values={{
+                            appName: 'GoodDollar'
+                          }}
+                        />
                       </a>
                     </div>
                   </div>
@@ -227,7 +253,12 @@ const SectionFive = () => {
                     <img alt='peepl' src={ComunitariaLogo} />
                   </div>
                   <div className='content__text'>
-                    A for-profit technology and services company that helps charities efficiently target food donations to those in need whilst promoting economic recoveries in local neighbourhoods.
+                    <FormattedMessage
+                      defaultMessage='A for-profit technology and services company that helps
+                    charities efficiently target food donations to those in need
+                    whilst promoting economic recoveries in local
+                    neighbourhoods.'
+                    />
                   </div>
                   <div className='content__metadata'>
                     <div className='link_icon'>
@@ -237,17 +268,26 @@ const SectionFive = () => {
                         target='_blank'
                         href='https://comunitaria.com/'
                       >
-                        Learn more about Comunitaria
+                        <FormattedMessage
+                          defaultMessage='Learn more about {appName}'
+                          values={{
+                            appName: 'Comunitaria'
+                          }}
+                        />
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      <div className='download'>Download the app:</div>&nbsp;&nbsp;
+                      <div className='download'>
+                        <FormattedMessage defaultMessage='Download the app:' />
+                      </div>
+                      &nbsp;&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
                         href='https://apps.apple.com/us/app/wikibank-eu/id1509481908/'
                       >
-                        <img className='store' src={Apple} />&nbsp;
+                        <img className='store' src={Apple} />
+                        &nbsp;
                       </a>
                       <a
                         rel='noreferrer noopener'
@@ -272,7 +312,12 @@ const SectionFive = () => {
                     <img alt='peepl' src={KolektivoLogo} />
                   </div>
                   <div className='content__text'>
-                    Regenerative economy project in Curaçao led by top DAO (Decentralized Autonomous Organization) experts. Leverages Fuse wallet technology for high-speed, low-fee sending and receiving of the islands digital currency, CuraDAI.
+                    <FormattedMessage
+                      defaultMessage='Regenerative economy project in Curaçao led by top DAO
+                    (Decentralized Autonomous Organization) experts. Leverages
+                    Fuse wallet technology for high-speed, low-fee sending and
+                    receiving of the islands digital currency, CuraDAI.'
+                    />
                   </div>
                   <div className='content__metadata'>
                     <div className='link_icon'>
@@ -282,17 +327,26 @@ const SectionFive = () => {
                         target='_blank'
                         href='https://kolektivo.co/'
                       >
-                        Learn more about Kolektivo labs
+                        <FormattedMessage
+                          defaultMessage='Learn more about {appName}'
+                          values={{
+                            appName: 'Kolektivo labs'
+                          }}
+                        />{' '}
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      <div className='download'>Download the app:</div>&nbsp;&nbsp;
+                      <div className='download'>
+                        <FormattedMessage defaultMessage='Download the app:' />
+                      </div>
+                      &nbsp;&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
                         href='https://apps.apple.com/us/app/curadai/id1553242607'
                       >
-                        <img className='store' src={Apple} />&nbsp;
+                        <img className='store' src={Apple} />
+                        &nbsp;
                       </a>
                       <a
                         rel='noreferrer noopener'
@@ -317,7 +371,12 @@ const SectionFive = () => {
                     <img alt='peepl' src={MysticLogo} />
                   </div>
                   <div className='content__text'>
-                    Musical events organization in Thailand that exclusively leverages the Fuse technology stack and wallet for payment of tickets, food, beverages and activities at festivals across the region.
+                    <FormattedMessage
+                      defaultMessage='Musical events organization in Thailand that exclusively
+                    leverages the Fuse technology stack and wallet for payment
+                    of tickets, food, beverages and activities at festivals
+                    across the region.'
+                    />
                   </div>
                   <div className='content__metadata'>
                     <div className='link_icon'>
@@ -327,17 +386,26 @@ const SectionFive = () => {
                         target='_blank'
                         href='https://cointelegraph.com/news/thai-music-festival-to-use-its-own-token-for-a-cashless-event'
                       >
-                        Learn more about Mystic valley
+                        <FormattedMessage
+                          defaultMessage='Learn more about {appName}'
+                          values={{
+                            appName: 'Mystic valley'
+                          }}
+                        />{' '}
                       </a>
                     </div>
                     <div className='grid-x align-middle align-center link_icon'>
-                      <div className='download'>Download the app:</div>&nbsp;&nbsp;
+                      <div className='download'>
+                        <FormattedMessage defaultMessage='Download the app:' />
+                      </div>
+                      &nbsp;&nbsp;
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
                         href='https://apps.apple.com/us/app/mystic-valley/id1539136057'
                       >
-                        <img className='store' src={Apple} />&nbsp;
+                        <img className='store' src={Apple} />
+                        &nbsp;
                       </a>
                       <a
                         rel='noreferrer noopener'
@@ -355,8 +423,18 @@ const SectionFive = () => {
               </div>
             </SwiperSlide>
 
-            <div ref={nextRef} className='communities__button communities__button--next'>Next</div>
-            <div ref={prevRef} className='communities__button communities__button--prev'>Previous</div>
+            <div
+              ref={nextRef}
+              className='communities__button communities__button--next'
+            >
+              <FormattedMessage defaultMessage='Next' />
+            </div>
+            <div
+              ref={prevRef}
+              className='communities__button communities__button--prev'
+            >
+              <FormattedMessage defaultMessage='Previous' />
+            </div>
           </Swiper>
         </div>
       </div>

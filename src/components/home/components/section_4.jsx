@@ -7,14 +7,14 @@ import moment from 'moment'
 
 SwiperCore.use([Navigation, Pagination])
 
-function Item ({
-  title,
-  link,
-  thumbnail,
-  pubDate
-}) {
+function Item ({ title, link, thumbnail, pubDate }) {
   return (
-    <a className='item__post' rel='noreferrer noopener' target='_blank' href={link}>
+    <a
+      className='item__post'
+      rel='noreferrer noopener'
+      target='_blank'
+      href={link}
+    >
       <div className='item__post__image'>
         <img alt='owners' src={thumbnail} />
       </div>
@@ -23,8 +23,17 @@ function Item ({
         {/* <p className='chips'>
           <span>Blog post</span>
         </p> */}
-        <h4 className='title'>{title}</h4>
-        <small>By Fuse</small>
+        <h4 className='title'>
+          <FormattedMessage
+            defaultMessage='{title}'
+            values={{
+              title: title
+            }}
+          />
+        </h4>
+        <small>
+          <FormattedMessage defaultMessage='By Fuse' />
+        </small>
         <span>{moment(pubDate).format('MMMM Do YYYY')}</span>
       </div>
     </a>
@@ -32,27 +41,39 @@ function Item ({
 }
 
 const SectionFour = () => {
-  const { data = { items: [] } } = useFetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/fusenet', {}, [])
+  const { data = { items: [] } } = useFetch(
+    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/fusenet',
+    {},
+    []
+  )
+
+  console.log(data)
+
   return (
     <section className='section-C__wrapper'>
       <div className='section-C__container'>
         <div className='section-C'>
-
-          <h2 className='section-C__title'><FormattedMessage defaultMessage='Latest updates:' /></h2>
+          <h2 className='section-C__title'>
+            <FormattedMessage defaultMessage='Latest updates:' />
+          </h2>
           <div className='section-C__content'>
             <div className='grid-x align-justify'>
               <div className='item cell large-5'>
                 <p className='section-C__text'>
-                  <FormattedMessage defaultMessage="Get to know what we've been up to lately
+                  <FormattedMessage
+                    defaultMessage="Get to know what we've been up to lately
                 Follow us on Medium"
                   />
-
                 </p>
                 <a
-                  rel='noreferrer noopener' target='_blank' href='https://medium.com/fusenet'
+                  rel='noreferrer noopener'
+                  target='_blank'
+                  href='https://medium.com/fusenet'
                   className='main_button section-C__read-more section-link'
                 >
-                  <span><FormattedMessage defaultMessage='Go to Blog' /></span>
+                  <span>
+                    <FormattedMessage defaultMessage='Go to Blog' />
+                  </span>
                 </a>
               </div>
               <div className='blogs__wrapper cell large-auto grid-x align-spaced'>
@@ -78,13 +99,11 @@ const SectionFour = () => {
                 }}
               >
                 {
-                  data.items.slice(0, 3).map((item, index) => {
-                    return (
-                      <SwiperSlide key={index}>
-                        <Item {...item} />
-                      </SwiperSlide>
-                    )
-                  })
+                  data.items.slice(0, 3).map((item, index) => (
+                    <SwiperSlide key={index}>
+                      <Item {...item} />
+                    </SwiperSlide>
+                  ))
                 }
               </Swiper>
             </div>

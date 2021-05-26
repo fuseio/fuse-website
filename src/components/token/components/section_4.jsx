@@ -6,6 +6,7 @@ import Uniswap from '@/assets/img/purchase_uniswap.png'
 import FuseTokenOne from '@/assets/img/fuse_token_1.png'
 import FuseTokenTwo from '@/assets/img/fuse_token_2.png'
 import Bubble from '@/assets/img/bubble.png'
+import { FormattedMessage } from 'react-intl'
 
 const items = [
   {
@@ -32,12 +33,7 @@ const items = [
 
 const Item = ({ icon, name, link }) => {
   return (
-    <a
-      href={link}
-      rel='noreferrer noopener'
-      target='_blank'
-      className='item'
-    >
+    <a href={link} rel='noreferrer noopener' target='_blank' className='item'>
       <img src={icon} />
       <h3>{name}</h3>
     </a>
@@ -58,7 +54,9 @@ const SectionFour = () => {
       </div>
       <div className='purchase_fuse_token__container'>
         <div className='purchase_fuse_token'>
-          <h1 className='title'>Purchase fuse token</h1>
+          <h1 className='title'>
+            <FormattedMessage defaultMessage='Purchase fuse token' />
+          </h1>
 
           <div className='items'>
             {

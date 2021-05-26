@@ -1,5 +1,5 @@
 import React from 'react'
-// import Office from '@/assets/img/office_image.png'
+import { FormattedMessage } from 'react-intl'
 
 const SectionFour = () => {
   return (
@@ -7,8 +7,12 @@ const SectionFour = () => {
       <div className='section_four__mission'>
         <div className='section_four__container'>
           <div className='section_four'>
-            <div className='title'>Mission</div>
-            <div className='text'>Fuse was founded in 2019 with a mission to bring the power of mobile payments to communities around the world.</div>
+            <div className='title'>
+              <FormattedMessage defaultMessage='Mission' />
+            </div>
+            <div className='text'>
+              <FormattedMessage defaultMessage='Fuse was founded in 2019 with a mission to bring the power of mobile payments to communities around the world.' />
+            </div>
           </div>
         </div>
       </div>

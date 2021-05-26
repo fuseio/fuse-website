@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { GlobeKitView, PointGlobe, Background, Atmosphere } from 'globekit-public'
 
-function Globe() {
+function Globe () {
   const globeRef = useRef(null)
 
   useEffect(() => {

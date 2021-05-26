@@ -46,6 +46,7 @@ const SectionTwo = () => {
       })
     }
   }, [floorThree])
+
   return (
     <section className='network_stack'>
       <div className='grid-container'>
@@ -60,7 +61,7 @@ const SectionTwo = () => {
                     <FormattedMessage
                       defaultMessage='<span>Fuse Wallet </span><span>|</span> <span>for users</span>
                       {newLine}
-                      An easy to use cross-platform {newLine} mobile wallet'
+                      An easy to use cross-platform {newLine} mobile wallet.'
                       values={{
                         newLine: <br />,
                         span: chunks => <span>{chunks}</span>

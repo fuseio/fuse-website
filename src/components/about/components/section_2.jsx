@@ -4,6 +4,7 @@ import Colider from '@/assets/img/backed_colider.png'
 import trgc from '@/assets/img/backed_trgc.png'
 import Wolf from '@/assets/img/backed_wolf.png'
 import spark from '@/assets/images/spark.svg'
+import { FormattedMessage } from 'react-intl'
 
 const SectionTwo = () => {
   return (
@@ -11,7 +12,9 @@ const SectionTwo = () => {
       <div className='section_two__container'>
         <div className='section_two'>
           <div className='item'>
-            <div className='title'>Backed by</div>
+            <div className='title'>
+              <FormattedMessage defaultMessage='Backed by' />
+            </div>
           </div>
           <div className='item'>
             <img src={Aleph} />

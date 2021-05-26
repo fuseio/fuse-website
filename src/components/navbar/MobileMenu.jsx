@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react'
-// import { FormattedMessage } from 'react-intl'
 import classNames from 'classnames'
 import { withRouter } from 'react-router'
 import useOutsideClick from '@/hooks/useOutsideClick'
@@ -20,28 +19,29 @@ import Telegram from '@/assets/images/dropdown/telegram.svg'
 import Medium from '@/assets/images/dropdown/medium_nav.svg'
 import Github from '@/assets/images/dropdown/github_nav.svg'
 import Network from '@/assets/images/dropdown/network1.svg'
+import { FormattedMessage } from 'react-intl'
 
 const menuItems = [
   {
-    title: 'Getting started',
+    title: <FormattedMessage defaultMessage='Getting Started' />,
     items: [
       {
-        title: 'Studio',
+        title: <FormattedMessage defaultMessage='Studio' />,
         icon: Studio,
         url: 'https://studio.fuse.io'
       },
       {
-        title: 'Staking',
+        title: <FormattedMessage defaultMessage='Staking' />,
         icon: Staking,
         url: 'https://staking.fuse.io'
       },
       {
-        title: 'swap',
+        title: <FormattedMessage defaultMessage='Swap' />,
         icon: FuseSwap,
         url: 'https://fuseswap.com'
       },
       {
-        title: 'Fuse Cash',
+        title: <FormattedMessage defaultMessage='Fuse Cash' />,
         icon: Fusecash,
         url: 'https://fuse.cash'
         // disabled: true
@@ -49,66 +49,66 @@ const menuItems = [
     ]
   },
   {
-    title: 'Under the hood',
+    title: <FormattedMessage defaultMessage='Under the hood' />,
     items: [
       {
-        title: 'Network',
+        title: <FormattedMessage defaultMessage='Network' />,
         icon: Network,
         route: './network'
       },
       {
-        title: 'Explorer',
+        title: <FormattedMessage defaultMessage='Explorer' />,
         icon: Explorer,
         url: 'https://explorer.fuse.io'
       },
       {
-        title: 'Documentation',
+        title: <FormattedMessage defaultMessage='Documentation' />,
         icon: Docs,
         url: 'https://docs.fuse.io'
       },
       {
-        title: 'Fuse Token',
+        title: <FormattedMessage defaultMessage='Fuse Token' />,
         icon: FuseToken,
-        subTitle: 'Learn how it works',
+        subTitle: <FormattedMessage defaultMessage='Learn how it works' />,
         route: './token'
       },
       {
-        title: 'Service status',
+        title: <FormattedMessage defaultMessage='Service status' />,
         icon: Status,
         url: 'https://status.fuse.io'
       }
     ]
   },
   {
-    title: 'Community',
+    title: <FormattedMessage defaultMessage='Community' />,
     items: [
       {
-        title: 'Github',
+        title: <FormattedMessage defaultMessage='Github' />,
         icon: Github,
         url: 'https://github.com/fuseio'
       },
       {
-        title: 'Twitter',
+        title: <FormattedMessage defaultMessage='Twitter' />,
         icon: Twitter,
         url: 'https://twitter.com/fuse_network'
       },
       {
-        title: 'Discord',
+        title: <FormattedMessage defaultMessage='Discord' />,
         icon: Discord,
         url: 'https://discordapp.com/invite/jpPMeSZ'
       },
       {
-        title: 'Medium',
+        title: <FormattedMessage defaultMessage='Medium' />,
         icon: Medium,
         url: 'https://medium.com/fusenet'
       },
       {
-        title: 'Telegram',
+        title: <FormattedMessage defaultMessage='Telegram' />,
         icon: Telegram,
         url: 'https://t.me/fuseio'
       },
       {
-        title: 'Fuse forum',
+        title: <FormattedMessage defaultMessage='Fuse forum' />,
         icon: Forum,
         url: 'https://forum.fuse.io'
       }
@@ -123,16 +123,16 @@ const Item = withRouter(({ title, icon, url, route, history }) => {
         <img src={icon} className='icon' />
         {title}
       </div>
-    )
+      )
     : (
       <a rel='noreferrer noopener' className='list__item' target='_blank' href={url}>
         <img src={icon} className='icon' />
         {title}
       </a>
-    )
+      )
 })
 
-function List({ title, items }) {
+function List ({ title, items }) {
   return (
     <div className='list'>
       <div className='list__title'>{title}</div>
@@ -143,7 +143,7 @@ function List({ title, items }) {
   )
 }
 
-function MobileMenu({ history }) {
+function MobileMenu ({ history }) {
   const [isOpen, setMenuOpen] = useState(false)
   const hamburgerRef = useRef(null)
 
@@ -157,7 +157,14 @@ function MobileMenu({ history }) {
 
   return (
     <>
-      <button ref={hamburgerRef} type='button' className={classNames('hamburger-button__container', { 'hamburger-button__container--white': isWhite })} onClick={() => setMenuOpen(!isOpen)}>
+      <button
+        ref={hamburgerRef}
+        type='button'
+        className={classNames('hamburger-button__container', {
+          'hamburger-button__container--white': isWhite
+        })}
+        onClick={() => setMenuOpen(!isOpen)}
+      >
         <span className='hamburger-button__top' />
         <span className='hamburger-button__middle' />
         <span className='hamburger-button__bottom' />
@@ -166,13 +173,15 @@ function MobileMenu({ history }) {
         isOpen && (
           <div className='mobile_menu'>
             {
-              menuItems.map((item, index) => <List key={index} {...item} />)
+              menuItems.map((item, index) => (
+                <List key={index} {...item} />
+              ))
             }
             <div className='line' />
             <div className='grid-y align-top align-left  cell shrink'>
               <div className='list__item' onClick={() => history.push('/about')}>
                 {/* <img src={icon} className='icon' /> */}
-                About us
+                <FormattedMessage defaultMessage='About us' />
               </div>
               <SelectLanguage />
               {/* <div className='header__wallet'>

@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react'
-// import { FormattedMessage } from 'react-intl'
 import { withRouter } from 'react-router'
 import classNames from 'classnames'
 import useOutsideClick from '@/hooks/useOutsideClick.jsx'
@@ -8,6 +7,7 @@ import fuseLogoWhite from '@/assets/images/group_21.svg'
 import AnimatedNavbar from '@/components/navbar/AnimatedNavbar'
 import SelectLanguage from '../shared/select_language'
 import MobileMenu from './MobileMenu'
+import { FormattedMessage } from 'react-intl'
 
 function Header ({ history }) {
   const [isOpen, setMenuOpen] = useState(false)
@@ -30,7 +30,12 @@ function Header ({ history }) {
           <img alt='logo' src={isWhite ? fuseLogoWhite : fuseLogo} />
         </div>
         <MobileMenu />
-        <div className={classNames('header__nav grid-x align-middle align-justify', { header__nav__open: isOpen })}>
+        <div
+          className={classNames(
+            'header__nav grid-x align-middle align-justify',
+            { header__nav__open: isOpen }
+          )}
+        >
           <div className='header__link__wrapper cell large-auto'>
             <AnimatedNavbar duration={300} />
             <div className='nav__item' onClick={aboutPage}>
@@ -39,7 +44,7 @@ function Header ({ history }) {
                 className={classNames('text', { 'text--white': isWhite })}
                 target='_blank'
               >
-                About
+                <FormattedMessage defaultMessage='About' />
               </a>
             </div>
           </div>

@@ -23,31 +23,15 @@ import Uniswap from '@/assets/img/partners/uniswap.png'
 
 const items = [
   {
-    title: 'Infrastructure',
-    images: [
-      Bitmap,
-      Chainlink,
-      Openzeppelin,
-      Pocket,
-      TheGraph,
-      Unmarshal
-    ]
+    title: <FormattedMessage defaultMessage='Infrastructure' />,
+    images: [Bitmap, Chainlink, Openzeppelin, Pocket, TheGraph, Unmarshal]
   },
   {
-    title: 'Payments and Liquidity',
-    images: [
-      Ramp,
-      Monerium,
-      Kyber,
-      Uniswap,
-      Inch,
-      Loopring,
-      Orion,
-      Emoney
-    ]
+    title: <FormattedMessage defaultMessage='Payments and Liquidity' />,
+    images: [Ramp, Monerium, Kyber, Uniswap, Inch, Loopring, Orion, Emoney]
   },
   {
-    title: 'Partners',
+    title: <FormattedMessage defaultMessage='Partners' />,
     images: [
       CoinGecko,
       Coinmarketcap,
@@ -66,13 +50,11 @@ const Item = ({ title, images }) => {
       <h5 className='item__title'>{title}</h5>
       <div className='grid-x align-middle align-justify grid-margin-x grid-margin-y'>
         {
-          images.map((img, index) => {
-            return (
-              <div key={index} className='cell small-10 medium-11'>
-                <img src={img} />
-              </div>
-            )
-          })
+          images.map((img, index) => (
+            <div key={index} className='cell small-10 medium-11'>
+              <img src={img} />
+            </div>
+          ))
         }
       </div>
     </div>
@@ -82,14 +64,12 @@ const Item = ({ title, images }) => {
 const FuseEcosystem = (props) => {
   return (
     <section className='fuse_ecosysyem'>
-      <h3 className='fuse_ecosysyem__title'>Fuse Ecosystem</h3>
+      <h3 className='fuse_ecosysyem__title'>
+        <FormattedMessage defaultMessage='Fuse Ecosystem' />
+      </h3>
       <div className='fuse_ecosysyem__items grid-x align-justify'>
         {
-          items.map((item, index) => {
-            return (
-              <Item key={index} {...item} />
-            )
-          })
+          items.map((item, index) => <Item key={index} {...item} />)
         }
       </div>
     </section>

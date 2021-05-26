@@ -51,7 +51,7 @@ class DropdownContainer extends Component {
   currentDropdownEl = createRef()
   prevDropdownEl = createRef()
 
-  componentDidMount() {
+  componentDidMount () {
     updateAltBackground({
       altBackground: this.altBackgroundEl,
       prevDropdown: this.prevDropdownEl.current,
