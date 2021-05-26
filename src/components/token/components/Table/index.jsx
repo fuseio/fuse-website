@@ -27,7 +27,7 @@ const rightColumnData = [
   }
 ]
 
-function MyTable({ columns, data, count }) {
+function MyTable ({ columns, data, count }) {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     useTable(
       {
