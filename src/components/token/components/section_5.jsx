@@ -61,13 +61,13 @@ const SectionFive = () => {
             </ul>
           </div>
 
-          <div className="image">
+          <div className='image'>
             <img src={Pie} />
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SectionFive;
+export default SectionFive

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 import Discord from '@/assets/images/dropdown/discord_nav.svg'
 import Forum from '@/assets/images/dropdown/forum.svg'
@@ -11,40 +11,40 @@ import { FormattedMessage } from 'react-intl'
 
 const items = [
   {
-    title: "Github",
+    title: 'Github',
     icon: Github,
-    url: "https://github.com/fuseio",
+    url: 'https://github.com/fuseio'
   },
   {
-    title: "Twitter",
+    title: 'Twitter',
     icon: Twitter,
-    url: "https://twitter.com/fuse_network",
+    url: 'https://twitter.com/fuse_network'
   },
   {
-    title: "Discord",
+    title: 'Discord',
     icon: Discord,
-    url: "https://discordapp.com/invite/jpPMeSZ",
+    url: 'https://discordapp.com/invite/jpPMeSZ'
   },
   {
-    title: "Medium",
+    title: 'Medium',
     icon: Medium,
-    url: "https://medium.com/fusenet",
+    url: 'https://medium.com/fusenet'
   },
   {
-    title: "Telegram",
+    title: 'Telegram',
     icon: Telegram,
-    url: "https://t.me/fuseio",
+    url: 'https://t.me/fuseio'
   },
   {
     title: <FormattedMessage defaultMessage='Fuse Forum' />,
     icon: Forum,
-    url: "https://forum.fuse.io",
-  },
-];
+    url: 'https://forum.fuse.io'
+  }
+]
 
-function CommunityDropdown() {
+function CommunityDropdown () {
   return (
-    <div className="community_dropdown">
+    <div className='community_dropdown'>
       <div data-first-dropdown-section>
         <ul className='list grid-x align-middle align-justify'>
           {
@@ -73,7 +73,7 @@ function CommunityDropdown() {
         </ul>
       </div>
     </div>
-  );
+  )
 }
 
-export default CommunityDropdown;
+export default CommunityDropdown

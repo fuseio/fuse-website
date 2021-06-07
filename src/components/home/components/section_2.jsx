@@ -5,9 +5,6 @@ import Business from '@/assets/img/business_tools.png'
 import BusinessSmall from '@/assets/img/business_tools_small.svg'
 import PaymentsNetwork from '@/assets/img/paymets_network.png'
 import PaymentsNetworkSmall from '@/assets/img/payments_network_small.svg'
-import Communities from '@/assets/img/communities.svg'
-import Transactions from '@/assets/img/transactions.svg'
-import Wallet from '@/assets/img/wallets.svg'
 import { FormattedMessage } from 'react-intl'
 
 const items = [
@@ -43,7 +40,7 @@ const items = [
           }}
         />
       </div>
-    ),
+    )
   },
   {
     icon: PaymentsNetworkSmall,
@@ -60,9 +57,9 @@ const items = [
           }}
         />
       </div>
-    ),
-  },
-];
+    )
+  }
+]
 
 const bannerItems = [
   {
@@ -81,16 +78,16 @@ const bannerItems = [
 
 const Item = ({ title, image, Text, icon }) => {
   return (
-    <div className="item">
-      <img className="item__image" src={image} />
-      <div className="item__title grid-x align-middle">
+    <div className='item'>
+      <img className='item__image' src={image} />
+      <div className='item__title grid-x align-middle'>
         <img src={icon} />
         <h4>{title}</h4>
       </div>
       <Text />
     </div>
-  );
-};
+  )
+}
 
 const BannerItem = ({ icon, value, text }) => {
   return (
@@ -102,8 +99,8 @@ const BannerItem = ({ icon, value, text }) => {
         {text}
       </div>
     </div>
-  );
-};
+  )
+}
 
 const Banner = () => {
   return (
@@ -129,8 +126,8 @@ const Banner = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 const SectionTwo = () => {
   return (
@@ -149,7 +146,7 @@ const SectionTwo = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default SectionTwo;
+export default SectionTwo

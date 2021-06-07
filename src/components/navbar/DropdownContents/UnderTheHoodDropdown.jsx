@@ -45,9 +45,9 @@ const items = [
   }
 ]
 
-function UnderTheHoodDropdown({ history }) {
+function UnderTheHoodDropdown ({ history }) {
   return (
-    <div className="community_dropdown">
+    <div className='community_dropdown'>
       <div data-first-dropdown-section>
         <ul className='list grid-x align-middle align-justify'>
           {
@@ -96,7 +96,7 @@ function UnderTheHoodDropdown({ history }) {
         </ul>
       </div>
     </div>
-  );
+  )
 }
 
-export default withRouter(UnderTheHoodDropdown);
+export default withRouter(UnderTheHoodDropdown)

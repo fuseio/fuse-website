@@ -43,8 +43,8 @@ const Item = ({ image, text, title }) => {
       <div className='item__title'>{title}</div>
       <div className='item__text'>{text}</div>
     </div>
-  );
-};
+  )
+}
 
 const SectionTwo = () => {
   return (
@@ -64,7 +64,7 @@ const SectionTwo = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SectionTwo;
+export default SectionTwo

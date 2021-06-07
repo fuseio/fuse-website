@@ -11,25 +11,25 @@ import { FormattedMessage } from 'react-intl'
 const items = [
   {
     icon: Uniswap,
-    name: "Uniswap",
-    link: "https://app.uniswap.org/#/swap?outputCurrency=0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d",
+    name: 'Uniswap',
+    link: 'https://app.uniswap.org/#/swap?outputCurrency=0x970b9bb2c0444f5e81e9d0efb84c8ccdcdcaf84d'
   },
   {
     icon: Kyber,
-    name: "Kyber network",
-    link: "https://kyberswap.com/swap/eth-fuse",
+    name: 'Kyber network',
+    link: 'https://kyberswap.com/swap/eth-fuse'
   },
   {
     icon: OneInch,
-    name: "1Inch exchange",
-    link: "https://app.1inch.io/#/1/swap/ETH/FUSE",
+    name: '1Inch exchange',
+    link: 'https://app.1inch.io/#/1/swap/ETH/FUSE'
   },
   {
     icon: Loopring,
-    name: "Loopring",
-    link: "https://exchange.loopring.io/swap/FUSE-ETH",
-  },
-];
+    name: 'Loopring',
+    link: 'https://exchange.loopring.io/swap/FUSE-ETH'
+  }
+]
 
 const Item = ({ icon, name, link }) => {
   return (
@@ -37,19 +37,19 @@ const Item = ({ icon, name, link }) => {
       <img src={icon} />
       <h3>{name}</h3>
     </a>
-  );
-};
+  )
+}
 
 const SectionFour = () => {
   return (
-    <section className="purchase_fuse_token__wrapper">
-      <div className="bubble">
+    <section className='purchase_fuse_token__wrapper'>
+      <div className='bubble'>
         <img src={Bubble} />
       </div>
-      <div className="token1">
+      <div className='token1'>
         <img src={FuseTokenOne} />
       </div>
-      <div className="token2">
+      <div className='token2'>
         <img src={FuseTokenTwo} />
       </div>
       <div className='purchase_fuse_token__container'>
@@ -58,7 +58,7 @@ const SectionFour = () => {
             <FormattedMessage defaultMessage='Purchase fuse token' />
           </h1>
 
-          <div className="items">
+          <div className='items'>
             {items.map((item, index) => (
               <Item key={index} {...item} />
             ))}
@@ -66,7 +66,7 @@ const SectionFour = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SectionFour;
+export default SectionFour

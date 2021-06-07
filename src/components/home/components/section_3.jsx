@@ -21,9 +21,9 @@ const Button = ({ text = <FormattedMessage defaultMessage='Launch Now' />, link 
 
 const StudioFloor = () => {
   return (
-    <section className="studio_floor">
-      <div className="studio_floor__container grid-x align-justify align-self-middle">
-        <div className="cell small-24 medium-12">
+    <section className='studio_floor'>
+      <div className='studio_floor__container grid-x align-justify align-self-middle'>
+        <div className='cell small-24 medium-12'>
           <div>
             <div className='studio_floor__sub-title grid-x align-middle'>
               <img src={StudioIcon} />
@@ -63,20 +63,20 @@ const StudioFloor = () => {
             </div>
           </div>
         </div>
-        <div className="studio_floor__image cell small-24 medium-12">
+        <div className='studio_floor__image cell small-24 medium-12'>
           <img src={StudioImage} />
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 const FuseWalletFloor = () => {
   return (
     <section className='wallet_floor'>
       <div className='wallet_floor__container grid-x align-justify align-self-middle'>
-      <div className="wallet_floor__image cell small-24 medium-12">
-          <img src={Gif} alt='iphone'/>
+        <div className='wallet_floor__image cell small-24 medium-12'>
+          <img src={Gif} alt='iphone' />
         </div>
         <div className='wallet_floor__info cell small-24 medium-12'>
           <div className='wallet_floor__sub-title grid-x align-middle'>
@@ -112,13 +112,13 @@ const FuseWalletFloor = () => {
             </li>
           </ul>
           <div className='wallet_floor__links'>
-            <div className="items">
+            <div className='items'>
               <a
                 rel='noreferrer noopener'
                 target='_blank'
                 href='https://apps.apple.com/il/app/fuse-wallet/id1491783654'
               >
-                <img alt="twitter" src="./images/apple.png" />
+                <img alt='twitter' src='./images/apple.png' />
               </a>
 
               <a
@@ -126,7 +126,7 @@ const FuseWalletFloor = () => {
                 target='_blank'
                 href='https://play.google.com/store/apps/details?id=io.fuse.fusecash'
               >
-                <img alt="android" src="./images/playstore.png" />
+                <img alt='android' src='./images/playstore.png' />
               </a>
 
               <a
@@ -141,15 +141,15 @@ const FuseWalletFloor = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 const FuseSwapFloor = () => {
   return (
-    <section className="fuseswap_floor">
-      <div className="fuseswap_floor__container">
-        <div className="fuseswap_floor__container__inner margin-0 grid-x align-justify align-self-middle">
-         
+    <section className='fuseswap_floor'>
+      <div className='fuseswap_floor__container'>
+        <div className='fuseswap_floor__container__inner margin-0 grid-x align-justify align-self-middle'>
+
           <div className='cell small-24 medium-12'>
             <div className='grid-y texts'>
               <div className='fuseswap_floor__sub-title grid-x align-middle'>
@@ -191,25 +191,25 @@ const FuseSwapFloor = () => {
               </div>
             </div>
           </div>
-          <div className="fuseswap_floor__image cell small-24 medium-12">
+          <div className='fuseswap_floor__image cell small-24 medium-12'>
             <img src={FuseSwapImage} />
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 const SectionThree = () => {
   return (
     <>
-    <div className="blue">
-      <StudioFloor />
-    </div>
+      <div className='blue'>
+        <StudioFloor />
+      </div>
       <FuseWalletFloor />
       <FuseSwapFloor />
     </>
-  );
-};
+  )
+}
 
-export default SectionThree;
+export default SectionThree

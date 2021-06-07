@@ -16,28 +16,28 @@ const SectionTwo = () => {
               <FormattedMessage defaultMessage='Backed by' />
             </div>
           </div>
-          <div className="item">
+          <div className='item'>
             <img src={Aleph} />
           </div>
-          <div className="item">
+          <div className='item'>
             <img src={Colider} />
           </div>
 
-          <div className="item">
+          <div className='item'>
             <img src={Wolf} />
           </div>
 
-          <div className="item">
+          <div className='item'>
             <img src={trgc} />
           </div>
 
-          <div className="item">
+          <div className='item'>
             <img src={spark} />
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SectionTwo;
+export default SectionTwo

@@ -1,11 +1,11 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
-import { FormattedMessage } from "react-intl";
-import useFetch from "use-http";
-import moment from "moment";
+import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Navigation, Pagination } from 'swiper'
+import { FormattedMessage } from 'react-intl'
+import useFetch from 'use-http'
+import moment from 'moment'
 
-SwiperCore.use([Navigation, Pagination]);
+SwiperCore.use([Navigation, Pagination])
 
 function Item ({ title, link, thumbnail, pubDate }) {
   return (
@@ -19,7 +19,7 @@ function Item ({ title, link, thumbnail, pubDate }) {
         <img alt='owners' src={thumbnail} />
       </div>
 
-      <div className="item__post__content">
+      <div className='item__post__content'>
         {/* <p className='chips'>
           <span>Blog post</span>
         </p> */}
@@ -37,7 +37,7 @@ function Item ({ title, link, thumbnail, pubDate }) {
         <span>{moment(pubDate).format('MMMM Do YYYY')}</span>
       </div>
     </a>
-  );
+  )
 }
 
 const SectionFour = () => {
@@ -76,13 +76,13 @@ const SectionFour = () => {
                   </span>
                 </a>
               </div>
-              <div className="blogs__wrapper cell large-auto grid-x align-spaced">
+              <div className='blogs__wrapper cell large-auto grid-x align-spaced'>
                 {data.items.slice(0, 3).map((item, index) => {
-                  return <Item key={index} {...item} />;
+                  return <Item key={index} {...item} />
                 })}
               </div>
             </div>
-            <div className="section-C__swiper">
+            <div className='section-C__swiper'>
               <Swiper
                 slidesPerView={1}
                 spaceBetween={20}
@@ -90,10 +90,10 @@ const SectionFour = () => {
                 setWrapperSize
                 autoplay={{
                   reverseDirection: true,
-                  delay: 5000,
+                  delay: 5000
                 }}
                 pagination={{
-                  clickable: true,
+                  clickable: true
                 }}
               >
                 {
@@ -109,7 +109,7 @@ const SectionFour = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SectionFour;
+export default SectionFour

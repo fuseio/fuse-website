@@ -5,7 +5,6 @@ import VisibilitySensor from 'react-visibility-sensor'
 import useFetch from 'use-http'
 import arow from '../../../assets/images/arow.svg'
 
-
 const formatNumber = (num) => String(num).replace(/(.)(?=(\d{3})+$)/g, '$1,')
 
 const SectionThree = () => {

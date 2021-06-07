@@ -10,14 +10,14 @@ export default ({ row, index, style = {} }) => {
           ...
         </span>
       </div>
-    );
+    )
   }
 
   return (
     <tr
       {...row.getRowProps({
         style,
-        className: "table__body__row",
+        className: 'table__body__row'
       })}
     >
       {
@@ -35,5 +35,5 @@ export default ({ row, index, style = {} }) => {
         })
       }
     </tr>
-  );
-};
+  )
+}

@@ -16,7 +16,7 @@ const items = [
       {
         title: 'Fuse Staking',
         url: 'http://studio.fuse.io/'
-      }, 
+      },
       {
         title: 'Fuse Cash',
         url: 'https://fuseswap.com'

@@ -21,13 +21,13 @@ const SectionOne = () => {
               />
             </p>
           </div>
-          <div className="canvas grid-x align-right">
+          <div className='canvas grid-x align-right'>
             <Globe />
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SectionOne;
+export default SectionOne

@@ -17,7 +17,7 @@ const SectionFour = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SectionFour;
+export default SectionFour

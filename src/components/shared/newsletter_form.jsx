@@ -24,25 +24,25 @@ const NewsletterForm = () => {
       initialValues={{ email: '' }}
       validationSchema={SignupSchema}
       onSubmit={async (values, { setSubmitting, resetForm }) => {
-        const { email } = values;
+        const { email } = values
         const user = {
           accountAddress: email,
           email: email,
           provider: 'HDWallet',
           subscribe: true,
           source: 'Fuse.io',
-          displayName: 'Fuse.io',
-        };
+          displayName: 'Fuse.io'
+        }
 
         try {
           const response = await fetch('https://studio.fuse.io/api/v2/users', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
+              'Content-Type': 'application/json'
             },
             referrerPolicy: 'no-referrer',
-            body: JSON.stringify(user),
-          });
+            body: JSON.stringify(user)
+          })
 
           if (response.status === 200) {
             const okMessage = intl.formatMessage({
@@ -50,21 +50,21 @@ const NewsletterForm = () => {
             })
             setTitle(`<span>${okMessage}</span>`)
             setTimeout(() => {
-              setTitle('');
-            }, 3000);
-            setSubmitting(true);
+              setTitle('')
+            }, 3000)
+            setSubmitting(true)
           } else if (response.status === 500) {
             const errorMessage = intl.formatMessage({
               defaultMessage: 'Something went wrong &#128078'
             })
             setTitle(`<span>${errorMessage}</span>`)
             setTimeout(() => {
-              setTitle('');
-            }, 3000);
-            setSubmitting(true);
+              setTitle('')
+            }, 3000)
+            setSubmitting(true)
           }
 
-          resetForm({ email: '' });
+          resetForm({ email: '' })
         } catch (error) {
           const errorMessage = intl.formatMessage({
             defaultMessage: 'Something went wrong &#128078'
@@ -72,11 +72,12 @@ const NewsletterForm = () => {
           resetForm({ email: '' })
           setTitle(`<span>${errorMessage}</span>`)
           setTimeout(() => {
-            setTitle('');
-          }, 3000);
-          setSubmitting(true);
+            setTitle('')
+          }, 3000)
+          setSubmitting(true)
         }
-      }}>
+      }}
+    >
       {({ isSubmitting, dirty }) => (
         <Form className='newsletter__form '>
           <div className='title' dangerouslySetInnerHTML={{ __html: title }} />
@@ -90,26 +91,26 @@ const NewsletterForm = () => {
               />
             )}
           </FormattedMessage>
-          <ErrorMessage name="email">
+          <ErrorMessage name='email'>
             {(msg) => (
-              <div className="newsletter__form__mobile-error">{msg}</div>
+              <div className='newsletter__form__mobile-error'>{msg}</div>
             )}
           </ErrorMessage>
           <button
             disabled={!dirty || isSubmitting}
-            id="btn_submit"
-            type="submit"
-            className="newsletter__form__button"
+            id='btn_submit'
+            type='submit'
+            className='newsletter__form__button'
           >
             <FormattedMessage defaultMessage='Send' />
           </button>
-          <ErrorMessage name="email">
-            {(msg) => <div className="newsletter__form__error ">{msg}</div>}
+          <ErrorMessage name='email'>
+            {(msg) => <div className='newsletter__form__error '>{msg}</div>}
           </ErrorMessage>
         </Form>
       )}
     </Formik>
-  );
-};
+  )
+}
 
-export default NewsletterForm;
+export default NewsletterForm
