@@ -6,7 +6,6 @@ import GitHub from '@/assets/img/social/github.svg'
 import Telegram from '@/assets/img/social/telegram.svg'
 import Twitter from '@/assets/img/social/twitter.svg'
 
-
 const socialLinks = [
   {
     url: 'https://medium.com/fusenet',
@@ -29,7 +28,6 @@ const socialLinks = [
     icon: Telegram
   }
 ]
-
 
 function Icons () {
   return (

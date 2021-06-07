@@ -103,7 +103,7 @@ const NewsletterForm = () => {
             className='newsletter__form__button'
           >
             <FormattedMessage defaultMessage='Send' />
-            </button>
+          </button>
           <ErrorMessage name='email'>
             {(msg) => <div className='newsletter__form__error '>{msg}</div>}
           </ErrorMessage>

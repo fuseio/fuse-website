@@ -1,5 +1,5 @@
-import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
 import ola from '@/assets/img/Ecosystem/ola_partner.png'
 import graph from '@/assets/img/Ecosystem/graph_partner.png'
 import ramp from '@/assets/img/Ecosystem/ramp_partner.png'
@@ -40,8 +40,9 @@ const FuseEcosystem = (props) => {
   return (
     <section className='fuse_ecosysyem'>
       <h3 className='fuse_ecosysyem__title'>
-        <FormattedMessage defaultMessage='Join our growing ecosystem of leading infrastructure partners, 
-liquidity platforms, data providers and more!' />
+        <FormattedMessage defaultMessage='Join our growing ecosystem of leading infrastructure partners,
+liquidity platforms, data providers and more!'
+        />
       </h3>
       <div className='fuse_ecosysyem__items grid-x align-justify'>
         <div className='grid-x fuse_ecosysyem__logo-block cell'>
@@ -53,7 +54,7 @@ liquidity platforms, data providers and more!' />
               <img src={graph} alt='graph' />
             </div>
             <div className='fuse_ecosysyem__logo-priority small-12 medium-6 large-4'>
-             <img src={ramp} alt='ramp' />
+              <img src={ramp} alt='ramp' />
             </div>
             <div className='fuse_ecosysyem__logo-priority small-12 medium-6 large-4'>
               <img src={pokt} alt='pokt' />
@@ -71,7 +72,7 @@ liquidity platforms, data providers and more!' />
               <img src={staking} alt='staking' />
             </div>
             <div className='fuse_ecosysyem__logo-priority small-12 medium-6 large-4'>
-             <img src={chainlink} alt='chainlink' />
+              <img src={chainlink} alt='chainlink' />
             </div>
             <div className='fuse_ecosysyem__logo-priority small-12 medium-6 large-4'>
               <img src={goodfi} alt='goodfi' />
@@ -88,14 +89,14 @@ liquidity platforms, data providers and more!' />
         </div>
         <div className='grid-x fuse_ecosysyem__logo-block cell'>
           <div className='grid-x fuse_ecosysyem__logo-row'>
-           <div className='fuse_ecosysyem__logo-small small-6 medium-4 large-2'>
+            <div className='fuse_ecosysyem__logo-small small-6 medium-4 large-2'>
               <img src={coingecko} alt='coingecko' />
             </div>
             <div className='fuse_ecosysyem__logo-small small-6 medium-4 large-2'>
               <img src={defilama} alt='defilama' />
             </div>
             <div className='fuse_ecosysyem__logo-small small-6 medium-4 large-2'>
-             <img src={coinmarketcap} alt='coinmarketcap' />
+              <img src={coinmarketcap} alt='coinmarketcap' />
             </div>
             <div className='fuse_ecosysyem__logo-small small-6 medium-4 large-2'>
               <img src={uniswap} alt='uniswap' />
@@ -131,7 +132,7 @@ liquidity platforms, data providers and more!' />
               <img src={unstoppabledomains} alt='unstoppabledomains' />
             </div>
             <div className='fuse_ecosysyem__logo-small small-6 medium-4 large-2'>
-             <img src={orion} alt='orion' />
+              <img src={orion} alt='orion' />
             </div>
             <div className='fuse_ecosysyem__logo-small small-6 medium-4 large-2'>
               <img src={boson} alt='boson' />

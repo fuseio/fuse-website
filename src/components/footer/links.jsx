@@ -11,12 +11,12 @@ const items = [
       },
       {
         title: 'Fuse Swap',
-        url: 'https://fuseswap.com/'      
+        url: 'https://fuseswap.com/'
       },
       {
         title: 'Fuse Staking',
-        url: 'http://staking.fuse.io/'    
-      }, 
+        url: 'http://staking.fuse.io/'
+      },
       {
         title: 'Fuse Cash',
         url: 'https://fuse.cash/'

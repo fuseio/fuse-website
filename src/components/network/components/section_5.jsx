@@ -11,7 +11,7 @@ const SectionFive = () => {
       <div className='text'>
         <FormattedMessage
           defaultMessage="Don't miss the latest updates on Fuse and the future of payments."
-         
+
         />
       </div>
       <NewsletterForm />

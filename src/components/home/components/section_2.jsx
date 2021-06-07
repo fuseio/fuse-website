@@ -5,9 +5,6 @@ import Business from '@/assets/img/business_tools.png'
 import BusinessSmall from '@/assets/img/business_tools_small.svg'
 import PaymentsNetwork from '@/assets/img/paymets_network.png'
 import PaymentsNetworkSmall from '@/assets/img/payments_network_small.svg'
-import Communities from '@/assets/img/communities.svg'
-import Transactions from '@/assets/img/transactions.svg'
-import Wallet from '@/assets/img/wallets.svg'
 import { FormattedMessage } from 'react-intl'
 
 const items = [
@@ -65,11 +62,11 @@ const items = [
 ]
 
 const bannerItems = [
-  {   
+  {
     value: '10,392,350',
     text: <FormattedMessage defaultMessage='Transactions' />
   },
-  {   
+  {
     value: '695',
     text: <FormattedMessage defaultMessage='Communities' />
   },
@@ -95,7 +92,7 @@ const Item = ({ title, image, Text, icon }) => {
 const BannerItem = ({ value, text }) => {
   return (
     <div className='item grid-x align-middle'>
-      
+
       &nbsp;&nbsp;
       <div className='title'>
         <span>{value}</span>

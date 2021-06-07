@@ -1,6 +1,7 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
-import network_arrow from '@/assets/images/network_arrow.svg'
+import networkArrow from '@/assets/images/network_arrow.svg'
+
 const SectionFour = () => {
   return (
     <div className='participates grid-y'>
@@ -27,7 +28,7 @@ const SectionFour = () => {
                     >
                       <span><FormattedMessage defaultMessage='FUSE tokenomics' /></span>
                     </a>
-                    <img src={network_arrow} alt='network_arrow' />
+                    <img src={networkArrow} alt='network_arrow' />
                   </div>
                   <div className='link'>
                     <a
@@ -36,7 +37,7 @@ const SectionFour = () => {
                     >
                       <span><FormattedMessage defaultMessage='Get on uniswap' /></span>
                     </a>
-                    <img src={network_arrow} alt='network_arrow' />
+                    <img src={networkArrow} alt='network_arrow' />
                   </div>
                 </div>
               </div>
@@ -58,7 +59,7 @@ const SectionFour = () => {
                     >
                       <span><FormattedMessage defaultMessage='Learn how to run a Fuse node' /></span>
                     </a>
-                    <img src={network_arrow} alt='network_arrow' />
+                    <img src={networkArrow} alt='network_arrow' />
                   </div>
                 </div>
               </div>
