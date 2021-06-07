@@ -29,14 +29,14 @@ const SectionOne = () => {
                 />
               </p>
             </div>
-            <div className='about_main__image medium-12 small-24 grid-x align-right'>
-              <img src={about} alt='about-image' />
+            <div className="about_main__image medium-12 small-24 grid-x align-right">
+              <img src={about} alt="about-image" />
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SectionOne
+export default SectionOne;

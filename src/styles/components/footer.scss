@@ -1,30 +1,18 @@
 @include block(footer) {
 	height: 100%;
-	max-width: 600px;
-	margin: auto;
+	width: 100%;
 
-	> div {
-		&:not(:last-child) {
-			margin-bottom: 3em;
-		}
-		@include breakpoint(medium down) {
-			align-self: baseline;
-		}
-	}
-
-	@include xy-grid(vertical);
-	@include flex-align(justify, middle);
 	@include element(wrapper) {
-		padding: 4em;
-		@include breakpoint(medium down) {
-			padding: 4em 20px;
-		}
-		background: linear-gradient(180deg, #002740 0%, #001929 100%);
-		position: relative;
+		padding: 5em 2em 2em;
+		background: #071927;
 
 		// @include modifier(dark) {
 		// 	background-color: #001929;
 		// }
+	}
+
+	@include breakpoint(medium down) {
+		transform: unset;
 	}
 
 	@include element(container) {
@@ -58,16 +46,38 @@
 	}
 
 	@include element(icons) {
+
+		align-items: flex-end;
+
 		@include breakpoint(medium down) {
-			// margin: 2em 0;
+			align-items: flex-start;
+		}
+
+		@include element(title) {
+			color: #8DA9BB;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 24.8px;
+			margin-bottom: 1.3333em;
+		}
+
+		@include element(images) {
+			gap: 16px;
+			@include breakpoint(medium down) {
+				margin: 2em 0;
+			}
+
+			img {
+				width: 48px;
+				height: 48px;
+			}
 		}
 	}
 
 	@include element(icon) {
 		cursor: pointer;
-		> img {
-			height: 47px;
-			width: 47px;
+		&:hover {
+			filter: brightness(0) invert(1);
 		}
 	}
 
@@ -81,41 +91,6 @@
 		@include breakpoint(small only) {
 			height: 35px;
 			width: 35px;
-		}
-	}
-
-	@include block(twitter) {
-		// background-image: url(/images/twitter_white.svg);
-		&:hover {
-			// background-image: url(/images/twitter_footer_hover.svg);
-		}
-	}
-
-	@include block(github) {
-		// background-image: url(/images/github_white.svg);
-		&:hover {
-			// background-image: url(/images/git_footer_hover.svg);
-		}
-	}
-
-	@include block(medium) {
-		// background-image: url(/images/medium_white.svg);
-		&:hover {
-			// background-image: url(/images/med_footer_hover.svg);
-		}
-	}
-
-	@include block(discord) {
-		// background-image: url(/images/discord.svg);
-		&:hover {
-			// background-image: url(/images/discord_footer_hover.svg);
-		}
-	}
-
-	@include block(telegram) {
-		// background-image: url(/images/tele.svg);
-		&:hover {
-			// background-image: url(/images/telegram_footer_hover.svg);
 		}
 	}
 
@@ -140,6 +115,34 @@
 		}
 	}
 
+	@include element(defi) {
+		height: 29px;
+		border-radius: 14.5px;
+		border: solid 1px #7b7b7b;
+		width: 185px;
+		max-width: 205px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		margin-left: auto;
+		margin-top: 1em;
+
+		@include element(link) {
+			text-decoration: none;
+			width: 100%;
+			font-size: 0.938em;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: normal;
+			letter-spacing: normal;
+			text-align: center;
+			color: white;
+			&:hover {
+				color: white;
+			}
+		}
+	}
+
 	@include element(nav) {
 		margin-left: auto;
 		display: flex;
@@ -150,10 +153,12 @@
 
 	@include element(logo) {
 		width: 125px;
+		margin-bottom: 1em;
 
 		@include element(wrapper) {
 			display: flex;
 			align-items: center;
+			justify-content: flex-start;
 
 			> span {
 				margin-left: 10px;
@@ -164,8 +169,6 @@
 		}
 	}
 
-	@include element(item) {
-	}
 
 	@include element(sign) {
 		position: relative;
@@ -229,31 +232,55 @@
 		color: white;
 		margin: 2em 0 1em;
 	}
+
+	@include element(copy) {
+		color: #8DA9BB;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 16px;
+		margin-top: 2.75em;
+	}
 }
 
 @include block(links) {
 	@include breakpoint(medium up) {
 		@include xy-grid();
-		@include flex-align(spaced, middle);
+		@include flex-align(spaced, null);
+	}
+	@include breakpoint(large down) {
+		gap: 2em;
+		@include xy-grid();
+		@include flex-align(end, null);
 	}
 	@include breakpoint(medium down) {
-		@include xy-grid();
-		@include flex-align(null, middle);
+		order: 3;
 	}
-
-	@include element(item) {
-		@include flex-align(null, middle);
-		@include breakpoint(medium down) {
-			@include xy-cell(12, null, 0);
-			min-height: 50px;
+	@include block(list) {
+		@include element(container) {
 		}
-		font-size: 15px;
-		line-height: 18px;
-		color: #ffffff;
-		font-weight: 500;
-		&:hover {
-			text-decoration: underline;
-			cursor: pointer;
+
+		@include element(title) {
+			font-size: 1.125em;
+			line-height: 25px;
+			font-weight: 400;
+			color: #8da9bb;
+			margin-bottom: 1.3333em;
+		}
+
+		@include element(item) {
+			font-size: 15px;
+			line-height: 18px;
+			color: #ffffff;
+			font-weight: 400;
+			&:hover {
+				cursor: pointer;
+				color: rgba(255, 255, 255, 0.6);
+
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 1em;
+			}
 		}
 	}
 }

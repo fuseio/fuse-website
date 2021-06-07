@@ -1,8 +1,16 @@
 @include block(wallet_floor) {
   @include xy-grid-container();
+  max-width: unset;
+  margin-left: 80px;
+  margin-right: 80px;
+  @include breakpoint(large down) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   padding: 5em 0 0;
 
-  @include element(container) {
+  @include element(info) {
+
   }
 
   @include breakpoint(medium down) {
@@ -11,8 +19,9 @@
 
   @include element(sub-title) {
     > img {
-      width: 29px;
-      height: 28px;
+      width: 64px;
+      height: 64px;
+      margin-right: 16px;
     }
 
     > span {
@@ -23,23 +32,33 @@
 
   @include element(title) {
     @extend %title;
+
   }
 
   @include element(text) {
     @extend %text;
     padding: 1.5em 0;
+    max-width: 390px;
+
   }
 
   @include element(links) {
-    @include breakpoint(medium down) {
-      display: none;
-    }
+    margin-top: 3em;
+
     @include block(title) {
       @extend %text;
       font-weight: bold;
       padding: 2em 0 1em;
     }
     @include block(items) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      gap: 15px;
+      > a {
+        max-width: 200px
+        }
       @include breakpoint(medium up) {
         @include xy-grid();
         // @include flex-align(justify, middle);
@@ -68,6 +87,7 @@
   }
 
   @include element(image) {
+    position: relative;
     @include breakpoint(medium down) {
       @include xy-grid();
       @include flex-align(center, middle);
@@ -79,5 +99,17 @@
         height: 600px;
       }
     }
+
+
   }
+
+  @include block(image-background) {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: -99;
+  }
+
 }

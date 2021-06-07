@@ -43,7 +43,7 @@ const SectionSix = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SectionSix
+export default SectionSix;

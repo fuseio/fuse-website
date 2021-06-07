@@ -43,7 +43,7 @@ const ContactUs = () => {
             <PopupButton
               className='button main_button contact-us__button'
               url='https://form.typeform.com/to/LMdyK0st?typeform-medium=embed-snippet'
-              text={<FormattedMessage defaultMessage='Book demo' />}
+              text={<FormattedMessage defaultMessage='Contact Form' />}
             />
           </div>
         </div>

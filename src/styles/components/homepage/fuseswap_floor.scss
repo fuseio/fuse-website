@@ -1,17 +1,32 @@
 @include block(fuseswap_floor) {
-  background: #0a2540;
+  background: #071927;
   -webkit-clip-path: polygon(49% 15%, 50% 25%, 100% 1%, 100% 100%, 80% 100%, 0 100%, 0 100%, 0 35%);
   clip-path: polygon(49% 15%, 50% 25%, 100% 1%, 100% 100%, 80% 100%, 0 100%, 0 100%, 0 35%);
-
+ 
   @include element(container) {
     @include xy-grid-container();
+    max-width: unset;
+    margin-left: 80px;
+    margin-right: 80px;
+    @include breakpoint(large down) {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
     padding: 12em 0 6em;
-
+   
     @include breakpoint(medium down) {
       padding: 5em 0 2em;
     }
-  }
+   
+    @include element(inner) {
+      padding: 12em 0 6em;
+      @include breakpoint(medium down) {
+        padding: 5em 0 2em;
+      }
+    }
 
+  }
+ 
   @include breakpoint(medium down) {
     padding: 20px;
     -webkit-clip-path: polygon(48% 1%, 50% 6%, 100% 0, 100% 70%, 100% 100%, 50% 100%, 0 100%, 0 5%);
@@ -20,8 +35,9 @@
 
   @include element(sub-title) {
     > img {
-      width: 29px;
-      height: 28px;
+      width: 66.29px;
+      height: 64px;
+      margin-right: 16px;
     }
 
     > span {
@@ -43,7 +59,7 @@
   }
 
   @include block(launch) {
-    padding-top: 2em;
+    padding-top: 3.5em;
   }
 
   @include block(props) {
@@ -62,7 +78,7 @@
 
   @include block(texts) {
     width: fit-content;
-    margin-left: auto;
+    // margin-left: auto;
   }
 
   @include element(image) {

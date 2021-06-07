@@ -17,39 +17,39 @@ import { FormattedMessage } from 'react-intl'
 
 const members = [
   {
-    name: 'Mark Smargon',
-    role: 'Founder & CEO',
+    name: "Mark Smargon",
+    role: "Founder & CEO",
     picture: mark,
-    linked: 'https://www.linkedin.com/in/marksmargon/',
-    isLinkedIn: true
+    linked: "https://www.linkedin.com/in/marksmargon/",
+    isLinkedIn: true,
   },
   {
-    name: 'Robert Miller',
-    role: 'PR & Communications',
+    name: "Robert Miller",
+    role: "PR & Communications",
     picture: robert,
-    linked: 'https://www.linkedin.com/in/rm16/',
-    isLinkedIn: true
+    linked: "https://www.linkedin.com/in/rm16/",
+    isLinkedIn: true,
   },
   {
-    name: 'Isaac Rodgin',
-    role: 'Head of BD',
+    name: "Isaac Rodgin",
+    role: "Head of BD",
     picture: isaac,
-    linked: 'https://www.linkedin.com/in/isaac-rodgin-58a8897a/',
-    isLinkedIn: true
+    linked: "https://www.linkedin.com/in/isaac-rodgin-58a8897a/",
+    isLinkedIn: true,
   },
   {
-    name: 'Leon Prouger',
-    role: 'Tech Lead',
+    name: "Leon Prouger",
+    role: "Tech Lead",
     picture: leon,
-    linked: 'https://www.linkedin.com/in/leon-prouger-60646540/',
-    isLinkedIn: true
+    linked: "https://www.linkedin.com/in/leon-prouger-60646540/",
+    isLinkedIn: true,
   },
   {
-    name: 'Lior Agnin',
-    role: 'Fullstack & Moble Developer',
+    name: "Lior Agnin",
+    role: "Fullstack & Moble Developer",
     picture: lior,
-    linked: 'https://www.linkedin.com/in/lioragnin/',
-    isLinkedIn: true
+    linked: "https://www.linkedin.com/in/lioragnin/",
+    isLinkedIn: true,
   },
   {
     name: 'Mikhail Nekrasov',
@@ -62,60 +62,60 @@ const members = [
     name: 'Andy Pohl',
     role: 'Backend Developer',
     picture: andy,
-    linked: 'https://www.linkedin.com/in/andrew-pohl-4b52959b/',
-    isLinkedIn: true
+    linked: "https://www.linkedin.com/in/andrew-pohl-4b52959b/",
+    isLinkedIn: true,
   },
   {
-    name: 'Mulenga Bowa',
-    role: 'Fullstack Developer',
+    name: "Mulenga Bowa",
+    role: "Fullstack Developer",
     picture: mulenga,
-    isLinkedIn: false
+    isLinkedIn: false,
   },
   {
-    name: 'Rudolf Podkrivacky',
-    role: 'Front-End Developer',
+    name: "Rudolf Podkrivacky",
+    role: "Front-End Developer",
     picture: rudy,
     isLinkedIn: true,
-    linkedin: 'https://www.linkedin.com/in/rudolfpod/'
+    linkedin: "https://www.linkedin.com/in/rudolfpod/",
   },
   {
-    name: 'Mikhail Dubodel',
-    role: 'Social Media',
+    name: "Mikhail Dubodel",
+    role: "Social Media",
     picture: mikhail,
-    linked: 'https://www.linkedin.com/in/mikhaildubodel/',
-    isLinkedIn: true
+    linked: "https://www.linkedin.com/in/mikhaildubodel/",
+    isLinkedIn: true,
   },
   {
-    name: 'Ashish Ram',
-    role: 'Community Manager',
+    name: "Ashish Ram",
+    role: "Community Manager",
     picture: ashish,
-    linked: 'https://www.linkedin.com/in/ashish-ram/',
-    isLinkedIn: true
+    linked: "https://www.linkedin.com/in/ashish-ram/",
+    isLinkedIn: true,
   },
   {
-    name: 'Sahara Sittie',
-    role: 'Communications and design',
+    name: "Sahara Sittie",
+    role: "Communications and design",
     picture: sahara,
-    linked: 'https://www.linkedin.com/in/saharasittie/',
-    isLinkedIn: true
+    linked: "https://www.linkedin.com/in/saharasittie/",
+    isLinkedIn: true,
   },
   {
-    name: 'Daniil Gorbatenko',
-    role: 'Partnerships and Content',
+    name: "Daniil Gorbatenko",
+    role: "Partnerships and Content",
     picture: daniil,
-    linked: 'https://www.linkedin.com/in/daniil-gorbatenko-4a33133/',
-    isLinkedIn: true
-  }
-]
+    linked: "https://www.linkedin.com/in/daniil-gorbatenko-4a33133/",
+    isLinkedIn: true,
+  },
+];
 
 const TeamMember = ({ picture, name, role, linked, isLinkedIn }) => {
   return (
-    <div className='card cell medium-6 small-24'>
-      <div className='card__content'>
+    <div className="card cell medium-6 small-24">
+      <div className="card__content">
         <img src={picture} alt={name.toLowerCase()} />
-        <h2 className='name'>{name}</h2>
-        <div className='icons'>
-          <h3 className='role'>{role}</h3>
+        <h2 className="name">{name}</h2>
+        <div className="icons">
+          <h3 className="role">{role}</h3>
         </div>
         {
           isLinkedIn && (
@@ -126,8 +126,8 @@ const TeamMember = ({ picture, name, role, linked, isLinkedIn }) => {
         }
       </div>
     </div>
-  )
-}
+  );
+};
 
 const SectionThree = () => {
   return (
@@ -145,7 +145,7 @@ const SectionThree = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SectionThree
+export default SectionThree;

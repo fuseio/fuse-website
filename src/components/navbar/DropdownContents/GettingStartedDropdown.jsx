@@ -34,9 +34,9 @@ const items = [
   }
 ]
 
-function GettingStartedDropdown () {
+function GettingStartedDropdown() {
   return (
-    <div className='community_dropdown'>
+    <div className="community_dropdown">
       <div data-first-dropdown-section>
         <ul className='list grid-x align-middle align-justify'>
           {
@@ -80,7 +80,7 @@ function GettingStartedDropdown () {
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
-export default GettingStartedDropdown
+export default GettingStartedDropdown;

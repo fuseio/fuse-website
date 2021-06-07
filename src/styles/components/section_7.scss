@@ -1,9 +1,22 @@
 @include block(contact-us) {
-  padding: 2em 20px 6em;
+  padding: 2em 0px 6em;
   background-color: #f5f6fb;
 
   @include element(wrapper) {
     position: relative;
+    @include xy-grid-container();
+    padding-left: 0;
+    padding-right: 0;
+    max-width: unset;
+    margin-left: 80px;
+    margin-right: 80px;
+    @include breakpoint(large down) {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    @include breakpoint(medium down) {
+      padding: 2em 20px 6em;
+    }
   }
 
   @include element(newsletter) {
@@ -45,7 +58,7 @@
     @extend %text;
     width: 460px;
     max-width: 100%;
-    margin-bottom: 2.5em;
+    margin-bottom: 1.5em;
   }
 
   @include element(button) {

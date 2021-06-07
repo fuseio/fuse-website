@@ -9,25 +9,25 @@ import SelectLanguage from '../shared/select_language'
 import MobileMenu from './MobileMenu'
 import { FormattedMessage } from 'react-intl'
 
-function Header ({ history }) {
-  const [isOpen, setMenuOpen] = useState(false)
-  const hamburgerRef = useRef(null)
+function Header({ history }) {
+  const [isOpen, setMenuOpen] = useState(false);
+  const hamburgerRef = useRef(null);
 
-  const isWhite = !history.location.pathname.includes('about')
+  const isWhite = !history.location.pathname.includes("about");
 
   useOutsideClick(hamburgerRef, () => {
     if (isOpen) {
-      setMenuOpen(false)
+      setMenuOpen(false);
     }
-  })
+  });
 
-  const aboutPage = () => history.push('/about')
-  const homePage = () => history.push('/')
+  const aboutPage = () => history.push("/about");
+  const homePage = () => history.push("/");
   return (
-    <header className='header__wrapper'>
-      <div className='header'>
-        <div onClick={homePage} className='header__logo'>
-          <img alt='logo' src={isWhite ? fuseLogoWhite : fuseLogo} />
+    <header className="header__wrapper">
+      <div className="header">
+        <div onClick={homePage} className="header__logo">
+          <img alt="logo" src={isWhite ? fuseLogoWhite : fuseLogo} />
         </div>
         <MobileMenu />
         <div
@@ -38,23 +38,23 @@ function Header ({ history }) {
         >
           <div className='header__link__wrapper cell large-auto'>
             <AnimatedNavbar duration={300} />
-            <div className='nav__item' onClick={aboutPage}>
+            <div className="nav__item" onClick={aboutPage}>
               <a
-                rel='noreferrer noopener'
-                className={classNames('text', { 'text--white': isWhite })}
-                target='_blank'
+                rel="noreferrer noopener"
+                className={classNames("text", { "text--white": isWhite })}
+                target="_blank"
               >
                 <FormattedMessage defaultMessage='About' />
               </a>
             </div>
           </div>
-          <div className='grid-x align-middle  cell shrink'>
+          <div className="grid-x align-middle  cell shrink invisible">
             <SelectLanguage />
           </div>
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default withRouter(Header)
+export default withRouter(Header);
