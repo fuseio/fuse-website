@@ -21,13 +21,13 @@ const SectionOne = () => {
             </p>
           </div>
 
-          <div className='image'>
+          <div className="image">
             <img src={FuseTokenImage} />
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SectionOne
+export default SectionOne;

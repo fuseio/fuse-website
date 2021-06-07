@@ -20,7 +20,7 @@ const SectionThree = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SectionThree
+export default SectionThree;

@@ -52,8 +52,8 @@ function MyTable ({ columns, data, count }) {
     )
 
   return (
-    <div className='table__wrapper'>
-      <table {...getTableProps({ className: 'table' })}>
+    <div className="table__wrapper">
+      <table {...getTableProps({ className: "table" })}>
         <thead>
           {
             headerGroups.map((headerGroup, index) => (
@@ -71,7 +71,7 @@ function MyTable ({ columns, data, count }) {
         </tbody>
       </table>
     </div>
-  )
+  );
 }
 
-export default React.memo(MyTable)
+export default React.memo(MyTable);

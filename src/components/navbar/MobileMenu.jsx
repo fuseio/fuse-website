@@ -28,25 +28,25 @@ const menuItems = [
       {
         title: <FormattedMessage defaultMessage='Studio' />,
         icon: Studio,
-        url: 'https://studio.fuse.io'
+        url: "https://studio.fuse.io",
       },
       {
         title: <FormattedMessage defaultMessage='Staking' />,
         icon: Staking,
-        url: 'https://staking.fuse.io'
+        url: "https://staking.fuse.io",
       },
       {
         title: <FormattedMessage defaultMessage='Swap' />,
         icon: FuseSwap,
-        url: 'https://fuseswap.com'
+        url: "https://fuseswap.com",
       },
       {
         title: <FormattedMessage defaultMessage='Fuse Cash' />,
         icon: Fusecash,
-        url: 'https://fuse.cash'
+        url: "https://fuse.cash",
         // disabled: true
-      }
-    ]
+      },
+    ],
   },
   {
     title: <FormattedMessage defaultMessage='Under the hood' />,
@@ -54,17 +54,17 @@ const menuItems = [
       {
         title: <FormattedMessage defaultMessage='Network' />,
         icon: Network,
-        route: './network'
+        route: "./network",
       },
       {
         title: <FormattedMessage defaultMessage='Explorer' />,
         icon: Explorer,
-        url: 'https://explorer.fuse.io'
+        url: "https://explorer.fuse.io",
       },
       {
         title: <FormattedMessage defaultMessage='Documentation' />,
         icon: Docs,
-        url: 'https://docs.fuse.io'
+        url: "https://docs.fuse.io",
       },
       {
         title: <FormattedMessage defaultMessage='Fuse Token' />,
@@ -73,11 +73,11 @@ const menuItems = [
         route: './token'
       },
       {
-        title: <FormattedMessage defaultMessage='Service status' />,
+        title: <FormattedMessage defaultMessage='Network status' />,
         icon: Status,
-        url: 'https://status.fuse.io'
-      }
-    ]
+        url: "https://status.fuse.io",
+      },
+    ],
   },
   {
     title: <FormattedMessage defaultMessage='Community' />,
@@ -85,36 +85,36 @@ const menuItems = [
       {
         title: <FormattedMessage defaultMessage='Github' />,
         icon: Github,
-        url: 'https://github.com/fuseio'
+        url: "https://github.com/fuseio",
       },
       {
         title: <FormattedMessage defaultMessage='Twitter' />,
         icon: Twitter,
-        url: 'https://twitter.com/fuse_network'
+        url: "https://twitter.com/fuse_network",
       },
       {
         title: <FormattedMessage defaultMessage='Discord' />,
         icon: Discord,
-        url: 'https://discordapp.com/invite/jpPMeSZ'
+        url: "https://discordapp.com/invite/jpPMeSZ",
       },
       {
         title: <FormattedMessage defaultMessage='Medium' />,
         icon: Medium,
-        url: 'https://medium.com/fusenet'
+        url: "https://medium.com/fusenet",
       },
       {
         title: <FormattedMessage defaultMessage='Telegram' />,
         icon: Telegram,
-        url: 'https://t.me/fuseio'
+        url: "https://t.me/fuseio",
       },
       {
         title: <FormattedMessage defaultMessage='Fuse forum' />,
         icon: Forum,
-        url: 'https://forum.fuse.io'
-      }
-    ]
-  }
-]
+        url: "https://forum.fuse.io",
+      },
+    ],
+  },
+];
 
 const Item = withRouter(({ title, icon, url, route, history }) => {
   return route
@@ -134,26 +134,26 @@ const Item = withRouter(({ title, icon, url, route, history }) => {
 
 function List ({ title, items }) {
   return (
-    <div className='list'>
-      <div className='list__title'>{title}</div>
-      {
-        items.map((item, index) => <Item {...item} key={index} />)
-      }
+    <div className="list">
+      <div className="list__title">{title}</div>
+      {items.map((item, index) => (
+        <Item {...item} key={index} />
+      ))}
     </div>
-  )
+  );
 }
 
 function MobileMenu ({ history }) {
   const [isOpen, setMenuOpen] = useState(false)
   const hamburgerRef = useRef(null)
 
-  const isWhite = !history.location.pathname.includes('about')
+  const isWhite = !history.location.pathname.includes("about");
 
   useOutsideClick(hamburgerRef, () => {
     if (isOpen) {
-      setMenuOpen(false)
+      setMenuOpen(false);
     }
-  })
+  });
 
   return (
     <>
@@ -194,12 +194,11 @@ function MobileMenu ({ history }) {
                   </span>
                 </a>
               </div> */}
-            </div>
           </div>
-        )
-      }
+        </div>
+      )}
     </>
-  )
+  );
 }
 
-export default withRouter(MobileMenu)
+export default withRouter(MobileMenu);

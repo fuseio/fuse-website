@@ -6,6 +6,20 @@
 	}
 	@include element(container) {
 		@include xy-grid-container();
+		max-width: unset;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 80px;
+		margin-right: 80px;
+		@include breakpoint(large down) {
+		  margin-left: 0px;
+		  margin-right: 0px;
+		}
+		@include breakpoint(medium down) {
+			padding-right: 0.9375rem;
+			padding-left: 0.9375rem;
+		}
+		
 	}
 
 	@include element(wrapper) {
@@ -72,6 +86,7 @@
 		}
 	}
 	@include element(read-more) {
+		min-width: 170px;
 		font-size: 1.25em;
 		font-weight: 500;
 		color: $color-light-dark;
@@ -129,7 +144,7 @@
 			padding-bottom: 56.2%;
 
 			> img {
-				object-fit: cover;
+				object-fit: fill;
 				position: absolute;
 				width: 100%;
 				height: 100%;

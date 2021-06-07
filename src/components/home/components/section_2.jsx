@@ -43,7 +43,7 @@ const items = [
           }}
         />
       </div>
-    )
+    ),
   },
   {
     icon: PaymentsNetworkSmall,
@@ -60,23 +60,20 @@ const items = [
           }}
         />
       </div>
-    )
-  }
-]
+    ),
+  },
+];
 
 const bannerItems = [
   {
-    icon: Transactions,
     value: '10,392,350',
     text: <FormattedMessage defaultMessage='Transactions' />
   },
   {
-    icon: Communities,
     value: '695',
     text: <FormattedMessage defaultMessage='Communities' />
   },
   {
-    icon: Wallet,
     value: '358,909',
     text: <FormattedMessage defaultMessage='Wallets' />
   }
@@ -84,21 +81,20 @@ const bannerItems = [
 
 const Item = ({ title, image, Text, icon }) => {
   return (
-    <div className='item'>
-      <img className='item__image' src={image} />
-      <div className='item__title grid-x align-middle'>
+    <div className="item">
+      <img className="item__image" src={image} />
+      <div className="item__title grid-x align-middle">
         <img src={icon} />
         <h4>{title}</h4>
       </div>
       <Text />
     </div>
-  )
-}
+  );
+};
 
 const BannerItem = ({ icon, value, text }) => {
   return (
     <div className='item grid-x align-middle'>
-      <img src={icon} />
       &nbsp;&nbsp;
       <div className='title'>
         <span>{value}</span>
@@ -106,8 +102,8 @@ const BannerItem = ({ icon, value, text }) => {
         {text}
       </div>
     </div>
-  )
-}
+  );
+};
 
 const Banner = () => {
   return (
@@ -120,7 +116,7 @@ const Banner = () => {
             ))
           }
           <div className='item grid-x align-middle'>
-            <div className='title title--arrow'>
+            <div className='title'>
               <a
                 rel='noreferrer noopener'
                 target='_blank'
@@ -133,8 +129,8 @@ const Banner = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 const SectionTwo = () => {
   return (
@@ -153,7 +149,7 @@ const SectionTwo = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default SectionTwo
+export default SectionTwo;

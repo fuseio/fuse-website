@@ -6,6 +6,7 @@ import GitHub from '@/assets/img/social/github.svg'
 import Telegram from '@/assets/img/social/telegram.svg'
 import Twitter from '@/assets/img/social/twitter.svg'
 
+
 const socialLinks = [
   {
     url: 'https://medium.com/fusenet',
@@ -29,22 +30,28 @@ const socialLinks = [
   }
 ]
 
+
 function Icons () {
   return (
-    <div className='footer__icons grid-x align-justify cell small-24 medium-6'>
-      {
-        socialLinks.map(({ icon, url }, index) => (
-          <a
-            key={index}
-            rel='noreferrer noopener'
-            className='footer__icon cell shrink'
-            target='_blank'
-            href={url}
-          >
-            <img src={icon} />
-          </a>
-        ))
-      }
+    <div className='footer__icons grid-y cell small-24 medium-6'>
+      <div>
+        <div className='footer__icons__title'>Connect</div>
+        <div className='footer__icons__images grid-x cell'>
+          {
+            socialLinks.map(({ icon, url }, index) => (
+              <a
+                key={index}
+                rel='noreferrer noopener'
+                className='footer__icon cell shrink'
+                target='_blank'
+                href={url}
+              >
+                <img src={icon} />
+              </a>
+            ))
+          }
+        </div>
+      </div>
     </div>
   )
 }
