@@ -7,19 +7,19 @@ const items = [
     items: [
       {
         title: 'Fuse Studio',
-        url: 'https://fuseswap.com/'
+        url: 'https://studio.fuse.io/'
       },
       {
         title: 'Fuse Swap',
-        url: 'http://staking.fuse.io/'
+        url: 'https://fuseswap.com/'      
       },
       {
         title: 'Fuse Staking',
-        url: 'http://studio.fuse.io/'
+        url: 'http://staking.fuse.io/'    
       }, 
       {
         title: 'Fuse Cash',
-        url: 'https://fuseswap.com'
+        url: 'https://fuse.cash/'
       }
     ]
   },
@@ -28,23 +28,23 @@ const items = [
     items: [
       {
         title: 'Fuse Network',
-        url: 'http://docs.fuse.io/'
+        route: './network'
       },
       {
         title: 'Fuse Token',
-        url: 'http://explorer.fuse.io/'
+        route: './token'
       },
       {
         title: 'Explorer',
-        url: 'https://docs.fuse.io/become-a-validator/getting-started'
+        url: 'https://explorer.fuse.io/'
       },
       {
         title: 'Documentation',
-        url: 'https://docs.fuse.io/become-a-validator/getting-started'
+        url: 'https://docs.fuse.io/'
       },
       {
         title: 'Service status',
-        url: 'https://docs.fuse.io/become-a-validator/getting-started'
+        url: 'https://status.fuse.io/'
       }
     ]
   },
@@ -57,7 +57,7 @@ const items = [
       },
       {
         title: 'Privacy policy',
-        route: './network'
+        url: 'https://fuse.cash/privacy'
       }
     ]
   }

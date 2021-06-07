@@ -1,15 +1,6 @@
 @include block(fuse_ecosysyem) {
   @include xy-grid-container();
-  max-width: unset;
-  margin-left: 80px;
-  margin-right: 80px;
-  @include breakpoint(large down) {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  @include breakpoint(medium down) {
-    padding: 20px 20px 3em;
-  }
+  
   padding: 5em 0;
   position: relative;
 
@@ -23,9 +14,9 @@
     }
   }
 
-  // @include breakpoint(medium down) {
-  //   padding: 20px 20px 3em;
-  // }
+  @include breakpoint(medium down) {
+    padding: 20px 20px 3em;
+  }
 
   @include element(items) {
     gap: 64px;

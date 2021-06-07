@@ -5,13 +5,7 @@
  
   @include element(container) {
     @include xy-grid-container();
-    max-width: unset;
-    margin-left: 80px;
-    margin-right: 80px;
-    @include breakpoint(large down) {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
+  
     padding: 12em 0 6em;
    
     @include breakpoint(medium down) {
@@ -78,7 +72,7 @@
 
   @include block(texts) {
     width: fit-content;
-    // margin-left: auto;
+    
   }
 
   @include element(image) {

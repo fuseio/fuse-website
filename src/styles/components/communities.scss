@@ -63,18 +63,11 @@
 
   @include element(content) {
     position: relative;
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: 80px;
-    margin-right: 80px;
-    @include breakpoint(large down) {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
+  
 
-    // @include breakpoint(xlarge down) {
-    //   transform: scale(0.9);
-    // }
+    @include breakpoint(xlarge down) {
+      transform: scale(0.9);
+    }
 
     @include breakpoint(large up) {
     }
@@ -87,8 +80,7 @@
 
     @include breakpoint(medium down) {
       // width: 85%;
-      padding-right: .9375rem;
-      padding-left: .9375rem;
+     
       max-width: 90%;
       margin: auto;
       transform: unset;

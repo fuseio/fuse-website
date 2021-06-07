@@ -5,21 +5,7 @@
 		min-height: 40vh;
 	}
 	@include element(container) {
-		@include xy-grid-container();
-		max-width: unset;
-		padding-left: 0;
-		padding-right: 0;
-		margin-left: 80px;
-		margin-right: 80px;
-		@include breakpoint(large down) {
-		  margin-left: 0px;
-		  margin-right: 0px;
-		}
-		@include breakpoint(medium down) {
-			padding-right: 0.9375rem;
-			padding-left: 0.9375rem;
-		}
-		
+		@include xy-grid-container();	
 	}
 
 	@include element(wrapper) {

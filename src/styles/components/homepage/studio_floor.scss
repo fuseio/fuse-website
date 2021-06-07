@@ -1,12 +1,6 @@
 @include block(studio_floor) {
   @include xy-grid-container();
-  max-width: unset;
-  margin-left: 80px;
-  margin-right: 80px;
-  @include breakpoint(large down) {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
+ 
   padding: 5em 0;
 
   @include element(container) {

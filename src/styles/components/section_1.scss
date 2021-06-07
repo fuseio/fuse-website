@@ -45,15 +45,8 @@
   @include element(wrapper) {
     padding: 0em 0;
     @include xy-grid-container();
-    padding-left: 0;
-    padding-right: 0;
-    max-width: unset;
-    margin-left: 80px;
-    margin-right: 80px;
-    @include breakpoint(large down) {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
+  
+ 
    
     // @include breakpoint(medium up) {
     //   @include xy-grid(vertical);

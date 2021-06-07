@@ -250,7 +250,7 @@
 	@include breakpoint(large down) {
 		gap: 2em;
 		@include xy-grid();
-		@include flex-align(end, null);
+		@include flex-align(flex-start, null);
 	}
 	@include breakpoint(medium down) {
 		order: 3;
