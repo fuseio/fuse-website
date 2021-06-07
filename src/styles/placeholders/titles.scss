@@ -55,4 +55,8 @@
   font-style: normal;
   line-height: 1.44;
   letter-spacing: normal;
+
+  @include breakpoint(medium down) {
+    font-size: 0.9em;
+  }
 }

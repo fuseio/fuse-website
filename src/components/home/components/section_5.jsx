@@ -175,7 +175,7 @@ const SectionFive = () => {
                         <FormattedMessage
                           defaultMessage='Learn more about {appName}'
                           values={{
-                            appName: 'FuseDollar'
+                            appName: 'fuse.cash'
                           }}
                         />
                       </a>

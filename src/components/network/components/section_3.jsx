@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl'
 import { useCountUp } from 'react-countup'
 import VisibilitySensor from 'react-visibility-sensor'
 import useFetch from 'use-http'
-
+import arow from '@/assets/images/arow.svg'
 const formatNumber = (num) => String(num).replace(/(.)(?=(\d{3})+$)/g, '$1,')
 
 const SectionThree = () => {
@@ -53,7 +53,7 @@ const SectionThree = () => {
                 >
                   <FormattedMessage defaultMessage='Click here for the explorer' />
                 </a>
-                <img src='/images/arow.svg' alt='network_arrow' />
+                <img src={arow} alt='network_arrow' />
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ const SectionThree = () => {
                 >
                   <FormattedMessage defaultMessage='Using the Fuse Studio' />
                 </a>
-                <img src='./images/arow.svg' alt='network_arrow' />
+                <img src={arow} alt='network_arrow' />
               </div>
             </div>
           </div>

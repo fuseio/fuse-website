@@ -4,7 +4,7 @@ import StudioImage from '@/assets/img/studio_img.png'
 import FuseSwapImage from '@/assets/img/fuseswap_image.png'
 import WalletIcon from '@/assets/img/fuse_wallet_icon.png'
 import FuseswpaIcon from '@/assets/img/fuseswap_icon.png'
-import Gif from '@/assets/images/send_money.gif'
+import Gif from '@/assets/images/send-money.png'
 import { FormattedMessage } from 'react-intl'
 
 const Button = ({ text = <FormattedMessage defaultMessage='Launch Now' />, link }) => {
@@ -42,11 +42,9 @@ const StudioFloor = () => {
             </h1>
             <p className='studio_floor__text'>
               <FormattedMessage
-                defaultMessage='Zero Coding Launch Platform for Entrepreneurs {newLine} and Impact
+                defaultMessage='Zero Coding Launch Platform for Entrepreneurs and Impact
               Leaders.'
-                values={{
-                  newLine: <br />
-                }}
+               
               />
             </p>
 
@@ -78,7 +76,10 @@ const FuseWalletFloor = () => {
   return (
     <section className='wallet_floor'>
       <div className='wallet_floor__container grid-x align-justify align-self-middle'>
-        <div className='cell small-24 medium-12'>
+      <div className="wallet_floor__image cell small-24 medium-12">
+          <img src={Gif} alt='iphone'/>
+        </div>
+        <div className='wallet_floor__info cell small-24 medium-12'>
           <div className='wallet_floor__sub-title grid-x align-middle'>
             <img src={WalletIcon} />
             &nbsp;
@@ -96,11 +97,9 @@ const FuseWalletFloor = () => {
           </h1>
           <p className='wallet_floor__text'>
             <FormattedMessage
-              defaultMessage='Onboard your community members with a {newLine} personalized wallet
+              defaultMessage='Onboard your community members with a personalized wallet
             experience.'
-              values={{
-                newLine: <br />
-              }}
+             
             />
           </p>
           <ul className='props'>
@@ -114,11 +113,8 @@ const FuseWalletFloor = () => {
               <FormattedMessage defaultMessage='Send and receive money instantly.' />
             </li>
           </ul>
-          <div className='wallet_floor__links hide-for-small'>
-            <div className='title'>
-              <FormattedMessage defaultMessage='Download now:' />
-            </div>
-            <div className='items'>
+          <div className='wallet_floor__links'>
+            <div className="items">
               <a
                 rel='noreferrer noopener'
                 target='_blank'
@@ -145,9 +141,7 @@ const FuseWalletFloor = () => {
             </div>
           </div>
         </div>
-        <div className='wallet_floor__image cell small-24 medium-12'>
-          <img src={Gif} />
-        </div>
+        
       </div>
     </section>
   )
@@ -157,10 +151,7 @@ const FuseSwapFloor = () => {
   return (
     <section className='fuseswap_floor'>
       <div className='fuseswap_floor__container'>
-        <div className='fuseswap_floor__container grid-x align-justify align-self-middle'>
-          <div className='fuseswap_floor__image cell small-24 medium-12'>
-            <img src={FuseSwapImage} />
-          </div>
+        <div className='fuseswap_floor__container__inner margin-0 grid-x align-justify align-self-middle'>
           <div className='cell small-24 medium-12'>
             <div className='grid-y texts'>
               <div className='fuseswap_floor__sub-title grid-x align-middle'>
@@ -180,10 +171,8 @@ const FuseSwapFloor = () => {
               </h1>
               <p className='fuseswap_floor__text'>
                 <FormattedMessage
-                  defaultMessage='The DeFi Hub for {newLine} the Fuse ecosystem'
-                  values={{
-                    newLine: <br />
-                  }}
+                  defaultMessage='The DeFi Hub for the Fuse ecosystem'
+                  
                 />
               </p>
               <ul className='props'>
@@ -205,6 +194,9 @@ const FuseSwapFloor = () => {
               </div>
             </div>
           </div>
+          <div className='fuseswap_floor__image cell small-24 medium-12'>
+            <img src={FuseSwapImage} />
+          </div>
         </div>
       </div>
     </section>
@@ -213,11 +205,13 @@ const FuseSwapFloor = () => {
 
 const SectionThree = () => {
   return (
+    <>
     <div className='blue'>
       <StudioFloor />
+      </div>
       <FuseWalletFloor />
       <FuseSwapFloor />
-    </div>
+    </>
   )
 }
 

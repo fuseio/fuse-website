@@ -28,28 +28,30 @@
 }
 
 @include block(main_button) {
-  padding: 0.5em 1em;
-  font-size: 1.125em;
-  font-weight: 500;
+  padding: 1.125em 1.75em;
+  font-size: 1em;
+  font-weight: 400;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: 0.01px;
   text-align: center;
-  color: #292b2c;
+  color: #052235;
   margin: 1em 0;
-  border-radius: 24.8px;
-  background-image: linear-gradient(102deg, #b1ffbf, #fff16d 84%);
+  border-radius: 100px;
+  background-image: linear-gradient(124.98deg, #B3FFBB 6.71%, #FFFB00 90%);
+  
 
   &::after {
     background-image: url(images/arrow.png);
     background-repeat: no-repeat;
     background-position: left center;
-    margin-left: 0.2em;
-    width: 18px;
-    height: 11px;
+    margin-left: 0.5em;
+    width: 20px;
+    height: 14px;
     display: inline-block;
     padding-left: 8px;
+    vertical-align: -20%;
     content: ""; // arrow right unicode
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: transform 0.3s ease-out;

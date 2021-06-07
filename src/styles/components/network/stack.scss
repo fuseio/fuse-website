@@ -120,6 +120,11 @@
     text-align: center;
     color: #868686;
     margin-bottom: 3em;
+    max-width: 409px;
+
+    @include breakpoint(medium down) {
+      font-size: 1em;
+    }
   }
 
   @include block(form) {

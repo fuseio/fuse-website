@@ -10,10 +10,8 @@ const SectionFive = () => {
       </h1>
       <div className='text'>
         <FormattedMessage
-          defaultMessage="Don't miss the latest updates on Fuse and the {newLine} future of payments."
-          values={{
-            newLine: <br />
-          }}
+          defaultMessage="Don't miss the latest updates on Fuse and the future of payments."
+         
         />
       </div>
       <NewsletterForm />

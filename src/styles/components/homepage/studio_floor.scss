@@ -1,18 +1,26 @@
 @include block(studio_floor) {
   @include xy-grid-container();
+  max-width: unset;
+  margin-left: 80px;
+  margin-right: 80px;
+  @include breakpoint(large down) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   padding: 5em 0;
 
   @include element(container) {
   }
-
+  
   @include breakpoint(medium down) {
     padding: 20px 20px 3em;
   }
 
   @include element(sub-title) {
     > img {
-      width: 29px;
-      height: 28px;
+      width: 66.4px;
+      height: 64px;
+      margin-right: 16px;
     }
 
     > span {
@@ -28,10 +36,11 @@
   @include element(text) {
     @extend %text;
     padding: 1.5em 0;
+    max-width: 440px;
   }
 
   @include block(launch) {
-    padding-top: 2em;
+    padding-top: 3.5em;
   }
 
   @include block(props) {

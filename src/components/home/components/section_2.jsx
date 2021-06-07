@@ -65,18 +65,15 @@ const items = [
 ]
 
 const bannerItems = [
-  {
-    icon: Transactions,
+  {   
     value: '10,392,350',
     text: <FormattedMessage defaultMessage='Transactions' />
   },
-  {
-    icon: Communities,
+  {   
     value: '695',
     text: <FormattedMessage defaultMessage='Communities' />
   },
   {
-    icon: Wallet,
     value: '358,909',
     text: <FormattedMessage defaultMessage='Wallets' />
   }
@@ -95,10 +92,10 @@ const Item = ({ title, image, Text, icon }) => {
   )
 }
 
-const BannerItem = ({ icon, value, text }) => {
+const BannerItem = ({ value, text }) => {
   return (
     <div className='item grid-x align-middle'>
-      <img src={icon} />
+      
       &nbsp;&nbsp;
       <div className='title'>
         <span>{value}</span>
@@ -120,7 +117,7 @@ const Banner = () => {
             ))
           }
           <div className='item grid-x align-middle'>
-            <div className='title title--arrow'>
+            <div className='title'>
               <a
                 rel='noreferrer noopener'
                 target='_blank'
