@@ -73,7 +73,7 @@ const menuItems = [
         route: './token'
       },
       {
-        title: <FormattedMessage defaultMessage='Service status' />,
+        title: <FormattedMessage defaultMessage='Network status' />,
         icon: Status,
         url: 'https://status.fuse.io'
       }
