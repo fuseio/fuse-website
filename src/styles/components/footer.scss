@@ -3,12 +3,8 @@
 	width: 100%;
 
 	@include element(wrapper) {
-		padding: 4em 2em 10em;
-		background: linear-gradient(180deg, #002740 0%, #001929 100%);
-
-		// @include modifier(dark) {
-		// 	background-color: #001929;
-		// }
+		padding: 5em 2em 2em;
+		background: #071927;
 	}
 
 	@include breakpoint(medium down) {
@@ -46,13 +42,39 @@
 	}
 
 	@include element(icons) {
+
+		align-items: flex-end;
+
 		@include breakpoint(medium down) {
-			margin: 2em 0;
+			align-items: flex-start;
+		}
+
+		@include element(title) {
+			color: #8DA9BB;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 24.8px;
+			margin-bottom: 1.3333em;
+		}
+
+		@include element(images) {
+			gap: 16px;
+			@include breakpoint(medium down) {
+				margin: 2em 0;
+			}
+
+			img {
+				width: 48px;
+				height: 48px;
+			}
 		}
 	}
 
 	@include element(icon) {
 		cursor: pointer;
+		&:hover {
+			filter: brightness(0) invert(1);
+		}
 	}
 
 	@include block(image) {
@@ -65,41 +87,6 @@
 		@include breakpoint(small only) {
 			height: 35px;
 			width: 35px;
-		}
-	}
-
-	@include block(twitter) {
-		background-image: url(/images/twitter_white.svg);
-		&:hover {
-			background-image: url(/images/twitter_footer_hover.svg);
-		}
-	}
-
-	@include block(github) {
-		background-image: url(/images/github_white.svg);
-		&:hover {
-			background-image: url(/images/git_footer_hover.svg);
-		}
-	}
-
-	@include block(medium) {
-		background-image: url(/images/medium_white.svg);
-		&:hover {
-			background-image: url(/images/med_footer_hover.svg);
-		}
-	}
-
-	@include block(discord) {
-		background-image: url(/images/discord.svg);
-		&:hover {
-			background-image: url(/images/discord_footer_hover.svg);
-		}
-	}
-
-	@include block(telegram) {
-		background-image: url(/images/tele.svg);
-		&:hover {
-			background-image: url(/images/telegram_footer_hover.svg);
 		}
 	}
 
@@ -167,6 +154,7 @@
 		@include element(wrapper) {
 			display: flex;
 			align-items: center;
+			justify-content: flex-start;
 
 			> span {
 				margin-left: 10px;
@@ -177,8 +165,6 @@
 		}
 	}
 
-	@include element(item) {
-	}
 
 	@include element(sign) {
 		position: relative;
@@ -242,17 +228,28 @@
 		color: white;
 		margin: 2em 0 1em;
 	}
+
+	@include element(copy) {
+		color: #8DA9BB;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 16px;
+		margin-top: 2.75em;
+	}
 }
 
 @include block(links) {
 	@include breakpoint(medium up) {
 		@include xy-grid();
-		@include flex-align(spaced, middle);
+		@include flex-align(spaced, null);
+	}
+	@include breakpoint(large down) {
+		gap: 2em;
+		@include xy-grid();
+		@include flex-align(left, null);
 	}
 	@include breakpoint(medium down) {
 		order: 3;
-		@include xy-grid();
-		@include flex-align(null, middle);
 	}
 	@include block(list) {
 		@include element(container) {
@@ -261,19 +258,20 @@
 		@include element(title) {
 			font-size: 1.125em;
 			line-height: 25px;
-			font-weight: 500;
+			font-weight: 400;
 			color: #8da9bb;
-			margin-bottom: 1.5em;
+			margin-bottom: 1.3333em;
 		}
 
 		@include element(item) {
 			font-size: 15px;
 			line-height: 18px;
 			color: #ffffff;
-			font-weight: 500;
+			font-weight: 400;
 			&:hover {
-				text-decoration: underline;
 				cursor: pointer;
+				color: rgba(255, 255, 255, 0.6);
+
 			}
 
 			&:not(:last-child) {

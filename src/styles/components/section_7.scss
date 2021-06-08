@@ -1,9 +1,10 @@
 @include block(contact-us) {
-  padding: 2em 20px 6em;
-  background: linear-gradient(180deg, #fcfcfc 0%, #f6fbff 100%);
+  padding: 2em 0px 6em;
+  background-color: #f5f6fb;
 
   @include element(wrapper) {
     position: relative;
+    @include xy-grid-container();
   }
 
   @include element(newsletter) {
@@ -30,8 +31,7 @@
   }
 
   @include element(title) {
-    @extend %main-title;
-    text-align: center;
+    @extend %title;
     margin: 0 0 2em;
   }
 
@@ -43,10 +43,10 @@
   }
 
   @include element(text) {
-    @extend %main-text;
+    @extend %text;
     width: 460px;
     max-width: 100%;
-    margin-bottom: 2.5em;
+    margin-bottom: 1.5em;
   }
 
   @include element(button) {

@@ -1,0 +1,195 @@
+@include block(section_2) {
+  @include xy-grid-container();
+
+  padding: 5em 0px 8em;
+  @include element(title) {
+    @extend %title;
+    padding: 2em 0;
+  }
+
+  @include breakpoint(medium down) {
+    padding: 20px 20px 3em;
+  }
+
+  @include element(items) {
+    @include breakpoint(medium up) {
+      @include xy-grid();
+      @include flex-align(justify, middle);
+    }
+
+    @include breakpoint(medium down) {
+      @include xy-grid(vertical, false);
+      @include flex-align(justify, middle);
+    }
+
+    @include block(item) {
+      @include breakpoint(medium up) {
+        @include xy-cell(7, null, 0);
+      }
+
+      @include breakpoint(medium down) {
+        @include xy-cell(24, null, 0);
+        @include xy-grid(vertical, false);
+
+        &:not(:last-child) {
+          margin-bottom: 5em;
+        }
+      }
+      @include element(image) {
+        width: 216px;
+        height: 216px;
+        margin-bottom: 2em;
+
+        @include breakpoint(medium down) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      @include element(text) {
+        @extend %text;
+
+        > span {
+          font-weight: 500;
+          color: $color-black;
+        }
+      }
+
+      @include element(title) {
+        > img {
+          width: 22px;
+          height: 45px;
+        }
+
+        > h4 {
+          @extend %secondary-title;
+          margin-left: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+@include block(info_banner) {
+  > div {
+    position: relative;
+  }
+  @include breakpoint(medium up) {
+    @include xy-grid();
+    @include flex-align(null, middle);
+  }
+  @include breakpoint(medium down) {
+    @include xy-grid(vertical);
+    @include flex-align(justify, middle);
+  }
+
+  @include element(container) {
+    @include xy-grid-container();
+    width: 100%;
+  }
+  @include element(wrapper) {
+    background-image: $color-fuse_gradient;
+    @include xy-grid();
+    @include flex-align(justify, middle);
+
+    @include breakpoint(large up) {
+      height: 45px;
+    }
+
+    @include breakpoint(medium down) {
+      padding: 2em 0;
+    }
+  }
+
+  @include breakpoint(medium up) {
+    @include xy-grid();
+    @include flex-align(center, middle);
+  }
+
+  @include breakpoint(medium down) {
+    @include xy-cell(24, null, 0);
+    @include xy-grid(vertical);
+    @include flex-align(center, middle);
+  }
+  @include block(item) {
+    @include breakpoint(medium up) {
+      @include xy-grid();
+      @include flex-align(center, middle);
+      @include xy-cell(8, null, 0);
+      &:not(:first-child) {
+        border-left: 1px solid $color-dark;
+      }
+    }
+
+    @include breakpoint(medium down) {
+      &:not(:last-child) {
+        margin-bottom: 2em;
+        &:after {
+          content: "";
+          width: 26px;
+          height: 1.5px;
+          background: $color-dark;
+          position: absolute;
+          bottom: -1em;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    @include breakpoint(large up) {
+      @include xy-grid();
+      @include flex-align(center, middle);
+      @include xy-cell(6, null, 0);
+      &:not(:first-child) {
+        border-left: 1px solid $color-dark;
+      }
+    }
+    > img {
+      width: 15px;
+      height: 15px;
+    }
+
+    @include block(title) {
+      font-size: 1.231em;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.01px;
+
+      @include modifier(arrow) {
+        &::after {
+          background-image: url(images/arrow.png);
+          background-repeat: no-repeat;
+          background-position: left center;
+          margin-left: 0.2em;
+          width: 18px;
+          height: 11px;
+          display: inline-block;
+          padding-left: 8px;
+          content: "";
+          -webkit-transition: all 0.3s ease-out;
+          -moz-transition: transform 0.3s ease-out;
+          -ms-transition: transform 0.3s ease-out;
+          -o-transition: transform 0.3s ease-out;
+          transition: transform 0.3s ease-out;
+        }
+
+        &:hover {
+          &::after {
+            -webkit-transform: translateX(4px);
+            -moz-transform: translateX(4px);
+            -ms-transform: translateX(4px);
+            -o-transform: translateX(4px);
+            transform: translateX(4px);
+          }
+        }
+      }
+
+      > span {
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -3,6 +3,10 @@
     position: relative;
     @include xy-grid(horizontal, false);
 
+    @include breakpoint(medium down) {
+      @include flex-align(justify, middle);
+    }
+
     @include block(title) {
       position: absolute;
       top: -1.5em;
@@ -14,17 +18,17 @@
     }
 
     @include element(input) {
-      max-width: 299px;
+      max-width: 256px;
       height: 54px;
       border-radius: 10px;
       border: solid 1px rgba(151, 151, 151, 0.35);
       background-color: #ffffff;
       color: #052235;
-      padding: 10px;
+      padding: 1.1875em 0.625em;
       width: 100%;
 
-      @include breakpoint(small only) {
-        width: 100%;
+      @include breakpoint(medium down) {
+        width: 80%;
       }
 
       &:focus {
@@ -38,21 +42,29 @@
     }
 
     @include element(button) {
-      padding: 18px 26px;
-      max-width: 105px;
-      margin-left: 1em;
-      border-radius: 10px;
       font-weight: 500;
-      background: $color-fuse_gradient;
-
+      background: linear-gradient(124.98deg, #B3FFBB 6.71%, #FFFB00 90%);
+      width: 97px;
+      height: 54px;
+      border-radius: 100px;
+      margin-left: 1em;
+      
       @include breakpoint(small only) {
-        margin-top: 1em;
+        margin-top: 0;
         margin-left: 0;
       }
 
       &:hover {
-        background: #fae83e;
-        cursor: pointer;
+        background-image: unset;
+        background-color: #f8ff00;
+
+        &::after {
+          -webkit-transform: translateX(4px);
+          -moz-transform: translateX(4px);
+          -ms-transform: translateX(4px);
+          -o-transform: translateX(4px);
+          transform: translateX(4px);
+        }
       }
 
       &:disabled {
@@ -62,7 +74,6 @@
     }
 
     @include element(mobile-error) {
-      margin-top: 1em;
       color: red;
       display: none;
 

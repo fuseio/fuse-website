@@ -13,10 +13,12 @@ function Footer () {
               <img alt='logo' src={FooterLogo} />
             </a>
           </div>
-          <span className='footer__copyright'>© 2021 Fuse</span>
         </div>
         <Links />
         <Icons />
+      </div>
+      <div className='footer__copy'>
+      © 2021 Fuse. All Rights Reserved.
       </div>
     </footer>
   )

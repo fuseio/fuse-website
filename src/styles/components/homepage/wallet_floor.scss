@@ -1,0 +1,108 @@
+@include block(wallet_floor) {
+  @include xy-grid-container();
+ 
+  padding: 5em 0 0;
+
+  @include element(info) {
+
+  }
+
+  @include breakpoint(medium down) {
+    padding: 20px;
+  }
+
+  @include element(sub-title) {
+    > img {
+      width: 64px;
+      height: 64px;
+      margin-right: 16px;
+    }
+
+    > span {
+      @extend %subtitle;
+    }
+    padding: 2em 0;
+  }
+
+  @include element(title) {
+    @extend %title;
+
+  }
+
+  @include element(text) {
+    @extend %text;
+    padding: 1.5em 0;
+    max-width: 390px;
+
+  }
+
+  @include element(links) {
+    margin-top: 3em;
+
+    @include block(title) {
+      @extend %text;
+      font-weight: bold;
+      padding: 2em 0 1em;
+    }
+    @include block(items) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      gap: 15px;
+      > a {
+        max-width: 200px
+        }
+      @include breakpoint(medium up) {
+        @include xy-grid();
+
+        > a {
+          @include xy-cell(6, null, 0);
+          &:not(:last-child) {
+            margin-right: 1em;
+          }
+        }
+      }
+    }
+  }
+
+  @include block(props) {
+    li {
+      margin: 0;
+      padding: 8px 0px 8px 25px;
+      list-style: none;
+      background-image: url(images/bullet.png);
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 15px;
+      @extend %text;
+    }
+  }
+
+  @include element(image) {
+    position: relative;
+    @include breakpoint(medium down) {
+      @include xy-grid();
+      @include flex-align(center, middle);
+      margin-top: 1em;
+    }
+    > img {
+      height: 713px;
+      @include breakpoint(medium down) {
+        height: 600px;
+      }
+    }
+
+
+  }
+
+  @include block(image-background) {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: -99;
+  }
+
+}

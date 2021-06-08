@@ -3,36 +3,48 @@ import { withRouter } from 'react-router'
 
 const items = [
   {
-    title: 'Products',
+    title: 'Getting started',
     items: [
       {
+        title: 'Fuse Studio',
+        url: 'https://studio.fuse.io/'
+      },
+      {
         title: 'Fuse Swap',
-        url: 'https://fuseswap.com/'
+        url: 'https://fuseswap.com/'      
       },
       {
         title: 'Fuse Staking',
-        url: 'http://staking.fuse.io/'
-      },
+        url: 'http://staking.fuse.io/'    
+      }, 
       {
-        title: 'Fuse Studio',
-        url: 'http://studio.fuse.io/'
+        title: 'Fuse Cash',
+        url: 'https://fuse.cash/'
       }
     ]
   },
   {
-    title: 'For Developers',
+    title: 'Under the hood',
     items: [
       {
-        title: 'Documentation',
-        url: 'http://docs.fuse.io/'
+        title: 'Fuse Network',
+        route: './network'
+      },
+      {
+        title: 'Fuse Token',
+        route: './token'
       },
       {
         title: 'Explorer',
-        url: 'http://explorer.fuse.io/'
+        url: 'https://explorer.fuse.io/'
       },
       {
-        title: 'Become Validator',
-        url: 'https://docs.fuse.io/become-a-validator/getting-started'
+        title: 'Documentation',
+        url: 'https://docs.fuse.io/'
+      },
+      {
+        title: 'Service status',
+        url: 'https://status.fuse.io/'
       }
     ]
   },
@@ -44,12 +56,8 @@ const items = [
         route: './about'
       },
       {
-        title: 'Network',
-        route: './network'
-      },
-      {
-        title: 'Careers',
-        route: './network'
+        title: 'Privacy policy',
+        url: 'https://fuse.cash/privacy'
       }
     ]
   }
@@ -97,7 +105,7 @@ function List ({ title, items }) {
 
 function Links () {
   return (
-    <div className='grid-x links align-middle align-justify cell small-24 medium-8'>
+    <div className='grid-x links cell small-24 medium-8'>
       {
         items.map((item, index) => {
           return <List {...item} key={index} />

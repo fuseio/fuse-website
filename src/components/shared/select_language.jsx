@@ -16,8 +16,7 @@ function SelectLanguage ({ history }) {
   const [lang, setLang] = useLang()
   const iconRef = useRef(null)
 
-  const isNetworkHeader = history.location.pathname.includes('network')
-  const isAboutHeader = history.location.pathname.includes('about')
+  const isWhite = !history.location.pathname.includes('about')
 
   useOutsideClick(iconRef, () => {
     if (isOpen) {
@@ -40,7 +39,7 @@ function SelectLanguage ({ history }) {
       ref={iconRef}
       onClick={openLanguageOptions}
       rel='noreferrer noopener'
-      className={classNames('icon language', { 'language--white': isNetworkHeader || isAboutHeader })}
+      className={classNames('icon language', { 'language--white': isWhite })}
       target='_blank'
     >
       <span>{lang}</span>

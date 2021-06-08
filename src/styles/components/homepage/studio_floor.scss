@@ -1,0 +1,68 @@
+@include block(studio_floor) {
+  @include xy-grid-container();
+ 
+  padding: 5em 0;
+
+  @include element(container) {
+  }
+  
+  @include breakpoint(medium down) {
+    padding: 20px 20px 3em;
+  }
+
+  @include element(sub-title) {
+    > img {
+      width: 66.4px;
+      height: 64px;
+      margin-right: 16px;
+    }
+
+    > span {
+      @extend %subtitle;
+    }
+    padding: 2em 0;
+  }
+
+  @include element(title) {
+    @extend %title;
+  }
+
+  @include element(text) {
+    @extend %text;
+    padding: 1.5em 0;
+    max-width: 440px;
+  }
+
+  @include block(launch) {
+    padding-top: 3.5em;
+  }
+
+  @include block(props) {
+    li {
+      margin: 0;
+      padding: 8px 0px 8px 25px;
+      list-style: none;
+      background-image: url(images/bullet.png);
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 15px;
+      @extend %text;
+    }
+  }
+
+  @include element(image) {
+    @include breakpoint(medium down) {
+      margin-top: 2em;
+    }
+  
+    > img {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+}
+
+@include block(blue) {
+  position: relative;
+  background-color: #f5f6fb;
+}

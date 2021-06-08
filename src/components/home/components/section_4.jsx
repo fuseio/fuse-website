@@ -1,112 +1,109 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
 import { FormattedMessage } from 'react-intl'
+import useFetch from 'use-http'
+import moment from 'moment'
 
 SwiperCore.use([Navigation, Pagination])
 
-const blogs = [
-  {
-    title: 'Fuse Will Use Chainlink Proof of Reserve to Mint and Verify the Collateralization of FuseDollar (fUSD)',
-    href: 'https://medium.com/fusenet/fuse-will-use-chainlink-proof-of-reserve-to-mint-and-verify-the-collateralization-of-fusedollar-6ff6db948029',
-    date: 'Mar 2, 2021',
-    imagePath: './images/chainlink.png'
-  },
-  {
-    title: 'Introducing FuseDollar: An Asset-Backed Stable Coin Designed for First Time Users',
-    href: 'https://medium.com/fusenet/introducing-fusedollar-an-asset-backed-stable-coin-designed-for-first-time-users-dbf143d35e58',
-    date: 'Feb 19, 2021',
-    imagePath: './images/fusedollar.png'
-  },
-  {
-    title: 'Kolektivo Labs Launches on Fuse to Scale Blockchain-Based, Sustainable Development in Curaçao.',
-    href: 'https://medium.com/fusenet/kolektivo-labs-launches-on-fuse-to-scale-blockchain-based-sustainable-development-in-cura%C3%A7ao-ac83d30294b',
-    date: 'Feb 18, 2021',
-    imagePath: './images/xl.png'
-  }
-]
-
-function Item({
-  title,
-  href,
-  date,
-  imagePath
-}) {
+function Item ({ title, link, thumbnail, pubDate }) {
   return (
-    <a className='item__post' rel='noreferrer noopener' target='_blank' href={href}>
+    <a
+      className='item__post'
+      rel='noreferrer noopener'
+      target='_blank'
+      href={link}
+    >
       <div className='item__post__image'>
-        <img alt='owners' src={imagePath} />
+        <img alt='owners' src={thumbnail} />
       </div>
 
       <div className='item__post__content'>
-        <p className='chips'>
+        {/* <p className='chips'>
           <span>Blog post</span>
-        </p>
-        <h4 className='title'>{title}</h4>
-        <span>{date}</span>
+        </p> */}
+        <h4 className='title'>
+          <FormattedMessage
+            defaultMessage='{title}'
+            values={{
+              title: title
+            }}
+          />
+        </h4>
+        <small>
+          <FormattedMessage defaultMessage='By Fuse' />
+        </small>
+        <span>{moment(pubDate).format('MMMM Do YYYY')}</span>
       </div>
     </a>
   )
 }
 
 const SectionFour = () => {
-  const paginationRef = useRef(null)
+  const { data = { items: [] } } = useFetch(
+    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/fusenet',
+    {},
+    []
+  )
+
   return (
-    <section className='section-C wow fadeIn animated'>
-      <div className='section-C__content grid-container'>
-        <div className='grid-x align-justify'>
-          <div className='item cell large-5'>
-            <h2 className='section-C__title'><FormattedMessage defaultMessage='Latest updates:' />
-            </h2>
-            <p className='section-C__text'>
-              <FormattedMessage defaultMessage="Get to know what we've been up to lately
-              Follow us on Medium"
-              />
-
-            </p>
-            <a
-              rel='noreferrer noopener' target='_blank' href='https://medium.com/fusenet'
-              className='section-C__read-more section-link'
-            >
-              <span><FormattedMessage defaultMessage='Go to Blog' /></span>
-              <img style={{ marginLeft: '.3em' }} src='./images/section-C-arrow-right.svg' alt='' />
-            </a>
+    <section className='section-C__wrapper'>
+      <div className='section-C__container'>
+        <div className='section-C'>
+          <h2 className='section-C__title'>
+            <FormattedMessage defaultMessage='Latest updates:' />
+          </h2>
+          <div className='section-C__content'>
+            <div className='grid-x align-justify'>
+              <div className='item cell large-5'>
+                <p className='section-C__text'>
+                  <FormattedMessage
+                    defaultMessage="Get to know what we've been up to lately
+                Follow us on Medium"
+                  />
+                </p>
+                <a
+                  rel='noreferrer noopener'
+                  target='_blank'
+                  href='https://medium.com/fusenet'
+                  className='main_button section-C__read-more section-link'
+                >
+                  <span>
+                    <FormattedMessage defaultMessage='Go to Blog' />
+                  </span>
+                </a>
+              </div>
+              <div className="blogs__wrapper cell large-auto grid-x align-spaced">
+                {data.items.slice(0, 3).map((item, index) => {
+                  return <Item key={index} {...item} />;
+                })}
+              </div>
+            </div>
+            <div className='section-C__swiper'>
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={20}
+                loop
+                setWrapperSize
+                autoplay={{
+                  reverseDirection: true,
+                  delay: 5000
+                }}
+                pagination={{
+                  clickable: true
+                }}
+              >
+                {
+                  data.items.slice(0, 3).map((item, index) => (
+                    <SwiperSlide key={index}>
+                      <Item {...item} />
+                    </SwiperSlide>
+                  ))
+                }
+              </Swiper>
+            </div>
           </div>
-          <div className='blogs__wrapper cell large-auto grid-x align-spaced'>
-            {
-              blogs.map((item, index) => {
-                return <Item key={index} {...item} />
-              })
-            }
-          </div>
-        </div>
-        <div className='section-C__swiper'>
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={20}
-            loop
-            setWrapperSize
-            autoplay={{
-              reverseDirection: true,
-              delay: 5000
-            }}
-            pagination={{
-              clickable: true,
-              el: paginationRef.current
-            }}
-          >
-            {
-              blogs.map((item, index) => {
-                return (
-                  <SwiperSlide key={index}>
-                    <Item {...item} />
-                  </SwiperSlide>
-                )
-              })
-            }
-            <div className='swiper-pagination' />
-
-          </Swiper>
         </div>
       </div>
     </section>

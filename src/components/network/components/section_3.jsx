@@ -3,8 +3,8 @@ import { FormattedMessage } from 'react-intl'
 import { useCountUp } from 'react-countup'
 import VisibilitySensor from 'react-visibility-sensor'
 import useFetch from 'use-http'
-
-const formatNumber = (num) => String(num).replace(/(.)(?=(\d{3})+$)/g, '$1,')
+import arow from '@/assets/images/arow.svg'
+import { formatNumber } from '@/utils/format'
 
 const SectionThree = () => {
   const { data = { data: 0 } } = useFetch('https://studio.fuse.io/api/v1/communities/count', {}, [])
@@ -12,7 +12,7 @@ const SectionThree = () => {
   const { countUp: transactionCounter, start: transactionCounterStart } = useCountUp({
     start: 0,
     formattingFn: formatNumber,
-    end: 5243094
+    end: 11368734
   })
 
   const { countUp: communitiesCounter, start: communitiesCounterStart, update: updateCommunities } = useCountUp({
@@ -25,7 +25,7 @@ const SectionThree = () => {
   const { countUp: walletsCounter, start: walletsCounterStart } = useCountUp({
     start: 0,
     formattingFn: formatNumber,
-    end: 231886
+    end: 373754
   })
 
   return (
@@ -53,7 +53,7 @@ const SectionThree = () => {
                 >
                   <FormattedMessage defaultMessage='Click here for the explorer' />
                 </a>
-                <img src='./images/arow.svg' alt='network_arrow' />
+                <img src={arow} alt='network_arrow' />
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ const SectionThree = () => {
                 >
                   <FormattedMessage defaultMessage='Using the Fuse Studio' />
                 </a>
-                <img src='./images/arow.svg' alt='network_arrow' />
+                <img src={arow} alt='network_arrow' />
               </div>
             </div>
           </div>

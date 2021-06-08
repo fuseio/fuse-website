@@ -5,30 +5,31 @@ import Staking from '@/assets/images/dropdown/staking.svg'
 import Fusecash from '@/assets/images/dropdown/fusecash.svg'
 import FuseSwap from '@/assets/images/dropdown/fuseswap.svg'
 import Arrow from '@/assets/images/dropdown/drop_arrow.svg'
+import { FormattedMessage } from 'react-intl'
 
 const items = [
   {
-    title: 'Fuse Studio',
+    title: <FormattedMessage defaultMessage='Fuse Studio' />,
     icon: Studio,
-    subTitle: 'Create an economy',
+    subTitle: <FormattedMessage defaultMessage='Create an economy' />,
     url: 'https://studio.fuse.io'
   },
   {
-    title: 'Fuse Staking',
+    title: <FormattedMessage defaultMessage='Fuse Staking' />,
     icon: Staking,
-    subTitle: 'Vote & earn Fuse',
+    subTitle: <FormattedMessage defaultMessage='Vote & earn Fuse' />,
     url: 'https://staking.fuse.io'
   },
   {
-    title: 'Fuse Swap',
+    title: <FormattedMessage defaultMessage='Fuse Swap' />,
     icon: FuseSwap,
-    subTitle: 'Trade without gas',
+    subTitle: <FormattedMessage defaultMessage='Trade without gas' />,
     url: 'https://fuseswap.com'
   },
   {
-    title: 'Fuse Cash',
+    title: <FormattedMessage defaultMessage='Fuse Cash' />,
     icon: Fusecash,
-    subTitle: 'Friendly crypto money',
+    subTitle: <FormattedMessage defaultMessage='Friendly crypto money' />,
     url: 'https://fuse.cash'
   }
 ]
@@ -41,34 +42,37 @@ function GettingStartedDropdown () {
           {
             items.map(({ title, icon, subTitle, disabled, url }, index) => {
               return (
-                <li className='item grid-x align-middle cell small-24 medium-10' key={index}>
+                <li
+                  className='item grid-x align-middle cell small-24 medium-10'
+                  key={index}
+                >
                   {
-                    disabled
-                      ? (
-                        <div className='item__wrapper'>
-                          <img src={icon} />
-                          <div className='content'>
-                            <button className='title'>
-                              <span>{title}</span>
-                              <img className='arrow' src={Arrow} />
-                            </button>
-                            <span className='sub_title'>{subTitle}</span>
+                      disabled
+                        ? (
+                          <div className='item__wrapper'>
+                            <img src={icon} />
+                            <div className='content'>
+                              <button className='title'>
+                                <span>{title}</span>
+                                <img className='arrow' src={Arrow} />
+                              </button>
+                              <span className='sub_title'>{subTitle}</span>
+                            </div>
                           </div>
-                        </div>
-                        )
-                      : (
-                        <a rel='noreferrer noopener' className='item__wrapper' target='_blank' href={url}>
-                          <img src={icon} />
-                          <div className='content'>
-                            <button className='title'>
-                              <span>{title}</span>
-                              <img className='arrow' src={Arrow} />
-                            </button>
-                            <span className='sub_title'>{subTitle}</span>
-                          </div>
-                        </a>
-                        )
-                  }
+                          )
+                        : (
+                          <a rel='noreferrer noopener' className='item__wrapper' target='_blank' href={url}>
+                            <img src={icon} />
+                            <div className='content'>
+                              <button className='title'>
+                                <span>{title}</span>
+                                <img className='arrow' src={Arrow} />
+                              </button>
+                              <span className='sub_title'>{subTitle}</span>
+                            </div>
+                          </a>
+                          )
+                    }
                 </li>
               )
             })

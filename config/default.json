@@ -1,0 +1,9 @@
+{
+  "reactGA": {
+    "trackingId": "UA-145420511-9",
+    "gaOptions": {
+      "testMode": true,
+      "debug": true
+    }
+  }
+}
