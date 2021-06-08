@@ -5,10 +5,10 @@ import Business from '@/assets/img/business_tools.png'
 import BusinessSmall from '@/assets/img/business_tools_small.svg'
 import PaymentsNetwork from '@/assets/img/paymets_network.png'
 import PaymentsNetworkSmall from '@/assets/img/payments_network_small.svg'
-import Communities from '@/assets/img/communities.svg'
-import Transactions from '@/assets/img/transactions.svg'
-import Wallet from '@/assets/img/wallets.svg'
+import VisibilitySensor from 'react-visibility-sensor'
+import useFetch from 'use-http'
 import { FormattedMessage } from 'react-intl'
+import useCounter from '@/hooks/useCounter'
 
 const items = [
   {
@@ -64,21 +64,6 @@ const items = [
   }
 ]
 
-const bannerItems = [
-  {   
-    value: '10,392,350',
-    text: <FormattedMessage defaultMessage='Transactions' />
-  },
-  {   
-    value: '695',
-    text: <FormattedMessage defaultMessage='Communities' />
-  },
-  {
-    value: '358,909',
-    text: <FormattedMessage defaultMessage='Wallets' />
-  }
-]
-
 const Item = ({ title, image, Text, icon }) => {
   return (
     <div className='item'>
@@ -92,30 +77,46 @@ const Item = ({ title, image, Text, icon }) => {
   )
 }
 
-const BannerItem = ({ value, text }) => {
-  return (
-    <div className='item grid-x align-middle'>
-      
-      &nbsp;&nbsp;
-      <div className='title'>
-        <span>{value}</span>
-        &nbsp;
-        {text}
-      </div>
-    </div>
-  )
-}
-
 const Banner = () => {
+  const { data = { data: 0 } } = useFetch('https://studio.fuse.io/api/v1/communities/count', {}, [])
+  const transactionCounter = useCounter(11368734)
+  const communitiesCounter = useCounter(data.data)
+  const walletsCounter = useCounter(373754)
+
   return (
     <section className='info_banner__wrapper'>
       <div className='info_banner__container'>
         <div className='info_banner'>
-          {
-            bannerItems.map((item, index) => (
-              <BannerItem key={index} {...item} />
-            ))
-          }
+          <div className='item grid-x align-middle'>
+            &nbsp;&nbsp;
+            <div className='title'>
+              <VisibilitySensor delayedCall>
+                <span>{transactionCounter}</span>
+              </VisibilitySensor>
+              &nbsp;
+              <FormattedMessage defaultMessage='Transactions' />
+            </div>
+          </div>
+          <div className='item grid-x align-middle'>
+            &nbsp;&nbsp;
+            <div className='title'>
+              <VisibilitySensor delayedCall>
+                <span>{communitiesCounter}</span>
+              </VisibilitySensor>
+              &nbsp;
+              <FormattedMessage defaultMessage='Communities' />
+            </div>
+          </div>
+          <div className='item grid-x align-middle'>
+            &nbsp;&nbsp;
+            <div className='title'>
+              <VisibilitySensor delayedCall>
+                <span>{walletsCounter}</span>
+              </VisibilitySensor>
+              &nbsp;
+              <FormattedMessage defaultMessage='Wallets' />
+            </div>
+          </div>
           <div className='item grid-x align-middle'>
             <div className='title'>
               <a

@@ -17,8 +17,6 @@ const NewsletterForm = () => {
     email: string().email(emailInvalidMessage).required(requiredMessage)
   })
 
-  console.log(intl)
-
   return (
     <Formik
       initialValues={{ email: '' }}
@@ -103,7 +101,7 @@ const NewsletterForm = () => {
             className='newsletter__form__button'
           >
             <FormattedMessage defaultMessage='Send' />
-            </button>
+          </button>
           <ErrorMessage name='email'>
             {(msg) => <div className='newsletter__form__error '>{msg}</div>}
           </ErrorMessage>

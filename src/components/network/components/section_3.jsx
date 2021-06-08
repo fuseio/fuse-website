@@ -4,7 +4,7 @@ import { useCountUp } from 'react-countup'
 import VisibilitySensor from 'react-visibility-sensor'
 import useFetch from 'use-http'
 import arow from '@/assets/images/arow.svg'
-const formatNumber = (num) => String(num).replace(/(.)(?=(\d{3})+$)/g, '$1,')
+import { formatNumber } from '@/utils/format'
 
 const SectionThree = () => {
   const { data = { data: 0 } } = useFetch('https://studio.fuse.io/api/v1/communities/count', {}, [])
@@ -12,7 +12,7 @@ const SectionThree = () => {
   const { countUp: transactionCounter, start: transactionCounterStart } = useCountUp({
     start: 0,
     formattingFn: formatNumber,
-    end: 10392350
+    end: 11368734
   })
 
   const { countUp: communitiesCounter, start: communitiesCounterStart, update: updateCommunities } = useCountUp({
@@ -25,7 +25,7 @@ const SectionThree = () => {
   const { countUp: walletsCounter, start: walletsCounterStart } = useCountUp({
     start: 0,
     formattingFn: formatNumber,
-    end: 358909
+    end: 373754
   })
 
   return (

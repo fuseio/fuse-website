@@ -47,8 +47,6 @@ const SectionFour = () => {
     []
   )
 
-  console.log(data)
-
   return (
     <section className='section-C__wrapper'>
       <div className='section-C__container'>

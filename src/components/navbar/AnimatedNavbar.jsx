@@ -96,7 +96,7 @@ class AnimatedNavbar extends Component {
               navbarConfig.map(({ title }, index) => {
                 return (
                   <NavbarItem
-                    key={title}
+                    key={index}
                     title={title}
                     index={index}
                     currentIndex={currentIndex}
