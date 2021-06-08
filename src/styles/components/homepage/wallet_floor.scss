@@ -55,7 +55,6 @@
         }
       @include breakpoint(medium up) {
         @include xy-grid();
-        // @include flex-align(justify, middle);
 
         > a {
           @include xy-cell(6, null, 0);

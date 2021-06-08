@@ -5,10 +5,6 @@
 	@include element(wrapper) {
 		padding: 5em 2em 2em;
 		background: #071927;
-
-		// @include modifier(dark) {
-		// 	background-color: #001929;
-		// }
 	}
 
 	@include breakpoint(medium down) {
@@ -250,7 +246,7 @@
 	@include breakpoint(large down) {
 		gap: 2em;
 		@include xy-grid();
-		@include flex-align(flex-start, null);
+		@include flex-align(left, null);
 	}
 	@include breakpoint(medium down) {
 		order: 3;

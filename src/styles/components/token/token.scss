@@ -23,7 +23,6 @@
       height: 821px;
       background-image: radial-gradient(circle at 50% 63%, #455765, #001929 40%);
     }
-    // background-color: #001929;
   }
 
   @include block(content) {
@@ -47,7 +46,6 @@
     @include block(text) {
       line-height: 1.56;
       color: white;
-      // color: $color-gray;
       @include breakpoint(large down) {
         font-size: 1em;
       }
@@ -76,7 +74,6 @@
   @include element(container) {
     @include xy-grid-container();
     @include breakpoint(medium down) {
-      // padding-bottom: 2em;
     }
   }
   @include element(wrapper) {
@@ -84,19 +81,16 @@
     @include flex-align(justify, middle);
     @include breakpoint(medium up) {
       padding: 2em 0;
-      // height: 798px;
     }
 
     @include breakpoint(medium down) {
       padding: 2em 0;
-      // height: 798px;
     }
   }
 
   @include element(title) {
     @extend %title;
     padding-bottom: 2em;
-    // padding: 2em 0;
   }
 
   @include element(items) {
@@ -118,8 +112,6 @@
       @include breakpoint(medium down) {
         @include xy-cell(16, null, 0);
         @include xy-grid(vertical, false);
-        // @include flex-align(center, middle);
-        // @include flex-align(justify, middle);
 
         &:not(:last-child) {
           margin-bottom: 5em;
@@ -139,7 +131,6 @@
       @include element(text) {
         @extend %text;
         min-height: 75px;
-        // max-width: 253.6px;
 
         > span {
           font-weight: 500;
@@ -169,7 +160,6 @@
 
   @include element(title) {
     @extend %title;
-    // padding-bottom: 2em;
     padding: 2em 0;
     @include breakpoint(medium down) {
       text-align: center;
@@ -196,9 +186,6 @@
       background-color: #ffffff;
       @include xy-grid(vertical, false);
       @include flex-align(center, middle);
-      // @include breakpoint(medium up) {
-      //   @include xy-cell(5, null, 0);
-      // }
 
       @include breakpoint(medium down) {
         &:not(:last-child) {
@@ -261,12 +248,7 @@
   td {
     margin: 0;
     padding: 0.5rem;
-    // border-bottom: 1px solid black;
-    // border-right: 1px solid black;
-    /* The secret sauce */
-    /* Each cell should grow equally */
     width: 1%;
-    /* But "collapsed" cells should be as small as possible */
     &.collapse {
       width: 0.0000000001%;
     }
@@ -296,21 +278,8 @@
     padding: 1em;
     @extend %secondary-title;
 
-    @include breakpoint(medium up) {
-    }
-
-    @include breakpoint(medium down) {
-      // font-size: 8.5px;
-      // font-size: 7.7px;
-    }
     @include element(cell) {
-      // @include xy-grid();
-      // @include flex-align(center, middle);
-
       > div {
-        // @include xy-grid(vertical);
-        // @include flex-align(center, middle);
-
         img {
           margin-bottom: 1em;
         }
@@ -340,9 +309,6 @@
       @include flex-align(left, null);
       @extend %text;
       color: $color-black;
-      @include breakpoint(medium down) {
-        // font-size: 7.7px;
-      }
 
       > img {
         margin-right: 0.4em;
@@ -350,8 +316,6 @@
     }
 
     @include element(cell) {
-      // @include xy-grid();
-      // @include flex-align(center, middle);
       @extend %text;
       color: $color-black;
 
@@ -378,16 +342,12 @@
     position: relative;
     @include xy-grid-container();
     width: 100%;
-    // height: 100%;
   }
 
   @include element(wrapper) {
     position: relative;
     @include xy-grid();
     @include flex-align(justify, middle);
-    @include breakpoint(medium down) {
-      // height: 443px;
-    }
     background-image: linear-gradient(109deg, #b3f9ba 17%, #f6fb8c 87%);
 
     @include block(bubble) {
@@ -467,7 +427,7 @@
         height: 11px;
         display: inline-block;
         padding-left: 8px;
-        content: ""; // arrow right unicode
+        content: "";
         -webkit-transition: all 0.3s ease-out;
         -moz-transition: transform 0.3s ease-out;
         -ms-transition: transform 0.3s ease-out;
@@ -476,9 +436,6 @@
       }
 
       &:hover {
-        // background-image: unset;
-        // background-color: #f8ff00;
-
         &::after {
           -webkit-transform: translateX(4px);
           -moz-transform: translateX(4px);
@@ -518,12 +475,8 @@
     padding-top: 4em;
     padding-bottom: 4em;
 
-    // @include breakpoint(medium down) {
-    // }
-
     @include block(title) {
       @extend %title;
-      // font-size: 2.813em;
       font-weight: bold;
 
       @include breakpoint(medium down) {
@@ -535,10 +488,8 @@
     @include xy-grid();
     @include flex-align(justify, middle);
     @include breakpoint(medium up) {
-      // height: 798px;
     }
     background-color: #fafafa;
-    // background-color: #001929;
   }
 
   @include element(content) {
@@ -563,7 +514,6 @@
           width: 46px;
           height: 46px;
           border-radius: 50%;
-          // background-color: red;
           margin-right: 0.7em;
         }
 

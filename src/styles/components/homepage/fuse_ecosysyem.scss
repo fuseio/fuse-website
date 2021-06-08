@@ -1,6 +1,6 @@
 @include block(fuse_ecosysyem) {
   @include xy-grid-container();
-  
+
   padding: 5em 0;
   position: relative;
 
@@ -8,10 +8,6 @@
     @extend %title;
     max-width: 1180px;
     padding: 2em 0 3em;
-    @include breakpoint(medium down) {
-      // display: none;
-      
-    }
   }
 
   @include breakpoint(medium down) {
@@ -34,9 +30,6 @@
 
       img {
         max-height: 100px;
-        @include breakpoint(medium down) {
-          // padding: 5em 0;
-        }
       }
     }
   }
@@ -45,19 +38,16 @@
     width: 100%;
     justify-content: space-between;
     row-gap: 48px;
-    @include breakpoint (medium down) {
+    @include breakpoint(medium down) {
       row-gap: 20px;
     }
   }
   @include element(logo-priority) {
-      @include xy-grid();
-      @include flex-align(center, middle);
-
-
-
-    }
+    @include xy-grid();
+    @include flex-align(center, middle);
+  }
   @include element(logo-small) {
-      @include xy-grid();
-      @include flex-align(center, middle);
-    }
+    @include xy-grid();
+    @include flex-align(center, middle);
+  }
 }

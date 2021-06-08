@@ -39,8 +39,7 @@
   color: #052235;
   margin: 1em 0;
   border-radius: 100px;
-  background-image: linear-gradient(124.98deg, #B3FFBB 6.71%, #FFFB00 90%);
-  
+  background-image: linear-gradient(124.98deg, #b3ffbb 6.71%, #fffb00 90%);
 
   &::after {
     background-image: url(images/arrow.png);
@@ -52,7 +51,7 @@
     display: inline-block;
     padding-left: 8px;
     vertical-align: -20%;
-    content: ""; // arrow right unicode
+    content: "";
     -webkit-transition: all 0.3s ease-out;
     -moz-transition: transform 0.3s ease-out;
     -ms-transition: transform 0.3s ease-out;

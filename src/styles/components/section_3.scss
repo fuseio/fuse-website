@@ -5,7 +5,7 @@
 		min-height: 40vh;
 	}
 	@include element(container) {
-		@include xy-grid-container();	
+		@include xy-grid-container();
 	}
 
 	@include element(wrapper) {
@@ -13,7 +13,7 @@
 		background-image: linear-gradient(247deg, #f5f6fb, #fafafa);
 		@include breakpoint(xlarge down) {
 		}
-	
+
 		@include breakpoint(medium down) {
 			padding: 5em 0;
 		}
@@ -52,7 +52,6 @@
 
 		@include breakpoint(medium down) {
 			flex-direction: column;
-			// width: 85%;
 		}
 
 		@include element(item) {
