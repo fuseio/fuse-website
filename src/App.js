@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router'
 import configureStore from './store/configureStore'
 import { LangContext, LangProvider } from './components/shared/lang_provider'
 import { IntlProvider } from 'react-intl'
+import GoogleAnalyticsReporter from '@/components/analytics'
 
 import Navbar from '@/components/navbar'
 import HomePage from '@/components/home'
@@ -42,6 +43,7 @@ const App = () => {
             <Provider store={store}>
               <ConnectedRouter history={history}>
                 <ScrollToTopController>
+                  <Route component={GoogleAnalyticsReporter} />
                   <Navbar />
                   <Switch>
                     <Route exact path='/about'>
