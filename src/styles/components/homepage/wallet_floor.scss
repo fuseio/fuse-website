@@ -89,7 +89,7 @@
     > img {
       height: 713px;
       @include breakpoint(medium down) {
-        height: 600px;
+        height: auto;
       }
     }
 

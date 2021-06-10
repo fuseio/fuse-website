@@ -39,7 +39,7 @@ function SelectLanguage ({ history }) {
       ref={iconRef}
       onClick={openLanguageOptions}
       rel='noreferrer noopener'
-      className={classNames('icon language', { 'language--white': isWhite })}
+      className={classNames('icon language hide', { 'language--white': isWhite })}
       target='_blank'
     >
       <span>{lang}</span>

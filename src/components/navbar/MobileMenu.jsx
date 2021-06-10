@@ -147,7 +147,7 @@ function MobileMenu ({ history }) {
   const [isOpen, setMenuOpen] = useState(false)
   const hamburgerRef = useRef(null)
 
-  const isWhite = !history.location.pathname.includes('about')
+  const isDark = history.location.pathname.includes('about')
 
   useOutsideClick(hamburgerRef, () => {
     if (isOpen) {
@@ -161,8 +161,12 @@ function MobileMenu ({ history }) {
         ref={hamburgerRef}
         type='button'
         className={classNames('hamburger-button__container', {
-          'hamburger-button__container--white': isWhite
-        })}
+          'hamburger-button__container--black': isOpen
+        }, 
+        {
+            'hamburger-button__container--dark': isDark  
+        }
+        )}
         onClick={() => setMenuOpen(!isOpen)}
       >
         <span className='hamburger-button__top' />

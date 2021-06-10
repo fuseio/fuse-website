@@ -8,6 +8,11 @@
   
     padding: 12em 0 6em;
    
+    @include breakpoint(large down){
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem;
+    }
+    
     @include breakpoint(medium down) {
       padding: 5em 0 2em;
     }

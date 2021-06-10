@@ -306,9 +306,9 @@
 		width: 25px;
 		height: 25px;
 		margin-left: auto;
-
+		z-index: 999;
 		span {
-			background: $color-dark;
+			background: white;
 			border: none;
 			height: 3px;
 			width: 23px;
@@ -326,9 +326,18 @@
 			}
 		}
 
-		@include modifier(white) {
+			
+		@include modifier(black) {
+			@include breakpoint(small down) {
+				span {
+					background: black;
+				}
+			}
+		}
+
+		@include modifier(dark) {
 			span {
-				background: white;
+				background: $color-dark;
 			}
 		}
 
