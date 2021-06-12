@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useEffect } from 'react'
 import Table from './Table'
 import TableHeader from '@/components/token/components/Table/TableHeader'
 import Ether from '@/assets/img/table/Ether.svg'
@@ -7,6 +7,7 @@ import FUSE from '@/assets/img/table/fuse2.svg'
 import LINK from '@/assets/img/table/link.svg'
 import { addressShortener } from '@/utils/format'
 import { FormattedMessage } from 'react-intl'
+import useFetch from 'use-http'
 
 const SectionThree = () => {
   const columns = useMemo(
@@ -26,6 +27,13 @@ const SectionThree = () => {
     ],
     []
   )
+  const {
+    data: circulatingData  = { ethereumBlock: "", bscBlock: "", fuseBlock: "" },
+  } = useFetch('https://bot.fuse.io/api/v1/stats/circulating', {}, []);
+  // TODO
+  // const {
+  //   data: supplyData  = { ethereumBlock: "", bscBlock: "", fuseBlock: "" },
+  // } = useFetch('https://bot.fuse.io/api/v1/stats/supply', {}, []);
 
   const data = useMemo(
     () => [
@@ -35,9 +43,9 @@ const SectionThree = () => {
         fuse: '357,053'
       },
       {
-        ether: '18567954',
-        bsc: '18567954',
-        fuse: '18567954'
+        ether: circulatingData.ethereumBlock || 18567954,
+        bsc: circulatingData.bscBlock || 18567954,
+        fuse: circulatingData.fuseBlock || 18567954
       },
       {
         ether: '18567954',
@@ -75,7 +83,7 @@ const SectionThree = () => {
         )
       }
     ],
-    []
+    [circulatingData]
   )
 
   return (
