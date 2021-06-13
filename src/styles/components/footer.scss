@@ -58,7 +58,6 @@
 		}
 
 		@include element(images) {
-			gap: 16px;
 			@include breakpoint(medium down) {
 				margin: 2em 0;
 			}
@@ -66,6 +65,16 @@
 			img {
 				width: 48px;
 				height: 48px;
+			}
+
+			  
+			>a {
+				margin-right: 1em;
+				margin-bottom: 1em;
+				&:last-child {
+					margin-right: 0;
+					margin-bottom: 0;
+				}
 			}
 		}
 	}
@@ -244,9 +253,12 @@
 		@include flex-align(spaced, null);
 	}
 	@include breakpoint(large down) {
-		gap: 2em;
 		@include xy-grid();
 		@include flex-align(left, null);
+		> div {
+			margin-right: 2em;
+			margin-bottom: 2em;
+		}
 	}
 	@include breakpoint(medium down) {
 		order: 3;
