@@ -1,5 +1,5 @@
-import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
 import ola from '@/assets/img/Ecosystem/ola_partner.png'
 import graph from '@/assets/img/Ecosystem/graph_partner.png'
 import ramp from '@/assets/img/Ecosystem/ramp_partner.png'
@@ -40,230 +40,228 @@ import getblock from '@/assets/img/Ecosystem/getblock_partner.png'
 const largeEcoSystem = [
   {
     logo: ola,
-    link:'https://ola.finance/',
-    alt:'ola'
+    link: 'https://ola.finance/',
+    alt: 'ola'
   },
   {
     logo: graph,
-    link:'https://thegraph.com/',
-    alt:'graph'
+    link: 'https://thegraph.com/',
+    alt: 'graph'
   },
   {
     logo: ramp,
-    link:'https://ramp.network/',
-    alt:'ramp'
+    link: 'https://ramp.network/',
+    alt: 'ramp'
   },
   {
     logo: pokt,
-    link:'https://www.pokt.network/',
-    alt:'pokt'
+    link: 'https://www.pokt.network/',
+    alt: 'pokt'
   },
   {
     logo: zokyo,
-    link:'https://www.zokyo.io/',
-    alt:'zokyo'
+    link: 'https://www.zokyo.io/',
+    alt: 'zokyo'
   },
   {
     logo: zeppelin,
-    link:'https://openzeppelin.com/',
-    alt:'zepplin'
+    link: 'https://openzeppelin.com/',
+    alt: 'zepplin'
   },
   {
     logo: monerium,
-    link:'https://monerium.com/',
-    alt:'monerium'
+    link: 'https://monerium.com/',
+    alt: 'monerium'
   },
   {
     logo: staking,
-    link:'https://www.stakingrewards.com',
-    alt:'staking'
+    link: 'https://www.stakingrewards.com',
+    alt: 'staking'
   },
   {
     logo: chainlink,
-    link:'https://chain.link/',
-    alt:'chainlink'
+    link: 'https://chain.link/',
+    alt: 'chainlink'
   },
   {
     logo: goodfi,
-    link:'https://www.goodfi.com/',
-    alt:'goodfi'
+    link: 'https://www.goodfi.com/',
+    alt: 'goodfi'
   },
   {
     logo: emoney,
-    link:'https://e-money.com/',
-    alt:'emoney'
+    link: 'https://e-money.com/',
+    alt: 'emoney'
   },
   {
     logo: dapp,
-    link:'https://www.dapp.com/',
-    alt:'dapp'
+    link: 'https://www.dapp.com/',
+    alt: 'dapp'
   }
 ]
 
 const smallEcoSystem = [
   {
     logo: coingecko,
-    link:'https://www.coingecko.com/',
-    alt:'coingecko'
+    link: 'https://www.coingecko.com/',
+    alt: 'coingecko'
   },
   {
     logo: defilama,
-    link:'https://defillama.com/home',
-    alt:'defilama'
+    link: 'https://defillama.com/home',
+    alt: 'defilama'
   },
   {
     logo: coinmarketcap,
-    link:'https://coinmarketcap.com/',
-    alt:'coinmarketcap'
+    link: 'https://coinmarketcap.com/',
+    alt: 'coinmarketcap'
   },
   {
     logo: uniswap,
-    link:'https://uniswap.org/',
-    alt:'uniswap'
+    link: 'https://uniswap.org/',
+    alt: 'uniswap'
   },
   {
     logo: kyber,
-    link:'https://kyber.network/',
-    alt:'kyber'
+    link: 'https://kyber.network/',
+    alt: 'kyber'
   },
   {
     logo: oneinch,
-    link:'https://1inch.io/',
-    alt:'oneinch'
+    link: 'https://1inch.io/',
+    alt: 'oneinch'
   },
   {
     logo: loopring,
-    link:'https://loopring.org/',
-    alt:'loopring'
+    link: 'https://loopring.org/',
+    alt: 'loopring'
   },
   {
     logo: defipulse,
-    link:'https://defipulse.com/',
-    alt:'defipulse'
+    link: 'https://defipulse.com/',
+    alt: 'defipulse'
   },
   {
     logo: zerochain,
-    link:'https://0chain.net/',
-    alt:'zerochain'
+    link: 'https://0chain.net/',
+    alt: 'zerochain'
   },
   {
     logo: twokey,
-    link:'https://www.2key.network/',
-    alt:'twokey'
+    link: 'https://www.2key.network/',
+    alt: 'twokey'
   },
   {
     logo: mantradao,
-    link:'https://mantradao.com/',
-    alt:'mantradao'
+    link: 'https://mantradao.com/',
+    alt: 'mantradao'
   },
   {
     logo: torus,
-    link:'https://tor.us/',
-    alt:'torus'
+    link: 'https://tor.us/',
+    alt: 'torus'
   },
   {
     logo: transak,
-    link:'https://transak.com/',
-    alt:'transak'
+    link: 'https://transak.com/',
+    alt: 'transak'
   },
   {
     logo: unstoppabledomains,
-    link:'https://unstoppabledomains.com/',
-    alt:'unstoppabledomains'
+    link: 'https://unstoppabledomains.com/',
+    alt: 'unstoppabledomains'
   },
   {
     logo: orion,
-    link:'https://www.orionprotocol.io/',
-    alt:'orion'
+    link: 'https://www.orionprotocol.io/',
+    alt: 'orion'
   },
   {
     logo: boson,
-    link:'https://www.bosonprotocol.io/',
-    alt:'boson'
+    link: 'https://www.bosonprotocol.io/',
+    alt: 'boson'
   },
   {
     logo: unmarshal,
-    link:'https://unmarshal.io/',
-    alt:'unmarshal'
+    link: 'https://unmarshal.io/',
+    alt: 'unmarshal'
   },
   {
     logo: dappradar,
-    link:'https://dappradar.com/',
-    alt:'dappradar'
+    link: 'https://dappradar.com/',
+    alt: 'dappradar'
   },
   {
     logo: defistation,
-    link:'https://www.defistation.io/',
-    alt:'defistation'
+    link: 'https://www.defistation.io/',
+    alt: 'defistation'
   },
   {
     logo: mintgate,
-    link:'https://mintgate.app/',
-    alt:'mintgate'
+    link: 'https://mintgate.app/',
+    alt: 'mintgate'
   },
   {
     logo: pancake,
-    link:'https://pancakeswap.finance/',
-    alt:'pancake'
+    link: 'https://pancakeswap.finance/',
+    alt: 'pancake'
   },
   {
     logo: krystal,
-    link:'https://krystal.app/',
-    alt:'krystal'
+    link: 'https://krystal.app/',
+    alt: 'krystal'
   },
   {
     logo: immunefi,
-    link:'https://immunefi.com/',
-    alt:'immunefi'
+    link: 'https://immunefi.com/',
+    alt: 'immunefi'
   },
   {
     logo: getblock,
-    link:'http://getblock.io/',
-    alt:'getblock'
-  },
+    link: 'http://getblock.io/',
+    alt: 'getblock'
+  }
 ]
 
 const LargeCompanyLogo = ({ logo, link, alt }) => {
   return (
     <div className='fuse_ecosysyem__logo-priority small-12 medium-6  large-4'>
-       <a href={link} rel='noreferrer noopener' target='_blank'>   
-        <img src={logo} alt= {`${alt}`}/>
-       </a> 
-    </div>
-  )
-}
-
-const SmallCompanyLogo = ({ logo, link, alt }) =>{
-  return(
-    <div className='fuse_ecosysyem__logo-small small-6 medium-4 large-2'>
       <a href={link} rel='noreferrer noopener' target='_blank'>
-       <img src={logo} alt= {`${alt}`}/>
+        <img src={logo} alt={`${alt}`} />
       </a>
     </div>
   )
 }
 
+const SmallCompanyLogo = ({ logo, link, alt }) => {
+  return (
+    <div className='fuse_ecosysyem__logo-small small-6 medium-4 large-2'>
+      <a href={link} rel='noreferrer noopener' target='_blank'>
+        <img src={logo} alt={`${alt}`} />
+      </a>
+    </div>
+  )
+}
 
 const FuseEcosystem = (props) => {
   return (
     <section className='fuse_ecosysyem'>
       <h3 className='fuse_ecosysyem__title'>
-        <FormattedMessage defaultMessage='Join our growing ecosystem of leading infrastructure partners, 
-liquidity platforms, data providers and more!' />
+        <FormattedMessage defaultMessage='Join our growing ecosystem of leading infrastructure partners, liquidity platforms, data providers and more!' />
       </h3>
       <div className='fuse_ecosysyem__items grid-x align-justify'>
         <div className='grid-x fuse_ecosysyem__logo-block cell'>
           <div className='grid-x fuse_ecosysyem__logo-row'>
-             {
+            {
               largeEcoSystem.map((logo, index) => <LargeCompanyLogo key={index} {...logo} />)
-             }
-          </div>  
+            }
+          </div>
         </div>
         <div className='grid-x fuse_ecosysyem__logo-block cell'>
           <div className='grid-x fuse_ecosysyem__logo-row'>
-          {
+            {
               smallEcoSystem.map((logo, index) => <SmallCompanyLogo key={index} {...logo} />)
-             }
+            }
           </div>
         </div>
       </div>

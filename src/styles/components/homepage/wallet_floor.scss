@@ -1,10 +1,9 @@
 @include block(wallet_floor) {
   @include xy-grid-container();
- 
+
   padding: 5em 0 0;
 
   @include element(info) {
-
   }
 
   @include breakpoint(medium down) {
@@ -26,14 +25,12 @@
 
   @include element(title) {
     @extend %title;
-
   }
 
   @include element(text) {
     @extend %text;
     padding: 1.5em 0;
     max-width: 390px;
-
   }
 
   @include element(links) {
@@ -48,11 +45,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      
+
       gap: 15px;
       > a {
-        max-width: 200px
-        }
+        max-width: 200px;
+      }
       @include breakpoint(medium up) {
         @include xy-grid();
 
@@ -92,8 +89,6 @@
         height: auto;
       }
     }
-
-
   }
 
   @include block(image-background) {
@@ -104,5 +99,4 @@
     border-radius: 50%;
     z-index: -99;
   }
-
 }

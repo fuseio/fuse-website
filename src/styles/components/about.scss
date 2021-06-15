@@ -11,6 +11,9 @@
   @include element(container) {
     @include xy-grid-container();
     width: 100%;
+    @include breakpoint(large down) {
+      @include xy-grid-container(1000px);
+    }
     @include breakpoint(medium up) {
       padding: 10em 0.9375rem;
     }

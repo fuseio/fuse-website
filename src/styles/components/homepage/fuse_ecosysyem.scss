@@ -4,11 +4,11 @@
   padding: 5em 0;
   position: relative;
 
-  @include breakpoint(large down){
+  @include breakpoint(large down) {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
   }
-  
+
   @include element(title) {
     @extend %title;
     max-width: 1180px;

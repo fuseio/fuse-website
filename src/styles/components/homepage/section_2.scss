@@ -1,8 +1,7 @@
 @include block(section_2) {
   @include xy-grid-container();
-
   padding: 5em 0px 8em;
-  @include breakpoint(large down){
+  @include breakpoint(large down) {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
   }
@@ -116,7 +115,7 @@
     @include flex-align(center, middle);
   }
   @include block(item) {
-    @include breakpoint(medium up) {
+    @include breakpoint(large up) {
       @include xy-grid();
       @include flex-align(center, middle);
       @include xy-cell(8, null, 0);

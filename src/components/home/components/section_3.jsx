@@ -44,7 +44,7 @@ const StudioFloor = () => {
               <FormattedMessage
                 defaultMessage='Zero Coding Launch Platform for Entrepreneurs and Impact
               Leaders.'
-               
+
               />
             </p>
 
@@ -76,8 +76,8 @@ const FuseWalletFloor = () => {
   return (
     <section className='wallet_floor'>
       <div className='wallet_floor__container grid-x align-justify align-self-middle'>
-      <div className="wallet_floor__image cell small-24 medium-12">
-          <img src={Gif} alt='iphone'/>
+        <div className='wallet_floor__image cell small-24 medium-12'>
+          <img src={Gif} alt='iphone' />
         </div>
         <div className='wallet_floor__info cell small-24 medium-12'>
           <div className='wallet_floor__sub-title grid-x align-middle'>
@@ -99,7 +99,7 @@ const FuseWalletFloor = () => {
             <FormattedMessage
               defaultMessage='Onboard your community members with a personalized wallet
             experience.'
-             
+
             />
           </p>
           <ul className='props'>
@@ -114,7 +114,7 @@ const FuseWalletFloor = () => {
             </li>
           </ul>
           <div className='wallet_floor__links'>
-            <div className="items">
+            <div className='items'>
               <a
                 rel='noreferrer noopener'
                 target='_blank'
@@ -141,7 +141,7 @@ const FuseWalletFloor = () => {
             </div>
           </div>
         </div>
-        
+
       </div>
     </section>
   )
@@ -172,7 +172,7 @@ const FuseSwapFloor = () => {
               <p className='fuseswap_floor__text'>
                 <FormattedMessage
                   defaultMessage='The DeFi Hub for the Fuse ecosystem'
-                  
+
                 />
               </p>
               <ul className='props'>
@@ -206,8 +206,8 @@ const FuseSwapFloor = () => {
 const SectionThree = () => {
   return (
     <>
-    <div className='blue'>
-      <StudioFloor />
+      <div className='blue'>
+        <StudioFloor />
       </div>
       <FuseWalletFloor />
       <FuseSwapFloor />

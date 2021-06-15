@@ -306,7 +306,6 @@
 		width: 25px;
 		height: 25px;
 		margin-left: auto;
-		z-index: 999;
 		span {
 			background: white;
 			border: none;
@@ -326,13 +325,17 @@
 			}
 		}
 
-			
 		@include modifier(black) {
 			@include breakpoint(small down) {
 				span {
 					background: black;
 				}
 			}
+		}
+
+		@include modifier(abs) {
+			position: absolute;
+			right: 30px;
 		}
 
 		@include modifier(dark) {

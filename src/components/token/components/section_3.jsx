@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect } from 'react'
+import React, { useMemo } from 'react'
 import Table from './Table'
 import TableHeader from '@/components/token/components/Table/TableHeader'
 import Ether from '@/assets/img/table/Ether.svg'
@@ -28,8 +28,8 @@ const SectionThree = () => {
     []
   )
   const {
-    data: circulatingData  = { ethereumBlock: "", bscBlock: "", fuseBlock: "" },
-  } = useFetch('https://bot.fuse.io/api/v1/stats/circulating', {}, []);
+    data: circulatingData = { ethereumBlock: '', bscBlock: '', fuseBlock: '' }
+  } = useFetch('https://bot.fuse.io/api/v1/stats/circulating', {}, [])
   // TODO
   // const {
   //   data: supplyData  = { ethereumBlock: "", bscBlock: "", fuseBlock: "" },
