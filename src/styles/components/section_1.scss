@@ -9,7 +9,7 @@
   @include element(wrapper) {
     padding: 1em 0;
     @include xy-grid-container();
-    @include breakpoint(large) {
+    @include breakpoint(large down) {
       @include xy-grid-container(90%);
     }
   }
@@ -77,15 +77,13 @@
       max-width: 800px;
       min-height: 800px;
       max-height: 800px;
-
-      @include breakpoint(large) {
+      @include breakpoint(large down) {
         min-width: 600px;
         max-width: 600px;
         min-height: 600px;
         max-height: 600px;
       }
-
-      @include breakpoint(medium) {
+      @include breakpoint(medium down) {
         min-width: 500px;
         max-width: 500px;
         min-height: 500px;

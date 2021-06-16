@@ -45,6 +45,14 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: 0.01px;
+
+  @include breakpoint(large down) {
+    font-size: 1em;
+  }
+
+  @include breakpoint(medium down) {
+    font-size: 0.9em;
+  }
 }
 
 %text {
@@ -56,6 +64,9 @@
   line-height: 1.44;
   letter-spacing: normal;
 
+  @include breakpoint(large down) {
+    font-size: 1em;
+  }
   @include breakpoint(medium down) {
     font-size: 0.9em;
   }

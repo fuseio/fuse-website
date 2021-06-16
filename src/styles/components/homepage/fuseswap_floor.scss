@@ -8,7 +8,7 @@
 
     padding: 12em 0 6em;
 
-    @include breakpoint(large) {
+    @include breakpoint(large down) {
       @include xy-grid-container(90%);
     }
 

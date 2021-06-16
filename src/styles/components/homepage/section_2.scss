@@ -1,7 +1,7 @@
 @include block(section_2) {
   @include xy-grid-container();
   padding: 5em 0px 8em;
-  @include breakpoint(large) {
+  @include breakpoint(large down) {
     @include xy-grid-container(90%);
   }
   @include element(title) {
@@ -87,7 +87,7 @@
 
   @include element(container) {
     @include xy-grid-container();
-    @include breakpoint(large) {
+    @include breakpoint(large down) {
       @include xy-grid-container(90%);
     }
     width: 100%;
@@ -156,12 +156,7 @@
     }
 
     @include block(title) {
-      font-size: 1.231em;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: 0.01px;
+      @extend %secondary-title;
 
       @include modifier(arrow) {
         &::after {

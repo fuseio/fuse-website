@@ -5,7 +5,7 @@
   @include element(wrapper) {
     position: relative;
     @include xy-grid-container();
-    @include breakpoint(large) {
+    @include breakpoint(large down) {
       @include xy-grid-container(90%);
     }
   }

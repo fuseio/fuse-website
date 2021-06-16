@@ -10,7 +10,7 @@
 
   @include element(container) {
     @include xy-grid-container();
-    @include breakpoint(large) {
+    @include breakpoint(large down) {
       @include xy-grid-container(90%);
     }
     width: 100%;
@@ -76,7 +76,7 @@
 @include block(utilities) {
   @include element(container) {
     @include xy-grid-container();
-    @include breakpoint(large) {
+    @include breakpoint(large down) {
       @include xy-grid-container(90%);
     }
     @include breakpoint(medium down) {
@@ -156,7 +156,7 @@
   @include element(container) {
     width: 100%;
     @include xy-grid-container();
-    @include breakpoint(large) {
+    @include breakpoint(large down) {
       @include xy-grid-container(90%);
     }
   }
@@ -350,7 +350,7 @@
   @include element(container) {
     position: relative;
     @include xy-grid-container();
-    @include breakpoint(large) {
+    @include breakpoint(large down) {
       @include xy-grid-container(90%);
     }
     width: 100%;
@@ -483,7 +483,7 @@
 
   @include element(container) {
     @include xy-grid-container();
-    @include breakpoint(large) {
+    @include breakpoint(large down) {
       @include xy-grid-container(90%);
     }
     width: 100%;
@@ -578,7 +578,7 @@
 
   @include element(container) {
     @include xy-grid-container();
-    @include breakpoint(large) {
+    @include breakpoint(large down) {
       @include xy-grid-container(90%);
     }
   }
