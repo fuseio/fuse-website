@@ -105,7 +105,7 @@ function List ({ title, items }) {
 
 function Links () {
   return (
-    <div className='grid-x links cell small-24 medium-8'>
+    <div className='grid-x links cell small-24 medium-14 large-10'>
       {
         items.map((item, index) => {
           return <List {...item} key={index} />

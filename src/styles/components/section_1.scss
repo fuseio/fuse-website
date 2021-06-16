@@ -9,6 +9,9 @@
   @include element(wrapper) {
     padding: 1em 0;
     @include xy-grid-container();
+    @include breakpoint(large) {
+      @include xy-grid-container(90%);
+    }
   }
 
   @include element(launch__button) {
@@ -74,6 +77,20 @@
       max-width: 800px;
       min-height: 800px;
       max-height: 800px;
+
+      @include breakpoint(large) {
+        min-width: 600px;
+        max-width: 600px;
+        min-height: 600px;
+        max-height: 600px;
+      }
+
+      @include breakpoint(medium) {
+        min-width: 500px;
+        max-width: 500px;
+        min-height: 500px;
+        max-height: 500px;
+      }
     }
   }
 

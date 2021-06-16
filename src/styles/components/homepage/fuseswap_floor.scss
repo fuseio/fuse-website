@@ -8,9 +8,8 @@
 
     padding: 12em 0 6em;
 
-    @include breakpoint(large down) {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem;
+    @include breakpoint(large) {
+      @include xy-grid-container(90%);
     }
 
     @include breakpoint(medium down) {

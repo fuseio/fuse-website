@@ -45,6 +45,9 @@
     height: min-content;
     bottom: 0 !important;
     @include xy-grid-container();
+    @include breakpoint(large) {
+      @include xy-grid-container(90%);
+    }
     @include breakpoint(medium down) {
       display: none;
     }

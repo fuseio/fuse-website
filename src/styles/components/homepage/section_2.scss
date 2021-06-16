@@ -1,9 +1,8 @@
 @include block(section_2) {
   @include xy-grid-container();
   padding: 5em 0px 8em;
-  @include breakpoint(large down) {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+  @include breakpoint(large) {
+    @include xy-grid-container(90%);
   }
   @include element(title) {
     @extend %title;
@@ -88,6 +87,9 @@
 
   @include element(container) {
     @include xy-grid-container();
+    @include breakpoint(large) {
+      @include xy-grid-container(90%);
+    }
     width: 100%;
   }
   @include element(wrapper) {

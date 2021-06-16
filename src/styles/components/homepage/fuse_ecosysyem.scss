@@ -4,9 +4,8 @@
   padding: 5em 0;
   position: relative;
 
-  @include breakpoint(large down) {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+  @include breakpoint(large) {
+    @include xy-grid-container(90%);
   }
 
   @include element(title) {

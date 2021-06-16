@@ -1,6 +1,8 @@
 @include block(wallet_floor) {
   @include xy-grid-container();
-
+  @include breakpoint(large) {
+    @include xy-grid-container(90%);
+  }
   padding: 5em 0 0;
 
   @include element(info) {
