@@ -5,6 +5,9 @@
   @include element(wrapper) {
     position: relative;
     @include xy-grid-container();
+    @include breakpoint(large down) {
+      @include xy-grid-container(90%);
+    }
   }
 
   @include element(newsletter) {
@@ -15,7 +18,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       right: 0;
       bottom: 0;

@@ -6,6 +6,9 @@
 	}
 	@include element(container) {
 		@include xy-grid-container();
+		@include breakpoint(large down) {
+      @include xy-grid-container(90%);
+    }
 	}
 
 	@include element(wrapper) {

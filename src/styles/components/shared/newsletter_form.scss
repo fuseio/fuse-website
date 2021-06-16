@@ -43,12 +43,12 @@
 
     @include element(button) {
       font-weight: 500;
-      background: linear-gradient(124.98deg, #B3FFBB 6.71%, #FFFB00 90%);
+      background: linear-gradient(124.98deg, #b3ffbb 6.71%, #fffb00 90%);
       width: 97px;
       height: 54px;
       border-radius: 100px;
       margin-left: 1em;
-      
+
       @include breakpoint(small only) {
         margin-top: 0;
         margin-left: 0;

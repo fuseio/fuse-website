@@ -7,8 +7,11 @@
   }
 
   @include element(wrapper) {
-    padding: 5em 0;
+    padding: 1em 0;
     @include xy-grid-container();
+    @include breakpoint(large down) {
+      @include xy-grid-container(90%);
+    }
   }
 
   @include element(launch__button) {
@@ -70,10 +73,22 @@
     }
     @include xy-cell(auto, null, 0);
     canvas {
-      min-width: 800px;
-      min-height: 800px;
-      max-width: 800px;
-      max-height: 800px;
+      min-width: 650px;
+      max-width: 700px;
+      min-height: 650px;
+      max-height: 700px;
+      @include breakpoint(1600px) {
+        min-width: 800px;
+        max-width: 800px;
+        min-height: 800px;
+        max-height: 800px;
+      }
+      @include breakpoint(large down) {
+        min-width: 500px;
+        max-width: 500px;
+        min-height: 500px;
+        max-height: 500px;
+      }
     }
   }
 

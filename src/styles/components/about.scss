@@ -9,10 +9,13 @@
   }
 
   @include element(container) {
-    @include xy-grid-container();
     width: 100%;
+    @include xy-grid-container();
+    @include breakpoint(large down) {
+      @include xy-grid-container(90%);
+    }
     @include breakpoint(medium up) {
-      padding: 10em 0px;
+      padding: 10em 0.9375rem;
     }
     @include breakpoint(medium down) {
       padding: 5em 20px;
@@ -67,8 +70,11 @@
   }
 
   @include element(container) {
-    @include xy-grid-container();
     width: 100%;
+    @include xy-grid-container();
+    @include breakpoint(large down) {
+      @include xy-grid-container(90%);
+    }
   }
 
   @include element(wrapper) {
@@ -108,6 +114,9 @@
 
   @include element(container) {
     @include xy-grid-container();
+    @include breakpoint(large down) {
+      @include xy-grid-container(90%);
+    }
     width: 100%;
   }
   @include element(text) {
@@ -251,6 +260,9 @@
 
   @include element(container) {
     @include xy-grid-container();
+    @include breakpoint(large down) {
+      @include xy-grid-container(90%);
+    }
     width: 100%;
   }
 

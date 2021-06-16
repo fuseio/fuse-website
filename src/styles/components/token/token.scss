@@ -10,6 +10,9 @@
 
   @include element(container) {
     @include xy-grid-container();
+    @include breakpoint(large down) {
+      @include xy-grid-container(90%);
+    }
     width: 100%;
   }
   @include element(wrapper) {
@@ -73,6 +76,9 @@
 @include block(utilities) {
   @include element(container) {
     @include xy-grid-container();
+    @include breakpoint(large down) {
+      @include xy-grid-container(90%);
+    }
     @include breakpoint(medium down) {
     }
   }
@@ -150,6 +156,9 @@
   @include element(container) {
     width: 100%;
     @include xy-grid-container();
+    @include breakpoint(large down) {
+      @include xy-grid-container(90%);
+    }
   }
   @include element(wrapper) {
     padding: 2em 0 4em;
@@ -341,6 +350,9 @@
   @include element(container) {
     position: relative;
     @include xy-grid-container();
+    @include breakpoint(large down) {
+      @include xy-grid-container(90%);
+    }
     width: 100%;
   }
 
@@ -471,6 +483,9 @@
 
   @include element(container) {
     @include xy-grid-container();
+    @include breakpoint(large down) {
+      @include xy-grid-container(90%);
+    }
     width: 100%;
     padding-top: 4em;
     padding-bottom: 4em;
@@ -563,6 +578,9 @@
 
   @include element(container) {
     @include xy-grid-container();
+    @include breakpoint(large down) {
+      @include xy-grid-container(90%);
+    }
   }
   @include element(wrapper) {
     padding: 4em 0;

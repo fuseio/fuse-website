@@ -74,10 +74,10 @@ const SectionFour = () => {
                   </span>
                 </a>
               </div>
-              <div className="blogs__wrapper cell large-auto grid-x align-spaced">
-                {data.items.slice(0, 3).map((item, index) => {
-                  return <Item key={index} {...item} />;
-                })}
+              <div className='blogs__wrapper cell large-auto grid-x align-spaced'>
+                {
+                  data.items.slice(0, 3).map((item, index) => <Item key={index} {...item} />)
+                }
               </div>
             </div>
             <div className='section-C__swiper'>

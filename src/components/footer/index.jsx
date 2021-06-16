@@ -18,7 +18,7 @@ function Footer () {
         <Icons />
       </div>
       <div className='footer__copy'>
-      © 2021 Fuse. All Rights Reserved.
+        © 2021 Fuse. All Rights Reserved.
       </div>
     </footer>
   )

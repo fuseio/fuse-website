@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { withRouter } from 'react-router'
 import useOutsideClick from '@/hooks/useOutsideClick'
 
-import SelectLanguage from '../shared/select_language'
+// import SelectLanguage from '../shared/select_language'
 import Studio from '@/assets/images/dropdown/studio.svg'
 import Staking from '@/assets/images/dropdown/staking.svg'
 import Fusecash from '@/assets/images/dropdown/fusecash.svg'
@@ -123,13 +123,13 @@ const Item = withRouter(({ title, icon, url, route, history }) => {
         <img src={icon} className='icon' />
         {title}
       </div>
-      )
+    )
     : (
       <a rel='noreferrer noopener' className='list__item' target='_blank' href={url}>
         <img src={icon} className='icon' />
         {title}
       </a>
-      )
+    )
 })
 
 function List ({ title, items }) {
@@ -147,7 +147,7 @@ function MobileMenu ({ history }) {
   const [isOpen, setMenuOpen] = useState(false)
   const hamburgerRef = useRef(null)
 
-  const isWhite = !history.location.pathname.includes('about')
+  const isDark = history.location.pathname.includes('about')
 
   useOutsideClick(hamburgerRef, () => {
     if (isOpen) {
@@ -161,7 +161,10 @@ function MobileMenu ({ history }) {
         ref={hamburgerRef}
         type='button'
         className={classNames('hamburger-button__container', {
-          'hamburger-button__container--white': isWhite
+          'hamburger-button__container--black': isOpen
+        },
+        {
+          'hamburger-button__container--dark': isDark
         })}
         onClick={() => setMenuOpen(!isOpen)}
       >
@@ -172,6 +175,18 @@ function MobileMenu ({ history }) {
       {
         isOpen && (
           <div className='mobile_menu'>
+            <button
+              ref={hamburgerRef}
+              type='button'
+              className={classNames('hamburger-button__container hamburger-button__container--abs', {
+                'hamburger-button__container--black': isOpen || isDark
+              })}
+              onClick={() => setMenuOpen(!isOpen)}
+            >
+              <span className='hamburger-button__top' />
+              <span className='hamburger-button__middle' />
+              <span className='hamburger-button__bottom' />
+            </button>
             {
               menuItems.map((item, index) => (
                 <List key={index} {...item} />
@@ -180,20 +195,9 @@ function MobileMenu ({ history }) {
             <div className='line' />
             <div className='grid-y align-top align-left  cell shrink'>
               <div className='list__item' onClick={() => history.push('/about')}>
-                {/* <img src={icon} className='icon' /> */}
                 <FormattedMessage defaultMessage='About us' />
               </div>
-              <SelectLanguage />
-              {/* <div className='header__wallet'>
-                <a rel='noopener noreferrer' href='https://studio.fuse.io' target='_blank' role='button'>
-                  <div className='header__wallet__icon' />
-                  <span>
-                    <FormattedMessage
-                      defaultMessage='Fuse studio'
-                    />
-                  </span>
-                </a>
-              </div> */}
+              {/* <SelectLanguage /> */}
             </div>
           </div>
         )

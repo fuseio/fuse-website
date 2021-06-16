@@ -1,7 +1,9 @@
 @include block(section_2) {
   @include xy-grid-container();
-
   padding: 5em 0px 8em;
+  @include breakpoint(large down) {
+    @include xy-grid-container(90%);
+  }
   @include element(title) {
     @extend %title;
     padding: 2em 0;
@@ -85,6 +87,9 @@
 
   @include element(container) {
     @include xy-grid-container();
+    @include breakpoint(large down) {
+      @include xy-grid-container(90%);
+    }
     width: 100%;
   }
   @include element(wrapper) {
@@ -112,7 +117,7 @@
     @include flex-align(center, middle);
   }
   @include block(item) {
-    @include breakpoint(medium up) {
+    @include breakpoint(large up) {
       @include xy-grid();
       @include flex-align(center, middle);
       @include xy-cell(8, null, 0);
@@ -151,12 +156,7 @@
     }
 
     @include block(title) {
-      font-size: 1.231em;
-      font-weight: 500;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: 0.01px;
+      @extend %secondary-title;
 
       @include modifier(arrow) {
         &::after {

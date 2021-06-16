@@ -1,8 +1,10 @@
 @include block(fuse_ecosysyem) {
-  @include xy-grid-container();
-
   padding: 5em 0;
   position: relative;
+  @include xy-grid-container();
+  @include breakpoint(large down) {
+    @include xy-grid-container(90%);
+  }
 
   @include element(title) {
     @extend %title;
