@@ -10,7 +10,7 @@ const items = [
     image: Fees,
     title: <FormattedMessage defaultMessage='Transactions fees' />,
     text: (
-      <FormattedMessage defaultMessage='100% of feed are paid to network validators.' />
+      <FormattedMessage defaultMessage='100% of fees are paid to network validators.' />
     )
   },
   {

@@ -9,7 +9,7 @@ const items = [
     color: '#37556a'
   },
   {
-    title: <FormattedMessage defaultMessage='Bootstrap poll' />,
+    title: <FormattedMessage defaultMessage='Bootstrap pool' />,
     text: <FormattedMessage defaultMessage='130 million FUSE' />,
     color: '#0d263c'
   },
