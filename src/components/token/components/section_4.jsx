@@ -3,12 +3,18 @@ import Kyber from '@/assets/img/purchase_kyber.png'
 import OneInch from '@/assets/img/purchase_1inch.png'
 import Loopring from '@/assets/img/purchase_loopring.png'
 import Uniswap from '@/assets/img/purchase_uniswap.png'
+import Gate from '@/assets/img/purchase_gate.png'
 import FuseTokenOne from '@/assets/img/fuse_token_1.png'
 import FuseTokenTwo from '@/assets/img/fuse_token_2.png'
 import Bubble from '@/assets/img/bubble.png'
 import { FormattedMessage } from 'react-intl'
 
 const items = [
+  {
+    icon: Gate,
+    name: 'Gate.io',
+    link: 'https://www.gate.io/trade/FUSE_USDT'
+  },
   {
     icon: Uniswap,
     name: 'Uniswap',
