@@ -38,9 +38,9 @@ const SectionThree = () => {
   const data = useMemo(
     () => [
       {
-        ether: '1,555',
-        bsc: '131',
-        fuse: '357,053'
+        ether: '1,642',
+        bsc: '427',
+        fuse: '391,157'
       },
       {
         ether: circulatingData.ethereumBlock || 18567954,
