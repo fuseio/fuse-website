@@ -13,7 +13,9 @@ const items = [
   {
     icon: Gate,
     name: 'Gate.io',
-    link: 'https://www.gate.io/trade/FUSE_USDT'
+    link: 'https://www.gate.io/trade/FUSE_USDT',
+    width:"55px",
+    height:"55px",
   },
   {
     icon: Uniswap,
@@ -37,10 +39,10 @@ const items = [
   }
 ]
 
-const Item = ({ icon, name, link }) => {
+const Item = ({ icon, name, link, width, height }) => {
   return (
     <a href={link} rel='noreferrer noopener' target='_blank' className='item'>
-      <img src={icon} />
+      <img src={icon} style={{height,width}}/>
       <h3>{name}</h3>
     </a>
   )
