@@ -6,8 +6,8 @@ import useOutsideClick from '@/hooks/useOutsideClick.jsx'
 
 const options = [
   { label: 'English', value: 'en' },
-  { label: '中文', value: 'zh' },
-  { label: 'Vietnamese', value: 'vi' },
+  // { label: '中文', value: 'zh' },
+  // { label: 'Vietnamese', value: 'vi' },
   { label: 'Korean', value: 'ko' }
 ]
 

@@ -17,16 +17,16 @@ import Footer from '@/components/footer'
 import ScrollToTopController from '@/hooks/useScrollToTopController'
 
 import en from '../lang/en.json'
-import zh from '../lang/zh.json'
-import vi from '../lang/vi.json'
+// import zh from '../lang/zh.json'
+// import vi from '../lang/vi.json'
 import ko from '../lang/ko.json'
 
 const { store, history } = configureStore(window.__INITIAL_STATE__)
 
 const MESSAGES = {
   en,
-  zh,
-  vi,
+  // zh,
+  // vi,
   ko
 }
 

@@ -48,7 +48,7 @@ function Header ({ history }) {
               </a>
             </div>
           </div>
-          <div className='grid-x align-middle  cell shrink invisible'>
+          <div className='grid-x align-middle  cell shrink'>
             <SelectLanguage />
           </div>
         </div>

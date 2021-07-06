@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { withRouter } from 'react-router'
 import useOutsideClick from '@/hooks/useOutsideClick'
 
-// import SelectLanguage from '../shared/select_language'
+import SelectLanguage from '../shared/select_language'
 import Studio from '@/assets/images/dropdown/studio.svg'
 import Staking from '@/assets/images/dropdown/staking.svg'
 import Fusecash from '@/assets/images/dropdown/fusecash.svg'
@@ -123,13 +123,13 @@ const Item = withRouter(({ title, icon, url, route, history }) => {
         <img src={icon} className='icon' />
         {title}
       </div>
-    )
+      )
     : (
       <a rel='noreferrer noopener' className='list__item' target='_blank' href={url}>
         <img src={icon} className='icon' />
         {title}
       </a>
-    )
+      )
 })
 
 function List ({ title, items }) {
@@ -197,7 +197,7 @@ function MobileMenu ({ history }) {
               <div className='list__item' onClick={() => history.push('/about')}>
                 <FormattedMessage defaultMessage='About us' />
               </div>
-              {/* <SelectLanguage /> */}
+              <SelectLanguage />
             </div>
           </div>
         )
