@@ -4,7 +4,6 @@ import BodyRow from './BodyRow'
 import HeaderRow from './HeaderRow'
 import Holders from '@/assets/img/table/holders.svg'
 import Circulating from '@/assets/img/table/circulating.svg'
-import TotalSupply from '@/assets/img/table/total_supply.svg'
 import Contract from '@/assets/img/table/contract.svg'
 import { FormattedMessage } from 'react-intl'
 
@@ -17,10 +16,6 @@ const rightColumnData = [
     icon: Circulating,
     name: <FormattedMessage defaultMessage='Circulating supply' />
   },
-  // {
-  //   icon: TotalSupply,
-  //   name: <FormattedMessage defaultMessage='Total supply' />
-  // },
   {
     icon: Contract,
     name: <FormattedMessage defaultMessage='Contracts' />

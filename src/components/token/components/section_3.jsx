@@ -5,23 +5,23 @@ import Ether from '@/assets/img/table/Ether.svg'
 import BSC from '@/assets/img/table/BSC.svg'
 import FUSE from '@/assets/img/table/fuse2.svg'
 import LINK from '@/assets/img/table/link.svg'
-import { addressShortener } from '@/utils/format'
+import { addressShortener, formatNumber } from '@/utils/format'
 import { FormattedMessage } from 'react-intl'
 import useFetch from 'use-http'
 
-function formatHolders({ bsc, eth, fuse }) {
+function formatHolders ({ bsc, eth, fuse }) {
   return {
-    bsc: Number(bsc).toLocaleString(),
-    ether: Number(eth).toLocaleString(),
-    fuse: Number(fuse).toLocaleString(),
+    bsc: formatNumber(bsc),
+    ether: formatNumber(eth),
+    fuse: formatNumber(fuse)
   }
 }
 
-function formatCirculating({ onBSCNetwork, onEtherumNetwork, onFuseNetwork }) {
+function formatCirculating ({ onBSCNetwork, onEtherumNetwork, onFuseNetwork }) {
   return {
-    bsc: Math.round(onBSCNetwork),
-    ether: Math.round(onEtherumNetwork),
-    fuse: Math.round(onFuseNetwork)
+    bsc: formatNumber(Math.round(onBSCNetwork)),
+    ether: formatNumber(Math.round(onEtherumNetwork)),
+    fuse: formatNumber(Math.round(onFuseNetwork))
   }
 }
 
@@ -44,25 +44,17 @@ const SectionThree = () => {
     []
   )
 
-
   const {
     data: holdersData = {}
-  } = useFetch('https://bot.fuse.io/api/v1/stats/wallets', {}, []);
+  } = useFetch('https://bot.fuse.io/api/v1/stats/wallets', {}, [])
 
   const {
     data: circulatingData = {}
-  } = useFetch('https://bot.fuse.io/api/v2/stats/circulating', {}, []);
-  // TODO: Total Supply
-
+  } = useFetch('https://bot.fuse.io/api/v2/stats/circulating', {}, [])
   const data = useMemo(
     () => [
       formatHolders(holdersData),
       formatCirculating(circulatingData),
-      // {
-      //   ether: '18567954',
-      //   bsc: '18567954',
-      //   fuse: '18567954'
-      // },
       {
         ether: (
           <a
