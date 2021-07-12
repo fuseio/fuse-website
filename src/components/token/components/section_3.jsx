@@ -5,9 +5,25 @@ import Ether from '@/assets/img/table/Ether.svg'
 import BSC from '@/assets/img/table/BSC.svg'
 import FUSE from '@/assets/img/table/fuse2.svg'
 import LINK from '@/assets/img/table/link.svg'
-import { addressShortener } from '@/utils/format'
+import { addressShortener, formatNumber } from '@/utils/format'
 import { FormattedMessage } from 'react-intl'
 import useFetch from 'use-http'
+
+function formatHolders ({ bsc, eth, fuse }) {
+  return {
+    bsc: formatNumber(bsc),
+    ether: formatNumber(eth),
+    fuse: formatNumber(fuse)
+  }
+}
+
+function formatCirculating ({ onBSCNetwork, onEtherumNetwork, onFuseNetwork }) {
+  return {
+    bsc: formatNumber(Math.round(onBSCNetwork)),
+    ether: formatNumber(Math.round(onEtherumNetwork)),
+    fuse: formatNumber(Math.round(onFuseNetwork))
+  }
+}
 
 const SectionThree = () => {
   const columns = useMemo(
@@ -27,31 +43,18 @@ const SectionThree = () => {
     ],
     []
   )
-  const {
-    data: circulatingData = { ethereumBlock: '', bscBlock: '', fuseBlock: '' }
-  } = useFetch('https://bot.fuse.io/api/v1/stats/circulating', {}, [])
-  // TODO
-  // const {
-  //   data: supplyData  = { ethereumBlock: "", bscBlock: "", fuseBlock: "" },
-  // } = useFetch('https://bot.fuse.io/api/v1/stats/supply', {}, []);
 
+  const {
+    data: holdersData = {}
+  } = useFetch('https://bot.fuse.io/api/v1/stats/wallets', {}, [])
+
+  const {
+    data: circulatingData = {}
+  } = useFetch('https://bot.fuse.io/api/v2/stats/circulating', {}, [])
   const data = useMemo(
     () => [
-      {
-        ether: '1,642',
-        bsc: '427',
-        fuse: '391,157'
-      },
-      {
-        ether: circulatingData.ethereumBlock || 18567954,
-        bsc: circulatingData.bscBlock || 18567954,
-        fuse: circulatingData.fuseBlock || 18567954
-      },
-      {
-        ether: '18567954',
-        bsc: '18567954',
-        fuse: '18567954'
-      },
+      formatHolders(holdersData),
+      formatCirculating(circulatingData),
       {
         ether: (
           <a
@@ -83,7 +86,7 @@ const SectionThree = () => {
         )
       }
     ],
-    [circulatingData]
+    [circulatingData, holdersData]
   )
 
   return (
