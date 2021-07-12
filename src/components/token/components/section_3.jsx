@@ -46,19 +46,11 @@ const SectionThree = () => {
 
 
   const {
-    data: holdersData = {
-      bsc: '1,642',
-      eth: '427',
-      fuse: '391,157'
-    }
+    data: holdersData = {}
   } = useFetch('https://bot.fuse.io/api/v1/stats/wallets', {}, []);
 
   const {
-    data: circulatingData = {
-      onBSCNetwork: 18567954,
-      onEtherumNetwork: 18567954,
-      onFuseNetwork: 18567954
-    }
+    data: circulatingData = {}
   } = useFetch('https://bot.fuse.io/api/v2/stats/circulating', {}, []);
   // TODO: Total Supply
 
