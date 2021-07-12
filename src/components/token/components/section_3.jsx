@@ -9,6 +9,22 @@ import { addressShortener } from '@/utils/format'
 import { FormattedMessage } from 'react-intl'
 import useFetch from 'use-http'
 
+function formatHolders({ bsc, eth, fuse }) {
+  return {
+    bsc: Number(bsc).toLocaleString(),
+    ether: Number(eth).toLocaleString(),
+    fuse: Number(fuse).toLocaleString(),
+  }
+}
+
+function formatCirculating({ onBSCNetwork, onEtherumNetwork, onFuseNetwork }) {
+  return {
+    bsc: Math.round(onBSCNetwork),
+    ether: Math.round(onEtherumNetwork),
+    fuse: Math.round(onFuseNetwork)
+  }
+}
+
 const SectionThree = () => {
   const columns = useMemo(
     () => [
@@ -27,31 +43,34 @@ const SectionThree = () => {
     ],
     []
   )
+
+
   const {
-    data: circulatingData = { ethereumBlock: '', bscBlock: '', fuseBlock: '' }
-  } = useFetch('https://bot.fuse.io/api/v1/stats/circulating', {}, [])
-  // TODO
-  // const {
-  //   data: supplyData  = { ethereumBlock: "", bscBlock: "", fuseBlock: "" },
-  // } = useFetch('https://bot.fuse.io/api/v1/stats/supply', {}, []);
+    data: holdersData = {
+      bsc: '1,642',
+      eth: '427',
+      fuse: '391,157'
+    }
+  } = useFetch('https://bot.fuse.io/api/v1/stats/wallets', {}, []);
+
+  const {
+    data: circulatingData = {
+      onBSCNetwork: 18567954,
+      onEtherumNetwork: 18567954,
+      onFuseNetwork: 18567954
+    }
+  } = useFetch('https://bot.fuse.io/api/v2/stats/circulating', {}, []);
+  // TODO: Total Supply
 
   const data = useMemo(
     () => [
-      {
-        ether: '1,642',
-        bsc: '427',
-        fuse: '391,157'
-      },
-      {
-        ether: circulatingData.ethereumBlock || 18567954,
-        bsc: circulatingData.bscBlock || 18567954,
-        fuse: circulatingData.fuseBlock || 18567954
-      },
-      {
-        ether: '18567954',
-        bsc: '18567954',
-        fuse: '18567954'
-      },
+      formatHolders(holdersData),
+      formatCirculating(circulatingData),
+      // {
+      //   ether: '18567954',
+      //   bsc: '18567954',
+      //   fuse: '18567954'
+      // },
       {
         ether: (
           <a
@@ -83,7 +102,7 @@ const SectionThree = () => {
         )
       }
     ],
-    [circulatingData]
+    [circulatingData, holdersData]
   )
 
   return (

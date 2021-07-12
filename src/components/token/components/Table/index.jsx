@@ -17,10 +17,10 @@ const rightColumnData = [
     icon: Circulating,
     name: <FormattedMessage defaultMessage='Circulating supply' />
   },
-  {
-    icon: TotalSupply,
-    name: <FormattedMessage defaultMessage='Total supply' />
-  },
+  // {
+  //   icon: TotalSupply,
+  //   name: <FormattedMessage defaultMessage='Total supply' />
+  // },
   {
     icon: Contract,
     name: <FormattedMessage defaultMessage='Contracts' />
