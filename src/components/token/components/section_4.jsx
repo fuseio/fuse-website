@@ -1,7 +1,9 @@
 import React from 'react'
+import FuseSwap from '@/assets/img/Fuse_Swap.svg'
 import Kyber from '@/assets/img/purchase_kyber.png'
 import OneInch from '@/assets/img/purchase_1inch.png'
 import Loopring from '@/assets/img/purchase_loopring.png'
+import ChangeNow from '@/assets/img/Change_now.svg'
 import Uniswap from '@/assets/img/purchase_uniswap.png'
 import Gate from '@/assets/img/purchase_gate.png'
 import FuseTokenOne from '@/assets/img/fuse_token_1.png'
@@ -10,6 +12,13 @@ import Bubble from '@/assets/img/bubble.png'
 import { FormattedMessage } from 'react-intl'
 
 const items = [
+  {
+    icon: FuseSwap,
+    name: 'Fuse Swap',
+    link: 'https://fuseswap.com/#/swap',
+    width: '58px',
+    height: '58px'
+  },
   {
     icon: Gate,
     name: 'Gate.io',
@@ -36,6 +45,13 @@ const items = [
     icon: Loopring,
     name: 'Loopring',
     link: 'https://exchange.loopring.io/swap/FUSE-ETH'
+  },
+  {
+    icon: ChangeNow,
+    name: 'ChangeNOW',
+    link: 'https://changenow.io/?from=usdc&to=fuse',
+    width: '58px',
+    height: '58px'
   }
 ]
 
@@ -43,7 +59,7 @@ const Item = ({ icon, name, link, width, height }) => {
   return (
     <a href={link} rel='noreferrer noopener' target='_blank' className='item'>
       <img src={icon} style={{ height, width }} />
-      <h3>{name}</h3>
+      <h3 style={{ fontSize: "16px" }}>{name}</h3>
     </a>
   )
 }
