@@ -422,9 +422,13 @@
     }
     margin-top: 4em;
     @include block(item) {
-      @include xy-grid();
-      @include flex-align(justify, middle);
+      @include xy-grid(horizontal, false);
+      width: 20%;
+      @include flex-align(null, middle);
       @include breakpoint(medium down) {
+        width: fit-content;
+        @include xy-grid();
+        @include flex-align(justify, middle);
         &:not(:last-child) {
           margin-bottom: 2em;
         }
@@ -468,7 +472,23 @@
         color: #041926;
       }
     }
+    @include block(hidden) {
+      &::after {
+      background-color: #006aff;
+      display: none;
+      }
+    }
   }
+
+  @include block(newrow) { 
+    margin-top: 1em;
+    @include breakpoint(medium down) {
+      margin-top: 0em;
+    }
+    
+  }
+ 
+
 }
 
 @include block(token_distribution) {

@@ -6,6 +6,7 @@ import Loopring from '@/assets/img/purchase_loopring.png'
 import ChangeNow from '@/assets/img/Change_now.svg'
 import Uniswap from '@/assets/img/purchase_uniswap.png'
 import Gate from '@/assets/img/purchase_gate.png'
+import Guardian from '@/assets/img/guardian.svg'
 import FuseTokenOne from '@/assets/img/fuse_token_1.png'
 import FuseTokenTwo from '@/assets/img/fuse_token_2.png'
 import Bubble from '@/assets/img/bubble.png'
@@ -42,6 +43,12 @@ const items = [
     link: 'https://app.1inch.io/#/1/swap/ETH/FUSE'
   },
   {
+    icon: "",
+    name: '',
+    link: '' ,
+    hidden:"hidden"
+  },
+  {
     icon: Loopring,
     name: 'Loopring',
     link: 'https://exchange.loopring.io/swap/FUSE-ETH'
@@ -52,13 +59,26 @@ const items = [
     link: 'https://changenow.io/?from=usdc&to=fuse',
     width: '58px',
     height: '58px'
-  }
+  }, 
+  {
+    icon: Guardian,
+    name: 'Guardian',
+    link: 'https://guardarian.com/',
+    width: '58px',
+    height: '58px'
+  },
+  {
+    icon: "",
+    name: '',
+    link: '' ,
+    hidden:"hidden"
+  },
 ]
 
-const Item = ({ icon, name, link, width, height }) => {
+const Item = ({ icon, name, link, width, height , hidden }) => {
   return (
-    <a href={link} rel='noreferrer noopener' target='_blank' className='item'>
-      <img src={icon} style={{ height, width }} />
+    <a href={link} rel='noreferrer noopener' target='_blank' className={`item ${hidden}`  }>
+      {!hidden && <img src={icon} style={{ height, width }} />}
       <h3 style={{ fontSize: "16px" }}>{name}</h3>
     </a>
   )
@@ -84,7 +104,12 @@ const SectionFour = () => {
 
           <div className='items'>
             {
-              items.map((item, index) => <Item key={index} {...item} />)
+              items.slice(0,5).map((item, index) => <Item key={index} {...item} />)
+            }
+          </div>
+          <div className='items newrow'>
+            {
+              items.slice(5).map((item, index) => <Item key={index+4} {...item} />)
             }
           </div>
         </div>
