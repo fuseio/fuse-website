@@ -410,85 +410,72 @@
   }
 
   @include block(items) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-top: 4em;
     width: 100%;
-    @include breakpoint(medium up) {
-      @include xy-grid();
-      @include flex-align(justify, middle);
+    @include breakpoint(medium down) {
+      justify-content: flex-start;
     }
 
-    @include breakpoint(medium down) {
-      @include xy-grid(vertical, false);
-      @include flex-align(justify, top);
-    }
-    margin-top: 4em;
     @include block(item) {
       @include xy-grid(horizontal, false);
-      width: 20%;
-      @include flex-align(null, middle);
+      @include breakpoint(medium up) {
+      }
       @include breakpoint(medium down) {
-        width: fit-content;
-        @include xy-grid();
-        @include flex-align(justify, middle);
         &:not(:last-child) {
-          margin-bottom: 2em;
+          margin-bottom: 1em;
         }
       }
+      @include element(content) {
+        @include xy-grid(horizontal, false);
+        @include flex-align(null, middle);
+        @include breakpoint(medium down) {
+          width: fit-content;
+          @include xy-grid();
+          @include flex-align(justify, middle);
+        }
 
-      &::after {
-        background-image: url(images/arrow_next.png);
-        background-repeat: no-repeat;
-        background-position: left center;
-        margin-left: 0.2em;
-        width: 18px;
-        height: 11px;
-        display: inline-block;
-        padding-left: 8px;
-        content: "";
-        -webkit-transition: all 0.3s ease-out;
-        -moz-transition: transform 0.3s ease-out;
-        -ms-transition: transform 0.3s ease-out;
-        -o-transition: transform 0.3s ease-out;
-        transition: transform 0.3s ease-out;
-      }
-
-      &:hover {
         &::after {
-          -webkit-transform: translateX(4px);
-          -moz-transform: translateX(4px);
-          -ms-transform: translateX(4px);
-          -o-transform: translateX(4px);
-          transform: translateX(4px);
+          background-image: url(images/arrow_next.png);
+          background-repeat: no-repeat;
+          background-position: left center;
+          margin-left: 0.2em;
+          width: 18px;
+          height: 11px;
+          display: inline-block;
+          padding-left: 8px;
+          content: "";
+          -webkit-transition: all 0.3s ease-out;
+          -moz-transition: transform 0.3s ease-out;
+          -ms-transition: transform 0.3s ease-out;
+          -o-transition: transform 0.3s ease-out;
+          transition: transform 0.3s ease-out;
+        }
+
+        &:hover {
+          &::after {
+            -webkit-transform: translateX(4px);
+            -moz-transform: translateX(4px);
+            -ms-transform: translateX(4px);
+            -o-transform: translateX(4px);
+            transform: translateX(4px);
+          }
+        }
+
+        img {
+          width: 71px;
+          height: 71px;
+        }
+
+        h3 {
+          @extend %secondary-title;
+          font-weight: 500;
+          color: #041926;
         }
       }
-
-      img {
-        width: 71px;
-        height: 71px;
-      }
-
-      h3 {
-        @extend %secondary-title;
-        font-weight: 500;
-        color: #041926;
-      }
-    }
-    @include block(hidden) {
-      &::after {
-      background-color: #006aff;
-      display: none;
-      }
     }
   }
-
-  @include block(newrow) { 
-    margin-top: 1em;
-    @include breakpoint(medium down) {
-      margin-top: 0em;
-    }
-    
-  }
- 
-
 }
 
 @include block(token_distribution) {
