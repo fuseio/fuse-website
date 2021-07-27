@@ -6,6 +6,7 @@ import Loopring from '@/assets/img/purchase_loopring.png'
 import ChangeNow from '@/assets/img/Change_now.svg'
 import Uniswap from '@/assets/img/purchase_uniswap.png'
 import Gate from '@/assets/img/purchase_gate.png'
+import Guardian from '@/assets/img/guardian.svg'
 import FuseTokenOne from '@/assets/img/fuse_token_1.png'
 import FuseTokenTwo from '@/assets/img/fuse_token_2.png'
 import Bubble from '@/assets/img/bubble.png'
@@ -15,9 +16,7 @@ const items = [
   {
     icon: FuseSwap,
     name: 'Fuse Swap',
-    link: 'https://fuseswap.com/#/swap',
-    width: '58px',
-    height: '58px'
+    link: 'https://fuseswap.com/#/swap'
   },
   {
     icon: Gate,
@@ -49,17 +48,22 @@ const items = [
   {
     icon: ChangeNow,
     name: 'ChangeNOW',
-    link: 'https://changenow.io/?from=usdc&to=fuse',
-    width: '58px',
-    height: '58px'
+    link: 'https://changenow.io/?from=usdc&to=fuse'
+  },
+  {
+    icon: Guardian,
+    name: 'Guardian',
+    link: 'https://guardarian.com/'
   }
 ]
 
-const Item = ({ icon, name, link, width, height }) => {
+const Item = ({ icon, name, link }) => {
   return (
     <a href={link} rel='noreferrer noopener' target='_blank' className='item'>
-      <img src={icon} style={{ height, width }} />
-      <h3 style={{ fontSize: "16px" }}>{name}</h3>
+      <div className='item__content'>
+        <img src={icon} />
+        <h3>{name}</h3>
+      </div>
     </a>
   )
 }
@@ -81,7 +85,6 @@ const SectionFour = () => {
           <h1 className='title'>
             <FormattedMessage defaultMessage='Purchase fuse token' />
           </h1>
-
           <div className='items'>
             {
               items.map((item, index) => <Item key={index} {...item} />)
