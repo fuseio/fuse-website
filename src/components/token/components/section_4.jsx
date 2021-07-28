@@ -52,7 +52,7 @@ const items = [
   },
   {
     icon: Guardian,
-    name: 'Guardian',
+    name: 'Guadarian',
     link: 'https://guardarian.com/'
   }
 ]
