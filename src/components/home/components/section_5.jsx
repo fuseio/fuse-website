@@ -292,7 +292,7 @@ const SectionFive = () => {
                       <a
                         rel='noreferrer noopener'
                         target='_blank'
-                        href='https://play.google.com/store/apps/details?id=io.fuse.cash'
+                        href='https://play.google.com/store/apps/details?id=io.fuse.supervecina'
                       >
                         <img className='store' src={Google} />
                       </a>
