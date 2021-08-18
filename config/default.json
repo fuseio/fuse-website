@@ -2,7 +2,7 @@
   "reactGA": {
     "trackingId": "G-2KYCVWJ2JK",
     "gaOptions": {
-      "testMode": true,
+      "testMode": false,
       "debug": true
     }
   }
