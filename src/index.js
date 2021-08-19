@@ -1,7 +1,7 @@
 import React from 'react'
 import { isMobile } from 'react-device-detect'
 import ReactDOM from 'react-dom'
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
 import App from './App'
 import './styles/styles.scss'
 
