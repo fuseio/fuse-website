@@ -58,12 +58,17 @@ const items = [
       {
         title: 'Privacy policy',
         url: 'https://fuse.cash/privacy'
-      }
+      },
+      {
+        title: 'Brand Kit',
+        url: '/files/Fuse-Network-Brand-Identity-Guidelines_2.pdf',
+        download: true,
+      },
     ]
   }
 ]
 
-const Item = withRouter(({ history, url, title, route }) => {
+const Item = withRouter(({ history, url, title, route, download }) => {
   return (
     <li className='list__item'>
       {
@@ -78,7 +83,7 @@ const Item = withRouter(({ history, url, title, route }) => {
       {
         url
           ? (
-            <a rel='noreferrer noopener' target='_blank' href={url}>
+            <a rel='noreferrer noopener' target='_blank' href={url} download={download}>
               {title}
             </a>
             )

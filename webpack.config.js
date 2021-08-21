@@ -117,7 +117,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              publicPath: '/'
+              publicPath: '/',
             }
           }
         ]
@@ -125,7 +125,20 @@ module.exports = {
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url-loader'
-      }
+      },
+      {
+        test: /\.pdf$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'files',
+              name: '[name].[ext]',
+              publicPath: '/files'
+            }
+          },
+        ]
+      },
     ]
   },
   resolve: {
