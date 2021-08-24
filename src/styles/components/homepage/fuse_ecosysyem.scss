@@ -52,4 +52,10 @@
     @include xy-grid();
     @include flex-align(center, middle);
   }
+
+  .large-9-columns {
+    @include breakpoint(large up) {
+      @include grid-column(12 / 9);
+    }
+  }
 }

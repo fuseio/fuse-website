@@ -24,7 +24,10 @@ import zerochain from '@/assets/img/Ecosystem/0chain_partner.png'
 import twokey from '@/assets/img/Ecosystem/2key_partner.png'
 import mantradao from '@/assets/img/Ecosystem/mantradao_partner.png'
 import torus from '@/assets/img/Ecosystem/torus_partner.png'
+import change from '@/assets/img/Ecosystem/change_partner.png';
+import gate from '@/assets/img/Ecosystem/gate_partner.png';
 import transak from '@/assets/img/Ecosystem/transak_partner.png'
+import guardarian from '@/assets/img/Ecosystem/guardarian_partner.png';
 import unstoppabledomains from '@/assets/img/Ecosystem/unstoppabledomains_partner.png'
 import orion from '@/assets/img/Ecosystem/orion_partner.png'
 import boson from '@/assets/img/Ecosystem/boson_partner.png'
@@ -162,9 +165,24 @@ const smallEcoSystem = [
     alt: 'torus'
   },
   {
+    logo: change,
+    link: 'https://changenow.io/',
+    alt: 'change'
+  },
+  {
+    logo: gate,
+    link: 'https://www.gate.io/',
+    alt: 'gate'
+  },
+  {
     logo: transak,
     link: 'https://transak.com/',
     alt: 'transak'
+  },
+  {
+    logo: guardarian,
+    link: 'https://guardarian.com/',
+    alt: 'guardarian'
   },
   {
     logo: unstoppabledomains,
@@ -235,7 +253,7 @@ const LargeCompanyLogo = ({ logo, link, alt }) => {
 
 const SmallCompanyLogo = ({ logo, link, alt }) => {
   return (
-    <div className='fuse_ecosysyem__logo-small small-6 medium-4 large-2'>
+    <div className='fuse_ecosysyem__logo-small small-6 medium-4 large-9-columns'>
       <a href={link} rel='noreferrer noopener' target='_blank'>
         <img src={logo} alt={`${alt}`} />
       </a>
