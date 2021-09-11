@@ -57,6 +57,16 @@
     -o-transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
   }
+  @include modifier(bold) {
+    font-weight: 500;
+  }
+
+
+  @include modifier(no-arrow) {
+    &::after {
+      content: none;
+    }
+  }
 
   &:hover {
     background-image: unset;
@@ -69,5 +79,43 @@
       -o-transform: translateX(4px);
       transform: translateX(4px);
     }
+  }
+}
+
+
+@include block(secondary_button) {
+  padding: 1.125em 1.75em;
+  font-size: 1em;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.01px;
+  text-align: center;
+  margin: 1em 0;
+  color: white;
+  border-radius: 100px;
+
+  $border: 2px;
+  border: solid $border white;
+  
+  position: relative;
+  &:hover {
+    border: solid $border transparent;
+  }
+  &:hover::before {
+    content:"";
+    position:absolute;
+    top: -$border;
+    left: -$border;
+    right: -$border;
+    bottom: -$border;
+    border-radius: 100px;
+    border: solid $border transparent;
+    background: linear-gradient(89.89deg, #B5FFB7 0.93%, #F8F82B 100.96%); 
+    -webkit-mask: 
+       linear-gradient(#fff 0 0) content-box, 
+       linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out; 
+    mask-composite: exclude; 
   }
 }
