@@ -43,8 +43,8 @@ const SectionOne = () => {
               />
             </p>
             <div className="buttons">
-              <Button link='#' type="primary" text={msgs.primaryText} />
-              <Button link='#' type="secondary" text={msgs.secondaryText} />
+              <Button link='https://studio.fuse.io/' type="primary" text={msgs.primaryText} />
+              <Button link='https://staking.fuse.io/' type="secondary" text={msgs.secondaryText} />
             </div>
           </div>
           <div className='canvas grid-x align-right'>
