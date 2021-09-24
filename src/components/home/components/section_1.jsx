@@ -1,6 +1,6 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
-import Globe from './globe'
+import Globe from './globe/index'
 
 const SectionOne = () => {
   return (

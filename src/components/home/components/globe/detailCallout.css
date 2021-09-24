@@ -1,0 +1,68 @@
+#globekit-container {
+  position: relative;
+
+}
+
+#callout-manager {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.detail-callout {
+  position: absolute;
+  display: inline-block;
+  z-index: 9999999;
+ }
+
+.detail-callout .callout-container {
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 14px 20px;
+}
+
+.detail-callout {
+  position: absolute;
+  display: flex;
+ }
+
+.detail-callout .callout-container h3 {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.detail-callout .callout-container h3 img {
+  margin-right: 3px;
+  width: 20px;
+  height: 20px;
+}
+
+.detail-callout .callout-container__desc {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000
+}
+
+.detail-callout .callout-container__desc p {
+  margin: 0;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.detail-callout .callout-container__desc a:hover {
+  text-decoration: none
+}
+
+.detail-callout .connecting-line{
+  position: absolute;
+  top: 100%;
+  right: 0;
+}

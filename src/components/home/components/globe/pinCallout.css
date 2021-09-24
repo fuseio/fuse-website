@@ -1,0 +1,80 @@
+.pin-callout {
+  display: inline-block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: all;      }
+
+.pin-callout .callout-container {
+  display: inline-block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+  transform-origin: bottom center;
+}
+
+.pin-callout .callout-container::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  transform-origin: bottom center;
+  transform: scale(0.9);
+  background: url("./images/globe-poi.png");
+  transition: transform 0.2s ease;
+}
+
+.pin-callout:hover .callout-container::after {
+  transform: scale(1.0);
+}
+
+.pin-callout.hidden .callout-container {
+  transform: scale(0);
+}
+
+.pin-spinner {
+  display: none;
+  position: absolute;
+  left: -13px;
+  top: -13px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  background: transparent;
+  border-top: 1px solid #9ad327;
+  border-right: 1px solid #9ad327;
+  border-radius: 50%;
+  animation: 1s spin linear infinite;
+}
+
+.pin-callout .connecting-line{
+  display: none;
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+

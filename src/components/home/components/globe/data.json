@@ -1,0 +1,76 @@
+{
+  "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "properties": {
+      "name": "Liverpool",
+      "flag": "UK",
+      "desc": "<p>22 GBP for Coffee ☕</p>"
+    },
+    "geometry": { "type": "Point", "coordinates": ["-2.983333", "53.400002"] }
+  },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lima",
+        "flag": "PE",
+        "desc": "<p>13 PEN for Pizza 🍕</p>"
+      },
+      "geometry": { "type": "Point", "coordinates": ["-77.042793", "-12.046374"] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bangkok",
+        "flag": "TH",
+        "desc": "<p>15 THB for Cashback 💰</p>"
+      },
+      "geometry": { "type": "Point", "coordinates": ["100.523186", "13.736717"] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Curacao",
+        "flag": "CW",
+        "desc": "<p>50 ANG for Surf lesson 🏄</p>"
+      },
+      "geometry": { "type": "Point", "coordinates": ["-68.990021", "12.169570"] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sydney",
+        "flag": "AU",
+        "desc": "<p>250 AUD for Car rental 🚗</p>"
+      },
+      "geometry": { "type": "Point", "coordinates": ["151.209900", "-33.865143"] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Las Vegas",
+        "flag": "US",
+        "desc": "<p>300 USD for Wedding 💍</p>"
+      },
+      "geometry": { "type": "Point", "coordinates": ["-115.172813", "36.114647"] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beirut",
+        "flag": "LB",
+        "desc": "<p>100 LBP for Falafel 🧆</p>"
+      },
+      "geometry": { "type": "Point", "coordinates": ["35.495480", "33.888630"] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beijing",
+        "flag": "CN",
+        "desc": "<p>75 CNY for Zoo 🐼</p>"
+      },
+      "geometry": { "type": "Point", "coordinates": ["116.383331", "39.916668"] }
+    }
+  ]
+}
