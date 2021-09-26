@@ -1,6 +1,5 @@
 #globekit-container {
   position: relative;
-
 }
 
 #callout-manager {
@@ -15,23 +14,23 @@
 .detail-callout {
   position: absolute;
   display: inline-block;
-  z-index: 9999999;
- }
+  z-index: 1;
+}
 
 .detail-callout .callout-container {
   background: #ffffff;
   border-radius: 4px;
-  padding: 14px 20px;
+  padding: 10px;
 }
 
 .detail-callout {
   position: absolute;
   display: flex;
- }
+}
 
 .detail-callout .callout-container h3 {
   color: #000000;
-  font-size: 15px;
+  font-size: 11px;
   font-weight: 400;
   margin: 0;
   display: flex;
@@ -40,15 +39,15 @@
 
 .detail-callout .callout-container h3 img {
   margin-right: 3px;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 
 .detail-callout .callout-container__desc {
-  margin: 0;
-  font-size: 15px;
+  margin: 2px 0 0 0;
+  font-size: 9px;
   font-weight: 500;
-  color: #000000
+  color: #000000;
 }
 
 .detail-callout .callout-container__desc p {
@@ -58,10 +57,10 @@
 }
 
 .detail-callout .callout-container__desc a:hover {
-  text-decoration: none
+  text-decoration: none;
 }
 
-.detail-callout .connecting-line{
+.detail-callout .connecting-line {
   position: absolute;
   top: 100%;
   right: 0;

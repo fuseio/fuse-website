@@ -117,7 +117,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              publicPath: '/',
+              publicPath: '/'
             }
           }
         ]
@@ -136,9 +136,9 @@ module.exports = {
               name: '[name].[ext]',
               publicPath: '/files'
             }
-          },
+          }
         ]
-      },
+      }
     ]
   },
   resolve: {
