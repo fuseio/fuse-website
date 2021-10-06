@@ -166,6 +166,7 @@ function Globe () {
       fetchMyAPI()
     }
   }, [globeRef])
+
   return (
     <div id='globekit-container'>
       <canvas ref={globeRef} />

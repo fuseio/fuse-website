@@ -62,15 +62,6 @@
         "desc": "<p>100 LBP for Falafel 🧆</p>"
       },
       "geometry": { "type": "Point", "coordinates": ["35.495480", "33.888630"] }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Beijing",
-        "flag": "CN",
-        "desc": "<p>75 CNY for Zoo 🐼</p>"
-      },
-      "geometry": { "type": "Point", "coordinates": ["116.383331", "39.916668"] }
     }
   ]
 }
