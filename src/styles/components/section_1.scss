@@ -48,10 +48,8 @@
   }
 
   @include block(buttons) {
-    // width: 100%;
-    // margin-top: 1em;
     @include xy-grid(horizontal, false);
-    @include flex-align(start, middle);
+    @include flex-align(left, middle);
     font-weight: 500;
     margin-top: 2rem;
     column-gap: 1rem;

@@ -11,7 +11,7 @@ import GoogleAnalyticsReporter from '@/components/analytics'
 import Navbar from '@/components/navbar'
 import HomePage from '@/components/home'
 import Network from '@/components/network'
-import Ecosystem from '@/components/ecosystem';
+import Ecosystem from '@/components/ecosystem'
 import Token from '@/components/token'
 import About from '@/components/about'
 import Footer from '@/components/footer'
