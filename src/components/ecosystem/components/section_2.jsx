@@ -20,7 +20,6 @@ function Header ({ search, onChange }) {
 }
 
 function Card ({ logo, description, tags }) {
-  console.log(tags)
   return (
     <div className='ecosystem_section_2__card'>
       <div className='ecosystem_section_2__card__logo'>
@@ -101,7 +100,6 @@ const SectionTwo = () => {
 
   const handleTagClick = ({ tag }) => {
     const index = selectedTags.findIndex((t) => t === tag)
-    console.log(index)
     let newSelectedTags
     if (index === -1) newSelectedTags = [...selectedTags, tag]
     else {
@@ -109,7 +107,6 @@ const SectionTwo = () => {
       newSelectedTags.splice(index, 1)
     }
     setSelectedTags(newSelectedTags)
-    console.log(newSelectedTags)
     const arr = orgItems.filter((d) =>
       newSelectedTags.every((selectedTag) => (d.tags || []).includes(selectedTag))
     )
