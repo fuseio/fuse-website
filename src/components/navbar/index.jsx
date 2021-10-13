@@ -23,6 +23,7 @@ function Header ({ history }) {
 
   const aboutPage = () => history.push('/about')
   const homePage = () => history.push('/')
+  const ecosystemPage= ()=> history.push("/ecosystem")
   return (
     <header className='header__wrapper'>
       <div className='header'>
@@ -38,6 +39,15 @@ function Header ({ history }) {
         >
           <div className='header__link__wrapper cell large-auto'>
             <AnimatedNavbar duration={300} />
+            <div className='nav__item' onClick={ecosystemPage}>
+              <a
+                rel='noreferrer noopener'
+                className={classNames('text', { 'text--white': isWhite })}
+                target='_blank'
+              >
+              Ecosystem
+              </a>
+            </div>
             <div className='nav__item' onClick={aboutPage}>
               <a
                 rel='noreferrer noopener'
@@ -47,6 +57,7 @@ function Header ({ history }) {
                 <FormattedMessage defaultMessage='About' />
               </a>
             </div>
+         
           </div>
           <div className='grid-x align-middle  cell shrink'>
             <SelectLanguage />
