@@ -3,39 +3,6 @@ import { FormattedMessage } from 'react-intl';
 
 import SearchIcon from '@/assets/images/search_icon.png';
 
-import Ramp from '@/assets/images/ecosystem_cards/ramp_eco.png';
-import ChainLink from '@/assets/images/ecosystem_cards/chainlink_eco.png';
-import Pokt from '@/assets/images/ecosystem_cards/pokt.png';
-import Request from '@/assets/images/ecosystem_cards/request.png';
-import Boson from '@/assets/images/ecosystem_cards/boson.png';
-import Ochain from '@/assets/images/ecosystem_cards/ochain.png';
-import Orion from '@/assets/images/ecosystem_cards/orion_eco.png';
-import EMoney from '@/assets/images/ecosystem_cards/e-Money.png';
-import MantraDao from '@/assets/images/ecosystem_cards/MantraDao.png';
-import Transak from '@/assets/images/ecosystem_cards/transak_eco.png';
-import Monerium from '@/assets/images/ecosystem_cards/Monerium.png';
-import Ichi from '@/assets/images/ecosystem_cards/ichi.png';
-import Ola from '@/assets/images/ecosystem_cards/ola.png';
-import Krystal from '@/assets/images/ecosystem_cards/krystal.png';
-import Dapp from '@/assets/images/ecosystem_cards/dapp.png';
-import GetBlock from '@/assets/images/ecosystem_cards/getblock.png';
-import Staking from '@/assets/images/ecosystem_cards/staking.png';
-import ChangeNow from '@/assets/images/ecosystem_cards/change-now.png';
-import Unstoppable from '@/assets/images/ecosystem_cards/unstoppable.png';
-import MintGate from '@/assets/images/ecosystem_cards/MintGate.png';
-import Unmarshal from '@/assets/images/ecosystem_cards/unmarshal_eco.png';
-import TheGraph from '@/assets/images/ecosystem_cards/thegraph_eco.png';
-import OZ from '@/assets/images/ecosystem_cards/OZ.png';
-import Sushi from '@/assets/images/ecosystem_cards/Sushi.png';
-import Vfat from '@/assets/images/ecosystem_cards/vfat.png';
-import GoodDollar from '@/assets/images/ecosystem_cards/good-dollar.png';
-import Kolektivo from '@/assets/images/ecosystem_cards/kolektivo.png';
-import Comunitaria from '@/assets/images/ecosystem_cards/comunitaria.png';
-import Peepl from '@/assets/images/ecosystem_cards/peepl.png';
-import TheWellbeing from '@/assets/images/ecosystem_cards/TheWellbeing.png';
-import CuraDai from '@/assets/images/ecosystem_cards/curadai.png';
-import Flambu from '@/assets/images/ecosystem_cards/Flambu.png';
-
 
 
 // const items = [];
