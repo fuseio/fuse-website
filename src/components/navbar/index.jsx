@@ -23,7 +23,7 @@ function Header ({ history }) {
 
   const aboutPage = () => history.push('/about')
   const homePage = () => history.push('/')
-  const ecosystemPage= ()=> history.push("/ecosystem")
+  const ecosystemPage = () => history.push('/ecosystem')
   return (
     <header className='header__wrapper'>
       <div className='header'>
@@ -45,7 +45,7 @@ function Header ({ history }) {
                 className={classNames('text', { 'text--white': isWhite })}
                 target='_blank'
               >
-              Ecosystem
+                Ecosystem
               </a>
             </div>
             <div className='nav__item' onClick={aboutPage}>
@@ -57,7 +57,6 @@ function Header ({ history }) {
                 <FormattedMessage defaultMessage='About' />
               </a>
             </div>
-         
           </div>
           <div className='grid-x align-middle  cell shrink'>
             <SelectLanguage />
