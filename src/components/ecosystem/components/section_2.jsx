@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
-
 import SearchIcon from '@/assets/images/search_icon.png'
-
+import globe from "@/assets/images/ecosystem_cards/Globe.png"
+import twitter_icon from "@/assets/images/ecosystem_cards/twitter-ecocard.png"
+import discord_icon from "@/assets/images/ecosystem_cards/discord-ecocard.png"
+import telegram_icon from "@/assets/images/ecosystem_cards/telegram-ecocard.png"
 function Header ({ search, onChange }) {
   return (
     <div className='ecosystem_section_2__header'>
@@ -19,13 +21,28 @@ function Header ({ search, onChange }) {
   )
 }
 
-function Card ({ logo, description, tags }) {
+function Card ({ logo, description, tags, website, twitter, telegram, discord }) {
+  
   return (
     <div className='ecosystem_section_2__card'>
       <div className='ecosystem_section_2__card__logo'>
         <img src={`${logo}`} alt='card' />
       </div>
       <div className='ecosystem_section_2__card__content_wrapper'>
+      <div className="ecosystem_section_2__card__icons">
+        <a href={website} target="_blank" rel="noopener noreferrer">
+          <img src={globe} alt="globe" />
+        </a>
+        <a href={twitter} target="_blank" rel="noopener noreferrer">
+          <img src={twitter_icon} alt="twitter" />
+        </a>
+        <a href={discord} target="_blank" rel="noopener noreferrer">
+          <img src={discord_icon} alt="discord" />
+        </a>
+        <a href={telegram} target="_blank" rel="noopener noreferrer">
+          <img src={telegram_icon} alt="telegram" />
+        </a>
+        </div>
         <div className='ecosystem_section_2__card__description'>{description}</div>
         <div className='ecosystem_section_2__card__tags'>
           {(tags || []).map((tag, index) => (
@@ -63,6 +80,7 @@ const SectionTwo = () => {
   const [selectedTags, setSelectedTags] = useState([])
   const [data, setData] = useState([])
   const [orgItems, setOrgItems] = useState([])
+  console.log(data);
 
   useEffect(() => {
     fetch('https://fuse-website-3ce69-default-rtdb.europe-west1.firebasedatabase.app/tags.json')

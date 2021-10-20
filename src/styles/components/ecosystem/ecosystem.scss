@@ -209,15 +209,25 @@
 		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 		border-radius: 12px;
 		height: 100%;
+		@include element(logo){
+			height: 76.7px;
+		}
 		@include element(content_wrapper) {
 			@include xy-grid(vertical);
 			@include flex-align(justify, top);
 			height: 100%;
+			align-items: center;
+			justify-content: flex-start;
+		}
+		@include element(icons){
+			gap: 4px;
+			display: flex;
+			margin-top: 1.25rem;
 		}
 		@include element(logo) {
 		}
 		@include element(description) {
-			margin-top: 3rem;
+			margin-top: 1.5rem;
 			color: #737373;
 			text-align: center;
 			@include breakpoint(medium up) {
