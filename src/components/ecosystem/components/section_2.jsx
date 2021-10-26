@@ -30,18 +30,18 @@ function Card ({ logo, description, tags, website, twitter, telegram, discord })
       </div>
       <div className='ecosystem_section_2__card__content_wrapper'>
       <div className="ecosystem_section_2__card__icons">
-        <a href={website} target="_blank" rel="noopener noreferrer">
+        {website && <a href={website} target="_blank" rel="noopener noreferrer">
           <img src={globe} alt="globe" />
-        </a>
-        <a href={twitter} target="_blank" rel="noopener noreferrer">
+        </a> }
+        {twitter && <a href={twitter} target="_blank" rel="noopener noreferrer">
           <img src={twitter_icon} alt="twitter" />
-        </a>
-        <a href={discord} target="_blank" rel="noopener noreferrer">
+        </a> }
+        {discord && <a href={discord} target="_blank" rel="noopener noreferrer">
           <img src={discord_icon} alt="discord" />
-        </a>
-        <a href={telegram} target="_blank" rel="noopener noreferrer">
+        </a> }
+        {telegram && <a href={telegram} target="_blank" rel="noopener noreferrer">
           <img src={telegram_icon} alt="telegram" />
-        </a>
+        </a> }
         </div>
         <div className='ecosystem_section_2__card__description'>{description}</div>
         <div className='ecosystem_section_2__card__tags'>
@@ -83,18 +83,17 @@ const SectionTwo = () => {
   console.log(data);
 
   useEffect(() => {
-    fetch('https://fuse-website-3ce69-default-rtdb.europe-west1.firebasedatabase.app/tags.json')
+    const tagsPromise = fetch('https://fuse-website-3ce69-default-rtdb.europe-west1.firebasedatabase.app/tags.json')
       .then(res => res.json())
       .then(json => {
         const orgTags = []
         for (const key in json) {
           orgTags.push(json[key])
         }
-
-        setTags(orgTags)
+        return orgTags;
       })
 
-    fetch('https://fuse-website-3ce69-default-rtdb.europe-west1.firebasedatabase.app/items.json')
+    const itemsPromise = fetch('https://fuse-website-3ce69-default-rtdb.europe-west1.firebasedatabase.app/items.json')
       .then(res => res.json())
       .then(json => {
         const orgItems = []
@@ -103,8 +102,21 @@ const SectionTwo = () => {
         }
         setData(orgItems)
         setOrgItems(orgItems)
+        return orgItems;
       })
-  }, [])
+
+    Promise.all([tagsPromise, itemsPromise]).then(([tags, items]) => {
+      const counts = items.reduce((acc, curr) => {
+        (curr.tags || []).forEach((c) => acc[c.toLowerCase()] = (acc[c.toLowerCase()] || 0) + 1);
+        return acc;
+      }, {});
+      const newTags = tags.map(({ tag }) => ({
+        tag,
+        count: counts[tag.toLowerCase()] || 0
+      }));
+      setTags(newTags);
+    })
+  }, []);
 
   const handleSearch = ({ target: { value } }) => {
     setSearch(value)

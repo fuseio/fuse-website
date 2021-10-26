@@ -174,6 +174,7 @@
 			line-height: 1.4;
 			font-weight: 400;
 			cursor: pointer;
+			text-transform: capitalize;	
 			span {
 				color: #b5b9d3;
 			}
@@ -211,6 +212,9 @@
 		height: 100%;
 		@include element(logo){
 			height: 76.7px;
+			img{
+				max-height: 100%;
+			}
 		}
 		@include element(content_wrapper) {
 			@include xy-grid(vertical);
@@ -244,6 +248,7 @@
 			@include flex-align(center, middle);
 			width: 100%;
 			gap: 0.5rem;
+			
 		}
 		@include element(tag) {
 			background: rgba(7, 25, 39, 0.8);
