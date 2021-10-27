@@ -13,9 +13,9 @@ const SectionOne = () => {
             <p className='ecosystem_main__description'>
               From DeFi and Web3 applications to real world implementations that positively impact the lives of everyday people - browse the innovative projects building on Fuse.
             </p>
-            <button type='primary' className='ecosystem_main__button main_button main_button--no-arrow main_button--bold'>
+            <a rel='noreferrer noopener' target='_blank' href='mailto:hello@fuse.io' type='primary' className='ecosystem_main__button main_button main_button--no-arrow main_button--bold'>
               Submit your project
-            </button>
+            </a>
           </div>
           <div className='ecosystem_main__img'>
             <img src={EcosystemMain} alt='ecosystem_main' />
