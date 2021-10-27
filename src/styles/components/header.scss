@@ -111,23 +111,24 @@
 	}
 
 	@include block(language) {
-		width: 32px;
-		height: 32px;
+		width: 52px;
 		border-radius: 7px;
 		color: $color-white;
 		background-image: linear-gradient(to bottom, #143653, #0c131c 99%);
 		@include xy-grid();
 		@include flex-align(center, middle);
-		> span {
-			font-size: 0.938em;
-			text-transform: capitalize;
-			font-weight: 500;
+		> svg {
+			fill: white;
+			stroke: white;
+			@include breakpoint(medium down) {
+				fill: $color-dark;
+				stroke: $color-dark;
+			}
 		}
 
 		@include modifier(white) {
 			color: $color-dark;
 			background-image: unset;
-			background: $color-white;
 		}
 	}
 

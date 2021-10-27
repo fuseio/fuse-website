@@ -11,6 +11,7 @@ import GoogleAnalyticsReporter from '@/components/analytics'
 import Navbar from '@/components/navbar'
 import HomePage from '@/components/home'
 import Network from '@/components/network'
+import Ecosystem from '@/components/ecosystem'
 import Token from '@/components/token'
 import About from '@/components/about'
 import Footer from '@/components/footer'
@@ -19,9 +20,11 @@ import ScrollToTopController from '@/hooks/useScrollToTopController'
 import en from '../lang/en.json'
 import zh from '../lang/zh.json'
 import ru from '../lang/ru.json'
-// import vi from '../lang/vi.json'
+import vi from '../lang/vi.json'
 import ko from '../lang/ko.json'
 import es from '../lang/es.json'
+import tr from '../lang/tr.json'
+import id from '../lang/id.json'
 
 const { store, history } = configureStore(window.__INITIAL_STATE__)
 
@@ -29,9 +32,11 @@ const MESSAGES = {
   en,
   zh,
   ru,
-  // vi,
+  vi,
   ko,
-  es
+  es,
+  id,
+  tr
 }
 
 const App = () => {
@@ -58,6 +63,9 @@ const App = () => {
                     </Route>
                     <Route exact path='/network'>
                       <Network />
+                    </Route>
+                    <Route exact path='/ecosystem'>
+                      <Ecosystem />
                     </Route>
                     <Route path='/'>
                       <HomePage />

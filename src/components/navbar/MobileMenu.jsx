@@ -194,6 +194,9 @@ function MobileMenu ({ history }) {
             }
             <div className='line' />
             <div className='grid-y align-top align-left  cell shrink'>
+              <div className='list__item' onClick={() => history.push('/ecosystem')}>
+                Ecosystem
+              </div>
               <div className='list__item' onClick={() => history.push('/about')}>
                 <FormattedMessage defaultMessage='About us' />
               </div>
