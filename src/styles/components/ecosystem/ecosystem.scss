@@ -66,13 +66,14 @@
 		font-size: clamp(1em, calc(1.7vw - 0.5rem), 1.5em);
 		font-weight: 400;
 		line-height: 1.4;
-	
+		
 		color: white;
 		@include breakpoint(large down) {
 			font-size: 1em;
 		}
 		@include breakpoint(small only) {
 			font-size: 1.125em;
+			margin-bottom: 1.875rem;
 		}
 	}
 
@@ -206,6 +207,7 @@
 		@include xy-grid(vertical, null);
 		@include flex-align(center, middle);
 		padding: 2.4375rem clamp(1rem, 2.5vw, 2.4375rem);
+		padding-bottom: 0;
 		background: #f6f7fb;
 		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 		border-radius: 12px;
@@ -232,6 +234,7 @@
 		}
 		@include element(description) {
 			margin-top: 1.5rem;
+			margin-bottom: 0.75rem;
 			color: #737373;
 			text-align: center;
 			@include breakpoint(medium up) {
@@ -257,7 +260,7 @@
 			color: white;
 			font-weight: 400;
 			padding: 2px 1rem;
-			margin-top: 1rem;
+			margin-top: 0.25rem;
 		}
 	}
 }
