@@ -7,7 +7,7 @@ import ChangeNow from '@/assets/img/Change_now.svg'
 import Uniswap from '@/assets/img/purchase_uniswap.png'
 import Gate from '@/assets/img/purchase_gate.png'
 import Guardian from '@/assets/img/guardian.svg'
-import BitMart from '@/assets/img/bitmart.svg';
+import BitMart from '@/assets/img/bitmart.svg'
 import FuseTokenOne from '@/assets/img/fuse_token_1.png'
 import FuseTokenTwo from '@/assets/img/fuse_token_2.png'
 import Bubble from '@/assets/img/bubble.png'
@@ -17,12 +17,12 @@ const items = [
   {
     icon: FuseSwap,
     name: 'Fuse Swap',
-    link: 'https://fuseswap.com/#/swap',
+    link: 'https://fuseswap.com/#/swap'
   },
   {
     icon: Gate,
     name: 'Gate.io',
-    link: 'https://www.gate.io/trade/FUSE_USDT',
+    link: 'https://www.gate.io/trade/FUSE_USDT'
   },
   {
     icon: Uniswap,
@@ -47,17 +47,17 @@ const items = [
   {
     icon: ChangeNow,
     name: 'ChangeNOW',
-    link: 'https://changenow.io/?from=usdc&to=fuse',
+    link: 'https://changenow.io/?from=usdc&to=fuse'
   },
   {
     icon: Guardian,
     name: 'Guardarian',
-    link: 'https://guardarian.com/',
+    link: 'https://guardarian.com/'
   },
   {
     icon: BitMart,
     name: 'BitMart',
-    link: 'https://www.bitmart.com/',
+    link: 'https://www.bitmart.com/'
   }
 ]
 

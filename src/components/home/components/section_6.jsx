@@ -24,10 +24,10 @@ import zerochain from '@/assets/img/Ecosystem/0chain_partner.png'
 import twokey from '@/assets/img/Ecosystem/2key_partner.png'
 import mantradao from '@/assets/img/Ecosystem/mantradao_partner.png'
 import torus from '@/assets/img/Ecosystem/torus_partner.png'
-import change from '@/assets/img/Ecosystem/change_partner.png';
-import gate from '@/assets/img/Ecosystem/gate_partner.png';
+import change from '@/assets/img/Ecosystem/change_partner.png'
+import gate from '@/assets/img/Ecosystem/gate_partner.png'
 import transak from '@/assets/img/Ecosystem/transak_partner.png'
-import guardarian from '@/assets/img/Ecosystem/guardarian_partner.png';
+import guardarian from '@/assets/img/Ecosystem/guardarian_partner.png'
 import unstoppabledomains from '@/assets/img/Ecosystem/unstoppabledomains_partner.png'
 import orion from '@/assets/img/Ecosystem/orion_partner.png'
 import boson from '@/assets/img/Ecosystem/boson_partner.png'
