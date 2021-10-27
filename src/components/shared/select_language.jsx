@@ -9,8 +9,10 @@ const options = [
   { label: 'Spanish', value: 'es' },
   { label: '中文', value: 'zh' },
   { label: 'Русский', value: 'ru' },
-  // { label: 'Vietnamese', value: 'vi' },
-  { label: 'Korean', value: 'ko' }
+  { label: 'Vietnamese', value: 'vi' },
+  { label: 'Korean', value: 'ko' },
+  { label: 'Indonesian', value: 'id' },
+  { label: 'Turkish', value: 'tr' }
 ]
 
 function SelectLanguage ({ history }) {

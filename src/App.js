@@ -19,9 +19,11 @@ import ScrollToTopController from '@/hooks/useScrollToTopController'
 import en from '../lang/en.json'
 import zh from '../lang/zh.json'
 import ru from '../lang/ru.json'
-// import vi from '../lang/vi.json'
+import vi from '../lang/vi.json'
 import ko from '../lang/ko.json'
 import es from '../lang/es.json'
+import tr from '../lang/tr.json'
+import id from '../lang/id.json'
 
 const { store, history } = configureStore(window.__INITIAL_STATE__)
 
@@ -29,9 +31,11 @@ const MESSAGES = {
   en,
   zh,
   ru,
-  // vi,
+  vi,
   ko,
-  es
+  es,
+  id,
+  tr
 }
 
 const App = () => {
