@@ -79,9 +79,9 @@ const Item = ({ title, image, Text, icon }) => {
 
 const Banner = () => {
   const { data = { data: 0 } } = useFetch('https://studio.fuse.io/api/v1/communities/count', {}, [])
-  const transactionCounter = useCounter(11368734)
+  const transactionCounter = useCounter(18612709)
   const communitiesCounter = useCounter(data.data)
-  const walletsCounter = useCounter(373754)
+  const walletsCounter = useCounter(502516)
 
   return (
     <section className='info_banner__wrapper'>
