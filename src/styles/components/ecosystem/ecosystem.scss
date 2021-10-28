@@ -193,7 +193,7 @@
 		grid-gap: 2.9375rem clamp(1rem, 2.5vw, 3.375rem);
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-auto-columns: 1fr;
-		grid-auto-rows: 1fr;
+		
 		max-width: 1182px;
 		flex: 1;
 		@include breakpoint(medium down) {
@@ -207,13 +207,13 @@
 		@include xy-grid(vertical, null);
 		@include flex-align(center, middle);
 		padding: 2.4375rem clamp(1rem, 2.5vw, 2.4375rem);
-		padding-bottom: 0;
 		background: #f6f7fb;
 		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 		border-radius: 12px;
 		height: 100%;
 		@include element(logo){
 			height: 76.7px;
+			min-height: 76.7px;
 			img{
 				max-height: 100%;
 			}
