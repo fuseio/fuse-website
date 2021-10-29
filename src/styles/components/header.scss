@@ -117,12 +117,16 @@
 		background-image: linear-gradient(to bottom, #143653, #0c131c 99%);
 		@include xy-grid();
 		@include flex-align(center, middle);
-		> svg {
+		@include block (globe_svg) {
 			fill: white;
 			stroke: white;
 			@include breakpoint(medium down) {
 				fill: $color-dark;
 				stroke: $color-dark;
+			}
+			@include modifier(black){
+				fill: black;
+				stroke: black;
 			}
 		}
 
