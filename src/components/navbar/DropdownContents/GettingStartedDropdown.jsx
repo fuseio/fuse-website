@@ -21,10 +21,10 @@ const items = [
     url: 'https://staking.fuse.io'
   },
   {
-    title: <FormattedMessage defaultMessage='Fuse Swap' />,
+    title: <FormattedMessage defaultMessage='Fuse.fi' />,
     icon: FuseSwap,
     subTitle: <FormattedMessage defaultMessage='Trade without gas' />,
-    url: 'https://fuseswap.com'
+    url: 'https://fuse.fi/'
   },
   {
     title: <FormattedMessage defaultMessage='Fuse Cash' />,
