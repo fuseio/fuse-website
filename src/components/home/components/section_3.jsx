@@ -158,7 +158,7 @@ const FuseSwapFloor = () => {
                 <img src={FuseswpaIcon} />
                 &nbsp;
                 <span>
-                  <FormattedMessage defaultMessage='Fuse Swap' />
+                  <FormattedMessage defaultMessage='Fuse.fi' />
                 </span>
               </div>
               <h1 className='fuseswap_floor__title'>
@@ -188,7 +188,7 @@ const FuseSwapFloor = () => {
               </ul>
               <div className='launch'>
                 <Button
-                  link='https://fuseswap.com/'
+                  link='https://fuse.fi/'
                   text={<FormattedMessage defaultMessage='Swap & pool now' />}
                 />
               </div>
