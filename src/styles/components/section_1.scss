@@ -81,9 +81,6 @@
 
   @include block(canvas) {
     position: relative;
-    // @include breakpoint(medium down) {
-    //   display: none;
-    // }
     @include xy-cell(auto, null, 0);
   }
 
