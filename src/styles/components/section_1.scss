@@ -4,6 +4,11 @@
   @include element(container) {
     @include xy-grid(horizontal, false);
     @include flex-align(justify, middle);
+
+    @include breakpoint(medium down) {
+      @include xy-grid(vertical, false);
+      @include flex-align(justify, middle);
+    }
   }
 
   @include element(wrapper) {
@@ -69,34 +74,17 @@
     }
 
     @include breakpoint(medium down) {
-      margin-bottom: 1em;
+      margin: 2em 0px 1em;
       font-size: 2.313em;
     }
   }
 
   @include block(canvas) {
-    @include breakpoint(medium down) {
-      display: none;
-    }
+    position: relative;
+    // @include breakpoint(medium down) {
+    //   display: none;
+    // }
     @include xy-cell(auto, null, 0);
-    canvas {
-      min-width: 650px;
-      max-width: 700px;
-      min-height: 650px;
-      max-height: 700px;
-      @include breakpoint(1600px) {
-        min-width: 800px;
-        max-width: 800px;
-        min-height: 800px;
-        max-height: 800px;
-      }
-      @include breakpoint(large down) {
-        min-width: 500px;
-        max-width: 500px;
-        min-height: 500px;
-        max-height: 500px;
-      }
-    }
   }
 
   @include element(main) {
