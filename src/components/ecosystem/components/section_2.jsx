@@ -5,7 +5,7 @@ import twitterIcon from '@/assets/images/ecosystem_cards/twitter-ecocard.png'
 import discordIcon from '@/assets/images/ecosystem_cards/discord-ecocard.png'
 import telegramIcon from '@/assets/images/ecosystem_cards/telegram-ecocard.png'
 
-function Header ({ search, onChange }) {
+function Header({ search, onChange }) {
   return (
     <div className='ecosystem_section_2__header'>
       <div className='ecosystem_section_2__last_update'>
@@ -22,7 +22,7 @@ function Header ({ search, onChange }) {
   )
 }
 
-function Card ({ logo, description, tags, website, twitter, telegram, discord }) {
+function Card({ logo, description, tags, website, twitter, telegram, discord }) {
   return (
     <div className='ecosystem_section_2__card'>
       <div className='ecosystem_section_2__card__logo'>
@@ -72,7 +72,7 @@ function Card ({ logo, description, tags, website, twitter, telegram, discord })
   )
 }
 
-function Tags ({ tags, selectedTags, onClick }) {
+function Tags({ tags, selectedTags, onClick }) {
   return (
     <div className='ecosystem_section_2__tags'>
       {tags.map(({ tag, count }, index) => (
@@ -153,7 +153,7 @@ const SectionTwo = () => {
     }
     setSelectedTags(newSelectedTags)
     const arr = orgItems.filter((d) =>
-      newSelectedTags.every((selectedTag) => (d.tags || []).includes(selectedTag))
+      newSelectedTags.some((selectedTag) => (d.tags || []).includes(selectedTag))
     )
     setData(arr)
   }
