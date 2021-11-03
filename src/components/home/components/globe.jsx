@@ -183,7 +183,7 @@ const Globe = props => {
           this.div.style.position = 'absolute'
           this.div.style.background = 'white'
           this.div.style.display = 'none'
-          this.div.style.padding = '1vmax'
+          this.div.style.padding = '10px'
           this.div.className = 'Card_div fade-in-image'
           this.div.innerHTML = this.html
           container_ref.current.appendChild(this.div)
@@ -866,7 +866,7 @@ const Globe = props => {
 
         context.fillStyle = 'white'
         context.beginPath()
-        context.arc(p.x, p.y, 3, 0, 2 * Math.PI)
+        context.arc(p.x, p.y, 8, 0, 2 * Math.PI)
         context.fill()
       }
     }

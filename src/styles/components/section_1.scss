@@ -133,3 +133,27 @@
     }
   }
 }
+
+@include block(Card_div) {
+  font-size: 11px;
+
+  img {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+  }
+  label {
+    * {
+      font-weight: normal;
+    }
+  }
+
+  p {
+    margin: 2px 0 0 0;
+    font-size: 9px;
+    color: #000000;
+    * {
+      font-weight: bold;
+    }
+  }
+}
