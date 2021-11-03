@@ -1,21 +1,17 @@
 @include block(section-A) {
   background-color: #031928;
-  padding-top: 4em;
   @include element(container) {
-    @include xy-grid(horizontal, false);
-    @include flex-align(justify, middle);
-
-    @include breakpoint(medium down) {
-      @include xy-grid(vertical, false);
-      @include flex-align(justify, middle);
-    }
-  }
-
-  @include element(wrapper) {
-    padding: 1em 0;
+    padding: 4em 0 1em;
     @include xy-grid-container();
     @include breakpoint(large down) {
       @include xy-grid-container(90%);
+    }
+
+    @include xy-grid(horizontal, false);
+    @include flex-align(justify, middle);
+    @include breakpoint(medium down) {
+      @include xy-grid(vertical, false);
+      @include flex-align(justify, middle);
     }
   }
 
