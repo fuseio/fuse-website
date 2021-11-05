@@ -35,7 +35,7 @@ const SectionOne = () => {
             </h1>
             <p className='section-A__text'>
               <FormattedMessage
-                defaultMessage='Build community-centric, mobile-first {newLine} payment systems with <b>zero coding</b>{newLine} <b>experience</b> on a low-cost, DeFi platform.'
+                defaultMessage='Launch community-centric payment systems {newLine} and token economies on an Ethereum-{newLine} compatible blockchain.'
                 values={{
                   newLine: <br />,
                   b: (chunks) => <b>{chunks}</b>
