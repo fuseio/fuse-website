@@ -5,10 +5,7 @@ import Business from '@/assets/img/business_tools.png'
 import BusinessSmall from '@/assets/img/business_tools_small.svg'
 import PaymentsNetwork from '@/assets/img/paymets_network.png'
 import PaymentsNetworkSmall from '@/assets/img/payments_network_small.svg'
-import VisibilitySensor from 'react-visibility-sensor'
-import useFetch from 'use-http'
 import { FormattedMessage } from 'react-intl'
-import useCounter from '@/hooks/useCounter'
 
 const items = [
   {
@@ -77,67 +74,10 @@ const Item = ({ title, image, Text, icon }) => {
   )
 }
 
-const Banner = () => {
-  const { data = { data: 0 } } = useFetch('https://studio.fuse.io/api/v1/communities/count', {}, [])
-  const transactionCounter = useCounter(18762358)
-  const communitiesCounter = useCounter(data.data)
-  const walletsCounter = useCounter(504581)
-
-  return (
-    <section className='info_banner__wrapper'>
-      <div className='info_banner__container'>
-        <div className='info_banner'>
-          <div className='item grid-x align-middle'>
-            &nbsp;&nbsp;
-            <div className='title'>
-              <VisibilitySensor delayedCall>
-                <span>{transactionCounter}</span>
-              </VisibilitySensor>
-              &nbsp;
-              <FormattedMessage defaultMessage='Transactions' />
-            </div>
-          </div>
-          <div className='item grid-x align-middle'>
-            &nbsp;&nbsp;
-            <div className='title'>
-              <VisibilitySensor delayedCall>
-                <span>{communitiesCounter}</span>
-              </VisibilitySensor>
-              &nbsp;
-              <FormattedMessage defaultMessage='Communities' />
-            </div>
-          </div>
-          <div className='item grid-x align-middle'>
-            &nbsp;&nbsp;
-            <div className='title'>
-              <VisibilitySensor delayedCall>
-                <span>{walletsCounter}</span>
-              </VisibilitySensor>
-              &nbsp;
-              <FormattedMessage defaultMessage='Wallets' />
-            </div>
-          </div>
-          <div className='item grid-x align-middle'>
-            <div className='title'>
-              <a
-                rel='noreferrer noopener'
-                target='_blank'
-                href='https://explorer.fuse.io/'
-              >
-                <FormattedMessage defaultMessage='View stats' />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
 
 const SectionTwo = () => {
   return (
     <>
-      <Banner />
       <section className='section_2'>
         <h2 className='section_2__title'>
           <FormattedMessage defaultMessage='Turning communities into economies' />

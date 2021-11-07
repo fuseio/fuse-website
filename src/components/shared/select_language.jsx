@@ -17,7 +17,7 @@ const options = [
 
 function SelectLanguage ({ history }) {
   const [isOpen, setIsOpen] = useState(false)
-  const [setLang] = useLang()
+  const [, setLang] = useLang()
   const iconRef = useRef(null)
 
   const isWhite = !history.location.pathname.includes('about')
