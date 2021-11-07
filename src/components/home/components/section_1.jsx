@@ -96,7 +96,7 @@ const SectionOne = () => {
             </h1>
             <p className='section-A__text'>
               <FormattedMessage
-                defaultMessage='Launch community-centric payment systems {newLine} and token economies on an Ethereum-compatible blockchain.'
+                defaultMessage='Launch community-centric payment systems and token {newLine} economies on an Ethereum-compatible blockchain.'
                 values={{
                   newLine: <br />,
                   b: (chunks) => <b>{chunks}</b>

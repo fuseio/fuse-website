@@ -39,14 +39,15 @@
       @extend %secondary-title;
       color: $color-white;
       font-weight: normal;
+      font-size: 1.125em;
 
       @include modifier(arrow) {
         &::after {
-          background-image: url(images/arrow_next.png);
+          background-image: url(images/arrow_white.png);
           background-repeat: no-repeat;
           background-position: left center;
           margin-left: 0.2em;
-          width: 18px;
+          width: 25px;
           height: 11px;
           display: inline-block;
           padding-left: 8px;

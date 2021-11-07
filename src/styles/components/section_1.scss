@@ -79,6 +79,7 @@
   }
 
   @include element(main) {
+    margin-bottom: 5em;
     @include breakpoint(medium up) {
       @include xy-cell(auto, null, 0);
     }
@@ -91,7 +92,7 @@
   @include element(text) {
     line-height: 1.56;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.375em;
     @include breakpoint(large down) {
       font-size: 1em;
     }
