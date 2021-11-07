@@ -153,7 +153,7 @@ const SectionTwo = () => {
     }
     setSelectedTags(newSelectedTags)
     const arr = orgItems.filter((d) =>
-      newSelectedTags.every((selectedTag) => (d.tags || []).includes(selectedTag))
+      newSelectedTags.some((selectedTag) => (d.tags || []).includes(selectedTag))
     )
     setData(arr)
   }
