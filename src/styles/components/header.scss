@@ -2,6 +2,7 @@
 	@include xy-grid(horizontal, false);
 	@include flex-align(justify, middle);
 	min-height: 80px;
+	@include xy-grid-container();
 	width: 100%;
 
 	@include element(wrapper) {
@@ -19,6 +20,7 @@
 	@include element(logo) {
 		cursor: pointer;
 		@include xy-cell(shrink, null, 0);
+		margin-right: 1em;
 		> img {
 			width: 100px;
 		}
@@ -117,14 +119,14 @@
 		background-image: linear-gradient(to bottom, #143653, #0c131c 99%);
 		@include xy-grid();
 		@include flex-align(center, middle);
-		@include block (globe_svg) {
+		@include block(globe_svg) {
 			fill: white;
 			stroke: white;
 			@include breakpoint(medium down) {
 				fill: $color-dark;
 				stroke: $color-dark;
 			}
-			@include modifier(black){
+			@include modifier(black) {
 				fill: black;
 				stroke: black;
 			}

@@ -1,0 +1,86 @@
+@include block(info_banner) {
+  @include breakpoint(medium up) {
+    @include xy-grid();
+    @include flex-align(left, middle);
+    max-width: 70%;
+  }
+
+  @include breakpoint(medium down) {
+    @include xy-grid(vertical);
+    @include flex-align(left, top);
+    max-width: 70%;
+  }
+
+  @include element(container) {
+  }
+  @include element(wrapper) {
+    padding: 3em 0 0 0;
+  }
+
+  @include block(divier) {
+    background: linear-gradient(#fff, #fff) no-repeat center/2px 100%;
+    height: 25px;
+
+    @include breakpoint(small only) {
+      display: none;
+    }
+  }
+
+  @include block(item) {
+    @include xy-grid();
+    @include flex-align(left, middle);
+    @include xy-cell(5, null, 0);
+    width: auto;
+    > img {
+      width: 15px;
+      height: 15px;
+    }
+
+    @include breakpoint(medium down) {
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+    @include block(title) {
+      @extend %secondary-title;
+      color: $color-white;
+      font-weight: normal;
+      font-size: 1.125em;
+
+      @include modifier(arrow) {
+        &::after {
+          background-image: url(images/arrow_white.png);
+          background-repeat: no-repeat;
+          background-position: left center;
+          margin-left: 0.2em;
+          width: 25px;
+          height: 11px;
+          display: inline-block;
+          padding-left: 8px;
+          content: "";
+          -webkit-transition: all 0.3s ease-out;
+          -moz-transition: transform 0.3s ease-out;
+          -ms-transition: transform 0.3s ease-out;
+          -o-transition: transform 0.3s ease-out;
+          transition: transform 0.3s ease-out;
+        }
+
+        &:hover {
+          &::after {
+            -webkit-transform: translateX(4px);
+            -moz-transform: translateX(4px);
+            -ms-transform: translateX(4px);
+            -o-transform: translateX(4px);
+            transform: translateX(4px);
+          }
+        }
+      }
+
+      > span {
+        font-weight: bold;
+        max-width: 100px;
+        min-width: 100px;
+      }
+    }
+  }
+}

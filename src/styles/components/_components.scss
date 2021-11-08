@@ -14,6 +14,7 @@
 @import "homepage/wallet_floor";
 @import "homepage/fuseswap_floor";
 @import "homepage/fuse_ecosysyem";
+@import "homepage/stats";
 @import "shared/newsletter_form";
 @import "about";
 @import "navbar/navbar";
@@ -38,7 +39,7 @@
   text-align: center;
   color: #052235;
   margin: 1em 0;
-  border-radius: 100px;
+  border-radius: 10px;
   background-image: linear-gradient(124.98deg, #b3ffbb 6.71%, #fffb00 90%);
 
   &::after {
@@ -62,7 +63,6 @@
     font-weight: 500;
   }
 
-
   @include modifier(no-arrow) {
     &::after {
       content: none;
@@ -83,7 +83,6 @@
   }
 }
 
-
 @include block(secondary_button) {
   padding: 1.125em 1.75em;
   font-size: 1em;
@@ -94,29 +93,15 @@
   text-align: center;
   margin: 1em 0;
   color: white;
-  border-radius: 100px;
+  border-radius: 10px;
 
   $border: 2px;
   border: solid $border white;
-  
+
   position: relative;
   &:hover {
     border: solid $border transparent;
-  }
-  &:hover::before {
-    content:"";
-    position:absolute;
-    top: -$border;
-    left: -$border;
-    right: -$border;
-    bottom: -$border;
-    border-radius: 100px;
-    border: solid $border transparent;
-    background: linear-gradient(89.89deg, #B5FFB7 0.93%, #F8F82B 100.96%); 
-    -webkit-mask: 
-       linear-gradient(#fff 0 0) content-box, 
-       linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out; 
-    mask-composite: exclude; 
+    background-color: $color-white;
+    color: $color-dark;
   }
 }
