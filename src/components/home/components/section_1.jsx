@@ -110,7 +110,7 @@ const SectionOne = () => {
               <Button link='https://staking.fuse.io/' type='secondary' text={msgs.secondaryText} />
             </div>
           </div>
-          <div className='canvas'>
+          <div className='canvas grid-x align-right'>
             <Globe />
             {/* <GlobeThree
               points_strips_source={[
