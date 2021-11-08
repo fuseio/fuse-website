@@ -6,6 +6,7 @@ const useCounter = (value, decimals) => {
   const { start, update, countUp } = useCountUp({
     formattingFn: formatNumber,
     end: 0,
+    duration: 5,
     ...(decimals ? { decimals } : {})
   })
 
