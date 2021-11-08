@@ -37,7 +37,7 @@ function Header ({ history }) {
             { header__nav__open: isOpen }
           )}
         >
-          <div className='header__link__wrapper cell large-auto'>
+          <div className='header__link__wrapper cell shrink'>
             <AnimatedNavbar duration={300} />
             <div className='nav__item' onClick={ecosystemPage}>
               <a
