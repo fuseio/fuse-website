@@ -54,7 +54,7 @@ const SectionFour = () => {
                   <div className='link'>
                     <a
                       rel='noreferrer noopener' target='_blank'
-                      href='https://docs.fuse.io/become-a-validator/getting-started'
+                      href='https://developers.fuse.io/fuse-dev-docs/network/how-to-become-a-validator/getting-started-as-a-validator'
                     >
                       <span><FormattedMessage defaultMessage='Learn how to run a Fuse node' /></span>
                     </a>
