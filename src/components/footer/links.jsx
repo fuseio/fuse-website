@@ -61,7 +61,7 @@ const items = [
       },
       {
         title: 'Brand Kit',
-        url: '/files/Fuse-Network-Brand-Identity-Guidelines_2.zip',
+        url: '/files/Fuse-Network-brand-kit.zip',
         download: true
       }
     ]
