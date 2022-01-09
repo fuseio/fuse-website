@@ -420,6 +420,9 @@
 
     @include block(item) {
       @include xy-grid(horizontal, false);
+      &:not(:last-child) {
+        margin: 0.9em 0;
+      }
       @include breakpoint(medium up) {
       }
       @include breakpoint(medium down) {
