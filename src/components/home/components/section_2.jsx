@@ -74,7 +74,6 @@ const Item = ({ title, image, Text, icon }) => {
   )
 }
 
-
 const SectionTwo = () => {
   return (
     <>

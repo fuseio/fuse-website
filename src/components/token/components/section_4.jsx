@@ -11,6 +11,9 @@ import BitMart from '@/assets/img/bitmart.svg'
 import FuseTokenOne from '@/assets/img/fuse_token_1.png'
 import FuseTokenTwo from '@/assets/img/fuse_token_2.png'
 import Bubble from '@/assets/img/bubble.png'
+import Bittrex from '@/assets/img/Bittrex.png'
+import Liquid from '@/assets/img/Liquid.png'
+import Mexc from '@/assets/img/MEXC.png'
 import { FormattedMessage } from 'react-intl'
 
 const items = [
@@ -58,6 +61,21 @@ const items = [
     icon: BitMart,
     name: 'BitMart',
     link: 'https://www.bitmart.com/'
+  },
+  {
+    icon: Bittrex,
+    name: 'Bittrex',
+    link: 'https://global.bittrex.com/'
+  },
+  {
+    icon: Mexc,
+    name: 'MEXC',
+    link: 'https://www.mexc.com/exchange/FUSE_USDT'
+  },
+  {
+    icon: Liquid,
+    name: 'Liquid',
+    link: 'https://app.liquid.com/exchange/FUSEUSDT'
   }
 ]
 

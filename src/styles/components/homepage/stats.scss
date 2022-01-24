@@ -1,7 +1,19 @@
 @include block(info_banner) {
-  @include xy-grid();
-  @include flex-align(left, middle);
+  // @include xy-grid();
+  // @include flex-align(left, middle);
+  // @include breakpoint(medium up) {
+  //   max-width: 70%;
+  // }
+
   @include breakpoint(medium up) {
+    @include xy-grid();
+    @include flex-align(left, middle);
+    max-width: 70%;
+  }
+
+  @include breakpoint(medium down) {
+    @include xy-grid(vertical);
+    @include flex-align(left, top);
     max-width: 70%;
   }
 
@@ -72,6 +84,8 @@
 
       > span {
         font-weight: bold;
+        max-width: 100px;
+        min-width: 100px;
       }
     }
   }

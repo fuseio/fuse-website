@@ -64,28 +64,53 @@
     }
   }
 
-  @include block(main_title) {
-    font-size: 3.7em;
-    font-weight: bold;
-    color: white;
-
-    @include breakpoint(medium down) {
-      font-size: 2.313em;
-    }
-  }
-
   @include block(canvas) {
     position: relative;
+    // @include xy-cell(auto, null, 0);
+    // canvas {
+    //   min-width: 650px;
+    //   max-width: 700px;
+    //   min-height: 650px;
+    //   max-height: 700px;
+    //   @include breakpoint(1600px) {
+    //     min-width: 800px;
+    //     max-width: 800px;
+    //     min-height: 800px;
+    //     max-height: 800px;
+    //   }
+    //   @include breakpoint(large down) {
+    //     min-width: 500px;
+    //     max-width: 500px;
+    //     min-height: 500px;
+    //     max-height: 500px;
+    //   }
+    // }
   }
 
   @include element(main) {
-    margin-bottom: 5em;
+    // position: relative;
     @include breakpoint(medium up) {
       @include xy-cell(auto, null, 0);
     }
 
     @include breakpoint(medium down) {
       @include xy-cell(24, null, 0);
+    }
+
+    @include block(main_title) {
+      font-size: 3.7em;
+      font-weight: bold;
+      color: white;
+      // position: absolute;
+      white-space: nowrap;
+
+      @include breakpoint(medium down) {
+        font-size: 2.313em;
+      }
+
+      > a {
+        display: block;
+      }
     }
   }
 
@@ -100,27 +125,28 @@
       font-size: 1.125em;
     }
   }
+}
 
-  @include element(notification-text) {
-    text-decoration: underline;
+@include block(Card_div) {
+  font-size: 11px;
+
+  img {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
   }
-
-  @include element(arrow) {
-    margin-left: 0.25em;
-    > img {
-      transition: all 0.1s ease-out;
+  label {
+    * {
+      font-weight: normal;
     }
   }
 
-  @include element(image) {
-    > div {
-      position: relative;
-      z-index: 5;
-    }
-
-    > canvas {
-      height: 700px;
-      width: 100%;
+  p {
+    margin: 2px 0 0 0;
+    font-size: 9px;
+    color: #000000;
+    * {
+      font-weight: bold;
     }
   }
 }
