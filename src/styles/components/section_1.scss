@@ -5,6 +5,7 @@
     @include flex-align(justify, middle);
 
     @include breakpoint(medium down) {
+      padding-top: 4em;
       @include xy-grid(vertical, false);
       @include flex-align(justify, middle);
     }
@@ -55,10 +56,14 @@
     margin-top: 2em;
     column-gap: 1em;
 
-    > * {
+    > a {
       @include xy-cell(shrink, null, 0);
       @include breakpoint(large up) {
         min-width: 250px;
+      }
+
+      @include breakpoint(small only) {
+        padding: 1.125em 1.175em;
       }
     }
   }
@@ -105,7 +110,7 @@
       white-space: nowrap;
 
       @include breakpoint(medium down) {
-        font-size: 2.313em;
+        font-size: 2em;
       }
 
       > a {
