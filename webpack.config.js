@@ -7,7 +7,6 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-const CopyWebpackPlugin = require("copy-webpack-plugin")
 
 const isDev = process.env.NODE_ENV === 'development'
 const sourceMap = isDev
@@ -30,18 +29,18 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(sa|sc)ss$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
           !isDev
             ? {
-              loader: MiniCssExtractPlugin.loader,
-              options: {
-                publicPath: '/'
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                  publicPath: '/'
+                }
               }
-            }
             : {
-              loader: 'style-loader'
-            },
+                loader: 'style-loader'
+              },
           {
             loader: 'css-loader',
             options: {
@@ -194,15 +193,7 @@ module.exports = {
       filename: 'index.html',
       template: path.join(__dirname, 'src', 'index.html'),
       publicPath: '/'
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: "./src/assets/fonts", to: "./fonts" },
-      ],
-      options: {
-        concurrency: 100,
-      },
-    }),
+    })
   ],
   optimization: {
     runtimeChunk: 'single',
