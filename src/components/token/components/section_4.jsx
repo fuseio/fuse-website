@@ -14,6 +14,7 @@ import Bubble from '@/assets/img/bubble.png'
 import Bittrex from '@/assets/img/Bittrex.png'
 import Liquid from '@/assets/img/Liquid.png'
 import Mexc from '@/assets/img/MEXC.png'
+import Pancake from "@/assets/img/pancake.png"
 import { FormattedMessage } from 'react-intl'
 
 const items = [
@@ -76,6 +77,11 @@ const items = [
     icon: Liquid,
     name: 'Liquid',
     link: 'https://app.liquid.com/exchange/FUSEUSDT'
+  },
+  {
+    icon:Pancake,
+    name:'PancakeSwap',
+    link:'https://pancakeswap.finance/swap'
   }
 ]
 
