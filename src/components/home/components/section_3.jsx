@@ -3,7 +3,7 @@ import StudioIcon from '@/assets/img/studio-icon.svg'
 import StudioImage from '@/assets/img/studio_img.png'
 import FuseSwapImage from '@/assets/img/fuseswap_image.png'
 import WalletIcon from '@/assets/img/fuse_wallet_icon.png'
-import FuseswpaIcon from '@/assets/img/fuseswap_icon.png'
+import voltageIcon from '@/assets/img/voltage_icon.png'
 import Gif from '@/assets/images/send-money.png'
 import { FormattedMessage } from 'react-intl'
 
@@ -155,11 +155,9 @@ const FuseSwapFloor = () => {
           <div className='cell small-24 medium-12'>
             <div className='grid-y texts'>
               <div className='fuseswap_floor__sub-title grid-x align-middle'>
-                <img src={FuseswpaIcon} />
-                &nbsp;
-                <span>
-                  <FormattedMessage defaultMessage='Fuse.fi' />
-                </span>
+                <div className='logo grid-x align-center'>
+                  <img className='light' src={voltageIcon} />
+                </div>
               </div>
               <h1 className='fuseswap_floor__title'>
                 <FormattedMessage
