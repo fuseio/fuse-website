@@ -2,20 +2,16 @@
 	@include xy-grid(horizontal, false);
 	@include flex-align(justify, middle);
 	min-height: 80px;
-	@include xy-grid-container();
+	@include xy-grid-container(1280px);
 	width: 100%;
 
 	@include element(wrapper) {
 		@include xy-grid();
-		padding: 0 20px;
+		padding: 0;
 		z-index: 100000;
 		position: absolute;
 		width: 100%;
 		height: min-content;
-
-		@include breakpoint(large up) {
-			padding-left: 2em;
-		}
 	}
 	@include element(logo) {
 		cursor: pointer;

@@ -2,9 +2,35 @@ html {
   font-size: 16px;
 }
 
+@font-face {
+  font-family: "Avenir";
+  src: url("../files/Avenir\ Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../files/Avenir\ Heavy.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../files/Avenir\ Light.ttf") format("truetype");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../files/Avenir\ Book.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../files/Avenir\ Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
 body {
   direction: ltr;
-  font-family: "Gotham A", "Gotham B", sans-serif !important;
+  font-family: "Avenir", "Gotham A", "Gotham B", sans-serif !important;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.3;
