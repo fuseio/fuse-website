@@ -1,5 +1,6 @@
-import React from 'react'
-import EcosystemMain from '@/assets/images/ecosystem_main.png'
+import React from 'react';
+import EcosystemMain from '@/assets/images/ecosystem_main.png';
+import ArrowDown from '@/assets/images/arrow-down.svg';
 
 const SectionOne = () => {
   return (
@@ -7,23 +8,23 @@ const SectionOne = () => {
       <div className='ecosystem_main__container'>
         <div className='ecosystem_main'>
           <div className='ecosystem_main__hero_text'>
-            <h1 className='ecosystem_main__title'>
-              A Flourishing Ecosystem of Leading Brands Building on Fuse
-            </h1>
+            <h1 className='ecosystem_main__title'>The best companies that built on Fuse Network</h1>
             <p className='ecosystem_main__description'>
-              From DeFi and Web3 applications to real world implementations that positively impact the lives of everyday people - browse the innovative projects building on Fuse.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+              has been the industry's standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type and scrambled it to make a type specimen book.
             </p>
-            <a rel='noreferrer noopener' target='_blank' href='mailto:hello@fuse.io' type='primary' className='ecosystem_main__button main_button main_button--no-arrow main_button--bold'>
-              Submit your project
-            </a>
           </div>
           <div className='ecosystem_main__img'>
             <img src={EcosystemMain} alt='ecosystem_main' />
           </div>
         </div>
+        <div className='ecosystem_main__arrow-wrapper'>
+          <img className='' src={ArrowDown} alt='arrow-down' />
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SectionOne
+export default SectionOne;
