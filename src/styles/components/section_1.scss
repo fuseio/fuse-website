@@ -1,11 +1,11 @@
 @include block(section-A) {
   background-color: #031928;
-  padding-top: 4em;
   @include element(container) {
     @include xy-grid(horizontal, false);
     @include flex-align(justify, middle);
 
     @include breakpoint(medium down) {
+      padding-top: 4em;
       @include xy-grid(vertical, false);
       @include flex-align(justify, middle);
     }
@@ -56,10 +56,14 @@
     margin-top: 2em;
     column-gap: 1em;
 
-    > * {
+    > a {
       @include xy-cell(shrink, null, 0);
       @include breakpoint(large up) {
         min-width: 250px;
+      }
+
+      @include breakpoint(small only) {
+        padding: 1.125em 1.175em;
       }
     }
   }
@@ -67,24 +71,6 @@
   @include block(canvas) {
     position: relative;
     @include xy-cell(auto, null, 0);
-    canvas {
-      min-width: 650px;
-      max-width: 700px;
-      min-height: 650px;
-      max-height: 700px;
-      @include breakpoint(1600px) {
-        min-width: 800px;
-        max-width: 800px;
-        min-height: 800px;
-        max-height: 800px;
-      }
-      @include breakpoint(large down) {
-        min-width: 500px;
-        max-width: 500px;
-        min-height: 500px;
-        max-height: 500px;
-      }
-    }
   }
 
   @include element(main) {
@@ -106,7 +92,7 @@
       white-space: nowrap;
 
       @include breakpoint(medium down) {
-        font-size: 2.313em;
+        font-size: 2em;
       }
 
       > a {
