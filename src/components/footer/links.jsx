@@ -10,8 +10,8 @@ const items = [
         url: 'https://studio.fuse.io/'
       },
       {
-        title: 'Fuse.fi',
-        url: 'https://fuse.fi/'
+        title: 'Voltage Finance',
+        url: 'https://voltage.finance/'
       },
       {
         title: 'Fuse Staking',
