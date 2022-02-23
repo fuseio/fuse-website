@@ -1,6 +1,5 @@
 import React from 'react'
 import { FormattedMessage, defineMessages } from 'react-intl'
-// import Globe from './globe'
 import GlobeThree from './globe_three'
 import { isMobileOnly } from 'react-device-detect'
 import VisibilitySensor from 'react-visibility-sensor'
@@ -31,9 +30,9 @@ const Button = ({ link, type = 'primary', text }) => {
 
 const Banner = () => {
   const { data = { data: 0 } } = useFetch('https://studio.fuse.io/api/v1/communities/count', {}, [])
-  const transactionCounter = useCounter(25029455)
+  const transactionCounter = useCounter(33250971)
   const communitiesCounter = useCounter(data.data)
-  const walletsCounter = useCounter(799727)
+  const walletsCounter = useCounter(870475)
 
   return (
     <section className='info_banner__wrapper'>

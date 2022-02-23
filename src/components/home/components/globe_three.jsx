@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three-stdlib'
 
