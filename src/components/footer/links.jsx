@@ -11,7 +11,7 @@ const items = [
       },
       {
         title: 'Voltage Finance',
-        url: 'https://fuse.fi/'
+        url: 'https://voltage.finance/'
       },
       {
         title: 'Fuse Staking',
