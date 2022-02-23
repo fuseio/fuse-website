@@ -1,10 +1,10 @@
-import React from 'react';
-import FooterLogo from '@/assets/images/group_21.svg';
-import Icons from './icons';
-import Links from './links';
-import SendMail from './send_email';
+import React from 'react'
+import FooterLogo from '@/assets/images/group_21.svg'
+import Icons from './icons'
+import Links from './links'
+import SendMail from './send_email'
 
-function Footer() {
+function Footer () {
   return (
     <footer className='footer__wrapper'>
       <div className='footer__container grid-x'>
@@ -27,7 +27,7 @@ function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

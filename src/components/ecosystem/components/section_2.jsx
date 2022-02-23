@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import SearchIcon from '@/assets/images/search_icon.svg';
-import arrowRight from '@/assets/images/arrow-right.svg';
+import React, { useEffect, useState } from 'react'
+import SearchIcon from '@/assets/images/search_icon.svg'
+import arrowRight from '@/assets/images/arrow-right.svg'
 
-function Header({ search, onChange }) {
+function Header ({ search, onChange }) {
   return (
     <div className='ecosystem_section_2__header'>
       <div className='ecosystem_section_2__search'>
@@ -12,10 +12,10 @@ function Header({ search, onChange }) {
         <input type='text' placeholder='Type to search' value={search} onChange={onChange} />
       </div>
     </div>
-  );
+  )
 }
 
-function Card({ logo, description, tags, website, twitter, telegram, discord }) {
+function Card ({ logo, description, tags, website, twitter, telegram, discord }) {
   return (
     <div className='ecosystem_section_2__card'>
       <div className='ecosystem_section_2__card__logo'>
@@ -43,10 +43,10 @@ function Card({ logo, description, tags, website, twitter, telegram, discord }) 
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-function Tags({ tags, selectedTags, onClick }) {
+function Tags ({ tags, selectedTags, onClick }) {
   return (
     <div className='ecosystem_section_2__tags__wrapper'>
       <h1 className='ecosystem_section_2__tags__title'>Tags</h1>
@@ -64,15 +64,15 @@ function Tags({ tags, selectedTags, onClick }) {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
 const SectionTwo = () => {
-  const [search, setSearch] = useState('');
-  const [tags, setTags] = useState([]);
-  const [selectedTags, setSelectedTags] = useState([]);
-  const [data, setData] = useState([]);
-  const [orgItems, setOrgItems] = useState([]);
+  const [search, setSearch] = useState('')
+  const [tags, setTags] = useState([])
+  const [selectedTags, setSelectedTags] = useState([])
+  const [data, setData] = useState([])
+  const [orgItems, setOrgItems] = useState([])
 
   useEffect(() => {
     const tagsPromise = fetch(
@@ -80,68 +80,68 @@ const SectionTwo = () => {
     )
       .then((res) => res.json())
       .then((json) => {
-        const orgTags = [];
+        const orgTags = []
         for (const key in json) {
-          orgTags.push(json[key]);
+          orgTags.push(json[key])
         }
-        return orgTags;
-      });
+        return orgTags
+      })
 
     const itemsPromise = fetch(
       'https://fuse-website-3ce69-default-rtdb.europe-west1.firebasedatabase.app/items.json'
     )
       .then((res) => res.json())
       .then((json) => {
-        const orgItems = [];
+        const orgItems = []
         for (const key in json) {
-          orgItems.push(json[key]);
+          orgItems.push(json[key])
         }
-        setData(orgItems);
-        setOrgItems(orgItems);
-        return orgItems;
-      });
+        setData(orgItems)
+        setOrgItems(orgItems)
+        return orgItems
+      })
 
     Promise.all([tagsPromise, itemsPromise]).then(([tags, items]) => {
       const counts = items.reduce((acc, curr) => {
         (curr.tags || []).forEach((c) => {
-          acc[c.toLowerCase()] = (acc[c.toLowerCase()] || 0) + 1;
-        });
-        return acc;
-      }, {});
+          acc[c.toLowerCase()] = (acc[c.toLowerCase()] || 0) + 1
+        })
+        return acc
+      }, {})
       const newTags = tags.map(({ tag }) => ({
         tag,
-        count: counts[tag.toLowerCase()] || 0,
-      }));
-      setTags(newTags);
-    });
-  }, []);
+        count: counts[tag.toLowerCase()] || 0
+      }))
+      setTags(newTags)
+    })
+  }, [])
 
   const handleSearch = ({ target: { value } }) => {
-    setSearch(value);
-    setSelectedTags([]);
-    const q = value.toLowerCase();
+    setSearch(value)
+    setSelectedTags([])
+    const q = value.toLowerCase()
     const filtered = orgItems.filter(
       (t) =>
         t.description.toLowerCase().includes(q) ||
         (t.tags || []).join(' ').toLowerCase().includes(q)
-    );
-    setData(filtered);
-  };
+    )
+    setData(filtered)
+  }
 
   const handleTagClick = ({ tag }) => {
-    const index = selectedTags.findIndex((t) => t === tag);
-    let newSelectedTags;
-    if (index === -1) newSelectedTags = [...selectedTags, tag];
+    const index = selectedTags.findIndex((t) => t === tag)
+    let newSelectedTags
+    if (index === -1) newSelectedTags = [...selectedTags, tag]
     else {
-      newSelectedTags = [...selectedTags];
-      newSelectedTags.splice(index, 1);
+      newSelectedTags = [...selectedTags]
+      newSelectedTags.splice(index, 1)
     }
-    setSelectedTags(newSelectedTags);
+    setSelectedTags(newSelectedTags)
     const arr = orgItems.filter((d) =>
       newSelectedTags.some((selectedTag) => (d.tags || []).includes(selectedTag))
-    );
-    setData(arr);
-  };
+    )
+    setData(arr)
+  }
 
   return (
     <section className='ecosystem_section_2__container'>
@@ -163,7 +163,7 @@ const SectionTwo = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SectionTwo;
+export default SectionTwo

@@ -1,6 +1,6 @@
-import React from 'react';
-import EcosystemMain from '@/assets/images/ecosystem_main.png';
-import ArrowDown from '@/assets/images/arrow-down.svg';
+import React from 'react'
+import EcosystemMain from '@/assets/images/ecosystem_main.png'
+import ArrowDown from '@/assets/images/arrow-down.svg'
 
 const SectionOne = () => {
   return (
@@ -24,7 +24,7 @@ const SectionOne = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SectionOne;
+export default SectionOne

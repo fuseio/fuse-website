@@ -1,78 +1,78 @@
-import React, { useState } from 'react';
-import { FormattedMessage, useIntl } from 'react-intl';
-import { object, string } from 'yup';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import React, { useState } from 'react'
+import { FormattedMessage, useIntl } from 'react-intl'
+import { object, string } from 'yup'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
 
 const SendMail = () => {
-  const [title, setTitle] = useState('');
-  const intl = useIntl();
+  const [title, setTitle] = useState('')
+  const intl = useIntl()
 
   const emailInvalidMessage = intl.formatMessage({
-    defaultMessage: 'Invalid email',
-  });
+    defaultMessage: 'Invalid email'
+  })
   const requiredMessage = intl.formatMessage({
-    defaultMessage: 'Required',
-  });
+    defaultMessage: 'Required'
+  })
   const SignupSchema = object().shape({
-    email: string().email(emailInvalidMessage).required(requiredMessage),
-  });
+    email: string().email(emailInvalidMessage).required(requiredMessage)
+  })
 
   return (
     <Formik
       initialValues={{ email: '' }}
       validationSchema={SignupSchema}
       onSubmit={async (values, { setSubmitting, resetForm }) => {
-        const { email } = values;
+        const { email } = values
         const user = {
           accountAddress: email,
           email: email,
           provider: 'HDWallet',
           subscribe: true,
           source: 'Fuse.io',
-          displayName: 'Fuse.io',
-        };
+          displayName: 'Fuse.io'
+        }
 
         try {
           const response = await fetch('https://studio.fuse.io/api/v2/users', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
+              'Content-Type': 'application/json'
             },
             referrerPolicy: 'no-referrer',
-            body: JSON.stringify(user),
-          });
+            body: JSON.stringify(user)
+          })
 
           if (response.status === 200) {
             const okMessage = intl.formatMessage({
-              defaultMessage: 'Thanks joining our mailing list! &#128077',
-            });
-            setTitle(`<span>${okMessage}</span>`);
+              defaultMessage: 'Thanks joining our mailing list! &#128077'
+            })
+            setTitle(`<span>${okMessage}</span>`)
             setTimeout(() => {
-              setTitle('');
-            }, 3000);
-            setSubmitting(true);
+              setTitle('')
+            }, 3000)
+            setSubmitting(true)
           } else if (response.status === 500) {
             const errorMessage = intl.formatMessage({
-              defaultMessage: 'Something went wrong &#128078',
-            });
-            setTitle(`<span>${errorMessage}</span>`);
+              defaultMessage: 'Something went wrong &#128078'
+            })
+            setTitle(`<span>${errorMessage}</span>`)
             setTimeout(() => {
-              setTitle('');
-            }, 3000);
-            setSubmitting(true);
+              setTitle('')
+            }, 3000)
+            setSubmitting(true)
           }
 
-          resetForm({ email: '' });
+          resetForm({ email: '' })
         } catch (error) {
           const errorMessage = intl.formatMessage({
-            defaultMessage: 'Something went wrong &#128078',
-          });
-          resetForm({ email: '' });
-          setTitle(`<span>${errorMessage}</span>`);
+            defaultMessage: 'Something went wrong &#128078'
+          })
+          resetForm({ email: '' })
+          setTitle(`<span>${errorMessage}</span>`)
           setTimeout(() => {
-            setTitle('');
-          }, 3000);
-          setSubmitting(true);
+            setTitle('')
+          }, 3000)
+          setSubmitting(true)
         }
       }}
     >
@@ -109,7 +109,7 @@ const SendMail = () => {
         </Form>
       )}
     </Formik>
-  );
-};
+  )
+}
 
-export default SendMail;
+export default SendMail

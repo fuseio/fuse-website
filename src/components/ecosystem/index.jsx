@@ -1,6 +1,6 @@
-import React from 'react';
-import SectionOne from '@/components/ecosystem/components/section_1';
-import SectionTwo from '@/components/ecosystem/components/section_2';
+import React from 'react'
+import SectionOne from '@/components/ecosystem/components/section_1'
+import SectionTwo from '@/components/ecosystem/components/section_2'
 
 const Ecosystem = () => {
   return (
@@ -8,7 +8,7 @@ const Ecosystem = () => {
       <SectionOne />
       <SectionTwo />
     </div>
-  );
-};
+  )
+}
 
-export default Ecosystem;
+export default Ecosystem
