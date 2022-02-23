@@ -42,6 +42,14 @@
       color: $color-white;
     }
     padding: 2em 0;
+
+    @include block(logo) {
+      @include xy-grid();
+      @include flex-align(justify, middle);
+      @include block(light) {
+        width: 180px;
+      }
+    }
   }
 
   @include element(title) {
