@@ -186,7 +186,7 @@ const FuseSwapFloor = () => {
               </ul>
               <div className='launch'>
                 <Button
-                  link='https://fuse.fi/'
+                  link='https://voltage.finance/'
                   text={<FormattedMessage defaultMessage='Swap & pool now' />}
                 />
               </div>

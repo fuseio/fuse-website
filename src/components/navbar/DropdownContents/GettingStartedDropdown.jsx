@@ -24,7 +24,7 @@ const items = [
     title: <FormattedMessage defaultMessage='Voltage Finance' />,
     icon: FuseSwap,
     subTitle: <FormattedMessage defaultMessage='Trade without gas' />,
-    url: 'https://fuse.fi/'
+    url: 'https://voltage.finance/'
   },
   {
     title: <FormattedMessage defaultMessage='Fuse Cash' />,

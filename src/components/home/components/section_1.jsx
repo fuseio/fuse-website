@@ -1,8 +1,7 @@
 import React from 'react'
 import { FormattedMessage, defineMessages } from 'react-intl'
-import Globe from './globe'
-// import GlobeThree from './globe_three'
-// import { isMobileOnly } from 'react-device-detect'
+import GlobeThree from './globe_three'
+import { isMobileOnly } from 'react-device-detect'
 import VisibilitySensor from 'react-visibility-sensor'
 import useFetch from 'use-http'
 import useCounter from '@/hooks/useCounter'
@@ -31,9 +30,9 @@ const Button = ({ link, type = 'primary', text }) => {
 
 const Banner = () => {
   const { data = { data: 0 } } = useFetch('https://studio.fuse.io/api/v1/communities/count', {}, [])
-  const transactionCounter = useCounter(19188434)
+  const transactionCounter = useCounter(33250971)
   const communitiesCounter = useCounter(data.data)
-  const walletsCounter = useCounter(510286)
+  const walletsCounter = useCounter(870475)
 
   return (
     <section className='info_banner__wrapper'>
@@ -110,17 +109,10 @@ const SectionOne = () => {
               <Button link='https://staking.fuse.io/' type='secondary' text={msgs.secondaryText} />
             </div>
           </div>
-          <div className='canvas grid-x align-right'>
-            <Globe />
-            {/* <GlobeThree
-              points_strips_source={[
-                'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAE8mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIxLTEwLTMxVDE3OjI3OjM4KzAyOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMS0xMC0zMVQxNzoyOTozNiswMjowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMS0xMC0zMVQxNzoyOTozNiswMjowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NWQ5ZGVhMDYtZWYwOS00MWM1LWEzMjctY2E2ZDEzYzU3YzJiIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVkOWRlYTA2LWVmMDktNDFjNS1hMzI3LWNhNmQxM2M1N2MyYiIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjVkOWRlYTA2LWVmMDktNDFjNS1hMzI3LWNhNmQxM2M1N2MyYiI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NWQ5ZGVhMDYtZWYwOS00MWM1LWEzMjctY2E2ZDEzYzU3YzJiIiBzdEV2dDp3aGVuPSIyMDIxLTEwLTMxVDE3OjI3OjM4KzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjMuMCAoTWFjaW50b3NoKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5pWKisAAAAGUlEQVQImWP88NCRAQaYoPR/ZA4jAwMDAwBf2AMYi+08NQAAAABJRU5ErkJggg=='
-              ]}
-              data_strips_source={[
-                'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE8mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIxLTExLTAzVDEwOjU5OjUyKzAyOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMS0xMS0wM1QxMTowMjoyNiswMjowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMS0xMS0wM1QxMTowMjoyNiswMjowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MWIyNjdjODUtMWE0MC00ODllLWI2NmMtNzRiYjcxOGExMTE0IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFiMjY3Yzg1LTFhNDAtNDg5ZS1iNjZjLTc0YmI3MThhMTExNCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjFiMjY3Yzg1LTFhNDAtNDg5ZS1iNjZjLTc0YmI3MThhMTExNCI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6MWIyNjdjODUtMWE0MC00ODllLWI2NmMtNzRiYjcxOGExMTE0IiBzdEV2dDp3aGVuPSIyMDIxLTExLTAzVDEwOjU5OjUyKzAyOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjMuMCAoTWFjaW50b3NoKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7X3nl5AAAAhUlEQVQoka3S0QnCAAxF0aM4QJcQN7ADqBO4jQOIw5QuoAO4gahLFCfwoxGk1GiLF/LzLjwCyaS8HPyT6Rc/R4UmporsI7PELXBG8ZZtsUKJ29AN952yF0W4XrLCdeI2YwpHkRWeEnccU7jTXrZLE25w4RVL1HjE1JH1Xpj8beCufZWfeQK0/RRjGi3jXAAAAABJRU5ErkJggg=='
-              ]}
-              width={isMobileOnly ? 300 : 800}
-              height={isMobileOnly ? 300 : 800}
+          <div className='canvas'>
+            <GlobeThree
+              width={isMobileOnly ? 500 : 900}
+              height={isMobileOnly ? 500 : 900}
               pois={[
                 {
                   creation: 1, // this vaule must be different for every poi !!!!!!!!!!!!!!!!! or no show ...
@@ -169,17 +161,9 @@ const SectionOne = () => {
                   card_title: '<b> Las Vegas</b>',
                   card_flag: 'data:image/jpg;base64,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',
                   card_subtitle: '<b>300 USD for Wedding &#128141</b>'
-                },
-                {
-                  creation: 7,
-                  lat: 33.8938,
-                  lon: 40.5018,
-                  card_title: '<b> Beirut</b>',
-                  card_flag: 'data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QDGRXhpZgAATU0AKgAAAAgABwEyAAIAAAAUAAAAYgE+AAUAAAACAAAAdgE/AAUAAAAGAAAAhgMBAAUAAAABAAAAtlEQAAEAAAABAQAAAFERAAQAAAABAAAAAFESAAQAAAABAAAAAAAAAAAyMDE3OjA2OjE2IDEzOjE1OjM3AAAAeiYAAYagAACAhAABhqAAAPoAAAGGoAAAgOgAAYagAAB1MAABhqAAAOpgAAGGoAAAOpgAAYagAAAXcAABhqAAAYagAACxj//bAEMAAgEBAgEBAgICAgICAgIDBQMDAwMDBgQEAwUHBgcHBwYHBwgJCwkICAoIBwcKDQoKCwwMDAwHCQ4PDQwOCwwMDP/bAEMBAgICAwMDBgMDBgwIBwgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIACAAIAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP32tr+C8mnjhmhlktX8uZUcM0TbQ21gOh2spwezA96r+IfFGmeErBrrVdRsdMtV6zXdwkMY/wCBMQK/OX9qb/gnFffHX9tv4leM9D+It54VvdU1GyjmtRprTJ+70mwjBWRJ4yMhASCp5zz2rN+IH/BMjSPgH8JNZ8aeNPiVquvNYw4gtbTThZyXty3EUPmySTnDNjLeWdqhm2nGK8HE5lmFOUlDC3SvaXPFJrvbf5WufcU8n4Vp4JY7H5uqdo804+wquUWleSv8LtrZp2Z9q+N/+ChPwX+Hu7+0viDojKvVrISX6/nAjil+C3/BQX4N/tDeL4fD/hDx1puqa1cl1gsngntZrgrG0jCNZo0LkIjsQucKjHoDXzj+zR+w98B/j3+z1Z+KP+Ef1jVLiR5Le8t77Xblvss6HDJvtxbrIMYIYIFIb8tP9nr9g74W/B79qLwd4q8K+HrjQ9W0zUrhY/K1S6uIZBJpt9GwZJ5JP4WONu3kD6UsLWzepKNSUaag7Xs5OVvLS1yZz4GrYF1cur4mpOUW4ScKapydrxuubnSb30uuwvxK/bi+F/wl/a++JXhfxP4mbQ9Z03VbNpI59OupI3WTSrCRSskUbp91xwxBznjvXK/te/tX/BX9o34Xw6Hb+PtYlks2kmih03QriSI3BULHPJ58UaSrGN+Ig6hy+CyfeH0N8fP+CW3wL/aZ+JF54w8XeCZLjxRqAj+16jYa1qGly3ZjjWJGlFrPGsjLGiIC4JCoo6AVR8Gf8Ei/2ePA9yssHw7h1Pb1j1vWNQ1iFvrFdzyxn6bcUsXRzaq5U4OnyPa6lzW6dbXM/q3AuKwCo5lSxU5yilOMZ04wb0vZ8vOot9N13Pjvwd/wVL+FP7GnwkXQ/DvhW+luJIIf7Sn1bxIlj9vuY0CNOqSPdNCHxkRqxVM7QOMnpP2Av+Csvhf9rj9q3wl4StPDzabqOoX9y8MtrrcOpwjytNvZG3kJEy5VWAwrc47cj9Cvh78FPBvwjtFt/CnhHwz4Yt1GFj0nS4LJFHsI1UVf1T4f6DrninTdcvdD0i81rRWdtP1CezjkurEvG8bmKUgtGWjkdDtIyrsOhIowuXZjSlHmxKcVa8VCKVuqvv8AM0lmXCFHAvA5dlLpWi1Cft5txdtG42UHrq1bXU//2Q',
-                  card_subtitle: '<b>100 LBP for Falafel &#129478</b>'
                 }
               ]}
-            /> */}
+            />
           </div>
         </div>
         <Banner />

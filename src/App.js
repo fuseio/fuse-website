@@ -14,6 +14,8 @@ import Network from '@/components/network'
 import Ecosystem from '@/components/ecosystem'
 import Token from '@/components/token'
 import About from '@/components/about'
+import Careers from '@/components/careers'
+import Position from '@/components/Position'
 import Footer from '@/components/footer'
 import ScrollToTopController from '@/hooks/useScrollToTopController'
 
@@ -57,6 +59,12 @@ const App = () => {
                   <Switch>
                     <Route exact path='/about'>
                       <About />
+                    </Route>
+                    <Route exact path='/careers'>
+                      <Careers />
+                    </Route>
+                    <Route exact path='/position/:id'>
+                      <Position />
                     </Route>
                     <Route exact path='/token'>
                       <Token />

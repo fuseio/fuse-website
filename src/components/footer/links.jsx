@@ -11,7 +11,7 @@ const items = [
       },
       {
         title: 'Voltage Finance',
-        url: 'https://fuse.fi/'
+        url: 'https://voltage.finance/'
       },
       {
         title: 'Fuse Staking',
@@ -63,6 +63,10 @@ const items = [
         title: 'Brand Kit',
         url: '/files/Fuse-Network-brand-kit.zip',
         download: true
+      },
+      {
+        title: "Careers",
+        route: './careers'
       }
     ]
   }
@@ -77,7 +81,7 @@ const Item = withRouter(({ history, url, title, route, download }) => {
             <span onClick={() => history.push(route)}>
               {title}
             </span>
-            )
+          )
           : null
       }
       {
@@ -86,14 +90,14 @@ const Item = withRouter(({ history, url, title, route, download }) => {
             <a rel='noreferrer noopener' target='_blank' href={url} download={download}>
               {title}
             </a>
-            )
+          )
           : null
       }
     </li>
   )
 })
 
-function List ({ title, items }) {
+function List({ title, items }) {
   return (
     <div className='list__container'>
       <div className='list__title'>{title}</div>
@@ -108,7 +112,7 @@ function List ({ title, items }) {
   )
 }
 
-function Links () {
+function Links() {
   return (
     <div className='grid-x links cell small-24 medium-14 large-10'>
       {
