@@ -1,29 +1,29 @@
-const webpack = require('webpack');
-const path = require('path');
-const config = require('config');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const webpack = require('webpack')
+const path = require('path')
+const config = require('config')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const ProgressBarPlugin = require('progress-bar-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
-const isDev = process.env.NODE_ENV === 'development';
-const sourceMap = isDev;
+const isDev = process.env.NODE_ENV === 'development'
+const sourceMap = isDev
 
 module.exports = {
   entry: ['react-hot-loader/patch', './src/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
-    filename: '[name].[hash].js',
+    filename: '[name].[hash].js'
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -32,38 +32,38 @@ module.exports = {
             ? {
                 loader: MiniCssExtractPlugin.loader,
                 options: {
-                  publicPath: '/',
-                },
+                  publicPath: '/'
+                }
               }
             : {
-                loader: 'style-loader',
+                loader: 'style-loader'
               },
           {
             loader: 'css-loader',
             options: {
               url: false,
-              sourceMap,
-            },
+              sourceMap
+            }
           },
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap,
-            },
+              sourceMap
+            }
           },
           {
             loader: 'resolve-url-loader',
             options: {
-              sourceMap,
-            },
+              sourceMap
+            }
           },
           {
             loader: 'sass-loader',
             options: {
-              sourceMap,
-            },
-          },
-        ],
+              sourceMap
+            }
+          }
+        ]
       },
       {
         test: /\.(gif|png|jpe?g)$/i,
@@ -74,8 +74,8 @@ module.exports = {
             options: {
               outputPath: 'images',
               name: '[name].[ext]',
-              publicPath: '/images',
-            },
+              publicPath: '/images'
+            }
           },
           {
             loader: 'image-webpack-loader',
@@ -83,45 +83,45 @@ module.exports = {
               disable: true,
               bypassOnDebug: true,
               gifsicle: {
-                interlaced: false,
+                interlaced: false
               },
               optipng: {
-                optimizationLevel: 7,
+                optimizationLevel: 7
               },
               pngquant: {
-                speed: 4,
+                speed: 4
               },
               mozjpeg: {
-                progressive: true,
-              },
-            },
-          },
-        ],
+                progressive: true
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         issuer: {
-          test: /\.(sa|sc|c)ss$/,
+          test: /\.(sa|sc|c)ss$/
         },
         use: [
           'babel-loader',
           {
             loader: '@svgr/webpack',
             options: {
-              native: true,
-            },
+              native: true
+            }
           },
           {
             loader: 'file-loader',
             options: {
-              publicPath: '/',
-            },
-          },
-        ],
+              publicPath: '/'
+            }
+          }
+        ]
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url-loader',
+        loader: 'url-loader'
       },
       {
         test: /\.(pdf|zip|ttf)$/,
@@ -131,24 +131,24 @@ module.exports = {
             options: {
               outputPath: 'files',
               name: '[name].[ext]',
-              publicPath: '/files',
-            },
-          },
-        ],
-      },
-    ],
+              publicPath: '/files'
+            }
+          }
+        ]
+      }
+    ]
   },
   resolve: {
     extensions: ['.js', '.jsx', '.png', '.svg'],
     alias: {
       'react-dom': '@hot-loader/react-dom',
-      '@': path.resolve(path.resolve(__dirname, './'), 'src'),
-    },
+      '@': path.resolve(path.resolve(__dirname, './'), 'src')
+    }
   },
   devServer: {
     contentBase: './dist',
     historyApiFallback: true,
-    hot: true,
+    hot: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -170,13 +170,13 @@ module.exports = {
           favicons: true,
           firefox: false,
           windows: false,
-          yandex: false,
-        },
-      },
+          yandex: false
+        }
+      }
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
-      openAnalyzer: false,
+      openAnalyzer: false
     }),
     new MiniCssExtractPlugin(),
     new CleanWebpackPlugin(),
@@ -184,8 +184,8 @@ module.exports = {
       appMountId: 'app',
       filename: 'index.html',
       template: path.join(__dirname, 'src', 'index.html'),
-      publicPath: '/',
-    }),
+      publicPath: '/'
+    })
   ],
   optimization: {
     runtimeChunk: 'single',
@@ -194,15 +194,15 @@ module.exports = {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendors',
-          chunks: 'all',
+          chunks: 'all'
         },
         styles: {
           name: 'styles',
           test: /\.css$/,
           chunks: 'all',
-          enforce: true,
-        },
-      },
-    },
-  },
-};
+          enforce: true
+        }
+      }
+    }
+  }
+}

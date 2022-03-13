@@ -25,9 +25,9 @@
     left: 62%;
     top: -24%;
     @include breakpoint(medium down) {
-     height: 717.1px;
-     max-width: 170px;
-     left: 95%;
+      height: 717.1px;
+      max-width: 170px;
+      left: 95%;
     }
     @include element(rect) {
       background: linear-gradient(180deg, #b3f9ba 0%, #f6fb8c 180.8%);
@@ -72,7 +72,7 @@
         font-size: 5em;
         margin-bottom: 25px;
       }
-      @include breakpoint(small down){
+      @include breakpoint(small down) {
         font-size: 3em;
       }
 
@@ -89,7 +89,6 @@
     @include breakpoint(medium down) {
       font-size: 1em;
     }
-    
   }
 }
 
@@ -169,7 +168,7 @@
         color: #fff;
         padding: 10px 0;
         @include breakpoint(medium down) {
-          padding:0;
+          padding: 0;
         }
       }
       @include element(line) {
@@ -242,21 +241,20 @@
           }
         }
       }
-      @include element(type){
+      @include element(type) {
         display: flex;
         align-items: center;
         &::before {
-        content: "";
-        height: 100%;
-        display: inline-block;
-        margin-right: 9px;
-        width: 13px;
-        height: 13px;
-        background: #071927;
-        border-radius: 50%;
-        @include breakpoint(medium down) {
-          margin-right: 8px;
-          
+          content: "";
+          height: 100%;
+          display: inline-block;
+          margin-right: 9px;
+          width: 13px;
+          height: 13px;
+          background: #071927;
+          border-radius: 50%;
+          @include breakpoint(medium down) {
+            margin-right: 8px;
           }
         }
       }
@@ -267,7 +265,7 @@
 @include block(position) {
   background-color: #031928;
   color: #fff;
-  @include breakpoint(medium down){
+  @include breakpoint(medium down) {
     position: relative;
   }
   @include element(container) {
@@ -277,7 +275,7 @@
     @include breakpoint(medium down) {
       padding-top: 4em;
       @include xy-grid(vertical, false);
-      @include flex-align(justify, start);
+      @include flex-align(justify, top);
     }
   }
 
@@ -345,7 +343,7 @@
     border-radius: 10px;
     background-image: linear-gradient(124.98deg, #b3ffbb 6.71%, #fffb00 90%);
     @include breakpoint(medium down) {
-     display: block;
+      display: block;
     }
   }
   @include block(main_button) {
@@ -356,7 +354,7 @@
     top: 30%;
     font-size: 18px;
     @include breakpoint(medium down) {
-     display: none;
+      display: none;
     }
   }
   @include element(details) {

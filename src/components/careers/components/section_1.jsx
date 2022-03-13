@@ -14,7 +14,7 @@ const SectionOne = () => {
             </p>
           </div>
           <div className='canvas'>
-            <div class="canvas__rect"></div>
+            <div class='canvas__rect' />
           </div>
         </div>
       </div>

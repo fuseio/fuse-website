@@ -1,35 +1,35 @@
-import React from 'react';
+import React from 'react'
 
-import Medium from '@/assets/img/social/medium.svg';
-import Discord from '@/assets/img/social/discord.svg';
-import GitHub from '@/assets/img/social/github.svg';
-import Telegram from '@/assets/img/social/telegram.svg';
-import Twitter from '@/assets/img/social/twitter.svg';
+import Medium from '@/assets/img/social/medium.svg'
+import Discord from '@/assets/img/social/discord.svg'
+import GitHub from '@/assets/img/social/github.svg'
+import Telegram from '@/assets/img/social/telegram.svg'
+import Twitter from '@/assets/img/social/twitter.svg'
 
 const socialLinks = [
   {
     url: 'https://medium.com/fusenet',
-    icon: Medium,
+    icon: Medium
   },
   {
     url: 'https://github.com/fuseio',
-    icon: GitHub,
+    icon: GitHub
   },
   {
     url: 'https://twitter.com/fuse_network',
-    icon: Twitter,
+    icon: Twitter
   },
   {
     url: 'https://discordapp.com/invite/jpPMeSZ',
-    icon: Discord,
+    icon: Discord
   },
   {
     url: 'https://t.me/fuseio',
-    icon: Telegram,
-  },
-];
+    icon: Telegram
+  }
+]
 
-function Icons() {
+function Icons () {
   return (
     <div className='footer__icons grid-y cell small-24 medium-6'>
       <div>
@@ -48,7 +48,7 @@ function Icons() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Icons;
+export default Icons
