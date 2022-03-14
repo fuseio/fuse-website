@@ -10,21 +10,21 @@ const roles = [
         id: 1,
         title: 'Full-Stack Developer',
         type: 'Full - time',
-        location: 'Tel Aviv',
+        location: 'Tel Aviv'
       },
       {
         id: 2,
         title: 'Full-Stack Developer',
         type: 'Remote',
-        location: 'Tel Aviv',
+        location: 'Tel Aviv'
       },
       {
         id: 3,
         title: 'Solidity Developer',
         type: 'Remote',
-        location: 'Tel Aviv',
-      },
-    ],
+        location: 'Tel Aviv'
+      }
+    ]
   },
   {
     title: 'Administration',
@@ -34,11 +34,11 @@ const roles = [
         id: 4,
         title: 'Office Administrator',
         type: 'Full - time',
-        location: 'Tel Aviv',
-      },
-    ],
-  },
-];
+        location: 'Tel Aviv'
+      }
+    ]
+  }
+]
 
 const SectionTwo = () => {
   return (
@@ -63,7 +63,7 @@ const Role = ({ title, color, positions }) => {
   return (
     <div className='role'>
       <div className='role__title'>
-        <div className='role__line' style={{ backgroundColor: color }}></div>
+        <div className='role__line' style={{ backgroundColor: color }} />
         <h2>{title}</h2>
       </div>
       <div className='positions'>
@@ -76,8 +76,8 @@ const Role = ({ title, color, positions }) => {
 }
 
 const PositionCard = (props) => {
-  const history = useHistory();
-  const { title, type, location, id } = props;
+  const history = useHistory()
+  const { title, type, location, id } = props
   return (
     <div className='position-card' onClick={() => history.push(`/position/${id}`)}>
       <h3 className='position-card__position'>{title}</h3>
