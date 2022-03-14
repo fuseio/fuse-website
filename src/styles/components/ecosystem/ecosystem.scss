@@ -99,11 +99,10 @@
 		@include xy-grid-container(1280px);
 		margin-top: 6.3125rem;
 		margin-bottom: 7.6875rem;
-		// width: 100%;
 	}
 	@include element(header) {
 		@include xy-grid(horizontal, null);
-		@include flex-align(end, middle);
+		@include flex-align(right, middle);
 		@include breakpoint(small only) {
 			@include xy-grid(vertical, null);
 			@include flex-align(center, middle);

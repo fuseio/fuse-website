@@ -127,7 +127,7 @@ module.exports = {
         loader: 'url-loader'
       },
       {
-        test: /\.(pdf|zip)$/,
+        test: /\.(pdf|zip|ttf)$/,
         use: [
           {
             loader: 'file-loader',
