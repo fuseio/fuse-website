@@ -1,6 +1,6 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
-import networkArrow from '@/assets/images/networkArrow.svg'
+import networkArrow from '@/assets/images/network_arrow.svg'
 const SectionFour = () => {
   return (
     <div className='participates grid-y'>
