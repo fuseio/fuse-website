@@ -15,7 +15,7 @@ import Ecosystem from '@/components/ecosystem'
 import Token from '@/components/token'
 import About from '@/components/about'
 import Careers from '@/components/careers'
-import Position from '@/components/Position'
+import Position from '@/components/position'
 import Footer from '@/components/footer'
 import ScrollToTopController from '@/hooks/useScrollToTopController'
 
