@@ -54,9 +54,8 @@ function Tags ({ tags, selectedTags, onClick }) {
         {tags.map(({ tag, count }, index) => (
           <div
             onClick={() => onClick({ tag, count })}
-            className={`ecosystem_section_2__tags__tag ${
-              selectedTags.includes(tag) ? 'ecosystem_section_2__tags__tag--selected' : ''
-            }`}
+            className={`ecosystem_section_2__tags__tag ${selectedTags.includes(tag) ? 'ecosystem_section_2__tags__tag--selected' : ''
+              }`}
             key={index}
           >
             {tag} <span>({count})</span>
@@ -137,6 +136,10 @@ const SectionTwo = () => {
       newSelectedTags.splice(index, 1)
     }
     setSelectedTags(newSelectedTags)
+    if (!newSelectedTags.length) {
+      setData(orgItems)
+      return
+    }
     const arr = orgItems.filter((d) =>
       newSelectedTags.some((selectedTag) => (d.tags || []).includes(selectedTag))
     )
