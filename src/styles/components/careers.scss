@@ -1,0 +1,433 @@
+@include block(career-A) {
+  background-color: #031928;
+  @include element(container) {
+    max-height: 657px;
+    @include xy-grid(horizontal, false);
+    @include flex-align(justify, middle);
+
+    @include breakpoint(medium down) {
+      padding-top: 4em;
+      @include xy-grid(vertical, false);
+      @include flex-align(justify, middle);
+    }
+  }
+
+  @include element(wrapper) {
+    padding: 5em 0 1em 0;
+    @include xy-grid-container();
+  }
+
+  @include block(canvas) {
+    height: 836.1px;
+    max-width: 836.1px;
+    width: 100%;
+    position: absolute;
+    left: 62%;
+    top: -24%;
+    @include breakpoint(medium down) {
+      height: 717.1px;
+      max-width: 170px;
+      left: 95%;
+    }
+    @include element(rect) {
+      background: linear-gradient(180deg, #b3f9ba 0%, #f6fb8c 180.8%);
+      border-radius: 50px;
+      transform: rotate(25.8deg);
+      height: 100%;
+    }
+  }
+
+  @include element(main) {
+    margin-bottom: 5em;
+    // position: relative;
+    padding-top: 166px;
+    padding-bottom: 197px;
+    @include breakpoint(medium up) {
+      @include xy-cell(auto, null, 0);
+    }
+    @include breakpoint(large up) {
+      width: 50%;
+      flex: 0 0 50%;
+    }
+    @include breakpoint(medium down) {
+      @include xy-cell(24, null, 0);
+      padding-bottom: 0px;
+      margin-bottom: 1.5em;
+      padding-top: 0;
+    }
+
+    @include block(main_title) {
+      font-size: 9em;
+      font-weight: 400;
+      color: white;
+      margin-bottom: 40px;
+      line-height: 1;
+      // position: absolute;
+      white-space: nowrap;
+      span {
+        font-weight: 700;
+      }
+
+      @include breakpoint(medium down) {
+        font-size: 5em;
+        margin-bottom: 25px;
+      }
+      @include breakpoint(small down) {
+        font-size: 3em;
+      }
+
+      > a {
+        display: block;
+      }
+    }
+  }
+
+  @include element(text) {
+    line-height: 1.4;
+    color: white;
+    font-size: 1.25em;
+    @include breakpoint(medium down) {
+      font-size: 1em;
+    }
+  }
+}
+
+@include block(Card_div) {
+  font-size: 11px;
+
+  img {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+  }
+  label {
+    * {
+      font-weight: normal;
+    }
+  }
+
+  p {
+    margin: 2px 0 0 0;
+    font-size: 9px;
+    color: #000000;
+    * {
+      font-weight: bold;
+    }
+  }
+}
+
+@include block(career-B) {
+  background-color: #031928;
+  @include element(container) {
+    @include xy-grid(horizontal, false);
+    @include flex-align(justify, middle);
+
+    @include breakpoint(medium down) {
+      padding-top: 0;
+      @include xy-grid(vertical, false);
+      @include flex-align(justify, middle);
+    }
+  }
+
+  @include element(wrapper) {
+    padding: 0em 0 177px 0;
+    @include xy-grid-container();
+    @include breakpoint(medium down) {
+      padding-bottom: 127px;
+    }
+  }
+
+  @include element(main) {
+    @include breakpoint(medium up) {
+      @include xy-cell(auto, null, 0);
+    }
+    @include breakpoint(medium down) {
+      @include xy-cell(24, null, 0);
+    }
+
+    @include block(main_title) {
+      font-size: 36px;
+      color: #fff;
+      font-weight: bold;
+      margin-bottom: 82px;
+      @include breakpoint(medium down) {
+        margin-bottom: 64px;
+      }
+    }
+
+    @include block(role) {
+      margin-top: 82px;
+      @include breakpoint(medium down) {
+        margin-top: 0;
+      }
+      @include element(title) {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 120%;
+        display: flex;
+        color: #fff;
+        padding: 10px 0;
+        @include breakpoint(medium down) {
+          padding: 0;
+        }
+      }
+      @include element(line) {
+        width: 6px;
+        margin-right: 12px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+      }
+    }
+    @include block(positions) {
+      padding: 36px 0;
+      max-width: 1058px;
+      display: flex;
+      flex-flow: row wrap;
+      gap: 30px;
+      @include breakpoint(medium down) {
+        padding-top: 49px;
+        padding-bottom: 60px;
+      }
+    }
+    @include block(position-card) {
+      background-color: #fff;
+      color: #071927;
+      display: flex;
+      flex-direction: column;
+      padding: 25px 34px;
+      width: 514px;
+      border: 3px solid transparent;
+      cursor: pointer;
+      &:hover {
+        border-image: linear-gradient(180deg, #b3f9ba 0%, #f6fb8c 180.8%) 1;
+      }
+      @include breakpoint(medium down) {
+        padding: 22px 28px;
+      }
+      @include element(position) {
+        margin-bottom: 19px;
+        font-size: 24px;
+        font-weight: 500;
+        @include breakpoint(medium down) {
+          font-size: 18px;
+          margin-bottom: 16px;
+        }
+      }
+      @include element(details) {
+        display: flex;
+        gap: 22px;
+        font-size: 18px;
+        align-items: center;
+        @include breakpoint(medium down) {
+          gap: 19px;
+          font-size: 14px;
+        }
+      }
+      @include element(location) {
+        display: flex;
+        align-items: center;
+        &::before {
+          content: "";
+          background-image: url("/images/location.png");
+          display: inline-block;
+          height: 33px;
+          width: 22px;
+          margin-right: 9px;
+          @include breakpoint(medium down) {
+            margin-right: 4.3px;
+            width: 12.67px;
+            height: 19px;
+            background-size: cover;
+          }
+        }
+      }
+      @include element(type) {
+        display: flex;
+        align-items: center;
+        &::before {
+          content: "";
+          height: 100%;
+          display: inline-block;
+          margin-right: 9px;
+          width: 13px;
+          height: 13px;
+          background: #071927;
+          border-radius: 50%;
+          @include breakpoint(medium down) {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include block(position) {
+  background-color: #031928;
+  color: #fff;
+  @include breakpoint(medium down) {
+    position: relative;
+  }
+  @include element(container) {
+    @include xy-grid(horizontal, false);
+    @include flex-align(justify, middle);
+
+    @include breakpoint(medium down) {
+      padding-top: 4em;
+      @include xy-grid(vertical, false);
+      @include flex-align(justify, start);
+    }
+  }
+
+  @include element(wrapper) {
+    padding: 5em 0 1em 0;
+    @include xy-grid-container();
+  }
+  @include element(main) {
+    margin-bottom: 5em;
+    // position: relative;
+    padding-top: 166px;
+    padding-bottom: 197px;
+    max-width: 793px;
+    width: 100%;
+    @include breakpoint(medium down) {
+      @include xy-cell(24, null, 0);
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    @include block(main_title) {
+      font-size: 64px;
+      font-weight: 700;
+      color: white;
+      line-height: 1;
+      white-space: nowrap;
+      margin-bottom: 21px;
+      span {
+        font-weight: 700;
+      }
+
+      @include breakpoint(medium down) {
+        font-size: 2.25em;
+      }
+
+      > a {
+        display: block;
+      }
+    }
+  }
+
+  @include element(text) {
+    line-height: 1.4;
+    color: white;
+    font-size: 1.25em;
+    @include breakpoint(large down) {
+      font-size: 1em;
+    }
+    @include breakpoint(small only) {
+      font-size: 1.125em;
+    }
+  }
+  @include block(main_button_mobile) {
+    display: none;
+    padding: 1.125em 1.75em;
+    font-size: 1em;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: #052235;
+    margin: 1em 0;
+    border-radius: 10px;
+    background-image: linear-gradient(124.98deg, #b3ffbb 6.71%, #fffb00 90%);
+    @include breakpoint(medium down) {
+      display: block;
+    }
+  }
+  @include block(main_button) {
+    position: fixed;
+    max-width: 514px;
+    width: 100%;
+    right: 5%;
+    top: 30%;
+    font-size: 18px;
+    @include breakpoint(medium down) {
+      display: none;
+    }
+  }
+  @include element(details) {
+    display: flex;
+    gap: 89px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 46px;
+    @include breakpoint(medium down) {
+      font-size: 18px;
+      gap: 26px;
+    }
+    @include block(position-bullet) {
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        height: 100%;
+        display: inline-block;
+        margin-right: 1.5rem;
+        width: 20px;
+        height: 20px;
+        background: linear-gradient(180deg, #b3f9ba 0%, #f6fb8c 180.8%);
+        border-radius: 2px;
+        transform: rotate(45deg);
+        @include breakpoint(medium down) {
+          margin-right: 0.5em;
+          height: 10px;
+          width: 10px;
+        }
+      }
+    }
+  }
+  @include element(detail_p) {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 89px;
+    line-height: 1.5;
+    @include breakpoint(medium down) {
+      line-height: 1.4;
+      font-size: 16px;
+      margin-bottom: 49px;
+    }
+  }
+  @include element(detail_title) {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    @include breakpoint(medium down) {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  }
+  @include element(detail_list) {
+    & > li {
+      display: flex;
+      align-items: baseline;
+      padding-bottom: 35px;
+      &::before {
+        content: "";
+        display: inline-block;
+        margin-right: 1.5rem;
+        width: 8px;
+        height: 8px;
+        min-width: 8px;
+        min-height: 8px;
+        background: linear-gradient(180deg, #b3f9ba 0%, #f6fb8c 180.8%);
+        border-radius: 1px;
+        transform: rotate(45deg);
+        @include breakpoint(medium down) {
+          margin-right: 0.5em;
+        }
+      }
+    }
+  }
+}

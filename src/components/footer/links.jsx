@@ -63,6 +63,10 @@ const items = [
         title: 'Brand Kit',
         url: '/files/Fuse-Network-brand-kit.zip',
         download: true
+      },
+      {
+        title: 'Careers',
+        route: './careers'
       }
     ]
   }
