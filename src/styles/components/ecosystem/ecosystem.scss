@@ -275,7 +275,7 @@
 		}
 		@include element(tags) {
 			@include xy-grid();
-			@include flex-align(flex-start, middle);
+			@include flex-align(left, middle);
 			gap: 0.5rem;
 			margin-top: 1rem;
 			flex: 1;

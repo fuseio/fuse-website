@@ -275,7 +275,7 @@
     @include breakpoint(medium down) {
       padding-top: 4em;
       @include xy-grid(vertical, false);
-      @include flex-align(justify, start);
+      @include flex-align(justify, top);
     }
   }
 
