@@ -161,8 +161,9 @@ const SectionOne = () => {
   const { id } = useParams()
   const [position, setPosition] = useState({})
   useEffect(() => {
-    setPosition(positions.find(p => p.id === id))
+    setPosition(positions.find(p => p.id.toString() === id.toString()))
   }, [])
+
   const { title, type, location, details = [] } = position
   return (
     <section className='position'>
