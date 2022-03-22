@@ -157,10 +157,10 @@ const Globe = props => {
           this.current_tts = 0
 
           this.div = document.createElement('div')
-          this.div.style.position = 'absolute'
-          this.div.style.background = 'white'
-          this.div.style.display = 'none'
-          this.div.style.padding = '1vmax'
+          // this.div.style.position = 'absolute'
+          // this.div.style.background = 'white'
+          // this.div.style.display = 'none'
+          // this.div.style.padding = '1vmax'
           this.div.className = 'Card_div fade-in-image'
           this.div.innerHTML = this.html
           container_ref.current.appendChild(this.div)

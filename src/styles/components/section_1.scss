@@ -102,9 +102,10 @@
   }
 
   @include element(text) {
-    line-height: 1.56;
     color: white;
-    font-size: 1.375em;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.500em;
     @include breakpoint(large down) {
       font-size: 1em;
     }
@@ -115,25 +116,33 @@
 }
 
 @include block(Card_div) {
+  position: absolute;
+  background: white;
+  display: none;
   font-size: 11px;
+  padding: 10px;
 
   img {
-    width: 15px;
-    height: 15px;
+    width: 32px;
+    height: 32px;
     margin-right: 3px;
   }
   label {
+    font-size: 16px;
     * {
-      font-weight: normal;
+      font-weight: bold;
     }
+    // * {
+    //   font-weight: normal;
+    // }
   }
 
   p {
     margin: 2px 0 0 0;
-    font-size: 9px;
+    font-size: 16px;
     color: #000000;
     * {
-      font-weight: bold;
+      font-weight: 500;
     }
   }
 }
