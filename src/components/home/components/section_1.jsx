@@ -30,9 +30,9 @@ const Button = ({ link, type = 'primary', text }) => {
 
 const Banner = () => {
   const { data = { data: 0 } } = useFetch('https://studio.fuse.io/api/v1/communities/count', {}, [])
-  const transactionCounter = useCounter(33250971)
+  const transactionCounter = useCounter(45161617)
   const communitiesCounter = useCounter(data.data)
-  const walletsCounter = useCounter(870475)
+  const walletsCounter = useCounter(951390)
 
   return (
     <section className='info_banner__wrapper'>
@@ -92,12 +92,12 @@ const SectionOne = () => {
         <div className='section-A__container'>
           <div className='section-A__main'>
             <h1 className='main_title'>
-              <FormattedMessage tagName='a' defaultMessage='The Infrastructure for ' />
-              <FormattedMessage tagName='a' defaultMessage='Open-Source Money' />
+              <FormattedMessage tagName='a' defaultMessage='Infrastructure for ' />
+              <FormattedMessage tagName='a' defaultMessage='Open Source Money' />
             </h1>
             <p className='section-A__text'>
               <FormattedMessage
-                defaultMessage='Launch community-centric payment systems and token {newLine} economies on an Ethereum-compatible blockchain.'
+                defaultMessage='Launch community-centric payment systems and {newLine} token economies on an Ethereum-compatible {newLine} blockchain.'
                 values={{
                   newLine: <br />,
                   b: (chunks) => <b>{chunks}</b>
@@ -111,8 +111,8 @@ const SectionOne = () => {
           </div>
           <div className='canvas'>
             <GlobeThree
-              width={isMobileOnly ? 500 : 900}
-              height={isMobileOnly ? 500 : 900}
+              width={isMobileOnly ? 500 : 750}
+              height={isMobileOnly ? 500 : 750}
               pois={[
                 {
                   creation: 1, // this vaule must be different for every poi !!!!!!!!!!!!!!!!! or no show ...
