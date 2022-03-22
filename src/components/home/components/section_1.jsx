@@ -30,9 +30,9 @@ const Button = ({ link, type = 'primary', text }) => {
 
 const Banner = () => {
   const { data = { data: 0 } } = useFetch('https://studio.fuse.io/api/v1/communities/count', {}, [])
-  const transactionCounter = useCounter(33250971)
+  const transactionCounter = useCounter(45161617)
   const communitiesCounter = useCounter(data.data)
-  const walletsCounter = useCounter(870475)
+  const walletsCounter = useCounter(951390)
 
   return (
     <section className='info_banner__wrapper'>
