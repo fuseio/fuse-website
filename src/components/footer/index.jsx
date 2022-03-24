@@ -22,7 +22,7 @@ function Footer () {
           </div>
         </div>
         <div className='footer__copy-connect-wrapper grid-x align-justify'>
-          <div className='footer__copy'>© 2021 Fuse. All Rights Reserved.</div>
+          <div className='footer__copy'>© 2022 Fuse. All Rights Reserved.</div>
           <Icons />
         </div>
       </div>
