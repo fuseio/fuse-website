@@ -1,46 +1,42 @@
-import React from 'react'
-import { useHistory } from 'react-router'
+import React, { useEffect, useState } from 'react'
+import { filter, groupBy, capitalize, lowerCase } from 'lodash'
 
-const roles = [
-  {
-    title: 'R&D',
-    color: '#3AD889',
-    positions: [
-      {
-        id: 1,
-        title: 'Full-Stack Developer',
-        type: 'Full - time',
-        location: 'Tel Aviv'
-      },
-      {
-        id: 2,
-        title: 'Full-Stack Developer',
-        type: 'Remote',
-        location: 'Tel Aviv'
-      },
-      {
-        id: 3,
-        title: 'Solidity Developer',
-        type: 'Remote',
-        location: 'Tel Aviv'
-      }
-    ]
-  },
-  {
-    title: 'Administration',
-    color: '#E0AAFF',
-    positions: [
-      {
-        id: 4,
-        title: 'Office Administrator',
-        type: 'Full - time',
-        location: 'Tel Aviv'
-      }
-    ]
-  }
+const colors = [
+  '#3AD889',
+  '#E0AAFF',
+  '#3AD889',
+  '#E0AAFF'
 ]
 
 const SectionTwo = () => {
+  const [roles, setRoles] = useState([])
+  useEffect(() => {
+    (async () => {
+      const myHeaders = new Headers()
+      console.log({ apiKey: CONFIG?.freshteam?.apiKey })
+      myHeaders.append('Authorization', `Bearer ${CONFIG?.freshteam?.apiKey}`)
+      const jobPostings = await fetch('https://fuse.freshteam.com/api/job_postings', {
+        headers: myHeaders
+      }).then((res) => res.json())
+      const data = filter(jobPostings, ['deleted', false])
+      const roles = Object.entries(groupBy(data, (item) => item.department.name)).reduce((prev, [key, value], index) => ([
+        ...prev, {
+          title: key,
+          color: colors[index],
+          positions: [
+            ...value.map((item) => ({
+              title: item.title,
+              applyLink: item.applicant_apply_link,
+              type: capitalize(lowerCase(item.type)),
+              location: item.remote ? 'Remote' : item.branch.city
+            }))
+          ]
+        }
+      ]), [])
+      setRoles(roles)
+    })()
+  }, [])
+
   return (
     <section className='career-B'>
       <div className='career-B__wrapper'>
@@ -76,16 +72,20 @@ const Role = ({ title, color, positions }) => {
 }
 
 const PositionCard = (props) => {
-  const history = useHistory()
-  const { title, type, location, id } = props
+  const { title, type, location, applyLink } = props
   return (
-    <div className='position-card' onClick={() => history.push(`/position/${id}`)}>
+    <a
+      rel='noreferrer noopener'
+      target='_blank'
+      className='position-card'
+      href={applyLink}
+    >
       <h3 className='position-card__position'>{title}</h3>
       <div className='position-card__details'>
         <p className='position-card__location'>{location}</p>
         <p className='position-card__type'>{type}</p>
       </div>
-    </div>
+    </a>
   )
 }
 

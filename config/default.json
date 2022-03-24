@@ -5,5 +5,8 @@
       "testMode": true,
       "debug": true
     }
+  },
+  "freshteam": {
+    "apiKey": ""
   }
 }

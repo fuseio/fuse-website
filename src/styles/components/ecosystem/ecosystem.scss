@@ -1,18 +1,6 @@
-@include block(ecosystem_main) {
-	margin-bottom: 118px;
-	@include element(wrapper) {
-		background-color: #071927;
-	}
-	@include element(arrow-wrapper) {
-		display: flex;
-		justify-content: center;
-	}
-	@include element(img) {
-		margin-right: -69px;
-	}
-	column-gap: 0.5rem;
+@include block(ecosystem) {
+	padding: 9em 0px;
 	@include breakpoint(medium up) {
-		margin-top: 5rem;
 		@include xy-grid();
 		@include flex-align(center, middle);
 	}
@@ -20,31 +8,43 @@
 		@include xy-grid(vertical);
 		@include flex-align(justify, middle);
 	}
+	@include element(wrapper) {
+		background-color: #071927;
+		padding: 2em 0px;
+	}
+	@include element(arrow-wrapper) {
+		display: flex;
+		justify-content: center;
+	}
+	@include element(img) {
+		flex: 0.5;
+		@include xy-grid();
+		@include flex-align(right, middle);
+		> img {
+			@include breakpoint(medium up) {
+				width: 85%;
+			}
+			@include breakpoint(medium down) {
+			}
+		}
+	}
 
 	@include element(container) {
-		@include xy-grid-container(1280px);
+		@include xy-grid-container();
 		@include breakpoint(large down) {
 			@include xy-grid-container(90%);
 		}
 		width: 100%;
 	}
 	@include element(wrapper) {
-		@include xy-grid();
-		@include flex-align(center, middle);
-		@include breakpoint(medium up) {
-			min-height: 887px;
-		}
-		@include breakpoint(medium down) {
-			padding-top: 2.5rem;
-		}
 	}
 
 	@include element(hero_text) {
-		margin-right: 48px;
 		@include breakpoint(medium up) {
-			flex: 1;
+			flex: 0.5;
 			display: flex;
 			flex-flow: column wrap;
+			margin-bottom: 9em;
 		}
 		@include breakpoint(medium down) {
 			justify-content: flex-start;
@@ -53,7 +53,7 @@
 		}
 	}
 	@include element(title) {
-		font-size: clamp(2.5rem, calc(6.7vw - 3.5rem), 4.5rem);
+		font-size: 45px;
 		font-weight: 700;
 		color: white;
 		line-height: 1;
@@ -72,10 +72,10 @@
 	}
 
 	@include element(description) {
-		font-size: clamp(1em, calc(1.7vw - 0.5rem), 1.5em);
+		// font-size: clamp(1em, calc(1.7vw - 0.5rem), 1.5em);
 		font-weight: 350;
 		line-height: 1.4;
-		padding-right: 3rem;
+		// padding-right: 3rem;
 
 		color: white;
 		@include breakpoint(large down) {
@@ -94,12 +94,7 @@
 }
 
 @include block(ecosystem_section_2) {
-	@include element(container) {
-		background-color: #071927;
-		@include xy-grid-container(1280px);
-		margin-top: 6.3125rem;
-		margin-bottom: 7.6875rem;
-	}
+	margin: 5em 0px;
 	@include element(header) {
 		@include xy-grid(horizontal, null);
 		@include flex-align(right, middle);
@@ -115,7 +110,7 @@
 		margin-right: 1rem;
 		flex: 1 0 auto;
 		color: #fff;
-		margin-bottom: 2rem;
+		margin-bottom: 2em;
 		span {
 			margin-left: 1rem;
 			font-weight: 700;
@@ -183,7 +178,7 @@
 			font-size: 30px;
 			line-height: 140%;
 			color: #ffffff;
-			margin-bottom: 2.5rem;
+			margin-bottom: 2.3em;
 			@include breakpoint(small only) {
 				margin-top: 1rem;
 				margin-bottom: 1rem;
@@ -195,9 +190,6 @@
 			border-radius: 5px;
 			padding: 0.5rem clamp(1rem, 0.5vw, 1.5rem);
 			color: white;
-			font-size: clamp(1rem, 1.1vw, 1.25rem);
-			line-height: 1.4;
-			font-weight: 400;
 			width: 100%;
 			cursor: pointer;
 			text-transform: capitalize;
@@ -264,8 +256,11 @@
 		@include element(logo) {
 		}
 		@include element(description) {
-			margin-top: 1.5rem;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
 			color: #737373;
+			margin: 1em 0px;
 			text-align: left;
 			display: -webkit-box;
 			-webkit-line-clamp: 3;
@@ -273,28 +268,9 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
-		@include element(tags) {
-			@include xy-grid();
-			@include flex-align(left, middle);
-			gap: 0.5rem;
-			margin-top: 1rem;
-			flex: 1;
-			@include breakpoint(medium down) {
-				align-self: flex-start;
-			}
-			@include element(wrapper) {
-				@include xy-grid();
-				@include flex-align(right, bottom);
-				flex-wrap: wrap;
-				width: 100%;
-				row-gap: 0.5rem;
-				@include breakpoint(medium down) {
-					flex-direction: column;
-				}
-			}
-		}
 		@include element(learn_more) {
-			text-align: right;
+			margin-left: auto;
+			font-size: 15px;
 			white-space: nowrap;
 			@include breakpoint(medium down) {
 				margin-top: 1rem;
@@ -305,15 +281,6 @@
 			img {
 				margin-left: 4px;
 			}
-		}
-		@include element(tag) {
-			border-radius: 20px;
-			color: white;
-			font-weight: 400;
-			padding: 2px 14px;
-			background: #c4c4c4;
-			border-radius: 5px;
-			white-space: nowrap;
 		}
 	}
 }

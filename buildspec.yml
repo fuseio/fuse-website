@@ -5,6 +5,7 @@ phases:
       - npm install
   build:
     commands:
+      - export FRESH_TEAM_API_KEY="${FRESH_TEAM_API_KEY}"
       - npm run build:dist
       - aws s3 sync ./dist "s3://${BUCKET_NAME}" --acl=public-read --exclude ".git/*" --delete
       - aws cloudfront create-invalidation --distribution-id "${DISTRIBUTION_ID}" --paths "/*"

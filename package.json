@@ -29,6 +29,7 @@
     "config": "^3.3.6",
     "connected-react-router": "^6.9.1",
     "cross-env": "^7.0.3",
+    "firebase": "^9.6.9",
     "formik": "^2.2.6",
     "foundation-sites": "^6.6.3",
     "globekit-public": "^1.0.6",

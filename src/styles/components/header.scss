@@ -2,7 +2,7 @@
 	@include xy-grid(horizontal, false);
 	@include flex-align(justify, middle);
 	min-height: 80px;
-	@include xy-grid-container(1280px);
+	@include xy-grid-container();
 	width: 100%;
 
 	@include element(wrapper) {

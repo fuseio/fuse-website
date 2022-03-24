@@ -27,6 +27,7 @@ import ko from '../lang/ko.json'
 import es from '../lang/es.json'
 import tr from '../lang/tr.json'
 import id from '../lang/id.json'
+import { isMobileOnly } from 'react-device-detect'
 
 const { store, history } = configureStore(window.__INITIAL_STATE__)
 
@@ -60,9 +61,13 @@ const App = () => {
                     <Route exact path='/about'>
                       <About />
                     </Route>
-                    <Route exact path='/careers'>
-                      <Careers />
-                    </Route>
+                    {
+                      !isMobileOnly && (
+                        <Route exact path='/careers'>
+                          <Careers />
+                        </Route>
+                      )
+                    }
                     <Route exact path='/position/:id'>
                       <Position />
                     </Route>

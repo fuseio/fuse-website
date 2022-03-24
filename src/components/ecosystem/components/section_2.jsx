@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { database } from '@/utils/firebase'
+import { ref, child, get } from 'firebase/database'
 import SearchIcon from '@/assets/images/search_icon.svg'
 import arrowRight from '@/assets/images/arrow-right.svg'
 
@@ -23,24 +25,15 @@ function Card ({ logo, description, tags, website, twitter, telegram, discord })
       </div>
       <div className='ecosystem_section_2__card__content_wrapper'>
         <div className='ecosystem_section_2__card__description'>{description}</div>
-        <div className='ecosystem_section_2__card__tags__wrapper'>
-          <div className='ecosystem_section_2__card__tags'>
-            {(tags || []).map((tag, index) => (
-              <div className='ecosystem_section_2__card__tag' key={index}>
-                {tag}
-              </div>
-            ))}
-          </div>
-          <a
-            className='ecosystem_section_2__card__learn_more'
-            href={website}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Learn More
-            <img src={arrowRight} alt='arrow-right' />
-          </a>
-        </div>
+        <a
+          className='ecosystem_section_2__card__learn_more'
+          href={website}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Learn More
+          <img src={arrowRight} alt='arrow-right' />
+        </a>
       </div>
     </div>
   )
@@ -74,33 +67,13 @@ const SectionTwo = () => {
   const [orgItems, setOrgItems] = useState([])
 
   useEffect(() => {
-    const tagsPromise = fetch(
-      'https://fuse-website-3ce69-default-rtdb.europe-west1.firebasedatabase.app/tags.json'
-    )
-      .then((res) => res.json())
-      .then((json) => {
-        const orgTags = []
-        for (const key in json) {
-          orgTags.push(json[key])
-        }
-        return orgTags
-      })
-
-    const itemsPromise = fetch(
-      'https://fuse-website-3ce69-default-rtdb.europe-west1.firebasedatabase.app/items.json'
-    )
-      .then((res) => res.json())
-      .then((json) => {
-        const orgItems = []
-        for (const key in json) {
-          orgItems.push(json[key])
-        }
-        setData(orgItems)
-        setOrgItems(orgItems)
-        return orgItems
-      })
-
-    Promise.all([tagsPromise, itemsPromise]).then(([tags, items]) => {
+    (async () => {
+      const tagsSnapshot = await get(child(ref(database), 'tags'))
+      const itemsSnapshot = await get(child(ref(database), 'items'))
+      const tags = Object.values(tagsSnapshot.exists() ? tagsSnapshot.val() : [])
+      const items = Object.values(itemsSnapshot.exists() ? itemsSnapshot.val() : {})
+      setData(items)
+      setOrgItems(items)
       const counts = items.reduce((acc, curr) => {
         (curr.tags || []).forEach((c) => {
           acc[c.toLowerCase()] = (acc[c.toLowerCase()] || 0) + 1
@@ -112,7 +85,7 @@ const SectionTwo = () => {
         count: counts[tag.toLowerCase()] || 0
       }))
       setTags(newTags)
-    })
+    })()
   }, [])
 
   const handleSearch = ({ target: { value } }) => {
@@ -147,25 +120,23 @@ const SectionTwo = () => {
   }
 
   return (
-    <section className='ecosystem_section_2__container'>
-      <div className='ecosystem_section_2'>
-        <Header search={search} onChange={handleSearch} />
-        <div className='ecosystem_section_2__content_container'>
-          <Tags tags={tags} selectedTags={selectedTags} onClick={handleTagClick} />
-          <div className='ecosystem_section_2__cards__wrapper'>
-            <div className='ecosystem_section_2__last_update'>
-              Last Updated on
-              <span>Sept 20</span>
-            </div>
-            <div className='ecosystem_section_2__cards'>
-              {data.map((item, index) => (
-                <Card key={index} {...item} />
-              ))}
-            </div>
+    <div className='ecosystem_section_2'>
+      <Header search={search} onChange={handleSearch} />
+      <div className='ecosystem_section_2__content_container'>
+        <Tags tags={tags} selectedTags={selectedTags} onClick={handleTagClick} />
+        <div className='ecosystem_section_2__cards__wrapper'>
+          <div className='ecosystem_section_2__last_update'>
+            Last Updated on
+            <span>Sept 20</span>
+          </div>
+          <div className='ecosystem_section_2__cards'>
+            {data.map((item, index) => (
+              <Card key={index} {...item} />
+            ))}
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

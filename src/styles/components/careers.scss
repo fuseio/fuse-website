@@ -1,7 +1,27 @@
-@include block(career-A) {
+@include block(careers) {
   background-color: #031928;
+  position: relative;
+
+  @include block(canvas) {
+    height: 836.1px;
+    max-width: 836.1px;
+    width: 100%;
+    position: absolute;
+    right: -14em;
+    bottom: 0px;
+    @include element(rect) {
+      background: linear-gradient(180deg, #b3f9ba 0%, #f6fb8c 180.8%);
+      border-radius: 50px;
+      transform: rotate(25.8deg);
+      height: 100%;
+    }
+
+    @include breakpoint(small down) {
+      width: 170.38px;
+      height: 170.38px;
+    }
+  }
   @include element(container) {
-    max-height: 657px;
     @include xy-grid(horizontal, false);
     @include flex-align(justify, middle);
 
@@ -13,35 +33,14 @@
   }
 
   @include element(wrapper) {
-    padding: 5em 0 1em 0;
+    padding: 15em 0 15em 0;
+    @include breakpoint(small down) {
+      padding: 5em 0 1em 0;
+    }
     @include xy-grid-container();
   }
 
-  @include block(canvas) {
-    height: 836.1px;
-    max-width: 836.1px;
-    width: 100%;
-    position: absolute;
-    left: 62%;
-    top: -24%;
-    @include breakpoint(medium down) {
-      height: 717.1px;
-      max-width: 170px;
-      left: 95%;
-    }
-    @include element(rect) {
-      background: linear-gradient(180deg, #b3f9ba 0%, #f6fb8c 180.8%);
-      border-radius: 50px;
-      transform: rotate(25.8deg);
-      height: 100%;
-    }
-  }
-
   @include element(main) {
-    margin-bottom: 5em;
-    // position: relative;
-    padding-top: 166px;
-    padding-bottom: 197px;
     @include breakpoint(medium up) {
       @include xy-cell(auto, null, 0);
     }
@@ -50,7 +49,7 @@
       flex: 0 0 50%;
     }
     @include breakpoint(medium down) {
-      @include xy-cell(24, null, 0);
+      @include xy-cell(24, null);
       padding-bottom: 0px;
       margin-bottom: 1.5em;
       padding-top: 0;
@@ -88,30 +87,6 @@
     font-size: 1.25em;
     @include breakpoint(medium down) {
       font-size: 1em;
-    }
-  }
-}
-
-@include block(Card_div) {
-  font-size: 11px;
-
-  img {
-    width: 15px;
-    height: 15px;
-    margin-right: 3px;
-  }
-  label {
-    * {
-      font-weight: normal;
-    }
-  }
-
-  p {
-    margin: 2px 0 0 0;
-    font-size: 9px;
-    color: #000000;
-    * {
-      font-weight: bold;
     }
   }
 }

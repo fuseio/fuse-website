@@ -4,5 +4,8 @@
       "testMode": false,
       "debug": false
     }
+  },
+  "freshteam": {
+    "apiKey": ""
   }
 }

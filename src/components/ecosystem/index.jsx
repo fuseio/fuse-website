@@ -4,10 +4,12 @@ import SectionTwo from '@/components/ecosystem/components/section_2'
 
 const Ecosystem = () => {
   return (
-    <div className='ecosystem_main__wrapper'>
-      <SectionOne />
-      <SectionTwo />
-    </div>
+    <section className='ecosystem__wrapper'>
+      <div className='ecosystem__container'>
+        <SectionOne />
+        <SectionTwo />
+      </div>
+    </section>
   )
 }
 

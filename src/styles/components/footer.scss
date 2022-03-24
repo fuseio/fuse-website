@@ -11,7 +11,7 @@
 	}
 
 	@include element(container) {
-		@include xy-grid-container(1280px);
+		@include xy-grid-container();
 		padding-top: 5em;
 		padding-bottom: 2em;
 	}
