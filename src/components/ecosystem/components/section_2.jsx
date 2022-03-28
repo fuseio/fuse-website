@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import classNames from 'classnames'
 import { database } from '@/utils/firebase'
 import { ref, child, get } from 'firebase/database'
 import SearchIcon from '@/assets/images/search_icon.svg'
@@ -17,7 +18,7 @@ function Header ({ search, onChange }) {
   )
 }
 
-function Card ({ logo, description, tags, website, twitter, telegram, discord }) {
+function Card ({ logo, description, website }) {
   return (
     <div className='ecosystem_section_2__card'>
       <div className='ecosystem_section_2__card__logo'>
@@ -47,8 +48,7 @@ function Tags ({ tags, selectedTags, onClick }) {
         {tags.map(({ tag, count }, index) => (
           <div
             onClick={() => onClick({ tag, count })}
-            className={`ecosystem_section_2__tags__tag ${selectedTags.includes(tag) ? 'ecosystem_section_2__tags__tag--selected' : ''
-              }`}
+            className={classNames('ecosystem_section_2__tags__tag', { 'ecosystem_section_2__tags__tag--selected': selectedTags.includes(tag) })}
             key={index}
           >
             {tag} <span>({count})</span>
