@@ -50,7 +50,7 @@ const items = [
     ]
   },
   {
-    title: 'Company',
+    title: 'General',
     items: [
       {
         title: 'About Us',

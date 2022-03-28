@@ -197,9 +197,6 @@ function MobileMenu ({ history }) {
               <div className='list__item' onClick={() => history.push('/ecosystem')}>
                 Ecosystem
               </div>
-              <div className='list__item' onClick={() => history.push('/about')}>
-                <FormattedMessage defaultMessage='About us' />
-              </div>
               <SelectLanguage />
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import joinUs from '@/assets/img/join_us.png'
 
 const SectionOne = () => {
   return (
@@ -13,10 +14,10 @@ const SectionOne = () => {
               We’re searching for people who are ready to jump right in, love collaborating, and value our culture of transparency to join our team. Come join us so together we can impact how teams work across the globe.
             </p>
           </div>
+          <div className='careers__img'>
+            <div><img src={joinUs} /></div>
+          </div>
         </div>
-      </div>
-      <div className='canvas'>
-        <div className='canvas__rect' />
       </div>
     </section>
   )

@@ -2,29 +2,12 @@
   background-color: #031928;
   position: relative;
 
-  @include block(canvas) {
-    height: 836.1px;
-    max-width: 836.1px;
-    width: 100%;
-    position: absolute;
-    right: -14em;
-    bottom: 0px;
-    @include element(rect) {
-      background: linear-gradient(180deg, #b3f9ba 0%, #f6fb8c 180.8%);
-      border-radius: 50px;
-      transform: rotate(25.8deg);
-      height: 100%;
-    }
-
-    @include breakpoint(small down) {
-      width: 170.38px;
-      height: 170.38px;
-    }
-  }
   @include element(container) {
     @include xy-grid(horizontal, false);
     @include flex-align(justify, middle);
-
+    @include breakpoint(medium up) {
+      min-height: 800px;
+    }
     @include breakpoint(medium down) {
       padding-top: 4em;
       @include xy-grid(vertical, false);
@@ -33,11 +16,10 @@
   }
 
   @include element(wrapper) {
-    padding: 15em 0 15em 0;
+    @include xy-grid-container();
     @include breakpoint(small down) {
       padding: 5em 0 1em 0;
     }
-    @include xy-grid-container();
   }
 
   @include element(main) {
@@ -56,23 +38,14 @@
     }
 
     @include block(main_title) {
-      font-size: 9em;
-      font-weight: 400;
+      @extend %title;
       color: white;
-      margin-bottom: 40px;
-      line-height: 1;
-      // position: absolute;
-      white-space: nowrap;
-      span {
-        font-weight: 700;
+      @include breakpoint(medium up) {
+        font-size: 3.5em;
       }
 
-      @include breakpoint(medium down) {
-        font-size: 5em;
-        margin-bottom: 25px;
-      }
-      @include breakpoint(small down) {
-        font-size: 3em;
+      span {
+        font-weight: 700;
       }
 
       > a {
@@ -87,6 +60,17 @@
     font-size: 1.25em;
     @include breakpoint(medium down) {
       font-size: 1em;
+    }
+  }
+
+  @include element(img) {
+    img {
+      width: 580.23px;
+      height: 377.73px;
+    }
+
+    @include breakpoint(small down) {
+      display: none;
     }
   }
 }

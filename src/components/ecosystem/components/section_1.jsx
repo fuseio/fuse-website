@@ -1,5 +1,4 @@
 import React from 'react'
-import EcosystemMain from '@/assets/images/ecosystem_main.png'
 import ArrowDown from '@/assets/images/arrow-down.svg'
 
 const SectionOne = () => {
@@ -7,15 +6,20 @@ const SectionOne = () => {
     <>
       <div className='ecosystem'>
         <div className='ecosystem__hero_text'>
-          <h1 className='ecosystem__title'>The best companies that built on Fuse Network</h1>
+          <h1 className='ecosystem__title'>The best companies that <br />built on Fuse Network</h1>
           <p className='ecosystem__description'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-            has been the industry's standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type specimen book.
+            From DeFi and Web3 applications to real world<br /> implementations that positively impact the lives of<br /> everyday people - browse the innovative projects<br /> building on Fuse.
           </p>
+          {/* <button
+            rel='noreferrer noopener'
+            className='ecosystem__button main_button main_button--no-arrow'
+            href='https://fuse.io'
+          >
+            Submit your project
+          </button> */}
         </div>
-        <div className='ecosystem__img'>
-          <img src={EcosystemMain} alt='ecosystem' />
+        <div className='ecosystem__circle'>
+          <div className='circle__blue' />
         </div>
       </div>
       <div className='ecosystem__arrow-wrapper'>

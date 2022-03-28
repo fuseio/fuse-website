@@ -1,8 +1,9 @@
 @include block(ecosystem) {
-	padding: 9em 0px;
+	min-height: 810px;
+
 	@include breakpoint(medium up) {
 		@include xy-grid();
-		@include flex-align(center, middle);
+		@include flex-align(justify, middle);
 	}
 	@include breakpoint(medium down) {
 		@include xy-grid(vertical);
@@ -16,16 +17,25 @@
 		display: flex;
 		justify-content: center;
 	}
-	@include element(img) {
-		flex: 0.5;
+	@include element(circle) {
 		@include xy-grid();
 		@include flex-align(right, middle);
-		> img {
-			@include breakpoint(medium up) {
-				width: 85%;
-			}
-			@include breakpoint(medium down) {
-			}
+		position: relative;
+		border-radius: 50%;
+		width: 400px;
+		height: 400px;
+		background: linear-gradient(55.75deg, #3ad889 -15.86%, #f3fc1f 64.99%, #071927 86.24%);
+		box-shadow: 0px 0px 55px 47px rgba(0, 0, 0, 0.25);
+
+		@include block(circle__blue) {
+			position: absolute;
+			top: -15%;
+			right: -15%;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background: #071927;
+			box-shadow: 0px 0px 55px 47px rgba(0, 0, 0, 0.25);
 		}
 	}
 
@@ -36,33 +46,22 @@
 		}
 		width: 100%;
 	}
-	@include element(wrapper) {
-	}
 
 	@include element(hero_text) {
 		@include breakpoint(medium up) {
-			flex: 0.5;
-			display: flex;
-			flex-flow: column wrap;
-			margin-bottom: 9em;
 		}
 		@include breakpoint(medium down) {
-			justify-content: flex-start;
 			min-height: auto;
 			@include xy-cell(24, null, 0);
 		}
 	}
 	@include element(title) {
-		font-size: 45px;
-		font-weight: 700;
+		@extend %title;
 		color: white;
-		line-height: 1;
-		margin-bottom: 1.125rem;
-		@include breakpoint(large down) {
-			font-size: 2.5em;
+		@include breakpoint(medium up) {
+			font-size: 3.5em;
 		}
 		@include breakpoint(medium down) {
-			font-size: 2.313em;
 			margin-bottom: 0.4em;
 		}
 	}
@@ -72,18 +71,13 @@
 	}
 
 	@include element(description) {
-		// font-size: clamp(1em, calc(1.7vw - 0.5rem), 1.5em);
-		font-weight: 350;
-		line-height: 1.4;
-		// padding-right: 3rem;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 1.5em;
+		color: #ffffff;
+	}
 
-		color: white;
-		@include breakpoint(large down) {
-			font-size: 1em;
-		}
-		@include breakpoint(small only) {
-			font-size: 1.125em;
-		}
+	@include element(button) {
 	}
 
 	@include element(img) {
