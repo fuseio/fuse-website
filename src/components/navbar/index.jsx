@@ -7,7 +7,6 @@ import fuseLogoWhite from '@/assets/images/group_21.svg'
 import AnimatedNavbar from '@/components/navbar/AnimatedNavbar'
 import SelectLanguage from '../shared/select_language'
 import MobileMenu from './MobileMenu'
-import { FormattedMessage } from 'react-intl'
 
 function Header ({ history }) {
   const [isOpen, setMenuOpen] = useState(false)
@@ -21,7 +20,6 @@ function Header ({ history }) {
     }
   })
 
-  const aboutPage = () => history.push('/about')
   const homePage = () => history.push('/')
   const ecosystemPage = () => history.push('/ecosystem')
   return (
@@ -46,15 +44,6 @@ function Header ({ history }) {
                 target='_blank'
               >
                 Ecosystem
-              </a>
-            </div>
-            <div className='nav__item' onClick={aboutPage}>
-              <a
-                rel='noreferrer noopener'
-                className={classNames('text', { 'text--white': isWhite })}
-                target='_blank'
-              >
-                <FormattedMessage defaultMessage='About' />
               </a>
             </div>
           </div>

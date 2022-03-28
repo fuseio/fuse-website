@@ -33,21 +33,18 @@ function Icons () {
   return (
     <div className='footer__icons grid-y cell small-24 medium-6'>
       <div>
-        <div className='footer__icons__title'>Connect</div>
         <div className='footer__icons__images grid-x cell'>
-          {
-            socialLinks.map(({ icon, url }, index) => (
-              <a
-                key={index}
-                rel='noreferrer noopener'
-                className='footer__icon cell shrink'
-                target='_blank'
-                href={url}
-              >
-                <img src={icon} />
-              </a>
-            ))
-          }
+          {socialLinks.map(({ icon, url }, index) => (
+            <a
+              key={index}
+              rel='noreferrer noopener'
+              className='footer__icon cell shrink'
+              target='_blank'
+              href={url}
+            >
+              <img src={icon} />
+            </a>
+          ))}
         </div>
       </div>
     </div>

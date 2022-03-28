@@ -1,5 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router'
+import { isMobileOnly } from 'react-device-detect'
 
 const items = [
   {
@@ -49,7 +50,7 @@ const items = [
     ]
   },
   {
-    title: 'Company',
+    title: 'General',
     items: [
       {
         title: 'About Us',
@@ -63,6 +64,10 @@ const items = [
         title: 'Brand Kit',
         url: '/files/Fuse-Network-brand-kit.zip',
         download: true
+      },
+      {
+        title: 'Careers',
+        ...(isMobileOnly ? { url: 'https://fuse.freshteam.com/jobs' } : { route: './careers' })
       }
     ]
   }

@@ -3,7 +3,6 @@
 	width: 100%;
 
 	@include element(wrapper) {
-		padding: 5em 2em 2em;
 		background: #071927;
 	}
 
@@ -12,9 +11,9 @@
 	}
 
 	@include element(container) {
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
+		@include xy-grid-container();
+		padding-top: 5em;
+		padding-bottom: 2em;
 	}
 
 	@include element(link) {
@@ -57,10 +56,7 @@
 		}
 
 		@include element(images) {
-			gap: 16px;
-			@include breakpoint(medium down) {
-				margin: 2em 0;
-			}
+			gap: 10px;
 
 			img {
 				width: 48px;
@@ -154,6 +150,10 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
+			margin-bottom: 90px;
+			@include breakpoint(medium down) {
+				margin-bottom: 2.5rem;
+			}
 
 			> span {
 				margin-left: 10px;
@@ -221,7 +221,13 @@
 			}
 		}
 	}
-
+	@include element(copy-connect-wrapper) {
+		width: 100%;
+		margin-top: 5rem;
+		@include breakpoint(medium down) {
+			margin-top: 2.5rem;
+		}
+	}
 	@include element(copyright) {
 		color: white;
 		margin: 2em 0 1em;
@@ -230,16 +236,19 @@
 	@include element(copy) {
 		color: #8da9bb;
 		font-size: 15px;
-		font-weight: 400;
+		font-weight: 350;
 		line-height: 16px;
 		margin-top: 2.75em;
+		@include breakpoint(small down) {
+			order: 1;
+		}
 	}
 }
 
 @include block(links) {
 	@include breakpoint(medium up) {
 		@include xy-grid();
-		@include flex-align(spaced, null);
+		@include flex-align(justify, null);
 	}
 	@include breakpoint(large down) {
 		gap: 2em;
@@ -273,6 +282,117 @@
 
 			&:not(:last-child) {
 				margin-bottom: 1em;
+			}
+		}
+	}
+}
+
+@include block(send_email) {
+	@include element(form) {
+		position: relative;
+		width: 100%;
+		max-width: 431px;
+		@include flex-align-self(top);
+		@include xy-grid(horizontal, false);
+
+		@include breakpoint(medium down) {
+			@include flex-align(justify, middle);
+			margin-bottom: 1rem;
+		}
+
+		@include block(title) {
+			position: absolute;
+			top: -1.5em;
+			font-weight: 700;
+			font-size: 24px;
+			color: #ffffff;
+
+			@include breakpoint(small only) {
+				display: none;
+			}
+		}
+
+		@include element(input) {
+			outline: none;
+			padding: 1.1875em 3px;
+			border-radius: 10px;
+			border: none;
+			flex: 1;
+			@include breakpoint(medium down) {
+				width: 80%;
+			}
+			&:disabled {
+				opacity: 0.7;
+				cursor: not-allowed;
+			}
+			@include element(wrapper) {
+				border-radius: 10px;
+				border: 1.5px solid transparent;
+				padding-right: 3px;
+				background-color: #ffffff;
+				color: #052235;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				padding-left: 1rem;
+				&:focus-within {
+					border: 1.5px solid #ccd9e0;
+				}
+			}
+		}
+
+		@include element(button) {
+			font-weight: 500;
+			background: linear-gradient(95.27deg, #3ad889 -24.83%, #f3fc1f 131.84%);
+			width: 136px;
+			height: 54px;
+			border-radius: 10px;
+			color: #071927;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+
+			@include breakpoint(small only) {
+				margin-top: 0;
+				margin-left: 0;
+			}
+
+			&:hover {
+				background-image: unset;
+				background-color: #f8ff00;
+
+				&::after {
+					-webkit-transform: translateX(4px);
+					-moz-transform: translateX(4px);
+					-ms-transform: translateX(4px);
+					-o-transform: translateX(4px);
+					transform: translateX(4px);
+				}
+			}
+
+			&:disabled {
+				opacity: 0.7;
+				cursor: not-allowed;
+			}
+		}
+
+		@include element(mobile-error) {
+			color: red;
+			display: none;
+
+			@include breakpoint(small only) {
+				display: block;
+			}
+		}
+
+		@include element(error) {
+			position: absolute;
+			bottom: -1.5em;
+			color: red;
+
+			@include breakpoint(small only) {
+				display: none;
 			}
 		}
 	}

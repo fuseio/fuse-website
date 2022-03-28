@@ -7,15 +7,11 @@
 
 	@include element(wrapper) {
 		@include xy-grid();
-		padding: 0 20px;
+		padding: 0;
 		z-index: 100000;
 		position: absolute;
 		width: 100%;
 		height: min-content;
-
-		@include breakpoint(large up) {
-			padding-left: 2em;
-		}
 	}
 	@include element(logo) {
 		cursor: pointer;

@@ -1,28 +1,31 @@
 import React from 'react'
-import EcosystemMain from '@/assets/images/ecosystem_main.png'
+import ArrowDown from '@/assets/images/arrow-down.svg'
 
 const SectionOne = () => {
   return (
-    <section className='ecosystem_main__wrapper'>
-      <div className='ecosystem_main__container'>
-        <div className='ecosystem_main'>
-          <div className='ecosystem_main__hero_text'>
-            <h1 className='ecosystem_main__title'>
-              A Flourishing Ecosystem of Leading Brands Building on Fuse
-            </h1>
-            <p className='ecosystem_main__description'>
-              From DeFi and Web3 applications to real world implementations that positively impact the lives of everyday people - browse the innovative projects building on Fuse.
-            </p>
-            <a rel='noreferrer noopener' target='_blank' href='mailto:hello@fuse.io' type='primary' className='ecosystem_main__button main_button main_button--no-arrow main_button--bold'>
-              Submit your project
-            </a>
-          </div>
-          <div className='ecosystem_main__img'>
-            <img src={EcosystemMain} alt='ecosystem_main' />
-          </div>
+    <>
+      <div className='ecosystem'>
+        <div className='ecosystem__hero_text'>
+          <h1 className='ecosystem__title'>The best companies that <br />built on Fuse Network</h1>
+          <p className='ecosystem__description'>
+            From DeFi and Web3 applications to real world<br /> implementations that positively impact the lives of<br /> everyday people - browse the innovative projects<br /> building on Fuse.
+          </p>
+          <button
+            rel='noreferrer noopener'
+            className='ecosystem__button main_button main_button--no-arrow'
+            href='mailto:hello@fuse.io'
+          >
+            Submit your project
+          </button>
+        </div>
+        <div className='ecosystem__circle'>
+          <div className='circle__blue' />
         </div>
       </div>
-    </section>
+      <div className='ecosystem__arrow-wrapper'>
+        <img className='' src={ArrowDown} alt='arrow-down' />
+      </div>
+    </>
   )
 }
 

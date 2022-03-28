@@ -12,6 +12,8 @@ import mulenga from '@/assets/img/team/mulenga.png'
 import daniil from '@/assets/img/team/daniil.png'
 import robert from '@/assets/img/team/robert.png'
 import mike from '@/assets/img/team/mike.png'
+import shay from '@/assets/img/team/shay.png'
+import tomas from '@/assets/img/team/tomas.png'
 import linkedin from '@/assets/img/linkedin.svg'
 import { FormattedMessage } from 'react-intl'
 
@@ -104,6 +106,20 @@ const members = [
     role: 'Partnerships and Content',
     picture: daniil,
     linked: 'https://www.linkedin.com/in/daniil-gorbatenko-4a33133/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Shay Aloni',
+    role: 'Product Designer',
+    picture: shay,
+    linked: 'https://www.linkedin.com/in/shay-aloni-9a88041b5/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Tomas Hay Chaia',
+    role: 'Product Manager',
+    picture: tomas,
+    linked: 'https://www.linkedin.com/in/tomas-hay-chaia-379830173/',
     isLinkedIn: true
   }
 ]

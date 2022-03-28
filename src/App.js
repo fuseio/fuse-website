@@ -14,6 +14,7 @@ import Network from '@/components/network'
 import Ecosystem from '@/components/ecosystem'
 import Token from '@/components/token'
 import About from '@/components/about'
+import Careers from '@/components/careers'
 import Footer from '@/components/footer'
 import ScrollToTopController from '@/hooks/useScrollToTopController'
 
@@ -25,6 +26,7 @@ import ko from '../lang/ko.json'
 import es from '../lang/es.json'
 import tr from '../lang/tr.json'
 import id from '../lang/id.json'
+import { isMobileOnly } from 'react-device-detect'
 
 const { store, history } = configureStore(window.__INITIAL_STATE__)
 
@@ -58,6 +60,13 @@ const App = () => {
                     <Route exact path='/about'>
                       <About />
                     </Route>
+                    {
+                      !isMobileOnly && (
+                        <Route exact path='/careers'>
+                          <Careers />
+                        </Route>
+                      )
+                    }
                     <Route exact path='/token'>
                       <Token />
                     </Route>
