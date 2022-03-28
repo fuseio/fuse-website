@@ -13,7 +13,6 @@ const SectionTwo = () => {
   useEffect(() => {
     (async () => {
       const myHeaders = new Headers()
-      console.log({ apiKey: CONFIG?.freshteam?.apiKey })
       myHeaders.append('Authorization', `Bearer ${CONFIG?.freshteam?.apiKey}`)
       const jobPostings = await fetch('https://fuse.freshteam.com/api/job_postings', {
         headers: myHeaders
