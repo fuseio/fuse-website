@@ -8,10 +8,14 @@ const SectionOne = () => {
         <div className='careers__container'>
           <div className='careers__main'>
             <h1 className='main_title'>
-              Join <span>us</span>
+              Join us
             </h1>
+            <br />
             <p className='careers__text'>
-              We’re searching for people who are ready to jump right in, love collaborating, and value our culture of transparency to join our team. Come join us so together we can impact how teams work across the globe.
+              We're on a mission to build the most business and consumer-friendly ecosystem for mainstream adoption of web3 payments.
+              <br />
+              <br />
+              Positions are available for brilliant, passionate people at our headquarters in Tel-Aviv and remotely
             </p>
           </div>
           <div className='careers__img'>
