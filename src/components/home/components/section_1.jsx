@@ -9,7 +9,7 @@ import useCounter from '@/hooks/useCounter'
 const msgs = defineMessages({
   primaryText: {
     defaultMessage: 'Read Documentation'
-  },
+  }
 })
 
 const Button = ({ link, type = 'primary', text }) => {

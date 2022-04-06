@@ -77,7 +77,7 @@ const App = () => {
                     <Route exact path='/ecosystem'>
                       <Ecosystem />
                     </Route>
-                    <Route exact path="/docs">
+                    <Route exact path='/docs'>
                       <Docs />
                     </Route>
                     <Route path='/'>
