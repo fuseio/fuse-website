@@ -17,6 +17,7 @@ import About from '@/components/about'
 import Careers from '@/components/careers'
 import Footer from '@/components/footer'
 import ScrollToTopController from '@/hooks/useScrollToTopController'
+import Docs from '@/components/docs'
 
 import en from '../lang/en.json'
 import zh from '../lang/zh.json'
@@ -75,6 +76,9 @@ const App = () => {
                     </Route>
                     <Route exact path='/ecosystem'>
                       <Ecosystem />
+                    </Route>
+                    <Route exact path='/docs'>
+                      <Docs />
                     </Route>
                     <Route path='/'>
                       <HomePage />

@@ -1,0 +1,132 @@
+@include block(docs) {
+	min-height: 810px;
+
+	@include breakpoint(medium up) {
+		@include xy-grid();
+		@include flex-align(justify, middle);
+	}
+	@include breakpoint(medium down) {
+		@include xy-grid(vertical);
+		@include flex-align(justify, middle);
+	}
+	@include element(wrapper) {
+		background-color: #071927;
+		padding: 2em 0px;
+	}
+	@include element(arrow-wrapper) {
+		display: flex;
+		justify-content: center;
+	}
+
+	@include element(container) {
+		@include xy-grid-container(1178px, null);
+		margin-top: 135px;
+		@include breakpoint(large down) {
+			@include xy-grid-container(90%);
+		}
+		width: 100%;
+	}
+
+	@include element(hero_text) {
+		background: url("images/getting-started-bg.png") no-repeat center center;
+		background-size: cover;
+		width: 100%;
+		box-shadow: 0px 0px 55px 47px rgba(0, 0, 0, 0.25);
+		margin-bottom: 53px;
+		@include breakpoint(medium up) {
+		}
+		@include breakpoint(medium down) {
+			min-height: auto;
+			@include xy-cell(24, null, 0);
+		}
+	}
+	@include element(title) {
+		@extend %title;
+		color: white;
+		margin-top: 90px;
+		margin-bottom: 96px;
+		text-align: center;
+		@include breakpoint(medium up) {
+			font-size: 4em;
+		}
+		@include breakpoint(medium down) {
+			margin-bottom: 0.4em;
+		}
+	}
+
+	@include element(description) {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 1.5em;
+		color: #ffffff;
+	}
+	@include element(img) {
+		@include breakpoint(medium down) {
+			@include xy-cell(20, null, 0);
+		}
+	}
+
+	@include element(cards) {
+		font-family: "Helvetica";
+		display: grid;
+		grid-gap: 2.1875rem clamp(1rem, 2.5vw, 2rem);
+		grid-template-columns: repeat(3, minmax(250px, 1fr));
+		grid-auto-columns: 1fr;
+
+		@include breakpoint(medium down) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@include breakpoint(small only) {
+			grid-template-columns: 1fr;
+		}
+
+		@include element(wrapper) {
+			max-width: 1274px;
+			flex: 1;
+		}
+	}
+	@include element(card) {
+		@include xy-grid(vertical, null);
+		@include flex-align(flex-start, middle);
+		background: #f8f9fa;
+		border: 1px solid #000000;
+		border-radius: 5px;
+		height: 100%;
+		padding: 2rem;
+		@include element(logo) {
+			align-self: flex-start;
+			margin-bottom: 2rem;
+			img {
+				max-height: 55px;
+				max-width: 170px;
+			}
+		}
+		@include element(content_wrapper) {
+			@include xy-grid(vertical);
+			@include flex-align(justify, top);
+			height: 100%;
+		}
+		@include element(icons) {
+			gap: 4px;
+			display: flex;
+			margin-top: 1.25rem;
+		}
+		@include element(logo) {
+		}
+		@include element(title) {
+			width: 100%;
+			color: #071927;
+			font-weight: 700;
+			font-size: 24px;
+		}
+		@include element(description) {
+			font-style: normal;
+			color: #000;
+			margin: 1em 0px;
+			text-align: left;
+			line-height: 200%;
+			font-weight: 400;
+			font-size: 18px;
+		}
+	}
+}
