@@ -8,18 +8,14 @@ import useCounter from '@/hooks/useCounter'
 
 const msgs = defineMessages({
   primaryText: {
-    defaultMessage: 'Launch Community'
+    defaultMessage: 'Read Documentation'
   },
-  secondaryText: {
-    defaultMessage: 'Stake Fuse'
-  }
 })
 
 const Button = ({ link, type = 'primary', text }) => {
   const className = (type === 'primary') ? 'main_button main_button--no-arrow main_button--bold' : 'secondary_button'
   return (
     <a
-      rel='noreferrer noopener' target='_blank'
       href={link}
       className={className}
     >
@@ -105,8 +101,7 @@ const SectionOne = () => {
               />
             </p>
             <div className='buttons'>
-              <Button link='https://studio.fuse.io/' type='primary' text={msgs.primaryText} />
-              <Button link='https://staking.fuse.io/' type='secondary' text={msgs.secondaryText} />
+              <Button link='/docs' type='primary' text={msgs.primaryText} />
             </div>
           </div>
           <div className='canvas'>
