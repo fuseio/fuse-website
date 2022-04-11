@@ -58,7 +58,7 @@ const items = [
       },
       {
         title: 'Privacy policy',
-        url: 'https://fuse.cash/privacy'
+        url: 'https://fuse.cash/privacy-policy'
       },
       {
         title: 'Brand Kit',
