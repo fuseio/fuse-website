@@ -8,7 +8,7 @@ import useCounter from '@/hooks/useCounter'
 
 const msgs = defineMessages({
   primaryText: {
-    defaultMessage: 'Read Documentation'
+    defaultMessage: 'Get Started'
   }
 })
 
