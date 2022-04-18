@@ -131,7 +131,7 @@ const SectionTwo = () => {
         <div className='ecosystem_section_2__cards__wrapper'>
           <div className='ecosystem_section_2__last_update'>
             Last Updated on
-            <span>Sept 20</span>
+            <span>{date}</span>
           </div>
           <div className='ecosystem_section_2__cards'>
             {data.map((item, index) => (
