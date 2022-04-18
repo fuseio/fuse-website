@@ -65,15 +65,20 @@ const SectionTwo = () => {
   const [selectedTags, setSelectedTags] = useState([])
   const [data, setData] = useState([])
   const [orgItems, setOrgItems] = useState([])
+  const [date, setDate] = useState('')
 
   useEffect(() => {
     (async () => {
       const tagsSnapshot = await get(child(ref(database), 'tags'))
       const itemsSnapshot = await get(child(ref(database), 'items'))
+      const dateSnapshot = await get(child(ref(database), 'date'))
       const tags = Object.values(tagsSnapshot.exists() ? tagsSnapshot.val() : [])
       const items = Object.values(itemsSnapshot.exists() ? itemsSnapshot.val() : {})
+      const date = dateSnapshot.exists() ? dateSnapshot.val() : ''
+
       setData(items)
       setOrgItems(items)
+      setDate(date)
       const counts = items.reduce((acc, curr) => {
         (curr.tags || []).forEach((c) => {
           acc[c.toLowerCase()] = (acc[c.toLowerCase()] || 0) + 1
@@ -127,7 +132,7 @@ const SectionTwo = () => {
         <div className='ecosystem_section_2__cards__wrapper'>
           <div className='ecosystem_section_2__last_update'>
             Last Updated on
-            <span>Sept 20</span>
+            <span>{date}</span>
           </div>
           <div className='ecosystem_section_2__cards'>
             {data.map((item, index) => (
