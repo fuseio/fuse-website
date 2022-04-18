@@ -232,7 +232,6 @@
 		height: 100%;
 		@include element(logo) {
 			align-self: flex-start;
-			min-height: 50px;
 			img {
 				max-height: 50px;
 				max-width: 170px;
