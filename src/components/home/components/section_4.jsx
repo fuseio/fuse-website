@@ -4,6 +4,7 @@ import SwiperCore, { Navigation, Pagination } from 'swiper'
 import { FormattedMessage } from 'react-intl'
 import useFetch from 'use-http'
 import moment from 'moment'
+import { isEmpty } from 'lodash'
 
 SwiperCore.use([Navigation, Pagination])
 
@@ -47,6 +48,10 @@ const SectionFour = () => {
     []
   )
 
+  if (isEmpty(data.items)) {
+    return null
+  }
+
   return (
     <section className='section-C__wrapper'>
       <div className='section-C__container'>
@@ -76,7 +81,7 @@ const SectionFour = () => {
               </div>
               <div className='blogs__wrapper cell large-auto grid-x align-spaced'>
                 {
-                  data.items.slice(0, 3).map((item, index) => <Item key={index} {...item} />)
+                  data?.items.slice(0, 3).map((item, index) => <Item key={index} {...item} />)
                 }
               </div>
             </div>
@@ -95,7 +100,7 @@ const SectionFour = () => {
                 }}
               >
                 {
-                  data.items.slice(0, 3).map((item, index) => (
+                  data?.items.slice(0, 3).map((item, index) => (
                     <SwiperSlide key={index}>
                       <Item {...item} />
                     </SwiperSlide>
