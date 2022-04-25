@@ -87,7 +87,7 @@
 	}
 	@include element(card) {
 		@include xy-grid(vertical, null);
-		@include flex-align(flex-start, middle);
+		@include flex-align(left, middle);
 		background: #f8f9fa;
 		border: 1px solid #000000;
 		border-radius: 5px;

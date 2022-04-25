@@ -5,7 +5,7 @@ import { ref, child, get } from 'firebase/database'
 import SearchIcon from '@/assets/images/search_icon.svg'
 import arrowRight from '@/assets/images/arrow-right.svg'
 
-function Header({ search, onChange }) {
+function Header ({ search, onChange }) {
   return (
     <div className='ecosystem_section_2__header'>
       <div className='ecosystem_section_2__search'>
@@ -18,7 +18,7 @@ function Header({ search, onChange }) {
   )
 }
 
-function Card({ logo, description, website }) {
+function Card ({ logo, description, website }) {
   return (
     <div className='ecosystem_section_2__card'>
       <div className='ecosystem_section_2__card__logo'>
@@ -40,7 +40,7 @@ function Card({ logo, description, website }) {
   )
 }
 
-function Tags({ tags, selectedTags, onClick }) {
+function Tags ({ tags, selectedTags, onClick }) {
   return (
     <div className='ecosystem_section_2__tags__wrapper'>
       <h1 className='ecosystem_section_2__tags__title'>Tags</h1>
