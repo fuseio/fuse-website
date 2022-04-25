@@ -15,6 +15,10 @@ import mike from '@/assets/img/team/mike.png'
 import shay from '@/assets/img/team/shay.png'
 import tomas from '@/assets/img/team/tomas.png'
 import linkedin from '@/assets/img/linkedin.svg'
+import diana from '@/assets/img/team/diana.jpeg'
+import diego from '@/assets/img/team/diego.png'
+import nikolay from '@/assets/img/team/nikolay.jpg'
+import rami from '@/assets/img/team/rami.jpeg'
 import { FormattedMessage } from 'react-intl'
 
 const members = [
@@ -120,6 +124,34 @@ const members = [
     role: 'Product Manager',
     picture: tomas,
     linked: 'https://www.linkedin.com/in/tomas-hay-chaia-379830173/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Rami Husami',
+    role: 'Full-Stack Blockchain Developer',
+    picture: rami,
+    linked: 'https://www.linkedin.com/in/ramihusami/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Diana Felkina',
+    role: 'Marketing Manager',
+    picture: diana,
+    linked: 'https://www.linkedin.com/in/diana-felkina/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Nikolay Rivkin',
+    role: 'Marketing Manager',
+    picture: nikolay,
+    linked: 'https://www.linkedin.com/in/niko-r/',
+    isLinkedIn: true
+  },
+  {
+    name: 'Diego Figueroa',
+    role: 'Full-Stack Developer',
+    picture: diego,
+    linked: 'https://www.linkedin.com/in/diegofigueroa3/',
     isLinkedIn: true
   }
 ]

@@ -140,6 +140,7 @@
       > img {
         width: 193px;
         height: 193px;
+        object-fit: cover;
       }
 
       @include block(name) {
