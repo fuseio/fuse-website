@@ -1,7 +1,6 @@
 import React from 'react'
 import mark from '@/assets/img/team/mark.png'
 import andy from '@/assets/img/team/andy.png'
-import ashish from '@/assets/img/team/ashish.png'
 import sahara from '@/assets/img/team/sahara.png'
 import isaac from '@/assets/img/team/isaac.png'
 import leon from '@/assets/img/team/leon.png'
@@ -89,13 +88,6 @@ const members = [
     role: 'Social Media',
     picture: mikhail,
     linked: 'https://www.linkedin.com/in/mikhaildubodel/',
-    isLinkedIn: true
-  },
-  {
-    name: 'Ashish Ram',
-    role: 'Community Manager',
-    picture: ashish,
-    linked: 'https://www.linkedin.com/in/ashish-ram/',
     isLinkedIn: true
   },
   {
