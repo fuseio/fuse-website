@@ -12,8 +12,9 @@ const SectionOne = () => {
           </p>
           <button
             rel='noreferrer noopener'
+            target='_blank'
             className='ecosystem__button main_button main_button--no-arrow'
-            href='mailto:hello@fuse.io'
+            href='https://form.typeform.com/to/sGesyjyc?utm_medium=xxxxx'
           >
             Submit your project
           </button>
