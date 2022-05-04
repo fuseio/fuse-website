@@ -10,13 +10,14 @@ const SectionOne = () => {
           <p className='ecosystem__description'>
             From DeFi and Web3 applications to real world<br /> implementations that positively impact the lives of<br /> everyday people - browse the innovative projects<br /> building on Fuse.
           </p>
-          <button
-            rel='noreferrer noopener'
-            target='_blank'
-            className='ecosystem__button main_button main_button--no-arrow'
-            href='https://form.typeform.com/to/sGesyjyc?utm_medium=xxxxx'
-          >
-            Submit your project
+          <button className='ecosystem__button main_button main_button--no-arrow'>
+            <a
+              rel='noreferrer noopener'
+              target='_blank'
+              href='https://form.typeform.com/to/sGesyjyc?utm_medium=xxxxx'
+            >
+              Submit your project
+            </a>
           </button>
         </div>
         <div className='ecosystem__circle'>
