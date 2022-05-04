@@ -44,7 +44,7 @@ const members = [
   },
   {
     name: 'Leon Prouger',
-    role: 'Tech Lead',
+    role: 'CTO',
     picture: leon,
     linked: 'https://www.linkedin.com/in/leon-prouger-60646540/',
     isLinkedIn: true
@@ -134,14 +134,14 @@ const members = [
   },
   {
     name: 'Nikolay Rivkin',
-    role: 'Marketing Manager',
+    role: 'Fullstack Developer',
     picture: nikolay,
     linked: 'https://www.linkedin.com/in/niko-r/',
     isLinkedIn: true
   },
   {
     name: 'Diego Figueroa',
-    role: 'Full-Stack Developer',
+    role: 'Fullstack Developer',
     picture: diego,
     linked: 'https://www.linkedin.com/in/diegofigueroa3/',
     isLinkedIn: true
