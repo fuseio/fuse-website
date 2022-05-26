@@ -2,7 +2,6 @@ import React from 'react'
 import FooterLogo from '@/assets/images/group_21.svg'
 import Icons from './icons'
 import Links from './links'
-import SendMail from './send_email'
 
 function Footer () {
   return (
@@ -18,7 +17,17 @@ function Footer () {
           </div>
           <div className='grid-x align-justify'>
             <Links />
-            <SendMail />
+            <button
+              className='main_button main_button--no-arrow'
+            >
+              <a
+                rel='noopener noreferrer'
+                target='_blank'
+                href='http://eepurl.com/hWyVN5'
+              >
+                Register for Newsletter
+              </a>
+            </button>
           </div>
         </div>
         <div className='footer__copy-connect-wrapper grid-x align-justify'>

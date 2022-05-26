@@ -95,7 +95,7 @@ const SendMail = () => {
               disabled={!dirty || isSubmitting}
               id='btn_submit'
               type='submit'
-              className='send_email__form__button'
+              className='button main_button main_button--no-arrow'
             >
               <FormattedMessage defaultMessage='Send' />
             </button>

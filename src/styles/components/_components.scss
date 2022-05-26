@@ -32,6 +32,7 @@
 
 @include block(main_button) {
   padding: 1.125em 1.75em;
+  height: fit-content;
   font-size: 1em;
   font-weight: 400;
   font-stretch: normal;

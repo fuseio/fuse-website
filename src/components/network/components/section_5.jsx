@@ -14,7 +14,18 @@ const SectionFive = () => {
 
         />
       </div>
-      <NewsletterForm />
+      <button
+        className='main_button main_button--no-arrow'
+      >
+        <a
+          rel='noopener noreferrer'
+          target='_blank'
+          href='http://eepurl.com/hWyVN5'
+        >
+          Register for Newsletter
+        </a>
+      </button>
+      {/* <NewsletterForm /> */}
     </section>
   )
 }
