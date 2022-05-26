@@ -4,7 +4,6 @@ import { PopupButton } from 'react-calendly'
 
 import bookIcon from '@/assets/images/book-meeting.svg'
 import signUpIcon from '@/assets/images/signup.svg'
-import NewsletterForm from '@/components/shared/newsletter_form'
 
 const ContactUs = () => {
   return (
@@ -28,7 +27,17 @@ const ContactUs = () => {
             <div className='contact-us__text'>
               <FormattedMessage defaultMessage='Stay caught up with the most relevant news from the Fuse ecosystem. No spam - we promise!' />
             </div>
-            <NewsletterForm />
+            <button
+              className='main_button main_button--no-arrow'
+            >
+              <a
+                rel='noopener noreferrer'
+                target='_blank'
+                href='http://eepurl.com/hWyVN5'
+              >
+                Register for Newsletter
+              </a>
+            </button>
           </div>
           <div className='contact-us__booking cell large-9 small-24 large-offset-3'>
             <img src={bookIcon} alt='' className='contact-us-icon' />
