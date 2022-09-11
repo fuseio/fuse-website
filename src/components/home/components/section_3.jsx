@@ -1,4 +1,5 @@
 import React from 'react'
+import { withRouter } from 'react-router'
 import chainstack from '@/assets/images/chainstack_new.svg'
 import Peepl from '@/assets/images/peepl_new.svg'
 
@@ -38,7 +39,7 @@ const Item = ({ image1, image2, isLast }) => {
   )
 }
 
-const SectionThree = () => {
+const SectionThree = ({ history }) => {
   return (
     <section className='section_3__wrapper'>
       <div className='section_3'>
@@ -49,9 +50,8 @@ const SectionThree = () => {
             items.map((value, index) => <Item key={index} {...value} isLast={(items.length - 1) === index} />)
           }
         </div>
-
       </div>
-      <button className='section_3__button'>
+      <button onClick={() => history.push('/ecosystem')} className='section_3__button'>
         Explore 100+ More
       </button>
 
@@ -59,4 +59,4 @@ const SectionThree = () => {
   )
 }
 
-export default SectionThree
+export default withRouter(SectionThree)

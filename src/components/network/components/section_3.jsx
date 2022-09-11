@@ -59,14 +59,14 @@ const SectionThree = () => {
             <VisibilitySensor onChange={totalFuseStakedCounterStart} delayedCall>
               <div className='number'>{totalFuseStakedCounter}</div>
             </VisibilitySensor>
-            <div className='title'><FormattedMessage defaultMessage='Communities Launched' /></div>
+            <div className='title'><FormattedMessage defaultMessage='Total Fuse Staked' /></div>
             <div className='bottom_link'>
               <div>
                 <a
                   rel='noreferrer noopener' target='_blank'
-                  href='http://studio.fuse.io/'
+                  href='http://staking.fuse.io/'
                 >
-                  <FormattedMessage defaultMessage='Using the Fuse Studio' />
+                  <FormattedMessage defaultMessage='Click here to stake' />
                 </a>
                 <img src={Arrow} alt='network_arrow' />
               </div>

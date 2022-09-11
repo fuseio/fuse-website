@@ -23,46 +23,53 @@ const items = [
   {
     logo: PeeplLogo,
     phoneImage: PeeplIPhone,
-    description: 'Payments and rewards platform that helps keep more money flowing within local economies.'
+    description: 'Payments and rewards platform that helps keep more money flowing within local economies.',
+    link: 'https://itsaboutpeepl.com/'
   },
   {
     logo: FlambuLogo,
     phoneImage: FlambuIPhone,
-    description: 'Enhanced peer-to-peer renting of anything, leveraging decentralized trust and fast, low-cost payments.'
+    description: 'Enhanced peer-to-peer renting of anything, leveraging decentralized trust and fast, low-cost payments.',
+    link: 'https://www.flambu.com/'
   },
   {
     logo: FlambuLogo,
     phoneImage: ChromePayIPhone,
-    description: 'A borderless ecosystem of financial services for the unbanked of Africa leveraging powerful digital identity solutions.'
+    description: 'A borderless ecosystem of financial services for the unbanked of Africa leveraging powerful digital identity solutions.',
+    link: 'https://www.chromepay.io/'
   },
   {
     logo: GoodDollar1Logo,
     phoneImage: GoodDollarIPhone,
-    description: 'Leading Digital Basic Income platform that uses free market forces and the principles of social investing to create a stream of free digital currency.'
+    description: 'Leading Digital Basic Income platform that uses free market forces and the principles of social investing to create a stream of free digital currency.',
+    link: 'https://www.gooddollar.org/'
   },
   {
     logo: BitazzaLogo,
     phoneImage: BitazzaIPhone,
-    description: 'A suite of products including the Freedom Wallet and Freedom Card; empowering businesses to leverage crypto payments and rewards to gain a competitive advantage.'
+    description: 'A suite of products including the Freedom Wallet and Freedom Card; empowering businesses to leverage crypto payments and rewards to gain a competitive advantage.',
+    link: 'https://www.bitazza.com/en'
   },
   {
     logo: ComunitariaLogo,
     phoneImage: ComunitariaIPhone,
-    description: 'Decentralized social currency app that efficiently targets food donations to those in need whilst simultaneously promoting disadvantaged neighborhood recovery.  '
+    description: 'Decentralized social currency app that efficiently targets food donations to those in need whilst simultaneously promoting disadvantaged neighborhood recovery.  ',
+    link: 'https://comunitaria.com/en/home/'
   }
 ]
 
 function Item ({
   logo,
   phoneImage,
-  description
+  description,
+  link
 }) {
   return (
     <div className='swiper_item'>
       <div className='content'>
         <img src={logo} />
         <p className='content__description'>{description}</p>
-        <a rel='noreferrer noopener' target='_blank' className='content__button'>Learn more</a>
+        <a rel='noreferrer noopener' target='_blank' href={link} className='content__button'>Learn more</a>
       </div>
       <div className='image'>
         <img src={phoneImage} />

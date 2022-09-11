@@ -10,15 +10,25 @@ function SectionFive () {
         <div className='title'>Vertical integration for payments</div>
         <div className='text'>Fuse was designed to be friendly for blockchain and non-blockchain developers alike. The stack is interoperable and compatible with the EVM ecosystem while still enabling the business needs of regular businesses wishing to utilize this disruptive technology.</div>
         <div className='buttons'>
-          <button className='github'>
+          <a
+            className='github'
+            rel='noopener noreferrer'
+            href='https://github.com/fuseio'
+            target='_blank'
+          >
             <img src={Github} />
             Go to Github
-          </button>
+          </a>
 
-          <button className='charge'>
+          <a
+            className='charge'
+            rel='noopener noreferrer'
+            href='https://chargeweb3.com/'
+            target='_blank'
+          >
             <img src={Charge} />
             Go to charge
-          </button>
+          </a>
         </div>
       </div>
       <div className='image'>

@@ -1,5 +1,6 @@
 @include block(section_6) {
   @include element(container) {
+    padding: 15em 0px 5em;
     -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
     clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
     background-color: #011833;
@@ -13,7 +14,6 @@
   @include xy-grid-container();
   @include xy-grid(vertical);
   @include flex-align(center, middle);
-  height: 1000px;
   width: 100%;
 
   @include element(title) {

@@ -50,13 +50,14 @@
       }
 
       column-gap: 10px;
-      > button {
-        height: 60px;
+      > a {
         border-radius: 8px;
         font-style: normal;
         font-weight: 500;
         font-size: 16px;
         line-height: 20px;
+        padding: .2em 0px;
+        text-align: center;
 
         > img {
           width: 47px;
