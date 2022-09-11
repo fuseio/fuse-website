@@ -9,10 +9,10 @@ import { FormattedMessage } from 'react-intl'
 
 const items = [
   {
-    title: <FormattedMessage defaultMessage='Fuse Studio' />,
+    title: <FormattedMessage defaultMessage='Fuse Charge' />,
     icon: Studio,
-    subTitle: <FormattedMessage defaultMessage='Create an economy' />,
-    url: 'https://studio.fuse.io'
+    subTitle: <FormattedMessage defaultMessage='Create a project' />,
+    url: 'https://chargeweb3.com/'
   },
   {
     title: <FormattedMessage defaultMessage='Fuse Staking' />,
