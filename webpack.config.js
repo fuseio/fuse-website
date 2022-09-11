@@ -33,14 +33,14 @@ module.exports = {
         use: [
           !isDev
             ? {
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                  publicPath: '/'
-                }
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                publicPath: '/'
               }
+            }
             : {
-                loader: 'style-loader'
-              },
+              loader: 'style-loader'
+            },
           {
             loader: 'css-loader',
             options: {
@@ -127,7 +127,19 @@ module.exports = {
         loader: 'url-loader'
       },
       {
-        test: /\.(pdf|zip|ttf|woff|woff2)$/,
+        test: /\.(ttf|woff|woff2)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(pdf|zip)$/,
         use: [
           {
             loader: 'file-loader',
