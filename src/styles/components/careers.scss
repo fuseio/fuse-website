@@ -150,7 +150,7 @@
     }
     @include block(position-card) {
       background-color: #fff;
-      color: #071927;
+      color: #011833;
       display: flex;
       flex-direction: column;
       padding: 25px 34px;
@@ -210,7 +210,7 @@
           margin-right: 9px;
           width: 13px;
           height: 13px;
-          background: #071927;
+          background: #011833;
           border-radius: 50%;
           @include breakpoint(medium down) {
             margin-right: 8px;

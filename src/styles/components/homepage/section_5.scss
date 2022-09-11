@@ -1,0 +1,86 @@
+@include block(section_5) {
+  @include xy-grid-container();
+  padding: 5em 0px;
+
+  @include breakpoint(medium up) {
+    display: grid;
+    grid-template-columns: 45% auto;
+  }
+
+  @include breakpoint(medium down) {
+    padding: 5em 20px;
+    // grid-template-columns: 45% auto;
+  }
+
+  @include block(content) {
+    @include breakpoint(medium up) {
+      margin-top: 2em;
+    }
+
+    @include block(title) {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 45px;
+      color: #011833;
+
+      @include breakpoint(medium down) {
+        font-size: 32px;
+      }
+    }
+
+    @include block(text) {
+      font-size: 18px;
+      margin: 1em 0px;
+
+      @include breakpoint(medium down) {
+        font-size: 16px;
+      }
+    }
+
+    @include block(buttons) {
+      @include breakpoint(medium up) {
+        display: grid;
+        grid-template-columns: 220px 220px;
+      }
+
+      @include breakpoint(medium down) {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+
+      column-gap: 10px;
+      > button {
+        height: 60px;
+        border-radius: 8px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+
+        > img {
+          width: 47px;
+          height: 47px;
+          margin-right: 5px;
+        }
+      }
+
+      @include block(github) {
+        background-color: #000000;
+        border: 1px solid #000000;
+        color: white;
+      }
+
+      @include block(charge) {
+        background-color: #ffffff;
+        border: 1px solid #5f5fff;
+      }
+    }
+  }
+
+  @include block(image) {
+    @include breakpoint(medium down) {
+      display: none;
+    }
+  }
+}

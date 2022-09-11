@@ -1,115 +1,85 @@
 import React from 'react'
+import { isMobileOnly } from 'react-device-detect'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination } from 'swiper'
-import { FormattedMessage } from 'react-intl'
-import useFetch from 'use-http'
-import moment from 'moment'
-import { isEmpty } from 'lodash'
+
+import ChargeLogo from '@/assets/images/charge_logo.svg'
+import VoltageLogo from '@/assets/images/voltage_logo.svg'
+import ChainstackLogo from '@/assets/images/chainstack_logo.svg'
 
 SwiperCore.use([Navigation, Pagination])
 
-function Item ({ title, link, thumbnail, pubDate }) {
-  return (
-    <a
-      className='item__post'
-      rel='noreferrer noopener'
-      target='_blank'
-      href={link}
-    >
-      <div className='item__post__image'>
-        <img alt='owners' src={thumbnail} />
-      </div>
+const items = [
+  {
+    image: ChargeLogo,
+    title: 'Build & Scale Web3 Dapps with Charge.',
+    description: 'Robust APIs and powerful software that enable developers to create seamless payments experiences.',
+    btnText: 'Start Building',
+    link: 'https://chargeweb3.com/'
+  },
+  {
+    image: VoltageLogo,
+    title: 'Consumer-Friendly DeFi',
+    description: 'Trade & earn passive income on mobile and desktop.',
+    btnText: 'Go to App',
+    link: 'https://app.voltage.finance/'
+  },
+  {
+    image: ChainstackLogo,
+    title: 'Chainstack now supports Fuse Network',
+    description: 'Run high-performing nodes in minutes on a platform built for scale',
+    btnText: 'Getting Started',
+    link: 'https://chainstack.com/build-better-with-fuse/'
+  }
+]
 
-      <div className='item__post__content'>
-        {/* <p className='chips'>
-          <span>Blog post</span>
-        </p> */}
-        <h4 className='title'>
-          <FormattedMessage
-            defaultMessage='{title}'
-            values={{
-              title: title
-            }}
-          />
-        </h4>
-        <small>
-          <FormattedMessage defaultMessage='By Fuse' />
-        </small>
-        <span>{moment(pubDate).format('MMMM Do YYYY')}</span>
-      </div>
-    </a>
+function Item ({
+  image,
+  title,
+  description,
+  btnText,
+  link
+}) {
+  return (
+    <div className='swiper_item'>
+      <img src={image} />
+      <h2 className='swiper_item__title'>{title}</h2>
+      <p className='swiper_item__description'>{description}</p>
+      <a rel='noreferrer noopener' target='_blank' href={link} className='swiper_item__button'>{btnText}</a>
+    </div>
   )
 }
 
 const SectionFour = () => {
-  const { data = { items: [] } } = useFetch(
-    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/fusenet',
-    {},
-    []
-  )
-
-  if (isEmpty(data.items)) {
-    return null
-  }
-
   return (
-    <section className='section-C__wrapper'>
-      <div className='section-C__container'>
-        <div className='section-C'>
-          <h2 className='section-C__title'>
-            <FormattedMessage defaultMessage='Latest updates:' />
-          </h2>
-          <div className='section-C__content'>
-            <div className='grid-x align-justify'>
-              <div className='item cell large-5'>
-                <p className='section-C__text'>
-                  <FormattedMessage
-                    defaultMessage="Get to know what we've been up to lately
-                Follow us on Medium"
-                  />
-                </p>
-                <a
-                  rel='noreferrer noopener'
-                  target='_blank'
-                  href='https://medium.com/fusenet'
-                  className='main_button section-C__read-more section-link'
-                >
-                  <span>
-                    <FormattedMessage defaultMessage='Go to Blog' />
-                  </span>
-                </a>
-              </div>
-              <div className='blogs__wrapper cell large-auto grid-x align-spaced'>
-                {
-                  data?.items.slice(0, 3).map((item, index) => <Item key={index} {...item} />)
-                }
-              </div>
-            </div>
-            <div className='section-C__swiper'>
-              <Swiper
-                slidesPerView={1}
-                spaceBetween={20}
-                loop
-                setWrapperSize
-                autoplay={{
-                  reverseDirection: true,
-                  delay: 5000
-                }}
-                pagination={{
-                  clickable: true
-                }}
-              >
-                {
-                  data?.items.slice(0, 3).map((item, index) => (
-                    <SwiperSlide key={index}>
-                      <Item {...item} />
-                    </SwiperSlide>
-                  ))
-                }
-              </Swiper>
-            </div>
-          </div>
-        </div>
+    <section className='section_4'>
+      <div className='section_4__title'>Featured</div>
+      <div className='section_4__swiper'>
+        <Swiper
+          setWrapperSize
+          centeredSlidesBounds
+          slidesPerColumnFill='row'
+          // centeredSlides
+          loop={!!isMobileOnly}
+          autoplay={{
+            reverseDirection: true,
+            delay: 5000
+          }}
+          pagination={{
+            clickable: true
+          }}
+          slidesPerView={isMobileOnly ? 2 : 3}
+          spaceBetween={20}
+          width={isMobileOnly ? 600 : null}
+        >
+          {
+            items.map((item, index) => (
+              <SwiperSlide key={index}>
+                <Item {...item} />
+              </SwiperSlide>
+            ))
+          }
+        </Swiper>
       </div>
     </section>
   )

@@ -77,11 +77,12 @@ const NewsletterForm = () => {
       }}
     >
       {({ isSubmitting, dirty }) => (
-        <Form className='newsletter__form '>
+        <Form className='newsletter__form'>
           <div className='title' dangerouslySetInnerHTML={{ __html: title }} />
           <FormattedMessage defaultMessage='Enter Email'>
             {(txt) => (
               <Field
+                autoComplete='off'
                 type='email'
                 className='newsletter__form__input'
                 placeholder={txt}
@@ -89,11 +90,11 @@ const NewsletterForm = () => {
               />
             )}
           </FormattedMessage>
-          <ErrorMessage name='email'>
+          {/* <ErrorMessage name='email'>
             {(msg) => (
               <div className='newsletter__form__mobile-error'>{msg}</div>
             )}
-          </ErrorMessage>
+          </ErrorMessage> */}
           <button
             disabled={!dirty || isSubmitting}
             id='btn_submit'
@@ -102,9 +103,9 @@ const NewsletterForm = () => {
           >
             <FormattedMessage defaultMessage='Send' />
           </button>
-          <ErrorMessage name='email'>
+          {/* <ErrorMessage name='email'>
             {(msg) => <div className='newsletter__form__error '>{msg}</div>}
-          </ErrorMessage>
+          </ErrorMessage> */}
         </Form>
       )}
     </Formik>

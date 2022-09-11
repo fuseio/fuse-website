@@ -1,5 +1,5 @@
 import React from 'react'
-import about from '@/assets/img/stack_about.png'
+import about from '@/assets/images/stack_about.png'
 import { FormattedMessage } from 'react-intl'
 
 const SectionOne = () => {

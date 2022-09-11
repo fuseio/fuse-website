@@ -1,6 +1,4 @@
 @import "header";
-@import "section_1";
-@import "section_3";
 @import "section_7";
 @import "swiper";
 @import "communities";
@@ -10,7 +8,13 @@
 @import "ecosystem/ecosystem";
 @import "docs/docs";
 @import "token/token";
+@import "homepage/section_1";
 @import "homepage/section_2";
+@import "homepage/section_3";
+@import "homepage/section_4";
+@import "homepage/section_5";
+@import "homepage/section_6";
+@import "homepage/section_7";
 @import "homepage/studio_floor";
 @import "homepage/wallet_floor";
 @import "homepage/fuseswap_floor";
@@ -22,6 +26,7 @@
 @import "navbar/navbar";
 
 .site-wrapper {
+  background-color: #fafcff;
   position: relative;
   display: block;
   min-height: 100vh;
@@ -104,6 +109,30 @@
 
   $border: 2px;
   border: solid $border white;
+
+  position: relative;
+  &:hover {
+    border: solid $border transparent;
+    background-color: $color-white;
+    color: $color-dark;
+  }
+}
+
+@include block(primary_button) {
+  padding: 1.125em 1.75em;
+  font-size: 1em;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.01px;
+  text-align: center;
+  margin: 1em 0;
+  color: black;
+  border-radius: 10px;
+  background-color: #00FFC2;
+
+  $border: 2px;
+  border: solid $border #00FFC2;
 
   position: relative;
   &:hover {

@@ -1,5 +1,5 @@
 import React from 'react'
-import Pie from '@/assets/img/pie.png'
+import Pie from '@/assets/images/pie.png'
 import { FormattedMessage } from 'react-intl'
 
 const items = [

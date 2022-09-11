@@ -1,8 +1,8 @@
 import React from 'react'
-import Aleph from '@/assets/img/backed_aleph.png'
-import Colider from '@/assets/img/backed_colider.png'
-import trgc from '@/assets/img/backed_trgc.png'
-import Wolf from '@/assets/img/backed_wolf.png'
+import Aleph from '@/assets/images/backed_aleph.png'
+import Colider from '@/assets/images/backed_colider.png'
+import trgc from '@/assets/images/backed_trgc.png'
+import Wolf from '@/assets/images/backed_wolf.png'
 import spark from '@/assets/images/spark.svg'
 import { FormattedMessage } from 'react-intl'
 

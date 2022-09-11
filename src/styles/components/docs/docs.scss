@@ -10,7 +10,7 @@
 		@include flex-align(justify, middle);
 	}
 	@include element(wrapper) {
-		background-color: #071927;
+		background-color: #011833;
 		padding: 2em 0px;
 	}
 	@include element(arrow-wrapper) {
@@ -67,7 +67,6 @@
 	}
 
 	@include element(cards) {
-		font-family: "Helvetica";
 		display: grid;
 		grid-gap: 2.1875rem clamp(1rem, 2.5vw, 2rem);
 		grid-template-columns: repeat(3, minmax(250px, 1fr));
@@ -115,7 +114,7 @@
 		}
 		@include element(title) {
 			width: 100%;
-			color: #071927;
+			color: #011833;
 			font-weight: 700;
 			font-size: 24px;
 		}

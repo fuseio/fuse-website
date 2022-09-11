@@ -1,6 +1,6 @@
 import React from 'react'
 import FooterLogo from '@/assets/images/group_21.svg'
-import Icons from './icons'
+// import Icons from './icons'
 import Links from './links'
 
 function Footer () {
@@ -17,7 +17,7 @@ function Footer () {
           </div>
           <div className='grid-x align-justify'>
             <Links />
-            <button
+            {/* <button
               className='main_button main_button--no-arrow'
             >
               <a
@@ -27,12 +27,12 @@ function Footer () {
               >
                 Register for Newsletter
               </a>
-            </button>
+            </button> */}
           </div>
         </div>
         <div className='footer__copy-connect-wrapper grid-x align-justify'>
           <div className='footer__copy'>© 2022 Fuse. All Rights Reserved.</div>
-          <Icons />
+          {/* <Icons /> */}
         </div>
       </div>
     </footer>

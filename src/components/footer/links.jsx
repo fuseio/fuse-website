@@ -7,8 +7,8 @@ const items = [
     title: 'Getting started',
     items: [
       {
-        title: 'Fuse Studio',
-        url: 'https://studio.fuse.io/'
+        title: 'Fuse Charge',
+        url: 'https://chargeweb3.com/'
       },
       {
         title: 'Voltage Finance',

@@ -3,7 +3,7 @@
 	width: 100%;
 
 	@include element(wrapper) {
-		background: #071927;
+		background: #011833;
 	}
 
 	@include breakpoint(medium down) {
@@ -37,38 +37,6 @@
 				font-weight: bold;
 				text-decoration: underline;
 			}
-		}
-	}
-
-	@include element(icons) {
-		align-items: flex-end;
-
-		@include breakpoint(medium down) {
-			align-items: flex-start;
-		}
-
-		@include element(title) {
-			color: #8da9bb;
-			font-size: 18px;
-			font-weight: 400;
-			line-height: 24.8px;
-			margin-bottom: 1.3333em;
-		}
-
-		@include element(images) {
-			gap: 10px;
-
-			img {
-				width: 48px;
-				height: 48px;
-			}
-		}
-	}
-
-	@include element(icon) {
-		cursor: pointer;
-		&:hover {
-			filter: brightness(0) invert(1);
 		}
 	}
 
@@ -347,7 +315,7 @@
 			width: 136px;
 			height: 54px;
 			border-radius: 10px;
-			color: #071927;
+			color: #011833;
 			display: flex;
 			align-items: center;
 			justify-content: center;

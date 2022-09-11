@@ -1,0 +1,109 @@
+@include block(section_4) {
+  // @include xy-grid-container();
+  @include xy-grid(vertical);
+  @include flex-align(center, null);
+  background-color: #011833;
+  width: 100%;
+  
+  
+  @include breakpoint(medium up) {
+    height: 1000px;
+    -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+  }
+
+  @include breakpoint(medium down) {
+    height: 600px;
+    -webkit-clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
+    clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
+  }
+
+  @include element(title) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3em;
+    text-align: center;
+    color: white;
+    margin-bottom: 0.3em;
+    width: 100%;
+
+    @include breakpoint(small down) {
+      font-size: 2em;
+    }
+  }
+
+  @include element(swiper) {
+    // padding: 0px 2em;
+
+    .swiper-container {
+      padding-left: 20px;
+    }
+
+    @include block(swiper_item) {
+      @include xy-grid(vertical, false);
+      @include flex-align(justify, top);
+      padding: 1em;
+      border-radius: 8px;
+      height: 350px;
+      background-color: white;
+
+      @include breakpoint(small only) {
+        // max-width: 400px;
+      }
+
+      > img {
+        @include breakpoint(small only) {
+          height: 60px;
+        }
+      }
+
+      @include element(title) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        color: #000000;
+
+        @include breakpoint(small only) {
+          font-size: 20px;
+        }
+      }
+
+      @include element(description) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        padding: 0.3em 0px;
+        color: #000000;
+
+        @include breakpoint(small only) {
+          font-size: 16px;
+        }
+      }
+
+      @include element(button) {
+        width: 240px;
+        // margin-top: 2em;
+        padding: 1.125em 1.75em;
+        font-size: 1em;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.01px;
+        text-align: center;
+        color: white;
+        border-radius: 10px;
+        background-color: #011833;
+
+        $border: 2px;
+        border: solid $border #011833;
+
+        position: relative;
+        &:hover {
+          border: solid $border transparent;
+          background-color: #00ffc2;
+          color: $color-dark;
+        }
+      }
+    }
+  }
+}

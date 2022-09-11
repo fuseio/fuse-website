@@ -1,0 +1,85 @@
+@include block(section_3) {
+  @include xy-grid-container();
+  @include element(wrapper) {
+    @include xy-grid(vertical);
+    @include flex-align(center, middle);
+    @include breakpoint(medium up) {
+      height: 1000px;
+    }
+
+    @include breakpoint(medium down) {
+      padding: 5em 0px;
+    }
+  }
+
+  @include element(title) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3em;
+    text-align: center;
+    color: #011833;
+    margin-bottom: 0.3em;
+
+    @include breakpoint(small down) {
+      font-size: 32px;
+    }
+  }
+
+  @include element(subtitle) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #011833;
+
+    @include breakpoint(small down) {
+      display: none;
+    }
+  }
+
+  @include element(items) {
+    @include xy-grid();
+    @include flex-align(center, middle);
+    width: 100%;
+    margin-top: 3em;
+
+    @include block(item) {
+      padding: 0px 1em;
+      border-left: 1px dashed #011833;
+      @include xy-grid(vertical);
+
+      @include breakpoint(small down) {
+        border-right: 1px dashed #011833;
+        margin-bottom: 2.2em;
+      }
+
+      @include modifier(last) {
+        border-right: 1px dashed #011833;
+      }
+    }
+  }
+
+  @include element(button) {
+    margin-top: 2em;
+    padding: 1.125em 1.75em;
+    font-size: 1em;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.01px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    background-color: #011833;
+
+    $border: 2px;
+    border: solid $border #011833;
+
+    position: relative;
+    &:hover {
+      border: solid $border transparent;
+      background-color: #00ffc2;
+      color: $color-dark;
+    }
+  }
+}
