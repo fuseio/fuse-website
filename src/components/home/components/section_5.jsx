@@ -3,7 +3,7 @@ import StackImage from '@/assets/images/stack.png'
 import Github from '@/assets/images/github_btn.svg'
 import Charge from '@/assets/images/charge_btn.svg'
 
-function SectionFive() {
+function SectionFive () {
   return (
     <section className='section_5__wrapper'>
       <div className='section_5'>

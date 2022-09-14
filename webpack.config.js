@@ -33,14 +33,14 @@ module.exports = {
         use: [
           !isDev
             ? {
-              loader: MiniCssExtractPlugin.loader,
-              options: {
-                publicPath: '/'
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                  publicPath: '/'
+                }
               }
-            }
             : {
-              loader: 'style-loader'
-            },
+                loader: 'style-loader'
+              },
           {
             loader: 'css-loader',
             options: {
