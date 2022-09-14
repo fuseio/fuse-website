@@ -17,7 +17,7 @@ const items = [
     image2: Peepl
   },
   {
-    image1: TheGraph,
+    image1: Ramp,
     image2: Pokt
   },
   {
@@ -26,7 +26,7 @@ const items = [
   },
   {
     image1: Beefy,
-    image2: Ramp
+    image2: TheGraph
   }
 ]
 
@@ -43,7 +43,7 @@ const SectionThree = ({ history }) => {
   return (
     <section className='section_3__wrapper'>
       <div className='section_3'>
-        <div className='section_3__title'>Who's building on Fuse</div>
+        <div className='section_3__title'>Explore the ecosystem</div>
         <div className='section_3__subtitle'>From next generation up starts solving real-world problems to big name <br /> infrastructure and service providers, join our journey and build in the most promising <br /> blockchain ecosystem in existence.</div>
         <div className='section_3__items'>
           {

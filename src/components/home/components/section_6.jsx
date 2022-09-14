@@ -1,87 +1,78 @@
 import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { isMobileOnly } from 'react-device-detect'
-import useFetch from 'use-http'
-import { isEmpty } from 'lodash'
-import { FormattedMessage } from 'react-intl'
-import moment from 'moment'
-import Icons from './icons'
-import NewsletterForm from '@/components/shared/newsletter_form'
-import SubscribeIcon from '@/assets/images/subscribe_icon.svg'
+import StackImage from '@/assets/images/stack.png'
 
-function BlogPostItem ({ title, link, thumbnail, pubDate }) {
+const items = [
+  {
+    title: 'Participate',
+    text: 'Fuse Token holders participate decisions about the network future.',
+    links: [
+      {
+        text: 'Buy Fuse token',
+        link: ''
+      },
+      {
+        text: 'Stake fuse',
+        link: ''
+      }
+    ]
+  },
+  {
+    title: 'Integrate',
+    text: 'Provide services on the Fuse network or become an operator such as a payment processor, Fiat ramp, wallet provider and more.',
+    links: [
+      {
+        text: 'Join the eco-system',
+        link: ''
+      }
+    ]
+  },
+  {
+    title: 'Validate',
+    text: "Validators are network participants that are running the network nodes and receive Fuse rewards for maintaining the network and it's governance",
+    links: [
+      {
+        text: 'Become a Validator',
+        link: ''
+      }
+    ]
+  }
+]
+
+function Item ({
+  title,
+  text,
+  links
+}) {
   return (
-    <a
-      className='post_item'
-      rel='noreferrer noopener'
-      target='_blank'
-      href={link}
-    >
-      <div className='post_item__image'>
-        <img alt='owners' src={thumbnail} />
+    <div className='item'>
+      <div className='title'>{title}</div>
+      <div className='text'>{text}</div>
+      <div className='links'>
+        {
+          links.map(({ text, link }, index) => {
+            return (
+              <a rel='noreferrer noopener' target='_blank' key={index} href={link}>{text}</a>
+            )
+          })
+        }
       </div>
-
-      <div className='post_item__content'>
-        <h4 className='title'>
-          {title}
-        </h4>
-        <small>
-          <FormattedMessage defaultMessage='By Fuse' />
-        </small>
-        <span>{moment(pubDate).format('MMMM Do YYYY')}</span>
-      </div>
-    </a>
+    </div>
   )
 }
 
 function SectionSix () {
-  const { data = { items: [] } } = useFetch(
-    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/fusenet',
-    {},
-    []
-  )
-
-  if (isEmpty(data.items)) {
-    return null
-  }
-
   return (
-    <div className='section_6__container'>
+    <section className='section_6__wrapper'>
       <div className='section_6'>
-        <div className='section_6__title'>Latest News on Fuse</div>
-        <div className='blogs grid-x align-spaced'>
+        <div className='section_6__title'>Own the platform you are building on</div>
+        <div className='section_6__text'>Powered by the Fuse Token, Fuse enables community participants including consumers, clients, service providers and operators to align interests around a common goal - the growth of the network.</div>
+        <div className='section_6__boxs'>
           {
-            isMobileOnly
-              ? (
-                <Swiper
-                  slidesPerView={1}
-                  spaceBetween={20}
-                  loop
-                  setWrapperSize
-                >
-                  {
-                    data?.items.slice(0, 3).map((item, index) => <SwiperSlide key={index}><BlogPostItem {...item} /></SwiperSlide>)
-                  }
-                </Swiper>
-                )
-              : data?.items.slice(0, 3).map((item, index) => <BlogPostItem key={index} {...item} />)
+            items.map((item, index) => <Item {...item} key={index} />)
           }
         </div>
-        <div className='email_social'>
-          <div className='subscribe'>
-            <img className='icon' src={SubscribeIcon} />
-            <div className='texts'>
-              <div className='title'>Subscribe to our newsletter</div>
-              <div className='text'>The latest news and resources, sent to your inbox.</div>
-            </div>
-            <NewsletterForm />
-          </div>
-          <div className='social'>
-            <Icons />
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

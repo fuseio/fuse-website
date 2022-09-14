@@ -1,183 +1,130 @@
 @include block(section_6) {
-  @include element(container) {
-    padding: 15em 0px 5em;
-    -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
-    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
-    background-color: #011833;
-
-    @include breakpoint(small only) {
-      -webkit-clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
-      clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
-    }
-  }
-
   @include xy-grid-container();
   @include xy-grid(vertical);
   @include flex-align(center, middle);
-  width: 100%;
+
+  @include breakpoint(medium up) {
+    height: 900px;
+  }
+
+  @include element(wrapper) {
+    @include breakpoint(medium down) {
+      padding: 5em 0px;
+    }
+    background-color: #011833;
+    @include xy-grid(vertical);
+    @include flex-align(center, middle);
+  }
 
   @include element(title) {
     font-style: normal;
     font-weight: 700;
-    font-size: 3em;
-    text-align: center;
+    font-size: 48px;
     color: white;
-    margin-bottom: 0.5em;
+    @include breakpoint(medium up) {
+      text-align: center;
+    }
 
-    @include breakpoint(small only) {
-      font-size: 2em;
+    @include breakpoint(medium down) {
+      font-size: 32px;
     }
   }
 
-  @include block(blogs) {
-    flex: 0 0 auto;
-    min-height: 0;
-    min-width: 0;
-    width: 100%;
-
-    @include block(post_item) {
-      width: 32.5%;
-      border-radius: 10px;
-      box-shadow: 1px 0 8px 0 rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-
-      &:hover {
-        background-color: #f5f5f5;
-      }
-
-      @include breakpoint(xlarge up) {
-        max-height: 380px;
-      }
-
-      @include breakpoint(medium down) {
-        width: 100%;
-        height: 100%;
-      }
-
-      @include element(image) {
-        position: relative;
-        padding-bottom: 56.2%;
-
-        > img {
-          object-fit: fill;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          border-radius: 10px 10px 0 0;
-        }
-      }
-
-      @include element(content) {
-        display: flex;
-        flex-flow: column nowrap;
-        padding: 1em;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        background-color: #ffffff;
-
-        > span {
-          font-weight: 500;
-          line-height: 1.83;
-          font-size: 1em;
-          // color: $color-gray;
-        }
-
-        > p {
-          font-size: 1.125em;
-          font-weight: normal;
-          font-style: normal;
-          font-stretch: normal;
-          line-height: 1.33;
-          letter-spacing: normal;
-        }
-
-        @include block(title) {
-          font-weight: 500;
-          font-size: 0.9em;
-          margin: 0.3em 0 0.5em;
-        }
-      }
-    }
-  }
-
-  @include block(email_social) {
-    display: grid;
-    margin-top: 10px;
-    width: 100%;
-    padding: 0px 3px;
-    justify-content: space-between;
+  @include element(text) {
+    font-size: 18px;
+    margin: 1em 0px;
+    max-width: 570px;
+    color: white;
 
     @include breakpoint(medium up) {
-      grid-template-columns: auto auto;
+      text-align: center;
     }
 
-    @include block(subscribe) {
-      @include xy-grid();
-      @include flex-align(justify, middle);
-      background-color: #fff;
-      padding: 1em;
+    @include breakpoint(medium down) {
+      font-size: 16px;
+    }
+  }
+
+  @include element(boxs) {
+    margin-top: 3em;
+    display: grid;
+    @include breakpoint(medium up) {
+      grid-template-columns: repeat(3, 368px);
+      column-gap: 20px;
+    }
+
+    @include block(item) {
+      background: rgba(92, 199, 255, 0.25);
       border-radius: 8px;
-
-      @include block(icon) {
-      }
-
-      @include block(texts) {
-        @include xy-grid(vertical, false);
-        @include flex-align(center, top);
-
-        @include breakpoint(medium up) {
-          padding: 0px 15px;
-        }
-
-        @include breakpoint(medium down) {
-          padding: 15px 0px;
-        }
-        @include block(title) {
-          font-style: normal;
-          font-weight: 500;
-          font-size: 32px;
-          color: #000000;
-        }
-
-        @include block(text) {
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          color: #000000;
-        }
-      }
-    }
-
-    @include block(social) {
-      @include breakpoint(medium up) {
-        width: 408px;
-      }
+      padding: 20px;
+      display: grid;
+      align-content: start;
+      justify-content: start;
 
       @include breakpoint(medium down) {
-        margin-top: 0.5em;
+        &:not(:last-child) {
+          margin-bottom: 2em;
+        }
       }
-      padding: 1.5em;
-      background: #ffffff;
-      box-shadow: 0px 0px 15px 12px rgba(93, 134, 194, 0.05);
-      border-radius: 8px;
-      @include xy-grid();
-      @include flex-align(center);
 
-      @include block(icons) {
-        align-items: center;
+      @include block(title) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        color: #ffffff;
+      }
 
-        @include element(images) {
-          gap: 10px;
+      @include block(text) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #ffffff;
+        padding: 0.5em 0px;
 
-          img {
-            width: 48px;
-            height: 48px;
-            filter: invert(0%) sepia(0%) saturate(3515%) hue-rotate(328deg) brightness(100%) contrast(102%);
+        @include breakpoint(medium down) {
+          font-size: 14px;
+        }
+      }
+
+      @include block(links) {
+        display: grid;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #54a8ff;
+
+        @include breakpoint(medium down) {
+          font-size: 14px;
+        }
+        > a {
+          &::after {
+            content: "";
+            background-image: url(images/blue.png);
+            background-repeat: no-repeat;
+            background-position: left center;
+            height: 11px;
+            display: inline-block;
+            padding-left: 16px;
+            -webkit-transition: all 0.3s ease-out;
+            -moz-transition: transform 0.3s ease-out;
+            -ms-transition: transform 0.3s ease-out;
+            -o-transition: transform 0.3s ease-out;
+            transition: transform 0.3s ease-out;
+          }
+
+          &:hover {
+
+            &::after {
+              -webkit-transform: translateX(4px);
+              -moz-transform: translateX(4px);
+              -ms-transform: translateX(4px);
+              -o-transform: translateX(4px);
+              transform: translateX(4px);
+            }
           }
         }
-
-        @include block(item) {
-          cursor: pointer;
+        > a:not(:last-child) {
+          margin-bottom: 0.5em;
         }
       }
     }

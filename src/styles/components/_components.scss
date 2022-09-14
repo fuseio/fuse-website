@@ -15,6 +15,7 @@
 @import "homepage/section_5";
 @import "homepage/section_6";
 @import "homepage/section_7";
+@import "homepage/section_8";
 @import "homepage/studio_floor";
 @import "homepage/wallet_floor";
 @import "homepage/fuseswap_floor";
@@ -49,10 +50,6 @@
   margin: 1em 0;
   border-radius: 10px;
   background-image: linear-gradient(124.98deg, #b3ffbb 6.71%, #fffb00 90%);
-
-  @include modifier(no-arrow) {
-    content: "";
-  }
 
   &::after {
     background-image: url(images/arrow.png);
@@ -129,15 +126,47 @@
   margin: 1em 0;
   color: black;
   border-radius: 10px;
-  background-color: #00FFC2;
+  background-color: #00ffc2;
 
   $border: 2px;
-  border: solid $border #00FFC2;
+  border: solid $border #00ffc2;
 
   position: relative;
   &:hover {
     border: solid $border transparent;
     background-color: $color-white;
     color: $color-dark;
+  }
+}
+
+@include block(test_wraper) {
+  position: relative;
+  @include breakpoint(large up) {
+    &::before {
+      content: "";
+      background-size: contain;
+      width: 650px;
+      height: 1310px;
+      background-image: url(images/side_backgroud.png);
+      position: absolute;
+      right: 0px;
+      z-index: 1;
+      background-repeat: no-repeat;
+      top: 50%;
+    }
+
+    &::after {
+      content: "";
+      background-size: contain;
+      width: 650px;
+      height: 1310px;
+      transform: rotate(180deg);
+      background-image: url(images/side_backgroud.png);
+      position: absolute;
+      left: 0px;
+      z-index: 1;
+      background-repeat: no-repeat;
+      top: 15%;
+    }
   }
 }

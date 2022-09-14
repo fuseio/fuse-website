@@ -6,6 +6,7 @@ import SectionFour from './components/section_4'
 import SectionFive from './components/section_5'
 import SectionSix from './components/section_6'
 import SectionSeven from './components/section_7'
+import SectionEight from './components/section_8'
 
 const HomePage = () => {
   return (
@@ -15,10 +16,13 @@ const HomePage = () => {
         <SectionTwo />
       </div>
       <SectionThree />
-      <SectionFour />
-      <SectionFive />
-      <SectionSix />
+      <div className='test_wraper'>
+        <SectionFour />
+        <SectionFive />
+        <SectionSix />
+      </div>
       <SectionSeven />
+      <SectionEight />
     </>
   )
 }

@@ -1,106 +1,52 @@
 import React from 'react'
-
-import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Navigation, Pagination } from 'swiper'
-
-import BitazzaIPhone from '@/assets/images/use_cases/bitazza_phone.png'
-import ChromePayIPhone from '@/assets/images/use_cases/chromePay_phone.png'
-import ComunitariaIPhone from '@/assets/images/use_cases/comunitaria_phone.png'
-import FlambuIPhone from '@/assets/images/use_cases/Flambu_phone.png'
-import GoodDollarIPhone from '@/assets/images/use_cases/gooddollar_phone.png'
-import PeeplIPhone from '@/assets/images/use_cases/peepl_phone.png'
-
-import BitazzaLogo from '@/assets/images/use_cases/bitazza1.svg'
-import FlambuLogo from '@/assets/images/use_cases/flambu.svg'
-import PeeplLogo from '@/assets/images/use_cases/peepl1.svg'
-import ComunitariaLogo from '@/assets/images/use_cases/wiki1.svg'
-import GoodDollar1Logo from '@/assets/images/use_cases/gooddollar1.svg'
-import { isMobileOnly } from 'react-device-detect'
-
-SwiperCore.use([Navigation, Pagination])
-
-const items = [
-  {
-    logo: PeeplLogo,
-    phoneImage: PeeplIPhone,
-    description: 'Payments and rewards platform that helps keep more money flowing within local economies.',
-    link: 'https://itsaboutpeepl.com/'
-  },
-  {
-    logo: FlambuLogo,
-    phoneImage: FlambuIPhone,
-    description: 'Enhanced peer-to-peer renting of anything, leveraging decentralized trust and fast, low-cost payments.',
-    link: 'https://www.flambu.com/'
-  },
-  {
-    logo: FlambuLogo,
-    phoneImage: ChromePayIPhone,
-    description: 'A borderless ecosystem of financial services for the unbanked of Africa leveraging powerful digital identity solutions.',
-    link: 'https://www.chromepay.io/'
-  },
-  {
-    logo: GoodDollar1Logo,
-    phoneImage: GoodDollarIPhone,
-    description: 'Leading Digital Basic Income platform that uses free market forces and the principles of social investing to create a stream of free digital currency.',
-    link: 'https://www.gooddollar.org/'
-  },
-  {
-    logo: BitazzaLogo,
-    phoneImage: BitazzaIPhone,
-    description: 'A suite of products including the Freedom Wallet and Freedom Card; empowering businesses to leverage crypto payments and rewards to gain a competitive advantage.',
-    link: 'https://www.bitazza.com/en'
-  },
-  {
-    logo: ComunitariaLogo,
-    phoneImage: ComunitariaIPhone,
-    description: 'Decentralized social currency app that efficiently targets food donations to those in need whilst simultaneously promoting disadvantaged neighborhood recovery.  ',
-    link: 'https://comunitaria.com/en/home/'
-  }
-]
-
-function Item ({
-  logo,
-  phoneImage,
-  description,
-  link
-}) {
-  return (
-    <div className='swiper_item'>
-      <div className='content'>
-        <img src={logo} />
-        <p className='content__description'>{description}</p>
-        <a rel='noreferrer noopener' target='_blank' href={link} className='content__button'>Learn more</a>
-      </div>
-      <div className='image'>
-        <img src={phoneImage} />
-      </div>
-    </div>
-  )
-}
+import Github from '@/assets/images/github_btn.svg'
+import DevIcon from '@/assets/images/dev_small.svg'
+import HeartIcon from '@/assets/images/heart_small.svg'
+import GlobalIcon from '@/assets/images/global_small.svg'
 
 function SectionSeven () {
   return (
     <section className='section_7'>
-      <div className='section_7__title'>Live business use cases on Fuse</div>
-      <div className='section_7__swiper'>
-        <Swiper
-          autoplay={{
-            reverseDirection: true,
-            delay: 5000
-          }}
-          loop={!!isMobileOnly}
-          slidesPerView={isMobileOnly ? 2 : 3}
-          spaceBetween={20}
-          width={isMobileOnly ? 600 : null}
-        >
-          {
-            items.map((item, index) => (
-              <SwiperSlide key={index}>
-                <Item {...item} />
-              </SwiperSlide>
-            ))
-          }
-        </Swiper>
+      <div className='content'>
+        <div className='title'>Fuse is an open source stack built for the modern business needs</div>
+        <div className='buttons'>
+          <a
+            className='charge'
+            rel='noopener noreferrer'
+            href='https://chargeweb3.com/'
+            target='_blank'
+          >
+            Developer portal
+          </a>
+
+          <a
+            className='github'
+            rel='noopener noreferrer'
+            href='https://github.com/fuseio'
+            target='_blank'
+          >
+            <img src={Github} />
+            Go to Github
+          </a>
+        </div>
+
+        <div className='boxs'>
+
+          <div className='item'>
+            <img className='icon' src={GlobalIcon} />
+            <span className='text'>Globally available</span>
+          </div>
+
+          <div className='item'>
+            <img className='icon' src={HeartIcon} />
+            <span className='text'>Welcoming Community</span>
+          </div>
+
+          <div className='item'>
+            <img className='icon' src={DevIcon} />
+            <span className='text'>Powerful Tooling</span>
+          </div>
+        </div>
       </div>
     </section>
   )

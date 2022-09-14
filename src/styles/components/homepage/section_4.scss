@@ -1,22 +1,35 @@
 @include block(section_4) {
-  // @include xy-grid-container();
-  @include xy-grid(vertical);
-  @include flex-align(center, null);
-  background-color: #011833;
-  width: 100%;
-  
-  
-  @include breakpoint(medium up) {
-    height: 1000px;
-    -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+  @include breakpoint(large up) {
+    height: 1100px;
   }
 
   @include breakpoint(medium down) {
-    height: 600px;
-    -webkit-clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
-    clip-path: polygon(0 3%, 100% 0%, 100% 97%, 0% 100%);
+    height: 1100px;
   }
+  @include element(container) {
+    // padding-bottom: 10em;
+    // padding: 15em 0px 5em;
+    -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: #011833;
+
+    @include breakpoint(small only) {
+      -webkit-clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
+      clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+
+  @include breakpoint(medium up) {
+    @include xy-grid-container(1280px, 0px);
+  }
+
+  @include breakpoint(medium down) {
+    @include xy-grid-container();
+  }
+
+  @include xy-grid(vertical);
+  @include flex-align(center, middle);
+  width: 100%;
 
   @include element(title) {
     font-style: normal;
@@ -24,84 +37,187 @@
     font-size: 3em;
     text-align: center;
     color: white;
-    margin-bottom: 0.3em;
-    width: 100%;
+    margin-bottom: 0.5em;
 
-    @include breakpoint(small down) {
+    @include breakpoint(small only) {
       font-size: 2em;
     }
   }
 
-  @include element(swiper) {
-    // padding: 0px 2em;
+  @include block(blogs) {
+    flex: 0 0 auto;
+    min-height: 0;
+    min-width: 0;
+    width: 100%;
 
-    .swiper-container {
-      padding-left: 20px;
+    @include element(arrow) {
+      // position: absolute;
+      top: 50%;
+      z-index: 10;
+      display: inline;
+      > img {
+        height: 45px;
+        width: 45px;
+      }
+
+      @include modifier(next) {
+        right: -20px;
+      }
+      @include modifier(prev) {
+        left: -20px;
+        transform: rotate(180deg);
+      }
     }
 
-    @include block(swiper_item) {
-      @include xy-grid(vertical, false);
-      @include flex-align(justify, top);
+    @include xy-grid(horizontal, false);
+    @include flex-align(justify);
+
+    @include block(post_item) {
+      border-radius: 10px;
+      box-shadow: 1px 0 8px 0 rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      @include xy-cell(6, null, 10px);
+
+      &:hover {
+        background-color: #f5f5f5;
+      }
+
+      @include breakpoint(xlarge up) {
+        max-height: 380px;
+      }
+
+      @include breakpoint(medium down) {
+        width: 100%;
+        height: 100%;
+      }
+
+      @include element(image) {
+        position: relative;
+        padding-bottom: 56.2%;
+
+        > img {
+          object-fit: fill;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 10px 10px 0 0;
+        }
+      }
+
+      @include element(content) {
+        @include xy-grid(vertical);
+        @include flex-align(justify, top);
+        padding: 1em;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: #ffffff;
+
+        > span {
+          font-weight: 500;
+          line-height: 1.83;
+          font-size: 1em;
+        }
+
+        > p {
+          font-size: 1.125em;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.33;
+          letter-spacing: normal;
+        }
+
+        @include block(title) {
+          font-weight: 500;
+          font-size: 0.9em;
+          margin: 0.3em 0 0.5em;
+          max-height: 3.2em;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+        }
+      }
+    }
+  }
+
+  @include block(email_social) {
+    display: grid;
+    width: 100%;
+    justify-content: space-between;
+
+    @include breakpoint(medium up) {
+      grid-template-columns: auto auto;
+    }
+
+    @include block(subscribe) {
+      @include xy-grid();
+      @include flex-align(justify, middle);
+      background-color: #fff;
       padding: 1em;
       border-radius: 8px;
-      height: 350px;
-      background-color: white;
 
-      @include breakpoint(small only) {
-        // max-width: 400px;
+      @include block(icon) {
       }
 
-      > img {
-        @include breakpoint(small only) {
-          height: 60px;
+      @include block(texts) {
+        @include xy-grid(vertical, false);
+        @include flex-align(center, top);
+
+        @include breakpoint(medium up) {
+          padding: 0px 15px;
         }
-      }
 
-      @include element(title) {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 32px;
-        color: #000000;
-
-        @include breakpoint(small only) {
-          font-size: 20px;
+        @include breakpoint(medium down) {
+          padding: 15px 0px;
         }
-      }
+        @include block(title) {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 32px;
+          color: #000000;
+        }
 
-      @include element(description) {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        padding: 0.3em 0px;
-        color: #000000;
-
-        @include breakpoint(small only) {
+        @include block(text) {
+          font-style: normal;
+          font-weight: 400;
           font-size: 16px;
+          color: #000000;
         }
       }
+    }
 
-      @include element(button) {
-        width: 240px;
-        // margin-top: 2em;
-        padding: 1.125em 1.75em;
-        font-size: 1em;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: 0.01px;
-        text-align: center;
-        color: white;
-        border-radius: 10px;
-        background-color: #011833;
+    @include block(social) {
+      @include breakpoint(medium up) {
+        width: 408px;
+      }
 
-        $border: 2px;
-        border: solid $border #011833;
+      @include breakpoint(medium down) {
+        margin-top: 0.5em;
+      }
+      padding: 1.5em;
+      background: #ffffff;
+      box-shadow: 0px 0px 15px 12px rgba(93, 134, 194, 0.05);
+      border-radius: 8px;
+      @include xy-grid();
+      @include flex-align(center);
 
-        position: relative;
-        &:hover {
-          border: solid $border transparent;
-          background-color: #00ffc2;
-          color: $color-dark;
+      @include block(icons) {
+        align-items: center;
+
+        @include element(images) {
+          gap: 10px;
+
+          img {
+            width: 48px;
+            height: 48px;
+            filter: invert(0%) sepia(0%) saturate(3515%) hue-rotate(328deg) brightness(100%) contrast(102%);
+          }
+        }
+
+        @include block(item) {
+          cursor: pointer;
         }
       }
     }

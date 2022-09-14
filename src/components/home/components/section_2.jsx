@@ -34,7 +34,7 @@ const items = [
     Text: () => (
       <div className='item__text'>
         <FormattedMessage
-          defaultMessage='Engineered for scale, ensuring sub 5 second block times and $0.01 transactions.  '
+          defaultMessage='Engineered for scale, ensuring sub 5 second block times and $0.01 transactions.'
         />
       </div>
     )
@@ -63,7 +63,7 @@ const SectionTwo = () => {
       <section className='section_2'>
         <StatsBanner />
         <h2 className='section_2__title'>
-          <FormattedMessage defaultMessage='Turning communities into economies' />
+          <FormattedMessage defaultMessage='Creating next generation economies' />
         </h2>
         <div className='section_2__items'>
           {
