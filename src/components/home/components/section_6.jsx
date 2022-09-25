@@ -74,7 +74,7 @@ function Item ({
   )
 }
 
-function SectionSix() {
+function SectionSix () {
   return (
     <section className='section_6__wrapper'>
       <div className='section_6'>
