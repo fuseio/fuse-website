@@ -1,7 +1,5 @@
 import React from 'react'
 import StackImage from '@/assets/images/stack.png'
-import Github from '@/assets/images/github_btn.svg'
-import Charge from '@/assets/images/charge_btn.svg'
 
 function SectionFive () {
   return (
@@ -13,13 +11,11 @@ function SectionFive () {
           <div className='item'>
             <div className='title'>Easy user onboarding</div>
             <div className='text'>Every day retail consumers are more difficult to satisfy than crypto investors. Remove obstacles to enable quality consumer experiences while keeping with the non custodial and decentralized nature of the tech.</div>
-            <a className='link'>Learn more</a>
           </div>
           <img src={StackImage} />
           <div className='item'>
             <div className='title'>Friendly for businesses</div>
             <div className='text'>Businesses in the real world require scalable infrastructure and have constantly evolving needs. Remove web3 development complexity in order to rapidly ship products that introduce disruptive models to the payments space.</div>
-            <a className='link'>Learn more</a>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 @include block(section_7) {
   background-color: #011833;
-  height: 1500px;
+  height: 1200px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -28,8 +28,8 @@
 
     @include block(title) {
       font-style: normal;
-      font-weight: 700;
-      font-size: 48px;
+      font-weight: 900;
+      font-size: 32px;
       color: #fafcff;
       @include breakpoint(large up) {
         text-align: center;

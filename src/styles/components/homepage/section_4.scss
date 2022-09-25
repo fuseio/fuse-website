@@ -33,7 +33,7 @@
 
   @include element(title) {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 3em;
     text-align: center;
     color: white;
@@ -145,29 +145,32 @@
   @include block(email_social) {
     display: grid;
     width: 100%;
-    justify-content: space-between;
+    // justify-content: space-between;
 
     @include breakpoint(medium up) {
-      grid-template-columns: auto auto;
+      column-gap: 10px;
+      grid-template-columns: 70% 30%;
     }
 
     @include block(subscribe) {
       @include xy-grid();
-      @include flex-align(justify, middle);
+      @include flex-align(null, middle);
       background-color: #fff;
       padding: 1em;
       border-radius: 8px;
 
       @include block(icon) {
+        max-width: 67px;
+        margin-right: 15px;
       }
 
       @include block(texts) {
         @include xy-grid(vertical, false);
         @include flex-align(center, top);
 
-        @include breakpoint(medium up) {
-          padding: 0px 15px;
-        }
+        // @include breakpoint(medium up) {
+        //   padding: 0px 15px;
+        // }
 
         @include breakpoint(medium down) {
           padding: 15px 0px;
@@ -175,23 +178,23 @@
         @include block(title) {
           font-style: normal;
           font-weight: 500;
-          font-size: 32px;
+          font-size: 28px;
           color: #000000;
         }
 
         @include block(text) {
           font-style: normal;
           font-weight: 400;
-          font-size: 16px;
+          font-size: 14px;
           color: #000000;
         }
       }
     }
 
     @include block(social) {
-      @include breakpoint(medium up) {
-        width: 408px;
-      }
+      // @include breakpoint(medium up) {
+      //   width: 408px;
+      // }
 
       @include breakpoint(medium down) {
         margin-top: 0.5em;

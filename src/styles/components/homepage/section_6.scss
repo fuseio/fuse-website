@@ -18,7 +18,7 @@
 
   @include element(title) {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 48px;
     color: white;
     @include breakpoint(medium up) {
@@ -67,9 +67,14 @@
         }
       }
 
+      > img {
+        width: 75px;
+        margin-bottom: 0.9em;
+      }
+
       @include block(title) {
         font-style: normal;
-        font-weight: 700;
+        font-weight: 900;
         font-size: 18px;
         color: #ffffff;
       }
@@ -113,7 +118,6 @@
           }
 
           &:hover {
-
             &::after {
               -webkit-transform: translateX(4px);
               -moz-transform: translateX(4px);

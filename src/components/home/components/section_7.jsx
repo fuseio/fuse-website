@@ -8,7 +8,7 @@ function SectionSeven () {
   return (
     <section className='section_7'>
       <div className='content'>
-        <div className='title'>Fuse is an open source stack built for the modern business needs</div>
+        <div className='title'>Fuse is an open source stack built for <br /> the modern business needs</div>
         <div className='buttons'>
           <a
             className='charge'

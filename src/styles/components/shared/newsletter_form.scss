@@ -4,6 +4,7 @@
     position: relative;
     width: 310px;
     border-radius: 8px;
+    margin-left: auto;
 
     @include breakpoint(medium down) {
       @include flex-align(justify, middle);

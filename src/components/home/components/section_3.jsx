@@ -1,17 +1,29 @@
 import React from 'react'
 import { withRouter } from 'react-router'
+import classNames from 'classnames'
+
+import Request from '@/assets/images/request_logo.svg'
+import Lifi from '@/assets/images/lifi_logo.svg'
+import Unmarshel from '@/assets/images/unmarshal_logo.svg'
+import Voltage from '@/assets/images/voltage_fin_logo.svg'
+import Xanpool from '@/assets/images/xanpool_logo.svg'
+import Charge from '@/assets/images/charge_logo_new.svg'
+import Connext from '@/assets/images/connext_logo.svg'
+import BullaNetwork from '@/assets/images/bulla_network_logo.svg'
 import chainstack from '@/assets/images/chainstack_new.svg'
 import Peepl from '@/assets/images/peepl_new.svg'
-
 import TheGraph from '@/assets/images/thegraph_new.svg'
 import Pokt from '@/assets/images/pokt_new.svg'
 import OpenZeppelin from '@/assets/images/openzepplen_new.svg'
 import GoodDollar from '@/assets/images/gooddollar_new.svg'
 import Beefy from '@/assets/images/beefy.svg'
 import Ramp from '@/assets/images/ramp_new.svg'
-import classNames from 'classnames'
 
 const items = [
+  {
+    image1: Request,
+    image2: Lifi
+  },
   {
     image1: chainstack,
     image2: Peepl
@@ -27,6 +39,21 @@ const items = [
   {
     image1: Beefy,
     image2: TheGraph
+  }
+]
+
+const items2 = [
+  {
+    image1: Unmarshel,
+    image2: Voltage
+  },
+  {
+    image1: Xanpool,
+    image2: Charge
+  },
+  {
+    image1: Connext,
+    image2: BullaNetwork
   }
 ]
 
@@ -48,6 +75,11 @@ const SectionThree = ({ history }) => {
         <div className='section_3__items'>
           {
             items.map((value, index) => <Item key={index} {...value} isLast={(items.length - 1) === index} />)
+          }
+        </div>
+        <div className='section_3__items'>
+          {
+            items2.map((value, index) => <Item key={index} {...value} isLast={(items2.length - 1) === index} />)
           }
         </div>
       </div>

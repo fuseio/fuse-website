@@ -145,7 +145,7 @@
     &::before {
       content: "";
       background-size: contain;
-      width: 650px;
+      width: 600px;
       height: 1310px;
       background-image: url(images/side_backgroud.png);
       position: absolute;
@@ -158,13 +158,13 @@
     &::after {
       content: "";
       background-size: contain;
-      width: 650px;
+      width: 600px;
       height: 1310px;
       transform: rotate(180deg);
       background-image: url(images/side_backgroud.png);
       position: absolute;
       left: 0px;
-      z-index: 1;
+      // z-index: 1;
       background-repeat: no-repeat;
       top: 15%;
     }

@@ -1,6 +1,5 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
-import NewsletterForm from '../../shared/newsletter_form'
 
 const SectionFive = () => {
   return (
@@ -25,7 +24,6 @@ const SectionFive = () => {
           Register for Newsletter
         </a>
       </button>
-      {/* <NewsletterForm /> */}
     </section>
   )
 }

@@ -14,7 +14,7 @@
 
   @include element(title) {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 3em;
     text-align: center;
     color: #011833;
@@ -38,12 +38,13 @@
   }
 
   @include element(items) {
-    @include xy-grid();
+    @include xy-grid(horizontal, false);
     @include flex-align(center, middle);
     width: 100%;
     margin-top: 3em;
 
     @include block(item) {
+      max-width: 250px;
       padding: 0px 1em;
       border-left: 1px dashed #011833;
       @include xy-grid(vertical);
@@ -64,21 +65,17 @@
     padding: 1.125em 1.75em;
     font-size: 1em;
     font-stretch: normal;
+    font-weight: 500;
     font-style: normal;
     line-height: normal;
     letter-spacing: 0.01px;
     text-align: center;
-    color: white;
     border-radius: 10px;
-    background-color: #011833;
-
-    $border: 2px;
-    border: solid $border #011833;
+    background-color: #00ffc2;
 
     position: relative;
     &:hover {
-      border: solid $border transparent;
-      background-color: #00ffc2;
+      background-color: #00d09e;
       color: $color-dark;
     }
   }

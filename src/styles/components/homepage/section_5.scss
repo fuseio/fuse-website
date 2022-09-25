@@ -23,7 +23,7 @@
 
   @include block(title) {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 48px;
     color: white;
 
@@ -89,7 +89,7 @@
 
       @include block(title) {
         font-style: normal;
-        font-weight: 700;
+        font-weight: 900;
         font-size: 32px;
         @include breakpoint(medium up) {
           text-align: center;
