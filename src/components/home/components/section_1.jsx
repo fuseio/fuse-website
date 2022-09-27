@@ -16,6 +16,8 @@ const Button = ({ link, type = 'primary', text }) => {
   const className = (type === 'primary') ? 'primary_button' : 'secondary_button'
   return (
     <a
+      rel='noreferrer noopener'
+      target='_blank'
       href={link}
       className={className}
     >
@@ -43,7 +45,7 @@ const SectionOne = () => {
               />
             </p>
             <div className='buttons'>
-              <Button link='/docs' type='primary' text={msgs.primaryText} />
+              <Button link='https://app.voltage.finance/' type='primary' text={msgs.primaryText} />
               <a
                 rel='noreferrer noopener'
                 target='_blank'
@@ -53,7 +55,6 @@ const SectionOne = () => {
                 <FormattedMessage {...msgs.stakeNow} />
               </a>
             </div>
-            {/* <Banner /> */}
           </div>
           <div className='canvas'>
             <GlobeThree
