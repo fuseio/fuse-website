@@ -43,6 +43,10 @@
     width: 100%;
     margin-top: 3em;
 
+    @include breakpoint(medium down) {
+      @include xy-grid(vertical, false);
+    }
+
     @include block(item) {
       max-width: 250px;
       padding: 0px 1em;

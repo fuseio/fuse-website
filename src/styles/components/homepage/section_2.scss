@@ -15,6 +15,11 @@
     color: white;
     padding: 3em 0 20px;
     text-align: center;
+
+    @include breakpoint(medium down) {
+      font-size: 24px;
+      text-align: start;
+    }
   }
 
   // @include breakpoint(medium down) {

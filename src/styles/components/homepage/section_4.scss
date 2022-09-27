@@ -1,11 +1,5 @@
 @include block(section_4) {
-  @include breakpoint(large up) {
-    height: 1100px;
-  }
-
-  @include breakpoint(medium down) {
-    height: 1100px;
-  }
+  height: 1100px;
   @include element(container) {
     // padding-bottom: 10em;
     // padding: 15em 0px 5em;

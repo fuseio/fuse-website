@@ -5,6 +5,7 @@
   clip-path: polygon(0 0, 100% 0%, 100% 87%, 0 100%);
 
   @include breakpoint(small down) {
+    height: 1000px;
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 87%, 0 92%);
     clip-path: polygon(0 0, 100% 0%, 100% 87%, 0 92%);
   }
