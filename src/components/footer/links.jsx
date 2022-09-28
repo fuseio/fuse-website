@@ -19,8 +19,8 @@ const items = [
         url: 'http://staking.fuse.io/'
       },
       {
-        title: 'Fuse Cash',
-        url: 'https://fuse.cash/'
+        title: 'Volt App',
+        url: 'https://voltage.finance/app'
       }
     ]
   },
