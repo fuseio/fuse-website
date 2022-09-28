@@ -5,7 +5,7 @@ import { isMobileOnly } from 'react-device-detect'
 
 const msgs = defineMessages({
   primaryText: {
-    defaultMessage: 'Buy Fuse'
+    defaultMessage: 'Getting Started'
   },
   stakeNow: {
     defaultMessage: 'Stake now'
@@ -45,7 +45,7 @@ const SectionOne = () => {
               />
             </p>
             <div className='buttons'>
-              <Button link='https://app.voltage.finance/' type='primary' text={msgs.primaryText} />
+              <Button link='/docs' type='primary' text={msgs.primaryText} />
               <a
                 rel='noreferrer noopener'
                 target='_blank'
