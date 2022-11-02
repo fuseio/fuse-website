@@ -7,17 +7,17 @@ const items = [
       {
         title: 'Learn about Web3 and Fuse',
         linkText: 'Start with the basics',
-        link: ''
+        link: 'https://fuse.io/docs'
       },
       {
         title: 'Watch Fuse on YouTube',
         linkText: 'Subscribe to official channel',
-        link: ''
+        link: 'https://www.youtube.com/c/Fusenetwork'
       },
       {
         title: 'Dive deeper',
         linkText: 'See all learning resources',
-        link: ''
+        link: 'https://docs.fuse.io/aboutFuse/about-fuse'
       }
     ]
   },
@@ -27,17 +27,17 @@ const items = [
       {
         title: 'Understand why it matters',
         linkText: 'Become a web3 citizen',
-        link: ''
+        link: '/network'
       },
       {
         title: 'Create an account',
         linkText: 'Choose a wallet',
-        link: ''
+        link: '/token'
       },
       {
         title: 'Explore dApps',
-        linkText: 'See list on Awesome Fuse',
-        link: ''
+        linkText: 'Discover Growing Ecosystem',
+        link: '/ecosystem'
       }
     ]
   }

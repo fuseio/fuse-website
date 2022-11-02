@@ -71,7 +71,7 @@ const SectionThree = ({ history }) => {
     <section className='section_3__wrapper'>
       <div className='section_3'>
         <div className='section_3__title'>Explore the ecosystem</div>
-        <div className='section_3__subtitle'>From next generation up starts solving real-world problems to big name <br /> infrastructure and service providers, join our journey and build in the most promising <br /> blockchain ecosystem in existence.</div>
+        <div className='section_3__subtitle'>From next-generation startups solving real-world problems to big name <br /> infrastructure and service providers, join our journey and build in the most promising <br /> blockchain ecosystem in existence.</div>
         <div className='section_3__items'>
           {
             items.map((value, index) => <Item key={index} {...value} isLast={(items.length - 1) === index} />)

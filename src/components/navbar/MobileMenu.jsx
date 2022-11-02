@@ -197,6 +197,14 @@ function MobileMenu ({ history }) {
               <div className='list__item' onClick={() => history.push('/ecosystem')}>
                 Ecosystem
               </div>
+              <a
+                rel='noreferrer noopener'
+                className='list__item'
+                target='_blank'
+                href='https://news.fuse.io'
+              >
+                News
+              </a>
               <SelectLanguage />
             </div>
           </div>

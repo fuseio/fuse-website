@@ -8,7 +8,7 @@ const items = [
   {
     logo: FuseLogo,
     title: 'Participate',
-    text: 'Fuse Token holders participate decisions about the network future.',
+    text: 'Become a token holder and participate in the growth of Fuse Network.',
     links: [
       {
         text: 'Buy Fuse token',
@@ -26,7 +26,7 @@ const items = [
     text: 'Provide services on the Fuse network or become an operator such as a payment processor, Fiat ramp, wallet provider and more.',
     links: [
       {
-        text: 'Join the eco-system',
+        text: 'Join the Ecosystem',
         route: '/ecosystem'
       }
     ]
@@ -38,7 +38,7 @@ const items = [
     links: [
       {
         text: 'Become a Validator',
-        link: 'https://docs.fuse.io/general-1/how-to-become-a-validator'
+        link: 'https://docs.fuse.io/for-validators/how-to-become-a-validator'
       }
     ]
   }

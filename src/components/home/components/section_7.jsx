@@ -13,7 +13,7 @@ function SectionSeven () {
           <a
             className='charge'
             rel='noopener noreferrer'
-            href='https://chargeweb3.com/'
+            href='https://docs.fuse.io/developers/for-developers'
             target='_blank'
           >
             Developer portal
