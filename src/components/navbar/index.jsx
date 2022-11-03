@@ -53,13 +53,13 @@ function Header ({ history }) {
                 href='https://news.fuse.io'
                 target='_blank'
               >
-                News
+                Blog
               </a>
             </div>
           </div>
-          <div className='grid-x align-middle  cell shrink'>
+          {/* <div className='grid-x align-middle  cell shrink'>
             <SelectLanguage />
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

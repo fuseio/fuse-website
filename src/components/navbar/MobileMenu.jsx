@@ -203,9 +203,9 @@ function MobileMenu ({ history }) {
                 target='_blank'
                 href='https://news.fuse.io'
               >
-                News
+                Blog
               </a>
-              <SelectLanguage />
+              {/* <SelectLanguage /> */}
             </div>
           </div>
         )
