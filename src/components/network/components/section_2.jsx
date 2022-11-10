@@ -83,7 +83,7 @@ const SectionTwo = () => {
                   <div className='image'><img src={fuseWallet} /></div>
                   <div className='content__text'>
                     <FormattedMessage
-                      defaultMessage='<span>Fuse Studio </span><span>|</span> <span>for operators</span>
+                      defaultMessage='<span>Fuse Charge </span><span>|</span> <span>for operators</span>
                       {newLine}
                       An easy to use self-service smart contract platform for businesses.'
                       values={{

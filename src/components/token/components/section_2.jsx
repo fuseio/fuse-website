@@ -1,8 +1,8 @@
 import React from 'react'
-import Fees from '@/assets/img/utilities/fees.png'
-import Secure from '@/assets/img/utilities/secure.png'
-import Governance from '@/assets/img/utilities/governance.png'
-import Defi from '@/assets/img/utilities/defi_utils.png'
+import Fees from '@/assets/images/utilities/fees.png'
+import Secure from '@/assets/images/utilities/secure.png'
+import Governance from '@/assets/images/utilities/governance.png'
+import Defi from '@/assets/images/utilities/defi_utils.png'
 import { FormattedMessage } from 'react-intl'
 
 const items = [

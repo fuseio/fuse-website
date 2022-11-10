@@ -1,7 +1,10 @@
 @include block(newsletter) {
   @include element(form) {
-    position: relative;
     @include xy-grid(horizontal, false);
+    position: relative;
+    width: 310px;
+    border-radius: 8px;
+    margin-left: auto;
 
     @include breakpoint(medium down) {
       @include flex-align(justify, middle);
@@ -18,21 +21,25 @@
     }
 
     @include element(input) {
-      max-width: 256px;
-      height: 54px;
-      border-radius: 10px;
-      border: solid 1px rgba(151, 151, 151, 0.35);
-      background-color: #ffffff;
-      color: #052235;
+      width: 100%;
+      height: 65px;
+      border: solid 1px #011833;
+      background-color: #011833;
+      color: white;
       padding: 1.1875em 0.625em;
       width: 100%;
+      border-radius: 10px;
 
-      @include breakpoint(medium down) {
-        width: 80%;
+      // @include breakpoint(medium down) {
+      //   width: 80%;
+      // }
+
+      &:placeholder {
+        color: #fff;
       }
 
       &:focus {
-        border: 1.5px solid #ccd9e0;
+        // border: 1.5px solid #ccd9e0;
       }
 
       &:disabled {
@@ -42,12 +49,14 @@
     }
 
     @include element(button) {
+      position: absolute;
+      right: 5px;
+      top: 5px;
       font-weight: 500;
-      background: linear-gradient(124.98deg, #b3ffbb 6.71%, #fffb00 90%);
+      background: white;
       width: 97px;
       height: 54px;
       border-radius: 10px;
-      margin-left: 1em;
 
       @include breakpoint(small only) {
         margin-top: 0;
@@ -56,7 +65,7 @@
 
       &:hover {
         background-image: unset;
-        background-color: #f8ff00;
+        background-color: #00ffc2;
 
         &::after {
           -webkit-transform: translateX(4px);

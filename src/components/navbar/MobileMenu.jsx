@@ -6,7 +6,7 @@ import useOutsideClick from '@/hooks/useOutsideClick'
 import SelectLanguage from '../shared/select_language'
 import Studio from '@/assets/images/dropdown/studio.svg'
 import Staking from '@/assets/images/dropdown/staking.svg'
-import Fusecash from '@/assets/images/dropdown/fusecash.svg'
+import VoltLogo from '@/assets/images/dropdown/volt-logo.svg'
 import FuseSwap from '@/assets/images/dropdown/fuseswap.svg'
 import FuseToken from '@/assets/images/dropdown/network.svg'
 import Docs from '@/assets/images/dropdown/docs.svg'
@@ -41,9 +41,9 @@ const menuItems = [
         url: 'https://fuseswap.com'
       },
       {
-        title: <FormattedMessage defaultMessage='Fuse Cash' />,
-        icon: Fusecash,
-        url: 'https://fuse.cash'
+        title: <FormattedMessage defaultMessage='Volt App' />,
+        icon: VoltLogo,
+        url: 'https://voltage.finance/app'
         // disabled: true
       }
     ]
@@ -197,7 +197,15 @@ function MobileMenu ({ history }) {
               <div className='list__item' onClick={() => history.push('/ecosystem')}>
                 Ecosystem
               </div>
-              <SelectLanguage />
+              <a
+                rel='noreferrer noopener'
+                className='list__item'
+                target='_blank'
+                href='https://news.fuse.io'
+              >
+                Blog
+              </a>
+              {/* <SelectLanguage /> */}
             </div>
           </div>
         )

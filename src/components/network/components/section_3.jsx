@@ -2,30 +2,27 @@ import React from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useCountUp } from 'react-countup'
 import VisibilitySensor from 'react-visibility-sensor'
-import useFetch from 'use-http'
-import arow from '@/assets/images/arow.svg'
+import Arrow from '@/assets/images/arow.svg'
 import { formatNumber } from '@/utils/format'
 
 const SectionThree = () => {
-  const { data = { data: 0 } } = useFetch('https://studio.fuse.io/api/v1/communities/count', {}, [])
-
   const { countUp: transactionCounter, start: transactionCounterStart } = useCountUp({
     start: 0,
     formattingFn: formatNumber,
-    end: 11368734
+    end: 110168275
   })
 
-  const { countUp: communitiesCounter, start: communitiesCounterStart, update: updateCommunities } = useCountUp({
+  const { countUp: totalFuseStakedCounter, start: totalFuseStakedCounterStart } = useCountUp({
     start: 0,
     redraw: true,
     formattingFn: formatNumber,
-    end: data.data
+    end: 94863358
   })
 
   const { countUp: walletsCounter, start: walletsCounterStart } = useCountUp({
     start: 0,
     formattingFn: formatNumber,
-    end: 373754
+    end: 1266786
   })
 
   return (
@@ -53,30 +50,25 @@ const SectionThree = () => {
                 >
                   <FormattedMessage defaultMessage='Click here for the explorer' />
                 </a>
-                <img src={arow} alt='network_arrow' />
+                <img src={Arrow} alt='network_arrow' />
               </div>
             </div>
           </div>
           <div className='line cell shrink' />
           <div className='item'>
-            <VisibilitySensor
-              onChange={() => {
-                communitiesCounterStart()
-                updateCommunities(data.data)
-              }} delayedCall
-            >
-              <div className='number'>{communitiesCounter}</div>
+            <VisibilitySensor onChange={totalFuseStakedCounterStart} delayedCall>
+              <div className='number'>{totalFuseStakedCounter}</div>
             </VisibilitySensor>
-            <div className='title'><FormattedMessage defaultMessage='Communities Launched' /></div>
+            <div className='title'><FormattedMessage defaultMessage='Total Fuse Staked' /></div>
             <div className='bottom_link'>
               <div>
                 <a
                   rel='noreferrer noopener' target='_blank'
-                  href='http://studio.fuse.io/'
+                  href='http://staking.fuse.io/'
                 >
-                  <FormattedMessage defaultMessage='Using the Fuse Studio' />
+                  <FormattedMessage defaultMessage='Click here to stake' />
                 </a>
-                <img src={arow} alt='network_arrow' />
+                <img src={Arrow} alt='network_arrow' />
               </div>
             </div>
           </div>

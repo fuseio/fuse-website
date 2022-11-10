@@ -1,5 +1,5 @@
 import React from 'react'
-import joinUs from '@/assets/img/join_us.png'
+import joinUs from '@/assets/images/join_us.png'
 
 const SectionOne = () => {
   return (

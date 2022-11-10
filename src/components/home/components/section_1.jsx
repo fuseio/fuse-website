@@ -2,82 +2,27 @@ import React from 'react'
 import { FormattedMessage, defineMessages } from 'react-intl'
 import GlobeThree from './globe_three'
 import { isMobileOnly } from 'react-device-detect'
-import VisibilitySensor from 'react-visibility-sensor'
-import useFetch from 'use-http'
-import useCounter from '@/hooks/useCounter'
 
 const msgs = defineMessages({
   primaryText: {
-    defaultMessage: 'Get Started'
+    defaultMessage: 'Getting Started'
+  },
+  stakeNow: {
+    defaultMessage: 'Stake now'
   }
 })
 
 const Button = ({ link, type = 'primary', text }) => {
-  const className = (type === 'primary') ? 'main_button main_button--no-arrow main_button--bold' : 'secondary_button'
+  const className = (type === 'primary') ? 'primary_button' : 'secondary_button'
   return (
     <a
+      rel='noreferrer noopener'
+      target='_blank'
       href={link}
       className={className}
     >
       <FormattedMessage {...text} />
     </a>
-  )
-}
-
-const Banner = () => {
-  const { data = { data: 0 } } = useFetch('https://studio.fuse.io/api/v1/communities/count', {}, [])
-  const transactionCounter = useCounter(45161617)
-  const communitiesCounter = useCounter(data.data)
-  const walletsCounter = useCounter(951390)
-
-  return (
-    <section className='info_banner__wrapper'>
-      <div className='info_banner__container'>
-        <div className='info_banner'>
-          <div className='item'>
-            <div className='title'>
-              <VisibilitySensor delayedCall>
-                <span>{transactionCounter}</span>
-              </VisibilitySensor>
-              &nbsp;
-              <FormattedMessage defaultMessage='Transactions' />
-            </div>
-          </div>
-          <hr className='divier' />
-          <div className='item'>
-            <div className='title'>
-              <VisibilitySensor delayedCall>
-                <span>{walletsCounter}</span>
-              </VisibilitySensor>
-              &nbsp;
-              <FormattedMessage defaultMessage='Wallets' />
-            </div>
-          </div>
-          <hr className='divier' />
-          <div className='item'>
-            <div className='title'>
-              <VisibilitySensor delayedCall>
-                <span>{communitiesCounter}</span>
-              </VisibilitySensor>
-              &nbsp;
-              <FormattedMessage defaultMessage='Communities' />
-            </div>
-          </div>
-          <hr className='divier' />
-          <div className='item'>
-            <div className='title title--arrow'>
-              <a
-                rel='noreferrer noopener'
-                target='_blank'
-                href='https://explorer.fuse.io/'
-              >
-                <FormattedMessage defaultMessage='View stats' />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   )
 }
 
@@ -93,21 +38,28 @@ const SectionOne = () => {
             </h1>
             <p className='section-A__text'>
               <FormattedMessage
-                defaultMessage='Launch community-centric payment systems and {newLine} token economies on an Ethereum-compatible {newLine} blockchain.'
+                defaultMessage='The most business and consumer-friendly blockchain ecosystem for {newLine} mainstream adoption of web3 payments. '
                 values={{
-                  newLine: <br />,
-                  b: (chunks) => <b>{chunks}</b>
+                  newLine: <br />
                 }}
               />
             </p>
             <div className='buttons'>
               <Button link='/docs' type='primary' text={msgs.primaryText} />
+              <a
+                rel='noreferrer noopener'
+                target='_blank'
+                href='http://staking.fuse.io/'
+                className='secondary_button'
+              >
+                <FormattedMessage {...msgs.stakeNow} />
+              </a>
             </div>
           </div>
           <div className='canvas'>
             <GlobeThree
-              width={isMobileOnly ? 500 : 750}
-              height={isMobileOnly ? 500 : 750}
+              width={isMobileOnly ? 500 : 650}
+              height={isMobileOnly ? 500 : 650}
               pois={[
                 {
                   creation: 1, // this vaule must be different for every poi !!!!!!!!!!!!!!!!! or no show ...
@@ -161,7 +113,6 @@ const SectionOne = () => {
             />
           </div>
         </div>
-        <Banner />
       </div>
     </section>
   )

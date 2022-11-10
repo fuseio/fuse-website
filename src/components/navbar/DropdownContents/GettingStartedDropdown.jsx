@@ -2,17 +2,17 @@ import React from 'react'
 
 import Studio from '@/assets/images/dropdown/studio.svg'
 import Staking from '@/assets/images/dropdown/staking.svg'
-import Fusecash from '@/assets/images/dropdown/fusecash.svg'
+import VoltLogo from '@/assets/images/dropdown/volt-logo.svg'
 import FuseSwap from '@/assets/images/dropdown/fuseswap.svg'
 import Arrow from '@/assets/images/dropdown/drop_arrow.svg'
 import { FormattedMessage } from 'react-intl'
 
 const items = [
   {
-    title: <FormattedMessage defaultMessage='Fuse Studio' />,
+    title: <FormattedMessage defaultMessage='Fuse Charge' />,
     icon: Studio,
-    subTitle: <FormattedMessage defaultMessage='Create an economy' />,
-    url: 'https://studio.fuse.io'
+    subTitle: <FormattedMessage defaultMessage='Create a project' />,
+    url: 'https://chargeweb3.com/'
   },
   {
     title: <FormattedMessage defaultMessage='Fuse Staking' />,
@@ -27,10 +27,10 @@ const items = [
     url: 'https://voltage.finance/'
   },
   {
-    title: <FormattedMessage defaultMessage='Fuse Cash' />,
-    icon: Fusecash,
+    title: <FormattedMessage defaultMessage='Volt App' />,
+    icon: VoltLogo,
     subTitle: <FormattedMessage defaultMessage='Friendly crypto money' />,
-    url: 'https://fuse.cash'
+    url: 'https://voltage.finance/app'
   }
 ]
 

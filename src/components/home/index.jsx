@@ -5,18 +5,24 @@ import SectionThree from './components/section_3'
 import SectionFour from './components/section_4'
 import SectionFive from './components/section_5'
 import SectionSix from './components/section_6'
-import ContactUs from '@/components/shared/ContactUs'
+import SectionSeven from './components/section_7'
+import SectionEight from './components/section_8'
 
 const HomePage = () => {
   return (
     <>
-      <SectionOne />
-      <SectionTwo />
+      <div style={{ position: 'relative', backgroundColor: '#FAFCFF' }}>
+        <SectionOne />
+        <SectionTwo />
+      </div>
       <SectionThree />
-      <SectionFive />
-      <SectionFour />
-      <SectionSix />
-      <ContactUs />
+      <div className='test_wraper'>
+        <SectionFour />
+        <SectionFive />
+        <SectionSix />
+      </div>
+      <SectionSeven />
+      <SectionEight />
     </>
   )
 }

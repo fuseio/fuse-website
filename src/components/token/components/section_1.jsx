@@ -1,5 +1,5 @@
 import React from 'react'
-import FuseTokenImage from '@/assets/img/fuse-token-image.png'
+import FuseTokenImage from '@/assets/images/fuse-token-image.png'
 import { FormattedMessage } from 'react-intl'
 
 const SectionOne = () => {

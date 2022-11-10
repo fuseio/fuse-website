@@ -1,0 +1,127 @@
+@include block(section_5) {
+  @include xy-grid-container();
+  @include xy-grid(vertical);
+  @include flex-align(center, middle);
+  @include breakpoint(large up) {
+    height: 800px;
+  }
+
+  // padding: 5em 0px 8em;
+
+  @include element(wrapper) {
+    background-color: #011833;
+    @include xy-grid(vertical);
+    @include flex-align(center, middle);
+    // @include breakpoint(medium up) {
+    //   height: 1000px;
+    // }
+
+    // @include breakpoint(medium down) {
+    //   padding: 5em 0px;
+    // }
+  }
+
+  @include block(title) {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    color: white;
+
+    @include breakpoint(medium up) {
+      text-align: center;
+    }
+
+    @include breakpoint(medium down) {
+      font-size: 24px;
+    }
+  }
+
+  @include block(text) {
+    font-size: 18px;
+    margin: 1em 0px;
+    max-width: 871px;
+    color: white;
+
+    @include breakpoint(medium up) {
+      text-align: center;
+    }
+
+    @include breakpoint(medium down) {
+      font-size: 14px;
+    }
+  }
+
+  @include block(content) {
+    padding: 5em 0px;
+
+    @include breakpoint(medium up) {
+      display: grid;
+      grid-template-columns: 38% auto 38%;
+      align-items: center;
+      justify-items: center;
+    }
+
+    @include breakpoint(medium down) {
+      display: grid;
+      // grid-template-columns: 38% auto 38%;
+      // align-items: center;
+      // justify-items: center;
+    }
+
+    > img {
+      width: 299px;
+      @include breakpoint(small down) {
+        display: none;
+      }
+    }
+
+    @include block(item) {
+      display: grid;
+      @include breakpoint(medium up) {
+        justify-items: center;
+      }
+
+      @include breakpoint(medium down) {
+        &:not(:last-child) {
+          padding-bottom: 5em;
+        }
+      }
+
+      @include block(title) {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 32px;
+        @include breakpoint(medium up) {
+          text-align: center;
+        }
+        color: #ffffff;
+
+        @include breakpoint(medium down) {
+          font-size: 24px;
+        }
+      }
+
+      @include block(text) {
+        font-weight: 400;
+        font-size: 18px;
+        color: #ffffff;
+
+        @include breakpoint(medium down) {
+          font-size: 14px;
+        }
+      }
+
+      @include block(link) {
+        font-weight: 400;
+        font-size: 18px;
+        color: #ffffff;
+        color: #5cc7ff;
+        text-decoration: underline;
+
+        @include breakpoint(medium down) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

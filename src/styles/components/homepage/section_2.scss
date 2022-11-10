@@ -1,56 +1,78 @@
 @include block(section_2) {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
   @include xy-grid-container();
-  padding: 5em 0px 8em;
-  @include breakpoint(large down) {
-    @include xy-grid-container(90%);
-  }
+  width: 100%;
+
+  // @include breakpoint(large down) {
+  //   @include xy-grid-container(90%);
+  // }
+
   @include element(title) {
     @extend %title;
-    padding: 2em 0;
+    color: white;
+    padding: 3em 0 20px;
+    text-align: center;
+
+    @include breakpoint(medium down) {
+      font-size: 24px;
+      text-align: start;
+    }
   }
 
-  @include breakpoint(medium down) {
-    padding: 20px 20px 3em;
-  }
+  // @include breakpoint(medium down) {
+  //   padding: 20px 20px 3em;
+  // }
 
   @include element(items) {
+    display: grid;
+
     @include breakpoint(medium up) {
-      @include xy-grid();
-      @include flex-align(justify, middle);
+      grid-template-columns: auto auto auto;
+      justify-content: space-between;
+      gap: 12px;
+      // @include xy-grid();
+      // @include flex-align(justify, middle);
     }
 
     @include breakpoint(medium down) {
-      @include xy-grid(vertical, false);
-      @include flex-align(justify, middle);
+      grid-template-rows: repeat(3, auto);
+      // grid-template-columns: auto auto auto;
+      // justify-content: space-between;
+      // gap: 12px;
+      // @include xy-grid(vertical, false);
+      // @include flex-align(justify, middle);
     }
 
     @include block(item) {
-      @include breakpoint(medium up) {
-        @include xy-cell(7, null, 0);
-      }
+      display: grid;
+      grid-template-columns: 80% auto;
+      justify-content: space-between;
+      padding: 1em;
+      background: #ffffff;
+      box-shadow: 0px 0px 51px 12px rgba(93, 134, 194, 0.15);
+      border-radius: 8px;
 
       @include breakpoint(medium down) {
-        @include xy-cell(24, null, 0);
-        @include xy-grid(vertical, false);
-
         &:not(:last-child) {
-          margin-bottom: 5em;
+          margin-bottom: 1em;
         }
       }
-      @include element(image) {
-        width: 216px;
-        height: 216px;
-        margin-bottom: 2em;
 
-        @include breakpoint(medium down) {
-          margin-left: auto;
-          margin-right: auto;
-        }
+      @include element(content) {
+      }
+
+      @include element(pic) {
       }
 
       @include element(text) {
         @extend %text;
-
+        color: black;
+        @include breakpoint(small down) {
+          font-size: 16px;
+        }
         > span {
           font-weight: 500;
           color: $color-black;
@@ -58,14 +80,14 @@
       }
 
       @include element(title) {
-        > img {
-          width: 22px;
-          height: 45px;
-        }
-
         > h4 {
+          color: black;
           @extend %secondary-title;
-          margin-left: 0.5em;
+          margin-bottom: 0.5em;
+
+          @include breakpoint(small down) {
+            font-size: 20px;
+          }
         }
       }
     }

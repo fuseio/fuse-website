@@ -127,7 +127,19 @@ module.exports = {
         loader: 'url-loader'
       },
       {
-        test: /\.(pdf|zip|ttf)$/,
+        test: /\.(ttf|woff|woff2)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(pdf|zip)$/,
         use: [
           {
             loader: 'file-loader',

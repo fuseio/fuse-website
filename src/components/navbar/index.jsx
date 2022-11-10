@@ -46,10 +46,20 @@ function Header ({ history }) {
                 Ecosystem
               </a>
             </div>
+            <div className='nav__item'>
+              <a
+                rel='noreferrer noopener'
+                className={classNames('text', { 'text--white': isWhite })}
+                href='https://news.fuse.io'
+                target='_blank'
+              >
+                Blog
+              </a>
+            </div>
           </div>
-          <div className='grid-x align-middle  cell shrink'>
+          {/* <div className='grid-x align-middle  cell shrink'>
             <SelectLanguage />
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

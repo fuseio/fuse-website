@@ -913,7 +913,7 @@ const Globe = props => {
       container_ref.current.appendChild(canvas)
 
       renderer = new THREE.WebGLRenderer(/* { canvas : container_ref . current , alpha : false , antialias : false } */)
-      renderer.setClearColor(0x031928)
+      renderer.setClearColor(0x011833)
       renderer.autoClear = false
       renderer.setSize(width, height)
       container_ref.current.appendChild(renderer.domElement)

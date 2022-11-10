@@ -2,9 +2,9 @@ import React from 'react'
 import { useTable } from 'react-table'
 import BodyRow from './BodyRow'
 import HeaderRow from './HeaderRow'
-import Holders from '@/assets/img/table/holders.svg'
-import Circulating from '@/assets/img/table/circulating.svg'
-import Contract from '@/assets/img/table/contract.svg'
+import Holders from '@/assets/images/table/holders.svg'
+import Circulating from '@/assets/images/table/circulating.svg'
+import Contract from '@/assets/images/table/contract.svg'
 import { FormattedMessage } from 'react-intl'
 
 const rightColumnData = [

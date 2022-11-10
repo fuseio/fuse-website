@@ -1,216 +1,94 @@
 import React from 'react'
-import StudioIcon from '@/assets/img/studio-icon.svg'
-import StudioImage from '@/assets/img/studio_img.png'
-import FuseSwapImage from '@/assets/img/fuseswap_image.png'
-import WalletIcon from '@/assets/img/fuse_wallet_icon.png'
-import voltageIcon from '@/assets/img/voltage_icon.png'
-import Gif from '@/assets/images/send-money.png'
-import { FormattedMessage } from 'react-intl'
+import { withRouter } from 'react-router'
+import classNames from 'classnames'
 
-const Button = ({ text = <FormattedMessage defaultMessage='Launch Now' />, link }) => {
+import Request from '@/assets/images/request_logo.svg'
+import Lifi from '@/assets/images/lifi_logo.svg'
+import Unmarshel from '@/assets/images/unmarshal_logo.svg'
+import Voltage from '@/assets/images/voltage_fin_logo.svg'
+import Xanpool from '@/assets/images/xanpool_logo.svg'
+import Charge from '@/assets/images/charge_logo_new.svg'
+import Connext from '@/assets/images/connext_logo.svg'
+import BullaNetwork from '@/assets/images/bulla_network_logo.svg'
+import chainstack from '@/assets/images/chainstack_new.svg'
+import Peepl from '@/assets/images/peepl_new.svg'
+import TheGraph from '@/assets/images/thegraph_new.svg'
+import Pokt from '@/assets/images/pokt_new.svg'
+import OpenZeppelin from '@/assets/images/openzepplen_new.svg'
+import GoodDollar from '@/assets/images/gooddollar_new.svg'
+import Beefy from '@/assets/images/beefy.svg'
+import Ramp from '@/assets/images/ramp_new.svg'
+
+const items = [
+  {
+    image1: Request,
+    image2: Lifi
+  },
+  {
+    image1: chainstack,
+    image2: Peepl
+  },
+  {
+    image1: Ramp,
+    image2: Pokt
+  },
+  {
+    image1: OpenZeppelin,
+    image2: GoodDollar
+  },
+  {
+    image1: Beefy,
+    image2: TheGraph
+  }
+]
+
+const items2 = [
+  {
+    image1: Unmarshel,
+    image2: Voltage
+  },
+  {
+    image1: Xanpool,
+    image2: Charge
+  },
+  {
+    image1: Connext,
+    image2: BullaNetwork
+  }
+]
+
+const Item = ({ image1, image2, isLast }) => {
   return (
-    <a
-      rel='noreferrer noopener' target='_blank'
-      href={link}
-      className='main_button'
-    >
-      {text}
-    </a>
+    <div className={classNames('item', { 'item--last': isLast })}>
+      <img src={image1} />
+      <img src={image2} />
+    </div>
   )
 }
 
-const StudioFloor = () => {
+const SectionThree = ({ history }) => {
   return (
-    <section className='studio_floor'>
-      <div className='studio_floor__container grid-x align-justify align-self-middle'>
-        <div className='cell small-24 medium-12'>
-          <div>
-            <div className='studio_floor__sub-title grid-x align-middle'>
-              <img src={StudioIcon} />
-              &nbsp;
-              <span>
-                <FormattedMessage defaultMessage='Fuse Studio' />
-              </span>
-            </div>
-            <h1 className='studio_floor__title'>
-              <FormattedMessage
-                defaultMessage='Customize your own {newLine} wallet and currency'
-                values={{
-                  newLine: <br />
-                }}
-              />
-            </h1>
-            <p className='studio_floor__text'>
-              <FormattedMessage
-                defaultMessage='Zero Coding Launch Platform for Entrepreneurs and Impact
-              Leaders.'
-
-              />
-            </p>
-
-            <ul className='props'>
-              <li>
-                <FormattedMessage defaultMessage='Mint your own token in minutes.' />
-              </li>
-              <li>
-                <FormattedMessage defaultMessage='Activate fiat on ramps.' />
-              </li>
-              <li>
-                <FormattedMessage defaultMessage='Grow your user base with powerful tools and plugins.' />
-              </li>
-            </ul>
-            <div className='launch'>
-              <Button link='http://studio.fuse.io/' />
-            </div>
-          </div>
+    <section className='section_3__wrapper'>
+      <div className='section_3'>
+        <div className='section_3__title'>Explore the ecosystem</div>
+        <div className='section_3__subtitle'>From next-generation startups solving real-world problems to big name <br /> infrastructure and service providers, join our journey and build in the most promising <br /> blockchain ecosystem in existence.</div>
+        <div className='section_3__items'>
+          {
+            items.map((value, index) => <Item key={index} {...value} isLast={(items.length - 1) === index} />)
+          }
         </div>
-        <div className='studio_floor__image cell small-24 medium-12'>
-          <img src={StudioImage} />
+        <div className='section_3__items'>
+          {
+            items2.map((value, index) => <Item key={index} {...value} isLast={(items2.length - 1) === index} />)
+          }
         </div>
       </div>
+      <button onClick={() => history.push('/ecosystem')} className='section_3__button'>
+        Explore 100+ More
+      </button>
+
     </section>
   )
 }
 
-const FuseWalletFloor = () => {
-  return (
-    <section className='wallet_floor'>
-      <div className='wallet_floor__container grid-x align-justify align-self-middle'>
-        <div className='wallet_floor__image cell small-24 medium-12'>
-          <img src={Gif} alt='iphone' />
-        </div>
-        <div className='wallet_floor__info cell small-24 medium-12'>
-          <div className='wallet_floor__sub-title grid-x align-middle'>
-            <img src={WalletIcon} />
-            &nbsp;
-            <span>
-              <FormattedMessage defaultMessage='Fuse wallet' />
-            </span>
-          </div>
-          <h1 className='wallet_floor__title'>
-            <FormattedMessage
-              defaultMessage='Engage early users {newLine} for rapid growth'
-              values={{
-                newLine: <br />
-              }}
-            />
-          </h1>
-          <p className='wallet_floor__text'>
-            <FormattedMessage
-              defaultMessage='Onboard your community members with a personalized wallet
-            experience.'
-
-            />
-          </p>
-          <ul className='props'>
-            <li>
-              <FormattedMessage defaultMessage='Highly customizable.' />
-            </li>
-            <li>
-              <FormattedMessage defaultMessage='User-owned data.' />
-            </li>
-            <li>
-              <FormattedMessage defaultMessage='Send and receive money instantly.' />
-            </li>
-          </ul>
-          <div className='wallet_floor__links'>
-            <div className='items'>
-              <a
-                rel='noreferrer noopener'
-                target='_blank'
-                href='https://apps.apple.com/il/app/fuse-wallet/id1491783654'
-              >
-                <img alt='twitter' src='./images/apple.png' />
-              </a>
-
-              <a
-                rel='noreferrer noopener'
-                target='_blank'
-                href='https://play.google.com/store/apps/details?id=io.fuse.fusecash'
-              >
-                <img alt='android' src='./images/playstore.png' />
-              </a>
-
-              <a
-                rel='noreferrer noopener'
-                target='_blank'
-                href='https://github.com/fuseio/fuse-wallet2.0'
-              >
-                <img alt='twitter' src='./images/github_large.png' />
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  )
-}
-
-const FuseSwapFloor = () => {
-  return (
-    <section className='fuseswap_floor'>
-      <div className='fuseswap_floor__container'>
-        <div className='fuseswap_floor__container__inner margin-0 grid-x align-justify align-self-middle'>
-          <div className='cell small-24 medium-12'>
-            <div className='grid-y texts'>
-              <div className='fuseswap_floor__sub-title grid-x align-middle'>
-                <div className='logo grid-x align-center'>
-                  <img className='light' src={voltageIcon} />
-                </div>
-              </div>
-              <h1 className='fuseswap_floor__title'>
-                <FormattedMessage
-                  defaultMessage='Trade and earn {newLine} without friction'
-                  values={{
-                    newLine: <br />
-                  }}
-                />
-              </h1>
-              <p className='fuseswap_floor__text'>
-                <FormattedMessage
-                  defaultMessage='The DeFi Hub for the Fuse ecosystem'
-
-                />
-              </p>
-              <ul className='props'>
-                <li>
-                  <FormattedMessage defaultMessage='Swap and gain exposure to assets.' />
-                </li>
-                <li>
-                  <FormattedMessage defaultMessage='Back your token with pooled liquidity.' />
-                </li>
-                <li>
-                  <FormattedMessage defaultMessage='Access in depth trading and token analytics.' />
-                </li>
-              </ul>
-              <div className='launch'>
-                <Button
-                  link='https://voltage.finance/'
-                  text={<FormattedMessage defaultMessage='Swap & pool now' />}
-                />
-              </div>
-            </div>
-          </div>
-          <div className='fuseswap_floor__image cell small-24 medium-12'>
-            <img src={FuseSwapImage} />
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-const SectionThree = () => {
-  return (
-    <>
-      <div className='blue'>
-        <StudioFloor />
-      </div>
-      <FuseWalletFloor />
-      <FuseSwapFloor />
-    </>
-  )
-}
-
-export default SectionThree
+export default withRouter(SectionThree)

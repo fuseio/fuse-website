@@ -1,14 +1,13 @@
 import React from 'react'
 import { withRouter } from 'react-router'
-import { isMobileOnly } from 'react-device-detect'
 
 const items = [
   {
     title: 'Getting started',
     items: [
       {
-        title: 'Fuse Studio',
-        url: 'https://studio.fuse.io/'
+        title: 'Fuse Charge',
+        url: 'https://chargeweb3.com/'
       },
       {
         title: 'Voltage Finance',
@@ -19,8 +18,8 @@ const items = [
         url: 'http://staking.fuse.io/'
       },
       {
-        title: 'Fuse Cash',
-        url: 'https://fuse.cash/'
+        title: 'Volt App',
+        url: 'https://voltage.finance/app'
       }
     ]
   },
@@ -67,7 +66,7 @@ const items = [
       },
       {
         title: 'Careers',
-        ...(isMobileOnly ? { url: 'https://fuse.freshteam.com/jobs' } : { route: './careers' })
+        url: 'https://fuse.freshteam.com/jobs'
       }
     ]
   }
