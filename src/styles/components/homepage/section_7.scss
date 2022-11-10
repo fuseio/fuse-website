@@ -37,6 +37,9 @@
       }
       @include breakpoint(small down) {
         font-size: 24px;
+        > br {
+          display: none;
+        }
       }
     }
 

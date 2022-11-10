@@ -80,6 +80,10 @@
 
       @include breakpoint(medium down) {
         @include xy-cell(47%, null, 0);
+        max-height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
