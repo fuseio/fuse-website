@@ -1,6 +1,5 @@
 import React from 'react'
 import { withRouter } from 'react-router'
-import { isMobileOnly } from 'react-device-detect'
 
 const items = [
   {
@@ -67,7 +66,7 @@ const items = [
       },
       {
         title: 'Careers',
-        ...(isMobileOnly ? { url: 'https://fuse.freshteam.com/jobs' } : { route: './careers' })
+        url: 'https://fuse.freshteam.com/jobs'
       }
     ]
   }
