@@ -75,6 +75,7 @@
 
 	@include element(button) {
 		width: fit-content;
+		display: block;
 	}
 
 	@include element(description) {
@@ -82,9 +83,6 @@
 		font-weight: 400;
 		font-size: 1.5em;
 		color: #ffffff;
-	}
-
-	@include element(button) {
 	}
 
 	@include element(img) {
