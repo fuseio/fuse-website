@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Autoplay } from 'swiper'
 import { isMobileOnly } from 'react-device-detect'
@@ -51,7 +51,6 @@ function SectionFour () {
 
   return (
     <div className='section_4__container'>
-      {console.log(data)}
       <div className='section_4'>
         <div className='section_4__title'>Latest News on Fuse</div>
         <div className='blogs'>
