@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Autoplay } from 'swiper'
 import { isMobileOnly } from 'react-device-detect'
@@ -9,11 +9,12 @@ import moment from 'moment'
 import Icons from './icons'
 import NewsletterForm from '@/components/shared/newsletter_form'
 import SubscribeIcon from '@/assets/images/subscribe_icon.svg'
+import imagePlaceholder from '@/assets/images/image-placeholder.jpeg'
 // import SwiperArrow from '@/assets/images/swiper_arrow.svg'
 
 SwiperCore.use([Autoplay])
 
-function BlogPostItem ({ title, link, thumbnail, pubDate }) {
+function BlogPostItem ({ title, link, yoast_head_json, date }) {
   return (
     <a
       className='post_item'
@@ -22,30 +23,29 @@ function BlogPostItem ({ title, link, thumbnail, pubDate }) {
       href={link}
     >
       <div className='post_item__image'>
-        <img alt='owners' src={thumbnail} />
+        <img alt='owners' src={isEmpty(yoast_head_json.og_image[0]) ? { imagePlaceholder } : yoast_head_json.og_image[0].url} />
       </div>
-
       <div className='post_item__content'>
         <h4 className='title'>
-          {title}
+          {title.rendered}
         </h4>
         <small>
           <FormattedMessage defaultMessage='By Fuse' />
         </small>
-        <span>{moment(pubDate).format('MMMM Do YYYY')}</span>
+        <span>{moment(date).format('MMMM Do YYYY')}</span>
       </div>
     </a>
   )
 }
 
 function SectionFour () {
-  const { data = { items: [] } } = useFetch(
-    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/fusenet',
+  const { data } = useFetch(
+    'https://news.fuse.io/wp-json/wp/v2/posts/',
     {},
     []
   )
 
-  if (isEmpty(data.items)) {
+  if (isEmpty(data)) {
     return null
   }
 
@@ -62,7 +62,7 @@ function SectionFour () {
             autoplay
           >
             {
-              data?.items.map((item, index) => <SwiperSlide key={index}><BlogPostItem {...item} /></SwiperSlide>)
+              data.map((item, index) => <SwiperSlide key={index}><BlogPostItem {...item} /></SwiperSlide>)
             }
           </Swiper>
         </div>
