@@ -17,17 +17,17 @@ function Footer () {
           </div>
           <div className='grid-x align-justify'>
             <Links />
-            {/* <button
-              className='main_button main_button--no-arrow'
+            <a
+              rel='noopener noreferrer'
+              target='_blank'
+              href='https://form.typeform.com/to/DimM2qve#hubspot_utk=xxxxx&hubspot_page_name=xxxxx&hubspot_page_url=xxxxx'
             >
-              <a
-                rel='noopener noreferrer'
-                target='_blank'
-                href='http://eepurl.com/hWyVN5'
+              <button
+                className='primary_button'
               >
-                Register for Newsletter
-              </a>
-            </button> */}
+                Contact us
+              </button>
+            </a>
           </div>
         </div>
         <div className='footer__copy-connect-wrapper grid-x align-justify'>
