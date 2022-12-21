@@ -96,7 +96,7 @@ const SectionTwo = () => {
         (t.attributes.tags.map(e => {
           if (e.tag.data) return e.tag.data.attributes.text
           return null
-        }) || []).join(' ').toLowerCase().includes(q)
+        }) || []).join(' ').toLowerCase().includes(q) || t.attributes.title?.toLowerCase().includes(q)
 
     )
     setData(filtered)
