@@ -131,6 +131,7 @@
 		@include xy-grid();
 		@include flex-align(justify, middle);
 		input {
+			color: #ffffff;
 			border: none;
 			height: 100%;
 			flex: 1;

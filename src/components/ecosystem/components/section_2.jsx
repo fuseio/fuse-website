@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
-import { database } from '@/utils/firebase'
-import { ref, child, get } from 'firebase/database'
 import SearchIcon from '@/assets/images/search_icon.svg'
 import arrowRight from '@/assets/images/arrow-right.svg'
+import ecosystem from '@/utils/strapi'
+import dateFormat from 'dateformat'
+import _ from 'lodash'
 
 function Header ({ search, onChange }) {
   return (
@@ -18,17 +19,17 @@ function Header ({ search, onChange }) {
   )
 }
 
-function Card ({ logo, description, website }) {
+function Card ({ logo, desc, link }) {
   return (
     <div className='ecosystem_section_2__card'>
       <div className='ecosystem_section_2__card__logo'>
-        <img src={`${logo}`} alt='card' />
+        <img src={logo.data.attributes.url} alt='card' />
       </div>
       <div className='ecosystem_section_2__card__content_wrapper'>
-        <div className='ecosystem_section_2__card__description'>{description}</div>
+        <div className='ecosystem_section_2__card__description'>{desc}</div>
         <a
           className='ecosystem_section_2__card__learn_more'
-          href={website}
+          href={link}
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -45,13 +46,13 @@ function Tags ({ tags, selectedTags, onClick }) {
     <div className='ecosystem_section_2__tags__wrapper'>
       <h1 className='ecosystem_section_2__tags__title'>Tags</h1>
       <div className='ecosystem_section_2__tags'>
-        {tags.map(({ tag, count }, index) => (
+        {tags.map((tag, index) => (
           <div
-            onClick={() => onClick({ tag, count })}
-            className={classNames('ecosystem_section_2__tags__tag', { 'ecosystem_section_2__tags__tag--selected': selectedTags.includes(tag) })}
+            onClick={() => onClick(tag[0])}
+            className={classNames('ecosystem_section_2__tags__tag', { 'ecosystem_section_2__tags__tag--selected': selectedTags.includes(tag[0]) })}
             key={index}
           >
-            {tag} <span>({count})</span>
+            {tag[0]} <span>({tag[1]})</span>
           </div>
         ))}
       </div>
@@ -68,29 +69,21 @@ const SectionTwo = () => {
   const [date, setDate] = useState('')
 
   useEffect(() => {
-    (async () => {
-      const tagsSnapshot = await get(child(ref(database), 'tags'))
-      const itemsSnapshot = await get(child(ref(database), 'items'))
-      const dateSnapshot = await get(child(ref(database), 'date'))
-      const tags = Object.values(tagsSnapshot.exists() ? tagsSnapshot.val() : [])
-      const items = Object.values(itemsSnapshot.exists() ? itemsSnapshot.val() : {})
-      const date = dateSnapshot.exists() ? dateSnapshot.val() : ''
-      setData(items)
-      setOrgItems(items)
-      setDate(date)
-      const counts = items.reduce((acc, curr) => {
-        (curr.tags || []).forEach((c) => {
-          acc[c.toLowerCase()] = (acc[c.toLowerCase()] || 0) + 1
-        })
-        return acc
-      }, {})
-      const newTags = tags.map(({ tag }) => ({
-        tag,
-        count: counts[tag.toLowerCase()] || 0
-      }))
-      setTags(newTags)
-    })()
+    fetchEcosystem()
   }, [])
+
+  const fetchEcosystem = async () => {
+    const fetchedData = await ecosystem
+    const result = fetchedData.data.data.map(e => e.attributes.tags.map(e => {
+      if (e.tag.data) return e.tag.data.attributes.text
+      return null
+    }
+    ))
+    setTags(Object.entries(_.countBy(_.omitBy(result.flat(Infinity), _.isNil))))
+    setData(fetchedData.data.data)
+    setDate(dateFormat(fetchedData.data.data[0].attributes.updatedAt, 'mmmm dS, yyyy'))
+    setOrgItems(fetchedData.data.data)
+  }
 
   const handleSearch = ({ target: { value } }) => {
     setSearch(value)
@@ -98,13 +91,18 @@ const SectionTwo = () => {
     const q = value.toLowerCase()
     const filtered = orgItems.filter(
       (t) =>
-        t.description.toLowerCase().includes(q) ||
-        (t.tags || []).join(' ').toLowerCase().includes(q)
+
+        t.attributes.desc.toLowerCase().includes(q) ||
+        (t.attributes.tags.map(e => {
+          if (e.tag.data) return e.tag.data.attributes.text
+          return null
+        }) || []).join(' ').toLowerCase().includes(q) || t.attributes.title?.toLowerCase().includes(q)
+
     )
     setData(filtered)
   }
 
-  const handleTagClick = ({ tag }) => {
+  const handleTagClick = (tag) => {
     const index = selectedTags.findIndex((t) => t === tag)
     let newSelectedTags
     if (index === -1) newSelectedTags = [...selectedTags, tag]
@@ -118,7 +116,10 @@ const SectionTwo = () => {
       return
     }
     const arr = orgItems.filter((d) =>
-      newSelectedTags.some((selectedTag) => (d.tags || []).includes(selectedTag))
+      newSelectedTags.some((selectedTag) => (d.attributes.tags.map(e => {
+        if (e.tag.data) return e.tag.data.attributes.text
+        return null
+      }) || []).includes(selectedTag))
     )
     setData(arr)
   }
@@ -135,7 +136,7 @@ const SectionTwo = () => {
           </div>
           <div className='ecosystem_section_2__cards'>
             {data.map((item, index) => (
-              <Card key={index} {...item} />
+              <Card key={index} {...item.attributes} />
             ))}
           </div>
         </div>
