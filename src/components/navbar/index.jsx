@@ -5,7 +5,7 @@ import useOutsideClick from '@/hooks/useOutsideClick.jsx'
 import fuseLogo from '@/assets/images/site-logo.svg'
 import fuseLogoWhite from '@/assets/images/group_21.svg'
 import AnimatedNavbar from '@/components/navbar/AnimatedNavbar'
-import SelectLanguage from '../shared/select_language'
+// import SelectLanguage from '../shared/select_language'
 import MobileMenu from './MobileMenu'
 
 function Header ({ history }) {
@@ -51,7 +51,7 @@ function Header ({ history }) {
                 rel='noreferrer noopener'
                 className={classNames('text', { 'text--white': isWhite })}
                 href='https://news.fuse.io'
-                target='_blank'
+                target='_self'
               >
                 Blog
               </a>

@@ -200,7 +200,7 @@ function MobileMenu ({ history }) {
               <a
                 rel='noreferrer noopener'
                 className='list__item'
-                target='_blank'
+                target='_self'
                 href='https://news.fuse.io'
               >
                 Blog
